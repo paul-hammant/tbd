@@ -1,0 +1,75 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+languageCode = "en-us"
+title = "Material Docs"
+theme = "hugo-material-docs"
+
+[params]
+	# General information
+	author = "Digitalcraftsman"
+	description = "A material design theme for documentations."
+	copyright = "Released under the MIT license"
+
+	# Repository
+	provider = "GitHub"
+	repo_url = "https://github.com/digitalcraftsman/hugo-material-docs"
+
+	version = "1.0.0"
+	logo = "images/logo.png"
+
+	permalink = "#"
+
+	# Google Analytics
+	# 
+	# Add your tracking code as first value followed by a comma
+	google_analytics = ["auto"]
+
+	# Custom assets
+	custom_css = []
+	custom_js  = []
+
+	[params.palette]
+    	primary = "red"
+    	accent  = "light green"
+
+    [params.font]
+    	text = "Ubuntu"
+    	code = "Ubuntu Mono"
+
+
+[social]
+	twitter = ""
+	github  = "digitalcraftsman"
+
+
+[[menu.main]]
+	name   = "Material"
+	url    = "/"
+	weight = 0
+
+[[menu.main]]
+	name   = "Getting started"
+	url    = "getting-started/"
+	weight = 10
+
+[[menu.main]]
+	name   = "Adding content"
+	url    = "adding-content/"
+	weight = 20
+
+[[menu.main]]
+	name   = "Roadmap"
+	url    = "roadmap/"
+	weight = 30
+
+[[menu.main]]
+	name   = "License"
+	url    = "license/"
+	weight = 40
+
+
+[blackfriday]
+	pygmentsuseclasses = true
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+	plainIDAnchors = true
