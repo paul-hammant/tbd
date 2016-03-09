@@ -6,7 +6,7 @@ type = "index"
 
 ## Beautiful documentation
 
-Material is a theme for [Hugo][], a fast and flexible static site generator. It is built using Google's [material design][]
+Material is a theme for [Hugo](https://gohugo.io), a fast and flexible static site generator. It is built using Google's [material design](https://www.google.com/design/spec/material-design/introduction.html)
 guidelines, fully responsive, optimized for touch and pointer devices as well
 as all sorts of screen sizes.
 

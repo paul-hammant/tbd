@@ -16,6 +16,16 @@ hugo new <section-name>/filename.md
 
 Since it's possible to have multiple content files in the same section I recommend to create at least one `index.md` file per section. This ensures that users will find an index page under `www.example.com/section-name`.
 
+## Homepage
+
+To add content to the homepage you need to add a small indicator to the frontmatter of the content file:
+
+```toml
+type = "index"
+```
+
+Otherwise the theme will not be able to find the corresponding content file.
+
 ## Table of contents
 
 You maybe noticed that the menu on the left contains a small table of contents of the current page. All `<h2>` tags (`## Headline` in Markdown) will be added automatically.
