@@ -1,0 +1,77 @@
+{{ .Scratch.Set "menuIndexCounter" 0 }}
+
+<!-- find the index of the current page in the main menu -->
+{{ range .Site.Menus.main.ByWeight }}
+  {{ $isCurrent := eq $.Permalink (.URL | absURL | printf "%s") }}
+
+  {{ if not $isCurrent }}
+    <!-- increment counter if current page wasn't found -->
+    {{ $.Scratch.Add "menuIndexCounter" 1 }}
+  {{ else }}
+    <!-- else save the index of the current page based on the counter-->
+    {{ $.Scratch.Set "menuIndex" ($.Scratch.Get "menuIndexCounter") }}
+  {{ end }}
+
+{{ end }}
+
+<!-- some helper variables -->
+{{ $menuLen := len .Site.Menus.main }}
+{{ $menuIndex := .Scratch.Get "menuIndex" }}
+
+<!-- 
+  determine if a previous and a next page exists (based on the index): 
+  
+  previousPageIndex =  currentPageIndex - 1
+  nextpageIndex     =  currentPageIndex + 1 
+-->
+
+{{ if gt (len .Site.Menus.main) 1 }}
+
+{{ $hasPrevious := (ge (sub $menuIndex 0) 1) }}
+{{ $hasNext := (le (add $menuIndex 1) (sub $menuLen 1)) }}
+
+{{ if $hasPrevious | or $hasNext }}
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+    {{ if $hasPrevious }}
+      {{ $page := index .Site.Menus.main (sub $menuIndex 1) }}
+      <a href="{{ $page.URL | absURL }}" title="{{ $page.Name }}">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              {{ $page.Name }}
+            </div>
+          </div>
+        </div>
+      </a>
+    {{ end }}
+  </div>
+  <div class="next">
+    {{ if $hasNext }}
+      {{ $page := index .Site.Menus.main (add $menuIndex 1) }}
+      <a href="{{ $page.URL | absURL  }}" title="{{ $page.Name }}">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              {{ $page.Name }} 
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+    {{ end }}
+  </div>
+</nav>
+{{ end }}
+{{ end }}

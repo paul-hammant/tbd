@@ -1,0 +1,18 @@
+{{ $currentNode := . }}
+
+{{ if gt (len .Site.Menus.main) 0 }}
+<ul>
+  {{ range .Site.Menus.main.ByWeight }}
+  <li>
+    {{ $isCurrent := eq $currentNode.Permalink (.URL | absURL | printf "%s") }}
+    <a {{ if $isCurrent }}class="current"{{ end}} title="{{ .Name }}" href="{{ .URL | absURL }}">
+      {{ .Name }}
+    </a>
+    {{ if $isCurrent }}
+    <ul id="scrollspy">
+    </ul>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
