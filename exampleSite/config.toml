@@ -68,7 +68,6 @@ theme = "hugo-material-docs"
 
 
 [blackfriday]
-	pygmentsuseclasses = true
 	smartypants	= true
 	fractions = true
 	smartDashes = true
