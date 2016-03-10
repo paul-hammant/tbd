@@ -200,7 +200,6 @@ Hugo uses [Blackfriday](https://github.com/russross/blackfriday) to process your
 
 ```toml
 [blackfriday]
-  pygmentsuseclasses = true
   smartypants = true
   fractions = true
   smartDashes = true
