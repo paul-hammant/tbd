@@ -3,13 +3,13 @@ date = "2016-03-09T20:08:11+01:00"
 title = "Roadmap"
 +++
 
-Quo vadis? The port of the original [Material theme](https://github.com/squidfunk/mkdocs-material) has replicated nearly all features. A few are still missing but I've good news: the Hugo community is actively developing on a native integration. Maybe with the next release of Hugo we could abandon this list. Stay tuned.
+Quo vadis? The port of the original [Material theme](https://github.com/squidfunk/mkdocs-material) has replicated nearly all of it's features. A few are still missing but I've good news: the Hugo community is actively developing on a native integration. Maybe with the next release of Hugo we can abandon this list. Stay tuned.
 
 ## Localization
 
-Currently, it is possible to collect all strings in a single place for easy customization. However, this only enables you to define all strings in a single language. This approach is quite limiting in terms of localization support. Therefore, I decided to wait for a native integration. This way we can avoid a second setup of all strings.
+Currently, it is possible to collect all strings in a single place for easy customization. However, this only enables you to define all strings in a single language. This approach is quite limiting in terms of localization support. Therefore, I decided to wait for a native integration. This way we can avoid a second setup of all strings in your website.
 
-Have an eye on [#1734](https://github.com/spf13/hugo/issues/1734).
+Keep an eye on [#1734](https://github.com/spf13/hugo/issues/1734).
 
 ## Search
 
@@ -17,7 +17,7 @@ Beside third-party services, some hacky workarounds and Grunt-/Gulp-based script
 
 This approach plays well with this theme since MkDocs does the same.
 
-Have an eye on [#1853](https://github.com/spf13/hugo/pull/1853).
+Keep an eye on [#1853](https://github.com/spf13/hugo/pull/1853).
 
 ## Contributing
 
