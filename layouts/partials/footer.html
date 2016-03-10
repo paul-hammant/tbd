@@ -1,41 +1,9 @@
-{{ .Scratch.Set "menuIndexCounter" 0 }}
-
-<!-- find the index of the current page in the main menu -->
-{{ range .Site.Menus.main.ByWeight }}
-  {{ $isCurrent := eq $.Permalink (.URL | absURL | printf "%s") }}
-
-  {{ if not $isCurrent }}
-    <!-- increment counter if current page wasn't found -->
-    {{ $.Scratch.Add "menuIndexCounter" 1 }}
-  {{ else }}
-    <!-- else save the index of the current page based on the counter-->
-    {{ $.Scratch.Set "menuIndex" ($.Scratch.Get "menuIndexCounter") }}
-  {{ end }}
-
-{{ end }}
-
-<!-- some helper variables -->
-{{ $menuLen := len .Site.Menus.main }}
-{{ $menuIndex := .Scratch.Get "menuIndex" }}
-
-<!-- 
-  determine if a previous and a next page exists (based on the index): 
-  
-  previousPageIndex =  currentPageIndex - 1
-  nextpageIndex     =  currentPageIndex + 1 
--->
-
-{{ if gt (len .Site.Menus.main) 1 }}
-
-{{ $hasPrevious := (ge (sub $menuIndex 0) 1) }}
-{{ $hasNext := (le (add $menuIndex 1) (sub $menuLen 1)) }}
-
-{{ if $hasPrevious | or $hasNext }}
+{{ if .IsPage }}
+{{ if .Prev | or .Next }}
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
-    {{ if $hasPrevious }}
-      {{ $page := index .Site.Menus.main (sub $menuIndex 1) }}
-      <a href="{{ $page.URL | absURL }}" title="{{ $page.Name }}">
+  {{ if .Next }}
+      <a href="{{ .Next.Permalink }}" title="{{ .Next.Title }}">
         <span class="direction">
           Previous
         </span>
@@ -45,24 +13,24 @@
           </div>
           <div class="stretch">
             <div class="title">
-              {{ $page.Name }}
+              {{ .Next.Title }}
             </div>
           </div>
         </div>
       </a>
-    {{ end }}
+  {{ end }}
   </div>
+
   <div class="next">
-    {{ if $hasNext }}
-      {{ $page := index .Site.Menus.main (add $menuIndex 1) }}
-      <a href="{{ $page.URL | absURL  }}" title="{{ $page.Name }}">
+  {{ if .Prev }}
+      <a href="{{ .Prev.Permalink }}" title="{{ .Prev.Title }}">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              {{ $page.Name }} 
+              {{ .Prev.Title }}
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
@@ -70,7 +38,36 @@
           </div>
         </div>
       </a>
-    {{ end }}
+  {{ end }}
+  </div>
+</nav>
+{{ end }}
+{{ end }}
+
+{{ if .IsHome }}
+{{ if gt (len .Site.Pages) 2 }}
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  </div>
+
+  {{ $title := (index (.Site.Pages.ByDate) 1).Title  }}
+  {{ $permalink := (index (.Site.Pages.ByDate) 1).Permalink }}
+  <div class="next">
+      <a href="{{ $permalink }}" title="{{ $title }}">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              {{ $title }}
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
   </div>
 </nav>
 {{ end }}
