@@ -1,7 +1,7 @@
-+++
-date = "2016-03-09T00:11:02+01:00"
-title = "Getting started"
-+++
+---
+date: 2016-03-09T00:11:02+01:00
+title: Getting started
+---
 
 ## Installation
 
@@ -162,8 +162,8 @@ Material uses the [Ubuntu font family](http://font.ubuntu.com) by default, speci
 
 ```toml
 [params.font]
-      text = "Roboto"
-      code = "Roboto Mono"
+  text = "Roboto"
+  code = "Roboto Mono"
 ```
 
 The text font will be loaded in font-weights 400 and **700**, the monospaced
