@@ -2,7 +2,7 @@
 
 A material design theme for [Hugo](https://gohugo.io).
 
-![](https://raw.githubusercontent.com/digitalcraftsman/hugo-material-docs/master/static/images/screen.png)
+[![Screenshot](static/images/screen.png)](https://digitalcraftsman.github.io/hugo-material-docs/)
 
 ## Quick start
 
@@ -14,7 +14,7 @@ git clone git@github.com:digitalcraftsman/hugo-material-docs.git themes
 
 Next, take a look in the `exampleSite` folder at. This directory contains an example config file and the content for the demo. It serves as an example setup for your documentation. 
 
-Copy at least the `config.toml` in the root directory of your website Overwrite the existing config file if necessary. 
+Copy at least the `config.toml` in the root directory of your website. Overwrite the existing config file if necessary. 
 
 Hugo includes a development server, so you can view your changes as you go -
 very handy. Spin it up with the following command:
@@ -26,7 +26,7 @@ hugo server
 Now you can go to [localhost:1313](http://localhost:1313) and the Material
 theme should be visible.
 
-For detailed installation instructions and a demo, visit [INSERT LINK TO DEMO]
+For detailed installation instructions visit the [demo](https://digitalcraftsman.github.io/hugo-material-docs/).
 
 ## Acknowledgements
 
@@ -36,5 +36,5 @@ Furthermore, thanks to [Steve Francia](https://gihub.com/spf13) for creating Hug
 
 ## License
 
-The theme is published under the MIT license. Read the [license](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md) for more information.
+The theme is released under the MIT license. Read the [license](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/LICENSE.md) for more information.
 
