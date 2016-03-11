@@ -194,6 +194,22 @@ Once you created your first content files you can link them manually in the side
 
 `name` is the title displayed in the menu and `url` the relative URL to the content. The `weight` attribute allows you to modify the order of the menu entries. A menu entry appears further down the more weight you add.
 
+Instead of just linking a single file you can enhance the sidebar by creating a nested menu. This way you can list all pages of a section instead of linking them one by one (without nesting).
+
+You need extend the frontmatter of each file content file in a section slightly. The snippet below registers this content file as 'child' of a menu entry that already exists.
+
+```yaml
+menu:
+  main:
+    parent: Material
+    identifier: <link name>
+    weight: 0
+```
+
+`main` specifies to which menu the content file should be added. `main` is the only menu in this theme by default. `parent` let's you register this content file to an existing menu entry, in this case the `Material` link. Note that the parent in the frontmatter needs to match the name in `config.toml`.
+
+`identifier` is the link that is shown in the menu. Ideally you choose the same name for the `identifier` and the `title` of the page. Again, `weight` allows you to change the order of the nested links in a section.
+
 ### Markdown extensions
 
 Hugo uses [Blackfriday](https://github.com/russross/blackfriday) to process your content. For a detailed description of all options take a look at the [Blackfriday configuration](http://gohugo.io/overview/configuration/#configure-blackfriday-rendering) section in the Hugo documentation.

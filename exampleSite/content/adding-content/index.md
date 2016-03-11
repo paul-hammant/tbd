@@ -13,7 +13,6 @@ hugo new <section-name>/filename.md
 
  Visitors of your website will find the final document under `www.example.com/section-name/filename/`.
 
-
 Since it's possible to have multiple content files in the same section I recommend to create at least one `index.md` file per section. This ensures that users will find an index page under `www.example.com/section-name`.
 
 ## Homepage
@@ -21,7 +20,7 @@ Since it's possible to have multiple content files in the same section I recomme
 To add content to the homepage you need to add a small indicator to the frontmatter of the content file:
 
 ```toml
-type = "index"
+type: index
 ```
 
 Otherwise the theme will not be able to find the corresponding content file.
