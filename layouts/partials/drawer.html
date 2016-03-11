@@ -36,7 +36,11 @@
       {{ end }}
 
       <div class="toc">
-        {{ partial "nav" . }}
+        {{ if gt (len .Site.Menus.main) 0 }}
+        <ul>
+          {{ partial "nav" . }}
+        </ul>
+        {{ end }}
 
         {{ if isset .Site.Params "author" }}
         <hr>

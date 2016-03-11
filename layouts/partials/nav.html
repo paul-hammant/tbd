@@ -1,18 +1,29 @@
 {{ $currentNode := . }}
 
-{{ if gt (len .Site.Menus.main) 0 }}
-<ul>
-  {{ range .Site.Menus.main.ByWeight }}
+{{ range .Site.Menus.main.ByWeight }}
+
+{{ $.Scratch.Set "currentMenuEntry" . }}
+<li>
+  {{ if .HasChildren }}
   <li>
-    {{ $isCurrent := eq $currentNode.Permalink (.URL | absURL | printf "%s") }}
-    <a {{ if $isCurrent }}class="current"{{ end}} title="{{ .Name }}" href="{{ .URL | absURL }}">
-      {{ .Name }}
-    </a>
-    {{ if $isCurrent }}
-    <ul id="scrollspy">
-    </ul>
+    {{ $currentURL := .URL }}
+
+    {{ range $.Site.Pages }}
+      {{ if eq (printf "%s%s" $.Site.BaseURL $currentURL) ( printf "%s" .Permalink) }}
+      <span class="section">{{ .Section | title }}</span>
+      {{ end }}
     {{ end }}
+    
+
+    <ul>
+      {{ range .Children }}
+        {{ $.Scratch.Set "currentMenuEntry" . }}
+        {{ partial "nav_link" $currentNode }}  
+      {{ end }}
+    </ul>
   </li>
+  {{ else }}
+    {{ partial "nav_link" $currentNode }}  
   {{ end }}
-</ul>
+</li>
 {{ end }}
