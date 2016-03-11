@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Material Docs"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
+canonifyurls = true
 
 [params]
 	# General information
