@@ -2,7 +2,7 @@
 
 A material design theme for [Hugo](https://gohugo.io).
 
-[![Screenshot](static/images/screen.png)](https://digitalcraftsman.github.io/hugo-material-docs/)
+[![Screenshot](https://raw.githubusercontent.com/digitalcraftsman/hugo-material-docs/master/static/images/screen.png)](https://digitalcraftsman.github.io/hugo-material-docs/)
 
 ## Quick start
 
