@@ -5,13 +5,13 @@ title: Adding content
 
 ## Hello world
 
-Let's create our first content file for your documentation. Open a terminal and add the following command for each new file you want to add. Replace `section-name` with a general term that your document describes in detail.
+Let's create our first content file for your documentation. Open a terminal and add the following command for each new file you want to add. Replace `section-name` with a general term that describes your document in detail.
 
 ```sh
 hugo new <section-name>/filename.md
 ```
 
- Visitors of your website will find the final document under `www.example.com/section-name/filename/`.
+Visitors of your website will find the final document under `www.example.com/section-name/filename/`.
 
 Since it's possible to have multiple content files in the same section I recommend to create at least one `index.md` file per section. This ensures that users will find an index page under `www.example.com/section-name`.
 
