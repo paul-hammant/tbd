@@ -3,7 +3,7 @@ date: 2016-03-09T20:10:46+01:00
 title: License
 ---
 
-Copyright (c) 2016 Digitalcraftsman <br>
+Copyright (c) 2016 Digitalcraftsman <digitalcraftsman@protonmail.com><br>
 Copyright (c) 2016 Martin Donath <martin.donath@squidfunk.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
