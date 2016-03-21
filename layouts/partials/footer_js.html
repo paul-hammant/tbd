@@ -1,7 +1,13 @@
     <script>
-      var base_url = '{{ (printf "%s" .Site.BaseURL) | safeJS }}';
-      var repo_id  = '{{ (.Scratch.Get "repo_id") | safeJS }}';
+    {{ with .Scratch.Get "repo_id" }}
+      var base_url = '{{ (printf "%s" $.Site.BaseURL) | safeJS }}';
+      var repo_id  = '{{ . | safeJS }}';
+    {{ else }}
+      var base_url = '';
+      var repo_id  = '';
+    {{ end }}
     </script>
+
     <script src="{{ .Site.BaseURL }}javascripts/application.js"></script>
     {{ range .Site.Params.custom_js }}
     <script src="{{ . | absURL }}"></script>
