@@ -175,6 +175,16 @@ Material uses the [Ubuntu font family](http://font.ubuntu.com) by default, speci
 The text font will be loaded in font-weights 400 and **700**, the monospaced
 font in regular weight.
 
+### Syntax highlighting
+
+This theme uses the popular [Highlight.js](https://highlightjs.org/) library to colorize code examples. The default theme is called `Github` with a few small tweaks. You can link our own theme if you like. Again, store your stylesheet in the `static/` folder and set the relative path in the config file:
+
+```toml
+[params]
+  # Syntax highlighting theme
+  highlight_css  = "path/to/theme.css"
+```
+
 ### Adding a GitHub and Twitter account
 
 If you have a GitHub and/or Twitter account, you can add links to your
