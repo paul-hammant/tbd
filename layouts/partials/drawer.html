@@ -7,7 +7,7 @@
         </div>
       {{ end }}
       <div class="name">
-        <strong>{{ .Site.Title }} {{ with .Site.Params.version }}{{ . }}{{ end }}</strong>
+        <strong>{{ .Site.Title }} {{ with .Site.Params.version }}<span class="version">{{ . }}</span>{{ end }}</strong>
         {{ with .Scratch.Get "repo_id" }}
           <br>
           {{ . }}
