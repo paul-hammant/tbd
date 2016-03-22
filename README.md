@@ -28,6 +28,8 @@ theme should be visible.
 
 For detailed installation instructions visit the [demo](https://digitalcraftsman.github.io/hugo-material-docs/).
 
+Noteworthy changes of this theme are listed in the [changelog](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/CHANGELOG.md).
+
 ## Acknowledgements
 
 A big thank you to [Martin Donath](https://github.com/squidfunk). He created the original [Material theme](https://github.com/squidfunk/mkdocs-material) for Hugo's companion [MkDocs](http://www.mkdocs.org/). This port wouldn't be possible without him.
