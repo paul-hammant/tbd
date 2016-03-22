@@ -4,6 +4,8 @@ title = "Material Docs"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = ""
 
 [params]
 	# General information
@@ -20,11 +22,6 @@ canonifyurls = true
 	favicon = ""
 
 	permalink = "#"
-
-	# Google Analytics
-	# 
-	# Add your tracking code as first value followed by a comma
-	google_analytics = ["auto"]
 
 	# Custom assets
 	custom_css = []

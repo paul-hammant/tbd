@@ -120,9 +120,7 @@ Favicons are small small icons that are displayed in the tabs right next to the 
 You can enable Google Analytics by replacing `UA-XXXXXXXX-X` with your own tracking code.
 
 ```toml
-[params]
-  # Google Analytics
-  google_analytics = ["UA-XXXXXXXX-X", "auto"]
+googleAnalytics = "UA-XXXXXXXX-X"
 ```
 
 ### Small tweaks
