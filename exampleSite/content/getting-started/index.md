@@ -106,6 +106,14 @@ Save your logo somewhere in the `static/` folder and reference the file relative
   logo = "images/logo.png"
 ```
 
+### Adding a custom favicon
+
+Favicons are small small icons that are displayed in the tabs right next to the title of the current page. As with the logo above you need to save your favicon in `static/` and link it relative to this folder in the config file:
+
+```toml
+[params]
+  favicon = "favicon.ico"
+```
 
 ### Google Analytics
 

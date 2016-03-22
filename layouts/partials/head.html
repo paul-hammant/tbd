@@ -26,9 +26,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ $.Site.BaseURL }}images/favicon.ico">
-    <link rel="icon" type="image/x-icon" href="{{ $.Site.BaseURL }}images/favicon.ico">
-    
+    <link rel="shortcut icon" type="image/x-icon" href="{{ $.Site.BaseURL }}{{ with .Site.Params.favicon }}{{ . }}{{ else }}images/favicon.ico{{ end }}">
+    <link rel="icon" type="image/x-icon" href="{{ $.Site.BaseURL }}{{ with .Site.Params.favicon }}{{ . }}{{ else }}images/favicon.ico{{ end }}">
+
     <style>
       @font-face {
         font-family: 'Icon';
@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}stylesheets/application.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}stylesheets/palettes.css">
 
-    <!-- set default values if no custom ones are defined -->
+    {{/* set default values if no custom ones are defined */}}
     {{ $text := or .Site.Params.font.text "Roboto" }}
     {{ $code := or .Site.Params.font.code "Roboto Mono" }}
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" }}">
