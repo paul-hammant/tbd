@@ -188,8 +188,8 @@ This theme uses the popular [Highlight.js](https://highlightjs.org/) library to 
 ### Adding a GitHub and Twitter account
 
 If you have a GitHub and/or Twitter account, you can add links to your
-accounts to the drawer by setting the variables `author.github` and
-`author.twitter` respectively:
+accounts to the drawer by setting the variables `github` and
+`twitter` respectively:
 
 ``` toml
 [social]
