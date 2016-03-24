@@ -128,7 +128,7 @@ googleAnalytics = "UA-XXXXXXXX-X"
 This theme provides a simple way for making small adjustments, that is changing
 some margins, centering text, etc. Simply put the CSS and Javascript files that
 contain your adjustments in the `static/` directory (ideally in subdirectories of their own) and include them via the `custom_css` and `custom_js`
-variables in your `config.toml`. Reference the files with relative to `static/`:
+variables in your `config.toml`. Reference the files relative to `static/`:
 
 ```toml
 [params]
