@@ -1,4 +1,4 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://digitalcraftsman.github.io/hugo-material-docs/"
 languageCode = "en-us"
 title = "Material Docs"
 theme = "hugo-material-docs"
@@ -26,6 +26,9 @@ googleAnalytics = ""
 	# Custom assets
 	custom_css = []
 	custom_js  = []
+
+	# Syntax highlighting theme
+	highlight_css  = ""
 
 	[params.palette]
     	primary = "red"
