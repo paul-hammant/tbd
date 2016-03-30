@@ -22,7 +22,7 @@ browsers.
 Install with `git`:
 
 ```sh
-git clone git@github.com:digitalcraftsman/hugo-material-docs.git themes
+git clone git@github.com:digitalcraftsman/hugo-material-docs.git themes/hugo-material-docs
 ```
 
 ## Features
