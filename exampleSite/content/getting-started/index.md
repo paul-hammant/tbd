@@ -24,11 +24,11 @@ Next, assuming you have Hugo up and running the `hugo-material-docs` theme can b
 # create a new Hugo website
 hugo new site my-awesome-docs
 
-# move into the root folder of your website
-cd my-awesome-docs
+# move into the themes folder of your website
+cd my-awesome-docs/themes/
 
 # download the theme
-git clone git@github.com:digitalcraftsman/hugo-material-docs.git themes
+git clone git@github.com:digitalcraftsman/hugo-material-docs.git
 ```
 
 ## Setup
