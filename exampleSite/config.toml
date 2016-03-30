@@ -1,4 +1,4 @@
-baseurl = "https://digitalcraftsman.github.io/hugo-material-docs/"
+baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "en-us"
 title = "Material Docs"
 theme = "hugo-material-docs"
