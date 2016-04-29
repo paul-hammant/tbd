@@ -24,9 +24,7 @@ hugo server
 ```
 
 Now you can go to [localhost:1313](http://localhost:1313) and the Material
-theme should be visible.
-
-For detailed installation instructions visit the [demo](https://digitalcraftsman.github.io/hugo-material-docs/).
+theme should be visible. For detailed installation instructions visit the [demo](http://themes.gohugo.io/theme/material-docs/).
 
 Noteworthy changes of this theme are listed in the [changelog](https://github.com/digitalcraftsman/hugo-material-docs/blob/master/CHANGELOG.md).
 
