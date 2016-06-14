@@ -47,6 +47,7 @@
     </style>
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}stylesheets/application.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}stylesheets/temporary.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}stylesheets/palettes.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}{{ with .Site.Params.highlight_css }}{{ . }}{{ else }}stylesheets/highlight/highlight.css{{ end }}">
 
@@ -62,7 +63,7 @@
         font-family: '{{ $code }}', 'Courier New', 'Courier', monospace;
       }
     </style>
-    
+
     {{ range .Site.Params.custom_css }}
     <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
     {{ end }}
