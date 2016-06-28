@@ -32,7 +32,7 @@ googleAnalytics = ""
 
 	[params.palette]
     	primary = "red"
-    	accent  = "light green"
+    	accent  = "light-green"
 
     [params.font]
     	text = "Ubuntu"

@@ -150,13 +150,13 @@ material design [color palette][]. This makes it very easy to change the overall
 ```toml
 [params.palette]
   primary = "red"
-  accent  = "light green"
+  accent  = "light-green"
 ```
 
 Color names can be written upper- or lowercase but must match the names of the
-material design [color palette](http://www.materialui.co/colors). Valid values are: _red_, _pink_, _purple_, _deep purple_, _indigo_, _blue_, _light blue_, _cyan_, _teal_, _green_, _light
-green_, _lime_, _yellow_, _amber_, _orange_, _deep orange_, _brown_, _grey_ and
-_blue grey_. The last three colors can only be used as a primary color.
+material design [color palette](http://www.materialui.co/colors). Valid values are: _red_, _pink_, _purple_, _deep purple_, _indigo_, _blue_, _light-blue_, _cyan_, _teal_, _green_, _light-green_,
+_lime_, _yellow_, _amber_, _orange_, _deep-orange_, _brown_, _grey_ and
+_blue-grey_. The last three colors can only be used as a primary color.
 
 ![Color palette](/images/colors.png)
 
