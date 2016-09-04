@@ -55,7 +55,7 @@
     {{/* set default values if no custom ones are defined */}}
     {{ $text := or .Site.Params.font.text "Roboto" }}
     {{ $code := or .Site.Params.font.code "Roboto Mono" }}
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" }}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" | safeURL }}">
     <style>
       body, input {
         font-family: '{{ $text }}', Helvetica, Arial, sans-serif;
