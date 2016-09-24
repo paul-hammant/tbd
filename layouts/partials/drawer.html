@@ -62,6 +62,14 @@
             </a>
           </li>
           {{ end }}
+
+          {{ with .Site.Social.email }}
+          <li>
+            <a href="mailto:{{ . }}" title="Email of {{ . }}">
+              Contact via email
+            </a>
+          </li>
+          {{ end }}
         </ul>
         {{ end }}
       </div>

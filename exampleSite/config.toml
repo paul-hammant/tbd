@@ -32,7 +32,7 @@ googleAnalytics = ""
 
 	[params.palette]
     	primary = "red"
-    	accent  = "light-green"
+    	accent  = "teal"
 
     [params.font]
     	text = "Ubuntu"
@@ -42,6 +42,7 @@ googleAnalytics = ""
 [social]
 	twitter = ""
 	github  = "digitalcraftsman"
+	email   = "hello@email.com"
 
 
 [[menu.main]]
