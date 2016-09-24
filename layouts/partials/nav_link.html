@@ -2,7 +2,7 @@
 {{ $isCurrent := eq .Permalink ($currentMenuEntry.URL | absURL | printf "%s") }}
 
 
-<a {{ if $isCurrent }}class="current"{{ end }} title="{{ $currentMenuEntry.Name }}" href="{{ $currentMenuEntry.URL | absURL }}">
+<a {{ if $isCurrent }}class="current"{{ end }} title="{{ $currentMenuEntry.Name }}" href="{{ $currentMenuEntry.URL | relURL}}">##
 	{{ $currentMenuEntry.Pre }}
 	{{ $currentMenuEntry.Name }}
 </a>
