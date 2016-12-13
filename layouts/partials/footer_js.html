@@ -28,14 +28,14 @@
             a.setAttribute("href", "#" + headers[i].id);
             a.setAttribute("title", headers[i].innerHTML);
             a.innerHTML = headers[i].innerHTML;
-            
+
             li.appendChild(a)
             scrollspy.appendChild(li);
           }
         } else {
           scrollspy.parentElement.removeChild(scrollspy)
         }
-        
+
 
         {{ "/* Add permanent link next to the headers */" | safeJS }}
         var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
@@ -85,7 +85,7 @@
       </script>
     {{ end }}
 
-    <script src="//gohugo.io/js/highlight.pack.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
