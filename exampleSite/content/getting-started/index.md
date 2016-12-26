@@ -34,9 +34,9 @@ git clone git@github.com:digitalcraftsman/hugo-material-docs.git
 
 ## Setup
 
-Next, take a look in the `exampleSite` folder at `themes/hugo-material-docs/`. This directory contains an example config file and the content that you are currently reading. It serves as an example setup for your documentation. 
+Next, take a look in the `exampleSite` folder at `themes/hugo-material-docs/`. This directory contains an example config file and the content that you are currently reading. It serves as an example setup for your documentation.
 
-Copy at least the `config.toml` in the root directory of your website. Overwrite the existing config file if necessary. 
+Copy at least the `config.toml` in the root directory of your website. Overwrite the existing config file if necessary.
 
 Hugo includes a development server, so you can view your changes as you go -
 very handy. Spin it up with the following command:
@@ -54,7 +54,7 @@ on and customize the theme through some options.
 Before you are able to deploy your documentation you should take a few minute to adjust some information in the `config.toml`. Open the file in an editor:
 
 ```toml
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://example.com/"
 languageCode = "en-us"
 title = "Material Docs"
 
@@ -100,7 +100,7 @@ If your project has a logo, you can add it to the drawer/navigation by defining
 the variable `logo`. Ideally, the image of your logo should have
 rectangular shape with a minimum resolution of 128x128 and leave some room
 towards the edges. The logo will also be used as a web application icon on iOS.
-Save your logo somewhere in the `static/` folder and reference the file relative to this location:
+Either save your logo somewhere in the `static/` folder and reference the file relative to this location or use an external URL:
 
 ```toml
 [params]
@@ -109,7 +109,7 @@ Save your logo somewhere in the `static/` folder and reference the file relative
 
 ### Adding a custom favicon
 
-Favicons are small small icons that are displayed in the tabs right next to the title of the current page. As with the logo above you need to save your favicon in `static/` and link it relative to this folder in the config file:
+Favicons are small small icons that are displayed in the tabs right next to the title of the current page. As with the logo above you need to save your favicon in `static/` and link it relative to this folder or use an external URL:
 
 ```toml
 [params]
@@ -127,9 +127,8 @@ googleAnalytics = "UA-XXXXXXXX-X"
 ### Small tweaks
 
 This theme provides a simple way for making small adjustments, that is changing
-some margins, centering text, etc. Simply put the CSS and Javascript files that
-contain your adjustments in the `static/` directory (ideally in subdirectories of their own) and include them via the `custom_css` and `custom_js`
-variables in your `config.toml`. Reference the files relative to `static/`:
+some margins, centering text, etc. The `custom_css` and `custom_js` option allow you to add further CSS and JS files. They can either reside locally in the `/static` folder or on an external server, e.g. a CDN. In both cases use either the relative path to `/static` or the absolute URL to the external ressource.
+
 
 ```toml
 [params]
