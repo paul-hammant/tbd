@@ -1,6 +1,6 @@
-baseurl = "https://example.org/"
+baseurl = "http://trunkbaseddevelopment.com/"
 languageCode = "en-us"
-title = "Material Docs"
+title = "Trunk Based Development"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
