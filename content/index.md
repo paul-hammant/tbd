@@ -7,7 +7,7 @@ weight: 0
 
 ## One line summary
 
-A branching model, where a single branch called trunk* is where developers share code.
+A source-control branching model, where a single branch called trunk* is where developers share code.
   
 ## Caveats
 

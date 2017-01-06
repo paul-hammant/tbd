@@ -11,7 +11,7 @@ googleAnalytics = "UA-24415524-3"
 	# General information
 	author = "paul-hammant"
 	description = "A material design theme for documentations."
-	copyright = "Released under the MIT license"
+	copyright = "Contributors"
 
 	# Repository
 	provider = "GitHub"
@@ -41,18 +41,18 @@ googleAnalytics = "UA-24415524-3"
 
 [social]
 	twitter = ""
-	github  = "digitalcraftsman"
-	email   = "hello@email.com"
+	github  = "paul-hammant"
+	email   = "paul@hammant.org"
 
 
 [[menu.main]]
-	name   = "Material"
+	name   = "Introduction"
 	url    = "/"
 	weight = 0
 
 [[menu.main]]
-	name   = "Getting started"
-	url    = "getting-started/"
+	name   = "Five minute overview"
+	url    = "5-min-overview/"
 	weight = 10
 
 [[menu.main]]
