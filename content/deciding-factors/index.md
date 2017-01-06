@@ -10,6 +10,16 @@ weight: 30
 
 ## Story size
 
+# SCM Technology Choice
+
+## Binaries in the Repo?
+
+## Repo size?
+
+## Peak commit frequency
+
+# Conways Law
+
 # Database migrations
 
 # Shared code
