@@ -85,6 +85,11 @@ googleAnalytics = "UA-24415524-3"
 	url    = "deciding-factors/"
 	weight = 40
 
+[[menu.main]]
+	name   = "Opposing Models"
+	url    = "opposing-models/"
+	weight = 40
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
