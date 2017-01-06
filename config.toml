@@ -80,6 +80,11 @@ googleAnalytics = "UA-24415524-3"
 	url    = "monorepos/"
 	weight = 40
 
+[[menu.main]]
+	name   = "Deciding Factors"
+	url    = "deciding-factors/"
+	weight = 40
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
