@@ -29,17 +29,14 @@
 
         {{ if isset .Site.Params "author" }}
         <hr>
-        <span class="section">Site Source</span>
-        
+
         <ul>
 
-          {{ with .Site.Social.github }}
           <li>
             <a href="https://github.com/paul-hammant/tbd" target="_blank" title="See GitHub Repo">
-              See GitHub Repo
+              Site Source
             </a>
           </li>
-          {{ end }}
 
         </ul>
         {{ end }}
