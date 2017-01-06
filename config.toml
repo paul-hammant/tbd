@@ -56,13 +56,13 @@ googleAnalytics = "UA-24415524-3"
 	weight = 10
 
 [[menu.main]]
-	name   = "Adding content"
-	url    = "adding-content/"
+	name   = "Branch By Abstraction"
+	url    = "branch-by-abstraction/"
 	weight = 20
 
 [[menu.main]]
-	name   = "Roadmap"
-	url    = "roadmap/"
+	name   = "Feature Flags"
+	url    = "feature-flags/"
 	weight = 30
 
 [[menu.main]]
