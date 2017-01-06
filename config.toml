@@ -75,6 +75,10 @@ googleAnalytics = "UA-24415524-3"
 	url    = "continuous-delivery/"
 	weight = 40
 
+[[menu.main]]
+	name   = "Monorepos"
+	url    = "monorepos/"
+	weight = 40
 
 [blackfriday]
 	smartypants	= true
