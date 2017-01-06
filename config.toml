@@ -66,8 +66,13 @@ googleAnalytics = "UA-24415524-3"
 	weight = 30
 
 [[menu.main]]
-	name   = "License"
-	url    = "license/"
+	name   = "Continuous Integration"
+	url    = "continuous-integration/"
+	weight = 40
+
+[[menu.main]]
+	name   = "Continuous Delivery"
+	url    = "continuous-delivery/"
 	weight = 40
 
 
