@@ -1,12 +1,14 @@
 <nav aria-label="Navigation">
-  <div class="banner">
-    {{ with .Site.Params.logo }}
-      <div class="logo">
-        <img src="{{ $.Site.BaseURL }}{{ . }}">
+  <div class="project">
+    <div class="banner">
+      {{ with .Site.Params.logo }}
+        <div class="logo">
+          <img src="{{ $.Site.BaseURL }}{{ . }}">
+        </div>
+      {{ end }}
+      <div class="name">
+        <strong>{{ .Site.Title }}</strong>
       </div>
-    {{ end }}
-    <div class="name">
-      <strong>{{ .Site.Title }}</strong>
     </div>
   </div>
 
