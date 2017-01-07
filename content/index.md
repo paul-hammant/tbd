@@ -27,7 +27,7 @@ to create other long-lived development branches is resisted.
 ## History
 
 Trunk Based Development isn't a new branching model. The word 'trunk' is referent to the concept of a growing tree,
-where the fattest longest span is the trunk not the branches that radiate from it and are of more limited length.
+where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
-It has been a lesser known model since the mid-nineties. 
-The largest of development organizations, like Google and Facebook practice it at scale.
+It has been a lesser known model since the mid-nineties.  The largest of development organizations, like Google and 
+Facebook practice it at scale.
