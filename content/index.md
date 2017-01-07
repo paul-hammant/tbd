@@ -10,7 +10,7 @@ weight: 0
 A source-control branching model, where a single branch called trunk* is where developers share code, and pressure 
 to create other long-lived development branches is resisted.
   
- * 'master', in Git nomenclature    
+ &ast; 'master', in Git nomenclature    
   
 ## Caveats
 
