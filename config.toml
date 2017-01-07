@@ -101,6 +101,11 @@ googleAnalytics = "UA-24415524-3"
 	url    = "opposing-models/"
 	weight = 55
 
+[[menu.main]]
+	name   = "Publications"
+	url    = "publications/"
+	weight = 60
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
