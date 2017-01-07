@@ -31,8 +31,8 @@ googleAnalytics = "UA-24415524-3"
 	highlight_css  = ""
 
 	[params.palette]
-    	primary = "red"
-    	accent  = "teal"
+    	primary = "blue"
+    	accent  = "light-blue"
 
     [params.font]
     	text = "Ubuntu"

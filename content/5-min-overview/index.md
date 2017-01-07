@@ -6,10 +6,9 @@ weight: 10
 
 ## Distance
 
-"Branches create distance between developers and we don't want that"
-
-    - Frank Compagner, Guerrilla Games
-
+{{< warning title="Branches create distance between developers and we don't want that" >}}
+&mdash; Frank Compagner, Guerrilla Games
+{{< /warning >}}
 Physical distance can be mitigated by, screen sharing, so we won't worry about that.
 
 Frank's distance is about the integration of code from multiple components/modules/sub-teams towards a binary that 
@@ -31,7 +30,7 @@ of the practices:
 * Use of "Developers" throughout this site, means "QA-automators" for the same builable thing, too.
 
 * When we say 'the trunk' on this site, it is just a branch in a single repo that developers in a team are focussing on 
-for development. It may be called 'master'. That hints at the fact that the branch in qustion may not literally be 
+for development. It may be called 'master'. That hints at the fact that the branch in qustion may literally not be 
 called 'trunk' at all.
 
 {{< /note >}}
