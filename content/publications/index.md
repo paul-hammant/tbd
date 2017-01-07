@@ -8,7 +8,7 @@ weight: 0
 
 ## Continuous Delivery (July 27, 2010)
 
-<div><a href="http://amzn.to/1QBJM7k"><img border="0" width="90" src="/images/cd-book.png" style="float:left;padding-right:10px"/></a>
+<div><a href="http://amzn.to/1QBJM7k"><img border="0" width="90" src="//continuousdelivery.com/images/cd-book.png" style="float:left;padding-right:10px"/></a>
 <p><em>Continuous Delivery</em> book (2010)<br/><a href="http://amzn.to/1QBJM7k"><strong>Amazon</strong> (hardback, kindle)</a><br />
 <a  href="http://bit.ly/jez-cd-ebook"><strong>InformIT</strong> (pdf, epub, mobi)</a><br />
 Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindelive-20">中文</a> | <a href="http://www.amazon.co.jp/dp/4048707876?tag=contindelive-20">日本語</a> | <a href="http://acornpub.co.kr/book/continuous-delivery">한국말</a> | <a href="http://www.grupoa.com.br/livros/engenharia-de-software-e-metodos-ageis/entrega-continua/9788582601037">português</a></p></div>
@@ -17,7 +17,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div><a
   href="http://bit.ly/lean-enterprise-paper"><img
-  width="90" src="/images/lean-enterprise.png"
+  width="90" src="//continuousdelivery.com/images/lean-enterprise.png"
   style="float:left;padding-right:10px; bordder:1px solid
   black;"/></a><p><em>Lean Enterprise</em> book (2015)<br/><a
   href="http://bit.ly/lean-enterprise-paper"><strong>Amazon</strong>
