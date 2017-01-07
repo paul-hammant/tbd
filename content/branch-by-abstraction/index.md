@@ -12,7 +12,7 @@ Rule 1: There's also a lot of developers already depending on
 the code that is subject of the 'longer to complete' change, and we don't want them to be sloweed down in any way
 Rule 2: No commit pushed to the shared repo should jeopardize the ability to go live.
 
-## Ideal Steps
+## Ideal steps
 
 For simplicity's sake, let us say there is code that is 'to be replaced', code 'to be introduced'.
 
@@ -30,7 +30,7 @@ break the build.
 Hopefully your team IDE that can perform complex refactorings on sets on checkouts in a way that running the build 
 after each is an uneventful validation of the refactorings.
 
-## Contrived Example
+## Contrived example
 
 Lets choose a car, and having it's wheels upgraded because you should never forget that software engineering is 
 nothing like conventional construction. At least where the unit count is 1.
@@ -48,7 +48,7 @@ Again up on jacks, then down to the ground.
 
 At any stage, when lowered from the jacks, the car could have been driven (a go-live metaphor).
 
-## Software Example
+## Software example
 
 A documented case, is ThoughtWorks' Go CI-daemon. They changed an Object-Relational mapping library (for persistence), 
 while not slowing down team mates developent activities (rule 1), and not jeaprdising the ability to go live (rule 2).

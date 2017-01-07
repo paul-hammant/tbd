@@ -62,14 +62,14 @@ deleted after the code review is complete, meaning they are very short lived. Th
 the commentary/approval/rejection from  the review for historical and auditing purposes, but you don't want to 
 keep the branch. Specifically, you don't want to developers to focus on the branch after the review.
 
-## A Safety Net
+## A safety net
 
 [Continuous Integation](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lives feature 
 branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
  is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI daemon to do that 
  automatically.
  
-## Dev Team commitments
+## Dev team commitments
 
 As stated, developers are pledging to be rigorous and not break the build. They're also going to need to consider 
 the impact of their potentially larger commits, especially where renames or moves were wholescale, and adopt techniques
