@@ -7,7 +7,10 @@ weight: 0
 
 ## One line summary
 
-A source-control branching model, where a single branch called trunk* is where developers share code.
+A source-control branching model, where a single branch called trunk* is where developers share code, and pressure 
+to create other long-lived development branches is resisted.
+  
+ * 'master', in Git nomenclature    
   
 ## Caveats
 
@@ -23,5 +26,8 @@ A source-control branching model, where a single branch called trunk* is where d
 
 ## History
 
-Trunk Based Development isn't a new branching model. It has been a lesser known model since the mid-nineties. 
+Trunk Based Development isn't a new branching model. The word 'trunk' is referent to the concept of a growing tree,
+where the fattest longest span is the trunk not the branches that radiate from it and are of more limited length.
+
+It has been a lesser known model since the mid-nineties. 
 The largest of development organizations, like Google and Facebook practice it at scale.

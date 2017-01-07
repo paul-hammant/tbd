@@ -90,6 +90,11 @@ googleAnalytics = "UA-24415524-3"
 	url    = "opposing-models/"
 	weight = 45
 
+[[menu.main]]
+	name   = "VCS Choices"
+	url    = "vcs-choices/"
+	weight = 50
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
