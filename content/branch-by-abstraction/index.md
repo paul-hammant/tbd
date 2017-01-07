@@ -12,7 +12,7 @@ Rule 1: There's also a lot of developers already depending on
 the code that is subject of the 'longer to complete' change, and we don't want them to be sloweed down in any way
 Rule 2: No commit pushed to the shared repo should jeopardize the ability to go live.
 
-# Ideal Steps
+## Ideal Steps
 
 For simplicity's sake, let us say there is code that is 'to be replaced', code 'to be introduced'.
 
@@ -30,7 +30,7 @@ break the build.
 Hopefully your team IDE that can perform complex refactorings on sets on checkouts in a way that running the build 
 after each is an uneventful validation of the refactorings.
 
-# Contrived Example
+## Contrived Example
 
 Lets choose a car, and having it's wheels upgraded because you should never forget that software engineering is 
 nothing like conventional construction. At least where the unit count is 1.
@@ -39,7 +39,7 @@ Rule 1: Mechanics must be able to simultaneously work on the upholstery, engine,
 Rule 2: The car must be drivable after every change. 
 
 1. Up on jacks, one wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
-can bear weight) and replaced on the car, and lowerd from the jacks. 
+can bear weight) and replaced on the car, and lowered from the jacks. 
 2. The same wheel-like container procedure is performed on the other three wheels, as #1.
 3. One of the wheels inside the wheel-lie container is replaced with the better/desired wheel and replaced on the car. 
 Again up on jacks, then down to the ground.
@@ -48,7 +48,7 @@ Again up on jacks, then down to the ground.
 
 At any stage, when lowered from the jacks, the car could have been driven (a go-live metaphor).
 
-# Software Example
+## Software Example
 
 A documented case, is ThoughtWorks' Go CI-daemon. They changed an Object-Relational mapping library (for persistence), 
 while not slowing down team mates developent activities (rule 1), and not jeaprdising the ability to go live (rule 2).
@@ -66,3 +66,16 @@ abstraction where needed.
 
 As it happens you could leave the abstraction in place, if your unit tests are able to benefit because of the 
 possibility of another seam that can be mocked.
+
+## Secondary benefits
+
+The migration from old to new can be paused, and resumed later casually. This is because the build guards the 
+second, incomplete, implementation. It does so merely bcause of a compile stage that turns the abstraction and somewhere 
+between 1 to 2 implementation into object code.  If there are unit tests for the two alternates, then even more so.
+
+If on a real branch, the casual restart of the paused initiative is missing. There's possibly an exponentian cost of 
+restart given the elapsed time since the initiative was paused. 
+ 
+ In the case of abandonment, a real branch is cheaper, but the abstraction is only incrementally more expsive to 
+ delete. Besides pause and resume are much more likely in an enterprise development organisation that doesn't have 
+ limitless coffers.
