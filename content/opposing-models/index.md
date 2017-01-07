@@ -4,4 +4,4 @@ title: Modern Opposing Branching Models
 weight: 30
 ---
 
-GitFlow, etc
+## GitFlow and a like
