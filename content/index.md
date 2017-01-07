@@ -14,7 +14,7 @@ to create other long-lived development branches is resisted.
   
 ## Caveats
 
-- Depending on the team size, and the rate of commits, very short lived feature branches may exist, allowing 
+- Depending on the team size, and the rate of commits, **very short lived** feature branches may exist, allowing 
   code-review and build checking (CI) to happen before the commit lands in the trunk, for other devs to depend on.
 
 - Depending on the intended release cadence, there may be release branches (cut from trunk on a just in time basis)

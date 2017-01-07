@@ -4,6 +4,8 @@ title: Five Minute Overview
 weight: 10
 ---
 
+In order to decrease distance between developers and their commits ...
+
 ## Checking out / cloning
 
 blah

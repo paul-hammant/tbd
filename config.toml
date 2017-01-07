@@ -86,14 +86,19 @@ googleAnalytics = "UA-24415524-3"
 	weight = 40
 
 [[menu.main]]
-	name   = "Opposing Models"
-	url    = "opposing-models/"
+	name   = "VCS Choices"
+	url    = "vcs-choices/"
 	weight = 45
 
 [[menu.main]]
-	name   = "VCS Choices"
-	url    = "vcs-choices/"
+	name   = "Doing It Wrong"
+	url    = "doing-it-wrong/"
 	weight = 50
+
+[[menu.main]]
+	name   = "Opposing Models"
+	url    = "opposing-models/"
+	weight = 55
 
 [blackfriday]
 	smartypants	= true
