@@ -58,27 +58,27 @@ googleAnalytics = "UA-24415524-3"
 [[menu.main]]
 	name   = "Branch By Abstraction"
 	url    = "branch-by-abstraction/"
-	weight = 20
+	weight = 15
 
 [[menu.main]]
 	name   = "Feature Flags"
 	url    = "feature-flags/"
-	weight = 30
+	weight = 20
 
 [[menu.main]]
 	name   = "Continuous Integration"
 	url    = "continuous-integration/"
-	weight = 40
+	weight = 25
 
 [[menu.main]]
 	name   = "Continuous Delivery"
 	url    = "continuous-delivery/"
-	weight = 40
+	weight = 30
 
 [[menu.main]]
 	name   = "Monorepos"
 	url    = "monorepos/"
-	weight = 40
+	weight = 35
 
 [[menu.main]]
 	name   = "Deciding Factors"
@@ -88,7 +88,7 @@ googleAnalytics = "UA-24415524-3"
 [[menu.main]]
 	name   = "Opposing Models"
 	url    = "opposing-models/"
-	weight = 40
+	weight = 45
 
 [blackfriday]
 	smartypants	= true
