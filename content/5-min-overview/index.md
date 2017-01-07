@@ -26,13 +26,15 @@ of the practices:
 
 ## What it is
 
-Notes 
+{{< note title="Notes" >}}
 
 * Use of "Developers" throughout this site, means "QA-automators" for the same builable thing, too.
 
 * When we say 'the trunk' on this site, it is just a branch in a single repo that developers in a team are focussing on 
 for development. It may be called 'master'. That hints at the fact that the branch in qustion may not literally be 
 called 'trunk' at all.
+
+{{< /note >}}
 
 ### Checking out / cloning
 
