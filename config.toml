@@ -10,8 +10,8 @@ googleAnalytics = "UA-24415524-3"
 [params]
 	# General information
 	author = "paul-hammant"
-	description = "A material design theme for documentations."
-	copyright = "Contributors to TrunkBasedDevelopment.com"
+	description = "A portal on this practice"
+	copyright = "TrunkBasedDevelopment.com's contributors."
 
 	# Repository
 	provider = "GitHub"
