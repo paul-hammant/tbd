@@ -8,9 +8,11 @@ Branch by Abstraction is a set-piece technique to effect a 'longer to complete' 
 (or a pair of developers), has a change that is going to take five days to complete. There may be some aspect of 
 repetition to the coding activities in the five day activity. 
 
-Rule 1: There's also a lot of developers already depending on 
-the code that is subject of the 'longer to complete' change, and we don't want them to be sloweed down in any way
-Rule 2: No commit pushed to the shared repo should jeopardize the ability to go live.
+**Rules:**
+ 
+1. There's also a lot of developers already depending on 
+the code that is subject of the 'longer to complete' change, and we don't want them to be sloweed down in any way.
+2. No commit pushed to the shared repo should jeopardize the ability to go live.
 
 ## Ideal steps
 
@@ -32,13 +34,16 @@ after each is an uneventful validation of the refactorings.
 
 ## Contrived example
 
-Lets choose a car, and having it's wheels upgraded because you should never forget that software engineering is 
-nothing like conventional construction. At least where the unit count is 1.
+Lets talk about a car having it's wheels upgraded. We should never forget that software engineering is 
+nothing like conventional construction, and we want to ram that home. At least, it is nothing like conventional 
+construction where we are not talking about a production line.
 
-Rule 1: Mechanics must be able to simultaneously work on the upholstery, engine, etc.
-Rule 2: The car must be drivable after every change. 
+**Rules:**
 
-1. Up on jacks, one wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
+1. Mechanics must be able to simultaneously work on the upholstery, engine, etc.
+2. The car must be drivable after every change. 
+
+1. Up on jacks*, one wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
 can bear weight) and replaced on the car, and lowered from the jacks. 
 2. The same wheel-like container procedure is performed on the other three wheels, as #1.
 3. One of the wheels inside the wheel-lie container is replaced with the better/desired wheel and replaced on the car. 
@@ -47,6 +52,9 @@ Again up on jacks, then down to the ground.
 4. The wheel-like containers are removed from the wheels, either one by one or all four pretty much simltaneously.
 
 At any stage, when lowered from the jacks, the car could have been driven (a go-live metaphor).
+
+We said 'jacks' above, because that's what mechanics use in real life. Software however doesn't follow gravity, 
+and with an IDE for a glove, a single finger could reposition the car in order to allow the replacment of the wheels.
 
 ## Software example
 
