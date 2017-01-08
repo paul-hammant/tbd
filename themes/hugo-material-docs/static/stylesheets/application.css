@@ -780,6 +780,10 @@ pre span {
     background: #29b6f6
 }
 
+.admonition.quote {
+    background: #29b6f6
+}
+
 .admonition a, .admonition a:hover {
     color: #fff
 }
@@ -1043,9 +1047,21 @@ h1 .article .headerlink {
     vertical-align: -.1em;
     margin-right: 5px
 }
-.
+
 .admonition.warning .admonition-title:before {
     content: "\e610"
+}
+
+.admonition.quote .admonition-title:before {
+    content: "\201C";
+    font-size: 150%;
+    font-family: Icon;
+}
+
+.admonition.quote .admonition-title:after {
+    content: "\201D";
+    font-size: 150%;
+    font-family: Icon;
 }
 
 .article h3 {
@@ -1448,7 +1464,7 @@ h1 .article .headerlink {
 
     .admonition {
         margin: 20px 24px 0;
-        border-radius: 6px;
+        border-radius: 4px;
         padding: 20px 24px
     }
 

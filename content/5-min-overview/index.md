@@ -6,9 +6,9 @@ weight: 10
 
 ## Distance
 
-{{< warning title="Branches create distance between developers and we don't want that" >}}
+{{< quote title="Branches create distance between developers and we don't want that" >}}
 &mdash; Frank Compagner, Guerrilla Games
-{{< /warning >}}
+{{< /quote >}}
 Physical distance can be mitigated by, screen sharing, so we won't worry about that.
 
 Frank's distance is about the integration of code from multiple components/modules/sub-teams towards a binary that 
