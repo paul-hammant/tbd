@@ -94,7 +94,7 @@ and not make a binary for distribution. Presently though, these build technologi
 a changeable checkout that the likes of gcheckout can control.
 
 
-##### References Elsewhere
+# References Elsewhere
 
 Date    | Article
 --------|--------
