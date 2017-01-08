@@ -711,7 +711,11 @@ pre span {
 }
 
 .article h1 {
-    border-bottom: 1px solid rgba(0, 0, 0, .12)
+    border-bottom: 1px solid rgba(0, 0, 0, .22)
+}
+
+#references-elsewhere  {
+    border-bottom: 0 solid rgba(0, 0, 0, .12)
 }
 
 .article a {
@@ -823,7 +827,7 @@ pre span {
 .article h1 {
     font-size: 24px;
     line-height: 1.333334em;
-    padding: 20px 0 42px
+    padding: 20px 0 12px
 }
 
 .article h2 {
@@ -943,7 +947,7 @@ h1 .article .headerlink {
 
 .article .data {
     margin: 1.5em -16px;
-    padding: 1.5em 0;
+    /*padding: 1.5em 0;*/
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     text-align: left

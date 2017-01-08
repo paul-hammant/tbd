@@ -4,7 +4,10 @@ title: Monorepos
 weight: 30
 ---
 
-Monorepos is a specific trunk usage that is at least decade older than its name (coined in 2013 (?)).
+A Monorepo, a term coined in 2013 (?), is a specific trunk based development implementation where the company in 
+question shoves all app;ications and service into one trunk, and makes then share code agressively.
+
+It is a practice that is at least decade older than the monorepo name.
 
 Monorepo implementations deliver a principal goal:
 
@@ -43,11 +46,13 @@ them from your IDE.
 
 ### Buck and Bazel
 
-Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) pined for that, wrote Buck and then 
-open-sourced it. Google then open-sourced a cut-down Blaze and Bazel. These are the two (three incl. Blaze) directed
-graph build systems that allow a large tree of sources to be speedily subset in a compile/test/make-a-binary way. 
+Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) pined for that, wrote [Buck](https://buckbuild.com/) and then 
+open-sourced it. Google then open-sourced a cut-down Blaze as Bazel [![](/images/ext.png)](https://bazel.build/). These are the two 
+(three incl. Blaze) aredirected graph build systems that allow a large tree of sources to be speedily subset in a 
+compile/test/make-a-binary way. 
  
-The subsetting achieved by Buck and Bazel work equally well on developer workstations, and in the CI infrastructure.
+The omitting of unecessary actions achieved by Buck and Bazel works equally well on developer workstations 
+and in the CI infrastructure.
 
 There is also the ability to depend on recently compiled object code of colleagues. Recently compiled object code for 
 provable permutations of sources/deps, that is, and plucked from the ether (think of a LRU cache available to all
@@ -85,7 +90,7 @@ break either of `MyTeamsApplication` or `TheirApplication`.
 # Recursive build systems
 
 Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls
-third party binaries from 'binary repositories', perhaps caching them locally. Most recursive build systems can
+third party binaries from 'binary repositories', caching them locally. Most recursive build systems can
 be configured to pull third party dependenciess from a relative directory in the monorepo. That is not conventional 
 though.
 
@@ -96,7 +101,12 @@ a changeable checkout that the likes of gcheckout can control.
 
 # References Elsewhere
 
-Date    | Article
---------|--------
-2013-04-09 | [Scaling Trunk Based Development](http://paulhammant.com/2013/04/09/scaling-trunk-based-development/)
-2015-05-18 | [Advantages of monolithic version control](http://danluu.com/monorepo/)
+Date    | Type  | Article
+--------|-------|--------
+2013-04-09 | Blog entry | [Scaling Trunk Based Development](http://paulhammant.com/2013/04/09/scaling-trunk-based-development/)
+2013-05-06 | Blog entry | [Google's Scaled Trunk Based Development](http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/)
+2014-01-06 | Blog entry | [Googlers Subset their Trunk](http://paulhammant.com/2014/01/06/googlers-subset-their-trunk/)
+2014-01-08 | Blog entry | [Google's vs Facebook's Trunk Based Development](http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/)
+2014-04-10 | Blog entry | [Continuous Delivery: The price of admission..](http://paulhammant.com/2014/04/10/cd-the-price-of-admission/)
+2014-10-10 | Conference Talk | [Trunk Based Development in the Enterprise - Its Relevance and Economics](https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics)
+2015-05-18 | Blog entry | [Advantages of monolithic version control](http://danluu.com/monorepo/)
