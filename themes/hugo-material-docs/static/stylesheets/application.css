@@ -946,7 +946,7 @@ h1 .article .headerlink {
     padding: 1.5em 0;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    text-align: center
+    text-align: left
 }
 
 .article .data table {
