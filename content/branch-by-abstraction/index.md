@@ -42,23 +42,32 @@ Lets talk about a car having it's wheels upgraded. We should never forget that s
 nothing like conventional construction, and we want to ram that home. At least, it is nothing like conventional 
 construction where we are not talking about a production line.
 
-**Rules:**
+### Rules
 
 1. Mechanics must be able to simultaneously work on the upholstery, engine, etc.
 2. The car must be drivable after every change. 
 
-1. Up on jacks*, one wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
-can bear weight) and replaced on the car, and lowered from the jacks. 
-2. The same wheel-like container procedure is performed on the other three wheels, as #1.
-3. One of the wheels inside the wheel-lie container is replaced with the better/desired wheel and replaced on the car. 
-Again up on jacks, then down to the ground.
-4. The old wheels (now unused) are send for recycling.
-4. The wheel-like containers are removed from the wheels, either one by one or all four pretty much simltaneously.
+### Steps
 
-At any stage, when lowered from the jacks, the car could have been driven (a go-live metaphor).
+All steps are efficiently performed up on car jacks/lifts/ramps, before lowering the car to the groung again.
 
-We said 'jacks' above, because that's what mechanics use in real life. Software however doesn't follow gravity, 
-and with an IDE for a glove, a single finger could reposition the car in order to allow the replacment of the wheels.
+1. One wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
+can bear weight) and replaced on the car. If driven this wheel functions exactly like the 
+other three wheels.
+2. The wheel-like container gains a second better/desired/alternate wheel, within exactly the same 
+physical space (magically). A switch is added inside the car to allow the choice of wheel to be switched conveniently 
+- perhaps only before the engine is started though.
+3. The same two operations (#1 and #2) are performed on the other three wheels. Or maybe #1 is done four times, 
+followed by #2 four times. The Mechanics experience will guide which is most efficient.
+4. After determining that the new wheels are better, the old wheels are removed from the wheel-like containers
+and are send for recycling.
+5. The wheel-like containers are also removed from the new wheels, either one by one or all four simultaneously.
+
+At any stage, when lowered from the jacks/lift/ramps, the car could have been driven (a 'ready to go-live' metaphor).
+
+We said 'jacks' above, because that's what mechanics use in real life. Software however doesn't follow the rules 
+gravity, or many of the costs of actual construction. With an IDE for a glove, a single finger could reposition 
+the car in 3D space to allow easy replacement of the  wheels.
 
 ## Software example
 
