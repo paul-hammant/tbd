@@ -5,8 +5,12 @@ weight: 20
 ---
 
 Branch by Abstraction is a set-piece technique to effect a 'longer to complete' change in the trunk. Say a developer
-(or a pair of developers), has a change that is going to take five days to complete. There may be some aspect of 
-repetition to the coding activities in the five day activity. 
+(or a pair of developers), has a change that is going to take five days to complete. There could easily be pressure to
+create a branch for this - somewhere that can be unstable for a period of time before it completes (and get's merged
+back somewhere).
+
+There may be some aspect of repetition to the coding activities that makes it a longer to complete. No matter, the 
+change was predicted as being time consuming, complex, destabilizing/disruptive to every else in the dev team.
 
 **Rules:**
  

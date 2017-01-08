@@ -9,11 +9,18 @@ weight: 10
 {{< quote title="Branches create distance between developers and we don't want that" >}}
 &mdash; Frank Compagner, Guerrilla Games
 {{< /quote >}}
-Physical distance can be mitigated by, screen sharing, so we won't worry about that.
 
-Frank's distance is about the integration of code from multiple components/modules/sub-teams towards a binary that 
-could be deployed or shipped. It has connotations of time, planned and unplanned. It has connotations of difficulty 
-- of late merge perhaps.
+Assuming any nework accessible source control, physical distance is mitigated by AV technologies including 
+screen sharing. So we won't worry about that so much these days.
+
+Frank's 'distance' is about the distance to the integration of code from multiple components/modules/sub-teams for a 
+binary that could be deployed or shipped. The problematic distance is to code not yet in the single shared branch, 
+that might:
+
+* break something unexpected once merged
+* be difficult to merge in.
+* not show that work was duplicated until it is merged
+* not show problems of incompatibility/undesirability that doesnt break the build
 
 Trunk Based Development is a branching model that reduces the distance to the max. 
 
@@ -77,3 +84,12 @@ branches used in review), and as quickly and completely as possible loudly/visib
 As stated, developers are pledging to be rigorous and not break the build. They're also going to need to consider 
 the impact of their potentially larger commits, especially where renames or moves were wholescale, and adopt techniques
 to allow those changes to be more easily consumed by team mates.
+
+## Drilling into Distance
+
+Problematic 'distance' has a few tangible examples:
+
+* Late merges of development that happened more than a couple of days ago.
+  * Difficult merges in particularly
+* 
+* A breaking build that lowers dev team thoughtput, and diverts resources while it is being fixed
