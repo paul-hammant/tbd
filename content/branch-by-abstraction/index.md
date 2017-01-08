@@ -65,6 +65,8 @@ and are send for recycling.
 
 At any stage, when lowered from the jacks/lift/ramps, the car could have been driven (a 'ready to go-live' metaphor).
 
+![](/images/cars.png)
+
 We said 'jacks' above, because that's what mechanics use in real life. Software however doesn't follow the rules 
 gravity, or many of the costs of actual construction. With an IDE for a glove, a single finger could reposition 
 the car in 3D space to allow easy replacement of the  wheels.
