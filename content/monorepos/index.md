@@ -11,7 +11,7 @@ It is a practice that is at least decade older than the monorepo name.
 
 Monorepo implementations deliver a principal goal:
 
-* Acquire as many dependencies as possible for a build from the same source-control repo/branch
+* Acquire as many dependencies as possible for a build from the **same** source-control repo/branch
 
 Google and Facebook are the most famous organizations that rest development on a single conpany-wide trunk, that 
 fits the monorepo design. 
@@ -46,8 +46,8 @@ them from your IDE.
 
 ### Buck and Bazel
 
-Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) pined for that, wrote [Buck](https://buckbuild.com/) and then 
-open-sourced it. Google then open-sourced a cut-down Blaze as Bazel [![](/images/ext.png)](https://bazel.build/). These are the two 
+Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) pined for that, wrote Buck[![](/images/ext.png)](https://buckbuild.com/) and then 
+open-sourced it. Google then open-sourced a cut-down Blaze as Bazel[![](/images/ext.png)](https://bazel.build/). These are the two 
 (three incl. Blaze) aredirected graph build systems that allow a large tree of sources to be speedily subset in a 
 compile/test/make-a-binary way. 
  
@@ -91,7 +91,7 @@ break either of `MyTeamsApplication` or `TheirApplication`.
 
 Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls
 third party binaries from 'binary repositories', caching them locally. Most recursive build systems can
-be configured to pull third party dependenciess from a relative directory in the monorepo. That is not conventional 
+be configured to pull third party dependencies from a relative directory in the monorepo. That is not conventional 
 though.
 
 Recursive build systems mostly have the ability to choose a type of build. For example 'mvn test' to just run tests, 
