@@ -15,25 +15,27 @@ Frank's distance is about the integration of code from multiple components/modul
 could be deployed or shipped. It has connotations of time, planned and unplanned. It has connotations of difficulty 
 - of late merge perhaps.
 
+Trunk Based Development is a branching model that reduces the distance to the max. 
+
 ## Always release ready
 
-Trunk Based Development is a branching model that reduces the distance to the max. Practioners are able to face 
-their management and say that they are always "release ready".
-
-There are many deciding factors, before a dev team settles on Trunk Based Development, but here's a short overview 
-of the practices:
-
+Team doing are able to Trunk Based Development will at worst responsd "give us one hour" when they were busy on day to 
+day development activities, when the exec management visited and commanded "Competitor X has launched feature Y, go 
+live now with what we have". And in an hour, they're going live with something just stabilized from the trunk. Perhaps 
+they can do it in less than, an hour. The rule, is never break the build, and always be ready for that CIO commanded
+disruption to plans.
+ 
 ## What it is
 
 {{< note title="Notes" >}}
-
 * Use of "Developers" throughout this site, means "QA-automators" for the same builable thing, too.
-
 * When we say 'the trunk' on this site, it is just a branch in a single repo that developers in a team are focussing on 
 for development. It may be called 'master'. That hints at the fact that the branch in qustion may literally not be 
 called 'trunk' at all.
-
 {{< /note >}}
+
+There are many deciding factors, before a dev team settles on Trunk Based Development, but here's a short overview 
+of the practices:
 
 ### Checking out / cloning
 
