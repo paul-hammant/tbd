@@ -94,10 +94,9 @@ and not make a binary for distribution. Presently though, these build technologi
 a changeable checkout that the likes of gcheckout can control.
 
 
-<h2 id="refs">References Elsewhere></h2>
+<h2 id="refs">References Elsewhere</h2>
 
 Date    | Article
 --------|--------
-
 2013-04-09 | [Scaling Trunk Based Development](http://paulhammant.com/2013/04/09/scaling-trunk-based-development/)
 2015-05-18 | [Advantages of monolithic version control](http://danluu.com/monorepo/)
