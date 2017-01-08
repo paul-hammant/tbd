@@ -4,10 +4,10 @@ title: Monorepos
 weight: 30
 ---
 
-A Monorepo, a term coined in 2013 (?), is a specific trunk based development implementation where the company in 
-question shoves all app;ications and service into one trunk, and makes then share code agressively.
+A Monorepo, is a specific trunk based development implementation where the company in 
+question shoves all applications and service into one trunk, and makes then share code aggressively. 
 
-It is a practice that is at least decade older than the monorepo name.
+The term 'monorepo' was coined in 2013 (?), but is for a practice that is at least decade older than the name.
 
 Monorepo implementations deliver a principal goal:
 
@@ -36,7 +36,7 @@ time.
 ## Directed graph build systems
 
 To facilitate Monorepos, it is important to have a build system that can omit buildable things/steps that are not
-required for the current individual developers current intention.  Two examples:
+required for the current individual developers current intention. Two examples:
 
 * I want to run impacted tests locally, relating to the hair-color field I just added to the person page of `MyTeamsApplication`
 * I want to run bring up `MyTeamsApplication` locally, so I can play with the hair-color field I just added to the person page 
@@ -48,7 +48,7 @@ them from your IDE.
 
 Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) pined for that, wrote Buck[![](/images/ext.png)](https://buckbuild.com/) and then 
 open-sourced it. Google then open-sourced a cut-down Blaze as Bazel[![](/images/ext.png)](https://bazel.build/). These are the two 
-(three incl. Blaze) aredirected graph build systems that allow a large tree of sources to be speedily subset in a 
+(three incl. Blaze) are directed graph build systems that allow a large tree of sources to be speedily subset in a 
 compile/test/make-a-binary way. 
  
 The omitting of unecessary actions achieved by Buck and Bazel works equally well on developer workstations 
@@ -100,6 +100,8 @@ a changeable checkout that the likes of gcheckout can control.
 
 
 # References Elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 Date    | Type  | Article
 --------|-------|--------
