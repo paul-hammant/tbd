@@ -47,3 +47,13 @@ radiator-style visual indication of progress would be those shown as a left-to-r
 The elapsed time between the commit and the "this commit broke the build" notification, is key. That is because the cost 
 to repair things in the case of a break, goes up when additional commits have been pushed to the branch. One of the 
 facets of the 'distance' that we want to reduce (refer [5 minute overview](/5-min-overview/)) is the distance to break.
+
+# References Elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
+Date    | Type  | Article
+--------|-------|--------
+2015-05-18 | Hangout Debate | [Branching strategies and continuous delivery](https://www.youtube.com/watch?v=30yN4hefrt0)
+2015-09-02 | Conference Presentation | [The Death of Continuous Integration](https://www.youtube.com/watch?v=q-dPdpxIcZQ)
+
