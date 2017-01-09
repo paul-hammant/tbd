@@ -65,7 +65,6 @@ googleAnalytics = "UA-24415524-3"
 	url    = "feature-flags/"
 	weight = 20
 
-
 [[menu.main]]
 	name   = "Continuous Integration"
 	url    = "continuous-integration/"
@@ -92,8 +91,13 @@ googleAnalytics = "UA-24415524-3"
 	weight = 45
 
 [[menu.main]]
+	name   = "Observed Habits"
+	url    = "observed-habits/"
+	weight = 47
+
+[[menu.main]]
 	name   = "Doing It Wrong"
-	url    = "you're doing-it-wrong/"
+	url    = "youre-doing-it-wrong/"
 	weight = 50
 
 [[menu.main]]
