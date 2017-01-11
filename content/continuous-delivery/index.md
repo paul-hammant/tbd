@@ -11,11 +11,11 @@ become:
 
 ![](/images/pipelines2.png)
 
-The [best selling book of the same name](/publications/#continuous-delivery-july-27-2010) by Jez Humble and Dave Farley, for many companies. details the 'marching orders' 
-for a whole dev-team improvement agenda.
+The [best selling book of the same name](/publications/#continuous-delivery-july-27-2010) by Jez Humble and Dave Farley, 
+for many companies. details the 'marching orders' for a whole dev-team improvement agenda.
 
 ## Continuous Deployment
 
-As Continuous Delivery, but the deployment is to production. Certain types of startups like NetFlix, Etsy and Github
-deploy their major application to production with each commit. Companies that have applications/services where 
-clients/customers could lose money, are much less likely to *firehose into production*.
+This is a extension of 'Continuous Delivery', but the deployment is to production. Certain types of startups like 
+NetFlix, Etsy and Github deploy their major application to production with each commit. Companies that have 
+applications/services where  clients/customers could lose money, are much less likely to *firehose into production*.

@@ -16,8 +16,9 @@ It is perfectly possible to do Trunk Based Development in a Git repository. By c
 most valuable branch, and once cloned to your local workstation, the repo gains a nickname of 'origin'.
 
 An effective Trunk Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
-(and of master within), and Pull-Requests being the place that ready to merge commits are code reviewed, before being 
-consumed back into origin:master.
+(and of master within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
+consumed back into origin:master. Other branching models use the same Pull-Request process for 
+code-reviews too - it is the normal way of working with Git since GitHub rolled out the feature.
 
 Historically, Git and Mercurial were not great at maintaining a zipped history size greater that 1GB. Many 
 teams have reported that they have a repository size larger than that, so opinions differ. One way that you can reach 
@@ -37,10 +38,11 @@ basis.
 
 Perforce is an industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas store all their 
 designs in it.  Until 2012, Google had their Trunk in it, and only moved off it because their non-functional needs
-exceeded it.
+exceeded it. It is peculiar in that 'p4d' (a single executable binary file) is the whole server and 
+doesn't need to be installed - just executed.
 
 Perforce is the last VCS technology that ordinarily maintains the read-only bit on the developer workstation. You 
-definately need a plugin for your IDE to handle the wire operations with the server, so you are not confronted with the
+definitely need a plugin for your IDE to handle the wire operations with the server, so you are not confronted with the
 fact that source files are read-only. Because the Perforce (p4) client having to involve the server for the flipping of
 read only bits in respect of editing source files, it requires a permanent connection to the server.
 
@@ -50,7 +52,22 @@ connection again.
 Perforce allows branches to be setup at any sub-directory not just the root one. It also allows read and/or write
 permissions to exist at any directory with the large source tree.
 
-A crucial and unmatched feature of Perforce is the 'client spec'. More on that in [Monorepos](/monorepos/).
+A crucial and unmatched feature of Perforce in other VCS technology choices is its 'client spec'. 
+More on that in [Monorepos](/monorepos/).
+
+### No Code Review
+
+A standard Perforce install, does not have a code review capability, which is a cruicial feature for modern teams.
+In the early 00's Google made custom tooling around their Perforce to have code-review features, and also support
+pre-commit verification of commits. The code-review tool they wrote gained a UI called Mondrian (see Guido van 
+Rossum talking about it in 2006![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk)). Later on the 
+open source Gerrit was created, and other tools were created too, in 
+that style, including Phabricator![](/images/ext.png)](https://en.wikipedia.org/wiki/Phabricator) from Facebook 
+engineers.
+
+Some years later, the Perforce people, in partnership with GitLab would launch a portal capability for Perforce that
+included code review. It is a VM applicance though, that interoperates with the canonical 'p4d' server daemon, and not
+all Perforce using companies have installed it.
 
 ### Git Fusion
 
@@ -77,13 +94,20 @@ compatibility.
 Subversion has been in development for 16 years, and was a sorely needed replacement for CVS. It chases some of the
 features of Perforce. Nobody has pushed Subversion to the Perforce usage levels, but that is claimed as a possibility.
 
-Note: the Subversion team themselves, don't do trunk based development, despite Subversion have default root directories 
+Note also the Subversion team themselves, don't do trunk based development, despite Subversion have default root directories 
 of 'trunk', 'tags' and 'branches' for newly-created repositories.
+
+### No Code Review
+
+Note that Subversion has no local branching capability, and to get code review you need to install servers along side 
+it. Google for those![](/images/ext.png)](https://www.google.com/search?q=subversion+code+review) 
 
 ### Git-Svn
 
 There is an extension to Git that allows it to deal with a Subversion backend. a Git-subversion clone can has all the 
-local history, local-branching possibilities of Git. That Clone from subversion can be many tens of times slower (for 
-the same history set), than the equivalent clone from Git.
+local history, local-branching possibilities of Git. That clone from subversion can be many tens of times slower (for 
+the same history set), than the equivalent clone from Git.  While the local branching possibilities afforded by this
+git enablement, and very handy, there's still no code-review, and you still need make an additional server selection 
+(see above).
 
 
