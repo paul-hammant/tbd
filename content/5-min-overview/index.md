@@ -85,13 +85,12 @@ As stated, developers are pledging to be rigorous and not break the build. They'
 the impact of their potentially larger commits, especially where renames or moves were wholescale, and adopt techniques
 to allow those changes to be more easily consumed by team mates.
 
-## Drilling into Distance
+## Drilling into 'Distance'
 
 Problematic 'distance' has a few tangible examples:
 
 * Late merges of development that happened more than a couple of days ago.
   * Difficult merges in particularly
-* 
 * A breaking build that lowers dev team thoughtput, and diverts resources while it is being fixed
 
 # References Elsewhere
@@ -100,6 +99,5 @@ Problematic 'distance' has a few tangible examples:
 
 Date    | Type  | Article
 --------|-------|--------
-2015-06-16 | Blog Entry | [Organisation Pattern: Trunk Based Development](http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development/)
-
+16 Jun 2015 | Blog Entry | [Organisation Pattern: Trunk Based Development](http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development/)
 
