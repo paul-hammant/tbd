@@ -6,6 +6,10 @@ weight: 40
 
 ## Daemon Confusion
 
+{{< quote title="individuals practice TBD, and teams practice CI" >}}
+&mdash; *Agile* Steve Smith
+{{< /quote >}}
+
 Continuous Intgration (CI) as a concept was defined in 1991 by Grady Booch. Wikipedia
 [details it best](https://en.wikipedia.org/wiki/Continuous_integration). 
 According to its intentions, it and Trunk Based Development strive to achieve the exact same thing.
