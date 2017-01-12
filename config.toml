@@ -72,9 +72,19 @@ googleAnalytics = "UA-24415524-3"
 	weight = 40
 
 [[menu.main]]
-	name   = "Techniques"
-	url    = "techniques/"
+	name   = "Feature Flags"
+	url    = "feature-flags/"
 	weight = 50
+
+[[menu.main]]
+	name   = "Branch by Abstraction"
+	url    = "branch-by-abstraction/"
+	weight = 53
+
+[[menu.main]]
+	name   = "Strangulation"
+	url    = "strangulation/"
+	weight = 56
 
 [[menu.main]]
 	name   = "Continuous Integration"

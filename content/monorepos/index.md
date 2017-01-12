@@ -93,9 +93,9 @@ We used 'change the wheel on a car', on the [Branch By Abstraction](branch-by-ab
 example. It will serve us again here. Wheel is what we want to change. The other team using 'Wheel(s)' is making a 
 Segue thing (two wheels and self balancing via high-torque and very responsive motors). Here's the procedure:
 
-![](/images/car_seque.png)  
+![](/images/car_segue.png)  
  
-The starting position is two teams working separately, using 'Wheel' (4 for car, 2 for seque). Without any commits 
+The starting position is two teams working separately, using 'Wheel' (4 for car, 2 for segue). Without any commits 
 happening the engineer changing 'Wheel' for everyone, runs gcheckout (or it's equivalent) to modify the source in the 
 IDE to the union of Car and Segue (and in-house dependencies). That is marked as step 0. Lets say the
 change is quick/easy this time (not requiring Branch By Abstraction) step 1 shows the single commit that changes
