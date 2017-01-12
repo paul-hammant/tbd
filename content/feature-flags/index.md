@@ -4,7 +4,7 @@ title: Feature Flags
 weight: 20
 ---
 
-Blah
+TODO
 
 # References Elsewhere
 
@@ -12,7 +12,7 @@ Blah
 
 Date    | Type  | Article
 --------|-------|--------
-2010-10-29 | MartinFowler.com artcile | [Feature Toggle](https://martinfowler.com/bliki/FeatureToggle.html)
-2016-02-08 | MartinFowler.com article | [Feature Toggle](https://martinfowler.com/articles/feature-toggles.html)
+29 Oct 2010 | MartinFowler.com artcile | [Feature Toggle](https://martinfowler.com/bliki/FeatureToggle.html)
+08 Feb 2016 | MartinFowler.com article | [Feature Toggle](https://martinfowler.com/articles/feature-toggles.html)
 
  

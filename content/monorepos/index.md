@@ -177,10 +177,10 @@ feature like this in Maven to track that:
 
 Date    | Type  | Article
 --------|-------|--------
-2013-04-09 | Blog entry | [Scaling Trunk Based Development](http://paulhammant.com/2013/04/09/scaling-trunk-based-development/)
-2013-05-06 | Blog entry | [Google's Scaled Trunk Based Development](http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/)
-2014-01-06 | Blog entry | [Googlers Subset their Trunk](http://paulhammant.com/2014/01/06/googlers-subset-their-trunk/)
-2014-01-08 | Blog entry | [Google's vs Facebook's Trunk Based Development](http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/)
-2014-04-10 | Blog entry | [Continuous Delivery: The price of admission..](http://paulhammant.com/2014/04/10/cd-the-price-of-admission/)
-2014-10-10 | Conference Talk | [Trunk Based Development in the Enterprise - Its Relevance and Economics](https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics)
-2015-05-18 | Blog entry | [Advantages of monolithic version control](http://danluu.com/monorepo/)
+09 Apr 2013 | Blog entry | [Scaling Trunk Based Development](http://paulhammant.com/2013/04/09/scaling-trunk-based-development/)
+06 May 2013 | Blog entry | [Google's Scaled Trunk Based Development](http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/)
+06 Jan 2014 | Blog entry | [Googlers Subset their Trunk](http://paulhammant.com/2014/01/06/googlers-subset-their-trunk/)
+08 Jan 2014 | Blog entry | [Google's vs Facebook's Trunk Based Development](http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/)
+10 Apr 2014 | Blog entry | [Continuous Delivery: The price of admission..](http://paulhammant.com/2014/04/10/cd-the-price-of-admission/)
+10 Oct 2014 | Conference Talk | [Trunk Based Development in the Enterprise - Its Relevance and Economics](https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics)
+18 May 2015 | Blog entry | [Advantages of monolithic version control](http://danluu.com/monorepo/)

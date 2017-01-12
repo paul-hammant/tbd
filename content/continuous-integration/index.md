@@ -90,6 +90,6 @@ teams. Google had engineered their Perforce trunk in the early 00's to have pre-
 
 Date    | Type  | Article
 --------|-------|--------
-2015-05-18 | Hangout Debate | [Branching strategies and continuous delivery](https://www.youtube.com/watch?v=30yN4hefrt0)
-2015-09-02 | Conference Presentation | [The Death of Continuous Integration](https://www.youtube.com/watch?v=q-dPdpxIcZQ)
+18 May 2015 | Hangout Debate | [Branching strategies and continuous delivery](https://www.youtube.com/watch?v=30yN4hefrt0)
+02 Sep 2015 | Conference Presentation | [The Death of Continuous Integration](https://www.youtube.com/watch?v=q-dPdpxIcZQ)
 
