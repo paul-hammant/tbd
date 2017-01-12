@@ -56,59 +56,60 @@ googleAnalytics = "UA-24415524-3"
 	weight = 10
 
 [[menu.main]]
-	name   = "Feature Flags"
-	url    = "feature-flags/"
-	weight = 15
-
-[[menu.main]]
-	name   = "Branch By Abstraction"
-	url    = "branch-by-abstraction/"
-	weight = 20
-
-[[menu.main]]
-	name   = "Continuous Integration"
-	url    = "continuous-integration/"
-	weight = 25
-
-[[menu.main]]
-	name   = "Continuous Delivery"
-	url    = "continuous-delivery/"
-	weight = 30
-
-[[menu.main]]
-	name   = "Monorepos"
-	url    = "monorepos/"
-	weight = 35
-
-[[menu.main]]
 	name   = "Deciding Factors"
 	url    = "deciding-factors/"
-	weight = 40
+	weight = 20
 
 [[menu.main]]
 	name   = "VCS Choices"
 	url    = "vcs-choices/"
-	weight = 45
+	weight = 30
+
+
+[[menu.main]]
+	name   = "Feature Flags"
+	url    = "feature-flags/"
+	weight = 40
+
+[[menu.main]]
+	name   = "Techniques"
+	url    = "techniques/"
+	weight = 50
+
+[[menu.main]]
+	name   = "Continuous Integration"
+	url    = "continuous-integration/"
+	weight = 60
+
+[[menu.main]]
+	name   = "Continuous Delivery"
+	url    = "continuous-delivery/"
+	weight = 70
 
 [[menu.main]]
 	name   = "Observed Habits"
 	url    = "observed-habits/"
-	weight = 47
+	weight = 80
 
 [[menu.main]]
 	name   = "Doing It Wrong"
 	url    = "youre-doing-it-wrong/"
-	weight = 50
+	weight = 90
 
 [[menu.main]]
 	name   = "Opposing Models"
 	url    = "opposing-models/"
-	weight = 55
+	weight = 100
+
+[[menu.main]]
+	name   = "Monorepos"
+	url    = "monorepos/"
+	weight = 110
 
 [[menu.main]]
 	name   = "Publications"
 	url    = "publications/"
-	weight = 60
+	weight = 120
 
 [blackfriday]
 	smartypants	= true
