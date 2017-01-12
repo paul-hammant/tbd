@@ -29,5 +29,14 @@ to create other long-lived development branches is resisted.
 Trunk Based Development isn't a new branching model. The word 'trunk' is referent to the concept of a growing tree,
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
-It has been a lesser known model since the mid-nineties.  The largest of development organizations, like Google and 
-Facebook practice it at scale.
+It has been a lesser known model since the mid-nineties. The largest of development organizations, like Google and 
+Facebook practice it at scale. Google has millions of individual source 
+files in a singe trunk branch of a repo that contains 86TB of history. We cover that setup in [monorepo](monorepos/).
+
+# References Elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
+Date    | Type  | Article
+--------|-------|--------
+01 Jul 2016 | Blog Entry | [Why Google Stores Billions of Lines of Code in a Single Repository](http://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext)
