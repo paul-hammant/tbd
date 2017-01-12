@@ -4,24 +4,35 @@ title: Monorepos
 weight: 30
 ---
 
-A Monorepo, is a specific trunk based development implementation where the company in 
-question shoves all applications and service into one trunk, and makes then share code aggressively. 
+A Monorepo, is a specific trunk based development implementation where the organization in 
+question puts the source for all applications and service into one trunk, and makes developers share code aggressively
+**at source level**.  The term 'monorepo' is a newwer for a practice that is more than a decade old.
 
-The term 'monorepo' was coined in 2013 (?), but is for a practice that is at least decade older than the name.
+Monorepo implementations deliver a couple of principal goals:
 
-Monorepo implementations deliver a principal goal:
+* Acquire as many dependencies as possible for a build from the **same** source-control repo/branch, and in the 
+same update/pull/sync operation.
+* Keep all teams in agreement on the versions of dependencies via lock-step upgrades.
 
-* Acquire as many dependencies as possible for a build from the **same** source-control repo/branch
+And some secondary goals:
+
+* Allow changes to common dependencies to via atomic commits.
+* Allow the extraction of new common dependencies (from existing code) to be achiced in atomic commits.
+* Force all developers to focus on the HEAD revisions of files in the trunk
 
 Google and Facebook are the most famous organizations that rest development on a single conpany-wide trunk, that 
 fits the monorepo design. 
  
 ## Third party dependencies
- 
-If could be that Python/Java/C++ SDKs are installed the regular way and not acquired from the source-control 
-repo/branch. 
 
-There is always strong desire to push third-party binaries into the company-wide trunk too (hello Git-LFS). 
+With the monorepo model, there is a strong desire to have third-party binaries in source-control too. 
+You might think that it would be unmanagable for reasons of size. In terms of history, Perforce and Subversion don't
+mind a terrbyte of history of binary files (or more), and Git performed much better when Git-LFS was created. You 
+could still feel that the HEAD revision of tousands of fine grained dependencies is too much for a workstation, but 
+that can be managed if gia 'sparse checkout' techniques (see below).
+
+Note:  Python, Java, C++ and other SDKs are installed the regular way on the developer workstatio, and not acquired 
+from the source-control repo/branch. 
 
 ## In-house dependencies
  
@@ -64,7 +75,7 @@ As some point, if you are depending on in-house dependencies at a source level, 
 your workstations hard drive.  Google using some simple scripting modify the checkout on the developers workstation 
 to omit the source files/packages that are not needed for the current intentions of the developer. 
 
-### Gcheckout
+### Gcheckout / sparse checkouts
 
 In Google, A Blaze related technology called 'gcheckout' can modify the mappings between the multi-terrabye HEAD 
 revision of company-wide trunk (monorepo) and developers workstation. Thus the source-control tools maintain the 
@@ -86,6 +97,10 @@ too. The Blaze related checkout-modifying technology performs an expansion to br
 developers checkout. From that moment on, the developer doing update/pull/sync will bring down minute by minute
 changes to those three modules.  For free, the build expands to make sure that the `TheORMweDepOn` changes don't 
 break either of `MyTeamsApplication` or `TheirApplication`.
+
+Both Subversion and Git have a 'sparse checkout' capability, which exactly facilitates this sort of thing.  At team 
+wanting to have their own gcheckout would have some scripting of sprase checkouts. Perforce has a 'client spec' 
+capability that is more or less the same.
  
 #### Contrived Example 
 
@@ -102,7 +117,29 @@ change is quick/easy this time (not requiring Branch By Abstraction) step 1 show
 wheel for everyone.  After the commit/push, running again shows the application focussed team checkout - either 
 'Car' or 'Segue'.
  
-# Recursive build systems
+## Diamond Dependency Problem
+ 
+What happens when two apps need different version of a dependency? 
+
+For in-house dependencies, where the source is in the same monorepo, then you will not have ths situation, as the 
+team that first wanted the increasion functionality, performed it for all teams, keeping everyone at HEAD revision 
+of it. The concept of version number dissapears in this model.
+
+### Third party
+
+For third-party dependencies, the same rules applies, everyone upgrades in lock-step. Problems can ensure, of course, 
+if there are real reasons for team B to not upgrade and team A was insistent. Broken backwards compatibility is 
+one problem. 
+
+In 2007, Google tried to upgrade their JUnit from 3.8.x to 4.x and struggled as there was a subtle 
+backwards incompatibility in a small percentage of their uses of it. The change-set was very large, and presumably 
+the both the IDE and the javac compiled buckled to some degree.
+
+Because you're doing lock-step upgrades, you only secondarily note the version of the third party 
+dependencies, as you check them in to source control withough version numbers in the file name.  I.e. JUnit goes in as
+`third_party/java_testing/junit.jar`.
+
+## Recursive build systems
 
 Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls
 third party binaries from 'binary repositories', caching them locally. Most recursive build systems can
@@ -113,6 +150,26 @@ Recursive build systems mostly have the ability to choose a type of build. For e
 and not make a binary for distribution. Presently though, these build technologies don't have the ability to follow
 a changeable checkout that the likes of gcheckout can control.
 
+### Conflict with Monorepos
+ 
+Recursive build systems like maven, have a forward declaration of modules that should be built, like so:
+
+```
+<modules>
+  <module>moduleone</module>
+  <module>moduletwo</module>
+<modules>
+```
+
+Directories `moduleone` and `moduletwo` have to exist.  The idea of monorepos that are doing the gcheckout style
+modifications of a dev workstations checkout, is that build graphs are calculated not declared.  You'd need a 
+feature like this in Maven to track that:
+
+```
+<modules>
+  <calculate/>
+<modules>
+```
 
 # References Elsewhere
 
