@@ -99,6 +99,17 @@ between 1 to 2 implementation into object code.  If there are unit tests for the
 If on a real branch, the casual restart of the paused initiative is missing. There's possibly an exponentian cost of 
 restart given the elapsed time since the initiative was paused. 
  
- In the case of abandonment, a real branch is cheaper, but the abstraction is only incrementally more expsive to 
- delete. Besides pause and resume are much more likely in an enterprise development organisation that doesn't have 
- limitless coffers.
+In the case of abandonment, a real branch is cheaper, but the abstraction is only incrementally more expsive to 
+delete. Besides pause and resume are much more likely in an enterprise development organisation that doesn't have 
+limitless coffers.
+ 
+# References Elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
+Date    | Type  | Article
+--------|-------|--------
+26 Apr 2007 | Blog entry | [Introducing Branch by Abstraction](http://paulhammant.com/blog/branch_by_abstraction.html)
+21 Jun 2013 | Blog entry | [Branching Strategies: Feature Branches vs Branch by Abstraction](http://www.slideshare.net/cb372/branching-strategies)
+07 Jan 2014 | MartinFowler.com article | [BranchByAbstraction](https://martinfowler.com/bliki/BranchByAbstraction.html)
+05 May 2011 | ContinuousDelivery.com article | [Make Large Scale Changes Incrementally with Branch By Abstraction](https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/)
