@@ -87,6 +87,21 @@ developers checkout. From that moment on, the developer doing update/pull/sync w
 changes to those three modules.  For free, the build expands to make sure that the `TheORMweDepOn` changes don't 
 break either of `MyTeamsApplication` or `TheirApplication`.
  
+#### Contrived Example 
+
+We used 'change the wheel on a car', on the [Branch By Abstraction](branch-by-abstraction/) page for its contrived 
+example. It will serve us again here. Wheel is what we want to change. The other team using 'Wheel(s)' is making a 
+Segue thing (two wheels and self balancing via high-torque and very responsive motors). Here's the procedure:
+
+![](/images/car_seque.png)  
+ 
+The starting position is two teams working separately, using 'Wheel' (4 for car, 2 for seque). Without any commits 
+happening the engineer changing 'Wheel' for everyone, runs gcheckout (or it's equivalent) to modify the source in the 
+IDE to the union of Car and Segue (and in-house dependencies). That is marked as step 0. Lets say the
+change is quick/easy this time (not requiring Branch By Abstraction) step 1 shows the single commit that changes
+wheel for everyone.  After the commit/push, running again shows the application focussed team checkout - either 
+'Car' or 'Segue'.
+ 
 # Recursive build systems
 
 Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls

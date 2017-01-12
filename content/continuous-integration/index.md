@@ -63,8 +63,7 @@ Fixing things while the rest of the team watches or waits, is a team-throughput 
 
 ![](/images/ci_types.png)
 
-Yellow = automated steps
-Red = potentially disruptive
+Yellow = automated steps, Red = potentially disruptive
 
 Note: for committing/pushing straight to the sahred trunk, code review and CI verification can happen in parallel. Most 
 likely though is review happens after the CI daemon has cast it's vote on the commit (or commits if batching).
