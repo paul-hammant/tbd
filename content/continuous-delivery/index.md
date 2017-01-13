@@ -14,6 +14,8 @@ become:
 The [best selling book of the same name](/publications/#continuous-delivery-july-27-2010) by Jez Humble and Dave Farley, 
 details the 'marching orders' for many companies, where there is whole dev-team improvement agenda.
 
+TODO Pipelines
+
 ## Continuous Deployment
 
 **An automatic push all the way into production; Maybe every commit**
