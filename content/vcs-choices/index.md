@@ -6,6 +6,8 @@ weight: 50
 
 ## Git and Mercurial
 
+[Git website](https://git-scm.com/) and [Mercurial website](https://www.mercurial-scm.org/)
+
 Git and Mercurial have been popular DVCS technologies for many years. Portals like Github make Git the default 
 choice for SCM/SVC/source-control.  While the Linux Kernel is maintained with Git, and definately takes advantage 
 of the D-Distributed aspect of the DVCS of Git (in that many divergent versions of kernel can exist over 
@@ -34,11 +36,21 @@ checkout clone, and maintains a single permission for a user in respect of Read 
 There is a suggestion that Mercurial for one, is recieving contributions that will allow it to super-achieve on a scale
 basis.
 
+### Platform Software Choices
+
+* [Github](https://github.com/) and its enterprise on-premisis edition [Github Entrprise](https://enterprise.github.com/home) - Git
+* [Gitlab](https://about.gitlab.com/) - Git
+* Atlassian's [Bitbucket server](https://www.atlassian.com/software/bitbucket/server) - Git and Mercurial
+* [RhodeCode](https://rhodecode.com/) - Git, Mercurial and Subversion
+* Various [Collabnet](http://www.collab.net/) products and services.
+
 ## Perforce
 
-Perforce is an industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas store all their 
+[website](https://www.perforce.com/)
+
+Perforce is a closed-source, industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas store all their 
 designs in it.  Until 2012, Google had their Trunk in it, and only moved off it because their non-functional needs
-exceeded it. It is peculiar in that 'p4d' (a single executable binary file) is the whole server and 
+exceeded it. Perforce is peculiar in that 'p4d' (a single server-side executable binary file) is the whole server and 
 doesn't need to be installed - just executed.
 
 Perforce is the last VCS technology that ordinarily maintains the read-only bit on the developer workstation. You 
@@ -46,7 +58,7 @@ definitely need a plugin for your IDE to handle the wire operations with the ser
 fact that source files are read-only. Because the Perforce (p4) client having to involve the server for the flipping of
 read only bits in respect of editing source files, it requires a permanent connection to the server.
 
-Unlike Git, Perforce isn't ordinarily able to locally show history of the files, within it. It needs that server 
+Unlike Git, Perforce isn't ordinarily able to **locally** show history of the files within it. It needs that server 
 connection again.
 
 Perforce allows branches to be setup at any sub-directory not just the root one. It also allows read and/or write
@@ -63,15 +75,18 @@ pre-commit verification of commits. The code-review tool they wrote gained a UI 
 Rossum talking about it in 2006![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk)). Later on the 
 open source Gerrit was created, and other tools were created too, in 
 that style, including Phabricator![](/images/ext.png)](https://en.wikipedia.org/wiki/Phabricator) from Facebook 
-engineers.
+engineers. 
 
-Some years later, the Perforce people, in partnership with GitLab would launch a portal capability for Perforce that
-included code review. It is a VM applicance though, that interoperates with the canonical 'p4d' server daemon, and not
-all Perforce using companies have installed it.
+Github for Git came along with the concepts of forks and had a rudimentary 'code review' built in from 
+2008![](/images/ext.png)](https://github.com/blog/42-commit-comments). From that moment it was clear 
+that to compete with Github your would need integrated code-review functionality, and Perforce didn't have one. Later 
+though, the Perforce people, in partnership with GitLab would launch a portal capability for Perforce that
+included code review. It is a VM applicance that interoperates with the canonical 'p4d' server daemon. Not
+all existing Perforce licensees have installed it.
 
 ### Git Fusion
 
-There's a VM applicance from the Perforce people, that can sit in your infrastructre and mediate between the perforce
+There's a VM applicance from the Perforce people, that can sit in your infrastructure and mediate between the perforce
 server, and your wish to use Git in a Git-idiomatic way on your dev workstation.  This mode of operation doesn't have 
 the read-only bit feature, and also maintains
 
@@ -91,7 +106,9 @@ compatibility.
 
 ## Subversion
 
-Subversion has been in development for 16 years, and was a sorely needed replacement for CVS. It chases some of the
+[website](https://subversion.apache.org/)
+
+Subversion has been in development for 16 years, and was a sorely needed open-source replacement for CVS. It chases some of the
 features of Perforce. Nobody has pushed Subversion to the Perforce usage levels, but that is claimed as a possibility.
 
 Note also the Subversion team themselves, don't do trunk based development, despite Subversion have default root directories 
@@ -99,8 +116,9 @@ of 'trunk', 'tags' and 'branches' for newly-created repositories.
 
 ### No Code Review
 
-Note that Subversion has no local branching capability, and to get code review you need to install servers along side 
-it. Google for those![](/images/ext.png)](https://www.google.com/search?q=subversion+code+review) 
+Note that Subversion has no local branching capability, and to get code review you need to install third-party servers 
+along side it. Google for those![](/images/ext.png)](https://www.google.com/search?q=subversion+code+review). RhodeCoce
+(see below) has code review for Subversion build in.
 
 ### Git-Svn
 
@@ -110,4 +128,7 @@ the same history set), than the equivalent clone from Git.  While the local bran
 git enablement, and very handy, there's still no code-review, and you still need make an additional server selection 
 (see above).
 
+### Platform Software Choices
 
+* [RhodeCode](https://rhodecode.com/) - Git, Mercurial and Subversion
+* Various [Collabnet](http://www.collab.net/) products and services.

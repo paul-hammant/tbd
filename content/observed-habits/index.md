@@ -14,3 +14,12 @@ to the release but everyone else is going to work at full speed.
 ### Every Day is the same
 
 Ignoring meetings, Developers commit/push at the same rate regardless of the day of the week or the week of the month. 
+
+## Quick Reviews
+
+Teams doing trunk based development, know that they their commits/pushes are up for the scrutiny by others, as soon
+as they've landed on the shared trunk. They're keen bring that forward, not delay it, so they may prefer to 
+pair-program on changes, or ask colleages for a code review at the time the change is submitted to be merged into
+the trunk.
+
+## Running the build locally
