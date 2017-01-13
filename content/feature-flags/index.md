@@ -44,7 +44,7 @@ if args.contains("--withOneClickPurchase") {
 }
 ```
 
-Java Dependency Injection by config:
+Java Dependency Injection via config:
 
 ```java
 bootContainer.addComponent(classFromName(config.get("purchasingCompleting")));
@@ -73,8 +73,8 @@ the offerings for that airport at the flight arrival time.
 Key for Runtime switchable flags is the need for the state to persist. A restart of the application or service should
 not set that flag choice back to default - it should retain the previous choice. It gets complicated when you think
 about the need for the toggle to permeate multiple nodes in a cluster of horizontally scaled sibling processes. For
-that last, then holding the flag state in Consul![](/images/ext.png)](https://www.consul.io/), 
-Etcd![](/images/ext.png)](https://github.com/coreos/etcd) (or equiv) is a the modern way.
+that last, then holding the flag state in Consul[![](/images/ext.png)](https://www.consul.io/), 
+Etcd[![](/images/ext.png)](https://github.com/coreos/etcd) (or equiv) is a the modern way.
 
 ## Build Flags
 

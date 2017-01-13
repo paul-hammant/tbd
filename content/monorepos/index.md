@@ -161,7 +161,7 @@ Recursive build systems like maven, have a forward declaration of modules that s
 <modules>
 ```
 
-Directories `moduleone` and `moduletwo` have to exist.  The idea of monorepos that are doing the gcheckout style
+Directories `moduleone` and `moduletwo` have to exist. The idea of monorepos that are doing the gcheckout style
 modifications of a dev workstations checkout, is that build graphs are calculated not declared.  You'd need a 
 feature like this in Maven to track that:
 
