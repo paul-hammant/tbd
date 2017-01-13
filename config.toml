@@ -56,12 +56,12 @@ googleAnalytics = "UA-24415524-3"
 	weight = 10
 
 [[menu.main]]
-	name   = "Deciding Factors"
+	name   = "Deciding factors"
 	url    = "deciding-factors/"
 	weight = 20
 
 [[menu.main]]
-	name   = "VCS Choices"
+	name   = "VCS choices"
 	url    = "vcs-choices/"
 	weight = 30
 
@@ -97,18 +97,18 @@ googleAnalytics = "UA-24415524-3"
 	weight = 70
 
 [[menu.main]]
-	name   = "Observed Habits"
+	name   = "Observed habits"
 	url    = "observed-habits/"
 	weight = 80
 
 [[menu.main]]
-	name   = "Doing It Wrong"
+	name   = "Doing it wrong"
 	url    = "youre-doing-it-wrong/"
 	weight = 90
 
 [[menu.main]]
-	name   = "Opposing Models"
-	url    = "opposing-models/"
+	name   = "Alternative branching models"
+	url    = "alternative-branching-models/"
 	weight = 100
 
 [[menu.main]]
