@@ -22,4 +22,27 @@ as they've landed on the shared trunk. They're keen bring that forward, not dela
 pair-program on changes, or ask colleages for a code review at the time the change is submitted to be merged into
 the trunk.
 
+## Chasing HEAD
+
+Trunk based development teams update/pull/sync from the shared trunk often. Many times a day in fact. 
+
 ## Running the build locally
+
+Developers practicing Trunk Based Development run the build before a commit/push in order to not break the build. 
+This one prctice, for very small teams, allows them to not setup a CI daemon until later. If they can't push their 
+commits to the shared trunk because someone else beat them to it, they have to do another update/sync/pull then
+another build then the push of the revised commit(s). "Ir worked on my machine" says the developers that doesn't 
+want to confess to breaking the build (assuming quick reliable idempotent builds).
+
+## Powering through broken builds
+
+OK, so because of that lazy developer, or the flaky build, or pure accident of timing (Google has a commit every 30 
+seconds into their monorepo - there must be quantum entangled commits on a 0.0001% basis), the trunk will be observed 
+to be broken occassionally. There could be an automatic rollback that's about to happen, or a good old fashioned "lock 
+the trunk" while the build-cop sorts it out. That last is particulatly true in situations where batching of commits in 
+CI builds is the reality.
+
+So the developer wanting to update/pull/sync from the shared trunk often, runs the risk of encountering that 
+statisticly improbable broken build. They don't want to have the commits that broke the trunk, on theor workstation
+if they are developing. So what they do is update/pull/sync to the last known good commit, and only go further
+ahead when the trunk build is officially repaired.  This way they know they can stay 'green' on their workstation.
