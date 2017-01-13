@@ -13,6 +13,6 @@ TODO
 Date    | Type  | Article
 --------|-------|--------
 29 Oct 2010 | MartinFowler.com artcile | [Feature Toggle](https://martinfowler.com/bliki/FeatureToggle.html)
-08 Feb 2016 | MartinFowler.com article | [Feature Toggle](https://martinfowler.com/articles/feature-toggles.html)
+08 Feb 2016 | MartinFowler.com article | [Feature Toggles](https://martinfowler.com/articles/feature-toggles.html)
 
  
