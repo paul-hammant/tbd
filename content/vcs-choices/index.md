@@ -78,7 +78,7 @@ that style, including Phabricator[![](/images/ext.png)](https://en.wikipedia.org
 engineers. 
 
 Github for Git came along with the concepts of forks and had a rudimentary 'code review' built in from 
-2008![](/images/ext.png)](https://github.com/blog/42-commit-comments). From that moment it was clear 
+2008[![](/images/ext.png)](https://github.com/blog/42-commit-comments). From that moment it was clear 
 that to compete with Github your would need integrated code-review functionality, and Perforce didn't have one. Later 
 though, the Perforce people, in partnership with GitLab would launch a portal capability for Perforce that
 included code review. It is a VM applicance that interoperates with the canonical 'p4d' server daemon. Not
@@ -117,7 +117,7 @@ of 'trunk', 'tags' and 'branches' for newly-created repositories.
 ### No Code Review
 
 Note that Subversion has no local branching capability, and to get code review you need to install third-party servers 
-along side it. Google for those![](/images/ext.png)](https://www.google.com/search?q=subversion+code+review). RhodeCoce
+along side it. Google for those[![](/images/ext.png)](https://www.google.com/search?q=subversion+code+review). RhodeCoce
 (see below) has code review for Subversion build in.
 
 ### Git-Svn
