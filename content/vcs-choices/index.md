@@ -46,7 +46,7 @@ basis.
 
 ## Perforce
 
-[website](https://www.perforce.com/)
+[Website](https://www.perforce.com/)
 
 Perforce is a closed-source, industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas store all their 
 designs in it.  Until 2012, Google had their Trunk in it, and only moved off it because their non-functional needs
@@ -106,7 +106,7 @@ compatibility.
 
 ## Subversion
 
-[website](https://subversion.apache.org/)
+[Website](https://subversion.apache.org/)
 
 Subversion has been in development for 16 years, and was a sorely needed open-source replacement for CVS. It chases some of the
 features of Perforce. Nobody has pushed Subversion to the Perforce usage levels, but that is claimed as a possibility.
@@ -132,3 +132,13 @@ git enablement, and very handy, there's still no code-review, and you still need
 
 * [RhodeCode](https://rhodecode.com/) - Git, Mercurial and Subversion
 * Various [Collabnet](http://www.collab.net/) products and services.
+
+## Team Foundation Server - TFS
+
+[Website](https://www.visualstudio.com/tfs/)
+
+Microsoft launched TFS in the mid 00's. It is said that they have an internal 'SourceDepot' tool that is a special 
+version of Perforce compiled for them in the 90's, and that TFS reflects some of the ways of working of that 
+technology. It has grown to to be a multi-faceted server platform. Perhaps even a one-stop shop for the whole 
+enterprise's needs for application lifecycle management.  It is perfectly compatible with a Trunk Based Development 
+usage.
