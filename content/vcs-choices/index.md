@@ -72,9 +72,9 @@ More on that in [Monorepos](/monorepos/).
 A standard Perforce install, does not have a code review capability, which is a cruicial feature for modern teams.
 In the early 00's Google made custom tooling around their Perforce to have code-review features, and also support
 pre-commit verification of commits. The code-review tool they wrote gained a UI called Mondrian - see Guido van 
-Rossum talking about it in 2006![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Later on the 
+Rossum talking about it in 2006[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Later on the 
 open source Gerrit was created, and other tools were created too, in 
-that style, including Phabricator![](/images/ext.png)](https://en.wikipedia.org/wiki/Phabricator) from Facebook 
+that style, including Phabricator[![](/images/ext.png)](https://en.wikipedia.org/wiki/Phabricator) from Facebook 
 engineers. 
 
 Github for Git came along with the concepts of forks and had a rudimentary 'code review' built in from 
