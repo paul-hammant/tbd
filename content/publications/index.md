@@ -15,17 +15,40 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 ### Lean Enterprise (January 3, 2015)
 
-<div><a
-  href="http://bit.ly/lean-enterprise-paper"><img
-  width="90" src="//continuousdelivery.com/images/lean-enterprise.png"
-  style="float:left;padding-right:10px; bordder:1px solid
-  black;"/></a><p><em>Lean Enterprise: How High Performance Organizations Innovate at Scale</em><br/><a
-  href="http://bit.ly/lean-enterprise-paper"><strong>Amazon</strong>
-  (hardback, kindle)</a><br /><a
-  href="http://bit.ly/lean-enterprise-ebook"><strong>O'Reilly</strong>
-  (pdf, epub, mobi)</a><br />
-  Translations: <a href="http://www.amazon.cn/dp/B01AS1ORWM?tag=contindelive-20">中文</a> | <a href="https://www.amazon.co.jp/dp/4873117747?tag=contindelive-20">日本語</a> | <a href="https://www.amazon.de/dp/396009020X?tag=contindelive-20">Deutsch</a> | <a href="https://www.casadocodigo.com.br/products/livro-lean-enterprise">português</a>
-</p><br clear="all"/></div>
+<div>
+    <a href="http://bit.ly/lean-enterprise-paper">
+      <img width="90" src="//continuousdelivery.com/images/lean-enterprise.png" style="float:left;padding-right:10px; border:1px solid black;"/>
+    </a>
+    <p>
+        <em>Lean Enterprise: How High Performance Organizations Innovate at Scale</em>
+        <br/>
+        <a href="http://bit.ly/lean-enterprise-paper"><strong>Amazon</strong>(hardback, kindle)</a><br/>
+        <a href="http://bit.ly/lean-enterprise-ebook"><strong>O'Reilly</strong>(pdf, epub, mobi)</a><br/>
+        Translations: <a href="http://www.amazon.cn/dp/B01AS1ORWM?tag=contindelive-20">中文</a> | 
+        <a href="https://www.amazon.co.jp/dp/4873117747?tag=contindelive-20">日本語</a> | 
+        <a href="https://www.amazon.de/dp/396009020X?tag=contindelive-20">Deutsch</a> | 
+        <a href="https://www.casadocodigo.com.br/products/livro-lean-enterprise">português</a>
+    </p>
+    <br clear="all"/>
+</div>
+
+### DevOps Handbook (October 6, 2016)
+
+<div>
+    <a>
+      <img width="90" src="/images/devopsHandbook.jpg" style="float:left;padding-right:10px; border:1px solid black;"/>
+    </a>
+    <p>
+        <em>LThe DevOps Handbook:: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</em>
+        <br/>
+        <a href="https://www.amazon.com/dp/B01M9ASFQ3"><strong>Amazon</strong>(hardback, kindle)</a>
+        <br/>
+        <a href="http://shop.oreilly.com/product/9781942788003.do"><strong>O'Reilly</strong>(pdf, epub, mobi)</a>
+        <br/>
+    </p>
+    <br clear="all"/>
+</div>
+
 
 ## Reports
 
