@@ -12,4 +12,23 @@ weight: 30
 
 ### Mainline
 
-### Cascase
+Mainline is a branching model that was promoted for ClearCase VCS implementations. It is the principal branching 
+model that Trunk Based Development opposes. Mainline is a branch that will last forever*. Off that branches are formed
+for teams to do development work on. When that work is complete, a release may happen from that branch. On the way to 
+the release, the branch may be frozen. 
+
+&#10033; Companies that choose 'Mainline' wither and die, we claim
+
+#### Merges
+
+After the release the code will be merged back en-masse to the mainline. Those
+merges may be hard and lengthy. It could be that the team took merges from mainline part way through the project. It 
+could also be that the team pushed merges to mainline part way through the project. 
+
+#### How many branches?
+
+We've just described a two branch model - the mainline and a project branch. It could be that the application in 
+question has more that one project in flight at any one time. That would mean more than one project branch, and that
+creates pressire for more intermdiate merges, and consequentially greater merge difficulty.
+
+### Cascade
