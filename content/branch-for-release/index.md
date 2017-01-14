@@ -4,7 +4,7 @@ title: Branch for Release
 weight: 35
 ---
 
-{{< quote title="(Only) branch on incompatible policy" >}}
+{{< quote title="Branch only when necessary, branch on incompatible policy; branch late; branch instead of freeze" >}}
 1998's High Level SCM Best Practices Whitepaper from Perforce
 &mdash; Laura Wingerd & Christopher Seiwald
 {{< /quote >}}
