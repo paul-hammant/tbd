@@ -163,7 +163,7 @@ a changeable checkout that the likes of gcheckout can control.
  
 Recursive build systems like maven, have a forward declaration of modules that should be built, like so:
 
-```
+```xml
 <modules>
   <module>moduleone</module>
   <module>moduletwo</module>
@@ -174,7 +174,7 @@ Directories `moduleone` and `moduletwo` have to exist. The idea of monorepos tha
 modifications of a dev workstations checkout, is that build graphs are calculated not declared.  You'd need a 
 feature like this in Maven to track that:
 
-```
+```xml
 <modules>
   <calculate/>
 <modules>
