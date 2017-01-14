@@ -19,7 +19,7 @@ Continuous Delivery is a broad multi-faceted subject, that sits on top of Trunk 
 website, and this page in particular, is not going to give it justice. Head on over to 
 [ContinuousDelivery.com](https://continuousdelivery.com/) and understand too that "lean experiments" are the part of 
 of CD and not so much the concern of Trunk Based Development.
-{{< /note >}}
+{{< /warning >}}
 
 ## Continuous Deployment
 

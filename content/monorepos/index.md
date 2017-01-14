@@ -109,7 +109,7 @@ developer from one project team, instantly recognizes the directory structure fo
 or service. That goes across languages too. The design for the directory layout needs to be enforced globally. You can
 see that in the way that Buck and Bazel structure things, even for unit, integration and functional tests. If you
 can't overhaul the directory structure of your entire world of project source, don't entertain a monorepo.
-{{< /note >}}
+{{< /warning >}}
  
 #### Contrived example 
 
