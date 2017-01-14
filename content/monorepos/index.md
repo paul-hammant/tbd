@@ -5,8 +5,9 @@ weight: 30
 ---
 
 A Monorepo, is a specific trunk based development implementation where the organization in 
-question puts the source for all applications and service into one trunk, and makes developers share code aggressively
-**at source level**.  The term 'monorepo' is a newwer for a practice that is more than a decade old.
+question puts the source for all applications and service into one trunk, and forces developers to **share code
+at source level instead of linking in previously built binaries**.  The term 'monorepo' is a newer for a 
+practice that is more than a decade old.
 
 Monorepo implementations deliver a couple of principal goals:
 
@@ -102,7 +103,15 @@ Both Subversion and Git have a 'sparse checkout' capability, which exactly facil
 wanting to have their own gcheckout would have some scripting of sprase checkouts. Perforce has a 'client spec' 
 capability that is more or less the same.
  
-#### Contrived Example 
+{{< warning title="Risk of chaotic directory layout" >}}
+Google's co-mingled applications and services site within highly structured and uniform source trees. A Java 
+developer from one project team, instantly recognizes the directory structure for another team's application
+or service. That goes accross languages too. The design for the directory layout needs to be enforced globally. You can
+see that in the way that Buck and Bazel structure things, even for unit, integration and functional tests. If you
+can't overhaul the directory structure of your entire world of project source, don't entertain a monorepo.
+{{< /note >}}
+ 
+#### Contrived example 
 
 We used 'change the wheel on a car', on the [Branch By Abstraction](branch-by-abstraction/) page for its contrived 
 example. It will serve us again here. Wheel is what we want to change. The other team using 'Wheel(s)' is making a 
@@ -117,7 +126,7 @@ change is quick/easy this time (not requiring Branch By Abstraction) step 1 show
 wheel for everyone.  After the commit/push, running again shows the application focussed team checkout - either 
 'Car' or 'Segue'.
  
-## Diamond Dependency Problem
+## The diamond dependency problem
  
 What happens when two apps need different version of a dependency? 
 
@@ -125,7 +134,7 @@ For in-house dependencies, where the source is in the same monorepo, then you wi
 team that first wanted the increasion functionality, performed it for all teams, keeping everyone at HEAD revision 
 of it. The concept of version number dissapears in this model.
 
-### Third party
+### Third party dependencies
 
 For third-party dependencies, the same rules applies, everyone upgrades in lock-step. Problems can ensure, of course, 
 if there are real reasons for team B to not upgrade and team A was insistent. Broken backwards compatibility is 
