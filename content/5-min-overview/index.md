@@ -93,7 +93,7 @@ Problematic 'distance' has a few tangible examples:
   * Difficult merges in particularly
 * A breaking build that lowers dev team thoughtput, and diverts resources while it is being fixed
 
-# References Elsewhere
+# References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 

@@ -33,7 +33,7 @@ It has been a lesser known model since the mid-nineties. The largest of developm
 Facebook practice it at scale. Google has millions of individual source 
 files in a singe trunk branch of a repo that contains 86TB of history. We cover that setup in [monorepo](monorepos/).
 
-# References Elsewhere
+# References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 

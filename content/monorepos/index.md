@@ -180,7 +180,7 @@ feature like this in Maven to track that:
 <modules>
 ```
 
-# References Elsewhere
+# References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 

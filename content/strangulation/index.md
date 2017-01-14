@@ -25,6 +25,10 @@ This relates a little to [Branch by Abstraction](branch-by-abstraction/). Strang
 incompatible languages (they are not in the same process), whereas Branch by Abstaction is where the 'from' and 'to' 
 languages are the same (say Java -> Java), or compatible (Java -> Scala).
 
+# References elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
 Date    | Type  | Article
 --------|-------|--------
 29 Jun 2004 | MartinFowler.com article | [Application Strangulation](https://www.martinfowler.com/bliki/StranglerApplication.html)

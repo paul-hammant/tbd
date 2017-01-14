@@ -21,7 +21,7 @@ High throughtput, Continous Delivery teams can ignore this - if they had a lemon
 roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and the release is from trunk.
 {{< /note >}}
 
-# References Elsewhere
+# References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 

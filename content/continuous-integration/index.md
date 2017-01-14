@@ -84,7 +84,7 @@ With the advent of Github in particular, code-review **before** the push to the 
 teams. Google had engineered their Perforce trunk in the early 00's to have pre-commit code review and CI verification,
  but that wasn't avalable outside Google. Subversion using teams were in the same boat.
 
-# References Elsewhere
+# References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 

@@ -103,7 +103,7 @@ In the case of abandonment, a real branch is cheaper, but the abstraction is onl
 delete. Besides pause and resume are much more likely in an enterprise development organisation that doesn't have 
 limitless coffers.
  
-# References Elsewhere
+# References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 

@@ -82,7 +82,7 @@ Build flags affect the application or service as it is being built. With respect
 the application would be incapable at runtime of having that capability if the build were not invoked with the suitable
 flag somehow.
 
-# References Elsewhere
+# References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
