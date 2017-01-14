@@ -29,20 +29,48 @@ Trunk based development teams update/pull/sync from the shared trunk often. Many
 ## Running the build locally
 
 Developers practicing Trunk Based Development run the build before a commit/push in order to not break the build. 
-This one prctice, for very small teams, allows them to not setup a CI daemon until later. If they can't push their 
+This one practice, for very small teams, allows them to not setup a CI daemon until later. If they can't push their 
 commits to the shared trunk because someone else beat them to it, they have to do another update/sync/pull then
-another build then the push of the revised commit(s). "Ir worked on my machine" says the developers that doesn't 
+another build then the push of the revised commit(s). "It worked on my machine" says the developers that doesn't 
 want to confess to breaking the build (assuming quick reliable idempotent builds).
 
 ## Powering through broken builds
 
 OK, so because of that lazy developer, or the flaky build, or pure accident of timing (Google has a commit every 30 
 seconds into their monorepo - there must be quantum entangled commits on a 0.0001% basis), the trunk will be observed 
-to be broken occassionally. There could be an automatic rollback that's about to happen, or a good old fashioned "lock 
-the trunk" while the build-cop sorts it out. That last is particulatly true in situations where batching of commits in 
+to be broken occasionally. There could be an automatic rollback that's about to happen, or a good old fashioned "lock 
+the trunk" while the build-cop sorts it out. That last is particularly true in situations where batching of commits in 
 CI builds is the reality.
 
 So the developer wanting to update/pull/sync from the shared trunk often, runs the risk of encountering that 
-statisticly improbable broken build. They don't want to have the commits that broke the trunk, on theor workstation
+statistically improbable broken build. They don't want to have the commits that broke the trunk, on their workstation
 if they are developing. So what they do is update/pull/sync to the last known good commit, and only go further
 ahead when the trunk build is officially repaired.  This way they know they can stay 'green' on their workstation.
+
+## Shared Nothing
+
+Developers, on their developer workstations, rely on a 'microcosm' setup for the application or service 
+they are developing. They can:
+
+* bring up the application on their workstation and play with it. 
+* run all unit, integration and functional tests against it locally
+
+Shared nothing require significant discipline to achieve. It generally means that no TCP-IP leaves the developers 
+box, and being able to prove that by running those operations while disconnected from the network.  The 
+implementing of the wire mocking (service virtualization) of dependant tiers outside the team, is a given. The highest 
+accomplished Trunk Based Development teams employ mocking of tiers within the same application. Tiers refers to a 
+layer-cake view of an applications construction.
+
+With a Microcosm strategy which delivers shared nothing for a developer workstation, it is acknowledged that 
+non-functional consistency with production has been thrown out of the window, and that only functional correctness
+is being honored.  This is only really any good for the act of development on a workstation, and the verification of 
+that (per commit) by a Continuous Integration daemon.  
+
+You team will need many named QA environments, and many named 
+UAT environments. Each of those with different rules about the frequency of deployment, and even perhaps even 
+a temporarily reservation for different reasons. Those environments pull together **real** dependent services 
+and integrated applications. As much as possible those environs should not have shared services. 
+
+Companies often make a classic mistake when buying software in that they (say) buy one license for prod, and another 
+for all dev, QA and UAT, meaning the DevOPS team had configure it as shared for all those environments, with a wide 
+ranging negative impact on productivity and quality for innumerable and sometimes subtle pschological reasons.
