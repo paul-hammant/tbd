@@ -27,6 +27,7 @@ Then edit away ... Hugo hot-reloads pages.
 6. Links to Blog entries, tweets (etc) should go in a collapsed refs section without forward links inline. Stick to chronalogical order, per section.
 7. Links to mainstream books, and Gartner-style reports, inline. Use affiliate codes that contribute to the original authors, if applicable.
 8. Avoid H1 tags (single hash/pound '#') as the hugo theme doesn't do the right thing with them
+9. Try not to shorten to TBD.
 
 # How to contribute?
 
