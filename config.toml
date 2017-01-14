@@ -82,9 +82,14 @@ googleAnalytics = "UA-24415524-3"
 	weight = 53
 
 [[menu.main]]
+	name   = "Branch for release"
+	url    = "branch-for-release/"
+	weight = 55
+
+[[menu.main]]
 	name   = "Strangulation"
 	url    = "strangulation/"
-	weight = 56
+	weight = 57
 
 [[menu.main]]
 	name   = "Continuous Integration"

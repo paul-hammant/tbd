@@ -90,7 +90,7 @@ In Google, rather than feed into the backlog of the team that maintains `TheORMw
 time committee rather than a team), the developer in question would make the change themselves. Perhaps they'd make 
 it in the same commit as the the first usage of it for `MyTeamsApplication`.  In the code review cycle (Google do
 common code ownership), the approvers for the `TheORMweDepOn` would see all the changes together. The larger change is 
-all acccepted or rejected (to be remediated) atomically.
+all accepted or rejected (to be remediated) atomically.
 
 So our developer was working on `MyTeamsApplication`, which depended on `TheORMweDepOn` (which probably transitively 
 depended on other things). Now that developer is going to change `TheORMweDepOn` and that impacts `TheirApplication` 
@@ -106,7 +106,7 @@ capability that is more or less the same.
 {{< warning title="Risk of chaotic directory layout" >}}
 Google's co-mingled applications and services site within highly structured and uniform source trees. A Java 
 developer from one project team, instantly recognizes the directory structure for another team's application
-or service. That goes accross languages too. The design for the directory layout needs to be enforced globally. You can
+or service. That goes across languages too. The design for the directory layout needs to be enforced globally. You can
 see that in the way that Buck and Bazel structure things, even for unit, integration and functional tests. If you
 can't overhaul the directory structure of your entire world of project source, don't entertain a monorepo.
 {{< /note >}}
