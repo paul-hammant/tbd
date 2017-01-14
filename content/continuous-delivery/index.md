@@ -23,3 +23,15 @@ TODO Pipelines
 This is a extension of 'Continuous Delivery', but the deployment is to production. Certain types of startups like 
 NetFlix, Etsy and Github deploy their major application to production with each commit. Companies that have 
 applications/services where  clients/customers could lose money, are much less likely to *firehose into production*.
+
+# References elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
+Date    | Type  | Article
+--------|-------|--------
+5 Jan 2015 | TheGuardian newspaper on their CD | [Delivering Continuous Delivery, continuously](https://www.theguardian.com/info/developer-blog/2015/jan/05/delivering-continuous-delivery-continuously)
+
+
+
+
