@@ -24,11 +24,13 @@ to do Trunk Based Development. Conside a short-iteration Agile methodology.
 ## Story size
 
 Trunk Based Development needs you to have small stories/tasks. You starting work on a task, should only be matter
-of hours before completing and and pushing it forward for codee review. Longer than that, and there's going to be 
-pressure to group a bunch of people on a non-trunk branch, or worse have developers make branches/forks from your 
+of hours before completing and and pushing it forward for code review. Longer than that, and there's going to be 
+pressure to group a bunch of developers on a non-trunk branch, or worse have developers make branches/forks from your 
 branch, or worse still take intermediate merges from your branch, despite your task not being complete.  
 
-Generally speaking the whole dev team should do what ever it can do breack stories/tasks into smaller stories/tasks.
+Generally speaking the whole dev team should do what ever it can do breack stories/tasks into smaller stories/tasks. 
+In Agile, there is a [INVEST mnemonic](https://en.wikipedia.org/wiki/INVEST_(mnemonic)) that aids in the splitting
+up or stories.
 
 # SCM Technology Choice
 
