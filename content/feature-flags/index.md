@@ -57,7 +57,7 @@ There are many more ways of passing flag intentions (or any config) to a runtime
 ## Continuous Integration
 
 It is important to have CI guard your reasonable expected permutations of toggle. That means tests that happen on an
-application or service after launching it, should be adaptable too and test what is meaninful for those toggle 
+application or service after launching it, should be adaptable too and test what is meaningful for those toggle 
 permutations. It also means that in terms of CI pipelines there's a fan-out **after** unit tests, for each meaningful
 flag permutation.
 
@@ -81,6 +81,15 @@ Etcd[![](/images/ext.png)](https://github.com/coreos/etcd) (or equiv) is a the m
 Build flags affect the application or service as it is being built. With respect to the OneClickPurchase flag again,
 the application would be incapable at runtime of having that capability if the build were not invoked with the suitable
 flag somehow.
+
+## Tech Debt - pitfall
+
+Flags get put in to codebases over time, and often get forgotten as dev teams pivot towards new business deliverables.
+Of course, you want to wait a while until it is certain that you're fixed on a toggle state, and that's where the 
+problem lies - the application works just fine with the toggle left in place, and the business only really cares
+about new priorities. The only saving grave is the fact that you had unit tests for everything, even for code that
+is effectively turned off in production. Try to get the business to allow the remediation of flags (and the code
+they apply to) a month after the release. Maybe add them to the project's readme with a "review for delete" date.
 
 # References elsewhere
 
