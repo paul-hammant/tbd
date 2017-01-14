@@ -4,9 +4,9 @@ title: Branch for Release
 weight: 35
 ---
 
-{{< quote title="Branch only when necessary, branch on incompatible policy; branch late; branch instead of freeze" >}}
-1998's High Level SCM Best Practices Whitepaper from Perforce
-&mdash; Laura Wingerd & Christopher Seiwald
+{{< quote title="Branch: only when necessary, on incompatible policy, late, and instead of freeze" >}}
+<span>&mdash; Laura Wingerd & Christopher Seiwald</span><br>
+<span style="margin-left: 30px">(1998's High Level SCM Best Practices Whitepaper from Perforce)</span>
 {{< /quote >}}
 
 If a team is pushing production releases monthly, then they are also going to have to push bug-fix releases 
