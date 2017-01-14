@@ -88,7 +88,7 @@ flag somehow.
 
 Date    | Type  | Article
 --------|-------|--------
-29 Oct 2010 | MartinFowler.com artcile | [Feature Toggle](https://martinfowler.com/bliki/FeatureToggle.html)
+29 Oct 2010 | MartinFowler.com article | [Feature Toggle](https://martinfowler.com/bliki/FeatureToggle.html)
 10 Oct 2014 | Conference Talk | [Trunk Based Development in the Enterprise - Its Relevance and Economics](https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics)
 08 Feb 2016 | MartinFowler.com article | [Feature Toggles](https://martinfowler.com/articles/feature-toggles.html)
 
