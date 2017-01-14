@@ -82,6 +82,12 @@ Build flags affect the application or service as it is being built. With respect
 the application would be incapable at runtime of having that capability if the build were not invoked with the suitable
 flag somehow.
 
+## A/B testing and betas
+
+Pushing code that's turned off into production, allows you to turn it on for ephemeral reasons - You want a subset of 
+users to knowingly or unknowingly try it out. A/B testing (driven by marketing) are possible with runtime flagss. So is 
+having beta versions of functionality/features available to groups.
+
 ## Tech Debt - pitfall
 
 Flags get put in to codebases over time, and often get forgotten as dev teams pivot towards new business deliverables.
