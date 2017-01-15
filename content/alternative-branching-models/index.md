@@ -6,14 +6,14 @@ weight: 30
 
 ## Modern claimed high-throughput branching models
 
-### GitFlow and a like
+### GitFlow and alike
 
 ## Legacy branching models
 
 ### Mainline
 
 Mainline is a branching model that was promoted for ClearCase implementations. It is the principal branching 
-model that Trunk Based Development opposes. Mainline is a branch that will last forever*. Off that branches are formed
+model that Trunk Based Development opposes. Mainline is a branch that will last forever*. Off that, branches are formed
 for teams to do development work on. When that work is complete, a release may happen from that branch, and there's a
 **big** merge down to the mainline. On the way to the release, the branch may be frozen. 
 
@@ -26,20 +26,23 @@ When bugs inevitably happen:
 ![](/images/mainline2.png)
 
 Whenever there's a bug fix there has to be a merge down to the mainline afterwards. There's no 'wrong' in this modified
-branch diagram, but you should be able to guess what the worst case branching/merging scenario is:
+branch diagram, but you should be able to guess what the worst case branching/merging scenario is. In case you cannot:
 
 ![](/images/mainline3.png)
 
-**Merges and cherry picks**
+**Merges and cherry picks for the above**
 
-1. TODO
-1. TODO
-1. TODO
-1. TODO
-1. TODO
-1. TODO
-1. TODO
-1. TODO
+1. Release 1.1 team persuades the release 1.0 team to bring something back to Mainline early (and incomplete) before they cut their branch
+1. Release 1.1 team merges the release 1.0 work upon apparent completion
+1. Release 1.0 team merges post-release bug fixes back to Mainline
+1. Release 1.2 team persuades the release 1.1 team to bring something back to Mainline early (and incomplete) before they cut their branch
+1. Release 1.1 team merges from Mainline, to pick up #3
+1. Release 1.2 team merges the release 1.1 work upon apparent completion
+1. Release 1.1 team merges post-release bug fixes back to Mainline
+1. Release 1.2 team merges from Mainline, to pick up #7
+
+All of these compromises versus the planned "consecutive development of consecutive releases". In many cases it is worse,
+particular when the numbers of developers goes up.
 
 &#10033; Companies that choose 'Mainline' wither and die, we claim, so there's no forever.
 
