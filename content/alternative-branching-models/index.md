@@ -14,8 +14,8 @@ weight: 30
 
 Mainline is a branching model that was promoted for ClearCase implementations. It is the principal branching 
 model that Trunk Based Development opposes. Mainline is a branch that will last forever*. Off that branches are formed
-for teams to do development work on. When that work is complete, a release may happen from that branch. On the way to 
-the release, the branch may be frozen. 
+for teams to do development work on. When that work is complete, a release may happen from that branch, and there's a
+**big** merge down to the mainline. On the way to the release, the branch may be frozen. 
 
 So here is the intention, with Mainline:
 
@@ -24,6 +24,11 @@ So here is the intention, with Mainline:
 When bugs inevitably happen:
 
 ![](/images/mainline2.png)
+
+Whenever there's a bug fix there has to be a merge down to the mainline afterwards. There's no 'wrong' in this modified
+branch diagram, but you should be able to guess what the worst case branching/merging scenario is:
+
+![](/images/mainline3.png)
 
 &#10033; Companies that choose 'Mainline' wither and die, we claim, so there's no forever.
 
