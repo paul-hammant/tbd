@@ -27,9 +27,9 @@ fits the monorepo design.
 ## Third party dependencies
 
 With the monorepo model, there is a strong desire to have third-party binaries in source-control too. 
-You might think that it would be unmanagable for reasons of size. In terms of history, Perforce and Subversion don't
-mind a terrbyte of history of binary files (or more), and Git performed much better when Git-LFS was created. You 
-could still feel that the HEAD revision of tousands of fine grained dependencies is too much for a workstation, but 
+You might think that it would be unmanageable for reasons of size. In terms of history, Perforce and Subversion don't
+mind a terrabyte of history of binary files (or more), and Git performed much better when Git-LFS was created. You 
+could still feel that the HEAD revision of thousands of fine grained dependencies is too much for a workstation, but 
 that can be managed if gia 'sparse checkout' techniques (see below).
 
 Note:  Python, Java, C++ and other SDKs are installed the regular way on the developer workstatio, and not acquired 
@@ -42,7 +42,7 @@ example could be an Object Relational Mapping (ORM) library. For Monorepo teams 
 the source of that ORM technology, and not a binary. There are multiple reasons for that, but principal one is that 
 source control update/pull/sync is the most efficient way for you to keep up with the HEAD of a library on a minute
 by minute basis. Thus `MyTeamsApplication` and `TheORMweDepOn` should be in your source tree in your IDE at the same time.
-Similariy another team that depends on `TheORMweDepOn` should have it and `TheirApplication` checked out at the same
+Similarly another team that depends on `TheORMweDepOn` should have it and `TheirApplication` checked out at the same
 time.
 
 ## Directed graph build systems
@@ -63,7 +63,7 @@ open-sourced it. Google then open-sourced a cut-down Blaze as Bazel[![](/images/
 (three incl. Blaze) are directed graph build systems that allow a large tree of sources to be speedily subset in a 
 compile/test/make-a-binary way. 
  
-The omitting of unecessary actions achieved by Buck and Bazel works equally well on developer workstations 
+The omitting of unnecessary actions achieved by Buck and Bazel works equally well on developer workstations 
 and in the CI infrastructure.
 
 There is also the ability to depend on recently compiled object code of colleagues. Recently compiled object code for 
@@ -120,10 +120,10 @@ Segue thing (two wheels and self balancing via high-torque and very responsive m
 ![](/images/car_segue.png)  
  
 The starting position is two teams working separately, using 'Wheel' (4 for car, 2 for segue). Without any commits 
-happening the engineer changing 'Wheel' for everyone, runs gcheckout (or it's equivalent) to modify the source in the 
+happening the engineer changing 'Wheel' for everyone, runs gcheckout (or its equivalent) to modify the source in the 
 IDE to the union of Car and Segue (and in-house dependencies). That is marked as step 0. Lets say the
 change is quick/easy this time (not requiring Branch By Abstraction) step 1 shows the single commit that changes
-wheel for everyone.  After the commit/push, running again shows the application focussed team checkout - either 
+wheel for everyone.  After the commit/push, running again shows the application focused team checkout - either 
 'Car' or 'Segue'.
  
 ## The diamond dependency problem
@@ -131,8 +131,8 @@ wheel for everyone.  After the commit/push, running again shows the application 
 What happens when two apps need different version of a dependency? 
 
 For in-house dependencies, where the source is in the same monorepo, then you will not have ths situation, as the 
-team that first wanted the increasion functionality, performed it for all teams, keeping everyone at HEAD revision 
-of it. The concept of version number dissapears in this model.
+team that first wanted the increased functionality, performed it for all teams, keeping everyone at HEAD revision 
+of it. The concept of version number disappears in this model.
 
 ### Third party dependencies
 
@@ -145,7 +145,7 @@ backwards incompatibility in a small percentage of their uses of it. The change-
 the both the IDE and the javac compiled buckled to some degree.
 
 Because you're doing lock-step upgrades, you only secondarily note the version of the third party 
-dependencies, as you check them in to source control withough version numbers in the file name.  I.e. JUnit goes in as
+dependencies, as you check them in to source control withought version numbers in the file name.  I.e. JUnit goes in as
 `third_party/java_testing/junit.jar`.
 
 ## Recursive build systems

@@ -36,7 +36,7 @@ disruption to plans.
 
 {{< note title="Notes" >}}
 * Use of "Developers" throughout this site, means "QA-automators" for the same builable thing, too.
-* When we say 'the trunk' on this site, it is just a branch in a single repo that developers in a team are focussing on 
+* When we say 'the trunk' on this site, it is just a branch in a single repo that developers in a team are focusing on 
 for development. It may be called 'master'. That hints at the fact that the branch in qustion may literally not be 
 called 'trunk' at all.
 {{< /note >}}
@@ -46,28 +46,28 @@ of the practices:
 
 ### Checking out / cloning
 
-All developers that contibute to a binary application/service in a team clone and checkout from the trunk. They will 
+All developers that contribute to a binary application/service in a team clone and checkout from the trunk. They will 
 update/pull/sync from that branch a many times a day, knowing that the build within it works perfectly. Their fast 
-source-control system means that there delays are a matter of a few seconds for this operastion. They are now 
+source-control system means that there delays are a matter of a few seconds for this operation. They are now 
 integrating their team-mates commits on an hour by hour basis.
 
 ### Committing
 
-Similarly, developers completing a piece of development work (changes to source code), that provably doesn't 
+Similarly, developers completing a piece of development work (changes to source code), that provably does not 
 break the build, will commit it back to the trunk. The granularity of that commit (how many a developer 
 would implictly do a day) can vary, and is learned through experience.
 
-The developer needs to run the build, to prove that they didn't break anything with the commit. They might have to do 
+The developer needs to run the build, to prove that they did not break anything with the commit. They might have to do 
 a update/pull/sync before they commit/push the changes back to the team's version control server, and additional 
 builds too. There's a risk a race condition there, but lets assume there's not for most teams.
 
 ### Code Reviews
 
 The developer needs to get the commit reviewed. Some teams will count the fact that the code was developed according 
-to pair programming as an automatic review. Others will follow a conventional design where the commit is marshalled
+to pair programming as an automatic review. Others will follow a conventional design where the commit is marshaled
 for review before landing in the trunk. 
 
-Marshalled nearly always means a branch in a place that is visible to the team. These branches can (and should) be 
+Marshaled nearly always means a branch in a place that is visible to the team. These branches can (and should) be 
 deleted after the code review is complete, meaning they are very short lived. This nuanced. You want to keep 
 the commentary/approval/rejection from  the review for historical and auditing purposes, but you don't want to 
 keep the branch. Specifically, you don't want to developers to focus on the branch after the review.

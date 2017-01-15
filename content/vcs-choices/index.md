@@ -51,7 +51,7 @@ basis.
 Perforce is a closed-source, industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas store all their 
 designs in it.  Until 2012, Google had their Trunk in it, and only moved off it because their non-functional needs
 exceeded it. Perforce is peculiar in that 'p4d' (a single server-side executable binary file) is the whole server and 
-doesn't need to be installed - just executed.
+does not need to be installed - just executed.
 
 Perforce is the last VCS technology that ordinarily maintains the read-only bit on the developer workstation. You 
 definitely need a plugin for your IDE to handle the wire operations with the server, so you are not confronted with the
@@ -81,13 +81,13 @@ Github for Git came along with the concepts of forks and had a rudimentary 'code
 2008[![](/images/ext.png)](https://github.com/blog/42-commit-comments). From that moment it was clear 
 that to compete with Github your would need integrated code-review functionality, and Perforce didn't have one. Later 
 though, the Perforce people, in partnership with GitLab would launch a portal capability for Perforce that
-included code review. It is a VM applicance that interoperates with the canonical 'p4d' server daemon. Not
+included code review. It is a VM appliance that interoperates with the canonical 'p4d' server daemon. Not
 all existing Perforce licensees have installed it.
 
 ### Git Fusion
 
-There's a VM applicance from the Perforce people, that can sit in your infrastructure and mediate between the perforce
-server, and your wish to use Git in a Git-idiomatic way on your dev workstation.  This mode of operation doesn't have 
+There's a VM appliance from the Perforce people, that can sit in your infrastructure and mediate between the perforce
+server, and your wish to use Git in a Git-idiomatic way on your dev workstation.  This mode of operation does not have 
 the read-only bit feature, and also maintains
 
 With a Git-fusion clone from a Perforce repository, if a client spec was specified, you get the constrained 
@@ -96,12 +96,12 @@ also no longer restrained by the read-only bit on individual files.
 
 ### p4-git
 
-This is very similar to the Git fusion technology, but is not my the Perforce people themselves. It also doesn't 
+This is very similar to the Git fusion technology, but is not my the Perforce people themselves. It also does not 
 require the launching of second server daemon.
 
 ### p4-dvcs
 
-Perforce was extended in 2015 to include it's own DVCS features. All the features of P4-git but without the Git 
+Perforce was extended in 2015 to include its own DVCS features. All the features of P4-git but without the Git 
 compatibility.
 
 ## Subversion

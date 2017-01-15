@@ -38,7 +38,7 @@ after each is an uneventful validation of the refactorings.
 
 ## Contrived example
 
-Lets talk about a car having it's wheels upgraded. We should never forget that software engineering is 
+Lets talk about a car having its wheels upgraded. We should never forget that software engineering is 
 nothing like conventional construction, and we want to ram that home. At least, it is nothing like conventional 
 construction where we are not talking about a production line.
 
@@ -67,14 +67,14 @@ At any stage, when lowered from the jacks/lift/ramps, the car could have been dr
 
 ![](/images/cars.png)
 
-We said 'jacks' above, because that's what mechanics use in real life. Software however doesn't follow the rules 
+We said 'jacks' above, because that's what mechanics use in real life. Software however does not follow the rules 
 gravity, or many of the costs of actual construction. With an IDE for a glove, a single finger could reposition 
 the car in 3D space to allow easy replacement of the  wheels.
 
 ## Software example
 
 A documented case, is ThoughtWorks' Go CI-daemon. They changed an Object-Relational mapping library (for persistence), 
-while not slowing down team mates developent activities (rule 1), and not jeaprdising the ability to go live (rule 2).
+while not slowing down team mates development activities (rule 1), and not jeopardising the ability to go live (rule 2).
 
 Going from "iBatis" to "Hibernate" for a bunch of reasons, was their plan.
 
@@ -93,14 +93,14 @@ possibility of another seam that can be mocked.
 ## Secondary benefits
 
 The migration from old to new can be paused, and resumed later casually. This is because the build guards the 
-second, incomplete, implementation. It does so merely bcause of a compile stage that turns the abstraction and somewhere 
+second, incomplete, implementation. It does so merely because of a compile stage that turns the abstraction and somewhere 
 between 1 to 2 implementation into object code.  If there are unit tests for the two alternates, then even more so.
 
-If on a real branch, the casual restart of the paused initiative is missing. There's possibly an exponentian cost of 
+If on a real branch, the casual restart of the paused initiative is missing. There's possibly an exponential cost of 
 restart given the elapsed time since the initiative was paused. 
  
-In the case of abandonment, a real branch is cheaper, but the abstraction is only incrementally more expsive to 
-delete. Besides pause and resume are much more likely in an enterprise development organisation that doesn't have 
+In the case of abandonment, a real branch is cheaper, but the abstraction is only incrementally more expensive to 
+delete. Besides pause and resume are much more likely in an enterprise development organisation that does nt have 
 limitless coffers.
  
 # References elsewhere

@@ -6,10 +6,10 @@ weight: 0
 
 ## Merely naming a branch trunk.
 
-Say you're using Subversion, and you accepted it's default directory design, when you made a new repository. That will
-give you 'trunk', 'tags' and 'branches' as directory names. The mere fact that you have a branch called trunk doesn't
+Say you're using Subversion, and you accepted its default directory design, when you made a new repository. That will
+give you 'trunk', 'tags' and 'branches' as directory names. The mere fact that you have a branch called trunk does not
 mean you're doing trunk based development. "We merge branches back to trunk often" is heard a lot in the industry,
-and if you're grouping multiple developers on those bacnches of they not deleted after a couple of days, then it is 
+and if you're grouping multiple developers on those branches of they not deleted after a couple of days, then it is 
 not the trunk based development branching model.
 
 ## Direction of Cherry Pick (or merge)
@@ -18,7 +18,7 @@ All your developers are using a trunk and they're doing the right thing re not b
 cadence is infrequent enough to allow you to cut a release branch on a just in time basis, and harden that in the run
 up to the actual release. 
 
-If you're fixing the bug on the release branch and meging it down to the trunk you're doing 
+If you're fixing the bug on the release branch and merging it down to the trunk you're doing 
 it wrong. There's a chance you might forget to merge it down, and then there's going to be a regression at the next 
 release moment (fresh branch cut from trunk).
 

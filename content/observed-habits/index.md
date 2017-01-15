@@ -8,7 +8,7 @@ weight: 10
 
 Developers living in a Trunk Based Development reality, mostly don't experience variance in their days or weeks on the 
 trunk. In particular there's no "we're close to a release so let's freeze code", and generally there's no indication 
-of a slow down in proximity to a release.  Sure, a couple of devs out a team might be assigned to bug-fixing closer
+of a slow down in proximity to a release.  Sure, a couple of developers out a team might be assigned to bug-fixing closer
 to the release but everyone else is going to work at full speed.
 
 ### Every Day is the same
@@ -19,7 +19,7 @@ Ignoring meetings, Developers commit/push at the same rate regardless of the day
 
 Teams doing trunk based development, know that they their commits/pushes are up for the scrutiny by others, as soon
 as they've landed on the shared trunk. They're keen bring that forward, not delay it, so they may prefer to 
-pair-program on changes, or ask colleages for a code review at the time the change is submitted to be merged into
+pair-program on changes, or ask colleagues for a code review at the time the change is submitted to be merged into
 the trunk.
 
 ## Chasing HEAD
@@ -31,7 +31,7 @@ Trunk based development teams update/pull/sync from the shared trunk often. Many
 Developers practicing Trunk Based Development run the build before a commit/push in order to not break the build. 
 This one practice, for very small teams, allows them to not setup a CI daemon until later. If they can't push their 
 commits to the shared trunk because someone else beat them to it, they have to do another update/sync/pull then
-another build then the push of the revised commit(s). "It worked on my machine" says the developers that doesn't 
+another build then the push of the revised commit(s). "It worked on my machine" says the developers that does not 
 want to confess to breaking the build (assuming quick reliable idempotent builds).
 
 ## Powering through broken builds
@@ -45,7 +45,7 @@ CI builds is the reality.
 So the developer wanting to update/pull/sync from the shared trunk often, runs the risk of encountering that 
 statistically improbable broken build. They don't want to have the commits that broke the trunk, on their workstation
 if they are developing. So what they do is update/pull/sync to the last known good commit, and only go further
-ahead when the trunk build is officially repaired.  This way they know they can stay 'green' on their workstation.
+ahead when the trunk build is officially repaired. This way they know they can stay 'green' on their workstation.
 
 ## Shared Nothing
 
@@ -79,6 +79,6 @@ ranging negative impact on productivity and quality for innumerable and sometime
 
 Committing to the trunk many times a day, requires a broad sense of ownership to code, and a willingness to allow 
 developers to contribute changes to sections of an application or service that they have not previously be involved 
-with. Allow does come with responsibilies and checks. The former is to standards, and the checks are by the CI daemon, 
+with. Allow does come with responsibilities and checks. The former is to standards, and the checks are by the CI daemon, 
 and by humans who should honor to do a speedy code review. That last, for the highest performing teams means as soon
 as the proposed commit is ready.

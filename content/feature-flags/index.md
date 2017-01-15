@@ -4,7 +4,7 @@ title: Feature flags
 weight: 20
 ---
 
-Feature Flags are a time honored way to control the capabilitities os an application or service in a large decisive way. 
+Feature Flags are a time honored way to control the capabilities of an application or service in a large decisive way. 
 
 ### An Example
 
@@ -25,7 +25,7 @@ Feature Flags is in wider use by the industry, though, so we're going with that.
 ## Granularity
 
 If could be that the flag controls something large like a component. In our case above we could say that 
-`OneClickPurchasing` and `ShoppingCart` are the names of a compoents.  It could be that the granularity of the flag
+`OneClickPurchasing` and `ShoppingCart` are the names of a components.  It could be that the granularity of the flag
 is much smaller - Say Americans want to see temperatures in degrees Fahrenheit and other nationalities would 
 prefer degrees Centigrade/Celcuius. We could have a flag `--temp=F` and `--temp=C`. For fun, the developers also added
 `--temp=K` (Kelvins).
@@ -85,7 +85,7 @@ flag somehow.
 ## A/B testing and betas
 
 Pushing code that's turned off into production, allows you to turn it on for ephemeral reasons - You want a subset of 
-users to knowingly or unknowingly try it out. A/B testing (driven by marketing) are possible with runtime flagss. So is 
+users to knowingly or unknowingly try it out. A/B testing (driven by marketing) are possible with runtime flags. So is 
 having beta versions of functionality/features available to groups.
 
 ## Tech Debt - pitfall

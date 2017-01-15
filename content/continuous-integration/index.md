@@ -16,10 +16,10 @@ According to its intentions, it and Trunk Based Development strive to achieve th
 
 However, for many years CI has been accepted by most software development professionals to mean a daemon installed
 somewhere that is watching a source-control repository for changes, and verifying that they are correct, before 
-perhaps makiing binaries that could be deployed/shipped.  ThoughtWorks noted that a survey showed this 
+perhaps making binaries that could be deployed/shipped.  ThoughtWorks noted that a survey showed this 
 to be true: ([No One Agrees How to Define CI or CD](https://blog.snap-ci.com/blog/2016/07/26/continuous-delivery-integration-devops-research/).
 
-{{< note title="CI doesn't equal Trunk Based Development" >}}
+{{< note title="CI does not equal Trunk Based Development" >}}
 This page, if not this whole site, is going to match industry understanding and separate the daemon from the branching
 model, given other popular branching models that are not Trunk Based Development benefit from CI daemons verifying 
 commits too.
@@ -74,7 +74,7 @@ Fixing things while the rest of the team watches or waits, is a team-throughput 
 Yellow = automated steps, Red = a potential to break build for everyone
 
 Note: for committing/pushing straight to the sahred trunk, code review and CI verification can happen in parallel. Most 
-likely though is review happens after the CI daemon has cast it's vote on the commit (or commits if batching).
+likely though is review happens after the CI daemon has cast its vote on the commit (or commits if batching).
 
 Better setups have code-review and CI verification before the commit lands in the trunk for all to see:
 

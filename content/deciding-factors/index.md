@@ -19,7 +19,7 @@ get all the way to Continuous Delivery (or Continuous Deployment).
 ## Waterfall
 
 This one is easy. If you're doing waterfall, you're not close at all to the "don't break the build" mantra required
-to do Trunk Based Development. Conside a short-iteration Agile methodology.
+to do Trunk Based Development. Consider a short-iteration Agile methodology.
 
 ## Story size
 
@@ -45,7 +45,7 @@ was complete impossible for teams to choose to do trunk based development.
 
 ## Binaries in the Repo?
 
-Depending on how many and how often they update, some SCM/VCS/source-control techologies are better than others. 
+Depending on how many and how often they update, some SCM/VCS/source-control technologies are better than others. 
 Perforce can handle terrabytes of binaries and textual source. Subversion aims to. Git can only do so if configured in
 Git-LFS mode.
 

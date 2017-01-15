@@ -10,19 +10,19 @@ after the strangler vines that creep up existing trees, in order to steal sunlig
 
 The trick is to have a mechanism to route invocations of logic between the old and new solutions for the same. Say 
 you're and Airline, and you'd written your first online purchasing experience in Perl. You're now wanting to 
-do 'Elixr' and its web framework 'Phoenix'.  
+do 'Elixir' and its web framework 'Phoenix'.  
 
 Strangulation is where you'd use the Apache server that your doubtless had 
-fronting Perl, to **conditionally** route HTTP requests to Erlang/Elixr/Phoenix. Say your first completed milestone
+fronting Perl, to **conditionally** route HTTP requests to Erlang/Elixir/Phoenix. Say your first completed milestone
 was 'Loyalty Account View/Edit' you would route based on the URLs the browser was seeking pages for. Obviously 
 agreeing on URLs (and cookies) is key for the old Perl and new Elixr app. So is deployment in lockstep.
 
-At some point in the strangulation, you might put Elixr in front Apache/Perl and have traffic drop through to it 
+At some point in the strangulation, you might put Elixir in front Apache/Perl and have traffic drop through to it 
 instead. That is the residual situation before you delete the last lines of code of Perl and snip that delegation
 when the strangulation is complete.
 
 This relates a little to [Branch by Abstraction](branch-by-abstraction/). Strangulation is a strategy for 
-incompatible languages (they are not in the same process), whereas Branch by Abstaction is where the 'from' and 'to' 
+incompatible languages (they are not in the same process), whereas Branch by Abstraction is where the 'from' and 'to' 
 languages are the same (say Java -> Java), or compatible (Java -> Scala).
 
 # References elsewhere

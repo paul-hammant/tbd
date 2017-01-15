@@ -46,7 +46,7 @@ particular when the numbers of developers goes up.
 
 One key thing to note, versus Trunk Based Development, teams doing the Mainline branching model, almost never do cherry 
 pick merges for any reason. Instead they're doing a "merge everything which isn't merged already" kind of merge. 
-Minimalisticlly the VCS they are using should have "merge point tracking". At the high end, that should include 
+Minimalistically the VCS they are using should have "merge point tracking". At the high end, that should include 
 "record only" merges, and normal merges even after that.
 
 &#10033; Companies that choose 'Mainline' wither and die, we claim, so there's no forever.
@@ -61,7 +61,7 @@ could also be that the team **pushed merges to** mainline part way through the p
 
 We've just described a two branch model - the mainline and a project branch. It could be that the application in 
 question has more that one project in flight at any one time. That would mean more than one project branch, and that
-creates pressire for more intermdiate merges, and consequentially greater merge difficulty.
+creates pressire for more intermediate merges, and consequentially greater merge difficulty.
 
 #### Always release ready?
 

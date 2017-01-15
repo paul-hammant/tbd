@@ -26,7 +26,7 @@ of CD and not so much the concern of Trunk Based Development.
 **An automatic push all the way into production; Maybe every commit**
 
 This is a extension of 'Continuous Delivery', but the deployment is to production. Certain types of startups like 
-NetFlix, Etsy and Github deploy their major application to production with each commit. Companies that have 
+Netflix, Etsy and Github deploy their major application to production with each commit. Companies that have 
 applications/services where  clients/customers could lose money, are much less likely to *firehose into production*.
 
 # References elsewhere

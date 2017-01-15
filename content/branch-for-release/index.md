@@ -6,13 +6,13 @@ weight: 35
 
 {{< quote title="Branch: only when necessary, on incompatible policy, late, and instead of freeze" >}}
 <span>&mdash; Laura Wingerd & Christopher Seiwald</span><br>
-<span style="margin-left: 30px">(1998's High Level SCM Best Practices Whitepaper from Perforce)</span>
+<span style="margin-left: 30px">(1998's High Level SCM Best Practices white paper from Perforce)</span>
 {{< /quote >}}
 
 If a team is pushing production releases monthly, then they are also going to have to push bug-fix releases 
 between planned releases. To facilitate that, it is common for Trunk Based Development Teams to make a release
 branch on a just in time basis - say a few days before the release. That becomes a stable place, given the developers
-are still streaming their commits into the trunkx at full speed. 
+are still streaming their commits into the trunk at full speed. 
 
 The incompatible policy (ref Wingerd & Seiwald), that the releae branch "should not receive continued development work".
 
