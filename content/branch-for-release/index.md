@@ -14,6 +14,8 @@ between planned releases. To facilitate that, it is common for Trunk Based Devel
 branch on a just in time basis - say a few days before the release. That becomes a stable place, given the developers
 are still streaming their commits into the trunkx at full speed. 
 
+The incompatible policy (ref Wingerd & Seiwald), that the releae branch "should not receive continued development work".
+
 ![](/images/branch_for_release.png)
 
 ^ Trunk, two release branches, three releases, and a bug-fix
@@ -32,12 +34,12 @@ be duplicated to guard active release branches too.
 
 ### Late branch creation
 
-Some teams released from a tag on the trunk. In those cases, a branch is late created from the trunk first, and only
-because of a bug at all.
+Some teams release from a tag on the trunk, and don't create a branch at that time. 
+Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag.
 
 ### Directionality of cherry-pick
 
-This one is controversial even within teams practicing everything else about Trunk Based Development: you shouldn't 
+This one is controversial even within teams practicing everything else about Trunk Based Development: you should not 
 fix bugs on the release in the expectation of cherry-picking them back to the trunk, in case you forget to do that.
 Forgetting means a regression in production some weeks later (and someone getting fired). It can happen if things
 are being fixed in the night by a tired develop who wants to get back to bed.
