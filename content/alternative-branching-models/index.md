@@ -34,11 +34,11 @@ branch diagram, but you should be able to guess what the worst case branching/me
 
 1. Release 1.1 team persuades the release 1.0 team to bring something back to Mainline early (and incomplete) before they cut their branch
 1. Release 1.1 team merges the release 1.0 work upon apparent completion
-1. Release 1.0 team merges post-release bug fixes back to Mainline
+1. Release 1.0 team merges post-release bug fixes back to Mainline, and cross their fingers that the 1.0 branch can truly die now
 1. Release 1.2 team persuades the release 1.1 team to bring something back to Mainline early (and incomplete) before they cut their branch
 1. Release 1.1 team merges from Mainline, to pick up #3
 1. Release 1.2 team merges the release 1.1 work upon apparent completion
-1. Release 1.1 team merges post-release bug fixes back to Mainline
+1. Release 1.1 team merges post-release bug fixes back to Mainline, and cross their fingers that the 1.0 branch can truly die now
 1. Release 1.2 team merges from Mainline, to pick up #7
 
 All of these compromises versus the planned "consecutive development of consecutive releases". In many cases it is worse,
@@ -59,3 +59,13 @@ question has more that one project in flight at any one time. That would mean mo
 creates pressire for more intermdiate merges, and consequentially greater merge difficulty.
 
 ### Cascade
+
+# References elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
+Date    | Type  | Article
+--------|-------|--------
+04 Dec 2013 | Blog Entry | [What is Your Branching Model?](http://paulhammant.com/2013/12/04/what_is_your_branching_model/)
+05 Apr 2013 | Blog Entry | [What is Trunk Based Development?](http://paulhammant.com/2013/04/05/what-is-trunk-based-development/)
+19 Mar 2013 | Blog Entry | [The Cost of Unmerge](http://paulhammant.com/2013/03/19/cost-of-unmerge/)
