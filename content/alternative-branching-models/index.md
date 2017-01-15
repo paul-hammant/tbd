@@ -13,7 +13,7 @@ weight: 30
 ### Mainline
 
 Mainline is a branching model that was promoted for ClearCase implementations. It is the principal branching 
-model that Trunk Based Development opposes. Mainline is a branch that will last forever*. Off that, branches are formed
+model that Trunk Based Development opposes. Mainline is a branch that will last forever&#10033;. Off that, branches are formed
 for teams to do development work on. When that work is complete, a release may happen from that branch, and there's a
 **big** merge down to the mainline. On the way to the release, the branch may be frozen. 
 
@@ -30,7 +30,7 @@ branch diagram, but you should be able to guess what the worst case branching/me
 
 ![](/images/mainline3.png)
 
-**Merges and cherry picks for the above**
+**Merges for the above**
 
 1. Release 1.1 team persuades the release 1.0 team to bring something back to Mainline early (and incomplete) before they cut their branch
 1. Release 1.1 team merges the release 1.0 work upon apparent completion
@@ -44,13 +44,18 @@ branch diagram, but you should be able to guess what the worst case branching/me
 All of these compromises versus the planned "consecutive development of consecutive releases". In many cases it is worse,
 particular when the numbers of developers goes up.
 
+One key thing to note, versus Trunk Based Development, teams doing the Mainline branching model, almost never do cherry 
+pick merges for any reason. Instead they're doing a "merge everything which isn't merged already" kind of merge. 
+Minimalisticlly the VCS they are using should have "merge point tracking". At the high end, that should include 
+"record only" merges, and normal merges even after that.
+
 &#10033; Companies that choose 'Mainline' wither and die, we claim, so there's no forever.
 
 #### Merges
 
 After the release the code will be merged back en-masse to the mainline. Those
-merges may be hard and lengthy. It could be that the team took merges from mainline part way through the project. It 
-could also be that the team pushed merges to mainline part way through the project. 
+merges may be hard and lengthy. It could be that the team **took merges from** mainline part way through the project. It 
+could also be that the team **pushed merges to** mainline part way through the project. 
 
 #### How many branches?
 
