@@ -58,6 +58,16 @@ We've just described a two branch model - the mainline and a project branch. It 
 question has more that one project in flight at any one time. That would mean more than one project branch, and that
 creates pressire for more intermdiate merges, and consequentially greater merge difficulty.
 
+#### Always release ready?
+
+Not on your life! Planned work needs to complete, with estimates guiding when that will be. Defects need to be 
+eliminated, formal testing phases need to kick in. Here we take the first branch diagram, and overlay red and orange 
+and green to show known build-breaks, build passes missing automated tests won't catch hidden defects, 
+and green for could go live. At least for the worst performing with with missing or ineffectual automated 
+testing run in the CI pipelines:
+
+![](/images/mainline4.png)
+
 ### Cascade
 
 # References elsewhere
