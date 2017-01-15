@@ -1,6 +1,6 @@
 ---
 date: 2017-01-05T09:42:02+05:00
-title: Observed Habits
+title: Observed habits
 weight: 10
 ---
 

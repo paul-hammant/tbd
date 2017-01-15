@@ -44,7 +44,6 @@ googleAnalytics = "UA-24415524-3"
 	github  = "paul-hammant"
 	email   = "paul@hammant.org"
 
-
 [[menu.main]]
 	name   = "Introduction"
 	url    = "/"
@@ -65,16 +64,10 @@ googleAnalytics = "UA-24415524-3"
 	url    = "vcs-choices/"
 	weight = 30
 
-
 [[menu.main]]
-	name   = "Feature Flags"
+	name   = "Feature flags"
 	url    = "feature-flags/"
 	weight = 40
-
-[[menu.main]]
-	name   = "Feature Flags"
-	url    = "feature-flags/"
-	weight = 50
 
 [[menu.main]]
 	name   = "Branch by Abstraction"

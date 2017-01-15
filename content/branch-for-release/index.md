@@ -1,6 +1,6 @@
 ---
 date: 2016-03-09T19:56:50+01:00
-title: Branch for Release
+title: Branch for release
 weight: 35
 ---
 
@@ -12,7 +12,7 @@ weight: 35
 If a team is pushing production releases monthly, then they are also going to have to push bug-fix releases 
 between planned releases. To facilitate that, it is common for Trunk Based Development Teams to make a release
 branch on a just in time basis - say a few days before the release. That becomes a stable place, given the developers
-are still streaming their commits into the trunk at full speed. 
+are still streaming their commits into the trunkx at full speed. 
 
 ![](/images/branch_for_release.png)
 
