@@ -74,3 +74,11 @@ and integrated applications. As much as possible those environs should not have 
 Companies often make a classic mistake when buying software in that they (say) buy one license for prod, and another 
 for all dev, QA and UAT, meaning the DevOPS team had configure it as shared for all those environments, with a wide 
 ranging negative impact on productivity and quality for innumerable and sometimes subtle pschological reasons.
+
+## Common code ownership
+
+Committing to the trunk many times a day, requires a broad sense of ownership to code, and a willingness to allow 
+developers to contribute changes to sections of an application or service that they have not previously be involved 
+with. Allow does come with responsibilies and checks. The former is to standards, and the checks are by the CI daemon, 
+and by humans who should honor to do a speedy code review. That last, for the highest performing teams means as soon
+as the proposed commit is ready.

@@ -78,9 +78,9 @@ to omit the source files/packages that are not needed for the current intentions
 
 ### Gcheckout / sparse checkouts
 
-In Google, A Blaze related technology called 'gcheckout' can modify the mappings between the multi-terrabye HEAD 
-revision of company-wide trunk (monorepo) and developers workstation. Thus the source-control tools maintain the 
-smallest possible subset of the monorepo on the developers workstation. 
+In Google, a Blaze related technology called 'gcheckout' can modify the mappings between the multi-gigabyte HEAD 
+revision of company-wide trunk (monorepo) and developer's own workstation. Thus the source-control tools maintain the 
+**smallest possible subset** of the monorepo on the developers workstation, for them to perform their daily work.
 
 We detailed two intentions above. Here is one more:
 
