@@ -30,6 +30,17 @@ branch diagram, but you should be able to guess what the worst case branching/me
 
 ![](/images/mainline3.png)
 
+**Merges and cherry picks**
+
+1. TODO
+1. TODO
+1. TODO
+1. TODO
+1. TODO
+1. TODO
+1. TODO
+1. TODO
+
 &#10033; Companies that choose 'Mainline' wither and die, we claim, so there's no forever.
 
 #### Merges
