@@ -14,7 +14,7 @@ between planned releases. To facilitate that, it is common for Trunk Based Devel
 branch on a just in time basis - say a few days before the release. That becomes a stable place, given the developers
 are still streaming their commits into the trunk at full speed. 
 
-![](/inages/branch_for_release.png)
+![](/images/branch_for_release.png)
 
 {{< note title="CD teams don't do release branches" >}}
 High throughtput, Continous Delivery teams can ignore this - if they had a lemon in production, they choose a 
