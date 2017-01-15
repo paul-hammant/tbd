@@ -14,6 +14,8 @@ between planned releases. To facilitate that, it is common for Trunk Based Devel
 branch on a just in time basis - say a few days before the release. That becomes a stable place, given the developers
 are still streaming their commits into the trunk at full speed. 
 
+![](/inages/branch_for_release.png)
+
 {{< note title="CD teams don't do release branches" >}}
 High throughtput, Continous Delivery teams can ignore this - if they had a lemon in production, they choose a 
 roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and the release is from trunk.
@@ -22,7 +24,9 @@ roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and
 ## Fix production bugs on Trunk
 
 The best practice for Trunk Based Development teams is to reproduce the bug on the trunk, fix it there with a test, 
-watch that be verified by the CI daemon, then cherry-pick it to the release branch.
+watch that be verified by the CI daemon, then cherry-pick that to the release branch and wait for a CI daemon 
+focusing on the release branch to verify it there too.  Yes, the CI pipeline that guards the trunk is going to
+be duplicated to guard active release branches too.
 
 ### Late branch creation
 
