@@ -16,6 +16,8 @@ are still streaming their commits into the trunk at full speed.
 
 ![](/images/branch_for_release.png)
 
+^ Trunk, two release branches, three releases, and a bug-fix
+
 {{< note title="CD teams don't do release branches" >}}
 High throughtput, Continous Delivery teams can ignore this - if they had a lemon in production, they choose a 
 roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and the release is from trunk.
