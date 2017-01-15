@@ -12,20 +12,26 @@ mean you're doing trunk based development. "We merge branches back to trunk ofte
 and if you're grouping multiple developers on those branches of they not deleted after a couple of days, then it is 
 not the trunk based development branching model.
 
-## Direction of Cherry Pick (or merge)
+## Direction of Cherry Pick
 
 All your developers are using a trunk and they're doing the right thing re not breaking the build. Your release 
 cadence is infrequent enough to allow you to cut a release branch on a just in time basis, and harden that in the run
 up to the actual release. 
 
 If you're fixing the bug on the release branch and merging it down to the trunk you're doing 
-it wrong. There's a chance you might forget to merge it down, and then there's going to be a regression at the next 
+it wrong - although there is debate about this. 
+There's a chance you might forget to merge it down, and then there's going to be a regression at the next 
 release moment (fresh branch cut from trunk).
 
 Bugs should be reproduced and fixed on the trunk, and then **cherry-picked** to the release branch. A build should 
 happen from that, a second confirmation that the issue has been remediate, and that deployment should go live (perhaps 
 a point release).  If you can't reproduce on the trunk (truly rare), then you've permission to go ahead and reproduce
 it on the release branch, fix it there, and merge back.
+
+## Merging rather than cherry-pick to/from a release branch
+
+You've cut a release branch because you're release cadence is low, and you're hardening and certifying the release
+there. But in the days that follow up to the release, you are also doing general merges up to the release branch. TODO.
 
 ## Duration of 'short lived' feature branches
 
@@ -35,5 +41,6 @@ You may then go ahead and make the next short-lived feature branch for the next 
 
 ## Numbers of developers on 'short lived' feature branches
 
-If there's more that you (and you're pairing partner) on the same short-lived feature branch, then that branch is at 
-risk of not being short-lived, and more like a release branch under active development.
+If there's more that one developer (and the developer's pairing partner) on the same short-lived feature branch, 
+then that branch is at risk of not being short-lived. It is at risk of being more and more like a release branch 
+under active development, and not short at all.
