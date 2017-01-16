@@ -76,7 +76,7 @@ keep the branch. Specifically, you don't want to developers to focus on the bran
 
 [Continuous Integation](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lives feature 
 branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
- is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI daemon to do that 
+ is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI server to do that 
  automatically.
  
 ## Dev team commitments

@@ -29,7 +29,7 @@ Trunk based development teams update/pull/sync from the shared trunk often. Many
 ## Running the build locally
 
 Developers practicing Trunk Based Development run the build before a commit/push in order to not break the build. 
-This one practice, for very small teams, allows them to not setup a CI daemon until later. If they can't push their 
+This one practice, for very small teams, allows them to not setup a CI server until later. If they can't push their 
 commits to the shared trunk because someone else beat them to it, they have to do another update/sync/pull then
 another build then the push of the revised commit(s). "It worked on my machine" says the developers that does not 
 want to confess to breaking the build (assuming quick reliable idempotent builds).
@@ -79,6 +79,6 @@ ranging negative impact on productivity and quality for innumerable and sometime
 
 Committing to the trunk many times a day, requires a broad sense of ownership to code, and a willingness to allow 
 developers to contribute changes to sections of an application or service that they have not previously be involved 
-with. Allow does come with responsibilities and checks. The former is to standards, and the checks are by the CI daemon, 
+with. Allow does come with responsibilities and checks. The former is to standards, and the checks are by the CI server, 
 and by humans who should honor to do a speedy code review. That last, for the highest performing teams means as soon
 as the proposed commit is ready.

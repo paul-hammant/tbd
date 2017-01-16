@@ -28,7 +28,7 @@ roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and
 ## Fix production bugs on Trunk
 
 The best practice for Trunk Based Development teams is to reproduce the bug on the trunk, fix it there with a test, 
-watch that be verified by the CI daemon, then cherry-pick that to the release branch and wait for a CI daemon 
+watch that be verified by the CI server, then cherry-pick that to the release branch and wait for a CI server 
 focusing on the release branch to verify it there too.  Yes, the CI pipeline that guards the trunk is going to
 be duplicated to guard active release branches too.
 
