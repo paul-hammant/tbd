@@ -12,10 +12,6 @@ to create other long-lived development branches is resisted.
   
  &ast; 'master', in Git nomenclature    
   
-## Part of a high-throughput value stream strategy
-
-![](/images/layer_cake.png)
-
 ## Caveats
 
 - Depending on the team size, and the rate of commits, **very short lived** feature branches may exist, allowing 
