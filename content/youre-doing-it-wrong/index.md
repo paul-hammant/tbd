@@ -30,14 +30,19 @@ it on the release branch, fix it there, and merge back.
 
 ## Merging rather than cherry-pick to/from a release branch
 
-You've cut a release branch because you're release cadence is low, and you're hardening and certifying the release
-there. But in the days that follow up to the release, you are also doing general merges up to the release branch. TODO.
+The developers cut a release branch because their release cadence is low, and they're hardening and certifying the release
+there. BUT in the days that lead up to the release, they are also doing general merges up to the release branch from 
+the trunk. That is not right - it is like they cut the branch on the wrong day. Maybe the business people on the team
+are pushing too hard to make a date.
+
+Cherry picking every commit since the branch-cut to the branch from the trunk is the same thing of course.
 
 ## Duration of 'short lived' feature branches
 
-The short-lived feature branch should only last a day or two. After the seal of approval from code reviewers and CI 
-daemons it should be merged into the trunk. The short-lived feature branch should be deleted, as proof of convergence.
-You may then go ahead and make the next short-lived feature branch for the next story/task you're doing.
+The short-lived feature branch should only last a day or two, and never diverge from the trunk enough so that a 
+merge back is problematic. After the seal of approval from code reviewers and CI 
+daemons it should be merged back into the trunk. It should be deleted, as proof of convergence.
+The developer in question may then go ahead and make the next short-lived feature branch for the next story/task they're doing.
 
 ## Numbers of developers on 'short lived' feature branches
 

@@ -75,6 +75,8 @@ testing run in the CI pipelines:
 
 ### Cascade
 
+![](/images/cascade1.png)
+
 # References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>

@@ -69,7 +69,7 @@ for review before landing in the trunk.
 
 Marshaled nearly always means a branch in a place that is visible to the team. These branches can (and should) be 
 deleted after the code review is complete, meaning they are very short lived. This nuanced. You want to keep 
-the commentary/approval/rejection from  the review for historical and auditing purposes, but you don't want to 
+the commentary/approval/rejection that is part of the review for historical and auditing purposes, but you don't want to 
 keep the branch. Specifically, you don't want to developers to focus on the branch after the review.
 
 ## A safety net
