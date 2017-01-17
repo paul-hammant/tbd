@@ -14,7 +14,7 @@ between planned releases. To facilitate that, it is common for Trunk Based Devel
 branch on a just in time basis - say a few days before the release. That becomes a stable place, given the developers
 are still streaming their commits into the trunk at full speed. 
 
-The incompatible policy (ref Wingerd & Seiwald), that the releae branch "should not receive continued development work".
+The incompatible policy (ref Wingerd & Seiwald above), that the release branch "should not receive continued development work".
 
 ![](/images/branch_for_release.png)
 

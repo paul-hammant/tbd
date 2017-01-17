@@ -36,6 +36,14 @@ checkout clone, and maintains a single permission for a user in respect of Read 
 There is a suggestion that Mercurial for one, is recieving contributions that will allow it to super-achieve on a scale
 basis.
 
+### Linux Torvalds presenting Git to Googlers
+
+Back in 2007 Linus Torvalds presented his Bitkeeper inspired Git to Googlers in their Mountain View. 
+[See here](https://www.youtube.com/watch?v=4XpnKHJAok8). He'd started making it two years before, and it is now the #1
+VCS choice. Google had been running their Monorepo style Trunk for a few years at this point, without regret. Some
+Googlers would later extend their Perforce (see below) setup to allow Git operation of local branches on
+developer workstations.
+
 ### Platform Software Choices
 
 * [Github](https://github.com/) and its enterprise on-premisis edition [Github Entrprise](https://enterprise.github.com/home) - Git
@@ -48,10 +56,10 @@ basis.
 
 [Website](https://www.perforce.com/)
 
-Perforce is a closed-source, industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas store all their 
-designs in it.  Until 2012, Google had their Trunk in it, and only moved off it because their non-functional needs
-exceeded it. Perforce is peculiar in that 'p4d' (a single server-side executable binary file) is the whole server and 
-does not need to be installed - just executed.
+Perforce is a closed-source, industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas 
+store all their designs in it.  Until 2012, Google had their Trunk in it, and moved off to an in-house solution it 
+because their non-functional needs exceeded it. Perforce is peculiar in that 'p4d' (a single server-side executable 
+binary file) is the whole server and does not need to be installed - just executed.
 
 Perforce is the last VCS technology that ordinarily maintains the read-only bit on the developer workstation. You 
 definitely need a plugin for your IDE to handle the wire operations with the server, so you are not confronted with the
@@ -142,3 +150,5 @@ version of Perforce compiled for them in the 90's, and that TFS reflects some of
 technology. It has grown to to be a multi-faceted server platform. Perhaps even a one-stop shop for the whole 
 enterprise's needs for application lifecycle management.  It is perfectly compatible with a Trunk Based Development 
 usage.
+
+## 

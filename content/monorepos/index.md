@@ -56,14 +56,15 @@ required for the current individual developers current intention. Two examples:
 Not only do you want to omit unnecessary directories/files from your build's activities, you probably also want to omit 
 them from your IDE.
 
-### Buck and Bazel
+### Facebook's Buck and Google's Bazel
 
-Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) pined for that, wrote Buck[![](/images/ext.png)](https://buckbuild.com/) and then 
-open-sourced it. Google then open-sourced a cut-down Blaze as Bazel[![](/images/ext.png)](https://bazel.build/). These are the two 
-(three incl. Blaze) are directed graph build systems that allow a large tree of sources to be speedily subset in a 
-compile/test/make-a-binary way. 
+Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) missed that, wrote 
+Buck[![](/images/ext.png)](https://buckbuild.com/) and then 
+open-sourced it. Google then open-sourced a cut-down Blaze as Bazel[![](/images/ext.png)](https://bazel.build/). 
+These are the two (three incl. Blaze) are directed graph build systems that allow a large tree of sources to be speedily 
+subset in a compile/test/make-a-binary way. 
  
-The omitting of unnecessary actions achieved by Buck and Bazel works equally well on developer workstations 
+The omitting of unnecessary compile/test actions achieved by Buck and Bazel works equally well on developer workstations 
 and in the CI infrastructure.
 
 There is also the ability to depend on recently compiled object code of colleagues. Recently compiled object code for 
@@ -73,7 +74,7 @@ machines in the TCP/IP subnet). That is in place to shorten compile times for pr
 ## Too big for your boots 
  
 As some point, if you are depending on in-house dependencies at a source level, your checkout could be bigger than 
-your workstations hard drive.  Google using some simple scripting modify the checkout on the developers workstation 
+your workstations hard drive. Google using some simple scripting modify the checkout on the developers workstation 
 to omit the source files/packages that are not needed for the current intentions of the developer. 
 
 ### Gcheckout / sparse checkouts
