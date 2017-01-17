@@ -100,6 +100,11 @@ googleAnalytics = "UA-24415524-3"
 	weight = 70
 
 [[menu.main]]
+	name   = "Concurrent development of consecutive releases"
+	url    = "concurrent-development-of-consecutive-releases/"
+	weight = 75
+
+[[menu.main]]
 	name   = "Observed habits"
 	url    = "observed-habits/"
 	weight = 80
