@@ -6,6 +6,21 @@ weight: 0
 
 ## Books promoting Trunk Based Development
 
+### Continuous Integration (June 29, 2007)
+
+<div>
+    <a href="http://bit.ly/lean-enterprise-paper">
+      <img width="93" src="/images/ci.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
+    </a>
+    <p>
+        <em>Continuous Integration: Improving Software Quality and Reducing Risk</em><br/>
+        by Paul M. Duvall, Steve Matyas, Andrew Glover
+        <br/>
+        <a href="https://www.amazon.com/Continuous-Integration-Improving-Software-Reducing/dp/0321336380"><strong>Amazon </strong>(hardback, kindle)</a><br/>
+    </p>
+    <br clear="all"/>
+</div>
+
 ### Continuous Delivery (July 27, 2010)
 
 <div><a href="http://amzn.to/1QBJM7k"><img border="0" width="90" src="//continuousdelivery.com/images/cd-book.png" style="float:left;padding-right:10px"/></a>
