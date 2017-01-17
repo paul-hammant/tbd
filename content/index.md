@@ -27,8 +27,8 @@ to create other long-lived development branches is resisted.
   to production faster than (say) once a day.
 
 - Teams have to become adept with correlated practices like [branch by abstraction](/branch-by-abstraction/), and 
-  depend on [feature flags](/feature-flags/) to shape releases and facilitate 'concurrent development of 
-  consecutive releases'.
+  depend on [feature flags](/feature-flags/) to shape releases and facilitate 
+  [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/).
 
 ## History
 
