@@ -16,6 +16,9 @@ to create other long-lived development branches is resisted.
   
 ## Caveats
 
+- If you have more than a couple of developers on the project, you're going to need a hook up a 
+  [Continuous Integration](continuous-integration/) Server to verify the commits being done.
+
 - Depending on the team size, and the rate of commits, **very short lived** feature branches may exist, allowing 
   code-review and build checking (CI) to happen before the commit lands in the trunk, for other devs to depend on.
 
@@ -32,10 +35,10 @@ to create other long-lived development branches is resisted.
 Trunk Based Development isn't a new branching model. The word 'trunk' is referent to the concept of a growing tree,
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
-It has been a lesser known branching model since the mid-nineties. 
+It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the 80's. 
 The largest of development organizations, like Google and 
 Facebook practice it at scale. Google has millions of individual source 
-files in a singe trunk branch of a repo that contains 86TB of history. We cover that setup in [monorepo](monorepos/).
+files in a singe trunk branch of a repo that contains 86TB of history. We cover that advanced setup in [Monorepos](monorepos/).
 
 # References elsewhere
 
