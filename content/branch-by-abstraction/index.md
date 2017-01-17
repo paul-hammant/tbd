@@ -103,6 +103,28 @@ In the case of abandonment, a real branch is cheaper, but the abstraction is onl
 delete. Besides pause and resume are much more likely in an enterprise development organisation that does nt have 
 limitless coffers.
  
+## History
+ 
+Teams employed Branch by Abstraction many years before it got its name (Stacy Curl named it in 2007), but it is 
+unknown when the first implementation was. Before the adoption of BbA, teams had to make a branch. In Walter F. Tichy's 1985 paper 
+"RCS - A System for Version Control"[![](/images/ext.png)](https://www.gnu.org/software/rcs/tichy-paper.pdf), a trunk 
+focused model is described as "slender branch", and that you stepped away from it for four reasons:
+
+<br><div style="padding-left: 45px"/><span style="font-size: 150%">&ldquo;</span>
+<b>Section 3.1. When are branches needed?</b><br>
+A young revision tree is slender: It consists of only one branch, called the trunk.<br>
+As the tree ages, side branches may form. Branches are needed in the following 4 situations.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Temporary fixes [...]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Distributed development and customer modifications [...]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parallel development [...]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Conflicting updates [...]<br>
+</div>
+ 
+Two of those, Tichy suggests, are temporary branches and would come back to the trunk at the earliest opportunity. 
+ 
+With the Branch by Abstraction technique, Trunk Based Development was less likely to be abandoned for a 
+multi-branch model, whether long term or temporarily.
+ 
 # References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
