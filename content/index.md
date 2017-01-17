@@ -7,8 +7,10 @@ weight: 0
 
 ## One line summary
 
-A source-control branching model, where a single branch called trunk* is where developers share code, and pressure 
+A source-control branching model, where a single branch called trunk* is where developers share code, and any pressure 
 to create other long-lived development branches is resisted.
+
+![](/images/trunk1.png)
   
  &ast; 'master', in Git nomenclature    
   
