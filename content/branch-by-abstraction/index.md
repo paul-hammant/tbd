@@ -100,7 +100,7 @@ If on a real branch, the casual restart of the paused initiative is missing. The
 restart given the elapsed time since the initiative was paused. 
  
 In the case of abandonment, a real branch is cheaper, but the abstraction is only incrementally more expensive to 
-delete. Besides pause and resume are much more likely in an enterprise development organisation that does nt have 
+delete. Besides pause and resume are much more likely in an enterprise development organisation that does not have 
 limitless coffers.
  
 ## History

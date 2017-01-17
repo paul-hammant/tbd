@@ -97,6 +97,10 @@ about new priorities. The only saving grave is the fact that you had unit tests 
 is effectively turned off in production. Try to get the business to allow the remediation of flags (and the code
 they apply to) a month after the release. Maybe add them to the project's readme with a "review for delete" date.
 
+## History
+
+TODO
+
 # References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
