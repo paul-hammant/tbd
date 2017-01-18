@@ -18,12 +18,12 @@ practice. The reader should dive into the Book and associated site, without dela
 
 Lean Experiments can really happen with any development team on any project, but works **best** on foundations that 
 are solid. Specifically, the solid foundations of Trunk Based Development, Continuous Integration and Continuous
-Delivery. This site doesn't touch on Lean Experiments at all, but the reader should strive to understand that field
+Delivery. This site does not touch on Lean Experiments at all, but the reader should strive to understand that field
 of science when the lower layer of the stylized cake are solid.
 
 Importantly, the reader should understand that there is a large overlap between Trunk Based Development and 
 Continuous Integration, as defined by it's definers and documenters. Whereas Trunk Based Development focuses on a
-pure source-control workflow and an individual contributor's obligations to that, Continous Integration focuses 
+pure source-control workflow and an individual contributor's obligations to that, Continuous Integration focuses 
 equally on that and the need to have machines issue early warnings breakages and incompatibilities.
 
 DevOPS is encompassing too. At the very least, the expansion of developers habits into operations heartlands giving 

@@ -29,7 +29,7 @@ pressure to group a bunch of developers on a non-trunk branch, or worse have dev
 branch, or worse still take intermediate merges from your branch, despite your task not being complete.  
 
 Generally speaking the whole dev team should do what ever it can do breack stories/tasks into smaller stories/tasks. 
-In Agile, there is a [INVEST mnemonic](https://en.wikipedia.org/wiki/INVEST_(mnemonic)) that aids in the splitting
+In Agile, there is a INVEST mnemonic[![](/images/ext.png)](https://en.wikipedia.org/wiki/INVEST_(mnemonic)) that aids in the splitting
 up or stories.
 
 # SCM Technology Choice
@@ -66,11 +66,25 @@ pull-request branches abreast of origin:master help a lot.
 
 # Conways Law
 
+The org making applications and services that reflect the org's own structure [![](/images/ext.png)](https://en.wikipedia.org/wiki/Conway's_law). 
+If your organization feels like this, and a Monorepo doesn't feel right, then MicroServices could the direction for you.
+
 # Database migrations
+
+In order get into the Trunk Based Development way, you'll need to find a way to handle table-shape changes, and even
+population of existing rows where new/changed columns happen. Pramod Sadlage and Scott Amber's book 
+"Refactoring Databases: Evolutionary Database Design" [![](/images/ext.png)](https://www.amazon.com/Refactoring-Databases-Evolutionary-paperback-Addison-Wesley/dp/0321774515)
+goes into that much more, as does the [Continuous Delivery](/continuous-delivery/) book.
 
 # Shared code
 
+Trunk Based Development teams typically have common code ownership rules around contributions to different parts
+of the source tree. If they don't have a full egalitarian system, they have objecting rules for the tree, that focus
+on standards, and come with a promise of a prioritized and fair code review.
+
 # Build times
+
+Keeping build times short is key.
 
 ## Parallelization
 
