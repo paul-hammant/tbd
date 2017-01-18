@@ -6,7 +6,18 @@ weight: 30
 
 ## Modern claimed high-throughput branching models
 
-### GitFlow and alike
+### GitFlow and similar
+
+There are plenty in the modern age that swear by this model, and feel it has plenty of room to scale with few 
+downsides:
+
+![](/images/gitflow.png)
+
+- Diagram copied from Vincent Driessen's 2010 article on GitFlow: "A successful Git branching model" [![](/images/ext.png)](http://nvie.com/posts/a-successful-git-branching-model/)
+
+I looks like you'll not be able to do [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/) 
+with this branching model, or the hedging that [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch_by_abstraction/)
+enable.
 
 ## Legacy branching models
 

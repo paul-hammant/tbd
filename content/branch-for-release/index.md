@@ -42,7 +42,7 @@ one more more commits that happened before it, but after the branch was cut.
 Some teams release from a tag on the trunk, and don't create a branch at that time. 
 Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag.  
 
-Brad Appleton points out that many do not realize that branches can be created retroactively. That is taken advantage 
+Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage 
 of here in the case of bugs after "release from tag", or even changes for point release.
 
 ### Directionality of cherry-pick
