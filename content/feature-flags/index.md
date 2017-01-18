@@ -99,14 +99,14 @@ they apply to) a month after the release. Maybe add them to the project's readme
 
 ## History
 
-Some historical predecessors of feature toggles/flags:  
+Some historical predecessors of feature toggles/flags as we know it today:  
 
-- Unified Versioning through Feature Logic (Andreas Zeller and Gregor Snelting, 1996) [![](/images/ext.png)](http://www.cs.tufts.edu/~nr/cs257/archive/andreas-zeller/tr-96-01.pdf) - paper.
+- Unified Versioning through Feature Logic (Andreas Zeller and Gregor Snelting, 1996) [![](/images/ext.png)](http://www.cs.tufts.edu/~nr/cs257/archive/andreas-zeller/tr-96-01.pdf) - whitepaper.
 - Configuration Management with Version Sets: A Unified Software Versioning Model and its Applications (Andreas Zeller's, 1997) - [![](/images/ext.png)](https://www.st.cs.uni-saarland.de/publications/files/zeller-thesis-1997.pdf) - Ph.D. thesis.
 
 There's a warning too: 
 
-- "#ifdef considered harmful" (Henry Spencer and Geoff Collyer, 1992) [![](/images/ext.png)](http://www.literateprogramming.com/ifdefs.pdf) - paper.
+- "#ifdef considered harmful" (Henry Spencer and Geoff Collyer, 1992) [![](/images/ext.png)](http://www.literateprogramming.com/ifdefs.pdf) - whitepaper.
 
 Brad Appleton says:
 
@@ -126,7 +126,9 @@ WITH at least nighly integration across all feature-branches [sigh].
 Date    | Type  | Article
 --------|-------|--------
 29 Oct 2010 | MartinFowler.com article | [Feature Toggle](https://martinfowler.com/bliki/FeatureToggle.html)
+19 Jun 2013 | Slides from a talk | [Branching Strategies: Feature Branches vs Branch by Abstraction](http://www.slideshare.net/cb372/branching-strategies)
 10 Oct 2014 | Conference Talk | [Trunk Based Development in the Enterprise - Its Relevance and Economics](https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics)
 08 Feb 2016 | MartinFowler.com article | [Feature Toggles](https://martinfowler.com/articles/feature-toggles.html)
+
 
  
