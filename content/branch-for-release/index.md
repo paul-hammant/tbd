@@ -21,7 +21,7 @@ The incompatible policy (ref Wingerd & Seiwald above), that the release branch "
 ^ Trunk, two release branches, three releases, and a bug-fix
 
 {{< note title="CD teams don't do release branches" >}}
-High throughtput, Continous Delivery teams can ignore this - if they had a lemon in production, they choose a 
+High throughput, [Continuous Delivery](/continuous-delivery/) teams can ignore this - if they had a lemon in production, they choose a 
 roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and the release is from trunk.
 {{< /note >}}
 
@@ -29,13 +29,21 @@ roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and
 
 The best practice for Trunk Based Development teams is to reproduce the bug on the trunk, fix it there with a test, 
 watch that be verified by the CI server, then cherry-pick that to the release branch and wait for a CI server 
-focusing on the release branch to verify it there too.  Yes, the CI pipeline that guards the trunk is going to
+focusing on the release branch to verify it there too. Yes, the CI pipeline that guards the trunk is going to
 be duplicated to guard active release branches too.
+
+{{< warning title="Cherry pick is not a regular merge" >}}
+A cherry pick merge takes a specific commit (or commits) and merges that to the destination branch. It skips 
+one more more commits that happened before it, but after the branch was cut.
+{{< /warning >}}
 
 ### Late branch creation
 
 Some teams release from a tag on the trunk, and don't create a branch at that time. 
-Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag.
+Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag.  
+
+Brad Appleton points out that many do not realize that branches can be created retroactively. That is taken advantage 
+of here in the case of bugs after "release from tag", or even changes for point release.
 
 ### Directionality of cherry-pick
 
@@ -48,7 +56,8 @@ Of course, sometimes you can't reproduce the bug on trunk, so you have to do it 
 
 ## Release branch deletion
 
-You really should delete release branches when releases from succeeding release branches have gone to prod. 
+You really should delete release branches when releases from succeeding release branches have gone to prod. This is a 
+harmless tidying activity - branches can be undeleted again quite easily.
 
 # References elsewhere
 
@@ -56,5 +65,5 @@ You really should delete release branches when releases from succeeding release 
 
 Date    | Type  | Article
 --------|-------|--------
-1998 | White Paper | [High-level Best Practices in Software Con guration Management](https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf)
+1998 | White Paper | [High-level Best Practices in Software Configuration Management](https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf)
  
