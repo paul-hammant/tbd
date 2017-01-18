@@ -33,5 +33,5 @@ Date    | Type  | Article
 --------|-------|--------
 29 Jun 2004 | MartinFowler.com article | [Application Strangulation](https://www.martinfowler.com/bliki/StranglerApplication.html)
 17 Jan 2006 | Blog Entry | [Great Architects Are Also Stranglers](https://scottmark.wordpress.com/2006/01/17/great-architects-are-also-stranglers/)
-14 Jul 2013 | Conference Talk | [Legacy Application Strangulation : Case Studies](http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/)
+14 Jul 2013 | Blog Entry | [Legacy Application Strangulation : Case Studies](http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/)
 

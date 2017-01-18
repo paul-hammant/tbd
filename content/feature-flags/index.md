@@ -54,25 +54,27 @@ bootContainer.addComponent(classFromName(config.get("purchasingCompleting")));
 There are many more ways of passing flag intentions (or any config) to a runtime.  If you at all can, you want to 
  avoid if/else conditions in the code where a path choice would be made. Hence our emphasis on an abstraction.
 
-## Continuous Integration
+## Continuous Integration pipelines
 
-It is important to have CI guard your reasonable expected permutations of toggle. That means tests that happen on an
-application or service after launching it, should be adaptable too and test what is meaningful for those toggle 
+It is important to have CI guard your reasonable expected permutations of flag. That means tests that happen on an
+application or service after launching it, should be adaptable too and test what is meaningful for those flag 
 permutations. It also means that in terms of CI pipelines there's a fan-out **after** unit tests, for each meaningful
-flag permutation.
+flag permutation. A crude equivalent is to run the whole CI pipeline in parallel for each meaningful flag permutation.
+That would mean that each commit in the trunk kicks off more that one build - hopefully from elastic 
+infrastructure.
 
 ## Runtime switchable
 
 Sometimes Flags/Toggles set at app launch time, isn't enough. Say you're an Airline selling tickets for flights online.
 You might also rental cars in conjunction with a partner - say 'Really Cool Rental Cars' (RCRC). The connection to 
 any partner or their up/down status is outside your control, so you might want a switch in the software that works 
-without relaunch, to turn RCRC on or off, and allow the 24/7 support team to flip it if certain 'Runbook' conditions
+without relaunch, to turn "RCRC partner bookings" on or off, and allow the 24/7 support team to flip it if certain 'Runbook' conditions
 have been met.  In this case, the end users may not notice if Hertz, Avis, Enterprise, etc are all still amongst
 the offerings for that airport at the flight arrival time.
 
 Key for Runtime switchable flags is the need for the state to persist. A restart of the application or service should
 not set that flag choice back to default - it should retain the previous choice. It gets complicated when you think
-about the need for the toggle to permeate multiple nodes in a cluster of horizontally scaled sibling processes. For
+about the need for the flag to permeate multiple nodes in a cluster of horizontally scaled sibling processes. For
 that last, then holding the flag state in Consul[![](/images/ext.png)](https://www.consul.io/), 
 Etcd[![](/images/ext.png)](https://github.com/coreos/etcd) (or equiv) is a the modern way.
 
