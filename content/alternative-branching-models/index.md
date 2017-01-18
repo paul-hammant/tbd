@@ -91,13 +91,19 @@ They only do so if the CI server says the build is green for the upstream, of co
 
 ![](/images/cascade1.png)
 
-Problems compound with this model, the more releases there are. An upstream butterfly, is a downstream Tsunami of 
-unmergability. Merges are never cherry picks in this model - they are sweeps of everything not merged yet (or upto an 
-chosen commit number in order to make it more bite sized).
+Problems compound with this model, the more releases being juggled concurrently there are. An upstream butterfly, is 
+a downstream Tsunami of unmergability. Downstream merged begin to get skipped, or abandoned. Or the merge works, but the
+code isn't right so there's some in-branch fixing, which is not applicable to upstream. Here's the reality (breakages
+overlaid again):
+
+![](/images/cascade2.png)
+
+Remember, the merges are never cherry picks in this model - they are sweeps of everything 
+not merged yet (or upto an chosen commit number in order to make it more bite sized).
 
 Of course only larger organizations have to worry 
 about [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/), and many 
-would argue that the application is too large (and that microservices is the solution).
+would argue that the application is too large anyway (and that microservices is the solution).
 
 # References elsewhere
 
