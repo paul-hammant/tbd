@@ -99,7 +99,25 @@ they apply to) a month after the release. Maybe add them to the project's readme
 
 ## History
 
-TODO
+Some historical predecessors of feature toggles/flags:  
+
+- Unified Versioning through Feature Logic (Andreas Zeller and Gregor Snelting, 1996) [![](/images/ext.png)](http://www.cs.tufts.edu/~nr/cs257/archive/andreas-zeller/tr-96-01.pdf) - paper.
+- Configuration Management with Version Sets: A Unified Software Versioning Model and its Applications (Andreas Zeller's, 1997) - [![](/images/ext.png)](https://www.st.cs.uni-saarland.de/publications/files/zeller-thesis-1997.pdf) - Ph.D. thesis.
+
+There's a warning too: 
+
+- "#ifdef considered harmful" (Henry Spencer and Geoff Collyer, 1992) [![](/images/ext.png)](http://www.literateprogramming.com/ifdefs.pdf) - paper.
+
+Brad Appleton says:
+
+<br><div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 150%">&ldquo;</span>
+The thing I don't like about feature-toggles/flags is when they end-up NOT being short-lived as intended, 
+and we end up having to revisit Spencer and Collyer's famous paper. The funny thing is feature-branches 
+started out the same way, when they were first introduced it was for feature-teams using very large features, and the 
+purpose of the separate branches was because too many people were trying to commit at the same time to the same branch. 
+So the idea was use separate branches (for scale) and teams would integrate to their team-branch daily or more often 
+WITH at least nighly integration across all feature-branches [sigh].
+</div>
 
 # References elsewhere
 

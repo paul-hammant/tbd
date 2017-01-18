@@ -110,7 +110,7 @@ unknown when the first implementation was. Before the adoption of BbA, teams had
 "RCS - A System for Version Control"[![](/images/ext.png)](https://www.gnu.org/software/rcs/tichy-paper.pdf), a trunk 
 focused model is described as "slender branch", and that you stepped away from it for four reasons:
 
-<br><div style="padding-left: 45px"/><span style="font-size: 150%">&ldquo;</span>
+<br><div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 150%">&ldquo;</span>
 <b>Section 3.1. When are branches needed?</b><br>
 A young revision tree is slender: It consists of only one branch, called the trunk.<br>
 As the tree ages, side branches may form. Branches are needed in the following 4 situations.<br>
@@ -132,6 +132,6 @@ multi-branch model, whether long term or temporarily.
 Date    | Type  | Article
 --------|-------|--------
 26 Apr 2007 | Blog entry | [Introducing Branch by Abstraction](http://paulhammant.com/blog/branch_by_abstraction.html)
+05 May 2011 | ContinuousDelivery.com article | [Make Large Scale Changes Incrementally with Branch By Abstraction](https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/)
 21 Jun 2013 | Blog entry | [Branching Strategies: Feature Branches vs Branch by Abstraction](http://www.slideshare.net/cb372/branching-strategies)
 07 Jan 2014 | MartinFowler.com article | [BranchByAbstraction](https://martinfowler.com/bliki/BranchByAbstraction.html)
-05 May 2011 | ContinuousDelivery.com article | [Make Large Scale Changes Incrementally with Branch By Abstraction](https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/)

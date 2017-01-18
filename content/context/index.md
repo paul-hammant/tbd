@@ -24,4 +24,8 @@ of science when the lower layer of the stylized cake are solid.
 Importantly, the reader should understand that there is a large overlap between Trunk Based Development and 
 Continuous Integration, as defined by it's definers and documenters. Whereas Trunk Based Development focuses on a
 pure source-control workflow and an individual contributor's obligations to that, Continous Integration focuses 
-equally on that and the need to have early warnings breakages and incompatibilities.
+equally on that and the need to have machines issue early warnings breakages and incompatibilities.
+
+DevOPS is encompassing too. At the very least, the expansion of developers habits into operations heartlands giving 
+Infrastructure as Code, continual improvement experiments, a focus on time through the machine, the scripting of previously
+manual operations things, goes further than we can represent in a stylized layer cake diagram, and indeed in this site.
