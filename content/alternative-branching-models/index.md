@@ -61,7 +61,7 @@ could also be that the team **pushed merges to** mainline part way through the p
 
 We've just described a two branch model - the mainline and a project branch. It could be that the application in 
 question has more that one project in flight at any one time. That would mean more than one project branch, and that
-creates pressire for more intermediate merges, and consequentially greater merge difficulty.
+creates pressure for more intermediate merges, and consequentially greater merge difficulty.
 
 #### Always release ready?
 
@@ -75,7 +75,18 @@ testing run in the CI pipelines:
 
 ### Cascade
 
+The idea is that each release has its own branch, and that each release team merges from the 'upstream' branch daily.
+They only do so if the CI server says the build is green for the upstream, of course.
+
 ![](/images/cascade1.png)
+
+Problems compound with this model, the more releases there are. An upstream butterfly, is a downstream Tsunami of 
+unmergability. Merges are never cherry picks in this model - they are sweeps of everything not merged yet (or upto an 
+chosen commit number in order to make it more bite sized).
+
+Of course only larger organizations have to worry 
+about [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/), and many 
+would argue that the application is too large (and that microservices is the solution).
 
 # References elsewhere
 
