@@ -13,7 +13,8 @@ to the release but everyone else is going to work at full speed.
 
 ### Every Day is the same
 
-Ignoring meetings, Developers commit/push at the same rate regardless of the day of the week or the week of the month. 
+Ignoring meetings, developers commit/push at the same rate regardless of the day of the week or the week of the month. 
+This is a reinforcement of the No Code Freeze suggestion above.
 
 ## Quick Reviews
 
