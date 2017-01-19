@@ -39,7 +39,7 @@ basis.
 ### Linux Torvalds presenting Git to Googlers
 
 Back in 2007 Linus Torvalds presented his Bitkeeper inspired Git to Googlers in their Mountain View. 
-[See here](https://www.youtube.com/watch?v=4XpnKHJAok8). He'd started making it two years before, and it is now the #1
+[See here](https://www.youtube.com/watch?v=4XpnKHJAok8). He had started making it two years before, and it is now the #1
 VCS choice. Google had been running their Monorepo style Trunk for a few years at this point, without regret. Some
 Googlers would later extend their Perforce (see below) setup to allow Git operation of local branches on
 developer workstations.

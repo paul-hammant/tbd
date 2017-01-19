@@ -88,7 +88,7 @@ We detailed two intentions above. Here is one more:
 * I now want to change `TheORMweDepOn`, because a change to `MyTeamsApplication` needs me to do that.
 
 In Google, rather than feed into the backlog of the team that maintains `TheORMweDepOn` (which may exist as a part 
-time committee rather than a team), the developer in question would make the change themselves. Perhaps they'd make 
+time committee rather than a team), the developer in question would make the change themselves. Perhaps they had make 
 it in the same commit as the the first usage of it for `MyTeamsApplication`.  In the code review cycle (Google do
 common code ownership), the approvers for the `TheORMweDepOn` would see all the changes together. The larger change is 
 all accepted or rejected (to be remediated) atomically.
@@ -172,7 +172,7 @@ Recursive build systems like maven, have a forward declaration of modules that s
 ```
 
 Directories `moduleone` and `moduletwo` have to exist. The idea of monorepos that are doing the gcheckout style
-modifications of a development workstations checkout, is that build graphs are calculated not declared.  You'd need a 
+modifications of a development workstations checkout, is that build graphs are calculated not declared.  You would need a 
 feature like this in Maven to track that:
 
 ```xml

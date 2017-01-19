@@ -11,8 +11,14 @@ the trunk.
 
 It is most likely that such teams do not use a dewey-decimal release numbering scheme, and instead have something 
 referent to the commit number or date and time.  They probably also choose to roll forward and fix the bug on the 
-trunk as if it were a fewature, albeit as quickly as possible.
+trunk as if it were a fwature, albeit as quickly as possible.
 
-Teams with one release a day (or less) **might** still make a branch retroactively, to cherry pick the bug-fix to 
+Teams with one release a day (or less) **might** still make a branch, to cherry pick the bug-fix to 
 and release from.
+
+{{< note title="Branches can be made retroactively" >}}
+Newbies to source-control systems often forget that you don't have to make a branch because you think you might need
+it in the future. For any source-control technology made today, you can choose the revision in the past to branch
+from. The outcome is exactly the same as if you had made it at the time. 
+{{< /note >}}
  
