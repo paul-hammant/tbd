@@ -27,7 +27,7 @@ fits the monorepo design.
 ## Third party dependencies
 
 With the monorepo model, there is a strong desire to have third-party binaries in source-control too. 
-You might think that it would be unmanageable for reasons of size. In terms of history, Perforce and Subversion don't
+You might think that it would be unmanageable for reasons of size. In terms of history, Perforce and Subversion do not
 mind a terabyte of history of binary files (or more), and Git performed much better when Git-LFS was created. You 
 could still feel that the HEAD revision of thousands of fine-grained dependencies is too much for a workstation, but 
 that can be managed via 'sparse checkout' techniques (see below).
@@ -97,7 +97,7 @@ So our developer was working on `MyTeamsApplication`, which depended on `TheORMw
 depended on other things). Now that developer is going to change `TheORMweDepOn` and that impacts `TheirApplication` 
 too. The Blaze related checkout-modifying technology performs an expansion to bring in `TheirApplication` to the 
 developers checkout. From that moment on, the developer doing update/pull/sync will bring down minute by minute
-changes to those three modules.  For free, the build expands to make sure that the `TheORMweDepOn` changes don't 
+changes to those three modules.  For free, the build expands to make sure that the `TheORMweDepOn` changes do not 
 break either of `MyTeamsApplication` or `TheirApplication`.
 
 Both Subversion and Git have a 'sparse checkout' capability, which exactly facilitates this sort of thing.  At team 
@@ -109,7 +109,7 @@ Google's co-mingled applications and services site within highly structured and 
 developer from one project team, instantly recognizes the directory structure for another team's application
 or service. That goes across languages too. The design for the directory layout needs to be enforced globally. You can
 see that in the way that Buck and Bazel structure things, even for unit, integration and functional tests. If you
-can't overhaul the directory structure of your entire world of project source, don't entertain a monorepo.
+cannot overhaul the directory structure of your entire world of project source, do not entertain a monorepo.
 {{< /warning >}}
  
 #### Contrived example 
@@ -145,7 +145,7 @@ In 2007, Google tried to upgrade their JUnit from 3.8.x to 4.x and struggled as 
 backwards incompatibility in a small percentage of their uses of it. The change-set was very large, and presumably 
 the both the IDE and the javac compiled buckled to some degree.
 
-Because you're doing lock-step upgrades, you only secondarily note the version of the third party 
+Because you are doing lock-step upgrades, you only secondarily note the version of the third party 
 dependencies, as you check them in to source control without version numbers in the file name.  I.e. JUnit goes in as
 `third_party/java_testing/junit.jar`.
 
@@ -157,7 +157,7 @@ be configured to pull third party dependencies from a relative directory in the 
 though.
 
 Recursive build systems mostly have the ability to choose a type of build. For example 'mvn test' to just run tests, 
-and not make a binary for distribution. Presently though, these build technologies don't have the ability to follow
+and not make a binary for distribution. Presently though, these build technologies do not have the ability to follow
 a changeable checkout that the likes of gcheckout can control.
 
 ### Conflict with Monorepos

@@ -15,7 +15,7 @@ change was predicted as being time consuming, complex, destabilizing/disruptive 
 **Rules:**
  
 1. There's also a lot of developers already depending on 
-the code that is subject of the 'longer to complete' change, and we don't want them to be slowed down in any way.
+the code that is subject of the 'longer to complete' change, and we do not want them to be slowed down in any way.
 2. No commit pushed to the shared repository should jeopardize the ability to go live.
 
 ## Ideal steps
@@ -27,7 +27,7 @@ can take multiple commits. None of those are allowed to break the build, and all
 repository in order, and as done.
 2. Write a second implementation of the abstraction for the to be introduced code, and commit that, but maybe as 
 'turned off' within the trunk so that other developers are not depending on it yet. If needed, this can take multiple 
-commits as above. The abstraction from #1 may also be occasionally tweaked, but must follow the same rule - don't 
+commits as above. The abstraction from #1 may also be occasionally tweaked, but must follow the same rule - do not 
 break the build.
 3. Flip the software 'off' switch to 'on' for the rest of the team, and commit/push that.
 4. Remove the to be replaced implementation

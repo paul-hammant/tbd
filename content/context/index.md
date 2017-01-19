@@ -22,7 +22,7 @@ Delivery. This site does not touch on Lean Experiments at all, but the reader sh
 of science when the lower layer of the stylized cake are solid.
 
 Importantly, the reader should understand that there is a large overlap between Trunk Based Development and 
-Continuous Integration, as defined by it's definers and documenters. Whereas Trunk Based Development focuses on a
+Continuous Integration, as defined by its definers and documenters. Whereas Trunk Based Development focuses on a
 pure source-control workflow and an individual contributor's obligations to that, Continuous Integration focuses 
 equally on that and the need to have machines issue early warnings breakages and incompatibilities.
 

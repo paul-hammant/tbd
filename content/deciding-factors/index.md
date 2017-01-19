@@ -9,16 +9,16 @@ weight: 30
 ## Iteration length
 
 Different Agile teams focus on different iteration lengths. Some teams work at three-week iterations, some two, 
-and some one. Some teams don't have an iteration at all - particularly ones doing Continuous Delivery.
+and some one. Some teams do not have an iteration at all - particularly ones doing Continuous Delivery.
 
 If you are on a four week, or more iteration length, and each of those four weeks varies with proximity to the 
 release and cannot change that you may be in a bind. You may be able follow the tenants of Trunk Based Development, 
-benefit from a Continuous Integration daemon (as all branching models can), but you're not doing to be able to 
+benefit from a Continuous Integration daemon (as all branching models can), but you are not doing to be able to 
 get all the way to Continuous Delivery (or Continuous Deployment).
 
 ## Waterfall
 
-This one is easy. If you're doing waterfall, you're not close at all to the "don't break the build" mantra required
+This one is easy. If you are doing waterfall, you are not close at all to the "do not break the build" mantra required
 to do Trunk Based Development. Consider a short-iteration Agile methodology.
 
 ## Story size
@@ -67,7 +67,7 @@ pull-request branches abreast of origin:master help a lot.
 # Conways Law
 
 The org making applications and services that reflect the organization's own structure [![](/images/ext.png)](https://en.wikipedia.org/wiki/Conway's_law). 
-If your organization feels like this, and a Monorepo doesn't feel right, then MicroServices could the direction for you.
+If your organization feels like this, and a Monorepo does not feel right, then MicroServices could the direction for you.
 
 # Database migrations
 
@@ -79,7 +79,7 @@ goes into that much more, as does the [Continuous Delivery](/continuous-delivery
 # Shared code
 
 Trunk Based Development teams typically have common code ownership rules around contributions to different parts
-of the source tree. If they don't have a full egalitarian system, they have objecting rules for the tree, that focus
+of the source tree. If they do not have a full egalitarian system, they have objecting rules for the tree, that focus
 on standards, and come with a promise of a prioritized and fair code review.
 
 # Build times

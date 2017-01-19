@@ -24,7 +24,7 @@ that project was Smalltalk and the single integration point was a Smalltalk imag
 (a technology more advanced than a "mere" source-control systems that rule today).
 
 Thus, the intention of CI, as defined, was pretty much exactly the same as Trunk Based Development, that emerged 
-elsewhere. Trunk Based Development didn't said anything about CI Servers at the outset, but there's overlap today
+elsewhere. Trunk Based Development did not say anything about CI Servers at the outset, but there's overlap today
 and such things expand the safety net around the branching model.
 
 ## CI servers performing verifications
@@ -62,8 +62,8 @@ commits a day. Fine too for teams that have a only a few developers who trust ea
 workstation before committing.
 
 Setups having the CI server single threading on builds and the notification cycle around pass/fail will
-occasion lead to the batching in a CI job. This isn't a big problem for small teams. Batching is where one build is 
-verifying two or more commits in one go. Failure of a build that contains two commits isn't going to be hard to pick 
+occasion lead to the batching in a CI job. This is not a big problem for small teams. Batching is where one build is 
+verifying two or more commits in one go. Failure of a build that contains two commits is not going to be hard to pick 
 apart in order to know which one caused the failure. That confidence comes from the high probability the two commits 
 were in different sections of the code base and are almost never entangled.
 
@@ -100,13 +100,13 @@ to handle it (and a notification).
 Google is the most famous example of using Scaled CI infrastructure to keep up with commits (one every 30 seconds on 
 average) to a single shared trunk. Google's setup would also allow the same infrastructure to verify *proposed* commits.
 
-Their VCS technology in the early 2000's when they engineered this was Perforce, and it didn't have an ability
+Their VCS technology in the early 2000's when they engineered this was Perforce, and it did not have an ability
 to effectively do CI on commits that had not yet landed in the trunk. So Google made their own tooling for this and
-pending commits were plucked from developer workstations for verification (and code review). After it's initial 
+pending commits were plucked from developer workstations for verification (and code review). After its initial 
 creation, Google's now "Google3" setup, gained a UI to allow the code review to be performed in a web-page, and the 
 results of the pre-commit CI verification to shown alongside. That was 'Mondrian' and here is Guido van 
 Rossum talking about it in 2006[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Note at the start
-he says Pair-programming is best, and code review helps fill the gap for situations where you can't do that.
+he says Pair-programming is best, and code review helps fill the gap for situations where you cannot do that.
 
 Google also **leverage a second tier** of elastic infrastructure**, for scaled Selenium/WebDriver testing. Their 
 "Selenium Farm" was also available to developers at their desks, who just wanted to run such tests against a stood-up

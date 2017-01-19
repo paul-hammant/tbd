@@ -20,7 +20,7 @@ The incompatible policy (ref Wingerd & Seiwald above), that the release branch "
 
 ^ Trunk, two release branches, three releases, and a bug-fix
 
-{{< note title="CD teams don't do release branches" >}}
+{{< note title="CD teams do not do release branches" >}}
 High throughput, [Continuous Delivery](/continuous-delivery/) teams can ignore this - if they had a lemon in production, they choose a 
 roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and the release is from trunk.
 {{< /note >}}
@@ -39,7 +39,7 @@ one more more commits that happened before it, but after the branch was cut.
 
 ### Late branch creation
 
-Some teams release from a tag on the trunk, and don't create a branch at that time. 
+Some teams release from a tag on the trunk, and do not create a branch at that time. 
 Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag.  
 
 Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage 
@@ -52,7 +52,7 @@ fix bugs on the release in the expectation of cherry-picking them back to the tr
 Forgetting means a regression in production some weeks later (and someone getting fired). It can happen if things
 are being fixed in the night by a tired develop who wants to get back to bed.
 
-Of course, sometimes you can't reproduce the bug on trunk, so you have to do it the other way round.
+Of course, sometimes you cannot reproduce the bug on trunk, so you have to do it the other way round.
 
 ## Release branch deletion
 

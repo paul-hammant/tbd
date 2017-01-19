@@ -4,8 +4,8 @@ title: Concurrent development of consecutive releases
 weight: 40
 ---
 
-Your company wants a stream of major functionality to arrive in the application you're pushing live at a regular 
-cadence. Because you're good Extreme Programmers, you know that consecutive development of consecutive releases
+Your company wants a stream of major functionality to arrive in the application you are pushing live at a regular 
+cadence. Because you are good Extreme Programmers, you know that consecutive development of consecutive releases
 is best. However, the effort and length of time needed to complete each of the major pieces of functionality is
 large enough to require different project teams cooperating towards that plan. Some of those teams will be within
 the same codebase. Some may dependent building services that the application will call. Not everything is equal effort

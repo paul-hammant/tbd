@@ -65,7 +65,7 @@ infrastructure.
 
 ## Runtime switchable
 
-Sometimes Flags/Toggles set at app launch time, isn't enough. Say you're an Airline selling tickets for flights online.
+Sometimes Flags/Toggles set at app launch time, is not enough. Say you are an Airline selling tickets for flights online.
 You might also rental cars in conjunction with a partner - say 'Really Cool Rental Cars' (RCRC). The connection to 
 any partner or their up/down status is outside your control, so you might want a switch in the software that works 
 without relaunch, to turn "RCRC partner bookings" on or off, and allow the 24/7 support team to flip it if certain 'Runbook' conditions
@@ -93,7 +93,7 @@ having beta versions of functionality/features available to groups.
 ## Tech Debt - pitfall
 
 Flags get put in to codebases over time, and often get forgotten as development teams pivot towards new business deliverables.
-Of course, you want to wait a while until it is certain that you're fixed on a toggle state, and that's where the 
+Of course, you want to wait a while until it is certain that you are fixed on a toggle state, and that's where the 
 problem lies - the application works just fine with the toggle left in place, and the business only really cares
 about new priorities. The only saving grave is the fact that you had unit tests for everything, even for code that
 is effectively turned off in production. Try to get the business to allow the remediation of flags (and the code
@@ -113,7 +113,7 @@ There's a warning too:
 Brad Appleton says:
 
 <br><div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 150%">&ldquo;</span>
-The thing I don't like about feature-toggles/flags is when they end-up NOT being short-lived as intended, 
+The thing I do not like about feature-toggles/flags is when they end-up NOT being short-lived as intended, 
 and we end up having to revisit Spencer and Collyer's famous paper. The funny thing is feature-branches 
 started out the same way, when they were first introduced it was for feature-teams using very large features, and the 
 purpose of the separate branches was because too many people were trying to commit at the same time to the same branch. 

@@ -56,7 +56,7 @@ All of these compromises versus the planned "consecutive development of consecut
 particular when the numbers of developers goes up.
 
 One key thing to note, versus Trunk Based Development, teams doing the Mainline branching model, almost never do cherry 
-pick merges for any reason. Instead they're doing a "merge everything which isn't merged already" kind of merge. 
+pick merges for any reason. Instead they're doing a "merge everything which is not merged already" kind of merge. 
 Minimalistically the VCS they are using should have "merge point tracking". At the high end, that should include 
 "record only" merges, and normal merges even after that.
 
@@ -78,7 +78,7 @@ creates pressure for more intermediate merges, and consequentially greater merge
 
 Not on your life! Planned work needs to complete, with estimates guiding when that will be. Defects need to be 
 eliminated, formal testing phases need to kick in. Here we take the first branch diagram, and overlay red and orange 
-and green to show known build-breaks, build passes missing automated tests won't catch hidden defects, 
+and green to show known build-breaks, build passes missing automated tests will not catch hidden defects, 
 and green for could go live. At least for the worst performing with missing or ineffectual automated 
 testing run in the CI pipelines:
 
@@ -93,7 +93,7 @@ They only do so if the CI server says the build is green for the upstream, of co
 
 Problems compound with this model, the more releases being juggled concurrently there are. An upstream butterfly, is 
 a downstream Tsunami of unmergability. Downstream merged begin to get skipped, or abandoned. Or the merge works, but the
-code isn't right so there's some in-branch fixing, which is not applicable to upstream. Here's the reality (breakages
+code is not right so there is some in-branch fixing, which is not applicable to upstream. Here's the reality (breakages
 overlaid again):
 
 ![](/images/cascade2.png)

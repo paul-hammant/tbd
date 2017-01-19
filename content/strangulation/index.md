@@ -9,7 +9,7 @@ disrupt its ability to go live, even while partially complete.  Martin Fowler na
 after the strangler vines that creep up existing trees, in order to steal sunlight at canopy level of a jungle.
 
 The trick is to have a mechanism to route invocations of logic between the old and new solutions for the same. Say 
-you're and Airline, and you'd written your first online purchasing experience in Perl. You're now wanting to 
+you are an Airline, and you'd written your first online purchasing experience in Perl. You're now wanting to 
 do 'Elixir' and its web framework 'Phoenix'.  
 
 Strangulation is where you'd use the Apache server that your doubtless had 

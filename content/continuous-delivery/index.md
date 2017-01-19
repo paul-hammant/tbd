@@ -6,7 +6,7 @@ weight: 40
 
 Continuous Delivery is the practice expanding your Continuous Integration (CI) usage to automatically
 re-deploy a proven build to a QA or UAT environment. If the bounce time for a deployment is quick enough,
-then it could be that you're doing that for every commit that lands in the shared trunk. The Radiator's pipeline view would 
+then it could be that you are doing that for every commit that lands in the shared trunk. The Radiator's pipeline view would 
 become:
 
 ![](/images/pipelines2.png)

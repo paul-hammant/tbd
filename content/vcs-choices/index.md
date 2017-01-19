@@ -66,7 +66,7 @@ definitely need a plugin for your IDE to handle the wire operations with the ser
 fact that source files are read-only. Because the Perforce (p4) client having to involve the server for the flipping of
 read only bits in respect of editing source files, it requires a permanent connection to the server.
 
-Unlike Git, Perforce isn't ordinarily able to **locally** show history of the files within it. It needs that server 
+Unlike Git, Perforce is not ordinarily able to **locally** show history of the files within it. It needs that server 
 connection again.
 
 Perforce allows branches to be setup at any sub-directory not just the root one. It also allows read and/or write
@@ -87,7 +87,7 @@ engineers.
 
 Github for Git came along with the concepts of forks and had a rudimentary 'code review' built in from 
 2008[![](/images/ext.png)](https://github.com/blog/42-commit-comments). From that moment it was clear 
-that to compete with Github your would need integrated code-review functionality, and Perforce didn't have one. Later 
+that to compete with Github your would need integrated code-review functionality, and Perforce did not have one. Later 
 though, the Perforce people, in partnership with GitLab would launch a portal capability for Perforce that
 included code review. It is a VM appliance that interoperates with the canonical 'p4d' server daemon. Not
 all existing Perforce licensees have installed it.
@@ -119,7 +119,7 @@ compatibility.
 Subversion has been in development for 16 years, and was a sorely needed open-source replacement for CVS. It chases some of the
 features of Perforce. Nobody has pushed Subversion to the Perforce usage levels, but that is claimed as a possibility.
 
-Note also the Subversion team themselves, don't do trunk based development, despite Subversion have default root directories 
+Note also the Subversion team themselves, do not do trunk based development, despite Subversion have default root directories 
 of 'trunk', 'tags' and 'branches' for newly-created repositories.
 
 ### No Code Review

@@ -6,7 +6,7 @@ weight: 10
 
 ## No Code Freeze
 
-Developers living in a Trunk Based Development reality, mostly don't experience variance in their days or weeks on the 
+Developers living in a Trunk Based Development reality, mostly do not experience variance in their days or weeks on the 
 trunk. In particular there's no "we're close to a release so let's freeze code", and generally there's no indication 
 of a slow down in proximity to a release.  Sure, a couple of developers out a team might be assigned to bug-fixing closer
 to the release but everyone else is going to work at full speed.
@@ -44,7 +44,7 @@ the trunk" while the build-cop sorts it out. That last is particularly true in s
 CI builds is the reality.
 
 A developer wanting to update/pull/sync from the shared trunk often, runs the risk of encountering that 
-statistically improbable broken build. They don't want to have the commits that broke the trunk, on their workstation
+statistically improbable broken build. They do not want to have the commits that broke the trunk, on their workstation
 if they are developing. So what they do is update/pull/sync to the last known good commit, and only go further
 ahead when the trunk build is officially repaired. This way they know they can stay 'green' on their workstation.
 

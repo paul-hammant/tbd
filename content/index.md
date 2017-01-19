@@ -16,7 +16,7 @@ to create other long-lived development branches is resisted.
   
 ## Caveats
 
-- If you have more than a couple of developers on the project, you're going to need a hook up a 
+- If you have more than a couple of developers on the project, you are going to need a hook up a 
   [Continuous Integration](continuous-integration/) Server to verify the commits being done.
 
 - Depending on the team size, and the rate of commits, **very short lived** feature branches may exist, allowing 
@@ -32,7 +32,7 @@ to create other long-lived development branches is resisted.
 
 ## History
 
-Trunk Based Development isn't a new branching model. The word 'trunk' is referent to the concept of a growing tree,
+Trunk Based Development is not a new branching model. The word 'trunk' is referent to the concept of a growing tree,
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
 It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties. 

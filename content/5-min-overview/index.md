@@ -6,12 +6,12 @@ weight: 10
 
 ## Distance
 
-{{< quote title="Branches create distance between developers and we don't want that" >}}
+{{< quote title="Branches create distance between developers and we do not want that" >}}
 &mdash; Frank Compagner, Guerrilla Games
 {{< /quote >}}
 
 Assuming any network accessible source control, physical distance is mitigated by AV technologies including 
-screen sharing. So we won't worry about that so much these days.
+screen sharing. So we will not worry about that so much these days.
 
 Frank's 'distance' is about the distance to the integration of code from multiple components/modules/sub-teams for a 
 binary that could be deployed or shipped. The problematic distance is to code not yet in the single shared branch, 
@@ -69,8 +69,8 @@ for review before landing in the trunk.
 
 Marshaled nearly always means a branch in a place that is visible to the team. These branches can (and should) be 
 deleted after the code review is complete, meaning they are very short lived. This nuanced. You want to keep 
-the commentary/approval/rejection that is part of the review for historical and auditing purposes, but you don't want to 
-keep the branch. Specifically, you don't want to developers to focus on the branch after the review.
+the commentary/approval/rejection that is part of the review for historical and auditing purposes, but you do not want to 
+keep the branch. Specifically, you do not want to developers to focus on the branch after the review.
 
 ## A safety net
 
