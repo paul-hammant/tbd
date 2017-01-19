@@ -59,8 +59,9 @@ they are developing. They can:
 Shared nothing require significant discipline to achieve. It generally means that no TCP-IP leaves the developers 
 box, and being able to prove that by running those operations while disconnected from the network.  The 
 implementing of the wire mocking (service virtualization) of dependent tiers outside the team, is a given. The highest 
-accomplished Trunk Based Development teams employ mocking of tiers within the same application. Tiers refers to a 
-layer-cake view of an applications construction.
+accomplished Trunk Based Development teams employ mocking of tiers within the same application, in order to make 
+tests fast and stable. Technologies such as MounteBank[![](/images/ext.png)](http://www.mbtest.org/) make 
+programming working with wire mocking easy. Tiers refers to a layer-cake view of an applications construction, of course.
 
 With a Microcosm strategy which delivers shared nothing for a developer workstation, it is acknowledged that 
 non-functional consistency with production has been thrown out of the window, and that only functional correctness

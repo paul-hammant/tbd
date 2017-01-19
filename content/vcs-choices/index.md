@@ -4,6 +4,18 @@ title: Version Control System (VCS) - choices
 weight: 50
 ---
 
+## The importance of integrated code review
+
+In the early 2000's Google made custom tooling around their in-house Perforce installation to have code-review features, 
+and also support pre-commit verification of commits. The code-review tool they wrote later gained a UI called Mondrian - see Guido van 
+Rossum talking about it in 2006[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Later on, the 
+open source Gerrit was created in Mondrian's image. Facebookers made Phabricator[![](/images/ext.png)](https://en.wikipedia.org/wiki/Phabricator) soon
+after that.
+
+Github for Git came along with the concepts of forks and had a rudimentary 'code review' built in from 
+2008[![](/images/ext.png)](https://github.com/blog/42-commit-comments) onwards. From that moment it was clear 
+that to compete with Github, VCS technologies/plaforms would need **integrated** code-review functionality.
+
 ## Git and Mercurial
 
 [Git website](https://git-scm.com/) and [Mercurial website](https://www.mercurial-scm.org/)
@@ -33,8 +45,8 @@ many years.
 It'll be clear later why we mention this, but Git and Mercurial maintain branches from the root folder of the 
 checkout clone, and maintains a single permission for a user in respect of Read and/or write on the branch and/or repository.
 
-There is a suggestion that Mercurial for one, is receiving contributions that will allow it to super-achieve on a scale
-basis.
+There is a suggestion that Mercurial is receiving contributions that will allow it to push into the very repository
+territory the likes of Google needs.
 
 ### Linux Torvalds presenting Git to Googlers
 
@@ -49,8 +61,8 @@ developer workstations.
 * [Github](https://github.com/) and its enterprise on-premises edition [Github Enterprise](https://enterprise.github.com/home) - Git
 * [Gitlab](https://about.gitlab.com/) - Git
 * Atlassian's [Bitbucket server](https://www.atlassian.com/software/bitbucket/server) - Git and Mercurial
-* [RhodeCode](https://rhodecode.com/) - Git, Mercurial and Subversion
-* Various [Collabnet](http://www.collab.net/) products and services.
+* [RhodeCode](https://rhodecode.com/) - Git, Mercurial
+* Various [Collabnet](http://www.collab.net/) products and services for Git
 
 ## Perforce
 
@@ -77,30 +89,16 @@ More on that in [Monorepos](/monorepos/).
 
 ### No Code Review
 
-A standard Perforce install, does not have a code review capability, which is a crucial feature for modern teams.
-In the early 2000's Google made custom tooling around their Perforce to have code-review features, and also support
-pre-commit verification of commits. The code-review tool they wrote gained a UI called Mondrian - see Guido van 
-Rossum talking about it in 2006[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Later on, the 
-open source Gerrit was created, and other tools were created too, in 
-that style, including Phabricator[![](/images/ext.png)](https://en.wikipedia.org/wiki/Phabricator) from Facebook 
-engineers. 
-
-Github for Git came along with the concepts of forks and had a rudimentary 'code review' built in from 
-2008[![](/images/ext.png)](https://github.com/blog/42-commit-comments). From that moment it was clear 
-that to compete with Github your would need integrated code-review functionality, and Perforce did not have one. Later 
-though, the Perforce people, in partnership with GitLab would launch a portal capability for Perforce that
-included code review. It is a VM appliance that interoperates with the canonical 'p4d' server daemon. Not
-all existing Perforce licensees have installed it.
+Perforce does not have code-review features integrated into its server daemon. By customizing a GitLab 
+'side install', Perforce now has a code review capability.
 
 ### Git Fusion
 
 There's a VM appliance from the Perforce people, that can sit in your infrastructure and mediate between the perforce
-server, and your wish to use Git in a Git-idiomatic way on your development workstation.  This mode of operation does not have 
-the read-only bit feature, and also maintains
+server, and your wish to use Git in an idiomatic way on your development workstation.
 
-With a Git-fusion clone from a Perforce repository, if a client spec was specified, you get the constrained 
-representation of the source tree, complete with history. That's a neat feature. As well as local history, you are 
-also no longer restrained by the read-only bit on individual files.
+With a Git-fusion clone from a Perforce repository, and client spec was specified, you get the subsetted 
+representation of the source tree, complete with history. That's a neat feature. 
 
 ### p4-git
 
@@ -109,7 +107,7 @@ require the launching of second server daemon.
 
 ### p4-dvcs
 
-Perforce was extended in 2015 to include its own DVCS features. All the features of P4-git but without the Git 
+In 2015, Perforce was extended to include its own DVCS features. All the features of P4-git but without the Git 
 compatibility.
 
 ## Subversion
@@ -117,7 +115,8 @@ compatibility.
 [Website](https://subversion.apache.org/)
 
 Subversion has been in development for 16 years, and was a sorely needed open-source replacement for CVS. It chases some of the
-features of Perforce. Nobody has pushed Subversion to the Perforce usage levels, but that is claimed as a possibility.
+features of Perforce, but is developed quite slowly. Nobody has pushed Subversion to the Perforce usage levels, but 
+that is claimed as a possibility.
 
 Note also the Subversion team themselves, do not do trunk based development, despite Subversion have default root directories 
 of 'trunk', 'tags' and 'branches' for newly-created repositories.
@@ -138,7 +137,7 @@ git enablement, and very handy, there's still no code-review, and you still need
 
 ### Platform Software Choices
 
-* [RhodeCode](https://rhodecode.com/) - Git, Mercurial and Subversion
+* [RhodeCode](https://rhodecode.com/) 
 * Various [Collabnet](http://www.collab.net/) products and services.
 
 ## Team Foundation Server - TFS
@@ -151,4 +150,12 @@ technology. It has grown to to be a multifaceted server platform. Perhaps even a
 enterprise's needs for application lifecycle management.  It is perfectly compatible with a Trunk Based Development 
 usage.
 
-## 
+## PlasticSCM
+
+[Website](https://www.plasticscm.com/)
+
+PlasticSCM is a modern DVCS like Git and Mercurial. It is compatible with Trunk Based Development and quite 
+self-contained (has integrated code review, etc). It is also the first modern VCS to have semantic merge - it understands 
+select programming languages and the refactorings developers perform on them. For example "move method", where that
+method is 50 lines long, isn't 50 lines added and 50 deleted in one commit, it is a much more *exact* and terse diff
+representation.

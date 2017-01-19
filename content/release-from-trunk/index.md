@@ -11,7 +11,7 @@ the trunk.
 
 It is most likely that such teams do not use a dewey-decimal release numbering scheme, and instead have something 
 referent to the commit number or date and time.  They probably also choose to roll forward and fix the bug on the 
-trunk as if it were a fwature, albeit as quickly as possible.
+trunk as if it were a feature, albeit as quickly as possible.
 
 Teams with one release a day (or less) **might** still make a branch, to cherry pick the bug-fix to 
 and release from.

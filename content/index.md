@@ -8,7 +8,7 @@ weight: 0
 ## One line summary
 
 A source-control branching model, where a single branch called trunk* is where developers share code, and any pressure 
-to create other long-lived development branches is resisted.
+to create other long-lived development branches is resisted, by employing one or more documented techniques. 
 
 ![](/images/trunk1.png)
   
@@ -27,8 +27,9 @@ to create other long-lived development branches is resisted.
   [Release from Trunk](/release-from-trunk/).
 
 - Teams have to become adept with correlated practices like [branch by abstraction](/branch-by-abstraction/), and 
-  depend on [feature flags](/feature-flags/) to shape releases and facilitate 
-  [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/).
+  depend on [feature flags](/feature-flags/) in day to day development to facilitate 
+  [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/), and provide 
+  additional ammunition in the war against long running branches.
 
 ## History
 
