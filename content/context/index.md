@@ -9,14 +9,14 @@ weight: 10
 ![](/images/layer_cake.png)
 
 [Continuous Integration](/continuous-integration/) has been in practice since the
-mid 90's in its modern incarnation (integrating to a shared codeline frequently, and 
+mid nineties in its modern incarnation (integrating to a shared code line frequently, and 
 testing that).
 
-[Continuous Delivery](/continuous-delivery/) is a layer on top of that, has been practiced since the mid 00's, and 
+[Continuous Delivery](/continuous-delivery/) is a layer on top of that, has been practiced since the mid 2000's, and 
 documented in Jez Humble and Dave Farley's book of the same name in 2010.  This site give a 5% summary of the 
 practice. The reader should dive into the Book and associated site, without delay.
 
-Lean Experiments can really happen with any development team on any project, but works **best** on foundations that 
+Lean Experiments can happen in any development team on any project, but work **best** on foundations that 
 are solid. Specifically, the solid foundations of Trunk Based Development, Continuous Integration and Continuous
 Delivery. This site does not touch on Lean Experiments at all, but the reader should strive to understand that field
 of science when the lower layer of the stylized cake are solid.

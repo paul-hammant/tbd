@@ -14,7 +14,7 @@ could be `--withOneClickPurchase` to turn on code in the app to do with Amazon's
 experience.  Without that command line argument, the application would run with a shopping cart component. At least
 that's the way the developers coded that application. The 'One Click Purchase' and 'Shopping Cart' alternates are 
 probably also the same language that the business people associated with the project use. It gets complicated in 
-that flags need not be implicity on/off or new/old, they could be additive. In our case here, there could also be a
+that flags need not be implicitly on/off or new/old, they could be additive. In our case here, there could also be a
 `--allowUsersToUserShoppingCartInsteadOfOneClick` capability. It can be additive, you see.
 
 {{< note title="Flags Are Toggles" >}}
@@ -27,12 +27,12 @@ Feature Flags is in wider use by the industry, though, so we're going with that.
 If could be that the flag controls something large like a component. In our case above we could say that 
 `OneClickPurchasing` and `ShoppingCart` are the names of a components.  It could be that the granularity of the flag
 is much smaller - Say Americans want to see temperatures in degrees Fahrenheit and other nationalities would 
-prefer degrees Centigrade/Celcuius. We could have a flag `--temp=F` and `--temp=C`. For fun, the developers also added
+prefer degrees Centigrade/Celsius. We could have a flag `--temp=F` and `--temp=C`. For fun, the developers also added
 `--temp=K` (Kelvins).
 
 ## Implementation
 
-For the `OneClickPurchasing` and `ShoppingCart` alternates, it culd be that an abstraction `PurchasingCompleting` 
+For the `OneClickPurchasing` and `ShoppingCart` alternates, it could be that a `PurchasingCompleting` 
 abstraction was created. Then at the most primordial boot place that's code controlled, the `--withOneClickPurchase` flag
 is acted upon:
 
@@ -92,7 +92,7 @@ having beta versions of functionality/features available to groups.
 
 ## Tech Debt - pitfall
 
-Flags get put in to codebases over time, and often get forgotten as dev teams pivot towards new business deliverables.
+Flags get put in to codebases over time, and often get forgotten as development teams pivot towards new business deliverables.
 Of course, you want to wait a while until it is certain that you're fixed on a toggle state, and that's where the 
 problem lies - the application works just fine with the toggle left in place, and the business only really cares
 about new priorities. The only saving grave is the fact that you had unit tests for everything, even for code that
@@ -103,12 +103,12 @@ they apply to) a month after the release. Maybe add them to the project's readme
 
 Some historical predecessors of feature toggles/flags as we know it today:  
 
-- Unified Versioning through Feature Logic (Andreas Zeller and Gregor Snelting, 1996) [![](/images/ext.png)](http://www.cs.tufts.edu/~nr/cs257/archive/andreas-zeller/tr-96-01.pdf) - whitepaper.
+- Unified Versioning through Feature Logic (Andreas Zeller and Gregor Snelting, 1996) [![](/images/ext.png)](http://www.cs.tufts.edu/~nr/cs257/archive/andreas-zeller/tr-96-01.pdf) - white paper.
 - Configuration Management with Version Sets: A Unified Software Versioning Model and its Applications (Andreas Zeller's, 1997) - [![](/images/ext.png)](https://www.st.cs.uni-saarland.de/publications/files/zeller-thesis-1997.pdf) - Ph.D. thesis.
 
 There's a warning too: 
 
-- "#ifdef considered harmful" (Henry Spencer and Geoff Collyer, 1992) [![](/images/ext.png)](http://www.literateprogramming.com/ifdefs.pdf) - whitepaper.
+- "#ifdef considered harmful" (Henry Spencer and Geoff Collyer, 1992) [![](/images/ext.png)](http://www.literateprogramming.com/ifdefs.pdf) - white paper.
 
 Brad Appleton says:
 
@@ -118,7 +118,7 @@ and we end up having to revisit Spencer and Collyer's famous paper. The funny th
 started out the same way, when they were first introduced it was for feature-teams using very large features, and the 
 purpose of the separate branches was because too many people were trying to commit at the same time to the same branch. 
 So the idea was use separate branches (for scale) and teams would integrate to their team-branch daily or more often 
-WITH at least nighly integration across all feature-branches [sigh].
+WITH at least nightly integration across all feature-branches [sigh].
 </div>
 
 # References elsewhere

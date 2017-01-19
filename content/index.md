@@ -20,10 +20,10 @@ to create other long-lived development branches is resisted.
   [Continuous Integration](continuous-integration/) Server to verify the commits being done.
 
 - Depending on the team size, and the rate of commits, **very short lived** feature branches may exist, allowing 
-  code-review and build checking (CI) to happen before the commit lands in the trunk, for other devs to depend on.
+  code-review and build checking (CI) to happen before the commit lands in the trunk, for other developers to depend on.
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) (cut from trunk on 
-  a just in time basis) that are 'hardened' before a release, or no release branches if the team is pushing commits 
+  a just-in-time basis) that are 'hardened' before a release, or no release branches if the team is pushing commits 
   to production faster than (say) once a day.
 
 - Teams have to become adept with correlated practices like [branch by abstraction](/branch-by-abstraction/), and 
@@ -35,10 +35,10 @@ to create other long-lived development branches is resisted.
 Trunk Based Development isn't a new branching model. The word 'trunk' is referent to the concept of a growing tree,
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
-It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the 80's. 
+It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties. 
 The largest of development organizations, like Google and 
 Facebook practice it at scale. Google has millions of individual source 
-files in a singe trunk branch of a repo that contains 86TB of history. We cover that advanced setup in [Monorepos](monorepos/).
+files in a singe trunk branch of a repository that contains 86 terabytes of history. We cover that advanced setup in [Monorepos](monorepos/).
 
 # References elsewhere
 

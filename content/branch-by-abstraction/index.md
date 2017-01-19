@@ -10,13 +10,13 @@ create a branch for this - somewhere that can be unstable for a period of time b
 back somewhere).
 
 There may be some aspect of repetition to the coding activities that makes it a longer to complete. No matter, the 
-change was predicted as being time consuming, complex, destabilizing/disruptive to every else in the dev team.
+change was predicted as being time consuming, complex, destabilizing/disruptive to every else in the development team.
 
 **Rules:**
  
 1. There's also a lot of developers already depending on 
-the code that is subject of the 'longer to complete' change, and we don't want them to be sloweed down in any way.
-2. No commit pushed to the shared repo should jeopardize the ability to go live.
+the code that is subject of the 'longer to complete' change, and we don't want them to be slowed down in any way.
+2. No commit pushed to the shared repository should jeopardize the ability to go live.
 
 ## Ideal steps
 
@@ -24,7 +24,7 @@ For simplicity's sake, let us say there is code that is 'to be replaced', code '
 
 1. Introduce an abstraction around the code that is to be replaced, and commit that for all to see.  If needed, this 
 can take multiple commits. None of those are allowed to break the build, and all of them could be pushed to the shared
-repo in order, and as done.
+repository in order, and as done.
 2. Write a second implementation of the abstraction for the to be introduced code, and commit that, but maybe as 
 'turned off' within the trunk so that other developers are not depending on it yet. If needed, this can take multiple 
 commits as above. The abstraction from #1 may also be occasionally tweaked, but must follow the same rule - don't 
@@ -49,7 +49,7 @@ construction where we are not talking about a production line.
 
 ### Steps
 
-All steps are efficiently performed up on car jacks/lifts/ramps, before lowering the car to the groung again.
+All steps are efficiently performed up on car jacks/lifts/ramps, before lowering the car to the ground again.
 
 1. One wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
 can bear weight) and replaced on the car. If driven this wheel functions exactly like the 
@@ -74,7 +74,7 @@ the car in 3D space to allow easy replacement of the  wheels.
 ## Software example
 
 A documented case, is ThoughtWorks' Go CI-daemon. They changed an Object-Relational mapping library (for persistence), 
-while not slowing down team mates development activities (rule 1), and not jeopardising the ability to go live (rule 2).
+while not slowing down team mates development activities (rule 1), and not jeopardizing the ability to go live (rule 2).
 
 Going from "iBatis" to "Hibernate" for a bunch of reasons, was their plan.
 
@@ -82,7 +82,7 @@ They:
 
 1. Introduced an abstraction around the classes/components using iBatis directly, and ensured that all 
 classes/components indirectly referring to iBatis were change to refer to the abstraction instead.
-2. Wrote a second implementation of the abstraction, introcing Hibernate to the codebase, perhaps tweaking the 
+2. Wrote a second implementation of the abstraction, introducing Hibernate to the codebase, perhaps tweaking the 
 abstraction where needed.
 3. Did a tiny commit to turn on Hibernate for all team mates.
 4. Removed iBatis, then the abstraction and the on/off old/new switch.
@@ -100,7 +100,7 @@ If on a real branch, the casual restart of the paused initiative is missing. The
 restart given the elapsed time since the initiative was paused. 
  
 In the case of abandonment, a real branch is cheaper, but the abstraction is only incrementally more expensive to 
-delete. Besides pause and resume are much more likely in an enterprise development organisation that does not have 
+delete. Besides pause and resume are much more likely in an enterprise development organization that does not have 
 limitless coffers.
  
 ## History

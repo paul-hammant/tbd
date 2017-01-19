@@ -43,7 +43,7 @@ to be broken occasionally. There could be an automatic rollback that's about to 
 the trunk" while the build-cop sorts it out. That last is particularly true in situations where batching of commits in 
 CI builds is the reality.
 
-So the developer wanting to update/pull/sync from the shared trunk often, runs the risk of encountering that 
+A developer wanting to update/pull/sync from the shared trunk often, runs the risk of encountering that 
 statistically improbable broken build. They don't want to have the commits that broke the trunk, on their workstation
 if they are developing. So what they do is update/pull/sync to the last known good commit, and only go further
 ahead when the trunk build is officially repaired. This way they know they can stay 'green' on their workstation.
@@ -58,7 +58,7 @@ they are developing. They can:
 
 Shared nothing require significant discipline to achieve. It generally means that no TCP-IP leaves the developers 
 box, and being able to prove that by running those operations while disconnected from the network.  The 
-implementing of the wire mocking (service virtualization) of dependant tiers outside the team, is a given. The highest 
+implementing of the wire mocking (service virtualization) of dependent tiers outside the team, is a given. The highest 
 accomplished Trunk Based Development teams employ mocking of tiers within the same application. Tiers refers to a 
 layer-cake view of an applications construction.
 
@@ -74,7 +74,7 @@ and integrated applications. As much as possible those environs should not have 
 
 Companies often make a classic mistake when buying software in that they (say) buy one license for prod, and another 
 for all dev, QA and UAT, meaning the DevOPS team had configure it as shared for all those environments, with a wide 
-ranging negative impact on productivity and quality for innumerable and sometimes subtle pschological reasons.
+ranging negative impact on productivity and quality for innumerable and sometimes subtle psychological reasons.
 
 ## Common code ownership
 

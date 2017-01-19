@@ -9,13 +9,13 @@ weight: 50
 [Git website](https://git-scm.com/) and [Mercurial website](https://www.mercurial-scm.org/)
 
 Git and Mercurial have been popular DVCS technologies for many years. Portals like Github make Git the default 
-choice for SCM/SVC/source-control.  While the Linux Kernel is maintained with Git, and definately takes advantage 
+choice for SCM/SVC/source-control.  While the Linux Kernel is maintained with Git, and definitely takes advantage 
 of the D-Distributed aspect of the DVCS of Git (in that many divergent versions of kernel can exist over 
-long periods of time), most enterprises are still going to count a single repo as the principal one, and within 
-that a single branch as the long-term "most valuable" codeline.
+long periods of time), most enterprises are still going to count a single repository as the principal one, and within 
+that a single branch as the long-term "most valuable" code line.
 
 It is perfectly possible to do Trunk Based Development in a Git repository. By convention 'master' is the long term 
-most valuable branch, and once cloned to your local workstation, the repo gains a nickname of 'origin'.
+most valuable branch, and once cloned to your local workstation, the repository gains a nickname of 'origin'.
 
 An effective Trunk Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
 (and of master within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
@@ -31,9 +31,9 @@ With the likes of correctly configured Git-LFS extension to Git, though, the 1GB
 many years.  
 
 It'll be clear later why we mention this, but Git and Mercurial maintain branches from the root folder of the 
-checkout clone, and maintains a single permission for a user in respect of Read and/or write on the branch and/or repo.
+checkout clone, and maintains a single permission for a user in respect of Read and/or write on the branch and/or repository.
 
-There is a suggestion that Mercurial for one, is recieving contributions that will allow it to super-achieve on a scale
+There is a suggestion that Mercurial for one, is receiving contributions that will allow it to super-achieve on a scale
 basis.
 
 ### Linux Torvalds presenting Git to Googlers
@@ -46,7 +46,7 @@ developer workstations.
 
 ### Platform Software Choices
 
-* [Github](https://github.com/) and its enterprise on-premisis edition [Github Entrprise](https://enterprise.github.com/home) - Git
+* [Github](https://github.com/) and its enterprise on-premises edition [Github Enterprise](https://enterprise.github.com/home) - Git
 * [Gitlab](https://about.gitlab.com/) - Git
 * Atlassian's [Bitbucket server](https://www.atlassian.com/software/bitbucket/server) - Git and Mercurial
 * [RhodeCode](https://rhodecode.com/) - Git, Mercurial and Subversion
@@ -77,8 +77,8 @@ More on that in [Monorepos](/monorepos/).
 
 ### No Code Review
 
-A standard Perforce install, does not have a code review capability, which is a cruicial feature for modern teams.
-In the early 00's Google made custom tooling around their Perforce to have code-review features, and also support
+A standard Perforce install, does not have a code review capability, which is a crucial feature for modern teams.
+In the early 2000's Google made custom tooling around their Perforce to have code-review features, and also support
 pre-commit verification of commits. The code-review tool they wrote gained a UI called Mondrian - see Guido van 
 Rossum talking about it in 2006[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Later on, the 
 open source Gerrit was created, and other tools were created too, in 
@@ -95,7 +95,7 @@ all existing Perforce licensees have installed it.
 ### Git Fusion
 
 There's a VM appliance from the Perforce people, that can sit in your infrastructure and mediate between the perforce
-server, and your wish to use Git in a Git-idiomatic way on your dev workstation.  This mode of operation does not have 
+server, and your wish to use Git in a Git-idiomatic way on your development workstation.  This mode of operation does not have 
 the read-only bit feature, and also maintains
 
 With a Git-fusion clone from a Perforce repository, if a client spec was specified, you get the constrained 
@@ -125,7 +125,7 @@ of 'trunk', 'tags' and 'branches' for newly-created repositories.
 ### No Code Review
 
 Note that Subversion has no local branching capability, and to get code review you need to install third-party servers 
-along side it. Google for those[![](/images/ext.png)](https://www.google.com/search?q=subversion+code+review). RhodeCoce
+along side it. Google for those[![](/images/ext.png)](https://www.google.com/search?q=subversion+code+review). RhodeCode
 (see below) has code review for Subversion build in.
 
 ### Git-Svn
@@ -145,9 +145,9 @@ git enablement, and very handy, there's still no code-review, and you still need
 
 [Website](https://www.visualstudio.com/tfs/)
 
-Microsoft launched TFS in the mid 00's. It is said that they have an internal 'SourceDepot' tool that is a special 
-version of Perforce compiled for them in the 90's, and that TFS reflects some of the ways of working of that 
-technology. It has grown to to be a multi-faceted server platform. Perhaps even a one-stop shop for the whole 
+Microsoft launched TFS in the mid 2000's. It is said that they have an internal 'SourceDepot' tool that is a special 
+version of Perforce compiled for them in the nineties, and that TFS reflects some of the ways of working of that 
+technology. It has grown to to be a multifaceted server platform. Perhaps even a one-stop shop for the whole 
 enterprise's needs for application lifecycle management.  It is perfectly compatible with a Trunk Based Development 
 usage.
 

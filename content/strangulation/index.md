@@ -5,7 +5,7 @@ weight: 40
 ---
 
 Strangulation is a mechanism by which a very large disruptive change is made in an application or service that, does not
-disrupt its ability to go live, even while partially complete.  Martin Fowler named this practice (see refrences below)
+disrupt its ability to go live, even while partially complete.  Martin Fowler named this practice (see references below)
 after the strangler vines that creep up existing trees, in order to steal sunlight at canopy level of a jungle.
 
 The trick is to have a mechanism to route invocations of logic between the old and new solutions for the same. Say 

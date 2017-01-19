@@ -4,7 +4,7 @@ title: Continuous Integration (CI)
 weight: 40
 ---
 
-{{< quote title="individuals practice TBD, and teams practice CI" >}}
+{{< quote title="individuals practice Trunk Based Development, and teams practice CI" >}}
 &mdash; *Agile* Steve Smith
 {{< /quote >}}
 
@@ -29,16 +29,16 @@ and such things expand the safety net around the branching model.
 
 ## CI servers performing verifications
 
-Every dev team bigger than, say, three people needs a CI server to guard the codebase against bad commits and mistakes of 
+Every development team bigger than, say, three people needs a CI server to guard the codebase against bad commits and mistakes of 
 timing. Teams have engineered build scripts that do their thing quickly, hopefully all the way through functional 
 tests (perhaps leveraging mocking at several levels). There is no guarantee that a developer ran the build though before 
 committing. The CI server fills that gap, and verifies commits are good once they land in the trunk. Most enterprises 
 have built a larger scaled capability around the CI technology, such that it can generally keep up with commits/pushes 
 of the whole team by batching commits.
 
-It is important to note that the build script that developers run prior ro checking, is **the same one** that the CI 
+It is important to note that the build script that developers run prior to checking, is **the same one** that the CI 
 process follows. Because of 
-a need for succinct communication to dev teams, the build is broken into gated steps. The classic steps would be
+a need for succinct communication to development teams, the build is broken into gated steps. The classic steps would be
 compile, test-compile, unit test invocation, integration test invocation, functional test invocation. A popular 
 radiator-style visual indication of progress would be those shown as a left-to-right series of Green (passing) or Red 
 (failing) icons/buttons with a suitably short legend:
@@ -114,7 +114,7 @@ version of what they were working on. That was 2006/7 and these days, that would
 leverage one of the online services for elastic Selenium testing. That and spend a lot of effort bringing Selenium 
 tests down to split second.
 
-### Github's platform rasing the bar
+### Github's platform raising the bar
 
 In 2008 Github delivered the first version of their built in code review[![](/images/ext.png)](https://github.com/blog/42-commit-comments).
 Nowadays this facility casually delivers the ability do do code-review **before** the push to the shared trunk. The 
@@ -126,13 +126,13 @@ forced the entire VCS industry to take note, and plan equivalents.
 
 ## Industry CI confusion
 
-ThoughtWorks commissioned a survey - "No One Agrees How to Define CI or CD"[![](/images/ext.png)](https://blog.snap-ci.com/blog/2016/07/26/continuous-delivery-integration-devops-research/).  
+ThoughtWorks commissioned a survey - "No One Agrees How to Define CI or CD"[![](/images/ext.png)](https://blog.snap-ci.com/blog/2016/07/26/continuous-delivery-integration-devops-research/).   
 That Continuous Integration unfortunately thought of as compatible with branching models other than Trunk Based Development
 was unfortunately showed to be true. Their chief scientist, Martin Fowler, writes about the effect in his Semantic Diffusion
 article[![](/images/ext.png)](https://martinfowler.com/bliki/SemanticDiffusion.html).
 
 {{< note title="This site's use of CI and Trunk Based Development" >}}
-This site, is going to refer to the commit to **single shared codeline** practice as Trunk Based Development, 
+This site, is going to refer to the commit to **single shared code line** practice as Trunk Based Development, 
 given other popular branching models (that are not Trunk Based Development) also benefit from CI servers watching for 
 and verifying commits.
 {{< /note >}}

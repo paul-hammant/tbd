@@ -11,14 +11,14 @@ practice that is more than a decade old.
 
 Monorepo implementations deliver a couple of principal goals:
 
-* Acquire as many dependencies as possible for a build from the **same** source-control repo/branch, and in the 
+* Acquire as many dependencies as possible for a build from the **same** source-control repository/branch, and in the 
 same update/pull/sync operation.
 * Keep all teams in agreement on the versions of dependencies via lock-step upgrades.
 
 And some secondary goals:
 
 * Allow changes to common dependencies to via atomic commits.
-* Allow the extraction of new common dependencies (from existing code) to be achiced in atomic commits.
+* Allow the extraction of new common dependencies (from existing code) to be achieved in atomic commits.
 * Force all developers to focus on the HEAD revisions of files in the trunk
 
 Google and Facebook are the most famous organizations that rest development on a single conpany-wide trunk, that 
@@ -28,12 +28,12 @@ fits the monorepo design.
 
 With the monorepo model, there is a strong desire to have third-party binaries in source-control too. 
 You might think that it would be unmanageable for reasons of size. In terms of history, Perforce and Subversion don't
-mind a terrabyte of history of binary files (or more), and Git performed much better when Git-LFS was created. You 
-could still feel that the HEAD revision of thousands of fine grained dependencies is too much for a workstation, but 
-that can be managed if gia 'sparse checkout' techniques (see below).
+mind a terabyte of history of binary files (or more), and Git performed much better when Git-LFS was created. You 
+could still feel that the HEAD revision of thousands of fine-grained dependencies is too much for a workstation, but 
+that can be managed via 'sparse checkout' techniques (see below).
 
-Note:  Python, Java, C++ and other SDKs are installed the regular way on the developer workstatio, and not acquired 
-from the source-control repo/branch. 
+Note:  Python, Java, C++ and other SDKs are installed the regular way on the developer workstation, and not acquired 
+from the source-control repository/branch. 
 
 ## In-house dependencies
  
@@ -146,7 +146,7 @@ backwards incompatibility in a small percentage of their uses of it. The change-
 the both the IDE and the javac compiled buckled to some degree.
 
 Because you're doing lock-step upgrades, you only secondarily note the version of the third party 
-dependencies, as you check them in to source control withought version numbers in the file name.  I.e. JUnit goes in as
+dependencies, as you check them in to source control without version numbers in the file name.  I.e. JUnit goes in as
 `third_party/java_testing/junit.jar`.
 
 ## Recursive build systems
@@ -172,7 +172,7 @@ Recursive build systems like maven, have a forward declaration of modules that s
 ```
 
 Directories `moduleone` and `moduletwo` have to exist. The idea of monorepos that are doing the gcheckout style
-modifications of a dev workstations checkout, is that build graphs are calculated not declared.  You'd need a 
+modifications of a development workstations checkout, is that build graphs are calculated not declared.  You'd need a 
 feature like this in Maven to track that:
 
 ```xml

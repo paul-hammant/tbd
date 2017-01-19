@@ -10,7 +10,7 @@ weight: 10
 &mdash; Frank Compagner, Guerrilla Games
 {{< /quote >}}
 
-Assuming any nework accessible source control, physical distance is mitigated by AV technologies including 
+Assuming any network accessible source control, physical distance is mitigated by AV technologies including 
 screen sharing. So we won't worry about that so much these days.
 
 Frank's 'distance' is about the distance to the integration of code from multiple components/modules/sub-teams for a 
@@ -20,13 +20,13 @@ that might:
 * break something unexpected once merged
 * be difficult to merge in.
 * not show that work was duplicated until it is merged
-* not show problems of incompatibility/undesirability that doesnt break the build
+* not show problems of incompatibility/undesirability that does not break the build
 
 Trunk Based Development is a branching model that reduces the distance to the max. 
 
 ## Always release ready
 
-Team doing are able to Trunk Based Development will at worst responsd "give us one hour" when they were busy on day to 
+Team doing are able to Trunk Based Development will at worst respond "give us one hour" when they were busy on day to 
 day development activities, when the exec management visited and commanded "Competitor X has launched feature Y, go 
 live now with what we have". And in an hour, they're going live with something just stabilized from the trunk. Perhaps 
 they can do it in less than, an hour. The rule, is never break the build, and always be ready for that CIO commanded
@@ -35,13 +35,13 @@ disruption to plans.
 ## What it is
 
 {{< note title="Notes" >}}
-* Use of "Developers" throughout this site, means "QA-automators" for the same builable thing, too.
-* When we say 'the trunk' on this site, it is just a branch in a single repo that developers in a team are focusing on 
-for development. It may be called 'master'. That hints at the fact that the branch in qustion may literally not be 
+* Use of "Developers" throughout this site, means "QA-automators" for the same buildable thing, too.
+* When we say 'the trunk' on this site, it is just a branch in a single repository that developers in a team are focusing on 
+for development. It may be called 'master'. That hints at the fact that the branch in question may literally not be 
 called 'trunk' at all.
 {{< /note >}}
 
-There are many deciding factors, before a dev team settles on Trunk Based Development, but here's a short overview 
+There are many deciding factors, before a development team settles on Trunk Based Development, but here's a short overview 
 of the practices:
 
 ### Checking out / cloning
@@ -55,7 +55,7 @@ integrating their team-mates commits on an hour by hour basis.
 
 Similarly, developers completing a piece of development work (changes to source code), that provably does not 
 break the build, will commit it back to the trunk. The granularity of that commit (how many a developer 
-would implictly do a day) can vary, and is learned through experience.
+would implicitly do a day) can vary, and is learned through experience.
 
 The developer needs to run the build, to prove that they did not break anything with the commit. They might have to do 
 a update/pull/sync before they commit/push the changes back to the team's version control server, and additional 
@@ -74,15 +74,15 @@ keep the branch. Specifically, you don't want to developers to focus on the bran
 
 ## A safety net
 
-[Continuous Integation](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lives feature 
+[Continuous Integration](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lives feature 
 branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
  is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI server to do that 
  automatically.
  
-## Dev team commitments
+## Developer team commitments
 
 As stated, developers are pledging to be rigorous and not break the build. They're also going to need to consider 
-the impact of their potentially larger commits, especially where renames or moves were wholescale, and adopt techniques
+the impact of their potentially larger commits, especially where renames or moves were wholesale, and adopt techniques
 to allow those changes to be more easily consumed by team mates.
 
 ## Drilling into 'Distance'
@@ -91,7 +91,7 @@ Problematic 'distance' has a few tangible examples:
 
 * Late merges of development that happened more than a couple of days ago.
   * Difficult merges in particularly
-* A breaking build that lowers dev team thoughtput, and diverts resources while it is being fixed
+* A breaking build that lowers development team throughput, and diverts resources while it is being fixed
 
 # References elsewhere
 
@@ -99,5 +99,5 @@ Problematic 'distance' has a few tangible examples:
 
 Date    | Type  | Article
 --------|-------|--------
-16 Jun 2015 | Blog Entry | [Organisation Pattern: Trunk Based Development](http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development/)
+16 Jun 2015 | Blog Entry | [Organization Pattern: Trunk Based Development](http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development/)
 

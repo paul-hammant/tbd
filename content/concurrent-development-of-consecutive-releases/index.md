@@ -8,7 +8,7 @@ Your company wants a stream of major functionality to arrive in the application 
 cadence. Because you're good Extreme Programmers, you know that consecutive development of consecutive releases
 is best. However, the effort and length of time needed to complete each of the major pieces of functionality is
 large enough to require different project teams cooperating towards that plan. Some of those teams will be within
-the same codebase. Some may dependant building services that the application will call. Not everything is equal effort
+the same codebase. Some may dependent building services that the application will call. Not everything is equal effort
 it seems, yet the business wants a specific rollout, including dates and can plan that even 18 months ahead. They're
 so specific because there's an impact on the the user community (staff, clients, customers or members of the public).
 
@@ -20,17 +20,17 @@ Should all of the following releases slip too, assuming the company did not atte
 to solve it?
 
 One compelling answer is to change the order of releases. The the business, that could be a relief even if it requires
-re-planning and problems around marketting/education given the impacted staff, clients, customers or members of the 
+re-planning and problems around marketing/education given the impacted staff, clients, customers or members of the 
 public.
 
-The trouble is that the dev teams, might have to face an un-merge or commenting-out frenzy to support that, depending on
+The trouble is that the development teams, might have to face a selective unmerge or commenting-out frenzy to support that, depending on
 what had merged already. Different branching models have different merge impacts, and are either early or late in terms
 of keenness for the act of merging. That in itself is disruptive to the business, as they fear and probably witness 
 additional delays because of the retooling and new found nerves.
 
 If your team has institutionalized Trunk Based Development, [Feature Flags](/feature-flags/) and (to a lesser degree) 
 [Branch by Abstraction](/branch-by-abstraction/), it is in a perfect position to reorder releases, and only have a small
-impact on dev team throughput. Choosing Trunk Based Development, Feature Flags and branch by Abstraction could be said
+impact on development team throughput. Choosing Trunk Based Development, Feature Flags and branch by Abstraction could be said
 to be a hedging strategy against the costs of larger scheduling changes.
 
 # References elsewhere

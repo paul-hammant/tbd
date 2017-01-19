@@ -64,7 +64,7 @@ Minimalistically the VCS they are using should have "merge point tracking". At t
 
 #### Merges
 
-After the release the code will be merged back en-masse to the mainline. Those
+After the release the code will be merged back en masse to the mainline. Those
 merges may be hard and lengthy. It could be that the team **took merges from** mainline part way through the project. It 
 could also be that the team **pushed merges to** mainline part way through the project. 
 
@@ -79,7 +79,7 @@ creates pressure for more intermediate merges, and consequentially greater merge
 Not on your life! Planned work needs to complete, with estimates guiding when that will be. Defects need to be 
 eliminated, formal testing phases need to kick in. Here we take the first branch diagram, and overlay red and orange 
 and green to show known build-breaks, build passes missing automated tests won't catch hidden defects, 
-and green for could go live. At least for the worst performing with with missing or ineffectual automated 
+and green for could go live. At least for the worst performing with missing or ineffectual automated 
 testing run in the CI pipelines:
 
 ![](/images/mainline4.png)
