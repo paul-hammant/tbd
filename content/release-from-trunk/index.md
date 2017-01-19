@@ -1,0 +1,18 @@
+---
+date: 2016-03-09T19:56:50+01:00
+title: Release from trunk
+weight: 37
+---
+
+Teams with a very high release cadence do not need, and cannot use release branches at all. They have to release from 
+the trunk.
+
+![](/images/release_from_trunk.png)
+
+It is most likely that such teams do not use a dewey-decimal release numbering scheme, and instead have something 
+referent to the commit number or date and time.  They probably also choose to roll forward and fix the bug on the 
+trunk as if it were a fewature, albeit as quickly as possible.
+
+Teams with one release a day (or less) **might** still make a branch retroactively, to cherry pick the bug-fix to 
+and release from.
+ 

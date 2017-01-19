@@ -23,8 +23,8 @@ to create other long-lived development branches is resisted.
   code-review and build checking (CI) to happen before the commit lands in the trunk, for other developers to depend on.
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) (cut from trunk on 
-  a just-in-time basis) that are 'hardened' before a release, or no release branches if the team is pushing commits 
-  to production faster than (say) once a day.
+  a just-in-time basis) that are 'hardened' before a release. There may also be no release branches if the team is doing 
+  [Release from Trunk](/release-from-trunk/).
 
 - Teams have to become adept with correlated practices like [branch by abstraction](/branch-by-abstraction/), and 
   depend on [feature flags](/feature-flags/) to shape releases and facilitate 
@@ -36,9 +36,9 @@ Trunk Based Development is not a new branching model. The word 'trunk' is refere
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
 It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties. 
-The largest of development organizations, like Google and 
-Facebook practice it at scale. Google has millions of individual source 
-files in a singe trunk branch of a repository that contains 86 terabytes of history. We cover that advanced setup in [Monorepos](monorepos/).
+The largest of development organizations, like Google and Facebook practice it at scale. Google has millions of 
+individual source files in a singe trunk branch of a repository that contains 86 terabytes of history. We cover that 
+advanced setup in [Monorepos](monorepos/).
 
 # References elsewhere
 
