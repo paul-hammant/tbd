@@ -95,7 +95,7 @@ the trunk.  There's still room for error based on timing, so CI needs to kick in
 trunk, but the chance of the second build failing so small that an automated revert/roll-back is probably the best way 
 to handle it (and a notification).
 
-### Google internal CI
+### Google internal CI and tooling
 
 Google is the most famous example of using Scaled CI infrastructure to keep up with commits (one every 30 seconds on 
 average) to a single shared trunk. Google's setup would also allow the same infrastructure to verify *proposed* commits.
@@ -103,16 +103,23 @@ average) to a single shared trunk. Google's setup would also allow the same infr
 Their VCS technology in the early 2000's when they engineered this was Perforce, and it did not have an ability
 to effectively do CI on commits that had not yet landed in the trunk. So Google made their own tooling for this and
 pending commits were plucked from developer workstations for verification (and code review). After its initial 
-creation, Google's now "Google3" setup, gained a UI to allow the code review to be performed in a web-page, and the 
-results of the pre-commit CI verification to shown alongside. That was 'Mondrian' and here is Guido van 
-Rossum talking about it in 2006[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Note at the start
-he says Pair-programming is best, and code review helps fill the gap for situations where you cannot do that.
+creation, Google's now "Google3" setup, gained a UI (Mondrian) to allow the code review to be performed in a web-page, and the 
+results of the pre-commit CI verification to shown alongside. 
 
 Google also **leverage a second tier** of elastic infrastructure**, for scaled Selenium/WebDriver testing. Their 
 "Selenium Farm" was also available to developers at their desks, who just wanted to run such tests against a stood-up
 version of what they were working on. That was 2006/7 and these days, that would deploy Selenium-Grid internally or
 leverage one of the online services for elastic Selenium testing. That and spend a lot of effort bringing Selenium 
 tests down to split second.
+
+#### Mondrian
+
+Tools for code-reviewers / approvers of proposed contributions to trunk existed in Google in the early 2000's. Things 
+would not land in the trunk, until everyone agreed. Their culuture was that such that reviews to the point of rejection or 
+acceptance ("Looks Good To Me" : LGTM) were speedy.  In 2006, Guido van Rossum presented one of his bigger contributions
+to Google - Mondrian. Here he is a Youtube tech talk he gave on it 
+[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Note at the start he says Pair-programming is 
+best, and that code review helps fill the gap for situations where you cannot do it.
 
 ### Github's platform raising the bar
 

@@ -168,7 +168,7 @@ Recursive build systems like maven, have a forward declaration of modules that s
 <modules>
   <module>moduleone</module>
   <module>moduletwo</module>
-<modules>
+</modules>
 ```
 
 Directories `moduleone` and `moduletwo` have to exist. The idea of monorepos that are doing the gcheckout style
@@ -177,8 +177,8 @@ feature like this in Maven to track that:
 
 ```xml
 <modules>
-  <calculate/>
-<modules>
+  <calculate/> <!--or--> <search/>
+</modules>
 ```
 
 # References elsewhere
