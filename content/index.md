@@ -19,17 +19,17 @@ to create other long-lived development branches is resisted, by employing one or
 - If you have more than a couple of developers on the project, you are going to need a hook up a 
   [Continuous Integration](continuous-integration/) Server to verify the commits being done.
 
-- Depending on the team size, and the rate of commits, **very short lived** feature branches may exist, allowing 
-  code-review and build checking (CI) to happen before the commit lands in the trunk, for other developers to depend on.
+- Depending on the team size, and the rate of commits, **very short lived** feature branches are used for 
+  code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) (cut from trunk on 
-  a just-in-time basis) that are 'hardened' before a release. There may also be no release branches if the team is doing 
-  [Release from Trunk](/release-from-trunk/).
+  a just-in-time basis) that are 'hardened' before a release. Alternatively there may also be no release branches if 
+  the team is [releasing from Trunk](/release-from-trunk/).
 
-- Teams have to become adept with correlated practices like [branch by abstraction](/branch-by-abstraction/), and 
-  depend on [feature flags](/feature-flags/) in day to day development to facilitate 
-  [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/), and provide 
-  additional ammunition in the war against long running branches.
+- Teams have to become adept with the related [branch by abstraction](/branch-by-abstraction/) technique, and 
+  use [feature flags](/feature-flags/) in day to day development to facilitate 
+  [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/), in order to
+  resist the pressure for long running branches.
 
 ## History
 
@@ -38,7 +38,7 @@ where the fattest and longest span is the trunk, not the branches that radiate f
 
 It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties. 
 The largest of development organizations, like Google and Facebook practice it at scale. Google has millions of 
-individual source files in a singe trunk branch of a repository that contains 86 terabytes of history. We cover that 
+individual source files in a single trunk branch of a repository that contains 86 terabytes of history. We cover that 
 advanced setup in [Monorepos](monorepos/).
 
 # References elsewhere
