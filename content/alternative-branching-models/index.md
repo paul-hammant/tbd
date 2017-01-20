@@ -115,3 +115,4 @@ Date    | Type  | Article
 05 Apr 2013 | Blog Entry | [What is Trunk Based Development?](http://paulhammant.com/2013/04/05/what-is-trunk-based-development/)
 19 Mar 2013 | Blog Entry | [The Cost of Unmerge](http://paulhammant.com/2013/03/19/cost-of-unmerge/)
 15 Oct 2015 | InfoQ Interview | [More Feature Branching Means Less Continuous Integration](https://www.infoq.com/news/2015/10/branching-continuous-integration)
+03 May 2015 | Blog Entry | [GitFlow considered harmful](http://endoflineblog.com/gitflow-considered-harmful)
