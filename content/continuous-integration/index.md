@@ -103,7 +103,8 @@ average) to a single shared trunk. Google's setup would also allow the same infr
 Their VCS technology in the early 2000's when they engineered this was Perforce, and it did not have an ability
 to effectively do CI on commits that had not yet landed in the trunk. So Google made their own tooling for this and
 pending commits were plucked from developer workstations for verification (and code review). After its initial 
-creation, Google's now "Google3" setup, gained a UI ([Mondrian](/continuous-review/#mondrian)) to allow the code review to be performed in a web-page, and the 
+creation, Google's now "Google3" setup, gained a UI ([Mondrian](/continuous-review/#mondrian-2006)) to allow the code 
+review to be performed in a web-page, and the 
 results of the pre-commit CI verification to shown alongside. 
 
 Google also **leverage a second tier** of elastic infrastructure**, for scaled Selenium/WebDriver testing. Their 
