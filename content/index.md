@@ -17,12 +17,12 @@ to create other long-lived development branches is resisted, by employing one or
 ## Caveats
 
 - If you have more than a couple of developers on the project, you are going to need a hook up a 
-  [Continuous Integration](continuous-integration/) Server to verify the commits being done.
+  [Continuous Integration](continuous-integration/) server to verify the commits being done
 
 - Depending on the team size, and the rate of commits, **very short lived** feature/task branches are used for 
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
-  Github coined "Pull-Requests" [![](/images/ext.png)](https://github.com/blog/3-oh-yeah-there-s-pull-requests-now)
-  and popularized it, after Google's internal Mondrian tech was disclosed.
+  This allows and engage in [eager and continuous code review](continuous-review/) of contributions before they land
+  in the trunk.
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) (cut from trunk on 
   a just-in-time basis) that are 'hardened' before a release. Alternatively there may also be no release branches if 

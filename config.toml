@@ -100,6 +100,11 @@ googleAnalytics = "UA-24415524-3"
 	weight = 60
 
 [[menu.main]]
+	name   = "Continuous Code Review"
+	url    = "continuous-review/"
+	weight = 65
+
+[[menu.main]]
 	name   = "Continuous Delivery"
 	url    = "continuous-delivery/"
 	weight = 70

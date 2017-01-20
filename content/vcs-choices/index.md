@@ -6,6 +6,9 @@ weight: 50
 
 ## The importance of integrated code review
 
+
+TODO - link to /continuous-review/#mondrian
+
 In the early 2000's Google made custom tooling around their in-house Perforce installation to have code-review features, 
 and also support pre-commit verification of commits. The code-review tool they wrote later gained a UI called Mondrian - see Guido van 
 Rossum talking about it in 2006[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Later on, the 
