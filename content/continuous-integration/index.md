@@ -38,24 +38,36 @@ committing. The CI daemon fills that gap, and verifies commits are good once the
 have built a larger scaled capability around the CI technology, such that it can generally keep up with commits/pushes 
 of the whole team by batching commits.
 
+### Humans and daemons do the same build
+
 It is important to note that the build script that developers run prior to checking, is **the same one** that the CI 
 process follows. Because of 
 a need for succinct communication to development teams, the build is broken into gated steps. The classic steps would be
-compile, test-compile, unit test invocation, integration test invocation, functional test invocation. A popular 
+compile, test-compile, unit test invocation, integration test invocation, functional test invocation. 
+
+### Radiators
+
+A popular 
 radiator-style visual indication of progress would be those shown as a left-to-right series of Green (passing) or Red 
 (failing) icons/buttons with a suitably short legend:
 
 ![](/images/pipelines1.png)
 
+This should go up on TVs if developers are co-located. It should also be a click through from notification emails.
+
+### Quick build news
+
 The elapsed time between the commit and the "this commit broke the build" notification, is key. That is because the cost 
 to repair things in the case of a break, goes up when additional commits have been pushed to the branch. One of the 
 facets of the 'distance' that we want to reduce (refer [5 minute overview](/5-min-overview/)) is the distance to break.
+
+### Pipelines - further reading
 
 Note: Continuous Integration Pipelines are better described in the best selling 
 [Continuous Delivery](/publications/#continuous-delivery-july-27-2010) book. So are dozens of nuanced, lean inspired 
 concepts for teams pushing that far.
 
-## More Advanced CI
+## Advanced CI topics
 
 ### CI per commit or batching?
 
