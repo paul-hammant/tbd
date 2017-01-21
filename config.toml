@@ -135,9 +135,14 @@ googleAnalytics = "UA-24415524-3"
 	weight = 110
 
 [[menu.main]]
+	name   = "Game Changers"
+	url    = "game-changers/"
+	weight = 120
+
+[[menu.main]]
 	name   = "Publications"
 	url    = "publications/"
-	weight = 120
+	weight = 130
 
 [blackfriday]
 	smartypants	= true

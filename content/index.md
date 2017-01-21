@@ -50,7 +50,7 @@ individual source files in a single trunk branch of a repository that contains 8
 ## This portal
 
 This portal attempts to collect all the related facts, rationale and techniques for Trunk Based Development toegther 
-in one place, complete with eighteen diagrams to help explain things. All with out using TBD as a an acronym 
+in one place, complete with twenty diagrams to help explain things. All with out using TBD as an acronym 
 even ~~once~~ twice.
 
 # References elsewhere
