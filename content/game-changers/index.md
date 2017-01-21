@@ -6,11 +6,41 @@ weight: 40
 
 Since the 80's a number of things have pushed best practices towards Trunk Based Development, or away from it. 
 
+## RCS - simple but early days
+
+RCS was Revision Control System, by Walter F. Tichy.
+
+In Tichy's 1985 paper 
+"RCS - A System for Version Control"[![](/images/ext.png)](https://www.gnu.org/software/rcs/tichy-paper.pdf), a trunk 
+focused mode of use is described as a "slender branch", and that you stepped away from it for four reasons:
+
+<br><div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 150%">&ldquo;</span>
+<b>Section 3.1. When are branches needed?</b><br>
+A young revision tree is slender: It consists of only one branch, called the trunk.<br>
+As the tree ages, side branches may form. Branches are needed in the following 4 situations.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Temporary fixes [...]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Distributed development and customer modifications [...]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Parallel development [...]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Conflicting updates [...]<br>
+</div>
+ 
+Two of those, Tichy suggests, are temporary branches and would come back to the trunk at the earliest opportunity. 
+
+Superficially, RCS allowed multi-branch parallel development, but some teams were very careful and stuck
+to a 'slender', or Trunk Based Development mode of use.
+
 ## Subversion's "lightweight" branching (2000&#47;2001)
 
-Compared to the clunky CVS, that is, Subversion had lightweight branching. This made it easier to consider multiple 
-branches active in parallel and merged later. Subversion was dogged, however, with an inferior merging model 
-until v 1.5 in June 2008, and still has edge-case merge bugs today, like this one 
+Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". The lack of atomicity in CVS
+means that teams had to coordinate as to who was checking in presently, and whether they'd definably broken the build
+afterwards. Early CI servers used to have a quiet period to make sure they had recieved every element of an intended
+commit.
+
+Compared to the clunky CVS, that is, Subversion also had lightweight branching. This made it easier to consider multiple 
+branches active in parallel and merged later. 
+
+Subversion was dogged, however, with an inadequate merge tracking model 
+until v 1.5 in June 2008, and it still has edge-case merge bugs today, like this one 
 [![](/images/ext.png)](https://issues.apache.org/jira/browse/SVN-4635).
 
 ## Git's "lightweight" branching (2005)
@@ -106,3 +136,11 @@ development is easier. But Trunk Based Development's commits are more elegant to
 ## Travis-CI's Github integration and pass/fail badges (2013)
 
 Travis... ? TODO
+
+# References elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
+Date    | Type  | Article
+--------|-------|--------
+23 Apr 2015 | Blog entry | [The origins of Trunk Based Development](http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/)
