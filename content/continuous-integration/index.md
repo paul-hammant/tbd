@@ -8,8 +8,8 @@ weight: 40
 &mdash; *Agile* Steve Smith
 {{< /quote >}}
 
-For many years CI has been accepted by a portion of software development community to mean a server process 
-is watching the source-control repository for changes, and verifying that they are correct, **regardless
+For many years CI has been accepted by a portion of software development community to mean a server daemon process 
+that is watching the source-control repository for changes, and verifying that they are correct, **regardless
 of branching model**. However the original intention was to focus on the verification **single integration point** 
 for the developer team. and do it daily if not more. The idea was for developers themselves to develop
 habits to ensure everything going to that shared place (many times a day) was high quality, and for the CI server to 
@@ -126,7 +126,7 @@ forced the entire VCS industry to take note, and plan equivalents.
 ## Industry CI confusion
 
 ThoughtWorks commissioned a survey - "No One Agrees How to Define CI or CD"[![](/images/ext.png)](https://blog.snap-ci.com/blog/2016/07/26/continuous-delivery-integration-devops-research/).   
-That Continuous Integration unfortunately thought of as compatible with branching models other than Trunk Based Development
+That the hypothesis of Continuous Integration being thought of as compatible with branching models other than Trunk Based Development
 was unfortunately showed to be true. Their chief scientist, Martin Fowler, writes about the effect in his Semantic Diffusion
 article[![](/images/ext.png)](https://martinfowler.com/bliki/SemanticDiffusion.html).
 
