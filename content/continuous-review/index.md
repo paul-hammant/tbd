@@ -56,7 +56,7 @@ Pull-Requests changed the dynamics of open source.  Now, the original creator of
 with PRs because if they did not, a fork with more activity and forward momentum, might steal the community. Perhaps 
 rightfully so. 
 
-## Enterprise code review - as it used to be
+## Enterprise code review - as it was
 
 In enterprises, if code review was done at all prior to 2008, it was done in a batch, and probably a group activity. 
 It was often abhorred as it gave a lead developer/architect a moment to set an agenda, round on a large portion of the 
