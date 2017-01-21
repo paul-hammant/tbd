@@ -119,33 +119,7 @@ the trunk.  There's still room for error based on timing, so CI needs to kick in
 trunk, but the chance of the second build failing so small that an automated revert/roll-back is probably the best way 
 to handle it (and a notification).
 
-### Google internal CI and tooling
-
-Google is the most famous example of using Scaled CI infrastructure to keep up with commits (one every 30 seconds on 
-average) to a single shared trunk. Google's setup would also allow the same infrastructure to verify *proposed* commits.
-
-Their VCS technology in the early 2000's when they engineered this was Perforce, and it did not have an ability
-to effectively do CI on commits that had not yet landed in the trunk. So Google made their own tooling for this and
-pending commits were plucked from developer workstations for verification (and code review). After its initial 
-creation, Google's now "Google3" setup, gained a UI ([Mondrian](/continuous-review/#mondrian-2006)) to allow the code 
-review to be performed in a web-page, and the 
-results of the pre-commit CI verification to shown alongside. 
-
-Google also **leverage a second tier** of elastic infrastructure**, for scaled Selenium/WebDriver testing. Their 
-"Selenium Farm" was also available to developers at their desks, who just wanted to run such tests against a stood-up
-version of what they were working on. That was 2006/7 and these days, that would deploy Selenium-Grid internally or
-leverage one of the online services for elastic Selenium testing. That and spend a lot of effort bringing Selenium 
-tests down to split second.
-
-### Github's platform raising the bar
-
-In 2008 Github delivered the first version of their built in code review[![](/images/ext.png)](https://github.com/blog/42-commit-comments).
-Nowadays this facility casually delivers the ability do do code-review **before** the push to the shared trunk. The 
-immensely popular pull-request (PR) is the facilitator of that. Google's *thing* was possible now for ordinary teams. 
-A few years later (with the help of third parties like TravisCI).
-"build passes" and "build fails" badges were woven into the Github UI. This made it was clear whether the proposed PR 
-would break the build or not were it to be merged into trunk. This combination was a game changer, and 
-forced the entire VCS industry to take note, and plan equivalents.
+TODO links to game changers
 
 ## Industry CI daemon confusion
 
