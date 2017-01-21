@@ -47,6 +47,12 @@ The largest of development organizations, like Google and Facebook practice it a
 individual source files in a single trunk branch of a repository that contains 86 terabytes of history. We cover that 
 advanced setup in [Monorepos](monorepos/).
 
+## This portal
+
+This portal attempts to collect all the related facts, rationale and techniques for Trunk Based Development toegther 
+in one place, complete with eighteen diagrams to help explain things. All with out using TBD as a an acronym 
+even ~~once~~ twice.
+
 # References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
