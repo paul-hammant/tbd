@@ -90,11 +90,6 @@ googleAnalytics = "UA-24415524-3"
 	weight = 56
 
 [[menu.main]]
-	name   = "Strangulation"
-	url    = "strangulation/"
-	weight = 57
-
-[[menu.main]]
 	name   = "Continuous Integration"
 	url    = "continuous-integration/"
 	weight = 60
@@ -113,6 +108,11 @@ googleAnalytics = "UA-24415524-3"
 	name   = "Concurrent development of consecutive releases"
 	url    = "concurrent-development-of-consecutive-releases/"
 	weight = 75
+
+[[menu.main]]
+	name   = "Strangulation"
+	url    = "strangulation/"
+	weight = 78
 
 [[menu.main]]
 	name   = "Observed habits"
