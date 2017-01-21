@@ -8,7 +8,9 @@ weight: 40
 &mdash; *Agile* Steve Smith
 {{< /quote >}}
 
-For many years CI has been accepted by a portion of software development community to mean a server daemon process 
+## Daemons (not demons)
+
+For many years CI has been accepted by a portion of software development community to mean a daemon process 
 that is watching the source-control repository for changes, and verifying that they are correct, **regardless
 of branching model**. However the original intention was to focus on the verification **single integration point** 
 for the developer team. and do it daily if not more. The idea was for developers themselves to develop
@@ -24,15 +26,15 @@ that project was Smalltalk and the single integration point was a Smalltalk imag
 (a technology more advanced than a "mere" source-control systems that rule today).
 
 Thus, the intention of CI, as defined, was pretty much exactly the same as Trunk Based Development, that emerged 
-elsewhere. Trunk Based Development did not say anything about CI Servers at the outset, but there's overlap today
-and such things expand the safety net around the branching model.
+elsewhere. Trunk Based Development did not say anything about Continuous Integration daemons directly or indirectly, 
+but there is an overlap today the safety net around the branching model is greatly valued.
 
-## CI servers performing verifications
+## CI daemons performing verifications
 
-Every development team bigger than, say, three people needs a CI server to guard the codebase against bad commits and mistakes of 
+Every development team bigger than, say, three people needs a CI daemon to guard the codebase against bad commits and mistakes of 
 timing. Teams have engineered build scripts that do their thing quickly, hopefully all the way through functional 
 tests (perhaps leveraging mocking at several levels). There is no guarantee that a developer ran the build though before 
-committing. The CI server fills that gap, and verifies commits are good once they land in the trunk. Most enterprises 
+committing. The CI daemon fills that gap, and verifies commits are good once they land in the trunk. Most enterprises 
 have built a larger scaled capability around the CI technology, such that it can generally keep up with commits/pushes 
 of the whole team by batching commits.
 
@@ -68,7 +70,7 @@ apart in order to know which one caused the failure. That confidence comes from 
 were in different sections of the code base and are almost never entangled.
 
 If teams are bigger though, with more commits a day, pushing something incorrect/broken to trunk could be disruptive to 
-the team. Having the CI server deal with every commit is desirable. If the CI server is single-threading there is a risk
+the team. Having the CI daemon deal with every commit is desirable. If the CI daemon is single-threading "jobs" there is a risk
 that the thing could fall behind. Thus, more advanced CI Server configurations have a master and many slaves setup so 
 that build jobs can be parallelized. That's more of an investment than the basic setup, and but is getting easier and 
 easier in the modern era with evolved CI technologies and services. And the likes of Docker. 
@@ -84,7 +86,7 @@ lowering practice.
 Yellow = automated steps, Red = a potential to break build for everyone
 
 Note: for committing/pushing straight to the shared trunk, code review and CI verification can happen in parallel. Most 
-likely though is reviews happening after the CI server has cast its vote on the commit(s) quality.
+likely though is reviews happening after the CI daemon has cast its vote on the quality of the commit(s).
 
 Better setups have code-review and CI verification before the commit lands in the trunk for all to see:
 
@@ -132,7 +134,7 @@ article[![](/images/ext.png)](https://martinfowler.com/bliki/SemanticDiffusion.h
 
 {{< note title="This site's use of CI and Trunk Based Development" >}}
 This site, is going to refer to the commit to **single shared code line** practice as Trunk Based Development, 
-given other popular branching models (that are not Trunk Based Development) also benefit from CI servers watching for 
+given other popular branching models (that are not Trunk Based Development) **also** benefit from CI servers watching for 
 and verifying commits.
 {{< /note >}}
 
@@ -141,7 +143,17 @@ Some store the configuration for a pipeline in VCS, and some store it somewhere 
 [branch for release](branch_for_release/), the best CI solutions co-locate the configuration for a pipeline in the same 
 branch too.
 
-## Implementations
+## Server/daemon implementations
+
+* [Jenkins](https://jenkins.io/) commercial service, for [Jenkins Open Source](https://github.com/jenkinsci). You should use this with [DotCI](https://github.com/groupon/DotCi) really. This is on-premises installable
+* [Travis-CI](https://travis-ci.org/) - cloud
+* ThoughtWorks' [Snap-CI](https://www.snap-ci.com/) - cloud
+* [Circle-CI](https://circleci.com/) - cloud
+* ThoughtWorks' [Go CD](https://www.gocd.io) - cloud and on premises install
+* [Codeship](https://codeship.com/) - cloud
+* Atlassian's [Bamboo](https://www.atlassian.com/software/bamboo) - on premises install
+* JetBrains' [TeamCity](https://www.jetbrains.com/teamcity/) - on premises install
+* Microsoft's [TFS platform](https://www.visualstudio.com/tfs/) - on premises install (build in to larger platform)
 
 # References elsewhere
 
