@@ -74,7 +74,7 @@ a temporarily reservation for different reasons. Those environments pull togethe
 and integrated applications. As much as possible those environs should not have shared services. 
 
 Companies often make a classic mistake when buying software in that they (say) buy one license for prod, and another 
-for all dev, QA and UAT, meaning the DevOPS team had configure it as shared for all those environments, with a wide 
+for all dev, QA and UAT, meaning the DevOps team had configure it as shared for all those environments, with a wide 
 ranging negative impact on productivity and quality for innumerable and sometimes subtle psychological reasons.
 
 ## Common code ownership

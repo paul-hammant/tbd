@@ -26,6 +26,6 @@ Continuous Integration, as defined by its definers and documenters. Whereas Trun
 pure source-control workflow and an individual contributor's obligations to that, Continuous Integration focuses 
 equally on that and the need to have machines issue early warnings breakages and incompatibilities.
 
-DevOPS is encompassing too. At the very least, the expansion of developers habits into operations heartlands giving 
+DevOps is encompassing too. At the very least, the expansion of developers habits into operations heartlands giving 
 Infrastructure as Code, continual improvement experiments, a focus on time through the machine, the scripting of previously
 manual operations things, goes further than we can represent in a stylized layer cake diagram, and indeed in this site.
