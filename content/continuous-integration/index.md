@@ -32,6 +32,12 @@ elsewhere. Trunk Based Development did not say anything about Continuous Integra
 but there is an overlap today - the safety net around a mere branching model (and a bunch of techniques) is greatly 
 valued.
 
+Martin Fowler (with Matt Foemmel) called out Continuous Integration in a article in 2000 
+[![](/images/ext.png)](https://www.martinfowler.com/articles/originalContinuousIntegration.html), 
+(rewritten in 2006  [![](/images/ext.png)](https://www.martinfowler.com/articles/continuousIntegration.html))and 
+ThoughtWorks colleagues went on to build the then-dominant "Cruise Control" [![](/images/ext.png)](http://cruisecontrol.sourceforge.net/) 
+in early 2001.
+
 ## CI daemons performing verifications
 
 Every development team bigger than, say, three people needs a CI daemon to guard the codebase against bad commits and mistakes of 
@@ -144,8 +150,14 @@ forced the entire VCS industry to take note, and plan equivalents.
 
 ThoughtWorks commissioned a survey - "No One Agrees How to Define CI or CD"[![](/images/ext.png)](https://blog.snap-ci.com/blog/2016/07/26/continuous-delivery-integration-devops-research/).   
 That the hypothesis of Continuous Integration being thought of as compatible with branching models other than Trunk Based Development
-was unfortunately showed to be true. Their chief scientist, Martin Fowler, writes about the effect in his Semantic Diffusion
-article[![](/images/ext.png)](https://martinfowler.com/bliki/SemanticDiffusion.html).
+was unfortunately showed to be true. Their chief scientist, Martin Fowler, writes about the general effect in his "Semantic Diffusion"
+article [![](/images/ext.png)](https://martinfowler.com/bliki/SemanticDiffusion.html). 
+
+Martin also wrote specifically on the 
+lamentable *pat on the back* that multi-active-branch teams give themselves when they setup a CI server/daemon for one
+or all of those branches: "Continuous Integration Certification" 
+[![](/images/ext.png)](https://martinfowler.com/bliki/ContinuousIntegrationCertification.html) and within that *a great
+coin* "Daemonic Continuous Integration" for this effect.
 
 {{< note title="This site's use of CI and Trunk Based Development" >}}
 This site, is going to refer to the commit to **single shared code line** practice as Trunk Based Development, 
