@@ -8,14 +8,16 @@ weight: 40
 &mdash; *Agile* Steve Smith
 {{< /quote >}}
 
-## Daemons (not demons)
+## Continuous Integration - as defined
 
 For many years CI has been accepted by a portion of software development community to mean a daemon process 
 that is watching the source-control repository for changes, and verifying that they are correct, **regardless
-of branching model**. However the original intention was to focus on the verification **single integration point** 
+of branching model**. 
+
+However, the original intention was to focus on the verification **single integration point** 
 for the developer team. and do it daily if not more. The idea was for developers themselves to develop
-habits to ensure everything going to that shared place (many times a day) was high quality, and for the CI server to 
-merely verify that high quality (nightly).
+habits to ensure everything going to that shared place many times a day was of high enough quality, 
+and for the CI server to merely verify that quality, nightly.
 
 CI as we know it today, was defined by Kent Beck, as one of the practices he included in 
 "Extreme Programming"[![](/images/ext.png)](https://en.wikipedia.org/wiki/Extreme_programming)
@@ -27,7 +29,8 @@ that project was Smalltalk and the single integration point was a Smalltalk imag
 
 Thus, the intention of CI, as defined, was pretty much exactly the same as Trunk Based Development, that emerged 
 elsewhere. Trunk Based Development did not say anything about Continuous Integration daemons directly or indirectly, 
-but there is an overlap today the safety net around the branching model is greatly valued.
+but there is an overlap today - the safety net around a mere branching model (and a bunch of techniques) is greatly 
+valued.
 
 ## CI daemons performing verifications
 
@@ -137,7 +140,7 @@ A few years later (with the help of third parties like TravisCI).
 would break the build or not were it to be merged into trunk. This combination was a game changer, and 
 forced the entire VCS industry to take note, and plan equivalents.
 
-## Industry CI confusion
+## Industry CI daemon confusion
 
 ThoughtWorks commissioned a survey - "No One Agrees How to Define CI or CD"[![](/images/ext.png)](https://blog.snap-ci.com/blog/2016/07/26/continuous-delivery-integration-devops-research/).   
 That the hypothesis of Continuous Integration being thought of as compatible with branching models other than Trunk Based Development
