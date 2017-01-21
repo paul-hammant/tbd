@@ -48,6 +48,9 @@ checkout clone, and maintains a single permission for a user in respect of Read 
 There is a suggestion that Mercurial is receiving contributions that will allow it to push into the very repository
 territory the likes of Google needs.
 
+Git and Mercurial don't have branch or directory permissions, but some of the platforms that bundle them, add 
+branch permissions.
+
 ### Linux Torvalds presenting Git to Googlers
 
 Back in 2007 Linus Torvalds presented his Bitkeeper inspired Git to Googlers in their Mountain View. 
@@ -58,11 +61,13 @@ developer workstations.
 
 ### Platform Software Choices
 
-* [Github](https://github.com/) and its enterprise on-premises edition [Github Enterprise](https://enterprise.github.com/home) - Git
-* [Gitlab](https://about.gitlab.com/) - Git
+* [Github](https://github.com/) - Git, cloud 
+* [Github Enterprise](https://enterprise.github.com/home) - Git in Github's on-premises edition
+* [Gitlab](https://about.gitlab.com/) - Git, cloud and on-premises install
 * Atlassian's [Bitbucket server](https://www.atlassian.com/software/bitbucket/server) - Git and Mercurial
 * [RhodeCode](https://rhodecode.com/) - Git, Mercurial
 * Various [Collabnet](http://www.collab.net/) products and services for Git
+* Microsoft's [Team Foundation Server](https://www.visualstudio.com/tfs/) - git, on-premises install
 
 ## Perforce
 
@@ -82,14 +87,14 @@ Unlike Git, Perforce is not ordinarily able to **locally** show history of the f
 connection again.
 
 Perforce allows branches to be setup at any sub-directory not just the root one. It also allows read and/or write
-permissions to exist at any directory with the large source tree.
+permissions to exist at any directory (or branch) within large and small source trees.
 
 A crucial and unmatched feature of Perforce in other VCS technology choices is its 'client spec'. 
 More on that in [Monorepos](/monorepos/).
 
 ### No Code Review
 
-Perforce does not have code-review features integrated into its server daemon. By customizing a GitLab 
+Perforce does not have code-review features integrated into its server daemon. By customizing a GitSwarm (Gitlab) 
 'side install', Perforce now has a code review capability.
 
 ### Git Fusion
@@ -100,55 +105,62 @@ server, and your wish to use Git in an idiomatic way on your development worksta
 With a Git-fusion clone from a Perforce repository, and client spec was specified, you get the subsetted 
 representation of the source tree, complete with history. That's a neat feature. 
 
-### p4-git
+GitSwarm kinda replaces this.
 
-This is very similar to the Git fusion technology, but is not my the Perforce people themselves. It also does not 
-require the launching of second server daemon.
+### p4-git and p4-dvcs
 
-### p4-dvcs
+P4-git is very similar to the Git fusion technology, but is not my the Perforce people themselves. It also does not 
+require the launching of second server applicance.
 
-In 2015, Perforce was extended to include its own DVCS features. All the features of P4-git but without the Git 
+In 2015, the perforce technolgies were extended to include custom DVCS features. All the features of P4-git but without the Git 
 compatibility.
 
 ## Subversion
 
 [Website](https://subversion.apache.org/)
 
-Subversion has been in development for 16 years, and was a sorely needed open-source replacement for CVS. It chases some of the
+Subversion (Svn) has been in development for 16 years, and was a sorely needed open-source replacement for CVS. It chases some of the
 features of Perforce, but is developed quite slowly. Nobody has pushed Subversion to the Perforce usage levels, but 
 that is claimed as a possibility.
 
 Note also the Subversion team themselves, do not do trunk based development, despite Subversion have default root directories 
 of 'trunk', 'tags' and 'branches' for newly-created repositories.
 
+Subversion, like Perforce, has read and write permissions down to the directory and branch.
+
 ### No Code Review
 
 Note that Subversion has no local branching capability, and to get code review you need to install third-party servers 
-along side it. Google for those[![](/images/ext.png)](https://www.google.com/search?q=subversion+code+review). RhodeCode
-(see below) has code review for Subversion build in.
+along side it or (better choice) use a platform that integrates code review like RhodeCode.
 
 ### Git-Svn
 
 There is an extension to Git that allows it to deal with a Subversion backend. a Git-subversion clone can has all the 
 local history, local-branching possibilities of Git. That clone from subversion can be many tens of times slower (for 
-the same history set), than the equivalent clone from Git.  While the local branching possibilities afforded by this
-git enablement, and very handy, there's still no code-review, and you still need make an additional server selection 
-(see above).
+the same history set), than the equivalent clone from Git. The local branching possibilities afforded by this
+mode of operation are very handy, and it should work easily with whatever Svn hosting platform you installed.
 
 ### Platform Software Choices
 
-* [RhodeCode](https://rhodecode.com/) 
+* [RhodeCode](https://rhodecode.com/) - installable on premises
 * Various [Collabnet](http://www.collab.net/) products and services.
+* [ProjectLocker](http://projectlocker.com/) - cloud
+* [Deveo](https://deveo.com/svn-hosting/) - cloud
+* [RiouxSvn](https://riouxsvn.com/) - cloud
+* [SilkSvn](https://sliksvn.com/) - cloud
+* [Assembla](https://www.assembla.com/subversion/) - cloud and installable on premises
+* [XP-dev](https://xp-dev.com/) - cloud
+* [Codeplex](https://www.codeplex.com/) - cloud
 
 ## Team Foundation Server - TFS
 
 [Website](https://www.visualstudio.com/tfs/)
 
-Microsoft launched TFS in the mid 2000's. It is said that they have an internal 'SourceDepot' tool that is a special 
-version of Perforce compiled for them in the nineties, and that TFS reflects some of the ways of working of that 
-technology. It has grown to to be a multifaceted server platform. Perhaps even a one-stop shop for the whole 
-enterprise's needs for application lifecycle management.  It is perfectly compatible with a Trunk Based Development 
-usage.
+Microsoft launched TFS in the mid 2000's with a **custom VCS technology** "TFVC". It is said that they have an internal 
+'SourceDepot' tool that is a special version of Perforce compiled for them in the nineties, and that TFS reflects some 
+of the ways of working of that technology. It has grown to to be a multifaceted server platform. Perhaps even a 
+one-stop shop for the whole enterprise's needs for application lifecycle management.  It is perfectly compatible with 
+a Trunk Based Development usage.
 
 ## PlasticSCM
 
