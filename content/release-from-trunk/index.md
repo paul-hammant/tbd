@@ -13,8 +13,16 @@ It is most likely that such teams do not use a dewey-decimal release numbering s
 referent to the commit number or date and time.  They probably also choose to roll forward and fix the bug on the 
 trunk as if it were a feature, albeit as quickly as possible.
 
+Here's what stylized commits look like:
+
+![](/images/release_from_trunk2.png)
+
+No slow down around a release, and big fixes inline.
+
 Teams with one release a day (or less) **might** still make a branch, to cherry pick the bug-fix to 
-and release from.
+and release from:
+
+![](/images/release_from_trunk3.png)
 
 {{< note title="Branches can be made retroactively" >}}
 Newbies to source-control systems often forget that you don't have to make a branch because you think you might need
