@@ -6,7 +6,9 @@ weight: 42
 
 Continuous Code Review is where the the team commits to processing team-mates proposed commits to trunk speedily. 
 The idea is that a system (the code portal probably) allows developers to package up commits for code review and get 
-that in front of peers quickly. The peer commitment is that the code review is objective and fair.  
+that in front of peers quickly. That peer developer makes a commitment to do code reviews objectively and fairly. There's 
+a cost to multi-tasking, so maybe someone in the dev team who's between work items takes a look first. Either way
+code reviews are not allows to back up.
 
 {{< note title="Common Code Owners" >}}
 Commits being reviewed are never rejected for "Only I am allowed to change source in this package" reasons. Rejections
