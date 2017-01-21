@@ -4,7 +4,7 @@ title: Game Changers
 weight: 40
 ---
 
-Since the 80's a number of things have pushed best practices towards Trunk Based Development or away from it. 
+Since the 80's a number of things have pushed best practices towards Trunk Based Development, or away from it. 
 
 ## Subversion's "lightweight" branching (2000&#47;2001)
 
@@ -98,10 +98,11 @@ forced the entire VCS industry to take note, and plan equivalents.
 
 ## PlasticSCM's semantic merge (2013)
 
-Plastic's semantic diff and merge, allowed greatly reduced diffs for multi-branch situations. If merges between 
+Plastic's semantic diff and merge capability was launched in April 2013 [![](/images/ext.png)](https://www.infoq.com/news/2013/04/Semantic-Merge), 
+It allowed a greatly reduced diffs for multi-branch situations. If merges between 
 branches are required, and larger code changes (like refactorings) are desired, then incrementally, multi-branch
-development is easier.
+development is easier. But Trunk Based Development's commits are more elegant too, because of it.
 
-## Travis-CI's Github integration and pass/fail badges
+## Travis-CI's Github integration and pass/fail badges (2013)
 
 Travis... ? TODO
