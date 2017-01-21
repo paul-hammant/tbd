@@ -6,18 +6,15 @@ weight: 50
 
 ## The importance of integrated code review
 
+Commercial VCS technologies and platforms were disrupted with the advent of gated code reviews that were coupled 
+to a mechanism to quickly consume (merge) the contribution. Code review for "committers" would have been disruptive 
+enough, but when it arrived it arrived for unknown (to the dev team) contributors by way of "forks".
 
-TODO - link to /continuous-review/#mondrian-2006
+All VCS technologies and platforms are measured by their adherance to forks, pull requests, integrated code review
+and possibly hooks into CI servers.
 
-In the early 2000's Google made custom tooling around their in-house Perforce installation to have code-review features, 
-and also support pre-commit verification of commits. The code-review tool they wrote later gained a UI called Mondrian - see Guido van 
-Rossum talking about it in 2006[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Later on, the 
-open source Gerrit was created in Mondrian's image. Facebookers made Phabricator[![](/images/ext.png)](https://en.wikipedia.org/wiki/Phabricator) soon
-after that.
-
-Github for Git came along with the concepts of forks and had a rudimentary 'code review' built in from 
-2008[![](/images/ext.png)](https://github.com/blog/42-commit-comments) onwards. From that moment it was clear 
-that to compete with Github, VCS technologies/plaforms would need **integrated** code-review functionality.
+Read more in [Continuous Code Review - Mondrian](/continuous-review/#mondiran-2006) and 
+[Continuous Code Review - Github's Pull Requests](/continuous-review/#github-s-pull-requests-2008).
 
 ## Git and Mercurial
 
