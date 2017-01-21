@@ -25,6 +25,17 @@ High throughput, [Continuous Delivery](/continuous-delivery/) teams can ignore t
 roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and the release is from trunk.
 {{< /note >}}
 
+## Who's committing where?
+
+Developers are committing (green dots) at the highest throughput rate to the trunk, and don't slow up around a branch-cut.
+
+![](/images/branch_for_release2.png)
+
+The branch cut itself is a commit. Subversion and Perforce would technically have a bigger commit here, but all
+VCS systems in use today would count the commit as lightweight in terms of it's impact on the history/storage.
+
+That red dot is an accidental build break that was fixed (somehow) soon after.
+
 ## Fix production bugs on Trunk
 
 The best practice for Trunk Based Development teams is to reproduce the bug on the trunk, fix it there with a test, 
