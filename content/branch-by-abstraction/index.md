@@ -92,6 +92,8 @@ possibility of another seam that can be mocked.
 
 ## Secondary benefits
 
+### Cheaply pause and resume 'migrations'
+
 The migration from old to new can be paused, and resumed later casually. This is because the build guards the 
 second, incomplete, implementation. It does so merely because of a compile stage that turns the abstraction and somewhere 
 between 1 to 2 implementation into object code.  If there are unit tests for the two alternates, then even more so.
@@ -99,9 +101,12 @@ between 1 to 2 implementation into object code.  If there are unit tests for the
 If on a real branch, the casual restart of the paused initiative is missing. There's possibly an exponential cost of 
 restart given the elapsed time since the initiative was paused. 
  
-In the case of abandonment, a real branch is cheaper, but the abstraction is only incrementally more expensive to 
-delete. Besides pause and resume are much more likely in an enterprise development organization that does not have 
-limitless coffers.
+Pause and resume is much more likely in an enterprise development organization that does not have limitless coffers. 
+ 
+### Cancellation of a project is still cheap
+ 
+In the case of abandonment, deleting a real long running feature branch is cheaper, but deletion of a 
+branch by abstraction *thing* is only incrementally more expensive. 
  
 ## History
  
