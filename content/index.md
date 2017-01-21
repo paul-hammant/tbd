@@ -44,8 +44,8 @@ where the fattest and longest span is the trunk, not the branches that radiate f
 
 It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties. 
 The largest of development organizations, like Google and Facebook practice it at scale. Google has millions of 
-individual source files in a single trunk branch of a repository that contains 86 terabytes of history. We cover that 
-advanced setup in [Monorepos](monorepos/).
+individual source files in a single trunk branch of a repository that contains 86 terabytes of history, with 
+20,000 developers contributing to it constantly. We cover that advanced setup in [Monorepos](monorepos/).
 
 ## This portal
 
