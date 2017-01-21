@@ -6,7 +6,7 @@ weight: 40
 
 Since the 80's a number of things have pushed best practices towards Trunk Based Development or away from it. 
 
-## Subversion's "lightweight" branching (2000/2001)
+## Subversion's "lightweight" branching (2000&#47;2001)
 
 Compared to the clunky CVS, that is, Subversion had lightweight branching. This made it easier to consider multiple 
 branches active in parallel and merged later. Subversion was dogged, however, with an inferior merging model 

@@ -68,7 +68,7 @@ infrastructure.
 Sometimes Flags/Toggles set at app launch time, is not enough. Say you are an Airline selling tickets for flights online.
 You might also rental cars in conjunction with a partner - say 'Really Cool Rental Cars' (RCRC). The connection to 
 any partner or their up/down status is outside your control, so you might want a switch in the software that works 
-without relaunch, to turn "RCRC partner bookings" on or off, and allow the 24/7 support team to flip it if certain 'Runbook' conditions
+without relaunch, to turn "RCRC partner bookings" on or off, and allow the 24&#47;7 support team to flip it if certain 'Runbook' conditions
 have been met.  In this case, the end users may not notice if Hertz, Avis, Enterprise, etc are all still amongst
 the offerings for that airport at the flight arrival time.
 
