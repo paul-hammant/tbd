@@ -34,9 +34,10 @@ valued.
 
 Martin Fowler (with Matt Foemmel) called out Continuous Integration in a article in 2000 
 [![](/images/ext.png)](https://www.martinfowler.com/articles/originalContinuousIntegration.html), 
-(rewritten in 2006  [![](/images/ext.png)](https://www.martinfowler.com/articles/continuousIntegration.html))and 
+(rewritten in 2006  [![](/images/ext.png)](https://www.martinfowler.com/articles/continuousIntegration.html)), and 
 ThoughtWorks colleagues went on to build the then-dominant "Cruise Control" [![](/images/ext.png)](http://cruisecontrol.sourceforge.net/) 
-in early 2001.
+in early 2001. Cruise Control co-located the CI configuration on the branch being built next to the build script, as it 
+should be.
 
 ## CI daemons performing verifications
 
@@ -159,10 +160,10 @@ or all of those branches: "Continuous Integration Certification"
 [![](/images/ext.png)](https://martinfowler.com/bliki/ContinuousIntegrationCertification.html) and within that *a great
 coin* "Daemonic Continuous Integration" for this effect.
 
-{{< note title="This site's use of CI and Trunk Based Development" >}}
-This site, is going to refer to the commit to **single shared code line** practice as Trunk Based Development, 
-given other popular branching models (that are not Trunk Based Development) **also** benefit from CI servers watching for 
-and verifying commits.
+{{< note title="This site's use of CI and Trunk Based Development" >}} 
+Given other popular branching models (that are not Trunk Based Development) **also** benefit from CI servers watching 
+for and verifying commits, this site is going to refer to the commit to a **enforced single shared source-control branch* 
+practice as Trunk Based Development.
 {{< /note >}}
 
 There are many CI technologies and services available for teams to use. Some are free, and some are open source. 
@@ -172,7 +173,7 @@ branch too.
 
 ## Server/daemon implementations
 
-* [Jenkins](https://jenkins.io/) commercial service, for [Jenkins Open Source](https://github.com/jenkinsci). You should use this with [DotCI](https://github.com/groupon/DotCi) really. This is on-premises installable
+* [Jenkins](https://jenkins.io/) commercial service, for [Jenkins Open Source](https://github.com/jenkinsci) - on-premises installable
 * [Travis-CI](https://travis-ci.org/) - cloud
 * ThoughtWorks' [Snap-CI](https://www.snap-ci.com/) - cloud
 * [Circle-CI](https://circleci.com/) - cloud
@@ -180,7 +181,10 @@ branch too.
 * [Codeship](https://codeship.com/) - cloud
 * Atlassian's [Bamboo](https://www.atlassian.com/software/bamboo) - on premises install
 * JetBrains' [TeamCity](https://www.jetbrains.com/teamcity/) - on premises install
-* Microsoft's [TFS platform](https://www.visualstudio.com/tfs/) - on premises install (build in to larger platform)
+* Microsoft's [TFS platform](https://www.visualstudio.com/tfs/) - on premises install (built in to larger platform)
+
+Note, for Jenkins, you should use it with GroupOn's [DotCI](https://github.com/groupon/DotCi) to match that early 
+CruiseControl feature of co-locating the config with the thing being built/verified in source-control.
 
 # References elsewhere
 
