@@ -29,7 +29,8 @@ Historically, open source teams never had the luxury of procrastinating about co
 
 ## See also
 
-[Game Changes](/game-changers/) for Code Review related advances in the industry.
+[Game Changes](/game-changers/) for Continuous Code Review related advances in the industry (and others) for their 
+industry impact.
 
 
 
