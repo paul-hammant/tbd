@@ -13,8 +13,8 @@ enough, but when it arrived it arrived for unknown (to the dev team) contributor
 All VCS technologies and platforms are measured by their adherance to forks, pull requests, integrated code review
 and possibly hooks into CI servers.
 
-Read more in [Continuous Code Review - Mondrian](/continuous-review/#mondiran-2006) and 
-[Continuous Code Review - Github's Pull Requests](/continuous-review/#github-s-pull-requests-2008).
+Read more in [Game Changes Review - Google's Mondrian](/game-changers/#mondrian-2006) and 
+[Game Changers - Github's Pull Requests](/game-changers/#pull-requests-2008).
 
 ## Git and Mercurial
 
