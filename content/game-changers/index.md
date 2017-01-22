@@ -65,6 +65,49 @@ The book was translated into 14 languages, and was also a best seller.
 
 These are clearly practices to support teams working in a trunk model.
 
+## Extreme Programming's Continuous Integration (1999)
+
+Kent Beck published "Extreme Programming Explained" in 1999. Picked out here, from a bunch of practices for 
+the influential XP methodology, is the "Continuous Integration" that Kent felt was "risk reducing".
+
+He says "Integrate and build the system many times a day, every time a task is completed", and goes on to detail 
+a reserved workstation, that a developer pair would sidle up at the appropriate moment to prove that their code 
+contribution was integrateable, and therefore good for team mates to depend on at that moment. That last notification
+was often oral at that time "build passes, gang".
+
+He calls out a requirement for "fast integration/build/test cycles". This is key. In fact, every pro Trunk Based Development 
+game changer listed in this page was facilitated by faster builds generally (versus a predecessor technique for the team
+in question). And, no, faster did not mean delete or comment out automated test execution in the build. Faster meant reduce 
+the elapsed time to "a few minutes" (Kent again).
+
+Kent had pioneered (with many industry luminary friends) in 1996 on the famous Chrysler Comprehensive Compensation System 
+(C3) project.
+
+### Continuous Integration on MartinFowler.com
+
+Martin Fowler and Matt Foemmel wrote an online article "Continuous Integration" in 2000 
+[![](/images/ext.png)](https://www.martinfowler.com/articles/originalContinuousIntegration.html), alling out this one 
+part of XP. Martin greatly updated it in 2006 [![](/images/ext.png)](https://www.martinfowler.com/articles/continuousIntegration.html)). 
+ 
+### ThoughtWorks' Cruise Control 
+ 
+Martin's ThoughtWorks colleagues (Alden Almagro, Paul Julias, Jason Yip) went on to build the then-dominant 
+"Cruise Control" [![](/images/ext.png)](http://cruisecontrol.sourceforge.net/) starting in early 2001. This was a 
+ground breaking technology and very accessible to companies wanting a machine to fully verify checkins. 
+
+Early CI servers, including CruiseControl used to have a "quiet period" to make sure they had received every last 
+element of an intended commit. To facilitate that, only one pair of developers was allowed to checkin at a time. With 
+CVS the other developers in the team could only do theur "cvs up" when CruiseControl had given the green light, 
+automating that "build passes, gang" oral notification above. 
+
+### Apache's Gump
+
+Apache's Gump was built on a similar time line, but focused more on the binary integration hell of 
+interdependent Apache (and other) open-source project. It gave an early warning of integration probelms that were 
+already or were about to be problematic for teams. While impressive, it use did not extend into the enterprise, as they 
+were able to be more buffered from open-source library hell (and the implicit diamond dependency problem), by controlling 
+(limiting) the rate at which the upgraded their third-party binary dependencies.
+
 ## Subversion's "lightweight" branching (2000&#47;2001)
 
 Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". The lack of atomicity in CVS
