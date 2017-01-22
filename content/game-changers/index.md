@@ -196,6 +196,13 @@ to lease one or more Firefoxes browsers  in parallel on a Monday, and no longer 
 Other companies since, have been able to deploy their own Selenium-Grid internally or
 leverage one of the online services for elastic Selenium testing.
 
+## Branch by Abstraction practice (2007)
+
+Paul Hammant blogged about[![](/images/ext.png)](http://paulhammant.com/blog/branch_by_abstraction.html) a 2005 
+ThoughtWorks mission into Bank of America's FX software development team. Whereas
+many had used this technique to avoid longer version-control branches in a trunk model, this was the first time it had been
+detailed online, and given a name (Stacy Curl).
+
 ## Github's entire platform - 2008 onwards
 
 Github was launched as a portal on February 8, 2008, and feature have been added steadily ever since. The initial 
