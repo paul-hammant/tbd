@@ -36,9 +36,7 @@ People (Michael Cusumano & Richard Selby, 1995) [![](/images/ext.png)](https://w
 
 There's a section of the book dealing with Microsoft's per-developer workflow using Source Library Manager (SLM) on 
 a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - an Internal Microsoft tool 
-for source-control until it was replaced by Source Depot in 1998.
-
-In *Microsoft Secrets*, a rigorous daily developer workflow is detailed. 
+for source-control until it was replaced by Source Depot in 1998. That daily, rigorous, developer workflow was:
 
 1. checkout (update/pull/sync or checkout afresh)
 2. implement feature 
