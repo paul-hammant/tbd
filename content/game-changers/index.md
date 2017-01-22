@@ -220,16 +220,37 @@ development for teams of course.
 
 ## Continuous Delivery Book (2010)
 
-TODO 
+Jez Humble and Dave Farley wrote this influential book after a ThoughtWorks project in London that finished in 2007. 
+The client was AOL - enough time has passed to share that. DevOps advances were
+being made across the industry, but a critical aspect was that the prescribed go-live date was tight, given the known
+amount of work to be completed before then. Tight enough to want to compress the classic 'coding slows down, and 
+exhaustive user acceptance testing starts' phase of a project. The team had to pull the trigger on plenty of 
+automated steps, to allow faster feedback loops, including a high confidence in the quality of commits, from only 
+minutes before.  CI pipelines and delta-scripts for database table-shape migrations, in particular, were focussed on.
+
+The 2010 'Continuous Delivery' book is the best selling result. It has been translated into three languages since, and 
+both authors now have careers that further deliver/describe the benefits for clients.
+
+Dan North (Mr BDD), Chris Read (am unsung DevOps pioneer) and Sam Newman were also key the AOL advances. Dan North gave 
+a deeper account of the mission at GOTO in 2014[![](/images/ext.png)](https://speakerdeck.com/tastapod/the-birth-of-devops) 
+(no video sadly) and was interviewed later by InfoQ[![](/images/ext.png)](https://www.infoq.com/news/2014/07/birth-cd-devops).
+
+A mission a year or so before that for UK retailer Dixons saw Sam Newman, and Dave Farley accumulate a number of other 
+DevOps emergent practices, they'd get to reuse and refine at the AOL mission.
 
 ## PlasticSCM's semantic merge (2013)
 
-Plastic's semantic diff and merge capability was launched in April 2013 [![](/images/ext.png)](https://www.infoq.com/news/2013/04/Semantic-Merge), 
-It allowed a greatly reduced diffs for multi-branch situations. 
+Plastic's semantic diff and merge capability was launched in April 2013 
+[![](/images/ext.png)](https://www.infoq.com/news/2013/04/Semantic-Merge), It allowed a greatly reduced diffs for 
+multi-branch situations. 
+
+Other source-control tools are not doing semantic diff/merge yet (2017), but they should be.
 
 If merges between branches are required, and larger 
-code changes (like refactorings) are desired, then incrementally, multi-branch development is easier. But Trunk Based 
-Development's commits are more elegant too, because of it.
+code changes (like refactorings) are desired, then multi-branch development is a little easier with this. However, Trunk Based 
+Development's commits are more elegant too, because of it, and in the fullness of time, it might make
+on techniques like Branch by Abstraction easier, or reduce the need for it, if merge contflicts happen less often
+(according to source-control) for something in 2012 that would have been a definite clash.
 
 ## Travis-CI's Github integration and pass/fail badges (2013)
 
@@ -248,4 +269,5 @@ Other than the references inline (above) ...
 
 Date    | Type  | Article
 --------|-------|--------
+14 Jan 2015 | Blog entry | [From 2½ Days to 2½ Seconds - the Birth of DevOps](http://dizzythinks.net/from-212-days-to-212-seconds-the-birth-of-devops.html)
 23 Apr 2015 | Blog entry | [The origins of Trunk Based Development](http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/)
