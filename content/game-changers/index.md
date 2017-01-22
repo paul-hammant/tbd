@@ -29,6 +29,42 @@ Two of those, Tichy suggests, are temporary branches and would come back to the 
 Superficially, RCS allowed multi-branch parallel development, but some teams were very careful and stuck
 to a 'slender', or Trunk Based Development mode of use.
 
+## Microsoft Secrets book (1995)
+
+There's a section of the book dealing with Microsoft's per-developer workflow using Source Library Manager (SLM) on 
+a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - an Internal Microsoft tool 
+for source-control until it was replaced by Source Depot in 1998.
+
+In "Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages 
+People" (Michael Cusumano & Richard Selby, 1995), a rigorous daily developer workflow is detailed. 
+
+1. checkout (update/pull/sync or checkout afresh)
+2. implement feature 
+3. build
+4. test the feature
+5. sync (update/pull)
+6 merge
+7 build
+8. test the feature
+9. smoke tests 
+10. check in (commit/push)
+11. makes a daily build from HEAD of the shared master branch
+
+The authors note in the book, that #10 isn't always an every day thing.
+
+The last step isn't per developer, it is for the designated "build master" within the team, and manual. 
+
+In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in "The Joel Test" 
+[![](/images/ext.png)](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/).
+
+The book also briefly mentions Test Case Manager (TCM) and "Microsoft Test". These were tools for helping developers 
+manage and record/edit/playback application tests at their workstations. It isn't clear if all SLM-using teams
+also used these, but the Excel team did (as they maintained the former at least).
+
+The book was translated into 14 languages, and was also a best seller. 
+
+These are clearly practices to support teams working in a trunk model.
+
 ## Subversion's "lightweight" branching (2000&#47;2001)
 
 Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". The lack of atomicity in CVS
@@ -149,9 +185,6 @@ In 2013, TravisCI provided easy integrations into Github's platform run CI build
 state of HEAD on any branch. This was visually indicated with "build passes" and 
 "build fails" badges were inserted into the Github UI. This made it was clear whether the proposed PR 
 would break the build or not were it to be merged into trunk. 
-
-
-
 
 # References elsewhere
 
