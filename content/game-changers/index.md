@@ -12,9 +12,9 @@ today than Version Control Systems (VCS) is. A simpler still "Source Control" se
 Similarly, 'trunk' and 'branch', have not always been used as terms for controlled code lines that have a common
 ancestor, and are eminently (and repeatably) mergeable.
 
-## RCS - simple but 'early days'
+## Revision Control System - RCS (1982)
 
-RCS was Revision Control System, by Walter F. Tichy.
+RCS was a simple but 'early days' version control technology, by Walter F. Tichy.
 
 In Tichy's 1985 paper 
 "RCS - A System for Version Control"[![](/images/ext.png)](https://www.gnu.org/software/rcs/tichy-paper.pdf), a trunk 
@@ -139,7 +139,7 @@ Git doesn't need a centralized server repo, but enterprise teams are going to ha
 
 As before, this made it easier to consider multiple branches as a viable team setup.
 
-## Google's internal DevOps
+## Google's internal DevOps - 1998 onwards
 
 Note: Google were practicing Trunk Based Development since the beginning - Craig Silverstein (the first hire) remembers 
 setting it up that way. Much of these were secret to Google until much later.
@@ -196,7 +196,7 @@ to lease one or more Firefoxes browsers  in parallel on a Monday, and no longer 
 Other companies since, have been able to deploy their own Selenium-Grid internally or
 leverage one of the online services for elastic Selenium testing.
 
-## Github's entire platform
+## Github's entire platform - 2008 onwards
 
 Github was launched as a portal on February 8, 2008, and feature have been added steadily ever since. The initial 
 version contained forks, which was a formal way of expressing the directionality of related DVCS repos, and 
