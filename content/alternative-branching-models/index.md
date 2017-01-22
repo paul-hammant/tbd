@@ -19,6 +19,30 @@ I looks like you'll not be able to do [concurrent development of consecutive rel
 with this branching model, or the hedging that [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch_by_abstraction/)
 enable.
 
+### Github flow
+
+This is sooooo close to PR-centric Trunk Based Development.
+ 
+Here's the crucial difference. Whereas for their release-from-branch step:
+
+![](/images/githubflow1.png)
+
+As Github portray, review comments are part of the process. Of course they are - they're speech bubbles in timeline 
+above followed by another commit (presumably 132 columns end of line versus 80 prevailed). How Trunk Based Development 
+modifies the Github Flow model:
+
+![](/images/githubflow2.png)
+
+After the dust has settled, and the short-lived feature branch has been deleted, the commits are not smushed together
+in a bigger one (as would be the case Subversion and Perforce), the instead zip into their respective places in the 
+commit history, which is not as linear as we present here:
+
+![](/images/githubflow3.png)
+
+^ oh, and the review commentary is still available after the branch is deleted (or should be)
+
+See the Github Flow landing page for more{{< ext url="https://guides.github.com/introduction/flow/" >}}
+
 ## Legacy branching models
 
 ### Mainline
