@@ -33,24 +33,32 @@ to a 'slender', or Trunk Based Development mode of use.
 
 Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". The lack of atomicity in CVS
 means that teams had to coordinate as to who was checking in presently, and whether they'd definably broken the build
-afterwards. Early CI servers used to have a quiet period to make sure they had recieved every element of an intended
-commit.
+afterwards. Early CI servers used to have a "quiet period" to make sure they had recieved every last element of an 
+intended commit.
 
-Compared to the clunky CVS, that is, Subversion also had lightweight branching. This made it easier to consider multiple 
-branches active in parallel and merged later. 
+In comparison to the clunky CVS, Subversion had "lightweight" branching. This made it easier to consider multiple 
+branches active in parallel and merge the team's changes back later. 
 
-Subversion was dogged, however, with an inadequate merge tracking model 
-until v 1.5 in June 2008, and it still has edge-case merge bugs today, like this one 
-[![](/images/ext.png)](https://issues.apache.org/jira/browse/SVN-4635).
+Until v1.5 in June 2008, Subversion had an inadequate "merge tracking" capability. It still has edge-case merge bugs 
+today, like this one [![](/images/ext.png)](https://issues.apache.org/jira/browse/SVN-4635).
 
 ## Git's "lightweight" branching (2005)
 
-Compared to Subversion, that is, Git had lightweight branching. 
-This made it easier to consider multiple branches active in parallel and merged later. Git's merge engine was very 
-good too, more able that prior merge technologies, to silently process complexity. As before, this made it easier to 
-consider multiple branches.
+In comparison to the clunky Subversion, Git had "lightweight" branching.
+This made it easier to consider multiple branches as active (in parallel) and merged back later. Git's merge engine was very 
+good too, more able than prior merge technologies, to silently process complexity. 
+
+A critical part of Git was local branching. A developer could make multiple local branches, and even map them to the 
+same remote branch. Say one could be a feature, part complete, and another a surprise bug fix to go back first. Or the 
+developer could be making alternate implementations of the same complicated thing, to decide later which to push back. 
+Git doesn't need a centralized server repo, but enterprise teams are going to have one anyway.
+
+As before, this made it easier to consider multiple branches as a viable team setup.
 
 ## Google's internal DevOps
+
+Note: Google were practicing Trunk Based Development since the beginning - Craig Silverstein (the first hire) remembers 
+setting it up that way.
 
 ## Home-grown CI and tooling (2002 onwards)
 

@@ -111,10 +111,12 @@ branch by abstraction *thing* is only incrementally more expensive.
 ## History
  
 Teams employed Branch by Abstraction many years before it got its name (Stacy Curl named it in 2007), but it is 
-unknown when the first implementation was. Before the adoption of BbA, teams had to make a branch for the big, lengthy change 
+unknown when the first implementation was. Before the adoption of BbA, teams **had to** make a branch for the 
+big lengthy disruptive change, or do it with an incredible amount of choreography: "hey everyone take a week of 
+vacation now".
  
-With the Branch by Abstraction technique, Trunk Based Development was less likely to be abandoned for a 
-multi-branch model, whether long term or temporarily.
+With the Branch by Abstraction technique, Trunk Based Development was less likely to be temportarily or permanently 
+abandoned for a multi-branch model.
  
 # References elsewhere
 
