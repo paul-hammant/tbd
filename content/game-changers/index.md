@@ -70,6 +70,14 @@ These are clearly practices to support teams working in a trunk model.
 Note: In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his now famous 
 "The Joel Test" [![](/images/ext.png)](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/).
 
+## Perforce's High Level SCM Best Practices white paper (1998)
+
+Laura Wingerd and Christopher Seiwald penned this widely read paper[![](/images/ext.png)](https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf)
+ (presented at a SCM conference in Brussels the same year).
+ 
+There's lots to it, and it alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
+it that help set a foundation for the the next ten years of version-control advances.
+
 ## Extreme Programming's Continuous Integration (1999)
 
 Kent Beck published "Extreme Programming Explained" in 1999. Picked out here, from a bunch of practices for 
@@ -160,8 +168,8 @@ which made the results of the pre-commit CI verification very clear.
 ### Mondrian (2006)
 
 Tools for code-reviewers/approvers of proposed contributions to trunk were developed internally in Google in the early 
-2000's as a command-line tool and part of "Google 3". Things would not land in the shared trunk, until everyone agreed. Their culture was that 
-such that reviews were speedy. Getting pending commits to the point of rejection or acceptance 
+2000's as a command-line tool and part of "Google 3". Things would not land in the shared trunk, until everyone agreed. 
+Their culture was that such that reviews were speedy. Getting pending commits to the point of rejection or acceptance 
 ("Looks Good To Me" : LGTM) was almost competitive. Some new Googlers (Nooglers) would pride themselves about taking
 on random code-review chores, and being one of a few people that weigh in to the decision moment.
 
