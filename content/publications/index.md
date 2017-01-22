@@ -50,6 +50,22 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
+### Build Quality In (February 27, 2015)
+
+<div>
+    <a>
+      <img width="90" src="//s3.amazonaws.com/titlepages.leanpub.com/buildqualityin/hero?1425554444" style="float:left;padding-right:10px; border:0px solid black;"/>
+    </a>
+    <p>
+        <em>Build Quality In: Continuous Delivery and DevOps Experience Reports</em><br/>
+        by Steve Smith and Matthew Skelton
+        <br/>
+        <a href="https://leanpub.com/buildqualityin"><strong>Leanpub </strong>(kindle)</a>
+        <br/>
+    </p>
+    <br clear="all"/>
+</div>
+
 ### DevOps Handbook (October 6, 2016)
 
 <div>
