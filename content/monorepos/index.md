@@ -59,8 +59,8 @@ them from your IDE.
 ### Facebook's Buck and Google's Bazel
 
 Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) missed that, wrote 
-Buck[![](/images/ext.png)](https://buckbuild.com/) and then 
-open-sourced it. Google then open-sourced a cut-down Blaze as Bazel[![](/images/ext.png)](https://bazel.build/). 
+Buck{{< ext url="https://buckbuild.com" >}} and then 
+open-sourced it. Google then open-sourced a cut-down Blaze as Bazel{{< ext url="https://bazel.build" >}}. 
 These are the two (three incl. Blaze) are directed graph build systems that allow a large tree of sources to be speedily 
 subset in a compile/test/make-a-binary way. 
  

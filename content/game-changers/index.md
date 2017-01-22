@@ -18,7 +18,7 @@ ancestor, and are eminently (and repeatably) mergeable.
 RCS was a simple but 'early days' version control technology, by Walter F. Tichy.
 
 In Tichy's 1985 paper 
-"RCS - A System for Version Control"[![](/images/ext.png)](https://www.gnu.org/software/rcs/tichy-paper.pdf), a trunk 
+"RCS - A System for Version Control"{{< ext url="https://www.gnu.org/software/rcs/tichy-paper.pdf" >}}, a trunk 
 focused mode of use is described as a "slender branch", and that you stepped away from it for four reasons:
 
 <br><div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 150%">&ldquo;</span>
@@ -39,7 +39,7 @@ to a 'slender', or Trunk Based Development mode of use.
 ## Microsoft Secrets book (1995)
 
 Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages 
-People (Michael Cusumano & Richard Selby, 1995) [![](/images/ext.png)](https://www.amazon.com/Microsoft-Secrets-Powerful-Software-Technology/dp/0684855313)
+People (Michael Cusumano & Richard Selby, 1995) {{< ext url="https://www.amazon.com/Microsoft-Secrets-Powerful-Software-Technology/dp/0684855313" >}}
 
 There's a section of the book dealing with Microsoft's per-developer workflow using Source Library Manager (SLM) on 
 a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - an Internal Microsoft tool 
@@ -69,11 +69,11 @@ The book was translated into 14 languages, and was also a best seller.
 These are clearly practices to support teams working in a trunk model.
 
 Note: In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his now famous 
-"The Joel Test" [![](/images/ext.png)](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/).
+"The Joel Test" {{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}}.
 
 ## Perforce's High Level SCM Best Practices white paper (1998)
 
-Laura Wingerd and Christopher Seiwald penned this widely read paper[![](/images/ext.png)](https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf)
+Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf" >}}
  (presented at a SCM conference in Brussels the same year).
  
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
@@ -81,7 +81,7 @@ it that help set a foundation for the the next ten years of version-control adva
 
 ## Extreme Programming's Continuous Integration (1999)
 
-Kent Beck[![](/images/ext.png)](https://en.wikipedia.org/wiki/Kent_Beck) published "Extreme Programming Explained" in 1999. 
+Kent Beck{{< ext url="https://en.wikipedia.org/wiki/Kent_Beck" >}} published "Extreme Programming Explained" in 1999. 
 Picked out that, amongst a bunch of practices for the influential XP methodology, is "Continuous Integration" 
 that Kent felt was "risk reducing".
 
@@ -100,17 +100,17 @@ Kent had pioneered (with many industry luminary friends) in 1996 on the famous C
 
 ### Continuous Integration on MartinFowler.com
 
-Martin Fowler and Matt Foemmel[![](/images/ext.png)](http://blog.foemmel.com/) wrote an online article "Continuous 
-Integration" in 2000[![](/images/ext.png)](https://www.martinfowler.com/articles/originalContinuousIntegration.html), 
+Martin Fowler and Matt Foemmel{{< ext url="http://blog.foemmel.com" >}} wrote an online article "Continuous 
+Integration" in 2000{{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
 calling out this one part of XP. Martin greatly updated it in 2006 
-[![](/images/ext.png)](https://www.martinfowler.com/articles/continuousIntegration.html)). 
+{{< ext url="https://www.martinfowler.com/articles/continuousIntegration.html" >}}. 
  
 ### ThoughtWorks' Cruise Control 
  
-Martin's ThoughtWorks colleagues (Alden Almagro[![](/images/ext.png)](http://aldenalmagro.com/resume.html), 
-Paul Julias[![](/images/ext.png)](http://www.pauljulius.com/), 
-Jason Yip[![](/images/ext.png)](http://jchyip.blogspot.com/)) went on to build the then-dominant 
-"Cruise Control" [![](/images/ext.png)](http://cruisecontrol.sourceforge.net/) starting in early 2001. This was a 
+Martin's ThoughtWorks colleagues (Alden Almagro{{< ext url="http://aldenalmagro.com/resume.html" >}}, 
+Paul Julias{{< ext url="http://www.pauljulius.com" >}}, 
+Jason Yip{{< ext url="http://jchyip.blogspot.com" >}}) went on to build the then-dominant 
+"Cruise Control" {{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001. This was a 
 ground breaking technology and very accessible to companies wanting a machine to fully verify checkins. 
 
 Early CI servers, including CruiseControl used to have a "quiet period" to make sure they had received every last 
@@ -137,7 +137,7 @@ In comparison to the clunky CVS, Subversion had "lightweight" branching. This ma
 branches active in parallel and merge the team's changes back later. 
 
 Until v1.5 in June 2008, Subversion had an inadequate "merge tracking" capability. It still has edge-case merge bugs 
-today, like this one [![](/images/ext.png)](https://issues.apache.org/jira/browse/SVN-4635).
+today, like this one {{< ext url="https://issues.apache.org/jira/browse/SVN-4635" >}}.
 
 ## Git's "lightweight" branching (2005)
 
@@ -190,11 +190,11 @@ that back in review again.
 
 In 2006, Guido van Rossum presented one of his bigger contributions - "Mondrian" -
 to Googlers. Here he that tech talk on YouTube (previously on GoogleVideos) 
-[![](/images/ext.png)](https://www.youtube.com/watch?v=CKjRt48rZGk). Note at the start he says XP practice 
+{{< ext url="https://www.youtube.com/watch?v=CKjRt48rZGk" >}}. Note at the start he says XP practice 
 "Pair-Programming" is best, and that code review helps fill the gap for situations where you cannot do it.
 
-After Mondrian, the open source world saw Gerrit [![](/images/ext.png)](https://www.gerritcodereview.com) released 
-in its image, and after that Facebookers made Phabricator[![](/images/ext.png)](https://en.wikipedia.org/wiki/Phabricator) 
+After Mondrian, the open source world saw Gerrit {{< ext url="https://www.gerritcodereview.com" >}} released 
+in its image, and after that Facebookers made Phabricator{{< ext url="https://en.wikipedia.org/wiki/Phabricator" >}}
 and released that as open source too.
 
 ### Google's Selenium Farm (2006)
@@ -211,7 +211,7 @@ leverage one of the online services for elastic Selenium testing.
 
 ## Branch by Abstraction practice (2007)
 
-Paul Hammant blogged about[![](/images/ext.png)](http://paulhammant.com/blog/branch_by_abstraction.html) a 2005 
+Paul Hammant blogged about{{< ext url="http://paulhammant.com/blog/branch_by_abstraction.html" >}} a 2005 
 ThoughtWorks mission into Bank of America's FX software development team. Whereas
 many had used this technique to avoid longer version-control branches in a trunk model, this was the first time it had been
 detailed online, and given a name (Stacy Curl).
@@ -225,7 +225,7 @@ for other portals).
 
 ### Pull Requests (2008)
 
-Github added "Pull-Requests" (PRs) on Feb 23rd, 2008 [![](/images/ext.png)](https://github.com/blog/3-oh-yeah-there-s-pull-requests-now),
+Github added "Pull-Requests" (PRs) on Feb 23rd, 2008 {{< ext url="https://github.com/blog/3-oh-yeah-there-s-pull-requests-now" >}},
 while in beta, and popularized the entire practice for the industry when they came out of beta in April of that year. 
 For source/repo platforms, and VCSs generally, this and "forking generally" was a total game changer, and commercial 
 prospects of other companies were decided based on their ability to react to this culture change.
@@ -240,8 +240,8 @@ development for teams of course.
 
 ## Continuous Delivery Book (2010)
 
-Jez Humble[![](/images/ext.png)](https://continuousdelivery.com) and Dave 
-Farley[![](/images/ext.png)](http://www.continuous-delivery.co.uk) wrote this influential book after a 
+Jez Humble{{< ext url="https://continuousdelivery.com" >}} and Dave 
+Farley{{< ext url="http://www.continuous-delivery.co.uk" >}} wrote this influential book after a 
 ThoughtWorks project in London that finished in 2007. 
 The client was AOL - enough time has passed to share that. DevOps advances were
 being made across the industry, but a critical aspect was that the prescribed go-live date was tight, given the known
@@ -253,10 +253,10 @@ minutes before.  CI pipelines and delta-scripts for database table-shape migrati
 The 2010 'Continuous Delivery' book is the best selling result. It has been translated into three languages since, and 
 both authors now have careers that further deliver/describe the benefits for clients.
 
-Dan North[![](/images/ext.png)](https://dannorth.net/) (Mr BDD), Chris Read[![](/images/ext.png)](https://www.linkedin.com/in/devopscread) 
-(an unsung DevOps pioneer) and Sam Newman[![](/images/ext.png)](http://samnewman.io/) were also key the AOL advances. 
-Dan North gave a deeper account of the mission at GOTO in 2014[![](/images/ext.png)](https://speakerdeck.com/tastapod/the-birth-of-devops) 
-(no video sadly) and was interviewed later by InfoQ[![](/images/ext.png)](https://www.infoq.com/news/2014/07/birth-cd-devops).
+Dan North{{< ext url="https://dannorth.net" >}} (Mr BDD), Chris Read{{< ext url="https://www.linkedin.com/in/devopscread" >}} 
+(an unsung DevOps pioneer) and Sam Newman{{< ext url="http://samnewman.io" >}} were also key the AOL advances. 
+Dan North gave a deeper account of the mission at GOTO in 2014{{< ext url="https://speakerdeck.com/tastapod/the-birth-of-devops" >}} 
+(no video sadly) and was interviewed later by InfoQ{{< ext url="https://www.infoq.com/news/2014/07/birth-cd-devops" >}}.
 
 A mission a year or so before that for UK retailer Dixons, saw Sam and Dave accumulate a number of other 
 DevOps emergent practices, they'd get to reuse and refine on the AOL mission.
@@ -264,7 +264,7 @@ DevOps emergent practices, they'd get to reuse and refine on the AOL mission.
 ## PlasticSCM's semantic merge (2013)
 
 Plastic's semantic diff and merge capability was launched in April 2013 
-[![](/images/ext.png)](https://www.infoq.com/news/2013/04/Semantic-Merge), It allowed a greatly reduced diffs for 
+{{< ext url="https://www.infoq.com/news/2013/04/Semantic-Merge" >}}, It allowed a greatly reduced diffs for 
 multi-branch situations. 
 
 Other source-control tools are not doing semantic diff/merge yet (2017), but they should be.

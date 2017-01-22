@@ -75,8 +75,8 @@ the offerings for that airport at the flight arrival time.
 Key for Runtime switchable flags is the need for the state to persist. A restart of the application or service should
 not set that flag choice back to default - it should retain the previous choice. It gets complicated when you think
 about the need for the flag to permeate multiple nodes in a cluster of horizontally scaled sibling processes. For
-that last, then holding the flag state in Consul[![](/images/ext.png)](https://www.consul.io/), 
-Etcd[![](/images/ext.png)](https://github.com/coreos/etcd) (or equiv) is a the modern way.
+that last, then holding the flag state in Consul{{< ext url="https://www.consul.io" >}}, 
+Etcd{{< ext url="https://github.com/coreos/etcd" >}} (or equivalent) is a the modern way.
 
 ## Build Flags
 
@@ -103,12 +103,12 @@ they apply to) a month after the release. Maybe add them to the project's readme
 
 Some historical predecessors of feature toggles/flags as we know it today:  
 
-- Unified Versioning through Feature Logic (Andreas Zeller and Gregor Snelting, 1996) [![](/images/ext.png)](http://www.cs.tufts.edu/~nr/cs257/archive/andreas-zeller/tr-96-01.pdf) - white paper.
-- Configuration Management with Version Sets: A Unified Software Versioning Model and its Applications (Andreas Zeller's, 1997) - [![](/images/ext.png)](https://www.st.cs.uni-saarland.de/publications/files/zeller-thesis-1997.pdf) - Ph.D. thesis.
+- Unified Versioning through Feature Logic (Andreas Zeller and Gregor Snelting, 1996) {{< ext url="http://www.cs.tufts.edu/~nr/cs257/archive/andreas-zeller/tr-96-01.pdf" >}} - white paper.
+- Configuration Management with Version Sets: A Unified Software Versioning Model and its Applications (Andreas Zeller's, 1997) - {{< ext url="https://www.st.cs.uni-saarland.de/publications/files/zeller-thesis-1997.pdf" >}} - Ph.D. thesis.
 
 There's a warning too: 
 
-- "#ifdef considered harmful" (Henry Spencer and Geoff Collyer, 1992) [![](/images/ext.png)](http://www.literateprogramming.com/ifdefs.pdf) - white paper.
+- "#ifdef considered harmful" (Henry Spencer and Geoff Collyer, 1992) {{< ext url="http://www.literateprogramming.com/ifdefs.pdf" >}} - white paper.
 
 Brad Appleton says:
 
