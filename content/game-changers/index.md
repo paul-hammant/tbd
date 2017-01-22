@@ -121,10 +121,21 @@ automating that "build passes, gang" oral notification above.
 ### Apache's Gump
 
 Apache's Gump was built on a similar time line, but focused more on the binary integration hell of 
-interdependent Apache (and other) open-source projects. It gave an early warning of integration probelms that were 
+interdependent Apache (and other) open-source projects. It gave an early warning of integration clashes that were 
 already, or were about to be problematic, for teams. While impressive, it use did not gain traction in the enterprise. 
 This is because enterprises were able to be more buffered from open-source library hell (and the implicit diamond 
 dependency problem), by controlling (limiting) the rate at which the upgraded their third-party binary dependencies.
+
+Sam Ruby remembers:
+
+<div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 120%">&ldquo;</span>
+The original motivation for Gump wasn't so much continuous<br>
+as it was integration - in particular, integration in the large.<br>
+Many projects had unit tests but would routinely make changes<br>
+that would break their 'contract' and nobody would notice until<br> 
+well after the changes were released
+<span style="font-size: 120%">&rdquo;</span>
+</div>
 
 ## Subversion's "lightweight" branching (2000&#47;2001)
 
