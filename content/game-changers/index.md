@@ -220,7 +220,7 @@ to lease one or more Firefoxes browsers  in parallel on a Monday, and no longer 
 Other companies since, have been able to deploy their own Selenium-Grid internally or
 leverage one of the online services for elastic Selenium testing.
 
-## Branch by Abstraction practice (2007)
+## Branch by Abstraction technique (2007)
 
 Paul Hammant blogged about{{< ext url="http://paulhammant.com/blog/branch_by_abstraction.html" >}} a 2005 
 ThoughtWorks mission into Bank of America's FX software development team. Whereas
