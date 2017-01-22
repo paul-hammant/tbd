@@ -75,13 +75,14 @@ Note: In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the vir
 Laura Wingerd and Christopher Seiwald penned this widely read paper[![](/images/ext.png)](https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf)
  (presented at a SCM conference in Brussels the same year).
  
-There's lots to it, and it alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
+The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
 it that help set a foundation for the the next ten years of version-control advances.
 
 ## Extreme Programming's Continuous Integration (1999)
 
-Kent Beck published "Extreme Programming Explained" in 1999. Picked out here, from a bunch of practices for 
-the influential XP methodology, is the "Continuous Integration" that Kent felt was "risk reducing".
+Kent Beck[![](/images/ext.png)](https://en.wikipedia.org/wiki/Kent_Beck) published "Extreme Programming Explained" in 1999. 
+Picked out that, amongst a bunch of practices for the influential XP methodology, is "Continuous Integration" 
+that Kent felt was "risk reducing".
 
 He says "Integrate and build the system many times a day, every time a task is completed", and goes on to detail 
 a reserved workstation, that a developer pair would sidle up at the appropriate moment to prove that their code 
@@ -98,13 +99,16 @@ Kent had pioneered (with many industry luminary friends) in 1996 on the famous C
 
 ### Continuous Integration on MartinFowler.com
 
-Martin Fowler and Matt Foemmel wrote an online article "Continuous Integration" in 2000 
-[![](/images/ext.png)](https://www.martinfowler.com/articles/originalContinuousIntegration.html), alling out this one 
-part of XP. Martin greatly updated it in 2006 [![](/images/ext.png)](https://www.martinfowler.com/articles/continuousIntegration.html)). 
+Martin Fowler and Matt Foemmel[![](/images/ext.png)](http://blog.foemmel.com/) wrote an online article "Continuous 
+Integration" in 2000[![](/images/ext.png)](https://www.martinfowler.com/articles/originalContinuousIntegration.html), 
+calling out this one part of XP. Martin greatly updated it in 2006 
+[![](/images/ext.png)](https://www.martinfowler.com/articles/continuousIntegration.html)). 
  
 ### ThoughtWorks' Cruise Control 
  
-Martin's ThoughtWorks colleagues (Alden Almagro, Paul Julias, Jason Yip) went on to build the then-dominant 
+Martin's ThoughtWorks colleagues (Alden Almagro[![](/images/ext.png)](http://aldenalmagro.com/resume.html), 
+Paul Julias[![](/images/ext.png)](http://www.pauljulius.com/), 
+Jason Yip[![](/images/ext.png)](http://jchyip.blogspot.com/)) went on to build the then-dominant 
 "Cruise Control" [![](/images/ext.png)](http://cruisecontrol.sourceforge.net/) starting in early 2001. This was a 
 ground breaking technology and very accessible to companies wanting a machine to fully verify checkins. 
 
@@ -116,10 +120,10 @@ automating that "build passes, gang" oral notification above.
 ### Apache's Gump
 
 Apache's Gump was built on a similar time line, but focused more on the binary integration hell of 
-interdependent Apache (and other) open-source project. It gave an early warning of integration probelms that were 
-already or were about to be problematic for teams. While impressive, it use did not extend into the enterprise, as they 
-were able to be more buffered from open-source library hell (and the implicit diamond dependency problem), by controlling 
-(limiting) the rate at which the upgraded their third-party binary dependencies.
+interdependent Apache (and other) open-source projects. It gave an early warning of integration probelms that were 
+already, or were about to be problematic, for teams. While impressive, it use did not gain traction in the enterprise. 
+This is because enterprises were able to be more buffered from open-source library hell (and the implicit diamond 
+dependency problem), by controlling (limiting) the rate at which the upgraded their third-party binary dependencies.
 
 ## Subversion's "lightweight" branching (2000&#47;2001)
 
