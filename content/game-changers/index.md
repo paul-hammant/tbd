@@ -6,7 +6,7 @@ weight: 40
 
 Since the 80's a number of things have pushed best practices towards Trunk Based Development, or away from it. 
 
-## RCS - simple but early days
+## RCS - simple but 'early days'
 
 RCS was Revision Control System, by Walter F. Tichy.
 
@@ -31,12 +31,14 @@ to a 'slender', or Trunk Based Development mode of use.
 
 ## Microsoft Secrets book (1995)
 
+Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages 
+People (Michael Cusumano & Richard Selby, 1995) [![](/images/ext.png)](https://www.amazon.com/Microsoft-Secrets-Powerful-Software-Technology/dp/0684855313)
+
 There's a section of the book dealing with Microsoft's per-developer workflow using Source Library Manager (SLM) on 
 a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - an Internal Microsoft tool 
 for source-control until it was replaced by Source Depot in 1998.
 
-In "Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages 
-People" (Michael Cusumano & Richard Selby, 1995), a rigorous daily developer workflow is detailed. 
+In *Microsoft Secrets*, a rigorous daily developer workflow is detailed. 
 
 1. checkout (update/pull/sync or checkout afresh)
 2. implement feature 
@@ -211,6 +213,10 @@ rightfully so.
 
 This forced the entire VCS industry to take note, and plan equivalents. It greatly facilitated multi-branch 
 development for teams of course.
+
+## Continuous Delivery Book (2010)
+
+TODO 
 
 ## PlasticSCM's semantic merge (2013)
 
