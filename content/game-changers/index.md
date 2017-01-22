@@ -222,10 +222,10 @@ leverage one of the online services for elastic Selenium testing.
 
 ## Branch by Abstraction technique (2007)
 
-Paul Hammant blogged about{{< ext url="http://paulhammant.com/blog/branch_by_abstraction.html" >}} a 2005 
-ThoughtWorks mission into Bank of America's FX software development team. Whereas
-many had used this technique to avoid longer version-control branches in a trunk model, this was the first time it had been
-detailed online, and given a name (Stacy Curl).
+Paul Hammant blogged about a 2005 ThoughtWorks client engagement in a Bank of America software development team, 
+that used the Branch by Abstraction technique {{< ext url="http://paulhammant.com/blog/branch_by_abstraction.html" >}}.
+Whereas many had previously used this technique to avoid longer version-control branches in a trunk model, this was the 
+first time it had been detailed online, and given a name (by Stacy Curl).
 
 ## Github's entire platform - 2008 onwards
 
