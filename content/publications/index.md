@@ -86,7 +86,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 ## Reports promoting Trunk Based Development
 
-### Forrester Report (Oct 18, 2013)
+### More Engineering, Less Dogma (Oct 18, 2013)
 
 <div>
     <a>
@@ -96,7 +96,22 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
         <em>More Engineering, Less Dogma: The Path Toward Continuous Delivery Of Business Value</em><br/>
         by Kurt Bittner and Glenn O’Donnell
         <br/>
-        <a href="https://www.forrester.com/report/More+Engineering+Less+Dogma+The+Path+Toward+Continuous+Delivery+Of+Business+Value/-/E-RES106521"><strong>Forrester Research - link</a>
+        <a href="https://www.forrester.com/report/More+Engineering+Less+Dogma+The+Path+Toward+Continuous+Delivery+Of+Business+Value/-/E-RES106521"><strong>Forrester Research - link</strong></a>
+    </p>
+    <br clear="all"/>
+</div>
+
+### The Role of Continuous Delivery in IT and Organisational Performance (Oct 27, 2015)
+
+<div>
+    <a>
+      <img width="95" src="/images/favicon.ico" style="float:left; padding-right:10px"/>
+    </a>
+    <p>
+        <em>The Role of Continuous Delivery in IT and Organizational Performance</em><br/>
+        by Nicole Forsgren and Jez Humble
+        <br/>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2681909"><strong>Proceedings of the Western Decision Sciences Institute - link</strong></a>
     </p>
     <br clear="all"/>
 </div>
