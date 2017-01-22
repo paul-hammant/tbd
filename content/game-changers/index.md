@@ -94,9 +94,11 @@ As before, this made it easier to consider multiple branches as a viable team se
 ## Google's internal DevOps
 
 Note: Google were practicing Trunk Based Development since the beginning - Craig Silverstein (the first hire) remembers 
-setting it up that way.
+setting it up that way. Much of these were secret to Google until much later.
 
-## Home-grown CI and tooling (2002 onwards)
+## Home-grown CI and tooling
+
+This was 2002 onwards, but only barely documented outside Google, this the influence is much smaller.
 
 Google is the most famous example of using Scaled CI infrastructure to keep up with commits (one every 30 seconds on 
 average) to a single shared trunk. Google's setup would also allow the same infrastructure to verify *proposed* commits.
@@ -141,7 +143,7 @@ testing.
 
 This "Selenium Farm" (internal cloud) was also available to developers at their desks, who just wanted to run such tests against a stood-up
 version of what they were working on. Teams who had to run Firefox (etc) on their own desktop on a Friday, were able 
-to lease one or more Firefoxs browsers  in parallel on a Monday, and no longer lock up their developer workstations.
+to lease one or more Firefoxes browsers  in parallel on a Monday, and no longer lock up their developer workstations.
 
 Other companies since, have been able to deploy their own Selenium-Grid internally or
 leverage one of the online services for elastic Selenium testing.
