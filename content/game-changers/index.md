@@ -43,19 +43,15 @@ People" (Michael Cusumano & Richard Selby, 1995), a rigorous daily developer wor
 3. build
 4. test the feature
 5. sync (update/pull)
-6 merge
-7 build
+6. merge
+7. build
 8. test the feature
 9. smoke tests 
 10. check in (commit/push)
 11. makes a daily build from HEAD of the shared master branch
 
-The authors note in the book, that #10 isn't always an every day thing.
-
-The last step isn't per developer, it is for the designated "build master" within the team, and manual. 
-
-In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in "The Joel Test" 
-[![](/images/ext.png)](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/).
+The authors note in the book, that #10 isn't always an every day thing. And the last step isn't per developer, it is 
+for the designated "build master" within the team, and manual. 
 
 The book also briefly mentions Test Case Manager (TCM) and "Microsoft Test". These were tools for helping developers 
 manage and record/edit/playback application tests at their workstations. It isn't clear if all SLM-using teams
@@ -64,6 +60,9 @@ also used these, but the Excel team did (as they maintained the former at least)
 The book was translated into 14 languages, and was also a best seller. 
 
 These are clearly practices to support teams working in a trunk model.
+
+Note: In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his now famous 
+"The Joel Test" [![](/images/ext.png)](https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code/).
 
 ## Extreme Programming's Continuous Integration (1999)
 
