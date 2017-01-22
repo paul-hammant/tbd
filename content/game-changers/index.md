@@ -129,21 +129,29 @@ Pull-Requests changed the dynamics of open source.  Now, the original creator of
 with PRs because if they did not, a fork with more activity and forward momentum, might steal the community. Perhaps 
 rightfully so. 
 
-A few years later (with the help of third parties like TravisCI).
-"build passes" and "build fails" badges were woven into the Github UI. This made it was clear whether the proposed PR 
-would break the build or not were it to be merged into trunk. This combination was a game changer, and 
-forced the entire VCS industry to take note, and plan equivalents.
+This forced the entire VCS industry to take note, and plan equivalents. It greatly facilitated multi-branch 
+development for teams of course.
 
 ## PlasticSCM's semantic merge (2013)
 
 Plastic's semantic diff and merge capability was launched in April 2013 [![](/images/ext.png)](https://www.infoq.com/news/2013/04/Semantic-Merge), 
-It allowed a greatly reduced diffs for multi-branch situations. If merges between 
-branches are required, and larger code changes (like refactorings) are desired, then incrementally, multi-branch
-development is easier. But Trunk Based Development's commits are more elegant too, because of it.
+It allowed a greatly reduced diffs for multi-branch situations. 
+
+If merges between branches are required, and larger 
+code changes (like refactorings) are desired, then incrementally, multi-branch development is easier. But Trunk Based 
+Development's commits are more elegant too, because of it.
 
 ## Travis-CI's Github integration and pass/fail badges (2013)
 
-Travis... ? TODO
+(TODO - not sure if Travis were first or popularizing of this)
+
+In 2013, TravisCI provided easy integrations into Github's platform run CI builds for Pull Requests and the general
+state of HEAD on any branch. This was visually indicated with "build passes" and 
+"build fails" badges were inserted into the Github UI. This made it was clear whether the proposed PR 
+would break the build or not were it to be merged into trunk. 
+
+
+
 
 # References elsewhere
 
