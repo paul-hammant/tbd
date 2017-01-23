@@ -41,7 +41,7 @@ and helps to make Continuous Delivery a reality.
   parallel projects on the same application or service, with ease. [Branch by abstraction](/branch-by-abstraction/) 
   and [feature flags](/feature-flags/) again, but towards 
   [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/) to further
-  resist the pressure for the creation long running branches. Bonus: hedging on the order of releases. 
+  resist the pressure for the creation of long-lived branches. Bonus: you can hedge on the order of releases. 
 
 ## History
 
@@ -49,20 +49,19 @@ Trunk Based Development is not a new branching model. The word 'trunk' is refere
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
 It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties. 
-The largest of development organizations, like Google and Facebook practice it at scale. Google has millions of 
+The largest of development organizations, like Google and Facebook practice it at scale. 
+
+Google, for one, has millions of 
 individual source files in a single trunk branch of a repository that contains 86 terabytes of history, with 
-20,000 developers contributing to it constantly. We cover that advanced setup in [Monorepos](monorepos/).
+20,000 developers contributing to it constantly. We cover that advanced setup in [Monorepos](monorepos/), And Googlers
+talked about the incedible scale of their trunk 
+[in a magazine article and a video](/game-changers/#google-shaing-their-trunk-usage-why-google-stores-billions-of-lines-of-code-in-a-single-repository-2016).
+
+Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers) have made 
+Trunk Based Development more (and occasionally less) necessary.
 
 ## This portal
 
 This portal attempts to collect all the related facts, rationale and techniques for Trunk Based Development together
-in one place, complete with twenty diagrams to help explain things. All without using TBD as an acronym
+in one place, complete with twenty four diagrams to help explain things. All without using TBD as an acronym
 even ~~once~~ twice.
-
-# References elsewhere
-
-<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
-
-Date    | Type  | Article
---------|-------|--------
-01 Jul 2016 | Blog Entry | [Why Google Stores Billions of Lines of Code in a Single Repository](http://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext)
