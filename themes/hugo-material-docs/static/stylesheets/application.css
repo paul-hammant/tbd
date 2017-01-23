@@ -1074,7 +1074,8 @@ h1 .article .headerlink {
 
 .article h4 {
     font-weight: 400;
-    font-style: italic
+    font-style: italic;
+    text-decoration: underline
 }
 
 .article h2 a, .article h3 a, .article h4 a, .article h5 a, .article h6 a {
