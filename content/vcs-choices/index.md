@@ -184,7 +184,11 @@ a Trunk Based Development usage.
 [Website](https://www.plasticscm.com/)
 
 PlasticSCM is a modern DVCS like Git and Mercurial. It is compatible with Trunk Based Development and quite 
-self-contained (has integrated code review, etc). It is also the first modern VCS to have semantic merge - it understands 
+self-contained (has integrated code review, etc). Plastic is very good with bigger binaries, and comes with an 
+intuitive "Branch Explorer" to see the evolution of branches, view diffs, execute merges, etc.
+
+It is also the first modern VCS to have semantic merge - it understands 
 select programming languages and the refactorings developers perform on them. For example "move method", where that
 method is 50 lines long, isn't 50 lines added and 50 deleted in one commit, it is a much more *exact* and terse diff
 representation.
+

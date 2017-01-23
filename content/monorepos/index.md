@@ -89,7 +89,7 @@ We detailed two intentions above. Here is one more:
 
 In Google, rather than feed into the backlog of the team that maintains `TheORMweDepOn` (which may exist as a part 
 time committee rather than a team), the developer in question would make the change themselves. Perhaps they had make 
-it in the same commit as the the first usage of it for `MyTeamsApplication`.  In the code review cycle (Google do
+it in the same commit as the first usage of it for `MyTeamsApplication`.  In the code review cycle (Google do
 common code ownership), the approvers for the `TheORMweDepOn` would see all the changes together. The larger change is 
 all accepted or rejected (to be remediated) atomically.
 

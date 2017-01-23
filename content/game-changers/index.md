@@ -77,7 +77,7 @@ Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="
  (presented at a SCM conference in Brussels the same year).
  
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
-it that help set a foundation for the the next ten years of version-control advances.
+it that help set a foundation for the next ten years of version-control advances.
 
 ## Extreme Programming's Continuous Integration (1999)
 

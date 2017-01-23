@@ -10,7 +10,7 @@ is best. However, the effort and length of time needed to complete each of the m
 large enough to require different project teams cooperating towards that plan. Some of those teams will be within
 the same codebase. Some may dependent building services that the application will call. Not everything is equal effort
 it seems, yet the business wants a specific rollout, including dates and can plan that even 18 months ahead. They are
-so specific because there is an impact on the the user community (staff, clients, customers or members of the public).
+so specific because there is an impact on the user community (staff, clients, customers or members of the public).
 
 What you've got is the perfect setup for disaster born from the random bigger pieces bad news that can happen in 
 software development. 

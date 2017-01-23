@@ -6,7 +6,7 @@ weight: 42
 
 ## The high bar today
 
-Continuous Code Review is where the the team commits to processing team-mates proposed commits to trunk speedily. 
+Continuous Code Review is where the team commits to processing team-mates proposed commits to trunk speedily. 
 The idea is that a system (the code portal probably) allows developers to package up commits for code review and get 
 that in front of peers quickly. That peer developer makes a commitment to do code reviews objectively and fairly. 
 There is a cost to multi-tasking, so maybe someone in the dev team who is between work items at that moment should focus 
