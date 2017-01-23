@@ -55,7 +55,7 @@ Google, for one, has millions of
 individual source files in a single trunk branch of a repository that contains 86 terabytes of history, with 
 20,000 developers contributing to it constantly. We cover that advanced setup in [Monorepos](monorepos/), And Googlers
 talked about the incedible scale of their trunk 
-[in a magazine article and a video](/game-changers/#google-shaing-their-trunk-usage-why-google-stores-billions-of-lines-of-code-in-a-single-repository-2016).
+[in a magazine article and a video](/game-changers#google-shaing-their-trunk-usage-why-google-stores-billions-of-lines-of-code-in-a-single-repository-2016).
 
 Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers) have made 
 Trunk Based Development more (and occasionally less) necessary.
