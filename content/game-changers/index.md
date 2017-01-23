@@ -323,6 +323,9 @@ A [Monorepo](/monorepos/) varient of a trunk, with internal code shared at sourc
 low-defect delivery of multiple applications and services. Each of those having release cadence chosen by the dev+biz 
 team in question.
 
+Rachel Potvin presented on the same topic a couple of months later in "Why Google Stores Billions of Lines of Code in a 
+Single Repository"{{< ext url="https://www.youtube.com/watch?v=W71BTkUbdqE" >}}.
+
 # References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
