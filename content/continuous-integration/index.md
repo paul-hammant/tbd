@@ -70,12 +70,12 @@ This should go up on TVs if developers are co-located. It should also be a click
 The elapsed time between the commit and the "this commit broke the build" notification, is key. That is because the cost 
 to repair things in the case of a break, goes up when additional commits have been pushed to the branch. One of the 
 facets of the 'distance' that we want to reduce (refer [5 minute overview](/5-min-overview/)) is the distance to break.
-
+ 
 ### Pipelines - further reading
 
 Note: Continuous Integration Pipelines are better described in the best selling 
-[Continuous Delivery](/publications/#continuous-delivery-july-27-2010) book. So are dozens of nuanced, lean inspired 
-concepts for teams pushing that far.
+[Publications - Continuous Delivery](/publications/#continuous-delivery-july-27-2010) book. So are dozens of nuanced, 
+lean inspired concepts for teams pushing that far.
 
 ## Advanced CI topics
 
@@ -119,7 +119,33 @@ the trunk.  There's still room for error based on timing, so CI needs to kick in
 trunk, but the chance of the second build failing so small that an automated revert/roll-back is probably the best way 
 to handle it (and a notification).
 
-TODO links to game changers
+### The high bar, today
+
+Highest througput teams have CI server setups that prevent breakage of the trunk. That means that commits are verified
+before they land in the trunk to the extent where team mates can update/sync/pull.
+
+The problem this solves is when rate of commit into the trunk would be too high to have an auto-rollback on build 
+failure. In Google one commit lands in the trunk every 30 seconds. Few CI technologies (and source control systems) can 
+keep up with that in way that isn't batching (to some degree of interpretation). You'd be stopping the line too often 
+for humans to make sense of a train wreck of red builds, where only one two were actual breakages rather than just bad 
+timing.
+
+It wouldn't be computationally hard
+to recreate a last-green-plus-this-commit contrived HEAD to verify a commit in isolation to the other 20 that arrived in 
+the last ten minites, but it would be be a crazy amount of computing power to do so. Better to marshal the pending 
+commit in a place where it is already immediately follow a previously known green (passing) commit, and isn't yet on 
+the shared trunk.
+
+That place has a name - a branch (or a branch on a fork the Github way). It is a perfect place to CI verify the commit
+before auto-merging it to the shared trunk (if you want to auto-merge after code review approvals). 
+
+The new problem is how do you prevent that short-lived feature branch from sleepwalking into a long-lived feature 
+branch with half a dozen developers keeping it from being 'complete' (somehow) and merged back. You can't with tools
+today, but it would be cool if you could have a ticking clock / count down on those branches at creation to enforce
+its 'temporary' intention.
+
+Refer to [Game Changers - Google Home Grown CI and Tooling](/game-changers/#home-grown-ci-and-tooling) for more 
+information on the high commit rate CI stuff. Note too that they do not have a temp branch setup to facilitate that.
 
 ## Industry CI daemon confusion
 
