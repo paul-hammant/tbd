@@ -105,7 +105,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a>
-      <img width="95" src="/images/favicon.ico" style="float:left; padding-right:10px"/>
+      <img width="91" src="cdit_org_perf.png" style="float:left; padding-right:10px"/>
     </a>
     <p>
         <em>The Role of Continuous Delivery in IT and Organizational Performance</em><br/>

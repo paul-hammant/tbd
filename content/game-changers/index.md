@@ -259,6 +259,8 @@ development for teams of course.
 
 ## Continuous Delivery Book (2010)
 
+See [Publications - Continuous Delivery](/publications#continuous-delivery-july-27-2010)
+
 Jez Humble{{< ext url="https://continuousdelivery.com" >}} and Dave 
 Farley{{< ext url="http://www.continuous-delivery.co.uk" >}} wrote this influential book after a 
 ThoughtWorks project in London that finished in 2007. 
