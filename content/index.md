@@ -7,7 +7,7 @@ weight: 0
 
 ## One line summary
 
-A source-control branching model, where a single branch called trunk* is where any amount of developers can share code, 
+A source-control branching model, where developers can share code on a single branch called trunk*, 
 and resist any pressure to create other long-lived development branches by employing one or more documented techniques. 
 
 ![](/images/trunk1.png)
@@ -15,15 +15,15 @@ and resist any pressure to create other long-lived development branches by emplo
  &ast; 'master', in Git nomenclature
 
 Trunk Based Development is a key enabler of [Continuous Integration](continuous-integration/), and by extension
-[Continuous Delivery](continuous-delivery/). When individuals on a team are committing their changes to trunk
-multiple times a day it becomes easy to satify the core requirement of Continuous Integration that all team
+[Continuous Delivery](continuous-delivery/). When individuals on a team are committing their changes to the trunk
+multiple times a day it becomes easy to satisfy the core requirement of Continuous Integration that all team
 members commit to trunk at least once every 24 hours. This ensures the codebase is always releasable on demand
 and helps to make Continuous Delivery a reality.
   
 ## Caveats
 
 - If you have more than a couple of developers on the project, you are going to need a hook up a 
-  [build server](continuous-integration/) to verify the commits being done
+  [build server](continuous-integration/) to verify their commits
 
 - Depending on the team size, and the rate of commits, **very short lived** feature/task branches are used for 
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
@@ -53,9 +53,9 @@ The largest of development organizations, like Google and Facebook practice it a
 
 Google, for one, has millions of 
 individual source files in a single trunk branch of a repository that contains 86 terabytes of history, with 
-20,000 developers contributing to it constantly. We cover that advanced setup in [Monorepos](monorepos/), And Googlers
+25,000 developers contributing to it constantly. We cover that advanced setup in [Monorepos](monorepos/), And Googlers
 talked about the incedible scale of their trunk 
-[in a magazine article and a video](/game-changers#google-shaing-their-trunk-usage-why-google-stores-billions-of-lines-of-code-in-a-single-repository-2016).
+[in a magazine article and a video](/game-changers#google-sharing-their-trunk-usage-2016).
 
 Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers) have made 
 Trunk Based Development more (and occasionally less) necessary.
