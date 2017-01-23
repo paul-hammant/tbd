@@ -340,8 +340,6 @@ Single Repository"{{< ext url="https://www.youtube.com/watch?v=W71BTkUbdqE" >}}.
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-Other than the references inline (above) ...
-
 Date    | Type  | Article
 --------|-------|--------
 13 Nov 2013 | Talk | [A Practical Approach to Large Scale Agile Development](https://www.youtube.com/watch?v=2QGYEwghRSM)
