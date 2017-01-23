@@ -19,16 +19,13 @@ RCS was a simple but 'early days' version control technology, by Walter F. Tichy
 
 In Tichy's 1985 paper 
 "RCS - A System for Version Control"{{< ext url="https://www.gnu.org/software/rcs/tichy-paper.pdf" >}}, a trunk 
-focused mode of use is described as a "slender branch", and that you stepped away from it for four reasons:
+focused mode of use is described as a "slender branch". In section 3.1. "When are branches needed?", 
+he says that you step away from the trunk for four reasons:
 
-<br><div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 150%">&ldquo;</span>
-<b>Section 3.1. When are branches needed?</b><br>
+<div style="padding-left: 40px"/><span style="font-size: 120%">&ldquo;</span>
 A young revision tree is slender: It consists of only one branch, called the trunk.<br>
 As the tree ages, side branches may form. Branches are needed in the following 4 situations.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Temporary fixes [...]<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Distributed development and customer modifications [...]<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Parallel development [...]<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Conflicting updates [...]<br>
+Temporary fixes, Distributed development and customer modifications, Parallel development, and Conflicting updates.
 </div>
  
 Two of those, Tichy suggests, are temporary branches and would come back to the trunk at the earliest opportunity. 
@@ -36,14 +33,19 @@ Two of those, Tichy suggests, are temporary branches and would come back to the 
 Superficially, RCS allowed multi-branch parallel development, but some teams were very careful and stuck
 to a 'slender', or Trunk Based Development mode of use.
 
+Note: Over time all version control systems would adopt this branch/merge language.
+
 ## Microsoft Secrets book (1995)
 
 Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages 
 People (Michael Cusumano & Richard Selby, 1995) {{< ext url="https://www.amazon.com/Microsoft-Secrets-Powerful-Software-Technology/dp/0684855313" >}}
 
-There's a section of the book dealing with Microsoft's per-developer workflow using Source Library Manager (SLM) on 
-a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - an Internal Microsoft tool 
-for source-control until it was replaced by Source Depot in 1998. That daily, rigorous, developer workflow was:
+The book was translated into 14 languages, and a best seller. 
+
+There's a section in *Microsoft Secrets* dealing with Microsoft's per-developer workflow using Source Library Manager 
+(SLM) on  a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - an Internal 
+Microsoft tool for source-control until it was replaced by Source Depot in 1998. That daily, rigorous, developer 
+workflow was:
 
 1. checkout (update/pull/sync or checkout afresh)
 2. implement feature 
@@ -57,14 +59,12 @@ for source-control until it was replaced by Source Depot in 1998. That daily, ri
 10. check in (commit/push)
 11. makes a daily build from HEAD of the shared master branch
 
-The authors note in the book, that #10 isn't always an every day thing. And the last step isn't per developer, it is 
+The authors note in the book, that #10 isn't always an every day thing. And the last step, #11, isn't per developer, it is 
 for the designated "build master" within the team, and manual. 
 
 The book also briefly mentions Test Case Manager (TCM) and "Microsoft Test". These were tools for helping developers 
 manage and record/edit/playback application tests at their workstations. It isn't clear if all SLM-using teams
 also used these, but the Excel team did (as they maintained the former at least).
-
-The book was translated into 14 languages, and was also a best seller. 
 
 These are clearly practices to support teams working in a trunk model.
 
@@ -100,7 +100,7 @@ Kent had pioneered (with many industry luminary friends) in 1996 on the famous C
 
 ### Continuous Integration on MartinFowler.com
 
-Martin Fowler and Matt Foemmel{{< ext url="http://blog.foemmel.com" >}} wrote an online article "Continuous 
+Martin Fowler and Matt Foemmel{{< ext url="http://blog.foemmel.com" >}} wrote an influential article "Continuous 
 Integration" in 2000{{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
 calling out this one part of XP. Martin greatly updated it in 2006 
 {{< ext url="https://www.martinfowler.com/articles/continuousIntegration.html" >}}. 
@@ -124,17 +124,16 @@ Apache's Gump was built on a similar time line, but focused more on the binary i
 interdependent Apache (and other) open-source projects. It gave an early warning of integration clashes that were 
 already, or were about to be problematic, for teams. While impressive, it use did not gain traction in the enterprise. 
 This is because enterprises were able to be more buffered from open-source library hell (and the implicit diamond 
-dependency problem), by controlling (limiting) the rate at which the upgraded their third-party binary dependencies.
+dependency problem), by limiting the rate at which the upgraded their third-party binary dependencies.
 
-Sam Ruby remembers:
+Gump creator, Sam Ruby remembers:
 
-<div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 120%">&ldquo;</span>
+<div style="padding-left: 40px; padding-right: 45px"/><span style="font-size: 120%">&ldquo;</span>
 The original motivation for Gump wasn't so much continuous<br>
 as it was integration - in particular, integration in the large.<br>
 Many projects had unit tests but would routinely make changes<br>
 that would break their 'contract' and nobody would notice until<br> 
-well after the changes were released
-<span style="font-size: 120%">&rdquo;</span>
+well after the changes were released.
 </div>
 
 ## Subversion's "lightweight" branching (2000&#47;2001)
