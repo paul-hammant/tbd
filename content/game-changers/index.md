@@ -271,7 +271,13 @@ automated steps, to allow faster feedback loops, including a high confidence in 
 minutes before.  CI pipelines and delta-scripts for database table-shape migrations, in particular, were focused on.
 
 The 2010 'Continuous Delivery' book is the best selling result. It has been translated into three languages since, and 
-both authors now have careers that further deliver/describe the benefits for clients.
+both authors now have careers that further deliver/describe the benefits for clients. The book ties the foundational 
+aspects of DevOps, Continuous Integration pipelines, and tight lean-inspired feedback loops together to get a broad
+and deep definition of how we should develop software collectively in 2010 and onwards. The pipelines work as much as 
+anything else is a linear representation of Mike Cohn's "Test Pyramid" from his 2009 book, 
+"Succeeding with Agile"{{< ext url="https://www.amazon.com/gp/product/0321579364" >}}. See Mike blog entry a month 
+later too{{< ext url="https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid" >}}, 
+as well as Martin's recap in 2012{{< ext url="https://martinfowler.com/bliki/TestPyramid.html" >}}.
 
 Dan North{{< ext url="https://dannorth.net" >}} (Mr BDD), Chris Read{{< ext url="https://www.linkedin.com/in/devopscread" >}} 
 (an unsung DevOps pioneer) and Sam Newman{{< ext url="http://samnewman.io" >}} were also key the AOL advances. 
