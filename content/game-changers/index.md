@@ -272,10 +272,11 @@ Dan North gave a deeper account of the mission at GOTO in 2014{{< ext url="https
 A mission a year or so before that for UK retailer Dixons, saw Sam and Dave accumulate a number of other 
 DevOps emergent practices, they'd get to reuse and refine on the AOL mission.
 
-## HP LaserJet Book (2012)
+## Case Study: A Practical Approach To Large Scale Agile Development (2012)
 
 Gary Gruver, Mike Young, and Pat Fulghum wrote
-[A Practical Approach To Large Scale Agile Development](https://www.amazon.com/dp/0321821726) to describe the multi-year
+"A Practical Approach To Large Scale Agile Development"{{< ext url="https://www.amazon.com/dp/0321821726" >}} 
+to describe the multi-year
  transformation programme in the HP LaserJet Firmware division. In 2008, there were over 400 engineers dotted around
  the world working on over 10 million lines of printer firmware code in the HP LaserJet Firmware division. There
  were 10+ long-lived release feature branches (one for each product variant), with 1 week required for a build and
@@ -283,7 +284,7 @@ Gary Gruver, Mike Young, and Pat Fulghum wrote
  merging features between branches and only 5% of their time on new features.
 
  For the next couple of years, HP committed to a huge investment in Trunk Based Development and
- Continuous Integration. All product variants were re-architected as a single product on Git master, per-variant
+ Continuous Integration. All product variants were re-architected as a single product on a Git master, per-variant
  features extracted into XML config files, all engineers worldwide were given the same virtual machine for development,
  and a huge multi-tier continuous build process was fully automated in-house. The results were outstanding, with build
  time reduced to 1 hour and manual testing replaced with a 24 hour fully automated test suite including printing
