@@ -230,8 +230,8 @@ first time it had been detailed online, and given a name (by Stacy Curl).
 ## Github's entire platform - 2008 onwards
 
 Github was launched as a portal on February 8, 2008, and feature have been added steadily ever since. The initial 
-version contained forks, which was a formal way of expressing the directionality of related DVCS repos, and 
-empowering a forgiveness model for unsolicited changes to code (as opposed to a permission model that preceded it
+version contained forks, which was a formal way of expressing the directionality of related DVCS repositories, and 
+promoting a forgiveness model for unsolicited changes to code (as opposed to the permission model that preceded it
 for other portals).
 
 ### Pull Requests (2008)
@@ -241,8 +241,16 @@ while in beta, and popularized the entire practice for the industry when they ca
 For source/repo platforms, and VCSs generally, this and "forking generally" was a total game changer, and commercial 
 prospects of other companies were decided based on their ability to react to this culture change.
 
+#### Code Review built in
+
+Pull Requests came with an ability to leave code review comments for the contribution. That meant that "upstream" 
+receivers of contributions could parry them with feedback, rather than consume them and fix them which was common 
+previously.
+
+#### no more clunky patch sets
+
 The open-source community for one, could step away from patch-sets that were donated by email (or rudimentarily). 
-Pull-Requests changed the dynamics of open source.  Now, the original creator of open source was forced to keep up 
+Pull-Requests changed the dynamics of open source. Now, the original creator of open source was forced to keep up 
 with PRs because if they did not, a fork with more activity and forward momentum, might steal the community. Perhaps 
 rightfully so. 
 
