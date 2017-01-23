@@ -169,5 +169,5 @@ Date    | Type  | Article
 10 Sep 2000 | MartinFowler.com Article | [Continuous Integration - original version](https://www.martinfowler.com/articles/originalContinuousIntegration.html)
 18 May 2006 | MartinFowler.com Article | [Continuous Integration](https://www.martinfowler.com/articles/continuousIntegration.html)
 18 May 2015 | Hangout Debate | [Branching strategies and continuous delivery](https://www.youtube.com/watch?v=30yN4hefrt0)
-02 Sep 2015 | Conference Presentation | [The Death of Continuous Integration](https://www.youtube.com/watch?v=q-dPdpxIcZQ)
+02 Sep 2015 | Conference Presentation | [The Death of Continuous Integration](https://www.infoq.com/presentations/death-continuous-integration)
 
