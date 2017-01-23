@@ -29,10 +29,14 @@ that a single branch as the long-term "most valuable" code line.
 It is perfectly possible to do Trunk Based Development in a Git repository. By convention 'master' is the long term 
 most valuable branch, and once cloned to your local workstation, the repository gains a nickname of 'origin'.
 
+### Forks
+
 An effective Trunk Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
 (and of master within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
 consumed back into origin:master. Other branching models use the same Pull-Request process for 
 code-reviews too - it is the normal way of working with Git since GitHub rolled out the feature.
+
+### Size Limits
 
 Historically, Git and Mercurial were not great at maintaining a zipped history size greater that 1GB. Many 
 teams have reported that they have a repository size larger than that, so opinions differ. One way that you can reach 
@@ -42,8 +46,18 @@ binary that changes frequently can push the total use above 1GB.
 With the likes of correctly configured Git-LFS extension to Git, though, the 1GB limit can be avoided or delayed 
 many years.  
 
+Git also has Submodules{{< ext url="https://git-scm.com/docs/git-submodule" >}} and 
+Subtrees{{< ext url="https://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree" >}} to allow large 
+federations of modules, within one cloneable set.  For their 
+ Android initiative, Google made Git-repo{{< ext url="http://source.android.com/source/using-repo.html" >}} too.
+
+### Root level branches
+
 It'll be clear later why we mention this, but Git and Mercurial maintain branches from the root folder of the 
 checkout clone, and maintains a single permission for a user in respect of Read and/or write on the branch and/or repository.
+
+### Future development
+
 
 There is a suggestion that Mercurial is receiving contributions that will allow it to push into the very repository
 territory the likes of Google needs.
