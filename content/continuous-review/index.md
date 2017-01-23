@@ -29,5 +29,6 @@ Historically, open source teams never had the luxury of procrastinating about co
 
 ## See also
 
-See [Game Changes - Google's Mondrian](/game-changers//#mondrian-2006) and for the industry impact of continuous code 
+See [Game Changes - Google's Mondrian](/game-changers#mondrian-2006) and 
+[Game Changes - Github's Pull Requests](/game-changers#pull-requests-2008) for the industry impact of continuous code 
 review.
