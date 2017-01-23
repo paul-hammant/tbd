@@ -12,12 +12,18 @@ and resist any pressure to create other long-lived development branches by emplo
 
 ![](/images/trunk1.png)
   
- &ast; 'master', in Git nomenclature    
+ &ast; 'master', in Git nomenclature
+
+Trunk Based Development is a key enabler of [Continuous Integration](continuous-integration/), and by extension
+[Continuous Delivery](continuous-delivery/). When individuals on a team are committing their changes to trunk
+multiple times a day it becomes easy to satify the core requirement of Continuous Integration that all team
+members commit to trunk at least once every 24 hours. This ensures the codebase is always releasable on demand
+and helps to make Continuous Delivery a reality.
   
 ## Caveats
 
 - If you have more than a couple of developers on the project, you are going to need a hook up a 
-  [Continuous Integration](continuous-integration/) server to verify the commits being done
+  [build server](continuous-integration/) to verify the commits being done
 
 - Depending on the team size, and the rate of commits, **very short lived** feature/task branches are used for 
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
@@ -31,7 +37,7 @@ and resist any pressure to create other long-lived development branches by emplo
 - Teams should become adept with the related [branch by abstraction](/branch-by-abstraction/) technique, and 
   use [feature flags](/feature-flags/) in day to day development.
    
-- Development teams can transition from a maintence-centric low head-count to a sudden 10x increase, tackling multiple 
+- Development teams can transition from a maintenance-centric low head-count to a sudden 10x increase, tackling multiple
   parallel projects on the same application or service, with ease. [Branch by abstraction](/branch-by-abstraction/) 
   and [feature flags](/feature-flags/) again, but towards 
   [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/) to further
