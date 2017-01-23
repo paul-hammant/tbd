@@ -314,6 +314,15 @@ state of HEAD on any branch. This was visually indicated with "build passes" and
 "build fails" badges were inserted into the Github UI. This made it was clear whether the proposed PR 
 would break the build or not were it to be merged into trunk. 
 
+## Google shaing their Trunk usage: Why Google Stores Billions of Lines of Code in a Single Repository - 2016
+
+In none other than the Association for Computing Machinery's magazine, Googlers Rachel Potvin and Josh Levenberg share
+how Google arranges for 95% (25,000) of its software developers to share one trunk
+{{< ext url="http://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext" >}}.
+A [Monorepo](/monorepos/) varient of a trunk, with internal code shared at source level, for high-throughput, 
+low-defect delivery of multiple applications and services. Each of those having release cadence chosen by the dev+biz 
+team in question.
+
 # References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
