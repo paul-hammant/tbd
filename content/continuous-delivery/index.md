@@ -35,6 +35,7 @@ applications/services where  clients/customers could lose money, are much less l
 
 Date    | Type  | Article
 --------|-------|--------
+2010 | Jez Humble's Continuous Delivery portal | [ContinuousDelivery.com](https://continuousdelivery.com/)
 5 Jan 2015 | TheGuardian newspaper on their CD | [Delivering Continuous Delivery, continuously](https://www.theguardian.com/info/developer-blog/2015/jan/05/delivering-continuous-delivery-continuously)
 
 
