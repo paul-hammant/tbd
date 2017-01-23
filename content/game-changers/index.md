@@ -272,6 +272,24 @@ Dan North gave a deeper account of the mission at GOTO in 2014{{< ext url="https
 A mission a year or so before that for UK retailer Dixons, saw Sam and Dave accumulate a number of other 
 DevOps emergent practices, they'd get to reuse and refine on the AOL mission.
 
+## HP LaserJet Book (2012)
+
+Gary Gruver, Mike Young, and Pat Fulghum wrote
+[A Practical Approach To Large Scale Agile Development](https://www.amazon.com/dp/0321821726) to describe the multi-year
+ transformation programme in the HP LaserJet Firmware division. In 2008, there were over 400 engineers dotted around
+ the world working on over 10 million lines of printer firmware code in the HP LaserJet Firmware division. There
+ were 10+ long-lived release feature branches (one for each product variant), with 1 week required for a build and
+ 6 weeks required for manual regression testing. The engineers spent 25% of their time working on product support i.e.
+ merging features between branches and only 5% of their time on new features.
+
+ For the next couple of years, HP committed to a huge investment in Trunk Based Development and
+ Continuous Integration. All product variants were re-architected as a single product on Git master, per-variant
+ features extracted into XML config files, all engineers worldwide were given the same virtual machine for development,
+ and a huge multi-tier continuous build process was fully automated in-house. The results were outstanding, with build
+ time reduced to 1 hour and manual testing replaced with a 24 hour fully automated test suite including printing
+ test pages. 10-15 builds could be produced a day, engineers spent 5% of their time not 25% on product support and 40%
+ of their time not 5% of their time on new features. That is an 8x increase in productivity for 400 engineers.
+
 ## PlasticSCM's semantic merge (2013)
 
 Plastic's semantic diff and merge capability was launched in April 2013 
@@ -303,5 +321,6 @@ Other than the references inline (above) ...
 
 Date    | Type  | Article
 --------|-------|--------
+13 Nov 2013 | Talk | [A Practical Approach to Large Scale Agile Development](https://www.youtube.com/watch?v=2QGYEwghRSM)
 14 Jan 2015 | Blog entry | [From 2½ Days to 2½ Seconds - the Birth of DevOps](http://dizzythinks.net/from-212-days-to-212-seconds-the-birth-of-devops.html)
 23 Apr 2015 | Blog entry | [The origins of Trunk Based Development](http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/)
