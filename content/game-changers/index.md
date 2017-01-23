@@ -168,7 +168,7 @@ As before, this made it easier to consider multiple branches as a viable team se
 Note: Google were practicing Trunk Based Development since the beginning - Craig Silverstein (the first hire) remembers 
 setting it up that way. Much of these were secret to Google until much later.
 
-## Home-grown CI and tooling
+### Home-grown CI and tooling
 
 This was 2002 onwards, but only barely documented outside Google, this the influence is much smaller.
 
@@ -208,7 +208,7 @@ After Mondrian, the open source world saw Gerrit {{< ext url="https://www.gerrit
 in its image, and after that Facebookers made Phabricator{{< ext url="https://en.wikipedia.org/wiki/Phabricator" >}}
 and released that as open source too.
 
-### Google's Selenium Farm (2006)
+### Selenium Farm (2006)
 
 Google CI infrastructure was expanded to have **a second tier of elastic infrastructure**, for scaled Selenium/WebDriver 
 testing.
