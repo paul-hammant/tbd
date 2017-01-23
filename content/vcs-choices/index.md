@@ -128,6 +128,9 @@ of 'trunk', 'tags' and 'branches' for newly-created repositories.
 
 Subversion, like Perforce, has read and write permissions down to the directory and branch.
 
+Interestingly there is a "Subversion vs Git" website{{< ext url="https://svnvsgit.com/" >}}. It does not have a 
+feedback/contact mechanism in order suggest updates (some claims are out of date).
+
 ### No Code Review
 
 Note that Subversion has no local branching capability, and to get code review you need to install third-party servers 

@@ -58,7 +58,7 @@ There are many more ways of passing flag intentions (or any config) to a runtime
 
 It is important to have CI guard your reasonable expected permutations of flag. That means tests that happen on an
 application or service after launching it, should be adaptable too and test what is meaningful for those flag 
-permutations. It also means that in terms of CI pipelines there's a fan-out **after** unit tests, for each meaningful
+permutations. It also means that in terms of CI pipelines there is a fan-out **after** unit tests, for each meaningful
 flag permutation. A crude equivalent is to run the whole CI pipeline in parallel for each meaningful flag permutation.
 That would mean that each commit in the trunk kicks off more that one build - hopefully from elastic 
 infrastructure.

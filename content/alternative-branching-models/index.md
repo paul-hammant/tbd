@@ -49,7 +49,7 @@ See the Github Flow landing page for more{{< ext url="https://guides.github.com/
 
 Mainline is a branching model that was promoted for ClearCase implementations. It is the principal branching 
 model that Trunk Based Development opposes. Mainline is a branch that will last forever&#10033;. Off that, branches are formed
-for teams to do development work on. When that work is complete, a release may happen from that branch, and there's a
+for teams to do development work on. When that work is complete, a release may happen from that branch, and there is a
 **big** merge down to the mainline. On the way to the release, the branch may be frozen. 
 
 So here is the intention, with Mainline:
@@ -60,7 +60,7 @@ When bugs inevitably happen:
 
 ![](/images/mainline2.png)
 
-Whenever there's a bug fix there has to be a merge down to the mainline afterwards. There's no 'wrong' in this modified
+Whenever there is a bug fix there has to be a merge down to the mainline afterwards. There's no 'wrong' in this modified
 branch diagram, but you should be able to guess what the worst case branching/merging scenario is. In case you cannot:
 
 ![](/images/mainline3.png)
@@ -84,7 +84,7 @@ pick merges for any reason. Instead they're doing a "merge everything which is n
 Minimalistically the VCS they are using should have "merge point tracking". At the high end, that should include 
 "record only" merges, and normal merges even after that.
 
-&#10033; Companies that choose 'Mainline' wither and die, we claim, so there's no forever.
+&#10033; Companies that choose 'Mainline' wither and die, we claim, so there is no forever.
 
 #### Merges
 

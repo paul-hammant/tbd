@@ -59,7 +59,7 @@ would implicitly do a day) can vary, and is learned through experience.
 
 The developer needs to run the build, to prove that they did not break anything with the commit. They might have to do 
 a update/pull/sync before they commit/push the changes back to the team's version control server, and additional 
-builds too. There's a risk a race condition there, but lets assume there's not for most teams.
+builds too. There's a risk a race condition there, but lets assume there is not for most teams.
 
 ### Code Reviews
 

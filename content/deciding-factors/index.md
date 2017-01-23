@@ -24,7 +24,7 @@ to do Trunk Based Development. Consider a short-iteration Agile methodology.
 ## Story size
 
 Trunk Based Development needs you to have small stories/tasks. You starting work on a task, should only be matter
-of hours before completing and and pushing it forward for code review. Longer than that, and there's going to be 
+of hours before completing and and pushing it forward for code review. Longer than that, and there is going to be 
 pressure to group a bunch of developers on a non-trunk branch, or worse have developers make branches/forks from your 
 branch, or worse still take intermediate merges from your branch, despite your task not being complete.  
 

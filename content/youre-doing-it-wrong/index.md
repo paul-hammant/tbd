@@ -20,7 +20,7 @@ up to the actual release.
 
 If you are fixing the bug on the release branch and merging it down to the trunk you are doing 
 it wrong - although there is debate about this. 
-There's a chance you might forget to merge it down, and then there's going to be a regression at the next 
+There is a chance you might forget to merge it down, and then there is going to be a regression at the next 
 release moment (fresh branch cut from trunk).
 
 Bugs should be reproduced and fixed on the trunk, and then **cherry-picked** to the release branch. A build should 
@@ -46,6 +46,6 @@ The developer in question may then go ahead and make the next short-lived featur
 
 ## Numbers of developers on 'short lived' feature branches
 
-If there's more that one developer (and the developer's pairing partner) on the same short-lived feature branch, 
+If there is more that one developer (and the developer's pairing partner) on the same short-lived feature branch, 
 then that branch is at risk of not being short-lived. It is at risk of being more and more like a release branch 
 under active development, and not short at all.
