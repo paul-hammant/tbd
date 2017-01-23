@@ -7,7 +7,7 @@ weight: 0
 
 ## One line summary
 
-A source-control branching model, where developers can share code on a single branch called trunk*, 
+A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *, 
 and resist any pressure to create other long-lived development branches by employing one or more documented techniques. 
 
 ![](/images/trunk1.png)
