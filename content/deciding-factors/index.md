@@ -86,7 +86,7 @@ on standards, and come with a promise of a prioritized and fair code review.
 
 Keeping build times short is key.
 
-## Parallelization
+<!-- ## Parallelization
 
 # CI capacity
 
@@ -107,3 +107,5 @@ Keeping build times short is key.
 # Incident handling
 
 # Backlog management
+
+-->
