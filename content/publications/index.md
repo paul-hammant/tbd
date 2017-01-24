@@ -105,7 +105,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a>
-      <img width="91" src="cdit_org_perf.png" style="float:left; padding-right:10px"/>
+      <img width="91" src="/images/cdit_org_perf.png" style="float:left; padding-right:10px"/>
     </a>
     <p>
         <em>The Role of Continuous Delivery in IT and Organizational Performance</em><br/>
@@ -115,3 +115,26 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     </p>
     <br clear="all"/>
 </div>
+
+### 2015 State of DevOps Report
+
+<div>
+    <a>
+      <img width="89" src="/images/2015_state_of_devops.png" style="float:left; padding-right:10px"/>
+    </a>
+    <p>
+        <em>A survey of thousands of software development professionals distilled into a report that determines
+        practices for the highest achieving organizations</em><br/>
+        <span style="font-size: 120%">&ldquo;</span>It was gratifying, though unsurprising, to find that deployment pain was
+        predicted by whether the key continuous delivery practices had been
+        implemented: comprehensive test and deployment automation, the
+        use of continuous integration including trunk-based development, and
+        version control of everything required to reproduce production environments<span style="font-size: 120%">&rdquo;</span>
+        <br/>by Puppet Labs
+        <br/>
+        <a href="https://puppet.com/resources/white-paper/2015-state-devops-report"><strong>Puppet's download form</strong></a>
+    </p>
+    <br clear="all"/>
+</div>
+
+

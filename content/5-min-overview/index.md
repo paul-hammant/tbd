@@ -101,3 +101,4 @@ Date    | Type  | Article
 --------|-------|--------
 16 Jun 2015 | Blog Entry | [Organization Pattern: Trunk Based Development](http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development/)
 
+
