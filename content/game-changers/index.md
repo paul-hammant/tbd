@@ -287,6 +287,14 @@ Dan North gave a deeper account of the mission at GOTO in 2014{{< ext url="https
 A mission a year or so before that for UK retailer Dixons, saw Sam and Dave accumulate a number of other 
 DevOps emergent practices, they'd get to reuse and refine on the AOL mission.
 
+## Travis-CI's Github integration and pass/fail badges (2011)
+
+In 2011, TravisCI provided easy integrations into Github's platform run CI builds for Pull Requests and the general
+state of HEAD on any branch. This was visually indicated with "build passes" and 
+"build fails" badges were inserted into the Github UI{{< ext url="https://docs.travis-ci.com/user/status-images/" >}}. 
+This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk. 
+
+
 ## Case Study: A Practical Approach To Large Scale Agile Development (2012)
 
 Gary Gruver, Mike Young, and Pat Fulghum wrote
@@ -299,7 +307,7 @@ to describe the multi-year
  merging features between branches and only 5% of their time on new features.
 
  For the next couple of years, HP committed to a huge investment in Trunk Based Development and
- Continuous Integration. All product variants were re-architected as a single product on a Git master, per-variant
+ Continuous Integration. All product variants were rearchitected as a single product on a Git master, per-variant
  features extracted into XML config files, all engineers worldwide were given the same virtual machine for development,
  and a huge multi-tier continuous build process was fully automated in-house. The results were outstanding, with build
  time reduced to 1 hour and manual testing replaced with a 24 hour fully automated test suite including printing
@@ -317,17 +325,8 @@ Other source-control tools are not doing semantic diff/merge yet (2017), but the
 If merges between branches are required, and larger 
 code changes (like refactorings) are desired, then multi-branch development is a little easier with this. However, Trunk Based 
 Development's commits are more elegant too, because of it, and in the fullness of time, it might make
-on techniques like Branch by Abstraction easier, or reduce the need for it, if merge contflicts happen less often
+on techniques like Branch by Abstraction easier, or reduce the need for it, if merge conflicts happen less often
 (according to source-control) for something in 2012 that would have been a definite clash.
-
-## Travis-CI's Github integration and pass/fail badges (2013)
-
-(TODO - not sure if Travis were first or popularizing of this)
-
-In 2013, TravisCI provided easy integrations into Github's platform run CI builds for Pull Requests and the general
-state of HEAD on any branch. This was visually indicated with "build passes" and 
-"build fails" badges were inserted into the Github UI. This made it was clear whether the proposed PR 
-would break the build or not were it to be merged into trunk. 
 
 ## Google sharing their Trunk usage - 2016
 
