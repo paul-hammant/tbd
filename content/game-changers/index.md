@@ -38,7 +38,7 @@ Note: Over time all version control systems would adopt this branch/merge langua
 ## Microsoft Secrets book (1995)
 
 Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages 
-People (Michael Cusumano & Richard Selby, 1995) {{< ext url="https://www.amazon.com/Microsoft-Secrets-Powerful-Software-Technology/dp/0684855313" >}}
+People (Michael Cusumano & Richard Selby, 1995){{< ext url="https://www.amazon.com/Microsoft-Secrets-Powerful-Software-Technology/dp/0684855313" >}}
 
 The book was translated into 14 languages, and a best seller. 
 
@@ -69,7 +69,7 @@ also used these, but the Excel team did (as they maintained the former at least)
 These are clearly practices to support teams working in a trunk model.
 
 Note: In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his now famous 
-"The Joel Test" {{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}}.
+"The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}}.
 
 ## Perforce's High Level SCM Best Practices white paper (1998)
 
@@ -110,7 +110,7 @@ calling out this one part of XP. Martin greatly updated it in 2006
 Martin's ThoughtWorks colleagues (Alden Almagro{{< ext url="http://aldenalmagro.com/resume.html" >}}, 
 Paul Julias{{< ext url="http://www.pauljulius.com" >}}, 
 Jason Yip{{< ext url="http://jchyip.blogspot.com" >}}) went on to build the then-dominant 
-"Cruise Control" {{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001. This was a 
+"Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001. This was a 
 ground breaking technology and very accessible to companies wanting a machine to fully verify checkins. 
 
 Early CI servers, including CruiseControl used to have a "quiet period" to make sure they had received every last 
@@ -147,7 +147,7 @@ In comparison to the clunky CVS, Subversion had "lightweight" branching. This ma
 branches active in parallel and merge the team's changes back later. 
 
 Until v1.5 in June 2008, Subversion had an inadequate "merge tracking" capability. It still has edge-case merge bugs 
-today, like this one {{< ext url="https://issues.apache.org/jira/browse/SVN-4635" >}}.
+today, like this one{{< ext url="https://issues.apache.org/jira/browse/SVN-4635" >}}.
 
 ## Git's "lightweight" branching (2005)
 
@@ -203,7 +203,7 @@ to Googlers. Here he that tech talk on YouTube (previously on GoogleVideos)
 {{< ext url="https://www.youtube.com/watch?v=CKjRt48rZGk" >}}. Note at the start he says XP practice 
 "Pair-Programming" is best, and that code review helps fill the gap for situations where you cannot do it.
 
-After Mondrian, the open source world saw Gerrit {{< ext url="https://www.gerritcodereview.com" >}} released 
+After Mondrian, the open source world saw Gerrit{{< ext url="https://www.gerritcodereview.com" >}} released 
 in its image, and after that Facebookers made Phabricator{{< ext url="https://en.wikipedia.org/wiki/Phabricator" >}}
 and released that as open source too.
 
@@ -222,7 +222,7 @@ leverage one of the online services for elastic Selenium testing.
 ## Branch by Abstraction technique (2007)
 
 Paul Hammant blogged about a 2005 ThoughtWorks client engagement in a Bank of America software development team, 
-that used the Branch by Abstraction technique {{< ext url="http://paulhammant.com/blog/branch_by_abstraction.html" >}}.
+that used the Branch by Abstraction technique{{< ext url="http://paulhammant.com/blog/branch_by_abstraction.html" >}}.
 Whereas many had previously used this technique to avoid longer version-control branches in a trunk model, this was the 
 first time it had been detailed online, and given a name (by Stacy Curl).
 
@@ -235,7 +235,7 @@ for other portals).
 
 ### Pull Requests (2008)
 
-Github added "Pull-Requests" (PRs) on Feb 23rd, 2008 {{< ext url="https://github.com/blog/3-oh-yeah-there-s-pull-requests-now" >}},
+Github added "Pull-Requests" (PRs) on Feb 23rd, 2008{{< ext url="https://github.com/blog/3-oh-yeah-there-s-pull-requests-now" >}},
 while in beta, and popularized the entire practice for the industry when they came out of beta in April of that year. 
 For source/repo platforms, and VCSs generally, this and "forking generally" was a total game changer, and commercial 
 prospects of other companies were decided based on their ability to react to this culture change.

@@ -66,14 +66,14 @@ pull-request branches abreast of origin:master help a lot.
 
 # Conways Law
 
-The org making applications and services that reflect the organization's own structure {{< ext url="https://en.wikipedia.org/wiki/Conway's_law" >}}. 
+The org making applications and services that reflect the organization's own structure{{< ext url="https://en.wikipedia.org/wiki/Conway's_law" >}}. 
 If your organization feels like this, and a Monorepo does not feel right, then MicroServices could the direction for you.
 
 # Database migrations
 
 In order get into the Trunk Based Development way, you'll need to find a way to handle table-shape changes, and even
 population of existing rows where new/changed columns happen. Pramod Sadlage and Scott Amber's book 
-"Refactoring Databases: Evolutionary Database Design" {{< ext url="https://www.amazon.com/Refactoring-Databases-Evolutionary-paperback-Addison-Wesley/dp/0321774515" >}}
+"Refactoring Databases: Evolutionary Database Design"{{< ext url="https://www.amazon.com/Refactoring-Databases-Evolutionary-paperback-Addison-Wesley/dp/0321774515" >}}
 goes into that much more, as does the [Continuous Delivery](/continuous-delivery/) book.
 
 # Shared code

@@ -35,7 +35,7 @@ valued.
 Martin Fowler (with Matt Foemmel) called out Continuous Integration in a article in 2000
 {{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
 (rewritten in 2006{{< ext url="https://www.martinfowler.com/articles/continuousIntegration.html" >}}), and 
-ThoughtWorks colleagues went on to build the then-dominant "Cruise Control" {{< ext url="http://cruisecontrol.sourceforge.net" >}} 
+ThoughtWorks colleagues went on to build the then-dominant "Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} 
 in early 2001. Cruise Control co-located the CI configuration on the branch being built next to the build script, as it 
 should be.
 
@@ -152,7 +152,7 @@ information on the high commit rate CI stuff. Note too that they do not have a t
 ThoughtWorks commissioned a survey - "No One Agrees How to Define CI or CD"{{< ext url="https://blog.snap-ci.com/blog/2016/07/26/continuous-delivery-integration-devops-research" >}}.   
 That the hypothesis of Continuous Integration being thought of as compatible with branching models other than Trunk Based Development
 was unfortunately showed to be true. Their chief scientist, Martin Fowler, writes about the general effect in his "Semantic Diffusion"
-article {{< ext url="https://martinfowler.com/bliki/SemanticDiffusion.html" >}}. 
+article{{< ext url="https://martinfowler.com/bliki/SemanticDiffusion.html" >}}. 
 
 Martin also wrote specifically on the 
 lamentable *pat on the back* that multi-active-branch teams give themselves when they setup a CI server/daemon for one

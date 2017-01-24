@@ -13,7 +13,7 @@ downsides:
 
 ![](/images/gitflow.png)
 
-- Diagram copied from Vincent Driessen's 2010 article on GitFlow: "A successful Git branching model" {{< ext url="http://nvie.com/posts/a-successful-git-branching-model" >}}
+- Diagram copied from Vincent Driessen's 2010 article on GitFlow: "A successful Git branching model"{{< ext url="http://nvie.com/posts/a-successful-git-branching-model" >}}
 
 I looks like you'll not be able to do [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/) 
 with this branching model, or the hedging that [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch_by_abstraction/)
