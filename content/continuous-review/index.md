@@ -32,3 +32,11 @@ Historically, open source teams never had the luxury of procrastinating about co
 See [Game Changes - Google's Mondrian](/game-changers#mondrian-2006) and 
 [Game Changes - Github's Pull Requests](/game-changers#pull-requests-2008) for the industry impact of continuous code 
 review.
+
+# References elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
+Date    | Type  | Article
+--------|-------|--------
+13 Nov 2014 | Blog Article | [Code Review - the unit of work should be a single commit](http://paulhammant.com/2014/11/13/code-review-the-unit-of-work-should-be-a-single-commit/)
