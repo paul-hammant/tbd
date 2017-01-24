@@ -39,7 +39,8 @@ commit history, which is not as linear as we present here:
 
 ![](/images/githubflow3.png)
 
-^ oh, and the review commentary is still available after the branch is deleted (or should be)
+Of course if your rebase/squash your series of commits, they could land in the trunk as a single commit.  Also note that 
+the review commentary is still available after the branch is deleted, as it should be.  
 
 See the Github Flow landing page for more{{< ext url="https://guides.github.com/introduction/flow/" >}}
 
