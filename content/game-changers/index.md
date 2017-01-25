@@ -263,12 +263,12 @@ See [Publications - Continuous Delivery](/publications#continuous-delivery-july-
 Jez Humble{{< ext url="https://continuousdelivery.com" >}} and Dave 
 Farley{{< ext url="http://www.continuous-delivery.co.uk" >}} wrote this influential book after a 
 ThoughtWorks project in London that finished in 2007. 
-The client was AOL - enough time has passed to share that. DevOps advances were
-being made across the industry, but a critical aspect was that the prescribed go-live date was tight, given the known
+The client was AOL - enough time has passed to share that. Specific DevOps advances were
+being made across the industry, but a critical aspect for this mission was that the prescribed go-live date was tight, given the known
 amount of work to be completed before then. Tight enough to want to compress the classic 'coding slows down, and 
 exhaustive user acceptance testing starts' phase of a project. The team had to pull the trigger on plenty of 
-automated steps, to allow faster feedback loops, including a high confidence in the quality of commits, from only 
-minutes before.  CI pipelines and delta-scripts for database table-shape migrations, in particular, were focused on.
+automated steps, to allow faster feedback loops. This allowed then to have a high confidence in the quality of commits, from only 
+minutes before. CI pipelines and delta-scripts for database table-shape migrations, in particular, were focused on.
 
 The 2010 'Continuous Delivery' book is the best selling result. It has been translated into three languages since, and 
 both authors now have careers that further deliver/describe the benefits for clients. The book ties the foundational 
@@ -280,12 +280,16 @@ later too{{< ext url="https://www.mountaingoatsoftware.com/blog/the-forgotten-la
 as well as Martin's recap in 2012{{< ext url="https://martinfowler.com/bliki/TestPyramid.html" >}}.
 
 Dan North{{< ext url="https://dannorth.net" >}} (Mr BDD), Chris Read{{< ext url="https://www.linkedin.com/in/devopscread" >}} 
-(an unsung DevOps pioneer) and Sam Newman{{< ext url="http://samnewman.io" >}} were also key the AOL advances. 
+(an unsung DevOps pioneer) and Sam Newman{{< ext url="http://samnewman.io" >}} were also key in the AOL advances. 
 Dan North gave a deeper account of the mission at GOTO in 2014{{< ext url="https://speakerdeck.com/tastapod/the-birth-of-devops" >}} 
 (no video sadly) and was interviewed later by InfoQ{{< ext url="https://www.infoq.com/news/2014/07/birth-cd-devops" >}}.
 
-A mission a year or so before that for UK retailer Dixons, saw Sam and Dave accumulate a number of other 
-DevOps emergent practices, they'd get to reuse and refine on the AOL mission.
+A year or so before that mission, Sam and Dave were on a different client, UK retailer 'Dixons'. They were part of a team rolling out  
+emergent DevOps practices, which they would get to reuse and refine on the following AOL mission. Standouts were: making the
+test environments have consistent behaviour with production environments (very close by not quite 'Infrastructure as Code'), 
+QA automation technologies setup by the dev team & inducting/co-locating individual QAs with the dev team, Test Driven Development (TDD) and 
+Acceptance Test Driven development (ATDD), a CI pipeline that included performance tests, a focus of team dynamics for
+high throughput. 
 
 ## Travis-CI's Github integration and pass/fail badges (2011)
 
@@ -293,7 +297,6 @@ In 2011, TravisCI provided easy integrations into Github's platform run CI build
 state of HEAD on any branch. This was visually indicated with "build passes" and 
 "build fails" badges were inserted into the Github UI{{< ext url="https://docs.travis-ci.com/user/status-images/" >}}. 
 This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk. 
-
 
 ## Case Study: A Practical Approach To Large Scale Agile Development (2012)
 
