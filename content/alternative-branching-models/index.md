@@ -31,7 +31,7 @@ As Github portray, review comments are part of the process. Of course they are -
 above followed by another commit (presumably 132 columns end of line versus 80 prevailed). How Trunk Based Development 
 modifies the Github Flow model:
 
-![](/images/githubflow2.png)
+![](/images/trunk_pr.png)
 
 After the dust has settled, and the short-lived feature branch has been deleted, the commits are not smushed together
 in a bigger one (as would be the case Subversion and Perforce), the instead zip into their respective places in the 

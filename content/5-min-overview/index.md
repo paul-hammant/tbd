@@ -65,9 +65,12 @@ builds too. There's a risk a race condition there, but lets assume that is not g
 
 The developer needs to get the commit reviewed. Some teams will count the fact that the code was developed according 
 to pair programming as an automatic review. Others team will follow a conventional design where the commit is marshaled
-for review before landing in the trunk. In modern portal solutions, marshaled nearly always means a branch/fork that 
-is visible to the team.
+for review before landing in the trunk. In modern portal solutions, marshaled nearly always means a branch/fork (Pull
+Request) that is visible to the team.
 
+![](/images/trunk_pr.png)
+
+^ the speech bubbles are stylized code review comments
 
 Code review branches can (and should) be 
 deleted after the code review is complete, and be very short lived. This is tricky for teams new to Trunk Based 
@@ -79,12 +82,15 @@ keep the branch. Specifically, you do not want to developers to focus on the bra
 
 ## A safety net
 
-![](/images/5trunk1.png)
-
 [Continuous Integration](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lives feature 
 branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
  is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI server to do that 
  automatically.
+
+![](/images/5trunk1.png)
+
+The high bar is verifying the commit before it lands in the trunk. Short lived Pull Request branches are the modern
+place for that.
  
 ## Developer team commitments
 
