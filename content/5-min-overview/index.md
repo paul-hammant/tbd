@@ -46,9 +46,9 @@ of the practices:
 
 ### Checking out / cloning
 
-All developers that contribute to a binary application/service in a team clone and checkout from the trunk. They will 
+All developers in a team that work on a application/service, clone and checkout from the trunk. They will 
 update/pull/sync from that branch a many times a day, knowing that the build within it works perfectly. Their fast 
-source-control system means that there delays are a matter of a few seconds for this operation. They are now 
+source-control system means that their delays are a matter of a few seconds for this operation. They are now 
 integrating their team-mates commits on an hour by hour basis.
 
 ### Committing
@@ -59,20 +59,27 @@ would implicitly do a day) can vary, and is learned through experience.
 
 The developer needs to run the build, to prove that they did not break anything with the commit. They might have to do 
 a update/pull/sync before they commit/push the changes back to the team's version control server, and additional 
-builds too. There's a risk a race condition there, but lets assume there is not for most teams.
+builds too. There's a risk a race condition there, but lets assume that is not going to happen for most teams.
 
 ### Code Reviews
 
 The developer needs to get the commit reviewed. Some teams will count the fact that the code was developed according 
-to pair programming as an automatic review. Others will follow a conventional design where the commit is marshaled
-for review before landing in the trunk. 
+to pair programming as an automatic review. Others team will follow a conventional design where the commit is marshaled
+for review before landing in the trunk. In modern portal solutions, marshaled nearly always means a branch/fork that 
+is visible to the team.
 
-Marshaled nearly always means a branch in a place that is visible to the team. These branches can (and should) be 
-deleted after the code review is complete, meaning they are very short lived. This nuanced. You want to keep 
+
+Code review branches can (and should) be 
+deleted after the code review is complete, and be very short lived. This is tricky for teams new to Trunk Based 
+Development. 
+
+Noe: You want to keep 
 the commentary/approval/rejection that is part of the review for historical and auditing purposes, but you do not want to 
 keep the branch. Specifically, you do not want to developers to focus on the branch after the review.
 
 ## A safety net
+
+![](/images/5trunk1.png)
 
 [Continuous Integration](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lives feature 
 branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
