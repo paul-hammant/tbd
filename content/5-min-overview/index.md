@@ -23,18 +23,6 @@ that might:
 * not show problems of incompatibility/undesirability that does not break the build
 
 Trunk Based Development is a branching model that reduces the distance to the max. 
-
-## Always release ready
-
-Team doing are able to Trunk Based Development will at worst respond "give us one hour" when they were busy on day to 
-day development activities, when the exec management visited and commanded "Competitor X has launched feature Y, go 
-live now with what we have". And in an hour, they're going live with something just stabilized from the trunk. Perhaps 
-they can do it in less than, an hour. The rule, is never break the build, and always be ready for that CIO commanded
-disruption to plans.
-
-There's a key concept here in that Trunk Based Development teams **exclusively** either [release directly from the trunk](/release-from-trunk/) 
-(or a tag made on the trunk), or they make a [branch from the trunk for the specifically for the actually releasing](/branch-for-release/).
-Teams with a higher release cadence do the former, and those with a lower release cadence to the latter.
  
 ## What it is
 
@@ -45,8 +33,23 @@ for development. It may be called 'master'. That hints at the fact that the bran
 called 'trunk' at all.
 {{< /note >}}
 
-There are many deciding factors, before a development team settles on Trunk Based Development, but here's a short overview 
-of the practices:
+There are many deciding factors, before a development team settles on Trunk Based Development, but here is a short overview 
+of the practices if they do:
+
+### Releasability of work in progress
+
+Trunk Based Development will always be **release ready**
+
+If an executive manager visited the development team and commanded "Competitor X has launched feature Y, go 
+live now with what we have", the worst response would be "give us one hour". The development team might have been very 
+busy with tricky or even time consuming tasks (therefore partially complete), but in an hour, they are able to go live 
+with something just stabilized from the trunk. Perhaps they can do it in less than, an hour. The rule though, is never break 
+the build, and always be ready for that CIO-commanded disruption to plans.
+
+A key facilitating concept here in that Trunk Based Development teams **exclusively** either [release directly from the trunk](/release-from-trunk/) 
+(or a tag made on the trunk), or they make a [branch from the trunk for the specifically for the actually releasing](/branch-for-release/).
+Teams with a higher release cadence do the former, and those with a lower release cadence to the latter. 
+
 
 ### Checking out / cloning
 
