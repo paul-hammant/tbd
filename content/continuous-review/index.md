@@ -8,10 +8,18 @@ weight: 42
 
 Continuous Code Review is where the team commits to processing team-mates proposed commits to trunk speedily. 
 The idea is that a system (the code portal probably) allows developers to package up commits for code review and get 
-that in front of peers quickly. That peer developer makes a commitment to do code reviews objectively and fairly. 
+that in front of peers quickly. That peer developers make a commitment to do code reviews objectively and quickly. 
 There is a cost to multi-tasking, so maybe someone in the dev team who is between work items at that moment should focus 
 on the review before they start new work. With a contuous review ethos, it is critical that code reviews are not 
 allowed to back up.
+
+### Pull Requests
+
+The pull-request (PR) model introduced by Github is the dominant code review model today. It is a branch, but a personal
+one and short lived. It may suffer many commits before the developer feels the task is complete, and initiates a PR 
+which triggers code review (and the CI daemon to wake up and build/verify the branch). The temporary branch may have
+recieved many commits before the developer initiated the pull request. Some developers will squash (rebase) the
+changes into a single commit before starting code review. Some teams have a policy in favor of or against squash/rebase. 
 
 {{< note title="Common Code Owners" >}}
 Commits being reviewed are never rejected for "Only I am allowed to change source in this package" reasons. Rejections

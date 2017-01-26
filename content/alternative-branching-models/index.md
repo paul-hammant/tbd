@@ -4,6 +4,11 @@ title: Alternative Branching Models
 weight: 30
 ---
 
+{{< quote title="Branch: only when necessary, on incompatible policy, late, and instead of freeze" >}}
+<span>&mdash; Laura Wingerd & Christopher Seiwald</span><br>
+<span style="margin-left: 30px">(1998's High Level SCM Best Practices white paper from Perforce)</span>
+{{< /quote >}}
+
 ## Modern claimed high-throughput branching models
 
 ### GitFlow and similar
