@@ -83,19 +83,48 @@ lean inspired concepts for teams pushing that far.
 
 Commiting/pushing directly to the shared trunk may be fine for teams with only a few 
 commits a day. Fine too for teams that have a only a few developers who trust each other to be rigorous on their 
-workstation before committing.
+workstation before committing (as it was for everyone in the 90's).
 
 Setups having the CI server single threading on builds and the notification cycle around pass/fail will
-occasion lead to the batching in a CI job. This is not a big problem for small teams. Batching is where one build is 
-verifying two or more commits in one go. Failure of a build that contains two commits is not going to be hard to pick 
-apart in order to know which one caused the failure. That confidence comes from the high probability the two commits 
-were in different sections of the code base and are almost never entangled.
+occasion lead to the **batching** in a CI job. This is not a big problem for small teams. Batching is where one build is 
+verifying two or more commits in one go. It is not going to be hard to pick 
+apart a batch of two or three to know which one caused the failure. You can believe that with confidence because of the 
+high probability the two commits were in different sections of the code base and are almost never entangled.
 
 If teams are bigger though, with more commits a day, pushing something incorrect/broken to trunk could be disruptive to 
-the team. Having the CI daemon deal with every commit is desirable. If the CI daemon is single-threading "jobs" there is a risk
-that the thing could fall behind. Thus, more advanced CI Server configurations have a master and many slaves setup so 
+the team. Having the CI daemon deal with **every commit** separately is desirable. If the CI daemon is single-threading "jobs" there is a risk
+that the thing could fall behind. 
+
+#### Master / Slave CI infrastructure
+
+More advanced CI Server configurations have a master and many slaves setup so 
 that build jobs can be parallelized. That's more of an investment than the basic setup, and but is getting easier and 
-easier in the modern era with evolved CI technologies and services. And the likes of Docker. 
+easier in the modern era with evolved CI technologies and services. 
+
+The likes of Docker means that teams can have build environments that are perfectly small representations of 
+prod infra for the purposes of testing. 
+
+#### Tests are never green incorrectly.
+
+Well written tests, that is - *there are fables of suites of 100% passing unit tests with no asserts in the early 2000's*.
+
+Some teams focus 99.9% of their QA automation on functional correctness. You might note that for 
+a parallelized CI driven *ephemeral* testing infrastructure, that response times for pages are around 500ms, where the
+target for production is actually 100ms. Your functional tests are not going to catch that and fail - they're going to pass. 
+If you had non-functional tests too (that 0.1% case) then you might catch that as a problem. Maybe it is best to move 
+such non-functional automated tests to a later pipeline phase, and be pleased that so many functional tests can run 
+though so quickly and cheaply and often, on elastic (albeit ephemeral) CI infrastructure.  
+
+Here's a claim though: Tests are never green (passing) incorrectly. The inverse - a test failing when the prod code it 
+is verifying actually good - is common. QA automators are eternally fixing (somehow) smaller numbers of flakey tests.
+
+A CI build that is red/failing often, or an overnight CI job that tests everything that happened in the day - and is 
+always a percentage failing is of greatly reduced value.
+
+A regular CI build that by some definition is comprehensive, well written and **always green** unless there's a genuine
+issue is extremely valuable.
+
+Once you get to that trusted always green state, it is natural to run it as often as you can.
 
 ### CI Pre or Post Commit?
 
