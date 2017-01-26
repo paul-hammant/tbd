@@ -46,10 +46,12 @@ busy with tricky or even time consuming tasks (therefore partially complete), bu
 with something just stabilized from the trunk. Perhaps they can do it in less than, an hour. The rule though, is never break 
 the build, and always be ready for that CIO-commanded disruption to plans.
 
-A key facilitating concept here in that Trunk Based Development teams **exclusively** either [release directly from the trunk](/release-from-trunk/) 
-(or a tag made on the trunk), or they make a [branch from the trunk for the specifically for the actually releasing](/branch-for-release/).
-Teams with a higher release cadence do the former, and those with a lower release cadence to the latter. 
+#### Where releases happen
 
+A key facilitating rule here is that Trunk Based Development teams exclusively **either** release directly from the 
+trunk - see [release from trunk](/release-from-trunk/), **or** they make a branch from the trunk for the specifically for 
+the actually releasing. See [Branch for release](/branch-for-release/).
+Teams with a higher release cadence do the former, and those with a lower release cadence to the latter. 
 
 ### Checking out / cloning
 
@@ -62,11 +64,12 @@ integrating their team-mates commits on an hour by hour basis.
 
 Similarly, developers completing a piece of development work (changes to source code), that provably does not 
 break the build, will commit it back to the trunk. The granularity of that commit (how many a developer 
-would implicitly do a day) can vary, and is learned through experience.
+would implicitly do a day) can vary, and is learned through experience, but commits are typically small.
 
-The developer needs to run the build, to prove that they did not break anything with the commit. They might have to do 
-a update/pull/sync before they commit/push the changes back to the team's version control server, and additional 
-builds too. There's a risk a race condition there, but lets assume that is not going to happen for most teams.
+The developer needs to run the build, to prove that they did not break anything with the commit **before** the commit
+is pushed anywhere. They might have to do a update/pull/sync before they commit/push the changes back to the team's 
+version control server, and additional builds too. There's a risk a race condition there, but lets assume that is not 
+going to happen for most teams.
 
 ### Code Reviews
 
