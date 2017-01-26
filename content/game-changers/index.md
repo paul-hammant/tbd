@@ -165,7 +165,10 @@ As before, this made it easier to consider multiple branches as a viable team se
 ## Google's internal DevOps - 1998 onwards
 
 Note: Google were practicing Trunk Based Development since the beginning - Craig Silverstein (the first hire) remembers 
-setting it up that way. Much of these were secret to Google until much later.
+setting it up that way. Much of these were secret to Google until much later, including their recomendations for a 
+70:20:10 ratio for small:medium:large tests, where 'small' were sub-1ms unit tests (no threading, no I/O), 'medium' 
+were unit tests that didn't qualify for *small* (and probably did TCP/IP headlessly to something), with 'large' were 
+almost entirely Selenium functional tests. Pyramid like, and in the mid-2000's.
 
 ### Home-grown CI and tooling
 
@@ -273,9 +276,10 @@ minutes before. CI pipelines and delta-scripts for database table-shape migratio
 The 2010 'Continuous Delivery' book is the best selling result. It has been translated into three languages since, and 
 both authors now have careers that further deliver/describe the benefits for clients. The book ties the foundational 
 aspects of DevOps, Continuous Integration pipelines, and tight lean-inspired feedback loops together to get a broad
-and deep definition of how we should develop software collectively in 2010 and onwards. The pipelines work as much as 
-anything else is a linear representation of Mike Cohn's "Test Pyramid" from his 2009 book, 
-"Succeeding with Agile"{{< ext url="https://www.amazon.com/gp/product/0321579364" >}}. See Mike blog entry a month 
+and deep definition of how we should develop software collectively in 2010 and onwards. 
+
+Anecdotally the pipelines thinking captures a linear representation of Mike Cohn's famous "Test Pyramid" from his 2009 book, 
+"Succeeding with Agile"{{< ext url="https://www.amazon.com/gp/product/0321579364" >}}. See Mike's blog entry a month 
 later too{{< ext url="https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid" >}}, 
 as well as Martin's recap in 2012{{< ext url="https://martinfowler.com/bliki/TestPyramid.html" >}}.
 
