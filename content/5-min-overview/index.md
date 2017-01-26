@@ -31,6 +31,10 @@ day development activities, when the exec management visited and commanded "Comp
 live now with what we have". And in an hour, they're going live with something just stabilized from the trunk. Perhaps 
 they can do it in less than, an hour. The rule, is never break the build, and always be ready for that CIO commanded
 disruption to plans.
+
+There's a key concept here in that Trunk Based Development teams **exclusively** either [release directly from the trunk](/release-from-trunk/) 
+(or a tag made on the trunk), or they make a [branch from the trunk for the specifically for the actually releasing](/branch-for-release/).
+Teams with a higher release cadence do the former, and those with a lower release cadence to the latter.
  
 ## What it is
 
