@@ -297,8 +297,8 @@ high throughput.
 
 ## Travis-CI's Github integration and pass/fail badges (2011)
 
-In 2011, TravisCI provided easy integrations into Github's platform run CI builds for Pull Requests and the general
-state of HEAD on any branch. This was visually indicated with "build passes" and 
+In 2011, Travis-CI{{< ext url="https://travis-ci.com/" >}} provided easy integrations into Github's platform run CI 
+builds for Pull Requests and the general state of HEAD on any branch. This was visually indicated with "build passes" and 
 "build fails" badges were inserted into the Github UI{{< ext url="https://docs.travis-ci.com/user/status-images/" >}}. 
 This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk. 
 
@@ -323,17 +323,39 @@ to describe the multi-year
 
 ## PlasticSCM's semantic merge (2013)
 
-Plastic's semantic diff and merge capability was launched in April 2013 
-{{< ext url="https://www.infoq.com/news/2013/04/Semantic-Merge" >}}, It allowed a greatly reduced diffs for 
-multi-branch situations. 
-
-Other source-control tools are not doing semantic diff/merge yet (2017), but they should be.
-
+Plastic's semantic diff and merge{{< ext url="http://semanticmerge.com/" >}} capability was launched in March 
+2013{{< ext url="https://www.infoq.com/news/2013/04/Semantic-Merge" >}}. It allowed a greatly reduced diffs for 
+refactoring commits.
+ 
 If merges between branches are required, and larger 
 code changes (like refactorings) are desired, then multi-branch development is a little easier with this. However, Trunk Based 
 Development's commits are more elegant too, because of it, and in the fullness of time, it might make
 on techniques like Branch by Abstraction easier, or reduce the need for it, if merge conflicts happen less often
 (according to source-control) for something in 2012 that would have been a definite clash.
+
+Other source-control tools are not doing semantic diff/merge yet (2017), but they should be. Semantic merge is
+just as useful for trunk based development and multi-branch models. It means that there are less likely to be clash 
+situations for commits a developer wants to do. Maybe that last vision isn't quite complete yet, but there's a direction
+ to go in now.
+
+## Snap-CI's per-commit speculative mergability verification (2013)
+
+Snap-CI was the first CI service to setup pipelines for new branches in the tracked repository without a human initiating
+that - it did so automatically on push of the first commit into a branch. Well at least if the branch name conforms 
+to regex/prefix. That commit, and any to the branch afterwards (even preceding the Pull Request) are run though a
+pipeline that includes:
+
+* all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ
+* a speculative merge back to the master/trunk/mainline and #1 again **on that** 
+
+The speculative merge is discarded after #2 - it is only the "is this mergeable or not" news that's desired. 
+
+Although they intended this for short-lived feature branches, it is clear now that teams should do this CI setup 
+**regardless of branching model**. Yes, even the long-lived branching models also benefit from this, though they'll be
+challenged to stay green the whole time, and remain eminently and automatically mergeable back to the mainline/master.
+
+Badrinath 'Badri' Janakiraman wrote a blog entry{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-tracking-and-integration/" >}} 
+when the feature was rolled out - very much worth a read.
 
 ## Google sharing their Trunk usage - 2016
 
