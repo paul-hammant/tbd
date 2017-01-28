@@ -52,6 +52,37 @@ time.
 To facilitate Monorepos, it is important to have a build system that can omit otherwise buildable things/steps that are not
 required for the individual developers **current** build intention. 
 
+The general directory structure for recursive build systems is like so:
+
+```
+root/
+    prod_code/
+        build_file.xml
+        (source files)
+        a_directory/
+            build_file
+            (source files)
+            another_directory/
+                build_file.xml
+                (source files)
+        yet_another_directory/
+            build_file.xml
+    test_code/
+        build_file.xml
+        (source files)
+        a_directory/
+            build_file
+            (source files)
+            another_directory/
+                build_file.xml
+                (source files)
+        yet_another_directory/
+            build_file.xml
+            (source files)
+  ```
+  
+Obviously, YAML, JSON, TOML or custom grammars are alternatives to XML for build files.
+  
 ### Contrived example
 
 Two examples:
@@ -84,15 +115,43 @@ third party binaries from 'binary repositories', caching them locally. Most recu
 be configured to pull third party dependencies from a relative directory in the monorepo. That is not conventional 
 though.
 
+The general directory structure for recursive build systems is like so:
+
+```
+root/
+    build_file.xml
+    module_one/
+        build_file.xml
+        src/
+            (prod source directory tree)
+            (test source directory tree)
+        module_two/
+            build_file.xml
+            src/
+                (prod source directory tree)
+                (test source directory tree)
+    module_three/
+        build_file.xml
+        src/
+            (prod source directory tree)
+            (test source directory tree)
+    src/
+        (prod source directory tree)
+        (test source directory tree)
+
+```
+
+Again, YAML, JSON, TOML and custom grammars are alternatives to XML for build files.
+
 Recursive build systems mostly have the ability to choose a type of build. For example 'mvn test' to just run tests, 
-and not make a binary for distribution. Presently though, these build technologies do not have the ability to follow
-a changeable checkout that the likes of gcheckout can control.
+and not make a binary for distribution.
  
 ## Expandable and Contractible Checkouts 
  
-As some point, if you are depending on in-house dependencies at a source level, your checkout could be bigger than 
-your workstations hard drive. Google's in-house DevOps uses some simple scripting modify the checkout on the developers 
-workstation to omit the source files/packages that are not needed for the current intentions of the developer. 
+As some point, if you are depending on in-house dependencies at a source level and you work for a big company, your 
+checkouts could be bigger than your workstation's hard drive. Google's in-house DevOps uses some simple scripting 
+modify the checkout on the developers workstation to omit the source files/packages that are not needed for the 
+current intentions of the developer. 
 
 ### Gcheckout.sh
 
@@ -134,11 +193,11 @@ change is quick/easy this time (not requiring Branch By Abstraction) step 1 show
 wheel for everyone.  After the commit/push, running again shows the application focused team checkout - either 
 'Car' or 'Segue'.
  
-### Sparse checkouts
+### Git's Sparse checkouts
 
-Both Subversion and Git have a 'sparse checkout' capability, which exactly facilitates this sort of thing.  At team 
-wanting to have their own gcheckout would have some scripting of sprase checkouts. Perforce has a 'client spec' 
-capability that is more or less the same.
+Git has a 'sparse checkout' capability, which exactly facilitates this sort of thing. Subversion and Mercurial do too.  
+Perforce has a 'client spec' capability that is more or less the same. A team wanting to have their own gcheckout equivalent
+would have some scripting around sparse checkouts (or equivalent). 
  
 {{< warning title="Risk of chaotic directory layout" >}}
 Google's co-mingled applications and services site within highly structured and uniform source trees. A Java 
@@ -170,8 +229,12 @@ Because you are doing lock-step upgrades, you only secondarily note the version 
 dependencies, as you check them in to source control without version numbers in the file name.  I.e. JUnit goes in as
 `third_party/java_testing/junit.jar`.
 
-TODO
-### Maven's Conflict with Monorepos
+## Clash of ideologies
+
+Above we contrasted **directed graph** and **recursive** build systems. The former are naturally compatible
+with expandable/collapsible checkout technologies. The latter not necessarily so.
+
+### Maven
  
 Recursive build systems like maven, have a forward declaration of modules that should be built, like so:
 
@@ -182,15 +245,21 @@ Recursive build systems like maven, have a forward declaration of modules that s
 </modules>
 ```
 
-Directories `moduleone` and `moduletwo` have to exist. The idea of monorepos that are doing the gcheckout style
-modifications of a development workstations checkout, is that build graphs are calculated not declared.  You would need a 
-feature like this in Maven to track that:
+Presently though, these build technologies do not have the ability to follow
+a changeable checkout that the likes of gcheckout can control.
+
+Directories `moduleone` and `moduletwo` have to exist in order for the build to work. The idea of expandable/collapsible 
+monorepos, is that trees of buildable things are **calculated or computed** not **explicitly declared**. 
+In order to deliver that, you would need a feature to be added Maven like so:
 
 ```xml
 <modules>
   <calculate/> <!--or--> <search/>
 </modules>
 ```
+
+Or you could "hack it" and rewrite your pom.xml files after every expansion or 
+contraction{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/" >}}.
 
 # References elsewhere
 
@@ -205,4 +274,5 @@ Date    | Type  | Article
 10 Apr 2014 | Blog entry | [Continuous Delivery: The price of admission..](http://paulhammant.com/2014/04/10/cd-the-price-of-admission/)
 10 Oct 2014 | Conference Talk | [Trunk Based Development in the Enterprise - Its Relevance and Economics](https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics)
 18 May 2015 | Blog entry | [Advantages of monolithic version control](http://danluu.com/monorepo/)
-27 Jan 201y | Blog entry | [Maven In A Google Style Monorepo](http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/)
+20 May 2015 | Blog entry | [Turning Bazel back into Blaze for monorepo nirvana](http://paulhammant.com/2015/05/20/turning-bazel-back-into-blaze-for-monorepo-nirvana/)
+27 Jan 2017 | Blog entry | [Maven In A Google Style Monorepo](http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/)
