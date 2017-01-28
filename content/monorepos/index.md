@@ -5,15 +5,17 @@ weight: 30
 ---
 
 A Monorepo, is a specific trunk based development implementation where the organization in 
-question puts the source for all applications and service into one trunk, and forces developers to **share code
-at source level instead of linking in previously built binaries**.  The term 'monorepo' is a newer for a 
-practice that is more than a decade old.
+question puts the source for all their applications and service into one trunk, and forces developers to **share code
+at source level instead of linking in previously built binaries**. The release cadences for each probably be different
+and the teams structures separate or integrated.
+
+The name 'monorepo' is a newer for a previously unnamed practice that is more than a decade old.
 
 Monorepo implementations deliver a couple of principal goals:
 
-* Acquire as many dependencies as possible for a build from the **same** source-control repository/branch, and in the 
+* Acquire as many third-party and in-house dependencies as possible for a build from the **same** source-control repository/branch, and in the 
 same update/pull/sync operation.
-* Keep all teams in agreement on the versions of dependencies via lock-step upgrades.
+* Keep all teams in agreement on the versions of third-party and in-house dependencies via lock-step upgrades.
 
 And some secondary goals:
 
@@ -194,3 +196,4 @@ Date    | Type  | Article
 10 Apr 2014 | Blog entry | [Continuous Delivery: The price of admission..](http://paulhammant.com/2014/04/10/cd-the-price-of-admission/)
 10 Oct 2014 | Conference Talk | [Trunk Based Development in the Enterprise - Its Relevance and Economics](https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics)
 18 May 2015 | Blog entry | [Advantages of monolithic version control](http://danluu.com/monorepo/)
+27 Jan 201y | Blog entry | [Maven In A Google Style Monorepo](http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/)
