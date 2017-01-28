@@ -49,8 +49,12 @@ time.
 
 ## Directed graph build systems
 
-To facilitate Monorepos, it is important to have a build system that can omit buildable things/steps that are not
-required for the current individual developers current intention. Two examples:
+To facilitate Monorepos, it is important to have a build system that can omit otherwise buildable things/steps that are not
+required for the individual developers **current** build intention. 
+
+### Contrived example
+
+Two examples:
 
 * I want to run impacted tests locally, relating to the hair-color field I just added to the person page of `MyTeamsApplication`
 * I want to run bring up `MyTeamsApplication` locally, so I can play with the hair-color field I just added to the person page 
@@ -73,19 +77,32 @@ There is also the ability to depend on recently compiled object code of colleagu
 provable permutations of sources/deps, that is, and plucked from the ether (think of a LRU cache available to all
 machines in the TCP/IP subnet). That is in place to shorten compile times for prod and test code.
  
-## Too big for your boots 
+## Recursive build systems
+
+Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls
+third party binaries from 'binary repositories', caching them locally. Most recursive build systems can
+be configured to pull third party dependencies from a relative directory in the monorepo. That is not conventional 
+though.
+
+Recursive build systems mostly have the ability to choose a type of build. For example 'mvn test' to just run tests, 
+and not make a binary for distribution. Presently though, these build technologies do not have the ability to follow
+a changeable checkout that the likes of gcheckout can control.
+ 
+## Expandable and Contractible Checkouts 
  
 As some point, if you are depending on in-house dependencies at a source level, your checkout could be bigger than 
-your workstations hard drive. Google using some simple scripting modify the checkout on the developers workstation 
-to omit the source files/packages that are not needed for the current intentions of the developer. 
+your workstations hard drive. Google's in-house DevOps uses some simple scripting modify the checkout on the developers 
+workstation to omit the source files/packages that are not needed for the current intentions of the developer. 
 
-### Gcheckout / sparse checkouts
+### Gcheckout.sh
 
 In Google, a Blaze related technology called 'gcheckout' can modify the mappings between the multi-gigabyte HEAD 
 revision of company-wide trunk (monorepo) and developer's own workstation. Thus the source-control tools maintain the 
 **smallest possible subset** of the monorepo on the developers workstation, for them to perform their daily work.
 
-We detailed two intentions above. Here is one more:
+### Contrived example
+
+We detailed two intentions for directed graph build systems above, using a contrived application. Here is one more:
 
 * I now want to change `TheORMweDepOn`, because a change to `MyTeamsApplication` needs me to do that.
 
@@ -101,20 +118,8 @@ too. The Blaze related checkout-modifying technology performs an expansion to br
 developers checkout. From that moment on, the developer doing update/pull/sync will bring down minute by minute
 changes to those three modules.  For free, the build expands to make sure that the `TheORMweDepOn` changes do not 
 break either of `MyTeamsApplication` or `TheirApplication`.
-
-Both Subversion and Git have a 'sparse checkout' capability, which exactly facilitates this sort of thing.  At team 
-wanting to have their own gcheckout would have some scripting of sprase checkouts. Perforce has a 'client spec' 
-capability that is more or less the same.
  
-{{< warning title="Risk of chaotic directory layout" >}}
-Google's co-mingled applications and services site within highly structured and uniform source trees. A Java 
-developer from one project team, instantly recognizes the directory structure for another team's application
-or service. That goes across languages too. The design for the directory layout needs to be enforced globally. You can
-see that in the way that Buck and Bazel structure things, even for unit, integration and functional tests. If you
-cannot overhaul the directory structure of your entire world of project source, do not entertain a monorepo.
-{{< /warning >}}
- 
-#### Contrived example 
+### Contrived example 2 
 
 We used 'change the wheel on a car', on the [Branch By Abstraction](branch-by-abstraction/) page for its contrived 
 example. It will serve us again here. Wheel is what we want to change. The other team using 'Wheel(s)' is making a 
@@ -128,6 +133,20 @@ IDE to the union of Car and Segue (and in-house dependencies). That is marked as
 change is quick/easy this time (not requiring Branch By Abstraction) step 1 shows the single commit that changes
 wheel for everyone.  After the commit/push, running again shows the application focused team checkout - either 
 'Car' or 'Segue'.
+ 
+### Sparse checkouts
+
+Both Subversion and Git have a 'sparse checkout' capability, which exactly facilitates this sort of thing.  At team 
+wanting to have their own gcheckout would have some scripting of sprase checkouts. Perforce has a 'client spec' 
+capability that is more or less the same.
+ 
+{{< warning title="Risk of chaotic directory layout" >}}
+Google's co-mingled applications and services site within highly structured and uniform source trees. A Java 
+developer from one project team, instantly recognizes the directory structure for another team's application
+or service. That goes across languages too. The design for the directory layout needs to be enforced globally. You can
+see that in the way that Buck and Bazel structure things, even for unit, integration and functional tests. If you
+cannot overhaul the directory structure of your entire world of project source, do not entertain a monorepo.
+{{< /warning >}} 
  
 ## The diamond dependency problem
  
@@ -151,18 +170,8 @@ Because you are doing lock-step upgrades, you only secondarily note the version 
 dependencies, as you check them in to source control without version numbers in the file name.  I.e. JUnit goes in as
 `third_party/java_testing/junit.jar`.
 
-## Recursive build systems
-
-Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls
-third party binaries from 'binary repositories', caching them locally. Most recursive build systems can
-be configured to pull third party dependencies from a relative directory in the monorepo. That is not conventional 
-though.
-
-Recursive build systems mostly have the ability to choose a type of build. For example 'mvn test' to just run tests, 
-and not make a binary for distribution. Presently though, these build technologies do not have the ability to follow
-a changeable checkout that the likes of gcheckout can control.
-
-### Conflict with Monorepos
+TODO
+### Maven's Conflict with Monorepos
  
 Recursive build systems like maven, have a forward declaration of modules that should be built, like so:
 
