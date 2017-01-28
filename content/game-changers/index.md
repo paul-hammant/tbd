@@ -341,18 +341,19 @@ situations for commits a developer wants to do. Maybe that last vision isn't qui
 ## Snap-CI's per-commit speculative mergability verification (2013)
 
 Snap-CI was the first CI service to setup pipelines for new branches in the tracked repository without a human initiating
-that - it did so automatically on push of the first commit into a branch. Well at least if the branch name conforms 
-to regex/prefix. That commit, and any to the branch afterwards (even preceding the Pull Request) are run though a
+that - it did so automatically on push of the first commit into a branch. Well, at least if the branch name conforms 
+to a given regex/prefix. That commit, and any to the branch afterwards even preceding the Pull Request, are run though a
 pipeline that includes:
 
 * all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ
-* a speculative merge back to the master/trunk/mainline and #1 again **on that** 
+* a speculative merge back to the master/trunk/mainline and #1 **again** on that resulting merge 
 
-The speculative merge is discarded after #2 - it is only the "is this mergeable or not" news that's desired. 
+The speculative merge is discarded after #2 - it is only the "is this buildable and mergeable or not" notification 
+that is desired. 
 
-Although they intended this for short-lived feature branches, it is clear now that teams should do this CI setup 
+Although they intended this eature of Snap-CI for short-lived feature branches, it is clear now that teams should do this CI setup 
 **regardless of branching model**. Yes, even the long-lived branching models also benefit from this, though they'll be
-challenged to stay green the whole time, and remain eminently and automatically mergeable back to the mainline/master.
+challenged to stay 'green' the whole time, and remain eminently and automatically mergeable back to the mainline/master.
 
 Badrinath 'Badri' Janakiraman wrote a blog entry{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-tracking-and-integration/" >}} 
 when the feature was rolled out - very much worth a read.
