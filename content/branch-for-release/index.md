@@ -50,8 +50,8 @@ one more more commits that happened before it, but after the branch was cut.
 
 ### Late branch creation
 
-Some teams [release from a tag on the trunk](/release-from-trunk/), and do not create a branch at that time. That in itself is **an alternate 
-practice to this one, "branch for release"**.
+Some teams [release from a tag on the trunk](/release-from-trunk/), and do not create a branch at that time. That in 
+itself is **an alternate practice to this one, "branch for release"**.
 
 Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag (if they are
 not going to just issue another release from the trunk).  
