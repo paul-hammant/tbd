@@ -14,7 +14,7 @@ weight: 30
 ### GitFlow and similar
 
 There are plenty in the modern age that swear by this model, and feel it has plenty of room to scale with few 
-downsides:
+downsides. It is a branching model that has **groups** of developers active concurrently in more than one branch (or fork).
 
 ![](/images/gitflow.png)
 
@@ -26,15 +26,17 @@ enable.
 
 ### Github flow
 
-This is sooooo close to PR-centric Trunk Based Development.
+This is sooooo close to PR-centric Trunk Based Development. Why? Because, it is a branching model that has individual
+developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than 
+individuals.
  
 Here's the crucial difference. Whereas for their release-from-branch step:
 
 ![](/images/githubflow1.png)
 
-As Github portray, review comments are part of the process. Of course they are - they're speech bubbles in timeline 
-above followed by another commit (presumably 132 columns end of line versus 80 prevailed). How Trunk Based Development 
-modifies the Github Flow model:
+As the Github documentation portrays, review comments are part of the process. Of course they are, they are the speech 
+bubbles in timeline above followed by another commit (presumably 132 columns end of line versus 80 prevailed). How 
+Trunk Based Development modifies the Github Flow model:
 
 ![](/images/trunk_pr.png)
 
