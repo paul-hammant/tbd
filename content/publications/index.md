@@ -137,7 +137,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
-### 2015 State of DevOps Report
+### 2016 State of DevOps Report
 
 <div>
     <a>
@@ -153,7 +153,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
                                                     high-performing organizations such as Google.3
                                                     Indeed, many practitioners express surprise that this
                                                     practice is in fact implied by continuous integration,
-                                                    but it is: The clue is in the word “integration.”<span style="font-size: 120%">&rdquo;</span>
+                                                    but it is: The clue is in the word 'integration.'<span style="font-size: 120%">&rdquo;</span>
         <br/>by Puppet Labs
         <br/>
         <a href="https://puppet.com/resources/white-paper/2016-state-of-devops-report"><strong>Puppet's download form</strong></a>
