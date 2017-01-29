@@ -50,8 +50,11 @@ one more more commits that happened before it, but after the branch was cut.
 
 ### Late branch creation
 
-Some teams release from a tag on the trunk, and do not create a branch at that time. 
-Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag.  
+Some teams [release from a tag on the trunk](/release-from-trunk/), and do not create a branch at that time. That in itself is **an alternate 
+practice to this one, "branch for release"**.
+
+Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag (if they are
+not going to just issue another release from the trunk).  
 
 Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage 
 of here in the case of bugs after "release from tag", or even changes for point release.
