@@ -137,4 +137,30 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
+### 2015 State of DevOps Report
+
+<div>
+    <a>
+      <img width="135" src="/images/2016_state_of_devops.png" style="float:left; padding-right:10px"/>
+    </a>
+    <p>
+        <em>As their 2015 report, a survey of thousands of software development professionals distilled into a report that determines
+        practices for the highest achieving organizations</em><br/>
+        <span style="font-size: 120%">&ldquo;</span>The idea that developers should work in small batches
+                                                    off master or trunk rather than on long-lived feature
+                                                    branches is still one of the most controversial ideas
+                                                    in the Agile canon, despite the fact it is the norm in
+                                                    high-performing organizations such as Google.3
+                                                    Indeed, many practitioners express surprise that this
+                                                    practice is in fact implied by continuous integration,
+                                                    but it is: The clue is in the word “integration.”<span style="font-size: 120%">&rdquo;</span>
+        <br/>by Puppet Labs
+        <br/>
+        <a href="https://puppet.com/resources/white-paper/2016-state-of-devops-report"><strong>Puppet's download form</strong></a>
+    </p>
+    <br clear="all"/>
+</div>
+
+
+
 
