@@ -4,7 +4,7 @@ title: Game Changers
 weight: 40
 ---
 
-Since the early 80's a number of things have pushed best practices towards Trunk Based Development, or away from it. 
+Since the early 80's a number of things have pushed best practices **towards** Trunk Based Development, or **away** from it. 
 
 The language in use to describe such things has changed over time. Software Configuration Management (SCM) is used less 
 today than Version Control Systems (VCS) is. A simpler still term -"Source Control" - seems to be used more recently, 
@@ -301,6 +301,13 @@ In 2011, Travis-CI{{< ext url="https://travis-ci.com/" >}} provided easy integra
 builds for Pull Requests and the general state of HEAD on any branch. This was visually indicated with "build passes" and 
 "build fails" badges were inserted into the Github UI{{< ext url="https://docs.travis-ci.com/user/status-images/" >}}. 
 This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk. 
+
+## Microservices (2011&#47;2012)
+
+The emergence of micro services as small buildable/deployable things that are glued together with TCP/IP (and 
+XML/YAML/DNS configuration) reinforced "many small repos" (the kinda reinforce each other really), while this can be
+done with any branching model, the non-trunk models probably had the mindshare. Monorepos were out completely. A 
+possibility from monorepos, teams sharing code and source level a HEAD revision, positively laughed it.
 
 ## Case Study: A Practical Approach To Large Scale Agile Development (2012)
 
