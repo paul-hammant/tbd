@@ -44,8 +44,10 @@ and helps to make Continuous Delivery a reality.
 - People who practice the **Github-flow branching model will feel this is quite similar** (there's one small difference). 
   
 - People who practice the Gitflow branching model will find this **very different**, as will many developers used to 
-  popular ClearCase, Subversion, Perforce, StarTeam, VCS branch models of the past.
-
+  the popular ClearCase, Subversion, Perforce, StarTeam, VCS branch models of the past.
+  
+- [Many publications](/publications/), including the best-selling Continuous Delivery book promote Trunk Based 
+  Development - this is not even controversial any more.
 
 ## History
 
