@@ -136,7 +136,7 @@ that would break their 'contract' and nobody would notice until<br>
 well after the changes were released.
 </div>
 
-## Subversion's "lightweight" branching (2000&#47;2001)
+## Subversion's "lightweight" branching (2000 through 2001)
 
 Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". The lack of atomicity in CVS
 means that teams had to coordinate as to who was checking in presently, and whether they'd definably broken the build
@@ -302,7 +302,7 @@ builds for Pull Requests and the general state of HEAD on any branch. This was v
 "build fails" badges were inserted into the Github UI{{< ext url="https://docs.travis-ci.com/user/status-images/" >}}. 
 This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk. 
 
-## Microservices (2011&#47;2012)
+## Microservices (2011 and 2012)
 
 The emergence of micro services as small buildable/deployable things that are glued together with TCP/IP (and 
 XML/YAML/DNS configuration) reinforced "many small repos" (the kinda reinforce each other really), while this can be
