@@ -108,7 +108,7 @@ calling out this one part of XP. Martin greatly updated it in 2006
 ### ThoughtWorks' Cruise Control 
  
 Martin's ThoughtWorks colleagues (Alden Almagro{{< ext url="http://aldenalmagro.com/resume.html" >}}, 
-Paul Julias{{< ext url="http://www.pauljulius.com" >}}, 
+Paul Julius{{< ext url="http://www.pauljulius.com" >}}, 
 Jason Yip{{< ext url="http://jchyip.blogspot.com" >}}) went on to build the then-dominant 
 "Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001. This was a 
 ground breaking technology and very accessible to companies wanting a machine to fully verify checkins. 
