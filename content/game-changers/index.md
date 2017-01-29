@@ -122,9 +122,9 @@ automating that "build passes, gang" oral notification above.
 
 Apache's Gump was built on a similar time line, but focused more on the binary integration hell of 
 interdependent Apache (and other) open-source projects. It gave an early warning of integration clashes that were 
-already, or were about to be problematic, for teams. While impressive, it use did not gain traction in the enterprise. 
+already, or were about to be problematic, for teams. While impressive, it did not gain traction in the enterprise. 
 This is because enterprises were able to be more buffered from open-source library hell (and the implicit diamond 
-dependency problem), by limiting the rate at which the upgraded their third-party binary dependencies.
+dependency problem), by limiting the rate at which they upgraded their third-party binary dependencies.
 
 Gump creator, Sam Ruby remembers:
 
