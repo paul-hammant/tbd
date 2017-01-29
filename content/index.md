@@ -28,20 +28,24 @@ and helps to make Continuous Delivery a reality.
 - Depending on the team size, and the rate of commits, **very short lived** feature/task branches are used for 
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
   This allows and engage in [eager and continuous code review](continuous-review/) of contributions before they land
-  in the trunk.
+  in the trunk. 
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) (cut from trunk on 
   a just-in-time basis) that are 'hardened' before a release. Alternatively there may also be no release branches if 
   the team is [releasing from Trunk](/release-from-trunk/).
 
-- Teams should become adept with the related [branch by abstraction](/branch-by-abstraction/) technique, and 
-  use [feature flags](/feature-flags/) in day to day development.
+- Teams should become adept with the related [branch by abstraction](/branch-by-abstraction/) technique for longer
+  to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on 
+  the order of releases (and other good things - see [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/))
    
-- Development teams can transition from a maintenance-centric low head-count to a sudden 10x increase, tackling multiple
-  parallel projects on the same application or service, with ease. [Branch by abstraction](/branch-by-abstraction/) 
-  and [feature flags](/feature-flags/) again, but towards 
-  [concurrent development of consecutive releases](concurrent-development-of-consecutive-releases/) to further
-  resist the pressure for the creation of long-lived branches. Bonus: you can hedge on the order of releases. 
+- Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers#google-sharing-their-trunk-usage-2016) and 
+  they have **25000 developers and QA automators** in that trunk.
+  
+- People who practice the **Github-flow branching model will feel this is quite similar** (there's one small difference). 
+  
+- People who practice the Gitflow branching model will find this **very different**, as will many developers used to 
+  popular ClearCase, Subversion, Perforce, StarTeam, VCS branch models of the past.
+
 
 ## History
 
@@ -49,13 +53,7 @@ Trunk Based Development is not a new branching model. The word 'trunk' is refere
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
 It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties. 
-The largest of development organizations, like Google and Facebook practice it at scale. 
-
-Google, for one, has millions of 
-individual source files in a single trunk branch of a repository that contains 86 terabytes of history, with 
-25,000 developers contributing to it constantly. We cover that advanced setup in [Monorepos](monorepos/), And Googlers
-talked about the incedible scale of their trunk 
-[in a magazine article and a video](/game-changers#google-sharing-their-trunk-usage-2016).
+The largest of development organizations, like Google (as mentioned)and Facebook practice it at scale. 
 
 Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers) have made 
 Trunk Based Development more (and occasionally less) necessary.
