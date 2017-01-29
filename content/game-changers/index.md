@@ -307,7 +307,9 @@ This made it was clear whether the proposed PR would break the build or not were
 The emergence of micro services as small buildable/deployable things that are glued together with TCP/IP (and 
 XML/YAML/DNS configuration) reinforced "many small repos" (the kinda reinforce each other really), while this can be
 done with any branching model, the non-trunk models probably had the mindshare. Monorepos were out completely. A 
-possibility from monorepos, teams sharing code and source level a HEAD revision, positively laughed it.
+possibility from monorepos, teams sharing code and source level a HEAD revision, positively laughed it. The history 
+page of Wikipedia list multiple people concurrenly pushing the same emergent micro-service 
+idea{{< ext url="https://en.wikipedia.org/wiki/Microservices#History" >}}.
 
 ## Case Study: A Practical Approach To Large Scale Agile Development (2012)
 
