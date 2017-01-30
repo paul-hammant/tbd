@@ -21,7 +21,7 @@ At some point in the strangulation, you might put Elixir in front Apache/Perl an
 instead. That is the residual situation before you delete the last lines of code of Perl and snip that delegation
 when the strangulation is complete.
 
-This relates a little to [Branch by Abstraction](branch-by-abstraction/). Strangulation is a strategy for 
+This relates a little to [Branch by Abstraction](/branch-by-abstraction/). Strangulation is a strategy for 
 incompatible languages (they are not in the same process), whereas Branch by Abstraction is where the 'from' and 'to' 
 languages are the same (say Java -> Java), or compatible (Java -> Scala).
 
