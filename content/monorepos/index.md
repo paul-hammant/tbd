@@ -52,7 +52,7 @@ time.
 To facilitate Monorepos, it is important to have a build system that can omit otherwise buildable things/steps that are not
 required for the individual developers **current** build intention. 
 
-The general directory structure for recursive build systems is like so:
+The general directory structure for directed graph build systems is like so:
 
 ```
 root/
