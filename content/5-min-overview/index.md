@@ -64,7 +64,7 @@ integrating their team-mates commits on an hour by hour basis.
 
 Similarly, developers completing a piece of development work (changes to source code), that provably does not 
 break the build, will commit it back to the trunk. The granularity of that commit (how many a developer 
-would implicitly do a day) can vary, and is learned through experience, but commits are typically small.
+would implicitly do a day) can vary and is learned through experience, but commits are typically small.
 
 The developer needs to run the build, to prove that they did not break anything with the commit **before** the commit
 is pushed anywhere. They might have to do a update/pull/sync before they commit/push the changes back to the team's 
@@ -83,7 +83,7 @@ Request) that is visible to the team.
 ^ the speech bubbles are stylized code review comments
 
 Code review branches can (and should) be 
-deleted after the code review is complete, and be very short lived. This is tricky for teams new to Trunk Based 
+deleted after the code review is complete, and be very short-lived. This is tricky for teams new to Trunk Based 
 Development. 
 
 Noe: You want to keep 
@@ -92,14 +92,14 @@ keep the branch. Specifically, you do not want to developers to focus on the bra
 
 ## A safety net
 
-[Continuous Integration](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lived feature 
+[Continuous Integration](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short-lived feature 
 branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
  is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI server to do that 
  automatically.
 
 ![](/images/5trunk1.png)
 
-The high bar is verifying the commit before it lands in the trunk. Short lived Pull Request branches are the modern
+The high bar is verifying the commit before it lands in the trunk. Short-lived Pull Request branches are the modern
 place for that.
  
 ## Developer team commitments

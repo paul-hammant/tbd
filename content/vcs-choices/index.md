@@ -173,7 +173,7 @@ mode of operation are very handy, and it should work easily with whatever Svn ho
 
 [Website](https://www.visualstudio.com/tfs/)
 
-Microsoft launched TFS in the mid 2000's with a **custom VCS technology** "TFVC". It is said that they have an internal 
+Microsoft launched TFS in the mid-2000's with a **custom VCS technology** "TFVC". It is said that they have an internal 
 'SourceDepot' tool that is a special version of Perforce compiled for them in the nineties, and that TFS reflects some 
 of the ways of working of that technology. It has grown to to be a multifaceted server platform. Perhaps even a 
 one-stop shop for the whole enterprise's needs for application lifecycle management.  It is perfectly compatible with 

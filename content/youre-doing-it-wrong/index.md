@@ -37,14 +37,14 @@ are pushing too hard to make a date.
 
 Cherry picking every commit since the branch-cut to the branch from the trunk is the same thing of course.
 
-## Duration of 'short lived' feature branches
+## Duration of 'short-lived' feature branches
 
 The short-lived feature branch should only last a day or two, and never diverge from the trunk enough so that a 
 merge back is problematic. After the seal of approval from code reviewers and CI 
 daemons it should be merged back into the trunk. It should be deleted, as proof of convergence.
 The developer in question may then go ahead and make the next short-lived feature branch for the next story/task they're doing.
 
-## Numbers of developers on 'short lived' feature branches
+## Numbers of developers on 'short-lived' feature branches
 
 If there is more that one developer (and the developer's pairing partner) on the same short-lived feature branch, 
 then that branch is at risk of not being short-lived. It is at risk of being more and more like a release branch 

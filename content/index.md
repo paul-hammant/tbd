@@ -25,7 +25,7 @@ and helps to make Continuous Delivery a reality.
 - If you have more than a couple of developers on the project, you are going to need a hook up a 
   [build server](/continuous-integration/) to verify their commits
 
-- Depending on the team size, and the rate of commits, **very short lived** feature/task branches are used for 
+- Depending on the team size, and the rate of commits, **very short-lived** feature/task branches are used for 
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
   This allows and engage in [eager and continuous code review](/continuous-review/) of contributions before they land
   in the trunk. 

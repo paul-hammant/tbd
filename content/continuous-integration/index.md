@@ -21,7 +21,7 @@ and for the CI server to merely verify that quality, nightly.
 
 CI as we know it today, was defined by Kent Beck, as one of the practices he included in 
 "Extreme Programming"{{< ext url="https://en.wikipedia.org/wiki/Extreme_programming" >}}
-in the mid nineties. Certainly in 1996, on the famous Chrysler Comprehensive Compensation System 
+in the mid-nineties. Certainly in 1996, on the famous Chrysler Comprehensive Compensation System 
 project{{< ext url="https://en.wikipedia.org/wiki/Chrysler_Comprehensive_Compensation_System" >}} Kent had all 
 developers experiencing and enjoying the methodology - including the continuous integration aspect. The language for 
 that project was Smalltalk and the single integration point was a Smalltalk image 
