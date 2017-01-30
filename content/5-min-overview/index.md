@@ -10,7 +10,7 @@ weight: 11
 &mdash; Frank Compagner, Guerrilla Games
 {{< /quote >}}
 
-Assuming any network accessible source control, physical distance is mitigated by AV technologies including 
+Assuming any network-accessible source control, physical distance is mitigated by AV technologies including 
 screen sharing. So we will not worry about that so much these days.
 
 Frank's 'distance' is about the distance to the integration of code from multiple components/modules/sub-teams for a 
@@ -42,7 +42,7 @@ Trunk Based Development will always be **release ready**
 
 If an executive manager visited the development team and commanded "Competitor X has launched feature Y, go 
 live now with what we have", the worst response would be "give us one hour". The development team might have been very 
-busy with tricky or even time consuming tasks (therefore partially complete), but in an hour, they are able to go live 
+busy with tricky or even time-consuming tasks (therefore partially complete), but in an hour, they are able to go live 
 with something just stabilized from the trunk. Perhaps they can do it in less than, an hour. The rule though, is never break 
 the build, and always be ready for that CIO-commanded disruption to plans.
 
@@ -68,13 +68,13 @@ would implicitly do a day) can vary, and is learned through experience, but comm
 
 The developer needs to run the build, to prove that they did not break anything with the commit **before** the commit
 is pushed anywhere. They might have to do a update/pull/sync before they commit/push the changes back to the team's 
-version control server, and additional builds too. There's a risk a race condition there, but lets assume that is not 
+version control server, and additional builds too. There's a risk a race condition there, but let us assume that is not 
 going to happen for most teams.
 
 ### Code Reviews
 
-The developer needs to get the commit reviewed. Some teams will count the fact that the code was developed according 
-to pair programming as an automatic review. Others team will follow a conventional design where the commit is marshaled
+The developer needs to get the commit reviewed. Some teams will count the fact that the code was 'pair programmed' 
+as an automatic review. Others team will follow a conventional design where the commit is marshaled
 for review before landing in the trunk. In modern portal solutions, marshaled nearly always means a branch/fork (Pull
 Request) that is visible to the team.
 
@@ -92,7 +92,7 @@ keep the branch. Specifically, you do not want to developers to focus on the bra
 
 ## A safety net
 
-[Continuous Integration](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lives feature 
+[Continuous Integration](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short lived feature 
 branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
  is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI server to do that 
  automatically.
@@ -106,7 +106,7 @@ place for that.
 
 As stated, developers are pledging to be rigorous and not break the build. They're also going to need to consider 
 the impact of their potentially larger commits, especially where renames or moves were wholesale, and adopt techniques
-to allow those changes to be more easily consumed by team mates.
+to allow those changes to be more easily consumed by teammates.
 
 ## Drilling into 'Distance'
 
