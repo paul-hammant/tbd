@@ -138,9 +138,9 @@ well after the changes were released.
 
 ## Subversion's "lightweight" branching (2000 through 2001)
 
-Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". The lack of atomicity in CVS
-means that teams had to coordinate as to who was checking in presently, and whether they'd definably broken the build
-afterwards. Early CI servers used to have a "quiet period" to make sure they had recieved every last element of an 
+Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". **The lack of atomicity in CVS
+meant that teams had to coordinate as to who was checking in presently**, and whether they'd definably broken the build
+afterwards. Early CI servers (as mentioned) used to have a "quiet period" to make sure they had received every last element of an 
 intended commit.
 
 In comparison to the clunky CVS, Subversion had "lightweight" branching. This made it easier to consider multiple 
