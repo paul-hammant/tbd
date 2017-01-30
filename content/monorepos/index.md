@@ -81,7 +81,7 @@ root/
             (source files)
   ```
   
-Obviously, YAML, JSON, TOML or custom grammars are alternatives to XML for build files.
+Obviously, YAML, JSON, TOML or custom grammars are alternatives to XML, for build files.
   
 ### Contrived example
 
@@ -105,7 +105,7 @@ The omitting of unnecessary compile/test actions achieved by Buck and Bazel work
 and in the CI infrastructure.
 
 There is also the ability to depend on recently compiled object code of colleagues. Recently compiled object code for 
-provable permutations of sources/deps, that is, and plucked from the ether (think of a LRU cache available to all
+provable permutations of sources/dependencies, that is, and plucked from the ether (think of a LRU cache available to all
 machines in the TCP/IP subnet). That is in place to shorten compile times for prod and test code.
  
 ## Recursive build systems

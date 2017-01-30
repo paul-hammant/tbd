@@ -23,7 +23,7 @@ weight: 0
 
 ### Continuous Delivery (July 27, 2010)
 
-<div><a href="http://amzn.to/1QBJM7k"><img border="0" width="90" src="//continuousdelivery.com/images/cd-book.png" style="float:left;padding-right:10px"/></a>
+<div><a href="http://amzn.to/1QBJM7k"><img border="0" width="90" src="cd-book.png" style="float:left;padding-right:10px"/></a>
 <p><em>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</em><br/>
 by Jez Humble and Dave Farley<br/>
 <a href="http://amzn.to/1QBJM7k"><strong>Amazon</strong> (hardback, kindle)</a><br />
@@ -34,7 +34,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a href="http://bit.ly/lean-enterprise-paper">
-      <img width="90" src="//continuousdelivery.com/images/lean-enterprise.png" style="float:left;padding-right:10px; border:0px solid black;"/>
+      <img width="90" src="lean-enterprise.png" style="float:left;padding-right:10px; border:0px solid black;"/>
     </a>
     <p>
         <em>Lean Enterprise: How High Performance Organizations Innovate at Scale</em><br/>
@@ -70,7 +70,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a>
-      <img width="90" src="/images/devopsHandbook.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
+      <img width="90" src="devopsHandbook.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
     </a>
     <p>
         <em>The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</em><br/>
@@ -90,7 +90,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a>
-      <img width="95" src="/images/less_dogma.png" style="float:left; padding-right:10px"/>
+      <img width="95" src="less_dogma.png" style="float:left; padding-right:10px"/>
     </a>
     <p>
         <em>More Engineering, Less Dogma: The Path Toward Continuous Delivery Of Business Value</em><br/>
@@ -105,7 +105,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a>
-      <img width="91" src="/images/cdit_org_perf.png" style="float:left; padding-right:10px"/>
+      <img width="91" src="cdit_org_perf.png" style="float:left; padding-right:10px"/>
     </a>
     <p>
         <em>The Role of Continuous Delivery in IT and Organizational Performance</em><br/>
@@ -120,7 +120,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a>
-      <img width="89" src="/images/2015_state_of_devops.png" style="float:left; padding-right:10px"/>
+      <img width="89" src="2015_state_of_devops.png" style="float:left; padding-right:10px"/>
     </a>
     <p>
         <em>A survey of thousands of software development professionals distilled into a report that determines
@@ -141,7 +141,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a>
-      <img width="135" src="/images/2016_state_of_devops.png" style="float:left; padding-right:10px"/>
+      <img width="135" src="2016_state_of_devops.png" style="float:left; padding-right:10px"/>
     </a>
     <p>
         <em>As their 2015 report, a survey of thousands of software development professionals distilled into a report that determines
