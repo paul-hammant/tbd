@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:08:11+01:00
+date: 2016-04-01T20:08:11+01:00
 title: Feature flags
-weight: 20
+weight: 41
 ---
 
 Feature Flags are a time honored way to control the capabilities of an application or service in a large decisive way. 

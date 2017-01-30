@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:10:46+01:00
+date: 2016-06-05T20:10:46+01:00
 title: Continuous Code Review 
-weight: 42
+weight: 65
 ---
 
 ## The high bar today

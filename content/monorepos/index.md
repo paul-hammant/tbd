@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:08:11+01:00
+date: 2016-11-01T20:08:11+01:00
 title: Monorepos
-weight: 30
+weight: 111
 ---
 
 A Monorepo, is a specific trunk based development implementation where the organization in 

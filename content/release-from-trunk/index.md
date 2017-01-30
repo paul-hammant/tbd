@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T19:56:50+01:00
+date: 2016-05-06T19:56:50+01:00
 title: Release from trunk
-weight: 37
+weight: 56
 ---
 
 Teams with a very high release cadence do not need (and cannot use) release branches at all. They have to release from 

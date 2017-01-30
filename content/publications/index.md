@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:08:11+01:00
+date: 2017-01-01T20:08:11+01:00
 title: Publications
-weight: 0
+weight: 131
 ---
 
 ## Books promoting Trunk Based Development

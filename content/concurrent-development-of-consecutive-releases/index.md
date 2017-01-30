@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:10:46+01:00
+date: 2016-07-05T20:10:46+01:00
 title: Concurrent development of consecutive releases
-weight: 40
+weight: 75
 ---
 
 Your company wants a stream of major functionality to arrive in the application you are pushing live at a regular 

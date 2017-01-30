@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:10:46+01:00
+date: 2016-07-01T20:10:46+01:00
 title: Continuous Delivery (CD)
-weight: 40
+weight: 71
 ---
 
 Continuous Delivery is the practice expanding your Continuous Integration (CI) usage to automatically

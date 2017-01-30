@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T19:56:50+01:00
+date: 2016-05-03T19:56:50+01:00
 title: Branch by Abstraction
-weight: 30
+weight: 53
 ---
 
 Branch by Abstraction is a set-piece technique to effect a 'longer to complete' change in the trunk. Say a developer

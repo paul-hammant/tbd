@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:08:11+01:00
+date: 2016-07-08T20:08:11+01:00
 title: Strangler Applications
-weight: 40
+weight: 78
 ---
 
 Strangulation is a mechanism by which a very large disruptive change is made in an application or service that, does not

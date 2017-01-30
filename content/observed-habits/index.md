@@ -1,7 +1,7 @@
 ---
-date: 2017-01-05T09:42:02+05:00
+date: 2016-08-01T09:42:02+05:00
 title: Observed habits
-weight: 10
+weight: 81
 ---
 
 ## No Code Freeze

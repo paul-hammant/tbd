@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:10:46+01:00
+date: 2016-06-01T20:10:46+01:00
 title: Continuous Integration (CI)
-weight: 40
+weight: 61
 ---
 
 {{< quote title="individuals practice Trunk Based Development, and teams practice CI" >}}

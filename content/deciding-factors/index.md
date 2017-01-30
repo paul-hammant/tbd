@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:08:11+01:00
+date: 2016-02-01T20:08:11+01:00
 title: Deciding factors
-weight: 30
+weight: 21
 ---
 
 # Release cadence

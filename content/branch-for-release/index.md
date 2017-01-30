@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T19:56:50+01:00
+date: 2016-05-05T19:56:50+01:00
 title: Branch for release
-weight: 35
+weight: 55
 ---
 
 {{< quote title="Branch: only when necessary, on incompatible policy, late, and instead of freeze" >}}

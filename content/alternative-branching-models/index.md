@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:08:11+01:00
+date: 2016-10-01T20:08:11+01:00
 title: Alternative Branching Models
-weight: 30
+weight: 101
 ---
 
 {{< quote title="Branch: only when necessary, on incompatible policy, late, and instead of freeze" >}}

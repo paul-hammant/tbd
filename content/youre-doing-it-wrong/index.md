@@ -1,7 +1,7 @@
 ---
-date: 2016-03-09T20:08:11+01:00
+date: 2016-09-01T20:08:11+01:00
 title: You're doing It Wrong
-weight: 0
+weight: 91
 ---
 
 ## Merely naming a branch trunk.
