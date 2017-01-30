@@ -10,7 +10,7 @@ Continuous Code Review is where the team commits to processing team-mates propos
 The idea is that a system (the code portal probably) allows developers to package up commits for code review and get 
 that in front of peers quickly. That peer developers make a commitment to do code reviews objectively and quickly. 
 There is a cost to multi-tasking, so maybe someone in the dev team who is between work items at that moment should focus 
-on the review before they start new work. With a contuous review ethos, it is critical that code reviews are not 
+on the review before they start new work. With a continuous review ethos, it is critical that code reviews are not 
 allowed to back up.
 
 ### Pull Requests
