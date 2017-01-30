@@ -10,7 +10,7 @@ create a branch for this - somewhere that can be unstable for a period of time b
 back somewhere).
 
 There may be some aspect of repetition to the coding activities that makes it a longer to complete. No matter, the 
-change was predicted as being time consuming, complex, destabilizing/disruptive to every else in the development team.
+change was predicted as being time-consuming, complex, destabilizing/disruptive to every else in the development team.
 
 **Rules:**
  
@@ -33,12 +33,12 @@ break the build.
 4. Remove the to be replaced implementation
 5. Remove the abstraction
 
-Hopefully your team IDE that can perform complex refactorings on sets on checkouts in a way that running the build 
+Hopefully, your team IDE that can perform complex refactorings on sets on checkouts in a way that running the build 
 after each is an uneventful validation of the refactorings.
 
 ## Contrived example
 
-Lets talk about a car having its wheels upgraded. We should never forget that software engineering is 
+Let's talk about a car having its wheels upgraded. We should never forget that software engineering is 
 nothing like conventional construction, and we want to ram that home. At least, it is nothing like conventional 
 construction where we are not talking about a production line.
 
@@ -49,14 +49,14 @@ construction where we are not talking about a production line.
 
 ### Steps
 
-All steps are efficiently performed up on car jacks/lifts/ramps, before lowering the car to the ground again.
+All steps are efficiently performed rasied up on car jacks/lifts/ramps, before lowering the car to the ground again.
 
 1. One wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
 can bear weight) and replaced on the car. If driven this wheel functions exactly like the 
 other three wheels.
 2. The wheel-like container gains a second better/desired/alternate wheel, within exactly the same 
 physical space (magically). A switch is added inside the car to allow the choice of wheel to be switched conveniently 
-- perhaps only before the engine is started though.
+- perhaps only before the engine is started, though.
 3. The same two operations (#1 and #2) are performed on the other three wheels. Or maybe #1 is done four times, 
 followed by #2 four times. The Mechanics experience will guide which is most efficient.
 4. After determining that the new wheels are better, the old wheels are removed from the wheel-like containers
@@ -67,24 +67,24 @@ At any stage, when lowered from the jacks/lift/ramps, the car could have been dr
 
 ![](/images/cars.png)
 
-We said 'jacks' above, because that's what mechanics use in real life. Software however does not follow the rules 
-gravity, or many of the costs of actual construction. With an IDE for a glove, a single finger could reposition 
-the car in 3D space to allow easy replacement of the  wheels.
+We said 'jacks' above, because that's what mechanics use in real life. Software, however, does not follow the rules 
+of gravity, or many of the costs of actual construction. With an IDE for a glove, a single finger could reposition 
+the car in 3D space to allow easy replacement of the wheels.
 
 ## Software example
 
-A documented case, is ThoughtWorks' Go CI-daemon. They changed an Object-Relational mapping library (for persistence), 
-while not slowing down team mates development activities (rule 1), and not jeopardizing the ability to go live (rule 2).
+A documented case is ThoughtWorks' Go CI-daemon. They changed an Object-Relational mapping library (for persistence), 
+while not slowing down teammates development activities (rule 1), and not jeopardizing the ability to go live (rule 2).
 
 Going from "iBatis" to "Hibernate" for a bunch of reasons, was their plan.
 
 They:
 
 1. Introduced an abstraction around the classes/components using iBatis directly, and ensured that all 
-classes/components indirectly referring to iBatis were change to refer to the abstraction instead.
+classes/components indirectly referring to iBatis were changed to refer to the abstraction instead.
 2. Wrote a second implementation of the abstraction, introducing Hibernate to the codebase, perhaps tweaking the 
 abstraction where needed.
-3. Did a tiny commit to turn on Hibernate for all team mates.
+3. Did a tiny commit turning on Hibernate for all teammates.
 4. Removed iBatis, then the abstraction and the on/off old/new switch.
 
 As it happens you could leave the abstraction in place, if your unit tests are able to benefit because of the 
@@ -94,7 +94,7 @@ possibility of another seam that can be mocked.
 
 ### Cheaply pause and resume 'migrations'
 
-The migration from old to new can be paused, and resumed later casually. This is because the build guards the 
+The migration from old to new can be paused and resumed later casually. This is because the build guards the 
 second, incomplete, implementation. It does so merely because of a compile stage that turns the abstraction and somewhere 
 between 1 to 2 implementation into object code.  If there are unit tests for the two alternates, then even more so.
 
@@ -115,7 +115,7 @@ unknown when the first implementation was. Before the adoption of BbA, teams **h
 big lengthy disruptive change, or do it with an incredible amount of choreography: "hey everyone take a week of 
 vacation now".
  
-With the Branch by Abstraction technique, Trunk Based Development was less likely to be temportarily or permanently 
+With the Branch by Abstraction technique, Trunk Based Development was less likely to be temporarily or permanently 
 abandoned for a multi-branch model.
  
 # References elsewhere
