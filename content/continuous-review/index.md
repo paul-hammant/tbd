@@ -18,7 +18,7 @@ allowed to back up.
 The pull-request (PR) model introduced by Github is the dominant code review model today. It is a branch, but a personal
 one and short lived. It may suffer many commits before the developer feels the task is complete, and initiates a PR 
 which triggers code review (and the CI daemon to wake up and build/verify the branch). The temporary branch may have
-recieved many commits before the developer initiated the pull request. Some developers will squash (rebase) the
+received many commits before the developer initiated the pull request. Some developers will squash (rebase) the
 changes into a single commit before starting code review. Some teams have a policy in favor of or against squash/rebase. 
 
 {{< note title="Common Code Owners" >}}
