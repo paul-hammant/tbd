@@ -130,7 +130,7 @@ overlaid again):
 
 ![](/images/cascade2.png)
 
-Remember, the merges are never cherry picks in this model - they are sweeps of everything 
+Remember, the merges are never cherry-picks in this model - they are sweeps of everything 
 not merged yet (or upto an chosen commit number in order to make it more bite sized).
 
 Of course only larger organizations have to worry 

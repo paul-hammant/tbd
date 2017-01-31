@@ -162,13 +162,13 @@ mode of operation are very handy, and it should work easily with whatever Svn ho
 
 ### Platform Software Choices
 
-* [RhodeCode](https://rhodecode.com/) - installable on premises
+* [RhodeCode](https://rhodecode.com/) - installable on-premises
 * Various [Collabnet](http://www.collab.net/) products and services.
 * [ProjectLocker](http://projectlocker.com/) - cloud
 * [Deveo](https://deveo.com/svn-hosting/) - cloud
 * [RiouxSvn](https://riouxsvn.com/) - cloud
 * [SilkSvn](https://sliksvn.com/) - cloud
-* [Assembla](https://www.assembla.com/subversion/) - cloud and installable on premises
+* [Assembla](https://www.assembla.com/subversion/) - cloud and installable on-premises
 * [XP-dev](https://xp-dev.com/) - cloud
 * [Codeplex](https://www.codeplex.com/) - cloud
 

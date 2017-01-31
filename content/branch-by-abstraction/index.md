@@ -49,7 +49,7 @@ construction where we are not talking about a production line.
 
 ### Steps
 
-All steps are efficiently performed rasied up on car jacks/lifts/ramps, before lowering the car to the ground again.
+All steps are efficiently performed raised up on car jacks/lifts/ramps, before lowering the car to the ground again.
 
 1. One wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
 can bear weight) and replaced on the car. If driven this wheel functions exactly like the 
@@ -84,7 +84,7 @@ They:
 classes/components indirectly referring to iBatis were changed to refer to the abstraction instead.
 2. Wrote a second implementation of the abstraction, introducing Hibernate to the codebase, perhaps tweaking the 
 abstraction where needed.
-3. Did a tiny commit turning on Hibernate for all teammates.
+3. Did a tiny commit that turned on Hibernate for all teammates.
 4. Removed iBatis, then the abstraction and the on/off old/new switch.
 
 As it happens you could leave the abstraction in place, if your unit tests are able to benefit because of the 
@@ -112,7 +112,7 @@ branch by abstraction *thing* is only incrementally more expensive.
  
 Teams employed Branch by Abstraction many years before it got its name (Stacy Curl named it in 2007), but it is 
 unknown when the first implementation was. Before the adoption of BbA, teams **had to** make a branch for the 
-big lengthy disruptive change, or do it with an incredible amount of choreography: "hey everyone take a week of 
+big lengthy disruptive change, or do it with an incredible amount of choreography: "hey everyone, take a week of 
 vacation now".
  
 With the Branch by Abstraction technique, Trunk Based Development was less likely to be temporarily or permanently 

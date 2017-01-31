@@ -4,18 +4,19 @@ title: Feature flags
 weight: 41
 ---
 
-Feature Flags are a time honored way to control the capabilities of an application or service in a large decisive way. 
+Feature Flags are a time-honored way to control the capabilities of an application or service in a large decisive way. 
 
 ### An Example
 
 Say you have 
-a application or service that launches from the command line, and has a `main` method or function. Your feature flag 
-could be `--withOneClickPurchase` to turn on code in the app to do with Amazon's patented one-click purchasing 
+an application or service that launches from the command line that has a `main` method or function. Your feature flag 
+could be `--withOneClickPurchase` passed in as a command line argument. That could turn on code in the app to 
+do with Amazon's patented one-click purchasing 
 experience.  Without that command line argument, the application would run with a shopping cart component. At least
 that's the way the developers coded that application. The 'One Click Purchase' and 'Shopping Cart' alternates are 
 probably also the same language that the business people associated with the project use. It gets complicated in 
-that flags need not be implicitly on/off or new/old, they could be additive. In our case here, there could also be a
-`--allowUsersToUserShoppingCartInsteadOfOneClick` capability. It can be additive, you see.
+that flags need not be implicitly a/b or new/old, they could be additive. In our case here, there could also be a
+`--allowUsersToUserShoppingCartInsteadOfOneClick` capability. Flags can be additive, you see.
 
 {{< note title="Flags Are Toggles" >}}
 Industry Luminary, Martin Fowler, calls these Feature Toggles, and wrote a foundational definition (see refs below). 
@@ -24,7 +25,7 @@ Feature Flags is in wider use by the industry, though, so we're going with that.
 
 ## Granularity
 
-If could be that the flag controls something large like a component. In our case above we could say that 
+If could be that the flag controls something large like the us of a component. In our case above we could say that 
 `OneClickPurchasing` and `ShoppingCart` are the names of a components.  It could be that the granularity of the flag
 is much smaller - Say Americans want to see temperatures in degrees Fahrenheit and other nationalities would 
 prefer degrees Centigrade/Celsius. We could have a flag `--temp=F` and `--temp=C`. For fun, the developers also added
@@ -51,13 +52,13 @@ bootContainer.addComponent(classFromName(config.get("purchasingCompleting")));
 
 ```
 
-There are many more ways of passing flag intentions (or any config) to a runtime.  If you at all can, you want to 
+There are much more ways of passing flag intentions (or any config) to a runtime.  If you at all can, you want to 
  avoid if/else conditions in the code where a path choice would be made. Hence our emphasis on an abstraction.
 
 ## Continuous Integration pipelines
 
 It is important to have CI guard your reasonable expected permutations of flag. That means tests that happen on an
-application or service after launching it, should be adaptable too and test what is meaningful for those flag 
+application or service after launching it, should also be adaptable and test what is meaningful for those flag 
 permutations. It also means that in terms of CI pipelines there is a fan-out **after** unit tests, for each meaningful
 flag permutation. A crude equivalent is to run the whole CI pipeline in parallel for each meaningful flag permutation.
 That would mean that each commit in the trunk kicks off more that one build - hopefully from elastic 
@@ -65,7 +66,7 @@ infrastructure.
 
 ## Runtime switchable
 
-Sometimes Flags/Toggles set at app launch time, is not enough. Say you are an Airline selling tickets for flights online.
+Sometimes Flags/Toggles set at app launch time is not enough. Say you are an Airline selling tickets for flights online.
 You might also rental cars in conjunction with a partner - say 'Really Cool Rental Cars' (RCRC). The connection to 
 any partner or their up/down status is outside your control, so you might want a switch in the software that works 
 without relaunch, to turn "RCRC partner bookings" on or off, and allow the 24&#47;7 support team to flip it if certain 'Runbook' conditions
@@ -76,7 +77,7 @@ Key for Runtime switchable flags is the need for the state to persist. A restart
 not set that flag choice back to default - it should retain the previous choice. It gets complicated when you think
 about the need for the flag to permeate multiple nodes in a cluster of horizontally scaled sibling processes. For
 that last, then holding the flag state in Consul{{< ext url="https://www.consul.io" >}}, 
-Etcd{{< ext url="https://github.com/coreos/etcd" >}} (or equivalent) is a the modern way.
+Etcd{{< ext url="https://github.com/coreos/etcd" >}} (or equivalent) is the modern way.
 
 ## Build Flags
 
@@ -113,9 +114,9 @@ There's a warning too:
 Brad Appleton says:
 
 <br><div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 150%">&ldquo;</span>
-The thing I do not like about feature-toggles/flags is when they end-up NOT being short-lived as intended, 
+The thing I do not like about feature-toggles/flags is when they end up NOT being short-lived as intended, 
 and we end up having to revisit Spencer and Collyer's famous paper. The funny thing is feature-branches 
-started out the same way, when they were first introduced it was for feature-teams using very large features, and the 
+started out the same way. When they were first introduced it was for feature-teams using very large features, and the 
 purpose of the separate branches was because too many people were trying to commit at the same time to the same branch. 
 So the idea was use separate branches (for scale) and teams would integrate to their team-branch daily or more often 
 WITH at least nightly integration across all feature-branches [sigh].

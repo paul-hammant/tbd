@@ -9,7 +9,7 @@ the trunk.
 
 ![](/images/release_from_trunk.png)
 
-It is most likely that such teams do not use a dewey-decimal release numbering scheme, and instead have something 
+It is most likely that such teams do not use a Dewey-decimal release numbering scheme, and instead have something 
 referent to the commit number or date and time.  They probably also choose to roll forward and fix the bug on the 
 trunk as if it were a feature, albeit as quickly as possible.
 
@@ -19,7 +19,7 @@ Here's what stylized commits look like:
 
 No slow down around a release, and big fixes inline.
 
-Teams with one release a day (or less) **might** still make a branch, to cherry pick the bug-fix to 
+Teams with one release a day (or less) **might** still make a branch, to cherry-pick the bug-fix to 
 and release from:
 
 ![](/images/release_from_trunk3.png)

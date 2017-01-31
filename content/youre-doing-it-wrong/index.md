@@ -35,7 +35,7 @@ there. BUT in the days that lead up to the release, they are also doing general 
 the trunk. That is not right - it is like they cut the branch on the wrong day. Maybe the business people on the team
 are pushing too hard to make a date.
 
-Cherry picking every commit since the branch-cut to the branch from the trunk is the same thing of course.
+Cherry-picking every commit since the branch-cut to the branch from the trunk is the same thing of course.
 
 ## Duration of 'short-lived' feature branches
 

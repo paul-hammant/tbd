@@ -22,7 +22,7 @@ The incompatible policy (ref Wingerd & Seiwald above), that the release branch "
 
 {{< note title="CD teams do not do release branches" >}}
 High throughput, [Continuous Delivery](/continuous-delivery/) teams can ignore this - if they had a lemon in production, they choose a 
-roll-forward strategy for solving it, meaning the fix for a bug is in trunk, and the release is from trunk.
+roll-forward strategy for solving it, meaning the fix for a bug is in the trunk, and the release to production is from the trunk.
 {{< /note >}}
 
 ## Who's committing where?
@@ -43,21 +43,21 @@ watch that be verified by the CI server, then cherry-pick that to the release br
 focusing on the release branch to verify it there too. Yes, the CI pipeline that guards the trunk is going to
 be duplicated to guard active release branches too.
 
-{{< warning title="Cherry pick is not a regular merge" >}}
-A cherry pick merge takes a specific commit (or commits) and merges that to the destination branch. It skips 
-one more more commits that happened before it, but after the branch was cut.
+{{< warning title="Cherry-pick is not a regular merge" >}}
+A cherry-pick merge takes a specific commit (or commits) and merges that to the destination branch. It skips 
+one or more commits that happened before it, but after the branch was cut.
 {{< /warning >}}
 
 ### Late branch creation
 
-Some teams [release from a tag on the trunk](/release-from-trunk/), and do not create a branch at that time. That in 
+Some teams [release from a tag on the trunk](/release-from-trunk/) and do not create a branch at that time. That in 
 itself is **an alternate practice to this one, "branch for release"**.
 
 Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag (if they are
 not going to just issue another release from the trunk).  
 
 Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage 
-of here in the case of bugs after "release from tag", or even changes for point release.
+of here in the case of bugs after "release from tag", or even changes for point releases.
 
 ### Directionality of cherry-pick
 
@@ -66,7 +66,7 @@ fix bugs on the release in the expectation of cherry-picking them back to the tr
 Forgetting means a regression in production some weeks later (and someone getting fired). It can happen if things
 are being fixed in the night by a tired develop who wants to get back to bed.
 
-Of course, sometimes you cannot reproduce the bug on trunk, so you have to do it the other way round.
+Of course, sometimes you cannot reproduce the bug on trunk so you have to do it the other way round.
 
 ## Release branch deletion
 
