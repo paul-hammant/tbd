@@ -79,6 +79,10 @@ Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
 it that help set a foundation for the next ten years of version-control advances.
 
+Also in 1998, Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
+ammbivalent about branch models and facilitated many alternates. In the end though, people's willingness to experiment
+with multiple parallel active branches won out, and we had some dark years for Trunk Based Development ahead.
+
 ## Extreme Programming's Continuous Integration (1999)
 
 Kent Beck{{< ext url="https://en.wikipedia.org/wiki/Kent_Beck" >}} published "Extreme Programming Explained" in 1999. 
@@ -357,15 +361,28 @@ pipeline that includes:
 * all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ
 * a speculative merge back to the master/trunk/mainline and #1 **again** on that resulting merge 
 
-The speculative merge is discarded after #2 - it is only the "is this buildable and mergeable or not" notification 
-that is desired. 
+The speculative merge was only to working copy, and was discarded every time after #2 - the actual merge result is never 
+pushed to origin/master in Git terms. It is only the "is this buildable and mergeable or not" notification that was desired 
+from the exercise.
 
-Although they intended this eature of Snap-CI for short-lived feature branches, it is clear now that teams should do this CI setup 
-**regardless of branching model**. Yes, even the long-lived branching models also benefit from this, though they'll be
-challenged to stay 'green' the whole time, and remain eminently and automatically mergeable back to the mainline/master.
+Although they intended this feature of Snap-CI for short-lived feature branches, it is clear now that teams should do 
+this CI setup **regardless of branching model**. Yes, even the long-lived branching models also benefit from this, 
+though they'll be challenged to stay 'green' the whole time, and remain eminently and automatically mergeable back to 
+the mainline/master.
 
-Badrinath 'Badri' Janakiraman wrote a blog entry{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-tracking-and-integration/" >}} 
-when the feature was rolled out - very much worth a read.
+Badrinath 'Badri' Janakiraman wrote a blog 
+entry{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-tracking-and-integration/" >}} when the 
+feature was rolled out. The blog entry is very much worth a read, especially as Badri was product owner for Snap-CI
+at the time.  
+
+Circle-CI offers the same feature now, and it is a question of time before all CI technologies do. What is a reality 
+in 2017 is that the high bar is every commit, **every branch**, with that speculative merge, and elastically scaled so 
+that the notification is within seconds of pushing the commit to the shared VCS. Back in 2001 (CruiseControl) we were batching 
+commits, we would wait a little while to allow checkins to finish, and we'd have to pick apart who actually broke the 
+build ourselves.
+
+Surely non Trunk Based Development teams would turn on CI for every branch and soon after plan their migration to Trunk 
+Based Development.
 
 ## Google sharing their Trunk usage - 2016
 
