@@ -15,16 +15,16 @@ so specific because there is an impact on the user community (staff, clients, cu
 What you've got is the perfect setup for disaster born from the random bigger pieces bad news that can happen in 
 software development. 
 
-One thing was under estimated by 50% and that is determined later rather than sooner. 
+One thing was underestimated by 50% and that is determined later rather than sooner. 
 Should all of the following releases slip too, assuming the company did not attempt to throw bodies at it in an attempt 
 to solve it?
 
-One compelling answer is to change the order of releases. The the business, that could be a relief even if it requires
+One compelling answer is to change the order of releases. To the business, that could be a relief even if it requires
 re-planning and problems around marketing/education given the impacted staff, clients, customers or members of the 
 public.
 
-The trouble is that the development teams, might have to face a selective unmerge or commenting-out frenzy to support that, depending on
-what had merged already. Different branching models have different merge impacts, and are either early or late in terms
+The trouble is that the development teams might have to face a selective unmerge or commenting-out frenzy to support that, depending on
+what had merged already. Different branching models have different merge impacts and are either early or late in terms
 of keenness for the act of merging. That in itself is disruptive to the business, as they fear and probably witness 
 additional delays because of the retooling and new found nerves.
 
