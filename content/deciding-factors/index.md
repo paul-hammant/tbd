@@ -9,10 +9,10 @@ weight: 21
 ## Iteration length
 
 Different Agile teams focus on different iteration lengths. Some teams work at three-week iterations, some two, 
-and some one. Some teams do not have an iteration at all - particularly ones doing Continuous Delivery.
+and some one. Some teams do not have an iteration at all - particularly teams doing Continuous Delivery.
 
 If you are on a four week, or more iteration length, and each of those four weeks varies with proximity to the 
-release and cannot change that you may be in a bind. You may be able follow the tenants of Trunk Based Development, 
+release and cannot change that you may be in a bind. You may be able to follow the tenants of Trunk Based Development, 
 benefit from a Continuous Integration daemon (as all branching models can), but you are not doing to be able to 
 get all the way to Continuous Delivery (or Continuous Deployment).
 
@@ -23,13 +23,13 @@ to do Trunk Based Development. Consider a short-iteration Agile methodology.
 
 ## Story size
 
-Trunk Based Development needs you to have small stories/tasks. You starting work on a task, should only be matter
-of hours before completing and and pushing it forward for code review. Longer than that, and there is going to be 
-pressure to group a bunch of developers on a non-trunk branch, or worse have developers make branches/forks from your 
-branch, or worse still take intermediate merges from your branch, despite your task not being complete.  
+Trunk Based Development needs you to have small stories/tasks. You starting work on a task, should only be a matter
+of hours before completing and pushing it forward for code review. Longer than that, and there is going to be 
+pressure to group a bunch of developers on a non-trunk branch. Or worse have developers make branches/forks from your 
+branch, or worse still take intermediate merges from your branch, despite your task being incomplete.  
 
-Generally speaking the whole development team should do what ever it can do break stories/tasks into smaller stories/tasks. 
-In Agile, there is a INVEST mnemonic{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} that aids in the splitting
+Generally speaking, the whole development team should do whatever it can do break stories/tasks into smaller stories/tasks. 
+In Agile, there is an INVEST mnemonic{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} that aids in the splitting
 up or stories.
 
 # SCM Technology Choice
@@ -41,7 +41,7 @@ of you.
 
 Older versions of ClearCase and PVCS Dimensions would be 30 minutes for the former and 45 minutes for the latter. 
 Double that if two team-mates were simultaneously trying to do the update/pull/sync operation. In that configuration, it 
-was complete impossible for teams to choose to do trunk based development.
+was completely impossible for teams to choose to do trunk based development.
 
 ## Binaries in the Repo?
 
@@ -62,7 +62,7 @@ read-only so that all the history, issues, and code review comments are intact.
 In Git if a colleague beat you to a commit/push on a branch (their code-review and automated CI passed). When you 
 thought you were going to push, but Git informed you that you had to pull first, you might struggle to find a window 
 to catch up and push ahead without encountering the same problem. Forks make that easier, and robots keeping 
-pull-request branches abreast of origin:master help a lot.
+pull-request branches abreast of origin:master helps a lot.
 
 # Conways Law
 
@@ -80,7 +80,7 @@ goes into that much more, as does the [Continuous Delivery](/continuous-delivery
 
 Trunk Based Development teams typically have common code ownership rules around contributions to different parts
 of the source tree. If they do not have a full egalitarian system, they have objecting rules for the tree, that focus
-on standards, and come with a promise of a prioritized and fair code review.
+on standards and come with a promise of a prioritized and fair code review.
 
 # Build times
 

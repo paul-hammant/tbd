@@ -389,7 +389,7 @@ Based Development.
 In none other than the Association for Computing Machinery's magazine, Googlers Rachel Potvin and Josh Levenberg share
 how Google arranges for 95% (25,000) of its software developers to share one trunk in "Why Google Stores Billions of 
 Lines of Code in a Single Repository"{{< ext url="http://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext" >}}.
-They use a [Monorepo](/monorepos/) varient of a trunk, with internal code shared at **source level**, for high-throughput, 
+They use a [Monorepo](/monorepos/) variant of a trunk, with internal code shared at **source level**, for high-throughput, 
 low-defect delivery of multiple applications and services. Each application/service has a release cadence chosen by the dev+biz 
 team in question. Yes, everything works just fine.
 

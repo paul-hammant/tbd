@@ -10,7 +10,7 @@ Commercial VCS technologies and platforms were disrupted with the advent of gate
 to a mechanism to quickly consume (merge) the contribution. Code review for "committers" would have been disruptive 
 enough, but when it arrived it arrived for unknown (to the dev team) contributors by way of "forks".
 
-All VCS technologies and platforms are measured by their adherance to forks, pull requests, integrated code review
+All VCS technologies and platforms are measured by their adherence to forks, pull requests, integrated code review
 and possibly hooks into CI servers.
 
 Read more in [Game Changes Review - Google's Mondrian](/game-changers#mondrian-2006) and 
@@ -54,7 +54,7 @@ federations of modules, within one cloneable set.  For their
 ### Root level branches
 
 It'll be clear later why we mention this, but Git and Mercurial maintain branches from the root folder of the 
-checkout clone, and maintains a single permission for a user in respect of Read and/or write on the branch and/or repository.
+checkout clone, and maintains a single permission for a user in respect of read and/or write on the branch and/or repository.
 
 ### Future development
 
@@ -67,8 +67,11 @@ branch permissions.
 
 ### Linux Torvalds presenting Git to Googlers
 
-Back in 2007 Linus Torvalds presented his Bitkeeper inspired Git to Googlers in their Mountain View. 
-[See here](https://www.youtube.com/watch?v=4XpnKHJAok8). He had started making it two years before, and it is now the #1
+Back in 2007, Linus Torvalds presented his Bitkeeper inspired Git to Googlers in their Mountain View office:
+ 
+{{< youtube 4XpnKHJAok8 >}}
+ 
+He had started making it two years before, and it is now the #1
 VCS choice. Google had been running their Monorepo style Trunk for a few years at this point, without regret. Some
 Googlers would later extend their Perforce (see below) setup to allow Git operation of local branches on
 developer workstations.
@@ -88,7 +91,7 @@ developer workstations.
 [Website](https://www.perforce.com/)
 
 Perforce is a closed-source, industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas 
-store all their designs in it.  Until 2012, Google had their Trunk in it, and moved off to an in-house solution it 
+store all their designs in it.  Until 2012, Google had their Trunk in it and moved off to an in-house solution it 
 because their non-functional needs exceeded it. Perforce is peculiar in that 'p4d' (a single server-side executable 
 binary file) is the whole server and does not need to be installed - just executed.
 
@@ -97,11 +100,11 @@ definitely need a plugin for your IDE to handle the wire operations with the ser
 fact that source files are read-only. Because the Perforce (p4) client having to involve the server for the flipping of
 read only bits in respect of editing source files, it requires a permanent connection to the server.
 
-Unlike Git, Perforce is not ordinarily able to **locally** show history of the files within it. It needs that server 
+Unlike Git, Perforce is not ordinarily able to **locally** show the history of the files within it. It needs that server 
 connection again.
 
-Perforce allows branches to be setup at any sub-directory not just the root one. It also allows read and/or write
-permissions to exist at any directory (or branch) within large and small source trees.
+Perforce allows branches to be set up at any sub-directory not just the root one. It also allows read and/or write
+permissions to be specified at any directory (or branch) within large and small source trees.
 
 A crucial and unmatched feature of Perforce in other VCS technology choices is its 'client spec'. 
 More on that in [Monorepos](/monorepos/).
@@ -123,17 +126,17 @@ GitSwarm kinda replaces this.
 
 ### p4-git and p4-dvcs
 
-P4-git is very similar to the Git fusion technology, but is not my the Perforce people themselves. It also does not 
-require the launching of second server applicance.
+P4-git is very similar to the Git fusion technology but is not made by the Perforce people themselves. It also does not 
+require the launching of second server appliance.
 
-In 2015, the perforce technolgies were extended to include custom DVCS features. All the features of P4-git but without the Git 
+In 2015, the perforce technologies were extended to include custom DVCS features. All the features of P4-git but without the Git 
 compatibility.
 
 ## Subversion
 
 [Website](https://subversion.apache.org/)
 
-Subversion (Svn) has been in development for 16 years, and was a sorely needed open-source replacement for CVS. It chases some of the
+Subversion (Svn) has been in development for 16 years and was a sorely needed open-source replacement for CVS. It chases some of the
 features of Perforce, but is developed quite slowly. Nobody has pushed Subversion to the Perforce usage levels, but 
 that is claimed as a possibility.
 
@@ -152,7 +155,7 @@ along side it or (better choice) use a platform that integrates code review like
 
 ### Git-Svn
 
-There is an extension to Git that allows it to deal with a Subversion backend. a Git-subversion clone can has all the 
+There is an extension to Git that allows it to deal with a Subversion backend. A Git-subversion clone has all the 
 local history, local-branching possibilities of Git. That clone from subversion can be many tens of times slower (for 
 the same history set), than the equivalent clone from Git. The local branching possibilities afforded by this
 mode of operation are very handy, and it should work easily with whatever Svn hosting platform you installed.
@@ -175,7 +178,7 @@ mode of operation are very handy, and it should work easily with whatever Svn ho
 
 Microsoft launched TFS in the mid-2000's with a **custom VCS technology** "TFVC". It is said that they have an internal 
 'SourceDepot' tool that is a special version of Perforce compiled for them in the nineties, and that TFS reflects some 
-of the ways of working of that technology. It has grown to to be a multifaceted server platform. Perhaps even a 
+of the ways of working of that technology. It has grown to be a multifaceted server platform. Perhaps even a 
 one-stop shop for the whole enterprise's needs for application lifecycle management.  It is perfectly compatible with 
 a Trunk Based Development usage.
 
@@ -184,7 +187,7 @@ a Trunk Based Development usage.
 [Website](https://www.plasticscm.com/)
 
 PlasticSCM is a modern DVCS like Git and Mercurial. It is compatible with Trunk Based Development and quite 
-self-contained (has integrated code review, etc). Plastic is very good with bigger binaries, and comes with an 
+self-contained (has integrated code review, etc). Plastic is very good with bigger binaries and comes with an 
 intuitive "Branch Explorer" to see the evolution of branches, view diffs, execute merges, etc.
 
 It is also the first modern VCS to have semantic merge - it understands 
