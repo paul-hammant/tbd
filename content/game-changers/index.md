@@ -40,7 +40,7 @@ Note: Over time all version control systems would adopt this branch/merge langua
 Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages 
 People (Michael Cusumano & Richard Selby, 1995){{< ext url="https://www.amazon.com/Microsoft-Secrets-Powerful-Software-Technology/dp/0684855313" >}}
 
-The book was translated into 14 languages, and a best seller. 
+The book was translated into 14 languages, and a bestseller. 
 
 There's a section in *Microsoft Secrets* dealing with Microsoft's per-developer workflow using Source Library Manager 
 (SLM) on  a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - an Internal 
@@ -59,7 +59,7 @@ workflow was:
 10. check in (commit/push)
 11. makes a daily build from HEAD of the shared master branch
 
-The authors note in the book, that #10 isn't always an every day thing. And the last step, #11, isn't per developer, it is 
+The authors note in the book, that #10 is not always an every day thing. And the last step, #11, isn't per developer, it is 
 for the designated "build master" within the team, and manual. 
 
 The book also briefly mentions Test Case Manager (TCM) and "Microsoft Test". These were tools for helping developers 
@@ -71,7 +71,7 @@ These are clearly practices to support teams working in a trunk model.
 Note: In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his now famous 
 "The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}}.
 
-## Perforce's High Level SCM Best Practices white paper (1998)
+## Perforce's High-Level SCM Best Practices white paper (1998)
 
 Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf" >}}
  (presented at a SCM conference in Brussels the same year).
@@ -80,7 +80,7 @@ The paper alternates between 'trunk' and 'mainline' language, but has many valua
 it that help set a foundation for the next ten years of version-control advances.
 
 Also in 1998, Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
-ammbivalent about branch models and facilitated many alternates. In the end though, people's willingness to experiment
+ambivalent about branching models and facilitated many alternates. In the end, though, people's willingness to experiment
 with multiple parallel active branches won out, and we had some dark years for Trunk Based Development ahead.
 
 ## Extreme Programming's Continuous Integration (1999)
@@ -91,7 +91,7 @@ that Kent felt was "risk reducing".
 
 He says "Integrate and build the system many times a day, every time a task is completed", and goes on to detail 
 a reserved workstation, that a developer pair would sidle up at the appropriate moment to prove that their code 
-contribution was integrateable, and therefore good for team mates to depend on at that moment. That last notification
+contribution was integrateable, and therefore good for teammates to depend on at that moment. That last notification
 was often oral at that time "build passes, gang".
 
 He calls out a requirement for "fast integration/build/test cycles". This is key. In fact, every pro Trunk Based Development 
@@ -115,16 +115,16 @@ Martin's ThoughtWorks colleagues (Alden Almagro{{< ext url="http://aldenalmagro.
 Paul Julius{{< ext url="http://www.pauljulius.com" >}}, 
 Jason Yip{{< ext url="http://jchyip.blogspot.com" >}}) went on to build the then-dominant 
 "Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001. This was a 
-ground breaking technology and very accessible to companies wanting a machine to fully verify checkins. 
+groundbreaking technology and very accessible to companies wanting a machine to fully verify checkins. 
 
 Early CI servers, including CruiseControl used to have a "quiet period" to make sure they had received every last 
 element of an intended commit. To facilitate that, only one pair of developers was allowed to checkin at a time. With 
-CVS the other developers in the team could only do theur "cvs up" when CruiseControl had given the green light, 
+CVS the other developers in the team could only do their "cvs up" when CruiseControl had given the green light, 
 automating that "build passes, gang" oral notification above. 
 
 ### Apache's Gump
 
-Apache's Gump was built on a similar time line, but focused more on the binary integration hell of 
+Apache's Gump was built on a similar timeline, but focused more on the binary integration hell of 
 interdependent Apache (and other) open-source projects. It gave an early warning of integration clashes that were 
 already, or were about to be problematic, for teams. While impressive, it did not gain traction in the enterprise. 
 This is because enterprises were able to be more buffered from open-source library hell (and the implicit diamond 
@@ -169,7 +169,7 @@ As before, this made it easier to consider multiple branches as a viable team se
 ## Google's internal DevOps - 1998 onwards
 
 Note: Google were practicing Trunk Based Development since the beginning - Craig Silverstein (the first hire) remembers 
-setting it up that way. Much of these were secret to Google until much later, including their recomendations for a 
+setting it up that way. Much of these were secret to Google until much later, including their recommendations for a 
 70:20:10 ratio for small:medium:large tests, where 'small' were sub-1ms unit tests (no threading, no I/O), 'medium' 
 were unit tests that didn't qualify for *small* (and probably did TCP/IP headlessly to something), with 'large' were 
 almost entirely Selenium functional tests. Pyramid like, and in the mid-2000's.
@@ -195,14 +195,14 @@ Their culture was that such that reviews were speedy. Getting pending commits to
 ("Looks Good To Me" : LGTM) was almost competitive. Some new Googlers (Nooglers) would pride themselves about taking
 on random code-review chores, and being one of a few people that weigh in to the decision moment.
 
-The code review technology marshaled changes for proposed commits to the trunk, and stord them outside the VCS in 
-question (in a database probably). To do that the tech would reach into the developer machine and the appropdiate
+The code review technology marshaled changes for proposed commits to the trunk, and stored them outside the VCS in 
+question (in a database probably). To do that the tech would reach into the developer machine and the appropriate
 moment and make a tar.gz of the changes and the meta-data around them, and pull that back to the central system
 for global presentation. Anyone could review anything. A review was just on a commit (not a batch of commits). Review
 was continuous.
 
 Reviewers could quickly bring the 
-marshaled change down to their workstation to play with it, or use it as a basis for counter proposal. They could put 
+marshaled change down to their workstation to play with it, or use it as a basis for a counter proposal. They could put 
 that back in review again.
 
 In 2006, Guido van Rossum presented one of his bigger contributions - "Mondrian" -
@@ -277,7 +277,7 @@ exhaustive user acceptance testing starts' phase of a project. The team had to p
 automated steps, to allow faster feedback loops. This allowed then to have a high confidence in the quality of commits, from only 
 minutes before. CI pipelines and delta-scripts for database table-shape migrations, in particular, were focused on.
 
-The 2010 'Continuous Delivery' book is the best selling result. It has been translated into three languages since, and 
+The 2010 'Continuous Delivery' book is the bestselling result. It has been translated into three languages since, and 
 both authors now have careers that further deliver/describe the benefits for clients. The book ties the foundational 
 aspects of DevOps, Continuous Integration pipelines, and tight lean-inspired feedback loops together to get a broad
 and deep definition of how we should develop software collectively in 2010 and onwards. 
@@ -312,7 +312,7 @@ The emergence of micro services as small buildable/deployable things that are gl
 XML/YAML/DNS configuration) reinforced "many small repos" (the kinda reinforce each other really), while this can be
 done with any branching model, the non-trunk models probably had the mindshare. Monorepos were out completely. A 
 possibility from monorepos, teams sharing code and source level a HEAD revision, positively laughed it. The history 
-page of Wikipedia list multiple people concurrenly pushing the same emergent micro-service 
+page of Wikipedia list multiple people concurrently pushing the same emergent micro-service 
 idea{{< ext url="https://en.wikipedia.org/wiki/Microservices#History" >}}.
 
 ## Case Study: A Practical Approach To Large Scale Agile Development (2012)
@@ -355,7 +355,7 @@ situations for commits a developer wants to do. Maybe that last vision isn't qui
 
 Snap-CI was the first CI service to setup pipelines for new branches in the tracked repository without a human initiating
 that - it did so automatically on push of the first commit into a branch. Well, at least if the branch name conforms 
-to a given regex/prefix. That commit, and any to the branch afterwards even preceding the Pull Request, are run though a
+to a given regex/prefix. That commit, and any to the branch afterwards, even preceding the Pull Request, are run through a
 pipeline that includes:
 
 * all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ

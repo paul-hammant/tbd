@@ -73,7 +73,7 @@ facets of the 'distance' that we want to reduce (refer [5 minute overview](/5-mi
  
 ### Pipelines - further reading
 
-Note: Continuous Integration Pipelines are better described in the best selling 
+Note: Continuous Integration Pipelines are better described in the bestselling 
 [Publications - Continuous Delivery](/publications#continuous-delivery-july-27-2010) book. So are dozens of nuanced, 
 lean inspired concepts for teams pushing that far.
 
@@ -151,7 +151,7 @@ to handle it (and a notification).
 ### The high bar, today
 
 Highest througput teams have CI server setups that prevent breakage of the trunk. That means that commits are verified
-before they land in the trunk to the extent where team mates can update/sync/pull.
+before they land in the trunk to the extent where teammates can update/sync/pull.
 
 The problem this solves is when rate of commit into the trunk would be too high to have an auto-rollback on build 
 failure. In Google one commit lands in the trunk every 30 seconds. Few CI technologies (and source control systems) can 
