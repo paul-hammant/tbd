@@ -12,7 +12,7 @@ The trick is to have a mechanism to route invocations of logic between the old a
 you are an Airline, and you had written your first online purchasing experience in Perl. You're now wanting to 
 do 'Elixir' and its web framework 'Phoenix'.  
 
-Strangulation is where you would use the Apache server that your doubtless had 
+Strangulation is where you would use the Apache server that you doubtless had 
 fronting Perl, to **conditionally** route HTTP requests to Erlang/Elixir/Phoenix. Say your first completed milestone
 was 'Loyalty Account View/Edit' you would route based on the URLs the browser was seeking pages for. Obviously 
 agreeing on URLs (and cookies) is key for the old Perl and new Elixr app. So is deployment in lockstep.
