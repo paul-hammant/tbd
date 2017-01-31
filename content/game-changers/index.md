@@ -206,8 +206,11 @@ marshaled change down to their workstation to play with it, or use it as a basis
 that back in review again.
 
 In 2006, Guido van Rossum presented one of his bigger contributions - "Mondrian" -
-to Googlers. Here he that tech talk on YouTube (previously on GoogleVideos) 
-{{< ext url="https://www.youtube.com/watch?v=CKjRt48rZGk" >}}. Note at the start he says XP practice 
+to Googlers. Here is that 'tech talk' on YouTube:
+
+{{< youtube CKjRt48rZGk >}}
+
+Note at the start he says XP practice 
 "Pair-Programming" is best, and that code review helps fill the gap for situations where you cannot do it.
 
 After Mondrian, the open source world saw Gerrit{{< ext url="https://www.gerritcodereview.com" >}} released 
@@ -394,7 +397,9 @@ low-defect delivery of multiple applications and services. Each application/serv
 team in question. Yes, everything works just fine.
 
 Rachel Potvin presented on the same topic a couple of months later in "Why Google Stores Billions of Lines of Code in a 
-Single Repository"{{< ext url="https://www.youtube.com/watch?v=W71BTkUbdqE" >}}.
+Single Repository":
+
+{{< youtube W71BTkUbdqE >}}
 
 # References elsewhere
 
