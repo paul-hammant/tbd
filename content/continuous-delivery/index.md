@@ -16,8 +16,8 @@ details the 'marching orders' for many companies, where there is whole dev-team 
 
 {{< warning title="A Layer above Trunk Based Development" >}}
 Continuous Delivery is a broad multifaceted subject, that sits on top of Trunk Based Development as a practice. This
-website, and this page in particular, is not going to give it justice. Head on over to 
-[ContinuousDelivery.com](https://continuousdelivery.com/) and understand too that "lean experiments" are the part of 
+website, and this page in particular is not going to give it justice. Head on over to 
+`ContinuousDelivery.com`{{< ext url="https://continuousdelivery.com" >}} and understand too that "lean experiments" are the part 
 of CD and not so much the concern of Trunk Based Development.
 {{< /warning >}}
 
@@ -25,9 +25,9 @@ of CD and not so much the concern of Trunk Based Development.
 
 **An automatic push all the way into production; Maybe every commit**
 
-This is a extension of 'Continuous Delivery', but the deployment is to production. Certain types of startups like 
+This is an extension of 'Continuous Delivery', but the deployment is to production. Certain types of startups like 
 Netflix, Etsy and Github deploy their major application to production with each commit. Companies that have 
-applications/services where  clients/customers could lose money, are much less likely to *firehose into production*.
+applications/services where  clients/customers could lose money are much less likely to *firehose into production*.
 
 # References elsewhere
 

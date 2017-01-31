@@ -30,7 +30,7 @@ must be for objective reasons.
 
 In enterprises, if code review was done at all prior to 2008, it was done in a batch, and probably a group activity. 
 It was often abhorred as it gave a lead developer/architect a moment to set an agenda, round on a large portion of the 
-attendees and and make sure that their own code flubs were not discussed at all.
+attendees and make sure that their own code flubs were not discussed at all.
 
 Historically, open source teams never had the luxury of procrastinating about code review. They either did code reviews as they went 
 (perhaps days were the review cadence, not hours or minutes), or they didn't bother at all.
