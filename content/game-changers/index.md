@@ -68,7 +68,11 @@ also used these, but the Excel team did (as they maintained the former at least)
 
 These are clearly practices to support teams working in a trunk model.
 
-Note: In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his now famous 
+Notes:
+
+1. Steve McConnell's Rapid Development (1996) also reinforces #11 - make a daily build.
+ 
+2. In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his now famous 
 "The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}}.
 
 ## Perforce's High-Level SCM Best Practices white paper (1998)
@@ -80,8 +84,9 @@ The paper alternates between 'trunk' and 'mainline' language, but has many valua
 it that help set a foundation for the next ten years of version-control advances.
 
 Also in 1998, Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
-ambivalent about branching models and facilitated many alternates. In the end, though, people's willingness to experiment
-with multiple parallel active branches won out, and we had some dark years for Trunk Based Development ahead.
+open to any branching model and implementing teams chose differently. In the end, though, people's new found willingness 
+to experiment with multiple parallel active branches won out, and we had some dark years for Trunk Based Development 
+ahead (ignoring Google).
 
 ## Extreme Programming's Continuous Integration (1999)
 
@@ -115,12 +120,16 @@ Martin's ThoughtWorks colleagues (Alden Almagro{{< ext url="http://aldenalmagro.
 Paul Julius{{< ext url="http://www.pauljulius.com" >}}, 
 Jason Yip{{< ext url="http://jchyip.blogspot.com" >}}) went on to build the then-dominant 
 "Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001. This was a 
-groundbreaking technology and very accessible to companies wanting a machine to fully verify checkins. 
+groundbreaking technology and very accessible to companies wanting a machine to fully verify checkins. ThoughtWorks 
+already had success the year before with the same server design on a client project, and CruiseControl was the
+rewrite from scratch in order to make it open source.
 
 Early CI servers, including CruiseControl used to have a "quiet period" to make sure they had received every last 
 element of an intended commit. To facilitate that, only one pair of developers was allowed to checkin at a time. With 
 CVS the other developers in the team could only do their "cvs up" when CruiseControl had given the green light, 
-automating that "build passes, gang" oral notification above. 
+automating that "build passes, gang" oral notification above. A particular non-functional feature to note for 
+CruiseControl was that it stored its 'pipeline' configuration in source-control. In fact, that was alongside the 
+projects source and build file - developers could tweak CI configuration in a commit.
 
 ### Apache's Gump
 
