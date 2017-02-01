@@ -35,6 +35,13 @@ to a 'slender', or Trunk Based Development mode of use.
 
 Note: Over time all version control systems would adopt this branch/merge language.
 
+## Concurrent_Versions_System - CVS (1990)
+
+A handful of scripts created in 1986 by Dick Grune, were fashioned into an initial release of CVS{{< ext url="https://en.wikipedia.org/wiki/Concurrent_Versions_System" >}}
+in 1990. For the open source community CVS was it until Subversion came along year later. The adoption of CVS in the 
+young open source community, spurred its adoption in the enterprise too. While many branching models were possible, merge was 
+painful and Trunk Based Development was the sensible choice.
+
 ## Microsoft Secrets book (1995)
 
 Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages 
@@ -72,8 +79,8 @@ Notes:
 
 1. Steve McConnell's Rapid Development (1996) also reinforces #11 - make a daily build.
  
-2. In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his now famous 
-"The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}}.
+2. In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his famous 
+"The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}} posting.
 
 ## Perforce's High-Level SCM Best Practices white paper (1998)
 
@@ -87,6 +94,15 @@ Also in 1998, Perforce and ClearCase bit into the corporate VCS market significa
 open to any branching model and implementing teams chose differently. In the end, though, people's new found willingness 
 to experiment with multiple parallel active branches won out, and we had some dark years for Trunk Based Development 
 ahead (ignoring Google).
+
+## Mozilla's Tinderbox 
+
+Mozilla had a service that compiled and tested bits and pieces of their opensource offerings together. That service was
+Tinderbox and it debuted for the public to see in 1997. Their source organization was single branch in the trunk style
+managed by CVS, and allowed individual developers to checkout and keep abreast of only the pieces they wanted/needed to. Tinderbox
+was the safety net that ensured everything was correct across all the whole trunk. It ran until it wouldn't scale any 
+more in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}}.
+
 
 ## Extreme Programming's Continuous Integration (1999)
 
@@ -131,9 +147,9 @@ automating that "build passes, gang" oral notification above. A particular non-f
 CruiseControl was that it stored its 'pipeline' configuration in source-control. In fact, that was alongside the 
 projects source and build file - developers could tweak CI configuration in a commit.
 
-### Apache's Gump
+#### Apache's Gump
 
-Apache's Gump was built on a similar timeline, but focused more on the binary integration hell of 
+Apache's Gump was built on a similar timeline to CruiseControl, but focused more on the binary integration hell of 
 interdependent Apache (and other) open-source projects. It gave an early warning of integration clashes that were 
 already, or were about to be problematic, for teams. While impressive, it did not gain traction in the enterprise. 
 This is because enterprises were able to be more buffered from open-source library hell (and the implicit diamond 
