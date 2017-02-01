@@ -103,7 +103,6 @@ managed by CVS, and allowed individual developers to checkout and keep abreast o
 was the safety net that ensured everything was correct across all the whole trunk. It ran until it wouldn't scale any 
 more in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}}.
 
-
 ## Extreme Programming's Continuous Integration (1999)
 
 Kent Beck{{< ext url="https://en.wikipedia.org/wiki/Kent_Beck" >}} published "Extreme Programming Explained" in 1999. 
@@ -121,9 +120,13 @@ in question). And, no, faster did not mean delete or comment out automated test 
 the elapsed time to "a few minutes" (Kent again).
 
 Kent had pioneered (with many industry luminary friends) in 1996 on the famous Chrysler Comprehensive Compensation System 
-(C3) project.
+(C3) project. The C3 project used Smalltalk as its language, and OTI's ENVY was the version control tool used. It is 
+important to note that today's CR-delimted text file systems are blunt instruments compared to the fine-grained 
+directed graphs with fidelity down to class/method history of each of those. It was more like a multidimension 
+database with cross cutting tags representing HEAD, or someone else's important compination of those three. It was 
+omnipresent too - a decision made to move HEAD was instantly available without 'update' action to teammates.
 
-### Continuous Integration on MartinFowler.com
+### Continuous Integration paper on MartinFowler.com
 
 Martin Fowler and Matt Foemmel{{< ext url="http://blog.foemmel.com" >}} wrote an influential article "Continuous 
 Integration" in 2000{{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
@@ -138,7 +141,7 @@ Jason Yip{{< ext url="http://jchyip.blogspot.com" >}}) went on to build the then
 "Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001. This was a 
 groundbreaking technology and very accessible to companies wanting a machine to fully verify checkins. ThoughtWorks 
 already had success the year before with the same server design on a client project, and CruiseControl was the
-rewrite from scratch in order to make it open source.
+rewrite from scratch in order to make it open source. CruiseControl was a great success in the enterprise.
 
 Early CI servers, including CruiseControl used to have a "quiet period" to make sure they had received every last 
 element of an intended commit. To facilitate that, only one pair of developers was allowed to checkin at a time. With 
