@@ -5,9 +5,16 @@ weight: 111
 ---
 
 A Monorepo, is a specific trunk based development implementation where the organization in 
-question puts the source for all their applications and service into one trunk, and forces developers to **share code
-at source level instead of linking in previously built binaries**. The release cadences for each probably be different
-and the teams structures separate or integrated.
+question puts its source for all applications/service/libraries/frameworks into one trunk, and forces developers 
+to commit together in that trunk - atomically.
+
+Google has the most famous monorepo, and they do the above AND force teams to **share code at source level instead of 
+linking in previously built binaries**. Specifically, they have no version numbers for their own dependencies, just an 
+implicit 'HEAD'. Third party libraries (like JUnit) will be checked into the repo with a specific version number 
+(like 4.11), and all teams will use that version if they use it at all.
+
+The deployment and/or release cadences for each applications/service/libraries/frameworks will probably be different 
+as will the teams structures, methodologies, priorites, story backlogs etc.
 
 The name 'monorepo' is a newer for a previously unnamed practice that is more than a decade old.
 
