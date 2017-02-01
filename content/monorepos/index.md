@@ -268,6 +268,14 @@ In order to deliver that, you would need a feature to be added Maven like so:
 Or you could "hack it" and rewrite your pom.xml files after every expansion or 
 contraction{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/" >}}.
 
+## If you decide you do not want to do a Monorepo
+
+Then repository separation should be **no more fine grained** than thing that have separate deployment cadence.
+
+With micro services you traditionally get exactly that: a deployable micro service in its own repository. There is 
+no reason why hundreds of microservices couldn't be in the same monorepo, but the microservices community has
+promoted the one repo per microservice for a while now.
+
 # References elsewhere
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
