@@ -193,5 +193,9 @@ intuitive "Branch Explorer" to see the evolution of branches, view diffs, execut
 It is also the first modern VCS to have semantic merge - it understands 
 select programming languages and the refactorings developers perform on them. For example "move method", where that
 method is 50 lines long, isn't 50 lines added and 50 deleted in one commit, it is a much more *exact* and terse diff
-representation.
+representation. 
+
+Plastic even calmly handles a situation where one developer moves a method within a source, and another simultaneously 
+changes the contents of the method in its former location. Plastic does not consider that a clash at all, and just does 
+the merge quietly - the method moves and is changed in its new location.
 
