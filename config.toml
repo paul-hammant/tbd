@@ -57,22 +57,22 @@ googleAnalytics = "UA-24415524-3"
 [[menu.main]]
 	name   = "Five minute overview"
 	url    = "5-min-overview/"
-	weight = 10
+	weight = 11
 
 [[menu.main]]
 	name   = "Deciding factors"
 	url    = "deciding-factors/"
-	weight = 20
+	weight = 21
 
 [[menu.main]]
 	name   = "VCS choices"
 	url    = "vcs-choices/"
-	weight = 30
+	weight = 31
 
 [[menu.main]]
 	name   = "Feature flags"
 	url    = "feature-flags/"
-	weight = 40
+	weight = 41
 
 [[menu.main]]
 	name   = "Branch by Abstraction"
@@ -92,7 +92,7 @@ googleAnalytics = "UA-24415524-3"
 [[menu.main]]
 	name   = "Continuous Integration"
 	url    = "continuous-integration/"
-	weight = 60
+	weight = 61
 
 [[menu.main]]
 	name   = "Continuous Code Review"
@@ -102,7 +102,7 @@ googleAnalytics = "UA-24415524-3"
 [[menu.main]]
 	name   = "Continuous Delivery"
 	url    = "continuous-delivery/"
-	weight = 70
+	weight = 71
 
 [[menu.main]]
 	name   = "Concurrent development of consecutive releases"
@@ -117,32 +117,37 @@ googleAnalytics = "UA-24415524-3"
 [[menu.main]]
 	name   = "Observed habits"
 	url    = "observed-habits/"
-	weight = 80
+	weight = 81
 
 [[menu.main]]
 	name   = "Doing it wrong"
 	url    = "youre-doing-it-wrong/"
-	weight = 90
+	weight = 91
 
 [[menu.main]]
 	name   = "Alternative branching models"
 	url    = "alternative-branching-models/"
-	weight = 100
+	weight = 101
 
 [[menu.main]]
 	name   = "Monorepos"
 	url    = "monorepos/"
-	weight = 110
+	weight = 111
+
+[[menu.main]]
+	name   = "Expanding Contracting Monorepos"
+	url    = "/expanding-contracting-monorepos/"
+	weight = 112
 
 [[menu.main]]
 	name   = "Game Changers"
 	url    = "game-changers/"
-	weight = 120
+	weight = 121
 
 [[menu.main]]
 	name   = "Publications"
 	url    = "publications/"
-	weight = 130
+	weight = 131
 
 [blackfriday]
 	smartypants	= true
