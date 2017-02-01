@@ -239,7 +239,7 @@ dependencies, as you check them in to source control without version numbers in 
 ## Clash of ideologies
 
 Above we contrasted **directed graph** and **recursive** build systems. The former are naturally compatible
-with expandable/collapsible checkout technologies. The latter not necessarily so.
+with expandable/contractible checkout technologies. The latter not necessarily so.
 
 ### Maven
  
@@ -255,7 +255,7 @@ Recursive build systems like maven, have a forward declaration of modules that s
 Presently though, these build technologies do not have the ability to follow
 a changeable checkout that the likes of gcheckout can control.
 
-Directories `moduleone` and `moduletwo` have to exist in order for the build to work. The idea of expandable/collapsible 
+Directories `moduleone` and `moduletwo` have to exist in order for the build to work. The idea of expandable/contractible 
 monorepos, is that trees of buildable things are **calculated or computed** not **explicitly declared**. 
 In order to deliver that, you would need a feature to be added Maven like so:
 
