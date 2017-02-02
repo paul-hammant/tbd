@@ -33,6 +33,14 @@ And some secondary goals:
 Google and Facebook are the most famous organizations that rest development on a single conpany-wide trunk, that 
 fits the monorepo design. 
  
+{{< warning title="Risk of chaotic directory layout" >}}
+Google's co-mingled applications and services site within highly structured and uniform source trees. A Java 
+developer from one project team, instantly recognizes the directory structure for another team's application
+or service. That goes across languages too. The design for the directory layout needs to be enforced globally. You can
+see that in the way that Buck and Bazel layout trees for production and test code. If you
+cannot overhaul the directory structure of your entire repository, you should not entertain a monorepo.
+{{< /warning >}} 
+ 
 ## Third party dependencies
 
 With the monorepo model, there is a strong desire to have third-party binaries in source-control too. 

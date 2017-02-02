@@ -29,7 +29,7 @@ Then edit away ... Hugo hot-reloads pages.
 8. Avoid H1 tags (single hash/pound '#') as the hugo theme doesn't do the right thing with them
 9. Be careful with the dates in the front matter of the markdown sources. We're contriving them presently, as they guide <prev/next> article navigation
 10. Don't shorten to TBD beyong the singe use we already have.
-
+11. Repo and Deps should be expanded to their long form
 
 # How to contribute?
 

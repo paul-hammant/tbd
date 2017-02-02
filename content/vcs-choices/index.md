@@ -91,9 +91,9 @@ developer workstations.
 [Website](https://www.perforce.com/)
 
 Perforce is a closed-source, industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas 
-store all their designs in it.  Until 2012, Google had their Trunk in it and moved off to an in-house solution it 
-because their non-functional needs exceeded it. Perforce is peculiar in that 'p4d' (a single server-side executable 
-binary file) is the whole server and does not need to be installed - just executed.
+store all their designs in it. Until 2012, Google had their Trunk and many tens of terrabytes of history in it.
+They moved off it to an in-house solution as they outgrew it. Perforce is peculiar in that its 'p4d' (a single server-side 
+executable binary file) is the whole server and does not need to be installed - just executed.
 
 Perforce is the last VCS technology that ordinarily maintains the read-only bit on the developer workstation. You 
 definitely need a plugin for your IDE to handle the wire operations with the server, so you are not confronted with the
@@ -101,13 +101,11 @@ fact that source files are read-only. Because the Perforce (p4) client having to
 read only bits in respect of editing source files, it requires a permanent connection to the server.
 
 Unlike Git, Perforce is not ordinarily able to **locally** show the history of the files within it. It needs that server 
-connection again.
+connection again, which isn't so good. What is good is the fact the server already knows what files need to have updated 
+in your working copy in case you were to do a 'py sync' operation.
 
 Perforce allows branches to be set up at any sub-directory not just the root one. It also allows read and/or write
 permissions to be specified at any directory (or branch) within large and small source trees.
-
-A crucial and unmatched feature of Perforce in other VCS technology choices is its 'client spec'. 
-More on that in [Monorepos](/monorepos/).
 
 ### No Code Review
 
@@ -151,7 +149,7 @@ feedback/contact mechanism in order suggest updates (some claims are out of date
 ### No Code Review
 
 Note that Subversion has no local branching capability, and to get code review you need to install third-party servers 
-along side it or (better choice) use a platform that integrates code review like RhodeCode.
+along side it or (better choice) use a platform that integrates code review like those below.
 
 ### Git-Svn
 
@@ -186,10 +184,11 @@ a Trunk Based Development usage.
 
 [Website](https://www.plasticscm.com/)
 
-PlasticSCM is a modern DVCS like Git and Mercurial. It is compatible with Trunk Based Development and quite 
+PlasticSCM is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk Based Development and quite 
 self-contained (has integrated code review, etc). Plastic is very good with bigger binaries and comes with an 
-intuitive "Branch Explorer" to see the evolution of branches, view diffs, execute merges, etc.
-
+intuitive "Branch Explorer" to see the evolution of branches, view diffs, execute merges, etc. For sizes of individual
+repos, multiple terrabytes is not unheard of. A least for some of the ganes-industry customers.
+ 
 It is also the first modern VCS to have semantic merge - it understands 
 select programming languages and the refactorings developers perform on them. For example "move method", where that
 method is 50 lines long, isn't 50 lines added and 50 deleted in one commit, it is a much more *exact* and terse diff
