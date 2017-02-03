@@ -88,12 +88,12 @@ open to any branching model and implementing teams chose differently. In the end
 to experiment with multiple parallel active branches won out, and we had some dark years generally for Trunk Based Development 
 ahead.
 
-Microsoft installed a special version of Perforce called "Source Depot". It tool over from SLM/Slime (mentioned above).
-We're not sure, but MicroSoft may have embraced the multiple possibility from branching strategies within SourceDepot 
-(SD) from that moment.
+Microsoft installed a custom build of Perforce called "Source Depot". It tool over from SLM/Slime (mentioned above).
+We're not sure, but MicroSoft may have embraced the possibility of multiple active branches (rather than Trunk Based Development) 
+within their SourceDepot (SD) install from that moment.
 
-Google installed Perforce (see below) and embraced a Trunk Based Development model with it, and rose to every scaling
-challenge as they grew with tooling around it, including more than a few straight inventiones of technology/technique.
+Google installed Perforce (see below) and embraced a Trunk Based Development model with it from the outset. They rose to every scaling
+challenge with extra tooling around it, including more than a few actual inventions of technology and technique.
 
 ### Perforce's High-Level SCM Best Practices white paper 
 
