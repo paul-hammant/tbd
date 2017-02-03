@@ -134,14 +134,14 @@ directed graphs with fidelity down to class/method history of each of those. It 
 database with cross cutting tags representing HEAD, or someone else's important compination of those three. It was 
 omnipresent too - a decision made to move HEAD was instantly available without 'update' action to teammates.
 
-### Continuous Integration paper on MartinFowler.com
+## Continuous Integration paper on MartinFowler.com
 
 Martin Fowler and Matt Foemmel{{< ext url="http://blog.foemmel.com" >}} wrote an influential article "Continuous 
 Integration" in 2000{{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
 calling out this one part of XP. Martin greatly updated it in 2006 
 {{< ext url="https://www.martinfowler.com/articles/continuousIntegration.html" >}}. 
  
-### ThoughtWorks' Cruise Control 
+## ThoughtWorks' Cruise Control 
  
 Martin's ThoughtWorks colleagues (Alden Almagro{{< ext url="http://aldenalmagro.com/resume.html" >}}, 
 Paul Julius{{< ext url="http://www.pauljulius.com" >}}, 
@@ -158,7 +158,7 @@ automating that "build passes, gang" oral notification above. A particular non-f
 CruiseControl was that it stored its 'pipeline' configuration in source-control. In fact, that was alongside the 
 projects source and build file - developers could tweak CI configuration in a commit.
 
-#### Apache's Gump
+### Apache's Gump
 
 Apache's Gump was built on a similar timeline to CruiseControl, but focused more on the binary integration hell of 
 interdependent Apache (and other) open-source projects. It gave an early warning of integration clashes that were 
