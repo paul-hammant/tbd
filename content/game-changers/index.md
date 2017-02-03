@@ -390,19 +390,20 @@ just as useful for trunk based development and multi-branch models. It means tha
 situations for commits a developer wants to do. Maybe that last vision isn't quite complete yet, but there's a direction
  to go in now.
 
-## Snap-CI's per-commit speculative mergability verification (2013)
+## Snap-CI's per-commit speculative mergability analysis (2013)
 
 Snap-CI was the first CI service to setup pipelines for new branches in the tracked repository without a human initiating
 that - it did so automatically on push of the first commit into a branch. Well, at least if the branch name conforms 
 to a given regex/prefix. That commit, and any to the branch afterwards, even preceding the Pull Request, are run through a
 pipeline that includes:
 
-* all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ
-* a speculative merge back to the master/trunk/mainline and #1 **again** on that resulting merge 
+1. all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ
+2. a speculative merge back to the master/trunk/mainline - only into working-copy as it is for analysis only
+3. step 1 **again** on that resulting merge 
 
-The speculative merge was only to working copy, and was discarded every time after #2 - the actual merge result is never 
-pushed to origin/master in Git terms. It is only the "is this buildable and mergeable or not" notification that was desired 
-from the exercise.
+The speculative merge is discarded every time after #2 (if it fails to merge automatically) or after #3 (regardless) - 
+the actual merge result is never pushed off the build server to the remote (in Git terms). It is only the "is this 
+buildable and mergeable or not" notification that was desired from the exercise.
 
 Although they intended this feature of Snap-CI for short-lived feature branches, it is clear now that teams should do 
 this CI setup **regardless of branching model**. Yes, even the long-lived branching models also benefit from this, 
