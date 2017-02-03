@@ -81,6 +81,14 @@ Notes:
 2. In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his famous 
 "The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}} posting.
 
+## Mozilla's Tinderbox (1997)
+
+Mozilla had a service that compiled and tested bits and pieces of their opensource offerings together. That service was
+Tinderbox and it debuted for the public to see in 1997. Their source organization was single branch in the trunk style
+managed by CVS, and allowed individual developers to checkout and keep abreast of only the pieces they wanted/needed to. Tinderbox
+was the safety net that ensured everything was correct across all the whole trunk. It ran until it wouldn't scale any 
+more in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}}.
+
 ## Perforce and ClearCase (1998)
 
 Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
@@ -102,14 +110,6 @@ Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="
  
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
 it that help set a foundation for the next ten years of version-control advances.
-
-## Mozilla's Tinderbox (1997)
-
-Mozilla had a service that compiled and tested bits and pieces of their opensource offerings together. That service was
-Tinderbox and it debuted for the public to see in 1997. Their source organization was single branch in the trunk style
-managed by CVS, and allowed individual developers to checkout and keep abreast of only the pieces they wanted/needed to. Tinderbox
-was the safety net that ensured everything was correct across all the whole trunk. It ran until it wouldn't scale any 
-more in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}}.
 
 ## Extreme Programming's Continuous Integration (1999)
 
