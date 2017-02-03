@@ -12,8 +12,8 @@ of a slowdown in proximity to a release.  Sure, a couple of developers out a tea
 to the release but everyone else is going to work at full speed. 
 
 Generally speaking the trunk is a place to firehose commits into, and the habits of the developers are such that 
-everything is ready to go live. If a team is doing 12 releases a year, then the branch that is cut on the just in time 
-basis is the one that is observed to 'frozen' because of the absence of developers. Refer [branch for release](/branch-for-release/).
+everything is ready to go live. If a team is doing 12 releases a year, then a release branch that is cut on the just in time 
+basis and is the one that is observed to be 'frozen' because of the absence of developers. Refer [branch for release](/branch-for-release/).
 
 ### Every Day is the same
 
