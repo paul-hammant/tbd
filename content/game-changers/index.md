@@ -51,8 +51,7 @@ The book was translated into 14 languages, and a bestseller.
 
 There's a section in *Microsoft Secrets* dealing with Microsoft's per-developer workflow using Source Library Manager 
 (SLM) on  a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - an Internal 
-Microsoft tool for source-control until it was replaced by Source Depot in 1998. That daily, rigorous, developer 
-workflow was:
+Microsoft tool for source-control. That daily developer workflow was:
 
 1. checkout (update/pull/sync or checkout afresh)
 2. implement feature 
@@ -82,7 +81,21 @@ Notes:
 2. In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his famous 
 "The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}} posting.
 
-## Perforce's High-Level SCM Best Practices white paper (1998)
+## Perforce and ClearCase (1998)
+
+Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
+open to any branching model and implementing teams chose differently. In the end, though, people's new found willingness 
+to experiment with multiple parallel active branches won out, and we had some dark years generally for Trunk Based Development 
+ahead.
+
+Microsoft installed a special version of Perforce called "Source Depot". It tool over from SLM/Slime (mentioned above).
+We're not sure, but MicroSoft may have embraced the multiple possibility from branching strategies within SourceDepot 
+(SD) from that moment.
+
+Google installed Perforce (see below) and embraced a Trunk Based Development model with it, and rose to every scaling
+challenge as they grew with tooling around it, including more than a few straight inventiones of technology/technique.
+
+### Perforce's High-Level SCM Best Practices white paper 
 
 Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf" >}}
  (presented at a SCM conference in Brussels the same year).
@@ -90,12 +103,7 @@ Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
 it that help set a foundation for the next ten years of version-control advances.
 
-Also in 1998, Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
-open to any branching model and implementing teams chose differently. In the end, though, people's new found willingness 
-to experiment with multiple parallel active branches won out, and we had some dark years for Trunk Based Development 
-ahead (ignoring Google).
-
-## Mozilla's Tinderbox 
+## Mozilla's Tinderbox (1997)
 
 Mozilla had a service that compiled and tested bits and pieces of their opensource offerings together. That service was
 Tinderbox and it debuted for the public to see in 1997. Their source organization was single branch in the trunk style
@@ -284,7 +292,7 @@ Pull Requests came with an ability to leave code review comments for the contrib
 receivers of contributions could parry them with feedback, rather than consume them and fix them which was common 
 previously.
 
-#### no more clunky patch sets
+#### No more clunky patch sets
 
 The open-source community for one, could step away from patch-sets that were donated by email (or rudimentarily). 
 Pull-Requests changed the dynamics of open source. Now, the original creator of open source was forced to keep up 
@@ -404,18 +412,20 @@ the mainline/master.
 Badrinath 'Badri' Janakiraman wrote a blog 
 entry{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-tracking-and-integration/" >}} when the 
 feature was rolled out. The blog entry is very much worth a read, especially as Badri was product owner for Snap-CI
-at the time.  
+at the time and had the epiphany to implement this feature.  
 
-Circle-CI offers the same feature now, and it is a question of time before all CI technologies do. What is a reality 
+Circle-CI offers the same feature now, and it is a question of time before all CI technologies do. 
+
+What is a reality 
 in 2017 is that the high bar is every commit, **every branch**, with that speculative merge, and elastically scaled so 
 that the notification is within seconds of pushing the commit to the shared VCS. Back in 2001 (CruiseControl) we were batching 
-commits, we would wait a little while to allow checkins to finish, and we'd have to pick apart who actually broke the 
-build ourselves.
+commits, we would wait a little while to allow checkins to finish (particularly for the non atomic CVS), and humans would 
+have to pick apart who actually broke the build.
 
 Surely non Trunk Based Development teams would turn on CI for every branch and soon after plan their migration to Trunk 
 Based Development.
 
-## Google sharing their Trunk usage - 2016
+## Google sharing their Monorepo Trunk - 2016
 
 In none other than the Association for Computing Machinery's magazine, Googlers Rachel Potvin and Josh Levenberg share
 how Google arranges for 95% (25,000) of its software developers to share one trunk in "Why Google Stores Billions of 
