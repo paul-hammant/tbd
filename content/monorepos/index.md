@@ -126,9 +126,10 @@ machines in the TCP/IP subnet). That is in place to shorten compile times for pr
 ## Recursive build systems
 
 Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls
-third party binaries from 'binary repositories', caching them locally. Most recursive build systems can
-be configured to pull third party dependencies from a relative directory in the monorepo. That is not conventional 
-though.
+third party binaries from 'binary repositories', caching them locally. Maven also traverses its tree in a strict 
+depth first (then breadth) manner. Most recursive build systems can be configured to pull third party dependencies 
+from a relative directory in the monorepo. A binary dependency cache outside of the VCS controlled working copy, 
+is more normal.
 
 The general directory structure for recursive build systems is like so:
 
