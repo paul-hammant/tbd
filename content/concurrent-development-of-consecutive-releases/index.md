@@ -31,7 +31,16 @@ additional delays because of the retooling and new found nerves.
 If your team has institutionalized Trunk Based Development, [Feature Flags](/feature-flags/) and (to a lesser degree) 
 [Branch by Abstraction](/branch-by-abstraction/), it is in a perfect position to reorder releases, and only have a small
 impact on development team throughput. Choosing Trunk Based Development, Feature Flags and branch by Abstraction could be said
-to be a hedging strategy against the costs of larger scheduling changes.
+to be a **hedging strategy** against the costs of larger scheduling changes.
+
+{{< warning title="Consecutive development of consecutive releases is by far superior!" >}}
+Every high throughput Extreme Programming team will tell you that finishing and shipping a release before starting work
+as a team on the next releasable slice of work is much better than attempting to do concurrent development of 
+consecutive releases.  Sure, some teammates (PM, BA, tech leads) are looking a couple of weeks ahead to make sure that
+eveything is ready for development and QA automation on a just in time basis, but the majority of the dev team will 
+only pick up new release work as the previous one has been pushed into production.
+{{< /warning >}} 
+
 
 # References elsewhere
 
