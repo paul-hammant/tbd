@@ -390,7 +390,7 @@ just as useful for trunk based development and multi-branch models. It means tha
 situations for commits a developer wants to do. Maybe that last vision isn't quite complete yet, but there's a direction
  to go in now.
 
-## Snap-CI's per-commit speculative mergability analysis (2013)
+## Snap-CI's per-commit speculative mergaebility analysis (2013)
 
 Snap-CI was the first CI service to setup pipelines for new branches in the tracked repository without a human initiating
 that - it did so automatically on push of the first commit into a branch. Well, at least if the branch name conforms 
