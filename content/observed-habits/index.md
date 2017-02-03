@@ -9,7 +9,11 @@ weight: 81
 Developers living in a Trunk Based Development reality, mostly do not experience variance in their days or weeks on the 
 trunk. In particular, there is no "we're close to a release so let's freeze code", and generally there is no indication 
 of a slowdown in proximity to a release.  Sure, a couple of developers out a team might be assigned to bug-fixing closer
-to the release but everyone else is going to work at full speed.
+to the release but everyone else is going to work at full speed. 
+
+Generally speaking the trunk is a place to firehose commits into, and the habits of the developers are such that 
+everything is ready to go live. If a team is doing 12 releases a year, then the branch that is cut on the just in time 
+basis is the one that is observed to 'frozen' because of the absence of developers. Refer [branch for release](/branch-for-release/).
 
 ### Every Day is the same
 
