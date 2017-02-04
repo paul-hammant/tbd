@@ -157,7 +157,7 @@ Integration" in 2000{{< ext url="https://www.martinfowler.com/articles/originalC
 calling out this one part of XP. Martin greatly updated it in 2006 
 {{< ext url="https://www.martinfowler.com/articles/continuousIntegration.html" >}}. 
  
-## ThoughtWorks' Cruise Control 
+## ThoughtWorks' Cruise Control (2001)
  
 ![](to_tbd3.png)
  
@@ -232,7 +232,7 @@ before you push it back to the shared repository. There are pros and cons to tha
 
 Generally, Git made it much easier to consider multiple branches as a viable team setup.
 
-## Google's internal DevOps - 1998 onwards
+## Google's internal DevOps (1998 onwards)
 
 ![](to_tbd3_but_secret.png)
 
@@ -310,7 +310,7 @@ that used the Branch by Abstraction technique{{< ext url="http://paulhammant.com
 Whereas many had previously used this technique to avoid longer version-control branches in a trunk model, this was the 
 first time it had been detailed online and given a name (by Stacy Curl).
 
-## Github's entire platform - 2008 onwards
+## Github's entire platform (2008 onwards)
 
 ![](away_from_tbd2.png)
 
