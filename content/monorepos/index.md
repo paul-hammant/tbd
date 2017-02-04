@@ -5,7 +5,7 @@ weight: 111
 ---
 
 A Monorepo, is a specific trunk based development implementation where the organization in 
-question puts its source for all applications/service/libraries/frameworks into one trunk, and forces developers 
+question puts its source for all applications/services/libraries/frameworks into one trunk, and forces developers 
 to commit together in that trunk - atomically.
 
 Google has the most famous monorepo, and they do the above AND force teams to **share code at source level instead of 
@@ -13,8 +13,8 @@ linking in previously built binaries**. Specifically, they have no version numbe
 implicit 'HEAD'. Third party libraries (like JUnit) will be checked into the repo with a specific version number 
 (like 4.11), and all teams will use that version if they use it at all.
 
-The deployment and/or release cadences for each applications/service/libraries/frameworks will probably be different 
-as will the teams structures, methodologies, priorites, story backlogs etc.
+The deployment and/or release cadences for each application/service/library/frameworks will probably be different 
+as will the team's structures, methodologies, priorities, story backlogs etc.
 
 The name 'monorepo' is a newer for a previously unnamed practice that is more than a decade old.
 
@@ -30,12 +30,12 @@ And some secondary goals:
 * Allow the extraction of new common dependencies (from existing code) to be achieved in atomic commits.
 * Force all developers to focus on the HEAD revisions of files in the trunk
 
-Google and Facebook are the most famous organizations that rest development on a single conpany-wide trunk, that 
+Google and Facebook are the most famous organizations that rest development on a single company-wide trunk, that 
 fits the monorepo design. 
  
 {{< warning title="Risk of chaotic directory layout" >}}
 Google's co-mingled applications and services site within highly structured and uniform source trees. A Java 
-developer from one project team, instantly recognizes the directory structure for another team's application
+developer from one project team instantly recognizes the directory structure for another team's application
 or service. That goes across languages too. The design for the directory layout needs to be enforced globally. You can
 see that in the way that Buck and Bazel layout trees for production and test code. If you
 cannot overhaul the directory structure of your entire repository, you should not entertain a monorepo.
@@ -56,16 +56,16 @@ from the source-control repository/branch.
  
 It could be that your application team depends on something that is made by colleagues from a different team. An 
 example could be an Object Relational Mapping (ORM) library. For Monorepo teams there is a strong wish to depend on 
-the source of that ORM technology, and not a binary. There are multiple reasons for that, but principal one is that 
+the source of that ORM technology and not a binary. There are multiple reasons for that, but the principal one is that 
 source control update/pull/sync is the most efficient way for you to keep up with the HEAD of a library on a minute
 by minute basis. Thus `MyTeamsApplication` and `TheORMweDepOn` should be in your source tree in your IDE at the same time.
-Similarly another team that depends on `TheORMweDepOn` should have it and `TheirApplication` checked out at the same
+Similarly, another team that depends on `TheORMweDepOn` should have it and `TheirApplication` checked out at the same
 time.
 
 ## Directed graph build systems
 
 To facilitate Monorepos, it is important to have a build system that can omit otherwise buildable things/steps that are not
-required for the individual developers **current** build intention. 
+required for the individual developer's **current** build intention. 
 
 The general directory structure for directed graph build systems is like so:
 
@@ -110,23 +110,23 @@ them from your IDE.
 
 ### Facebook's Buck and Google's Bazel
 
-Google has Blaze internally. Ex Googlers at Facebook (with newfound friends) missed that, wrote 
+Google has Blaze internally. Ex-Googlers at Facebook (with newfound friends) missed that, wrote 
 Buck{{< ext url="https://buckbuild.com" >}} and then 
 open-sourced it. Google then open-sourced a cut-down Blaze as Bazel{{< ext url="https://bazel.build" >}}. 
-These are the two (three incl. Blaze) are directed graph build systems that allow a large tree of sources to be speedily 
+These are the two (three including Blaze) are directed graph build systems that allow a large tree of sources to be speedily 
 subset in a compile/test/make-a-binary way. 
  
 The omitting of unnecessary compile/test actions achieved by Buck and Bazel works equally well on developer workstations 
 and in the CI infrastructure.
 
-There is also the ability to depend on recently compiled object code of colleagues. Recently compiled object code for 
+There is also the ability to depend on recently compiled object code of colleagues. The recently compiled object code for 
 provable permutations of sources/dependencies, that is, and plucked from the ether (think of a LRU cache available to all
 machines in the TCP/IP subnet). That is in place to shorten compile times for prod and test code.
  
 ## Recursive build systems
 
 Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls
-third party binaries from 'binary repositories', caching them locally. Maven also traverses its tree in a strict 
+third-party binaries from 'binary repositories', caching them locally. Maven also traverses its tree in a strict 
 depth first (then breadth) manner. Most recursive build systems can be configured to pull third party dependencies 
 from a relative directory in the monorepo. A binary dependency cache outside of the VCS controlled working copy, 
 is more normal.
@@ -165,24 +165,24 @@ and not make a binary for distribution.
  
 ## The diamond dependency problem
  
-What happens when two apps need different version of a dependency? 
+What happens when two apps need a different version of a dependency? 
 
-For in-house dependencies, where the source is in the same monorepo, then you will not have ths situation, as the 
+For in-house dependencies, where the source is in the same monorepo, then you will not have this situation, as the 
 team that first wanted the increased functionality, performed it for all teams, keeping everyone at HEAD revision 
 of it. The concept of version number disappears in this model.
 
 ### Third party dependencies
 
-For third-party dependencies, the same rules applies, everyone upgrades in lock-step. Problems can ensure, of course, 
-if there are real reasons for team B to not upgrade and team A was insistent. Broken backwards compatibility is 
+For third-party dependencies, the same rule applies, everyone upgrades in lock-step. Problems can ensure, of course, 
+if there are real reasons for team B to not upgrade and team A was insistent. Broken backward compatibility is 
 one problem. 
 
 In 2007, Google tried to upgrade their JUnit from 3.8.x to 4.x and struggled as there was a subtle 
-backwards incompatibility in a small percentage of their uses of it. The change-set was very large, and presumably 
-the both the IDE and the javac compiled buckled to some degree.
+backward incompatibility in a small percentage of their useages of it. The changeset became very large, and struggled 
+to keep up with the rate developers were adding tests.
 
-Because you are doing lock-step upgrades, you only secondarily note the version of the third party 
-dependencies, as you check them in to source control without version numbers in the file name.  I.e. JUnit goes in as
+Because you are doing lock-step upgrades, you only secondarily note the version of the third-party 
+dependencies, as you check them into source control without version numbers in the filename.  I.e. JUnit goes in as
 `third_party/java_testing/junit.jar`.
 
 ## Clash of ideologies
