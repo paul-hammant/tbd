@@ -42,9 +42,9 @@ Note: Over time all version control systems would adopt this branch/merge langua
 ![](to_tbd1.png)
 
 A handful of scripts created in 1986 by Dick Grune, were fashioned into an initial release of CVS{{< ext url="https://en.wikipedia.org/wiki/Concurrent_Versions_System" >}}
-in 1990. For the open source community CVS was it until Subversion came along year later. The adoption of CVS in the 
-young open source community, spurred its adoption in the enterprise too. While many branching models were possible, merge was 
-painful and Trunk Based Development was the sensible choice.
+in 1990. For the open source community, CVS was it until Subversion came along year later. The adoption of CVS in the 
+young open source community spurred its adoption in the enterprise too. While many branching models were possible, 
+merging was painful and Trunk Based Development was the sensible choice.
 
 ## Microsoft Secrets book (1995)
 
@@ -72,7 +72,7 @@ Microsoft tool for source-control. That daily developer workflow was:
 10. check in (commit/push)
 11. makes a daily build from HEAD of the shared master branch
 
-The authors note in the book, that #10 is not always an every day thing. And the last step, #11, isn't per developer, it is 
+The authors note in the book, that #10 is not always an everyday thing. And the last step, #11, isn't per developer, it is 
 for the designated "build master" within the team, and manual. 
 
 The book also briefly mentions Test Case Manager (TCM) and "Microsoft Test". These were tools for helping developers 
@@ -92,23 +92,23 @@ Notes:
 
 ![](to_tbd1.png)
 
-Mozilla had a service that compiled and tested bits and pieces of their opensource offerings together. That service was
-Tinderbox and it debuted for the public to see in 1997. Their source organization was single branch in the trunk style
+Mozilla had a service that compiled and tested bits and pieces of their open-source offerings together. That service was
+Tinderbox and it debuted for the public to see in 1997. Their source organization was single-branch in the trunk style
 managed by CVS, and allowed individual developers to checkout and keep abreast of only the pieces they wanted/needed to. Tinderbox
-was the safety net that ensured everything was correct across all the whole trunk. It ran until it wouldn't scale any 
-more in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}}.
+was the safety net that ensured everything was correct across all the whole trunk. It ran until it wouldn't scale anymore 
+in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}}.
 
 ## Perforce and ClearCase (1998)
 
 ![](away_from_tbd3.png)
 
 Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
-open to any branching model and implementing teams chose differently. In the end, though, people's new found willingness 
+open to any branching model and implementing teams chose differently. In the end, though, people's newfound willingness 
 to experiment with multiple parallel active branches won out, and we had some dark years generally for Trunk Based Development 
 ahead.
 
 Microsoft installed a custom build of Perforce called "Source Depot". It took over from SLM/Slime (mentioned above).
-We're not sure, but MicroSoft may have embraced the possibility of multiple active branches (rather than Trunk Based Development) 
+We're not sure, but Microsoft may have embraced the possibility of multiple active branches (rather than Trunk Based Development) 
 within their SourceDepot (SD) install from that moment.
 
 By contrast, Google installed Perforce (see below) and embraced a Trunk Based Development model with it from the outset. 
@@ -118,7 +118,7 @@ technology and technique (see below).
 ### Perforce's High-Level SCM Best Practices white paper 
 
 Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf" >}}
- (presented at a SCM conference in Brussels the same year).
+ (presented at an SCM conference in Brussels the same year).
  
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
 it that help set a foundation for the next ten years of version-control advances.
@@ -143,9 +143,9 @@ the elapsed time to "a few minutes" (Kent again).
 
 Kent had pioneered (with many industry luminary friends) in 1996 on the famous Chrysler Comprehensive Compensation System 
 (C3) project. The C3 project used Smalltalk as its language, and OTI's ENVY was the version control tool used. It is 
-important to note that today's CR-delimted text file systems are blunt instruments compared to the fine-grained 
-directed graphs with fidelity down to class/method history of each of those. It was more like a multidimension 
-database with cross cutting tags representing HEAD, or someone else's important compination of those three. It was 
+important to note that today's CR-delimited text file systems are blunt instruments compared to the fine-grained 
+directed graphs with fidelity down to class/method history of each of those. It was more like a multidimensional 
+database with cross-cutting tags representing HEAD, or someone else's important combination of those three. It was 
 omnipresent too - a decision made to move HEAD was instantly available without 'update' action to teammates.
 
 ## Continuous Integration paper on MartinFowler.com (2000)
@@ -175,7 +175,7 @@ element of an intended commit. To facilitate that, only one pair of developers w
 CVS the other developers in the team could only do their "cvs up" when CruiseControl had given the green light, 
 automating that "build passes, gang" oral notification above. A particular non-functional feature to note for 
 CruiseControl was that it stored its 'pipeline' configuration in source-control. In fact, that was alongside the 
-projects source and build file - developers could tweak CI configuration in a commit.
+project's source and build file - developers could tweak CI configuration in a commit.
 
 ### Apache's Gump
 
@@ -183,7 +183,7 @@ projects source and build file - developers could tweak CI configuration in a co
 
 Apache's Gump was built on a similar timeline to CruiseControl, but focused more on the binary integration hell of 
 interdependent Apache (and other) open-source projects. It gave an early warning of integration clashes that were 
-already, or were about to be problematic, for teams. While impressive, it did not gain traction in the enterprise. 
+already or were about to be problematic, for teams. While impressive, it did not gain traction in the enterprise. 
 This is because enterprises were able to be more buffered from open-source library hell (and the implicit diamond 
 dependency problem), by limiting the rate at which they upgraded their third-party binary dependencies.
 
@@ -218,19 +218,19 @@ today, like this one{{< ext url="https://issues.apache.org/jira/browse/SVN-4635"
 
 In comparison to the clunky Subversion, Git had "lightweight" branching.
 This made it easier to consider multiple branches as active (in parallel) and merged back later. Git's merge engine was very 
-good too, more able than prior merge technologies, to silently process complexity. 
+good too. It was more able than prior merge technologies, to silently process complexity. 
 
 A critical part of Git was local branching. A developer could make multiple local branches, and even map them to the 
 same remote branch. Say one could be a feature, part complete, and another a surprise bug fix to go back first. Or the 
 developer could be making alternate implementations of the same complicated thing, to decide later which to push back. 
-Git doesn't need a centralized server repo, but enterprise teams are going to have one anyway.
+Git does not need a centralized server repo, but enterprise teams are going to have one anyway.
 
-Lastly Git came with a capability to rewrite history. Although this was a general feature, it is where the history 
+Lastly, Git came with a capability to rewrite history. Although this was a general feature, it is where the history 
 around your local HEAD is rewritten before you push it back to the shared repository, that is of interest. Say your
 Agile story was four tasks and there for four local commits, you can effectively squash those into one commit
-before you push it back to the shared repository. There's pros and cons to that, but having the choice is cool.
+before you push it back to the shared repository. There are pros and cons to that, but having the choice is cool.
 
-Generally Git made it much easier to consider multiple branches as a viable team setup.
+Generally, Git made it much easier to consider multiple branches as a viable team setup.
 
 ## Google's internal DevOps - 1998 onwards
 
@@ -240,7 +240,7 @@ Note: Google were practicing Trunk Based Development since the beginning - Craig
 setting it up that way. Much of these were secret to Google until much later, including their recommendations for a 
 70:20:10 ratio for small:medium:large tests, where 'small' were sub-1ms unit tests (no threading, no I/O), 'medium' 
 were unit tests that didn't qualify for *small* (and probably did TCP/IP headlessly to something), with 'large' being 
-slower more costly Selenium functional tests. Pyramid like, and in the early to mid 2000's.
+slower more costly Selenium functional tests. Pyramid like, and in the early to mid-2000's.
 
 ### Home-grown CI and tooling
 
@@ -259,17 +259,17 @@ which made the results of the pre-commit CI verification very clear.
 
 ![](to_tbd3.png)
 
-Tools for code-reviewers/approvers of proposed contributions to trunk were developed internally in Google in the early 
+Tools for code-reviewers/approvers of proposed contributions to trunk were developed internally at Google in the early 
 2000's as a command-line tool and part of "Google 3". Things would not land in the shared trunk, until everyone agreed. 
 Their culture was that such that reviews were speedy. Getting pending commits to the point of rejection or acceptance 
 ("Looks Good To Me" : LGTM) was almost competitive. Some new Googlers (Nooglers) would pride themselves about taking
-on random code-review chores, and being one of a few people that weigh in to the decision moment.
+on random code-review chores and being one of a few people that weigh into the decision moment.
 
 The code review technology marshaled changes for proposed commits to the trunk, and stored them outside the VCS in 
 question (in a database probably). To do that the tech would reach into the developer machine and the appropriate
 moment and make a tar.gz of the changes and the meta-data around them, and pull that back to the central system
-for global presentation. Anyone could review anything. A review was just on a commit (not a batch of commits). Review
-was continuous.
+for global presentation. Anyone could review anything. A review was just on a commit (not a batch of commits). Therefore 
+code review was continuous.
 
 Reviewers could quickly bring the 
 marshaled change down to their workstation to play with it, or use it as a basis for a counter proposal. They could put 
@@ -298,7 +298,7 @@ This "Selenium Farm" (internal cloud) was also available to developers at their 
 version of what they were working on. Teams who had to run Firefox (etc) on their own desktop on a Friday, were able 
 to lease one or more Firefox browsers  in parallel on a Monday, and no longer lock up their developer workstations.
 
-Other companies since, have been able to deploy their own Selenium-Grid internally or
+Other companies since have been able to deploy their own Selenium-Grid internally or
 leverage one of the online services for elastic Selenium testing.
 
 ## Branch by Abstraction technique (2007)
@@ -308,15 +308,15 @@ leverage one of the online services for elastic Selenium testing.
 Paul Hammant blogged about a 2005 ThoughtWorks client engagement in a Bank of America software development team, 
 that used the Branch by Abstraction technique{{< ext url="http://paulhammant.com/blog/branch_by_abstraction.html" >}}.
 Whereas many had previously used this technique to avoid longer version-control branches in a trunk model, this was the 
-first time it had been detailed online, and given a name (by Stacy Curl).
+first time it had been detailed online and given a name (by Stacy Curl).
 
 ## Github's entire platform - 2008 onwards
 
 ![](away_from_tbd2.png)
 
-Github was launched as a portal on February 8, 2008, and feature have been added steadily ever since. The initial 
+Github was launched as a portal on February 8, 2008, and features have been added steadily ever since. The initial 
 version contained forks, which was a formal way of expressing the directionality of related DVCS repositories, and 
-promoting a forgiveness model for unsolicited changes to code (as opposed to the permission model that preceded it
+promoting a forgiveness model for unsolicited changes to source code (as opposed to the permission model that preceded it
 for other portals).
 
 ### Pull Requests (2008)
@@ -334,7 +334,7 @@ previously.
 
 #### No more clunky patch sets
 
-The open-source community for one, could step away from patch-sets that were donated by email (or rudimentarily). 
+The open-source community for one could step away from patch-sets that were donated by email (or rudimentarily). 
 Pull-Requests changed the dynamics of open source. Now, the original creator of open source was forced to keep up 
 with PRs because if they did not, a fork with more activity and forward momentum, might steal the community. Perhaps 
 rightfully so. 
@@ -352,7 +352,7 @@ Jez Humble{{< ext url="https://continuousdelivery.com" >}} and Dave
 Farley{{< ext url="http://www.continuous-delivery.co.uk" >}} wrote this influential book after a 
 ThoughtWorks project in London that finished in 2007. 
 The client was AOL - enough time has passed to share that. Specific DevOps advances were
-being made across the industry, but a critical aspect for this mission was that the prescribed go-live date was tight, given the known
+being made across the industry, but a critical aspect of this mission was that the prescribed go-live date was tight, given the known
 amount of work to be completed before then. Tight enough to want to compress the classic 'coding slows down, and 
 exhaustive user acceptance testing starts' phase of a project. The team had to pull the trigger on plenty of 
 automated steps, to allow faster feedback loops. This allowed then to have a high confidence in the quality of commits, from only 
@@ -368,7 +368,7 @@ Anecdotally the pipelines thinking captures a linear representation of Mike Cohn
 later too{{< ext url="https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid" >}}, 
 as well as Martin's recap in 2012{{< ext url="https://martinfowler.com/bliki/TestPyramid.html" >}}.
 
-Dan North{{< ext url="https://dannorth.net" >}} (Mr BDD), Chris Read{{< ext url="https://www.linkedin.com/in/devopscread" >}} 
+Dan North{{< ext url="https://dannorth.net" >}} (Mr. BDD), Chris Read{{< ext url="https://www.linkedin.com/in/devopscread" >}} 
 (an unsung DevOps pioneer) and Sam Newman{{< ext url="http://samnewman.io" >}} were also key in the AOL advances. 
 Dan North gave a deeper account of the mission at GOTO in 2014{{< ext url="https://speakerdeck.com/tastapod/the-birth-of-devops" >}} 
 (no video sadly) and was interviewed later by InfoQ{{< ext url="https://www.infoq.com/news/2014/07/birth-cd-devops" >}}.
@@ -391,11 +391,11 @@ This made it was clear whether the proposed PR would break the build or not were
 
 ## Microservices (2011 and 2012)
 
-The emergence of micro services as small buildable/deployable things that are glued together with TCP/IP (and 
-XML/YAML/DNS configuration) reinforced "many small repos" (the kinda reinforce each other really), while this can be
+The emergence of micro-services as small buildable/deployable things that are glued together with TCP/IP (and 
+XML/YAML/DNS configuration) reinforced "many small repoitories" (the kinda reinforce each other really), while this can be
 done with any branching model, the non-trunk models probably had the mindshare. Monorepos were out completely. A 
 possibility from monorepos, teams sharing code and source level a HEAD revision, positively laughed it. The history 
-page of Wikipedia list multiple people concurrently pushing the same emergent micro-service 
+page of Wikipedia lists multiple people concurrently pushing the same emergent micro-service 
 idea{{< ext url="https://en.wikipedia.org/wiki/Microservices#History" >}}.
 
 ## Case Study: A Practical Approach To Large Scale Agile Development (2012)
@@ -403,7 +403,7 @@ idea{{< ext url="https://en.wikipedia.org/wiki/Microservices#History" >}}.
 ![](to_tbd1.png)
 
 Gary Gruver, Mike Young, and Pat Fulghum wrote
-"A Practical Approach To Large Scale Agile Development"{{< ext url="https://www.amazon.com/dp/0321821726" >}} 
+"A Practical Approach To Large-Scale Agile Development"{{< ext url="https://www.amazon.com/dp/0321821726" >}} 
 to describe the multi-year
  transformation programme in the HP LaserJet Firmware division. In 2008, there were over 400 engineers dotted around
  the world working on over 10 million lines of printer firmware code in the HP LaserJet Firmware division. There
@@ -424,7 +424,7 @@ to describe the multi-year
 ![](away_from_tbd1.png)
 
 Plastic's semantic diff and merge{{< ext url="http://semanticmerge.com/" >}} capability was launched in March 
-2013{{< ext url="https://www.infoq.com/news/2013/04/Semantic-Merge" >}}. It allowed a greatly reduced diffs for 
+2013{{< ext url="https://www.infoq.com/news/2013/04/Semantic-Merge" >}}. It allowed a greatly reduced diff for 
 refactoring commits.
  
 If merges between branches are required, and larger 
@@ -438,7 +438,7 @@ just as useful for trunk based development and multi-branch models. It means tha
 situations for commits a developer wants to do. Maybe that last vision isn't quite complete yet, but there's a direction
  to go in now.
 
-## Snap-CI's per-commit speculative mergaebility analysis (2013)
+## Snap-CI's per-commit speculative mergeability analysis (2013)
 
 ![](to_tbd1.png)
 
@@ -470,10 +470,10 @@ Circle-CI offers the same feature now, and it is a question of time before all C
 What is a reality 
 in 2017 is that the high bar is every commit, **every branch**, with that speculative merge, and elastically scaled so 
 that the notification is within seconds of pushing the commit to the shared VCS. Back in 2001 (CruiseControl) we were batching 
-commits, we would wait a little while to allow checkins to finish (particularly for the non atomic CVS), and humans would 
+commits, we would wait a little while to allow checkins to finish (particularly for the non-atomic CVS), and humans would 
 have to pick apart who actually broke the build.
 
-Surely non Trunk Based Development teams would turn on CI for every branch and soon after plan their migration to Trunk 
+Surely non-Trunk Based Development teams would turn on CI for every branch and soon after plan their migration to Trunk 
 Based Development.
 
 ## Google sharing their Monorepo Trunk (2016)
