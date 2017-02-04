@@ -35,12 +35,16 @@ to a 'slender', or Trunk Based Development mode of use.
 
 Note: Over time all version control systems would adopt this branch/merge language.
 
+![](to_tbd1.png)
+
 ## Concurrent_Versions_System - CVS (1990)
 
 A handful of scripts created in 1986 by Dick Grune, were fashioned into an initial release of CVS{{< ext url="https://en.wikipedia.org/wiki/Concurrent_Versions_System" >}}
 in 1990. For the open source community CVS was it until Subversion came along year later. The adoption of CVS in the 
 young open source community, spurred its adoption in the enterprise too. While many branching models were possible, merge was 
 painful and Trunk Based Development was the sensible choice.
+
+![](to_tbd1.png)
 
 ## Microsoft Secrets book (1995)
 
@@ -81,6 +85,8 @@ Notes:
 2. In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his famous 
 "The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}} posting.
 
+![](to_tbd3.png)
+
 ## Mozilla's Tinderbox (1997)
 
 Mozilla had a service that compiled and tested bits and pieces of their opensource offerings together. That service was
@@ -88,6 +94,8 @@ Tinderbox and it debuted for the public to see in 1997. Their source organizatio
 managed by CVS, and allowed individual developers to checkout and keep abreast of only the pieces they wanted/needed to. Tinderbox
 was the safety net that ensured everything was correct across all the whole trunk. It ran until it wouldn't scale any 
 more in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}}.
+
+![](to_tbd1.png)
 
 ## Perforce and ClearCase (1998)
 
@@ -103,6 +111,8 @@ within their SourceDepot (SD) install from that moment.
 Google installed Perforce (see below) and embraced a Trunk Based Development model with it from the outset. They rose to every scaling
 challenge with extra tooling around it, including more than a few actual inventions of technology and technique.
 
+![](away_from_tbd3.png)
+
 ### Perforce's High-Level SCM Best Practices white paper 
 
 Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf" >}}
@@ -110,6 +120,8 @@ Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="
  
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
 it that help set a foundation for the next ten years of version-control advances.
+
+![](to_tbd1.png)
 
 ## Extreme Programming's Continuous Integration (1999)
 
@@ -134,12 +146,16 @@ directed graphs with fidelity down to class/method history of each of those. It 
 database with cross cutting tags representing HEAD, or someone else's important compination of those three. It was 
 omnipresent too - a decision made to move HEAD was instantly available without 'update' action to teammates.
 
+![](to_tbd3.png)
+
 ## Continuous Integration paper on MartinFowler.com (2000)
 
 Martin Fowler and Matt Foemmel{{< ext url="http://blog.foemmel.com" >}} wrote an influential article "Continuous 
 Integration" in 2000{{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
 calling out this one part of XP. Martin greatly updated it in 2006 
 {{< ext url="https://www.martinfowler.com/articles/continuousIntegration.html" >}}. 
+ 
+![](to_tbd3.png)
  
 ## ThoughtWorks' Cruise Control 
  
@@ -159,6 +175,8 @@ automating that "build passes, gang" oral notification above. A particular non-f
 CruiseControl was that it stored its 'pipeline' configuration in source-control. In fact, that was alongside the 
 projects source and build file - developers could tweak CI configuration in a commit.
 
+![](to_tbd3.png)
+
 ### Apache's Gump
 
 Apache's Gump was built on a similar timeline to CruiseControl, but focused more on the binary integration hell of 
@@ -177,6 +195,8 @@ that would break their 'contract' and nobody would notice until<br>
 well after the changes were released.
 </div>
 
+![](to_tbd1.png)
+
 ## Subversion's "lightweight" branching (2000 through 2001)
 
 Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". **The lack of atomicity in CVS
@@ -189,6 +209,8 @@ branches active in parallel and merge the team's changes back later.
 
 Until v1.5 in June 2008, Subversion had an inadequate "merge tracking" capability. It still has edge-case merge bugs 
 today, like this one{{< ext url="https://issues.apache.org/jira/browse/SVN-4635" >}}.
+
+![](away_from_tbd1.png)
 
 ## Git's "lightweight" branching (2005)
 
@@ -207,6 +229,8 @@ Agile story was four tasks and there for four local commits, you can effectively
 before you push it back to the shared repository. There's pros and cons to that, but having the choice is cool.
 
 Generally Git made it much easier to consider multiple branches as a viable team setup.
+
+![](away_from_tbd3.png)
 
 ## Google's internal DevOps - 1998 onwards
 
@@ -259,6 +283,8 @@ After Mondrian, the open source world saw Gerrit{{< ext url="https://www.gerritc
 in its image, and after that Facebookers made Phabricator{{< ext url="https://en.wikipedia.org/wiki/Phabricator" >}}
 and released that as open source too.
 
+![](to_tbd3.png)
+
 ### Selenium Farm (2006)
 
 Google CI infrastructure was expanded to have **a second tier of elastic infrastructure**, for scaled Selenium/WebDriver 
@@ -266,10 +292,12 @@ testing.
 
 This "Selenium Farm" (internal cloud) was also available to developers at their desks, who just wanted to run such tests against a stood-up
 version of what they were working on. Teams who had to run Firefox (etc) on their own desktop on a Friday, were able 
-to lease one or more Firefoxes browsers  in parallel on a Monday, and no longer lock up their developer workstations.
+to lease one or more Firefox browsers  in parallel on a Monday, and no longer lock up their developer workstations.
 
 Other companies since, have been able to deploy their own Selenium-Grid internally or
 leverage one of the online services for elastic Selenium testing.
+
+![](to_tbd2.png)
 
 ## Branch by Abstraction technique (2007)
 
@@ -278,12 +306,16 @@ that used the Branch by Abstraction technique{{< ext url="http://paulhammant.com
 Whereas many had previously used this technique to avoid longer version-control branches in a trunk model, this was the 
 first time it had been detailed online, and given a name (by Stacy Curl).
 
+![](to_tbd3.png)
+
 ## Github's entire platform - 2008 onwards
 
 Github was launched as a portal on February 8, 2008, and feature have been added steadily ever since. The initial 
 version contained forks, which was a formal way of expressing the directionality of related DVCS repositories, and 
 promoting a forgiveness model for unsolicited changes to code (as opposed to the permission model that preceded it
 for other portals).
+
+![](away_from_tbd1.png)
 
 ### Pull Requests (2008)
 
@@ -344,12 +376,16 @@ QA automation technologies setup by the dev team & inducting/co-locating individ
 Acceptance Test Driven development (ATDD), a CI pipeline that included performance tests, a focus of team dynamics for
 high throughput. 
 
+![](to_tbd2.png)
+
 ## Travis-CI's Github integration and pass/fail badges (2011)
 
 In 2011, Travis-CI{{< ext url="https://travis-ci.com/" >}} provided easy integrations into Github's platform run CI 
 builds for Pull Requests and the general state of HEAD on any branch. This was visually indicated with "build passes" and 
 "build fails" badges were inserted into the Github UI{{< ext url="https://docs.travis-ci.com/user/status-images/" >}}. 
 This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk. 
+
+![](to_tbd1.png)
 
 ## Microservices (2011 and 2012)
 
@@ -359,6 +395,8 @@ done with any branching model, the non-trunk models probably had the mindshare. 
 possibility from monorepos, teams sharing code and source level a HEAD revision, positively laughed it. The history 
 page of Wikipedia list multiple people concurrently pushing the same emergent micro-service 
 idea{{< ext url="https://en.wikipedia.org/wiki/Microservices#History" >}}.
+
+![](away_from_tbd1.png)
 
 ## Case Study: A Practical Approach To Large Scale Agile Development (2012)
 
@@ -379,6 +417,8 @@ to describe the multi-year
  test pages. 10-15 builds could be produced a day, engineers spent 5% of their time not 25% on product support and 40%
  of their time not 5% of their time on new features. That is an 8x increase in productivity for 400 engineers.
 
+![](to_tbd1.png)
+
 ## PlasticSCM's semantic merge (2013)
 
 Plastic's semantic diff and merge{{< ext url="http://semanticmerge.com/" >}} capability was launched in March 
@@ -395,6 +435,8 @@ Other source-control tools are not doing semantic diff/merge yet (2017), but the
 just as useful for trunk based development and multi-branch models. It means that there are less likely to be clash 
 situations for commits a developer wants to do. Maybe that last vision isn't quite complete yet, but there's a direction
  to go in now.
+
+![](beneficial_to_both.png)
 
 ## Snap-CI's per-commit speculative mergaebility analysis (2013)
 
@@ -421,6 +463,8 @@ entry{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-trac
 feature was rolled out. The blog entry is very much worth a read, especially as Badri was product owner for Snap-CI
 at the time and had the epiphany to implement this feature.  
 
+![](to_tbd1.png)
+
 Circle-CI offers the same feature now, and it is a question of time before all CI technologies do. 
 
 What is a reality 
@@ -445,6 +489,8 @@ Rachel Potvin presented on the same topic a couple of months later in "Why Googl
 Single Repository":
 
 {{< youtube W71BTkUbdqE >}}
+
+![](to_tbd3.png)
 
 # References elsewhere
 
