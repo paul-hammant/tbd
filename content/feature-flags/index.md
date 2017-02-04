@@ -87,7 +87,7 @@ flag somehow.
 
 ## A/B testing and betas
 
-Pushing code that's turned off into production, allows you to turn it on for ephemeral reasons - You want a subset of 
+Pushing code that's turned off into production, allows you to turn it on for ephemeral reasons - you want a subset of 
 users to knowingly or unknowingly try it out. A/B testing (driven by marketing) are possible with runtime flags. So is 
 having beta versions of functionality/features available to groups.
 
@@ -96,7 +96,7 @@ having beta versions of functionality/features available to groups.
 Flags get put in to codebases over time, and often get forgotten as development teams pivot towards new business deliverables.
 Of course, you want to wait a while until it is certain that you are fixed on a toggle state, and that's where the 
 problem lies - the application works just fine with the toggle left in place, and the business only really cares
-about new priorities. The only saving grave is the fact that you had unit tests for everything, even for code that
+about new priorities. The only saving grace is the fact that you had unit tests for everything, even for code that
 is effectively turned off in production. Try to get the business to allow the remediation of flags (and the code
 they apply to) a month after the release. Maybe add them to the project's readme with a "review for delete" date.
 
