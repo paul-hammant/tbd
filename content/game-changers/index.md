@@ -134,7 +134,7 @@ directed graphs with fidelity down to class/method history of each of those. It 
 database with cross cutting tags representing HEAD, or someone else's important compination of those three. It was 
 omnipresent too - a decision made to move HEAD was instantly available without 'update' action to teammates.
 
-## Continuous Integration paper on MartinFowler.com
+## Continuous Integration paper on MartinFowler.com (2000)
 
 Martin Fowler and Matt Foemmel{{< ext url="http://blog.foemmel.com" >}} wrote an influential article "Continuous 
 Integration" in 2000{{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
@@ -146,10 +146,11 @@ calling out this one part of XP. Martin greatly updated it in 2006
 Martin's ThoughtWorks colleagues (Alden Almagro{{< ext url="http://aldenalmagro.com/resume.html" >}}, 
 Paul Julius{{< ext url="http://www.pauljulius.com" >}}, 
 Jason Yip{{< ext url="http://jchyip.blogspot.com" >}}) went on to build the then-dominant 
-"Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001. This was a 
+"Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001 (for CVS, StarTeam). This was a 
 groundbreaking technology and very accessible to companies wanting a machine to fully verify checkins. ThoughtWorks 
 already had success the year before with the same server design on a client project, and CruiseControl was the
-rewrite from scratch in order to make it open source. CruiseControl was a great success in the enterprise.
+rewrite (from scratch) in order to make it open source. CruiseControl was quite successful in the enterprise, and was
+and easy decision after teams had read the Continuous Integration paper above.
 
 Early CI servers, including CruiseControl used to have a "quiet period" to make sure they had received every last 
 element of an intended commit. To facilitate that, only one pair of developers was allowed to checkin at a time. With 
@@ -200,7 +201,12 @@ same remote branch. Say one could be a feature, part complete, and another a sur
 developer could be making alternate implementations of the same complicated thing, to decide later which to push back. 
 Git doesn't need a centralized server repo, but enterprise teams are going to have one anyway.
 
-As before, this made it easier to consider multiple branches as a viable team setup.
+Lastly Git came with a capability to rewrite history. Although this was a general feature, it is where the history 
+around your local HEAD is rewritten before you push it back to the shared repository, that is of interest. Say your
+Agile story was four tasks and there for four local commits, you can effectively squash those into one commit
+before you push it back to the shared repository. There's pros and cons to that, but having the choice is cool.
+
+Generally Git made it much easier to consider multiple branches as a viable team setup.
 
 ## Google's internal DevOps - 1998 onwards
 
