@@ -98,11 +98,14 @@ executable binary file) is the whole server and does not need to be installed - 
 Perforce is the last VCS technology that ordinarily maintains the read-only bit on the developer workstation. You 
 definitely need a plugin for your IDE to handle the wire operations with the server, so you are not confronted with the
 fact that source files are read-only. Because the Perforce (p4) client having to involve the server for the flipping of
-read only bits in respect of editing source files, it requires a permanent connection to the server.
+read only bits in respect of editing source files, it requires a permanent connection to the server. What that 
+facilitates is speed of operation for very large sets of files on the client. The Perforce server already knows what 
+files need to have updated in your working copy, ahead of you doing 'p4 sync' operation. It negates the need for a 
+directory traversal looking for locally changed files, and it means the sync operation can be limited to a second or two.
 
-Unlike Git, Perforce is not ordinarily able to **locally** show the history of the files within it. It needs that server 
-connection again, which isn't so good. What is good is the fact the server already knows what files need to have updated 
-in your working copy in case you were to do a 'py sync' operation.
+Historically Perforce was not able to **locally** show the history of the files within it. It needed that server 
+connection again for history operations. A number of DVCS capabilities in newer versions of Perforce (see below) allow
+local history now though.
 
 Perforce allows branches to be set up at any sub-directory not just the root one. It also allows read and/or write
 permissions to be specified at any directory (or branch) within large and small source trees.
