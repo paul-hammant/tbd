@@ -16,7 +16,7 @@ implicit 'HEAD'. Third party libraries (like JUnit) will be checked into the rep
 The deployment and/or release cadences for each application/service/library/frameworks will probably be different 
 as will the team's structures, methodologies, priorities, story backlogs etc.
 
-The name 'monorepo' is a newer for a previously unnamed practice that is more than a decade old.
+The name 'monorepo' is a newer name for a previously unnamed practice that is more than a decade old.
 
 Monorepo implementations deliver a couple of principal goals:
 
