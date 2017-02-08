@@ -113,7 +113,8 @@ permissions to be specified at any directory (or branch) within large and small 
 ### No Code Review
 
 Perforce does not have code-review features integrated into its server daemon. By customizing a GitSwarm (Gitlab) 
-'side install', Perforce now has a code review capability.
+'side install', Perforce now has a code review capability. It also has it with an alternate side-install called just
+Swarm (an slightly older product), that doesn't not offer the Git capability of GitSwarm.
 
 ### Git Fusion
 
@@ -121,17 +122,20 @@ There's a VM appliance from the Perforce people, that can sit in your infrastruc
 server, and your wish to use Git in an idiomatic way on your development workstation.
 
 With a Git-fusion clone from a Perforce repository, and client spec was specified, you get the subsetted 
-representation of the source tree, complete with history. That's a neat feature. 
+representation of the source tree, complete with history. That's a neat feature. Things checked out through Git-Fusion
+also are not encumbered by the read-only bit feature.
 
 GitSwarm kinda replaces this.
 
 ### p4-git and p4-dvcs
 
 P4-git is very similar to the Git fusion technology but is not made by the Perforce people themselves. It also does not 
-require the launching of second server appliance.
+require the launching of second server appliance (as Git Fusion does).
 
-In 2015, the perforce technologies were extended to include custom DVCS features. All the features of P4-git but without the Git 
-compatibility.
+In 2015, the perforce technologies were extended to include custom DVCS features. All the features of P4-git but without 
+the Git compatibility.
+
+As for Git-fusion, things checked out through p4-git and p4-dvcs are not encumbered by the read-only bit control of p4d.
 
 ## Subversion
 
