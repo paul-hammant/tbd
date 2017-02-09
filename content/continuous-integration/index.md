@@ -15,7 +15,7 @@ that is watching the source-control repository for changes and verifying that th
 of branching model**. 
 
 However, the original intention was to focus on the verification **single integration point** 
-for the developer team. and do it daily if not more. The idea was for developers themselves to develop
+for the developer team. And do it daily if not more. The idea was for developers themselves to develop
 habits to ensure everything going to that shared place many times a day was of high enough quality, 
 and for the CI server to merely verify that quality, nightly.
 
