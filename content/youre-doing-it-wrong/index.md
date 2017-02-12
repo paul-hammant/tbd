@@ -12,7 +12,7 @@ mean you are doing trunk based development. "We merge branches back to trunk oft
 and if you are grouping multiple developers on those branches of they not deleted after a couple of days, then it is 
 not the trunk based development branching model.
 
-## Direction of Cherry Pick
+## Direction of Cherry Pick on release branches
 
 All your developers are using a trunk and they're doing the right thing re not breaking the build. Your release 
 cadence is infrequent enough to allow you to cut a release branch on a just in time basis, and harden that in the run
@@ -49,3 +49,8 @@ The developer in question may then go ahead and make the next short-lived featur
 If there is more that one developer (and the developer's pairing partner) on the same short-lived feature branch, 
 then that branch is at risk of not being short-lived. It is at risk of being more and more like a release branch 
 under active development, and not short at all.
+
+There is a risk too, that a developer may choose to pull changes to their workstation **from a short-lived feature 
+branch** rather from trunk. They may thing that the code review for that short-lived feature branch is going to take 
+too long, or they need the changes before they are ready. Unfortunately there is no way that the current generation of
+code portals can prevent people pulling changes from non-trunk branches.

@@ -79,8 +79,10 @@ goes into that much more, as does the [Continuous Delivery](/continuous-delivery
 # Shared code
 
 Trunk Based Development teams typically have common code ownership rules around contributions to different parts
-of the source tree. If they do not have a full egalitarian system, they have objecting rules for the tree, that focus
-on standards and come with a promise of a prioritized and fair code review.
+of the source tree. If they do not have a full egalitarian system, they have objecting rules for the tree that focus
+on standards and come with a promise of a prioritized and fair code review. Trunk Based Development teams might have
+fine-grained write permissions for directories within the trunk, but **never** have any impediment to reading files in th
+trunk - everyone can see everything.
 
 # Build times
 

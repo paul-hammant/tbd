@@ -122,6 +122,5 @@ Problematic 'distance' has a few tangible examples:
 
 Date    | Type  | Article
 --------|-------|--------
+03 Sep 2009 | MartinFowler.com article | [FeatureBranch](https://martinfowler.com/bliki/FeatureBranch.html)
 16 Jun 2015 | Blog Entry | [Organization Pattern: Trunk Based Development](http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development/)
-
-

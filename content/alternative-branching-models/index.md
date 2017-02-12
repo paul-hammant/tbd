@@ -30,7 +30,7 @@ This is sooooo close to PR-centric Trunk Based Development. Why? Because, it is 
 developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than 
 individuals.
  
-Here's the crucial difference. Whereas for their release-from-branch step:
+The crucial difference is where the release is performed from. Whereas for their release-from-branch step:
 
 ![](/images/githubflow1.png)
 
