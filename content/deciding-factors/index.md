@@ -59,12 +59,22 @@ read-only so that all the history, issues, and code review comments are intact.
 
 ### Peak commit frequency
 
-In Git if a colleague beat you to a commit/push on a branch (their code-review and automated CI passed). When you 
-thought you were going to push, but Git informed you that you had to pull first, you might struggle to find a window 
-to catch up and push ahead without encountering the same problem. Forks make that easier, and robots keeping 
-pull-request branches abreast of origin:master helps a lot.
+In Git if a colleague beat you to a commit/push on a branch (their code-review and automated CI passed), when you 
+thought you were going to push, Git will informed you that you have to pull first. You pull, your resolve merge clashes 
+(hopefully none), and your push again. You might struggle to find a window open long enough
+to push without encountering the same problem. Forks make that easier, and robots keeping 
+pull-request branches abreast of origin:master helps a lot. Thus for developers wanting to land their commitsGit increasing 
+commit frequency to the 
+shared repo means contention and an artificial serialization. Microsoft acknowelged this as one
+of the motivations to their Git Virtual File System (~~GitVFS~~ GVFS).
 
-TODO - mention MS GitVFS rationale.
+{{< quote title="Git has critical serialization points that will cause a queue to back up badly" >}}
+<span>&mdash; Brian Harry</span><br>
+<span style="margin-left: 30px"><a href=""https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/>More on GVFS</span>
+{{< /quote >}}
+
+We're sure that within a few years, Git will be able to hangle huge scale too. Whether with the Microsoft technologies, or 
+something else.
 
 ## Conways Law
 
