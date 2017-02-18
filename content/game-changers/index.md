@@ -502,7 +502,11 @@ Single Repository":
 
 ## Microsoft's Git Virtual File System (2017)
 
-... deserves time and analysis before the impact is determined.
+![](to_tbd1.png)
+
+This new technology deserves time and analysis before the full impact is determined. There is a suggestion from Brian Harry's 
+blog{{< ext url="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/" >}} that branch reduction was one of 
+the motivators.
 
 # References elsewhere
 

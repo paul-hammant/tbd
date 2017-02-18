@@ -70,7 +70,7 @@ of the motivations to their Git Virtual File System (~~GitVFS~~ GVFS).
 
 {{< quote title="Git has critical serialization points that will cause a queue to back up badly" >}}
 <span>&mdash; Brian Harry</span><br>
-<span style="margin-left: 30px"><a href=""https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/>More on GVFS</span>
+<span style="margin-left: 30px"><a href="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/">More on GVFS</a></span>
 {{< /quote >}}
 
 We're sure that within a few years, Git will be able to hangle huge scale too. Whether with the Microsoft technologies, or 
