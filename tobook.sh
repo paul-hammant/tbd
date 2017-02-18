@@ -6,15 +6,17 @@ function normalize_index_file_names {
 
 function extract_just_the_article {
 
-  echo "<html><head></head><body>$(xidel --html $1index.html --extract "//article")</body></html>" >  "$1index.html"
-  perl -pi -e 's/<!DOCTYPE html>//' "$1index.html"
-  perl -pi -e 's/<aside/<aside style="display: none"/' "$1index.html"
-  perl -pi -e 's/<footer/<footer style="display: none"/' "$1index.html"
+  echo "<html><head></head><body>$(xidel --html $1index.html --extract "//article")</body></html>" \
+    | sed 's/<!DOCTYPE html>//' \
+    | sed 's/<aside/<aside style="display: none"/' \
+    | sed 's#<h1 id="references-elsewhere">References elsewhere</h1>#<h2 id="references-elsewhere">References elsewhere</h2>#' \
+    | sed 's/<footer/<footer style="display: none"/' | sponge "$1index.html"
 
   # change videos to links to videos
-  cat $1index.html | sed '/<div noprint/d' | sponge $1index.html
-  cat $1index.html | sed 's/<!-- print //' | sponge $1index.html
-  cat $1index.html | sed 's/ print -->//' | sponge $1index.html
+  cat $1index.html | sed '/<div noprint/d' \
+    | sed 's/<!-- print //' \
+    | sed 's/ print -->//' | sponge $1index.html
+
 
   if [ "$2" = true ] ; then
     perl -pi -e "s#href=\"/#href=\"../#g" "$1index.html"
@@ -34,12 +36,15 @@ function normalize_index_file_names_and_extract_just_the_article {
   extract_just_the_article $1 $2
 }
 
+# Gen site to temp folder
 hugo -d tempHugo
 
 cd tempHugo
 
+# remove XML
 find . -name "*.xml" -print0 | xargs -0 rm -rf
 
+# slim site down to content
 normalize_index_file_names_and_extract_just_the_article 5-min-overview/ true
 normalize_index_file_names_and_extract_just_the_article alternative-branching-models/ true
 normalize_index_file_names_and_extract_just_the_article branch-by-abstraction/ true
@@ -64,14 +69,19 @@ normalize_index_file_names_and_extract_just_the_article youre-doing-it-wrong/ tr
 
 # Table of contents gets inserted once (was on every page)
 PBDT=$(git log | head -n 3 | grep Date | tr -s ' ' | cut -d ' ' -f2-12)
-echo "<html><body>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of <a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright &copy; 2017: Paul Hammant and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe us \$1,000,000 USD<br/>Generated $PBDT <br/></body></html>" >  "toc.html"
-perl -pi -e 's/<!DOCTYPE html>//' toc.html
-perl -pi -e 's/<aside/<aside style="display: none"/' toc.html
-perl -pi -e "s#href=\"/#href=\"#g" toc.html
-perl -pi -e "s#src=\"/#src=\"#g" toc.html
+echo "<html><body>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of \
+<a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright &copy; 2017: Paul Hammant \
+and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe \
+us \$1,000,000 USD<br/>Generated $PBDT <br/></body></html>" \
+| sed 's/<!DOCTYPE html>//' \
+| sed 's/<aside/<aside style="display: none"/' \
+| sed "s#href=\"/#href=\"#g" \
+| sed "s#src=\"/#src=\"#g" > toc.html
 
+# slim the front page too.
 normalize_index_file_names_and_extract_just_the_article "" false
 
+# stitch into PDF book
 ebook-convert toc.html ../trunk_based_development_book.pdf --page-breaks-before "//h:h1" --breadth-first --publisher=trunkbaseddevelopment.com --language=es --title "Trunk Based Development" --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
 
 rm -rf tempHugo/
