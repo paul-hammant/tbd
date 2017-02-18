@@ -69,7 +69,11 @@ branch permissions.
 
 Back in 2007, Linus Torvalds presented his Bitkeeper inspired Git to Googlers in their Mountain View office:
  
-{{< youtube 4XpnKHJAok8 >}}
+<div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="//www.youtube.com/embed/4XpnKHJAok8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe></div>
+ 
+<!-- print <img src="https://github.com/paul-hammant/tbd/raw/master/content/vcs-choices/linus-git.png"> print -->
+<!-- print <br/> print -->
+<!-- print <a href="https://youtu.be/4XpnKHJAok8">Video Available at https://youtu.be/4XpnKHJAok8</a> print --> 
  
 He had started making it two years before, and it is now the #1
 VCS choice. Google had been running their Monorepo style Trunk for a few years at this point, without regret. Some
