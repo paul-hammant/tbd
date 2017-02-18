@@ -146,7 +146,7 @@ googleAnalytics = "UA-24415524-3"
 
 [[menu.main]]
 	name   = "Publications"
-	url    = "publications/"
+	url    = "publications"
 	weight = 131
 
 [blackfriday]

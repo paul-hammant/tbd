@@ -7,11 +7,11 @@ weight: 0
 
 ## One line summary
 
-A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *, 
-and resist any pressure to create other long-lived development branches by employing one or more documented techniques. 
+A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
+and resist any pressure to create other long-lived development branches by employing one or more documented techniques.
 
 ![](/images/trunk1.png)
-  
+
  &ast; 'master', in Git nomenclature
 
 Trunk Based Development is a key enabler of [Continuous Integration](/continuous-integration/), and by extension
@@ -19,35 +19,35 @@ Trunk Based Development is a key enabler of [Continuous Integration](/continuous
 multiple times a day it becomes easy to satisfy the core requirement of Continuous Integration that all team
 members commit to trunk at least once every 24 hours. This ensures the codebase is always releasable on demand
 and helps to make Continuous Delivery a reality.
-  
+
 ## Caveats
 
-- If you have more than a couple of developers on the project, you are going to need a hook up a 
+- If you have more than a couple of developers on the project, you are going to need a hook up a
   [build server](/continuous-integration/) to verify their commits
 
-- Depending on the team size, and the rate of commits, **very short-lived** feature/task branches are used for 
+- Depending on the team size, and the rate of commits, **very short-lived** feature/task branches are used for
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
   This allows and engage in [eager and continuous code review](/continuous-review/) of contributions before they land
-  in the trunk. 
+  in the trunk.
 
-- Depending on the intended release cadence, there may be [release branches](/branch-for-release/) (cut from trunk on 
-  a just-in-time basis) that are 'hardened' before a release. Alternatively there may also be no release branches if 
+- Depending on the intended release cadence, there may be [release branches](/branch-for-release/) (cut from trunk on
+  a just-in-time basis) that are 'hardened' before a release. Alternatively there may also be no release branches if
   the team is [releasing from Trunk](/release-from-trunk/).
 
 - Teams should become adept with the related [branch by abstraction](/branch-by-abstraction/) technique for longer
-  to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on 
+  to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
-   
-- Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers#google-sharing-their-trunk-usage-2016) and 
+
+- Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers#google-sharing-their-trunk-usage-2016) and
   they have **25000 developers and QA automators** in that trunk.
-  
-- People who practice the [Github-flow branching model will feel this is quite similar](/alternative-branching-models#github-flow) 
-  (there is one small difference). 
-  
-- People who practice the Gitflow branching model will find this **very different**, as will many developers used to 
+
+- People who practice the [Github-flow branching model will feel this is quite similar](/alternative-branching-models#github-flow)
+  (there is one small difference).
+
+- People who practice the Gitflow branching model will find this **very different**, as will many developers used to
   the popular ClearCase, Subversion, Perforce, StarTeam, VCS [branching models of the past](/alternative-branching-models/#legacy-branching-models).
-  
-- [Many publications](/publications/), including the best-selling Continuous Delivery book promote Trunk Based 
+
+- [Many publications](/publications), including the best-selling Continuous Delivery book promote Trunk Based 
   Development - this is not even controversial any more.
 
 ## History
@@ -55,10 +55,10 @@ and helps to make Continuous Delivery a reality.
 Trunk Based Development is not a new branching model. The word 'trunk' is referent to the concept of a growing tree,
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
-It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties. 
+It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties.
 The largest of development organizations, like Google (as mentioned) and Facebook practice it at scale.
 
-Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers) have made 
+Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers) have made
 Trunk Based Development more (and occasionally less) necessary.
 
 ## This portal
