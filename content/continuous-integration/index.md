@@ -197,7 +197,7 @@ practice as Trunk Based Development.
 
 There are many CI technologies and services available for teams to use. Some are free, and some are open source. 
 Some store the configuration for a pipeline in VCS, and some store it somewhere else. In order to more smoothly support
-[branch for release](branch_for_release/), the best CI solutions co-locate the configuration for a pipeline in the same 
+[branch for release](/branch_for_release/), the best CI solutions co-locate the configuration for a pipeline in the same 
 branch too.
 
 ## Server/daemon implementations

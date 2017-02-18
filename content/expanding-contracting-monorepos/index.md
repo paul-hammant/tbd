@@ -48,7 +48,7 @@ break either of `MyTeamsApplication` or `TheirApplication`.
  
 ### Contrived example of use #2
 
-We used 'change the wheel on a car', on the [Branch By Abstraction](branch-by-abstraction/) page for its contrived 
+We used 'change the wheel on a car', on the [Branch By Abstraction](/branch-by-abstraction/) page for its contrived 
 example. It will serve us again here. The wheel is what we want to change. The other team using 'Wheel(s)' is making a 
 Segway thing (two wheels and self-balancing via high-torque and very responsive motors). Here's the procedure:
 
