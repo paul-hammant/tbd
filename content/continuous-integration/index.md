@@ -173,7 +173,7 @@ branch with half a dozen developers keeping it from being 'complete' (somehow) a
 today, but it would be cool if you could have a ticking clock / count down on those branches at creation to enforce
 its 'temporary' intention.
 
-Refer to [Game Changers - Google Home Grown CI and Tooling](/game-changers#home-grown-ci-and-tooling) for more 
+Refer to [Game Changers - Google Home Grown CI and Tooling](/game-changers/index.html#home-grown-ci-and-tooling) for more 
 information on the high commit rate CI stuff. Note too that they do not have a temp branch set up to facilitate that.
 
 ## Industry CI daemon confusion

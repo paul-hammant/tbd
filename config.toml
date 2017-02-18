@@ -141,7 +141,7 @@ googleAnalytics = "UA-24415524-3"
 
 [[menu.main]]
 	name   = "Game Changers"
-	url    = "game-changers"
+	url    = "/game-changers/"
 	weight = 121
 
 [[menu.main]]

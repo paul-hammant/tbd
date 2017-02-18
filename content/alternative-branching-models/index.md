@@ -140,7 +140,7 @@ would argue that the application is too large anyway (and that microservices is 
 ## CI (dis)proof of your branching model
 
 Here's an idea. Configure your CI Server to focus on every branch, regardless of branching model. Specifically to do
-per-commit builds, and do that speculative merge analysis described in [game changers](game-changers#snap-ci-s-per-commit-speculative-mergeability-analysis-2013).
+per-commit builds, and do that speculative merge analysis described in [game changers](game-changers/index.html#snap-ci-s-per-commit-speculative-mergeability-analysis-2013).
 
 If everything is green everywhere, then you're in a position to always be release ready, but very few teams are going
 to see green instead of red for this CI server enthusiasm

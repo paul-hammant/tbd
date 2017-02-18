@@ -38,7 +38,7 @@ and helps to make Continuous Delivery a reality.
   to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
 
-- Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers#google-sharing-their-trunk-usage-2016) and
+- Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers/index.html#google-sharing-their-trunk-usage-2016) and
   they have **25000 developers and QA automators** in that trunk.
 
 - People who practice the [Github-flow branching model will feel this is quite similar](/alternative-branching-models#github-flow)
@@ -58,7 +58,7 @@ where the fattest and longest span is the trunk, not the branches that radiate f
 It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties.
 The largest of development organizations, like Google (as mentioned) and Facebook practice it at scale.
 
-Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers) have made
+Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers/) have made
 Trunk Based Development more (and occasionally less) necessary.
 
 ## This portal
