@@ -86,9 +86,10 @@ Code review branches can (and should) be
 deleted after the code review is complete, and be very short-lived. This is tricky for teams new to Trunk Based 
 Development. 
 
-Noe: You want to keep 
+Note: You want to keep 
 the commentary/approval/rejection that is part of the review for historical and auditing purposes, but you do not want to 
-keep the branch. Specifically, you do not want to developers to focus on the branch after the review.
+keep the branch. Specifically, you do not want to developers to focus on the branch after the code review, and merge back
+to the trunk.
 
 ## A safety net
 
