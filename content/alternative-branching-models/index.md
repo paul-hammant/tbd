@@ -21,7 +21,7 @@ downsides. It is a branching model that has **groups** of developers active conc
 - Diagram copied from Vincent Driessen's 2010 article on GitFlow: "A successful Git branching model"{{< ext url="http://nvie.com/posts/a-successful-git-branching-model" >}}
 
 I looks like you'll not be able to do [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/)
-with this branching model, or the hedging that [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch_by_abstraction/)
+with this branching model, or the hedging that [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch-by-abstraction/)
 enable.
 
 ### Github flow
@@ -140,7 +140,7 @@ would argue that the application is too large anyway (and that microservices is 
 ## CI (dis)proof of your branching model
 
 Here's an idea. Configure your CI Server to focus on every branch, regardless of branching model. Specifically to do
-per-commit builds, and do that speculative merge analysis described in [game changers](game-changers/index.html#snap-ci-s-per-commit-speculative-mergeability-analysis-2013).
+per-commit builds, and do that speculative merge analysis described in [game changers](/game-changers/index.html#snap-ci-s-per-commit-speculative-mergeability-analysis-2013).
 
 If everything is green everywhere, then you're in a position to always be release ready, but very few teams are going
 to see green instead of red for this CI server enthusiasm
