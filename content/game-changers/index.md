@@ -282,7 +282,7 @@ to Googlers. Here is that 'tech talk' on YouTube:
 
 <!-- print <img src="https://github.com/paul-hammant/tbd/raw/master/content/game-changers/mondrian.png"> print -->
 <!-- print <br/> print -->
-<!-- print <a href="https://youtu.be/CKjRt48rZGk">https://youtu.be/CKjRt48rZGk</a> print -->
+<!-- print <a href="https://youtu.be/CKjRt48rZGk">Video Available at https://youtu.be/CKjRt48rZGk</a> print -->
 
 Note at the start he says XP practice 
 "Pair-Programming" is best, and that code review helps fill the gap for situations where you cannot do it.
@@ -494,7 +494,11 @@ team in question. Yes, everything works just fine.
 Rachel Potvin presented on the same topic a couple of months later in "Why Google Stores Billions of Lines of Code in a 
 Single Repository":
 
-{{< youtube W71BTkUbdqE >}}
+<div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/W71BTkUbdqE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" frameborder="0"></iframe></div>
+
+<!-- print <img src="https://github.com/paul-hammant/tbd/raw/master/content/game-changers/google-tbd.png"> print -->
+<!-- print <br/> print -->
+<!-- print <a href="https://youtu.be/W71BTkUbdqE">Video Available at https://youtu.be/W71BTkUbdqE</a> print -->
 
 ## Microsoft's Git Virtual File System (2017)
 
