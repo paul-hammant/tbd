@@ -6,6 +6,9 @@ function normalize_index_file_names {
 
 function extract_just_the_article {
 
+  # arg 1 directory for index.html file (or "" for root)
+  # arg 2 true if sub directory
+
   echo "<html><head></head><body>$(xidel --html $1index.html --extract "//article")</body></html>" \
     | sed 's/<!DOCTYPE html>//' \
     | sed 's/<aside/<aside style="display: none"/' \
@@ -17,15 +20,14 @@ function extract_just_the_article {
     | sed 's/<!-- print //' \
     | sed 's/ print -->//' | sponge $1index.html
 
-
   if [ "$2" = true ] ; then
-    perl -pi -e "s#href=\"/#href=\"../#g" "$1index.html"
-    perl -pi -e "s#src=\"/#src=\"../#g" "$1index.html"
-    perl -pi -e "s#url\(/images/LogoSlim#url\(../images/LogoSlim#g" "$1index.html"
+    cat "$1index.html" | sed "s#href=\"/#href=\"../#g" \
+      | sed "s#src=\"/#src=\"../#g" \
+      | sed "s#url(/images/LogoSlim#url(../images/LogoSlim#g" | sponge "$1index.html"
   else
-    perl -pi -e "s#href=\"/#href=\"#g" "$1index.html"
-    perl -pi -e "s#src=\"/#src=\"#g" "$1index.html"
-    perl -pi -e "s#url\(/images/LogoSlim#url\(images/LogoSlim#g" "$1index.html"
+    cat "$1index.html" | sed "s#href=\"/#href=\"#g" \
+      | sed "s#src=\"/#src=\"#g" \
+      | sed "s#url(/images/LogoSlim#url(images/LogoSlim#g" | sponge "$1index.html"
   fi
 }
 
