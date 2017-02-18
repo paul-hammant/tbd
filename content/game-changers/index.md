@@ -280,7 +280,8 @@ to Googlers. Here is that 'tech talk' on YouTube:
 
 <div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/CKjRt48rZGk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" frameborder="0"></iframe></div>
 
-<!-- print <img src="mondrian.png"> print -->
+<!-- print <img src="https://github.com/paul-hammant/tbd/raw/master/content/game-changers/mondrian.png"> print -->
+<!-- print <br/> print -->
 <!-- print <a href="https://youtu.be/CKjRt48rZGk">https://youtu.be/CKjRt48rZGk</a> print -->
 
 Note at the start he says XP practice 
