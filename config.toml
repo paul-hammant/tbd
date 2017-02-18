@@ -65,9 +65,14 @@ googleAnalytics = "UA-24415524-3"
 	weight = 21
 
 [[menu.main]]
+	name   = "VCS features"
+	url    = "vcs-features/"
+	weight = 31
+
+[[menu.main]]
 	name   = "VCS choices"
 	url    = "vcs-choices/"
-	weight = 31
+	weight = 32
 
 [[menu.main]]
 	name   = "Feature flags"
