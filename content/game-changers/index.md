@@ -278,7 +278,10 @@ that back in review again.
 In 2006, Guido van Rossum presented one of his bigger contributions - "Mondrian" -
 to Googlers. Here is that 'tech talk' on YouTube:
 
-{{< youtube CKjRt48rZGk >}}
+<div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/CKjRt48rZGk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" frameborder="0"></iframe></div>
+
+<!-- print <img src="mondrian.png"> print -->
+<!-- print <a href="https://youtu.be/CKjRt48rZGk">https://youtu.be/CKjRt48rZGk</a> print -->
 
 Note at the start he says XP practice 
 "Pair-Programming" is best, and that code review helps fill the gap for situations where you cannot do it.
