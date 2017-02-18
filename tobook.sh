@@ -1,7 +1,7 @@
 #!/bin/sh
 
 function normalize_index_file_names {
-  grep -rl "$1" . | xargs sed -i '' "s/$1\"/$1index.html\"/g"
+  grep -rl "$1" . | xargs sed -i '' "s#$1\"#$1index.html\"#g"
 }
 
 function extract_just_the_article {
@@ -19,9 +19,11 @@ function extract_just_the_article {
   if [ "$2" = true ] ; then
     perl -pi -e "s#href=\"/#href=\"../#g" "$1index.html"
     perl -pi -e "s#src=\"/#src=\"../#g" "$1index.html"
+    perl -pi -e "s#url\(/images/LogoSlim#url\(../images/LogoSlim#g" "$1index.html"
   else
     perl -pi -e "s#href=\"/#href=\"#g" "$1index.html"
     perl -pi -e "s#src=\"/#src=\"#g" "$1index.html"
+    perl -pi -e "s#url\(/images/LogoSlim#url\(images/LogoSlim#g" "$1index.html"
   fi
 }
 
