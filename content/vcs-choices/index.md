@@ -71,7 +71,7 @@ Back in 2007, Linus Torvalds presented his Bitkeeper inspired Git to Googlers in
  
 <div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="//www.youtube.com/embed/4XpnKHJAok8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0"></iframe></div>
  
-<!-- print <img src="https://github.com/paul-hammant/tbd/raw/master/content/vcs-choices/linus-git.png"> print -->
+<!-- print <img src="linus-git.png"> print -->
 <!-- print <br/> print -->
 <!-- print <a href="https://youtu.be/4XpnKHJAok8">Video Available at https://youtu.be/4XpnKHJAok8</a> print --> 
  

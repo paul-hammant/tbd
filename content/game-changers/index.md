@@ -280,7 +280,7 @@ to Googlers. Here is that 'tech talk' on YouTube:
 
 <div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/CKjRt48rZGk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" frameborder="0"></iframe></div>
 
-<!-- print <img src="https://github.com/paul-hammant/tbd/raw/master/content/game-changers/mondrian.png"> print -->
+<!-- print <img src="mondrian.png"> print -->
 <!-- print <br/> print -->
 <!-- print <a href="https://youtu.be/CKjRt48rZGk">Video Available at https://youtu.be/CKjRt48rZGk</a> print -->
 
@@ -496,7 +496,7 @@ Single Repository":
 
 <div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/W71BTkUbdqE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" frameborder="0"></iframe></div>
 
-<!-- print <img src="https://github.com/paul-hammant/tbd/raw/master/content/game-changers/google-tbd.png"> print -->
+<!-- print <img src="google-tbd.png"> print -->
 <!-- print <br/> print -->
 <!-- print <a href="https://youtu.be/W71BTkUbdqE">Video Available at https://youtu.be/W71BTkUbdqE</a> print -->
 
