@@ -126,7 +126,7 @@ googleAnalytics = "UA-24415524-3"
 
 [[menu.main]]
 	name   = "Alternative branching models"
-	url    = "alternative-branching-models/"
+	url    = "alternative-branching-models"
 	weight = 101
 
 [[menu.main]]
