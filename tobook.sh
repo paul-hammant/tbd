@@ -6,7 +6,7 @@ function normalize_index_file_names {
 
 function extract_just_the_article {
 
-  echo "<html><body>$(xidel --html $1index.html --extract "//article")</body></html>" >  "$1index.html"
+  echo "<html><head></head><body>$(xidel --html $1index.html --extract "//article")</body></html>" >  "$1index.html"
   perl -pi -e 's/<!DOCTYPE html>//' "$1index.html"
   perl -pi -e 's/<aside/<aside style="display: none"/' "$1index.html"
   perl -pi -e 's/<footer/<footer style="display: none"/' "$1index.html"
@@ -28,7 +28,9 @@ function extract_just_the_article {
 }
 
 function normalize_index_file_names_and_extract_just_the_article {
-  normalize_index_file_names $1
+  if [ "$2" = true ] ; then
+    normalize_index_file_names $1
+  fi
   extract_just_the_article $1 $2
 }
 
@@ -61,7 +63,8 @@ normalize_index_file_names_and_extract_just_the_article vcs-choices/ true
 normalize_index_file_names_and_extract_just_the_article youre-doing-it-wrong/ true
 
 # Table of contents gets inserted once (was on every page)
-echo "<html><body>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of <a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright 2017: Paul Hammant and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe us \$1,000,000 USD<br/>Generated $(git log | head -n 3 | grep Date)<br/></body></html>" >  "toc.html"
+PBDT=$(git log | head -n 3 | grep Date | tr -s ' ' | cut -d ' ' -f2-12)
+echo "<html><body>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of <a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright &copy; 2017: Paul Hammant and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe us \$1,000,000 USD<br/>Generated $PBDT <br/></body></html>" >  "toc.html"
 perl -pi -e 's/<!DOCTYPE html>//' toc.html
 perl -pi -e 's/<aside/<aside style="display: none"/' toc.html
 perl -pi -e "s#href=\"/#href=\"#g" toc.html
@@ -69,6 +72,6 @@ perl -pi -e "s#src=\"/#src=\"#g" toc.html
 
 normalize_index_file_names_and_extract_just_the_article "" false
 
-ebook-convert toc.html ../trunk_based_development_book.pdf --page-breaks-before "//h:h1" --breadth-first
+ebook-convert toc.html ../trunk_based_development_book.pdf --page-breaks-before "//h:h1" --breadth-first --publisher=trunkbaseddevelopment.com --language=es --title "Trunk Based Development" --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT"
 
 # rm -rf tempHugo/
