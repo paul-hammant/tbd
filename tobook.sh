@@ -72,6 +72,6 @@ perl -pi -e "s#src=\"/#src=\"#g" toc.html
 
 normalize_index_file_names_and_extract_just_the_article "" false
 
-ebook-convert toc.html ../trunk_based_development_book.pdf --page-breaks-before "//h:h1" --breadth-first --publisher=trunkbaseddevelopment.com --language=es --title "Trunk Based Development" --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT"
+ebook-convert toc.html ../trunk_based_development_book.pdf --page-breaks-before "//h:h1" --breadth-first --publisher=trunkbaseddevelopment.com --language=es --title "Trunk Based Development" --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
 
-# rm -rf tempHugo/
+rm -rf tempHugo/
