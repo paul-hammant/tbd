@@ -346,7 +346,7 @@ development for teams of course.
 
 ![](to_tbd2.png)
 
-See [Publications - Continuous Delivery](/publications#continuous-delivery-july-27-2010)
+See [Publications - Continuous Delivery](/publications/index.html#continuous-delivery-july-27-2010)
 
 Jez Humble{{< ext url="https://continuousdelivery.com" >}} and Dave 
 Farley{{< ext url="http://www.continuous-delivery.co.uk" >}} wrote this influential book after a 

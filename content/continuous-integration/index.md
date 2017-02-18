@@ -74,7 +74,7 @@ facets of the 'distance' that we want to reduce (refer [5 minute overview](/5-mi
 ### Pipelines - further reading
 
 Note: Continuous Integration Pipelines are better described in the bestselling 
-[Publications - Continuous Delivery](/publications#continuous-delivery-july-27-2010) book. So are dozens of nuanced, 
+[Publications - Continuous Delivery](/publications/index.html#continuous-delivery-july-27-2010) book. So are dozens of nuanced, 
 lean inspired concepts for teams pushing that far.
 
 ## Advanced CI topics

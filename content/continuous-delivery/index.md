@@ -11,7 +11,7 @@ become:
 
 ![](/images/pipelines2.png)
 
-The [bestselling book of the same name](/publications#continuous-delivery-july-27-2010) by Jez Humble and Dave Farley, 
+The [bestselling book of the same name](/publications/index.html#continuous-delivery-july-27-2010) by Jez Humble and Dave Farley, 
 details the 'marching orders' for many companies, where there is whole dev-team improvement agenda.
 
 {{< warning title="A Layer above Trunk Based Development" >}}
