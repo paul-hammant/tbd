@@ -40,10 +40,12 @@ extract_just_the_article vcs-choices/
 extract_just_the_article youre-doing-it-wrong/
 
 # Table of contents gets inserted once (was on every page)
-echo "<html><body>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of <a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright 2017: Paul Hammant and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe us \$1,000,000 USD<br/>Generated $(git log | head -n 3 | grep Date)</body></html>" >  "toc.html"
+echo "<html><body>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of <a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright 2017: Paul Hammant and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe us \$1,000,000 USD<br/>Generated $(git log | head -n 3 | grep Date)<br/></body></html>" >  "toc.html"
 perl -pi -e 's/<!DOCTYPE html>//' "toc.html"
 perl -pi -e 's/<aside/<aside style="display: none"/' "$1index.html"
 
 extract_just_the_article ""
 
 ebook-convert toc.html ../trunk_based_development_book.pdf --page-breaks-before "//h:h1" --breadth-first
+
+rm -rf tempHugo/
