@@ -113,7 +113,7 @@ There's a warning too:
 
 Brad Appleton says:
 
-<br><div style="padding-left: 45px; padding-right: 45px"/><span style="font-size: 150%">&ldquo;</span>
+<br><div style="padding-left: 45px; padding-right: 45px"></div><span style="font-size: 150%">&ldquo;</span>
 The thing I do not like about feature-toggles/flags is when they end up NOT being short-lived as intended, 
 and we end up having to revisit Spencer and Collyer's famous paper. The funny thing is feature-branches 
 started out the same way. When they were first introduced it was for feature-teams using very large features, and the 

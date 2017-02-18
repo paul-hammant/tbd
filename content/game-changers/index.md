@@ -24,7 +24,7 @@ In Tichy's 1985 paper
 focused mode of use is described as a "slender branch". In section 3.1. "When are branches needed?", 
 he says that you step away from the trunk for four reasons:
 
-<div style="padding-left: 40px"/><span style="font-size: 120%">&ldquo;</span>
+<div style="padding-left: 40px"></div><span style="font-size: 120%">&ldquo;</span>
 A young revision tree is slender: It consists of only one branch, called the trunk.<br>
 As the tree ages, side branches may form. Branches are needed in the following 4 situations.<br>
 Temporary fixes, Distributed development and customer modifications, Parallel development, and Conflicting updates.
@@ -189,7 +189,7 @@ dependency problem), by limiting the rate at which they upgraded their third-par
 
 Gump creator, Sam Ruby remembers:
 
-<div style="padding-left: 40px; padding-right: 45px"/><span style="font-size: 120%">&ldquo;</span>
+<div style="padding-left: 40px; padding-right: 45px"></div><span style="font-size: 120%">&ldquo;</span>
 The original motivation for Gump wasn't so much continuous<br>
 as it was integration - in particular, integration in the large.<br>
 Many projects had unit tests but would routinely make changes<br>
