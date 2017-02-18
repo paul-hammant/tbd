@@ -476,7 +476,7 @@ have to pick apart who actually broke the build.
 Surely non-Trunk Based Development teams would turn on CI for every branch and soon after plan their migration to Trunk 
 Based Development.
 
-## Google sharing their Monorepo Trunk (2016)
+## Google revealing their Monorepo Trunk (2016)
 
 ![](to_tbd3.png)
 

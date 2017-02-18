@@ -38,7 +38,7 @@ and helps to make Continuous Delivery a reality.
   to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
 
-- Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers/index.html#google-sharing-their-trunk-usage-2016) and
+- Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
   they have **25000 developers and QA automators** in that trunk.
 
 - People who practice the [Github-flow branching model will feel this is quite similar](/alternative-branching-models/index.html#github-flow)
