@@ -64,6 +64,8 @@ thought you were going to push, but Git informed you that you had to pull first,
 to catch up and push ahead without encountering the same problem. Forks make that easier, and robots keeping 
 pull-request branches abreast of origin:master helps a lot.
 
+TODO - mention MS GitVFS rationale.
+
 ## Conways Law
 
 The org making applications and services that reflect the organization's own structure{{< ext url="https://en.wikipedia.org/wiki/Conway's_law" >}}. 
