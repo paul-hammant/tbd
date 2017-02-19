@@ -142,8 +142,8 @@ that is claimed as a possibility.
 
 Subversion, like Perforce, has read and write permissions down to the directory and branch.
 
-Interestingly there is a "Subversion vs Git" website{{< ext url="https://svnvsgit.com/" >}}. It does not have a 
-feedback/contact mechanism in order suggest updates (some claims are out of date).
+Interestingly there is a "Subversion vs Git" website{{< ext url="https://svnvsgit.com/" >}} which attempts to counter
+some widely held community beliefs about Subversion and how it stacks up to Git.
 
 Note also that the Subversion team themselves, do not do trunk based development, despite Subversion have default root directories 
 of 'trunk', 'tags' and 'branches' for newly-created repositories.

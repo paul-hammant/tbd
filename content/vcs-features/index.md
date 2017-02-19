@@ -96,13 +96,17 @@ Phabricator, but itegration into a platform experience is key.  GitLab, and Rhod
 Read more in [Game Changes Review - Google's Mondrian](/game-changers/index.html#mondrian-2006) and 
 [Game Changers - Github's Pull Requests](/game-changers/index.html#pull-requests-2008).
 
-### Continuous Integration 
+### Continuous Integration testing
 
 This goes hand in hand with the Code Review capability. CI Servers kick in for commits are pushed up code review branches, 
 or at least against change sets that are entering code review and validate them. The regular build, and maybe some 
 additional steps are executed against them and the results of those made available to code reviewers, Facebook have a 
 Service Level Agreement to have those complete ten minutes after the commit has been placed in the 'needs code review'
 queue.
+
+The reality of VCS platforms today is that they only provided hooks (Web hooks most likely) into other CI servers. The
+best combinations of VCS platform and CI server do so for any of the branches in play, including code-review branches 
+(forks).
 
 ## Governance
 
