@@ -108,6 +108,17 @@ Pause and resume is much more likely in an enterprise development organization t
 In the case of abandonment, deleting a real long running feature branch is cheaper, but deletion of a 
 branch by abstraction *thing* is only incrementally more expensive. 
  
+## Not a panacea
+ 
+Branch by Abstraction does not suit all 'change' situations. 
+ 
+One is when you have got to support old APIs and previous releases for more than a short period of time.  I.e. when your 
+dependent customers (or detached clients apps) can choose their own upgrade moment.
+ 
+Some years ago the KDE team was mulling their release 5.0 strategy, and wanting to remain parallel to changes in 4.0, so as not to make 
+mistakes that they had done 
+previously{{< ext url="http://tech.slashdot.org/story/11/08/07/2128222/KDE-Frameworks-50-In-Development" >}}. TODO: circle back.
+ 
 ## History
  
 Teams employed Branch by Abstraction many years before it got its name (Stacy Curl named it in 2007), but it is 
