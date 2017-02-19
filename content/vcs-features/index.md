@@ -7,7 +7,11 @@ weight: 31
 **Desirable VCS features, that is**
 
 To great degree Trunk Based Development possible on any Version Control System (VCS) that does atomic commits (spoiler: all do 
-that came after CVS). It turns out there are many 
+that came after CVS).  Productivity and governance is what divides them though.
+
+## Productivity
+
+It turns out there are many 
 productivity reasons that teams quit one technology and go to another. It does not matter whether the tool is commercial
 or open source. At least to its end users it does not.
 
@@ -16,7 +20,11 @@ By speed we mean two things primarily:
 1. The speed at which we can pull/update/sync changes out of a remote server repository
 2. The speed at which we can commit/push changes back to that remote server
 
-## Productivity
+And three other secondary things that support little and often:
+
+1. Advanced Merging
+2. Code Review
+3. Continuous Integration
 
 ### Pull/update/sync speed
 
@@ -60,17 +68,6 @@ incidentally all the intervening ones) locally first.  It will only allow that i
 Perforce can cheat again, but taking advantage of the read-only bit, and therefore already knows which files definitely 
 have **not** changed between the remote master repo and local working copy. It still feels slower than it should be though.  
 
-### Size
-
-Many teams, particularly those with monorepo configurations or large binary files (like Games companies), want to have 
-limitless server side storage for their repository.  Git and Mercurial are inching towards bigger and bigger 
-capacity, but there are still a few snafus to work through - how to cleanly/safely reduce the size of the client side clone
-history (while still being able to push changes back to the server) is a challenge.
-
-Microsoft released Git Virtual File System (~~GitVFS~~ GVFS) in early 2017, to layer on some of the things they had 
-become used to in the in-house recompilation of Perforce (SourceDepot - used from 1998 to 201x), as well as native VCS 
-of their commercial offering Team Foundation Server (TFS).
-
 ### Three-way merge tools
 
 Developers (hopefully in pairs) are going to have to become skilled in arbitrating over merges for the commits they 
@@ -109,4 +106,20 @@ queue.
 
 ## Governance
 
-It turns out that enterprises like the ability to carve up permissions
+It turns out that enterprises like the ability to carve up permissions, and set read and write permissions throughout
+their repositories.
+
+### fine grained permissions
+
+TODO
+
+### Size / Scale
+
+Many teams, particularly those with monorepo configurations or large binary files (like Games companies), want to have 
+limitless server side storage for their repository.  Git and Mercurial are inching towards bigger and bigger 
+capacity, but there are still a few snafus to work through - how to cleanly/safely reduce the size of the client side clone
+history (while still being able to push changes back to the server) is a challenge.
+
+Microsoft released Git Virtual File System (~~GitVFS~~ GVFS) in early 2017, to layer on some of the things they had 
+become used to in the in-house recompilation of Perforce (SourceDepot - used from 1998 to 201x), as well as native VCS 
+of their commercial offering Team Foundation Server (TFS).
