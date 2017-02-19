@@ -7,7 +7,7 @@ weight: 121
 Since the early 80's a number of things have pushed best practices **towards** Trunk Based Development, or **away** from it. 
 
 The language in use to describe such things has changed over time. Software Configuration Management (SCM) is used less 
-today than Version Control Systems (VCS) is. A simpler still term -"Source Control" - seems to be used more recently, 
+today than Version Control Systems (VCS) is. A simpler still term - "Source Control" - seems to be used more recently, 
 too.
 
 Similarly, 'trunk' and 'branch', have not always been used as terms for controlled code lines that have a common
@@ -503,6 +503,8 @@ Single Repository":
 ## Microsoft's Git Virtual File System (2017)
 
 ![](to_tbd1.png)
+
+Microsoft released ~~GitVFS~~ GVFS in early 2017 on Github{{< ext url="https://github.com/Microsoft/GVFS" >}}.
 
 This new technology deserves time and analysis before the full impact is determined. There is a suggestion from Brian Harry's 
 blog{{< ext url="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/" >}} that branch reduction was one of 
