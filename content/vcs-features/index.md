@@ -57,7 +57,7 @@ fast. Before you push to the shared remote repository, these two will make you t
 Perforce and Subversion will allow you to commit/push changes to the remote, without necessarily having the latest versions (and 
 incidentally all the intervening ones) locally first.  It will only allow that if there was no clash on the lines changed.
 
-Perforce can chead again, but taking advantage of the read-only bit, and therefore already knows which files definitely 
+Perforce can cheat again, but taking advantage of the read-only bit, and therefore already knows which files definitely 
 have **not** changed between the remote master repo and local working copy. It still feels slower than it should be though.  
 
 ### Size
@@ -83,7 +83,7 @@ technologies. In that case, it is just a command-line integration away from bein
 
 ### Code Review
 
-Integrrated code review turned out to to be the killer feature of VCS tools. This should have been clear from the moment Mondrian
+Integrated code review turned out to to be the killer feature of VCS tools. This should have been clear from the moment Mondrian
 was unveiled by Guide van Rossum (Mr Python) in a publicized Google 'tech talk' in 2006. It delivered pre-commit
 code reviews to developers, and gamified the activity of code review to some degree. Google was
 using Perforce back then (they changed to an in-house technology in 2012), and it did not have code review build in, so 
@@ -95,6 +95,17 @@ effectively pre-commit - or at least commit to the master.
 
 There were (and are) other technologies for code review such as Crucible (Atlassian), UpSource (JetBrains), Gerrit, 
 Phabricator, but itegration into a platform experience is key.  GitLab, and RhodeCode are emerging platforms.
+
+Read more in [Game Changes Review - Google's Mondrian](/game-changers/index.html#mondrian-2006) and 
+[Game Changers - Github's Pull Requests](/game-changers/index.html#pull-requests-2008).
+
+### Continuous Integration 
+
+This goes hand in hand with the Code Review capability. CI Servers kick in for commits are pushed up code review branches, 
+or at least against change sets that are entering code review and validate them. The regular build, and maybe some 
+additional steps are executed against them and the results of those made available to code reviewers, Facebook have a 
+Service Level Agreement to have those complete ten minutes after the commit has been placed in the 'needs code review'
+queue.
 
 ## Governance
 
