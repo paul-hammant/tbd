@@ -65,12 +65,12 @@ thought you were going to push, Git will informed you that you have to pull firs
 to push without encountering the same problem. Forks make that easier, and robots keeping 
 pull-request branches abreast of origin:master helps a lot. Thus for developers wanting to land their commitsGit increasing 
 commit frequency to the 
-shared repo means contention and an artificial serialization. Microsoft acknowelged this as one
+shared repo means contention and an artificial serialization. Microsoft acknowledged this as one
 of the motivations to their Git Virtual File System (~~GitVFS~~ GVFS).
 
 {{< quote title="Git has critical serialization points that will cause a queue to back up badly" >}}
 <span>&mdash; Brian Harry</span><br>
-<span style="margin-left: 30px"><a href="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/">More on GVFS</a></span>
+<span style="margin-left: 30px">Refer to Brian's "More on GVFS" blog entry<a target="_blank" href="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/"><img src="/images/ext.png" alt=""></a></span>
 {{< /quote >}}
 
 We're sure that within a few years, Git will be able to hangle huge scale too. Whether with the Microsoft technologies, or 
