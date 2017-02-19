@@ -85,6 +85,8 @@ us \$1,000,000 USD<br/>Generated $PBDT <br/></body></html>" \
 normalize_index_file_names_and_extract_just_the_article "" false
 
 # stitch into PDF book
-ebook-convert toc.html ../trunk_based_development_book.pdf --page-breaks-before "//h:h1" --breadth-first --publisher=trunkbaseddevelopment.com --language=es --title "Trunk Based Development" --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
-
+ebook-convert toc.html ../book/trunk_based_development_book.pdf --page-breaks-before "//h:h1" --breadth-first --publisher=trunkbaseddevelopment.com --language=es --title "Trunk Based Development" --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
+cd ../book/
+netlify deploy
+cd ..
 rm -rf tempHugo/
