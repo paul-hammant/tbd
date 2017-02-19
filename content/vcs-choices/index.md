@@ -106,9 +106,10 @@ permissions to be specified at any directory (or branch) within large and small 
 
 #### No Code Review
 
-Perforce does not have code-review features integrated into its server daemon. By customizing a GitSwarm (Gitlab) 
-'side install', Perforce now has a code review capability. It also has it with an alternate side-install called just
-Swarm (an slightly older product), that doesn't not offer the Git capability of GitSwarm.
+Perforce does not have code-review features integrated into its traditional server daemon. By customizing a modified Gitlab 
+called GitSwarm 'side install', Perforce now has a code review capability. It also has it with an alternate side-install 
+called just Swarm (a slightly older product), that doesn't not offer the Git capability of GitSwarm, but does add in much
+of the team-ware features like code review.
 
 ### Git Fusion
 
@@ -150,15 +151,18 @@ of 'trunk', 'tags' and 'branches' for newly-created repositories.
 ### No Code Review
 
 Note that Subversion has no local branching capability, and to get code review you need to install third-party servers 
-along side it or (better choice) use a platform that integrates code review like those below.
+along side it. Or, a better choice, use a platform that integrates code review like those below.
 
 ### Git-Svn
 
 There is an extension to Git that allows it to deal with a Subversion backend. A Git-subversion clone has all the 
-local history, local-branching possibilities of Git. That clone from subversion can be many tens of times slower, 
-than the equivalent clone from Git, because it it is recreating the zipped Git history on the client-side as in
-uses the classic Subversion wire protocol, which is more chatty. The local branching possibilities afforded by this
+local history, local-branching possibilities of Git. The local branching possibilities afforded by this 
 mode of operation are very handy, and it should work easily with whatever Svn hosting platform you installed.
+
+Note: That clone from subversion can be many tens of times slower, 
+than the equivalent clone from Git, because it it is recreating the zipped Git history on the client-side as in
+uses the classic Subversion wire protocol, which is more chatty. Indeed the initial clone of years of commits for a 
+reasonably sized team, can take many hours. 
 
 ### Platform Software Choices
 
@@ -179,8 +183,13 @@ mode of operation are very handy, and it should work easily with whatever Svn ho
 Microsoft launched TFS in the mid-2000's with a **custom VCS technology** "TFVC". It is said that they have an internal 
 'SourceDepot' tool that is a special version of Perforce compiled for them in the nineties, and that TFS reflects some 
 of the ways of working of that technology. It has grown to be a multifaceted server platform. Perhaps even a 
-one-stop shop for the whole enterprise's needs for application lifecycle management.  It is perfectly compatible with 
-a Trunk Based Development usage.
+one-stop shop for the whole enterprise's needs for application lifecycle management.  More recently with TFS, 
+Microsoft encouraged a use of Git within it, rather than then proprietary VCS they initially developed.
+
+TFS is perfectly compatible with a Trunk Based Development usage.
+
+Note: Microsoft are doating back to the Git community with a Git Virtual File System, which allows some monorepo 
+usage for Git{{< ext url="https://github.com/Microsoft/GVFS" >}}.
 
 ## PlasticSCM
 
