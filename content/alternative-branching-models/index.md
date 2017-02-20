@@ -16,7 +16,7 @@ weight: 101
 There are plenty in the modern age that swear by this model, and feel it has plenty of room to scale with few
 downsides. It is a branching model that has **groups** of developers active concurrently in more than one branch (or fork).
 
-![](/images/gitflow.png)
+![](gitflow.png)
 
 - Diagram copied from Vincent Driessen's 2010 article on GitFlow: "A successful Git branching model"{{< ext url="http://nvie.com/posts/a-successful-git-branching-model" >}}
 
@@ -32,19 +32,19 @@ individuals.
 
 The crucial difference is where the release is performed from. Whereas for their release-from-branch step:
 
-![](/images/githubflow1.png)
+![](githubflow1.png)
 
 As the Github documentation portrays, review comments are part of the process. Of course they are, they are the speech
 bubbles in timeline above followed by another commit (presumably 132 columns end of line versus 80 prevailed). How
 Trunk Based Development modifies the Github Flow model:
 
-![](/images/trunk_pr.png)
+![](../5-min-overview/trunk_pr.png)
 
 After the dust has settled, and the short-lived feature branch has been deleted, the commits are not smushed together
 in a bigger one (as would be the case Subversion and Perforce), the instead zip into their respective places in the
 commit history, which is not as linear as we present here:
 
-![](/images/githubflow3.png)
+![](githubflow3.png)
 
 Of course if you rebase/squash your series of commits, they could land in the trunk as a single commit.  Also note that
 the review commentary is still available after the branch is deleted, as it should be.  
@@ -62,16 +62,16 @@ for teams to do development work on. When that work is complete, a release may h
 
 So here is the intention, with Mainline:
 
-![](/images/mainline1.png)
+![](mainline1.png)
 
 When bugs inevitably happen:
 
-![](/images/mainline2.png)
+![](mainline2.png)
 
 Whenever there is a bug fix there has to be a merge down to the mainline afterwards. There's no 'wrong' in this modified
 branch diagram, but you should be able to guess what the worst case branching/merging scenario is. In case you cannot:
 
-![](/images/mainline3.png)
+![](mainline3.png)
 
 **Merges for the above**
 
@@ -114,21 +114,21 @@ and green to show known build-breaks, build passes missing automated tests will 
 and green for could go live. At least for the worst performing with missing or ineffectual automated
 testing run in the CI pipelines:
 
-![](/images/mainline4.png)
+![](mainline4.png)
 
 ### Cascade
 
 The idea is that each release has its own branch, and that each release team merges from the 'upstream' branch daily.
 They only do so if the CI server says the build is green for the upstream, of course.
 
-![](/images/cascade1.png)
+![](cascade1.png)
 
 Problems compound with this model, the more releases being juggled concurrently there are. An upstream butterfly, is
 a downstream Tsunami of unmergability. Downstream merged begin to get skipped, or abandoned. Or the merge works, but the
 code is not right so there is some in-branch fixing, which is not applicable to upstream. Here's the reality (breakages
 overlaid again):
 
-![](/images/cascade2.png)
+![](cascade2.png)
 
 Remember, the merges are never cherry-picks in this model - they are sweeps of everything
 not merged yet (or upto an chosen commit number in order to make it more bite sized).

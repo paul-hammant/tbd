@@ -6,7 +6,7 @@ weight: 5
 
 ## Related Concepts
 
-![](/images/layer_cake.png)
+![](layer_cake.png)
 
 [Continuous Integration](/continuous-integration/) (CI) has been in practice since the
 mid-nineties in its modern incarnation (integrating to a shared code line frequently, and 

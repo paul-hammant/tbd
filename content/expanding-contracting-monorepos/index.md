@@ -52,7 +52,7 @@ We used 'change the wheel on a car', on the [Branch By Abstraction](/branch-by-a
 example. It will serve us again here. The wheel is what we want to change. The other team using 'Wheel(s)' is making a 
 Segway thing (two wheels and self-balancing via high-torque and very responsive motors). Here's the procedure:
 
-![](/images/car_segway.png)  
+![](car_segway.png)  
  
 The starting position is two teams working separately, using 'Wheel' (4 for car, 2 for Segway). Without any commits 
 happening the engineer changing 'Wheel' for everyone, runs gcheckout (or its equivalent) to modify the source in the 

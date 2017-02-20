@@ -16,7 +16,7 @@ are still streaming their commits into the trunk at full speed.
 
 The incompatible policy (ref Wingerd & Seiwald above), that the release branch "should not receive continued development work".
 
-![](/images/branch_for_release.png)
+![](branch_for_release.png)
 
 ^ Trunk, two release branches, three releases, and a bug-fix
 
@@ -29,7 +29,7 @@ roll-forward strategy for solving it, meaning the fix for a bug is in the trunk,
 
 Developers are committing (green dots) at the highest throughput rate to the trunk, and don't slow up around a branch-cut.
 
-![](/images/branch_for_release2.png)
+![](branch_for_release2.png)
 
 The branch cut itself is a commit. Subversion and Perforce would technically have a bigger commit here, but all
 VCS systems in use today would count the commit as lightweight in terms of it's impact on the history/storage.

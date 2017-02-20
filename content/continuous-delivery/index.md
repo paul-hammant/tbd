@@ -9,7 +9,7 @@ re-deploy a proven build to a QA or UAT environment. If the bounce time for a de
 then it could be that you are doing that for every commit that lands in the shared trunk. The Radiator's pipeline view would 
 become:
 
-![](/images/pipelines2.png)
+![](pipelines2.png)
 
 The [bestselling book of the same name](/publications/index.html#continuous-delivery-july-27-2010) by Jez Humble and Dave Farley, 
 details the 'marching orders' for many companies, where there is whole dev-team improvement agenda.

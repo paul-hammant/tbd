@@ -61,7 +61,7 @@ A popular
 radiator-style visual indication of progress would be those shown as a left-to-right series of Green (passing) or Red 
 (failing) icons/buttons with a suitably short legend:
 
-![](/images/pipelines1.png)
+![](pipelines1.png)
 
 This should go up on TVs if developers are co-located. It should also be a click through from notification emails.
 
@@ -132,7 +132,7 @@ In terms of breakages, whether incorrect (say 'badly formatted'), or genuinely b
 commit** is undesirable. Fixing things while the rest of the team watches or waits, is a team-throughput 
 lowering practice. 
 
-![](/images/ci_types.png)
+![](ci_types.png)
 
 Yellow = automated steps, Red = a potential to break build for everyone
 
@@ -141,7 +141,7 @@ likely though is reviews happening after the CI daemon has cast its vote on the 
 
 Better setups have code-review and CI verification before the commit lands in the trunk for all to see:
 
-![](/images/ci_types2.png)
+![](ci_types2.png)
 
 It is best to have a human agreement (the code review), and machine agreement (CI verification) before the commit lands in 
 the trunk.  There is still room for error based on timing, so CI needs to happen a second time **after** the push to the shared 

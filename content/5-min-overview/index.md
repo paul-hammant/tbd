@@ -78,7 +78,7 @@ as an automatic review. Others team will follow a conventional design where the 
 for review before landing in the trunk. In modern portal solutions, marshaled nearly always means a branch/fork (Pull
 Request) that is visible to the team.
 
-![](/images/trunk_pr.png)
+![](trunk_pr.png)
 
 ^ the speech bubbles are stylized code review comments
 
@@ -98,7 +98,7 @@ branches used in review), and as quickly and completely as possible loudly/visib
  is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI server to do that 
  automatically.
 
-![](/images/5trunk1.png)
+![](5trunk1.png)
 
 The high bar is verifying the commit before it lands in the trunk. Short-lived Pull Request branches are the modern
 place for that.

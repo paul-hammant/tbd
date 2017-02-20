@@ -14,7 +14,7 @@ weight: 131
 
 <div>
     <a href="http://bit.ly/lean-enterprise-paper">
-      <img width="93" src="/images/ci.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
+      <img width="93" src="ci.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
     </a>
     <p>
         <em>Continuous Integration: Improving Software Quality and Reducing Risk</em><br/>
