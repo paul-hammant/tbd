@@ -15,20 +15,27 @@ function extract_just_the_article {
   # arg 1 directory for index.html file (or "" for root)
   # arg 2 true if sub directory
 
-  echo "<html><head></head><body>$(xidel --html $1index.html --extract "//article")</body></html>" \
-    | sed 's/<!DOCTYPE html>//' \
+  echo "<html><head></head><body>" > "$1index.html2"
+  xidel --html "$1index.html" --extract "//article" | sed '/<!DOCTYPE html>/d' >> "$1index.html2"
+  echo "</body></html>" >> "$1index.html2"
+  mv "$1index.html2" "$1index.html"
+
+  cat "$1index.html" | sed 's/<!DOCTYPE html>//' \
     | sed 's/<aside/<aside style="display: none"/' \
     | sed 's#<h1 id="references-elsewhere">References elsewhere</h1>#<h2 id="references-elsewhere">References elsewhere</h2>#' \
     | sed 's/<footer/<footer style="display: none"/' \
+    | sed 's/<nav/<nav style="display: none"/' \
     | sed 's/References elsewhere/References on the web/' \
+    | sed 's/his site/his book/' \
+    | sed 's/his portal/his book/' \
     | sed '/showHideRefs/d' \
     | sed '/^[ \t]*$/d' \
     | sponge "$1index.html"
 
-  # change videos to links to videos
-  cat $1index.html | sed '/<div noprint/d' \
+  # change videos to links to videos, and remove sections not for print
+  cat "$1index.html" | sed '/ noprint/d' \
     | sed 's/<!-- print //' \
-    | sed 's/ print -->//' | sponge $1index.html
+    | sed 's/ print -->//' | sponge "$1index.html"
 
   if [ "$2" = true ] ; then
     cat "$1index.html" | sed "s#href=\"/#href=\"../#g" \
@@ -49,12 +56,9 @@ function normalize_index_file_names_and_extract_just_the_article {
 }
 
 # Gen site to temp folder
-hugo -d tempHugo
+hugo --disableRSS --quiet -d tempHugo
 
 cd tempHugo
-
-# remove XML
-find . -name "*.xml" -print0 | xargs -0 rm -rf
 
 # slim site down to content
 normalize_index_file_names_and_extract_just_the_article 5-min-overview/ true
@@ -86,13 +90,20 @@ echo "<html><body><h1>Table of Contents</h1>$(xidel --html index.html --extract 
 <a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright &copy; 2017: Paul Hammant \
 and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe \
 us \$1,000,000 USD<br/>Generated $PBDT <br/></body></html>" \
-| sed 's/<!DOCTYPE html>//' \
-| sed 's/<aside/<aside style="display: none"/' \
-| sed "s#href=\"/#href=\"#g" \
-| sed "s#src=\"/#src=\"#g" > toc.html
+  | sed 's/<!DOCTYPE html>//' \
+  | sed '/^[ \t]*$/d' \
+  | sed '/<strong>Trunk Based Development/d' \
+  | sed 's/Site Source/Book Source/' \
+  | sed 's/<aside/<aside style="display: none"/' \
+  | sed "s#href=\"/#href=\"#g" \
+  | sed "s#title=\"Introduction\" href=\"\"#title=\"Introduction\" href=\"index.html\"#" \
+  | sed "s#src=\"/#src=\"#g" > toc.html
 
 # slim the front page too.
-normalize_index_file_names_and_extract_just_the_article "" false
+normalize_index_file_names_and_extract_just_the_article "./" false
+cat index.html \
+    | sed '/<h1>Introduction/d' \
+    | sponge index.html
 
 # stitch into PDF book
 convert_to_book pdf
