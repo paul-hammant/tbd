@@ -22,6 +22,7 @@ function extract_just_the_article {
     | sed 's/<footer/<footer style="display: none"/' \
     | sed 's/References elsewhere/References on the web/' \
     | sed '/showHideRefs/d' \
+    | sed '/^[ \t]*$/d' \
     | sponge "$1index.html"
 
   # change videos to links to videos
