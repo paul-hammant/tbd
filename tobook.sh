@@ -20,7 +20,7 @@ function extract_just_the_article {
     | sed 's/<aside/<aside style="display: none"/' \
     | sed 's#<h1 id="references-elsewhere">References elsewhere</h1>#<h2 id="references-elsewhere">References elsewhere</h2>#' \
     | sed 's/<footer/<footer style="display: none"/' \
-    | sed '/references-elsewhere/d' \
+    | sed 's/References elsewhere/References on the web/' \
     | sed '/showHideRefs/d' \
     | sponge "$1index.html"
 
