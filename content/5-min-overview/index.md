@@ -121,20 +121,34 @@ Problematic 'distance' has a few tangible examples:
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Type</th>
-    <th>Article</th>
-  </tr>
-  <tr>
-    <td valign="top">03 Sep 2009</td>
-    <td valign="top">MartinFowler.com article</td>
-    <td valign="top"><a href="https://martinfowler.com/bliki/FeatureBranch.html">FeatureBranch</a></td>
-  </tr>
-  <tr>
-    <td valign="top">16 Jun 2015</td>
-    <td valign="top">Blog Entry</td>
-    <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development">Organization Pattern: Trunk Based Development</a></td>
-  </tr>
-</table>
+<div>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">03 Sep 2009</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">MartinFowler.com article</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="https://martinfowler.com/bliki/FeatureBranch.html">FeatureBranch</a></td>
+        </tr>
+    </table>
+  <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">16 Jun 2015</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog Entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development">Organization Pattern: Trunk Based Development</a></td>
+        </tr>
+    </table>
+</div>
