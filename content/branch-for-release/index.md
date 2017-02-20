@@ -77,7 +77,19 @@ harmless tidying activity - branches can be undeleted again quite easily.
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-Date    | Type  | Article
---------|-------|--------
-1998 | White Paper | [High-level Best Practices in Software Configuration Management](https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf)
- 
+<div>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">1998</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">White Paper</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf">High-level Best Practices in Software Configuration Management</a></td>
+        </tr>
+    </table>
+</div>
