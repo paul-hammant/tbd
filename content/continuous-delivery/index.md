@@ -33,11 +33,37 @@ applications/services where  clients/customers could lose money are much less li
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-Date    | Type  | Article
---------|-------|--------
-2010 | Jez Humble's Continuous Delivery portal | [ContinuousDelivery.com](https://continuousdelivery.com/)
-5 Jan 2015 | TheGuardian newspaper on their CD | [Delivering Continuous Delivery, continuously](https://www.theguardian.com/info/developer-blog/2015/jan/05/delivering-continuous-delivery-continuously)
-
+<div>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">2010</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Jez Humble's Continuous Delivery portal</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="https://continuousdelivery.com/">ContinuousDelivery.com</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">5 Jan 2015</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">TheGuardian newspaper on their CD</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="https://www.theguardian.com/info/developer-blog/2015/jan/05/delivering-continuous-delivery-continuously">Delivering Continuous Delivery, continuously</a></td>
+        </tr>
+    </table>
+</div>
 
 
 
