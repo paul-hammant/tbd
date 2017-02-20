@@ -229,14 +229,154 @@ promoted the one repo per microservice for a while now.
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-Date    | Type  | Article
---------|-------|--------
-09 Apr 2013 | Blog entry | [Scaling Trunk Based Development](http://paulhammant.com/2013/04/09/scaling-trunk-based-development/)
-06 May 2013 | Blog entry | [Google's Scaled Trunk Based Development](http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/)
-06 Jan 2014 | Blog entry | [Googlers Subset their Trunk](http://paulhammant.com/2014/01/06/googlers-subset-their-trunk/)
-08 Jan 2014 | Blog entry | [Google's vs Facebook's Trunk Based Development](http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/)
-10 Apr 2014 | Blog entry | [Continuous Delivery: The price of admission..](http://paulhammant.com/2014/04/10/cd-the-price-of-admission/)
-10 Oct 2014 | Conference Talk | [Trunk Based Development in the Enterprise - Its Relevance and Economics](https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics)
-18 May 2015 | Blog entry | [Advantages of monolithic version control](http://danluu.com/monorepo/)
-20 May 2015 | Blog entry | [Turning Bazel back into Blaze for monorepo nirvana](http://paulhammant.com/2015/05/20/turning-bazel-back-into-blaze-for-monorepo-nirvana/)
-27 Jan 2017 | Blog entry | [Maven In A Google Style Monorepo](http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/)
+<div>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">09 Apr 2013</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2013/04/09/scaling-trunk-based-development/">Scaling Trunk Based Development</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">06 May 2013</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/">Google's Scaled Trunk Based Development</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">06 Jan 2014 </td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2014/01/06/googlers-subset-their-trunk/">Googlers Subset their Trunk</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">08 Jan 2014</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/">Google's vs Facebook's Trunk Based Development</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">10 Apr 2014</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2014/04/10/cd-the-price-of-admission/">Continuous Delivery: The price of admission..</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">10 Oct 2014</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Conference Talk</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk Based Development in the Enterprise - Its Relevance and Economics</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top"></td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top"></td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href=""></a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">18 May 2015</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://danluu.com/monorepo/">Advantages of monolithic version control</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">20 May 2015</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2015/05/20/turning-bazel-back-into-blaze-for-monorepo-nirvana/">Turning Bazel back into Blaze for monorepo nirvana</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">27 Jan 2017</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/">Maven In A Google Style Monorepo</a></td>
+        </tr>
+    </table>
+</div>

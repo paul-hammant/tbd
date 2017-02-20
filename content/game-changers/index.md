@@ -514,8 +514,49 @@ the motivators.
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-Date    | Type  | Article
---------|-------|--------
-13 Nov 2013 | Talk | [A Practical Approach to Large Scale Agile Development](https://www.youtube.com/watch?v=2QGYEwghRSM)
-14 Jan 2015 | Blog entry | [From 2½ Days to 2½ Seconds - the Birth of DevOps](http://dizzythinks.net/from-212-days-to-212-seconds-the-birth-of-devops.html)
-23 Apr 2015 | Blog entry | [The origins of Trunk Based Development](http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/)
+<div>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">13 Nov 2013</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Talk</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="https://www.youtube.com/watch?v=2QGYEwghRSM">A Practical Approach to Large Scale Agile Development</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">14 Jan 2015</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://dizzythinks.net/from-212-days-to-212-seconds-the-birth-of-devops.html">From 2½ Days to 2½ Seconds - the Birth of DevOps</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">23 Apr 2015</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/">The origins of Trunk Based Development</a></td>
+        </tr>
+    </table>
+</div>
