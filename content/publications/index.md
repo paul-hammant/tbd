@@ -7,6 +7,8 @@ weight: 131
 ## This site as a book
 
 * [English PDF](https://book.trunkbaseddevelopment.com/trunk_based_development_book.pdf)   
+* [English MOBI](https://book.trunkbaseddevelopment.com/trunk_based_development_book.mobi) - for Kindle  
+* [English EPUB](https://book.trunkbaseddevelopment.com/trunk_based_development_book.epub) - for Apple Books and others
 
 ## Other Books promoting Trunk Based Development
 
