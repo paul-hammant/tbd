@@ -45,6 +45,19 @@ review.
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-Date    | Type  | Article
---------|-------|--------
-13 Nov 2014 | Blog Article | [Code Review - the unit of work should be a single commit](http://paulhammant.com/2014/11/13/code-review-the-unit-of-work-should-be-a-single-commit/)
+<div>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">13 Nov 2014 </td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog Article</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/2014/11/13/code-review-the-unit-of-work-should-be-a-single-commit/">Code Review - the unit of work should be a single commit</a></td>
+        </tr>
+    </table>
+</div>
