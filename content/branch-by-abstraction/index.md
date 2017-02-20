@@ -133,10 +133,79 @@ abandoned for a multi-branch model.
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-Date    | Type  | Article
---------|-------|--------
-26 Apr 2007 | Blog entry | [Introducing Branch by Abstraction](http://paulhammant.com/blog/branch_by_abstraction.html)
-05 May 2011 | ContinuousDelivery.com article | [Make Large Scale Changes Incrementally with Branch By Abstraction](https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/)
-21 Jun 2013 | Blog entry | [Branching Strategies: Feature Branches vs Branch by Abstraction](http://www.slideshare.net/cb372/branching-strategies)
-14 Oct 2013 | Blog entry | [Application Pattern: Verify Branch By Abstraction](http://www.alwaysagileconsulting.com/articles/application-pattern-verify-branch-by-abstraction)
-07 Jan 2014 | MartinFowler.com article | [BranchByAbstraction](https://martinfowler.com/bliki/BranchByAbstraction.html)
+<div>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">26 Apr 2007</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog Entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://paulhammant.com/blog/branch_by_abstraction.html">Introducing Branch by Abstraction</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">05 May 2011</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">ContinuousDelivery.com article</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/">Make Large Scale Changes Incrementally with Branch By Abstraction</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">21 Jun 2013</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog Entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://www.slideshare.net/cb372/branching-strategies">Branching Strategies: Feature Branches vs Branch by Abstraction</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">14 Oct 2013</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/application-pattern-verify-branch-by-abstraction">Application Pattern: Verify Branch By Abstraction</a></td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">07 Jan 2014</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">MartinFowler.com article</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="https://martinfowler.com/bliki/BranchByAbstraction.html">BranchByAbstraction</a></td>
+        </tr>
+    </table>
+</div>
