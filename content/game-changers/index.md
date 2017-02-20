@@ -73,7 +73,9 @@ Microsoft tool for source-control. That daily developer workflow was:
 11. makes a daily build from HEAD of the shared master branch
 
 The authors note in the book, that #10 is not always an everyday thing. And the last step, #11, isn't per developer, it is 
-for the designated "build master" within the team, and manual. 
+for the designated "build master" within the team, and manual. This workflow was initially pioneered in the Excel group, 
+and then Word, and then Windows NT, and the timespan for this way of working was from around 1989 through 1995 when the 
+interviews completed and the book published.
 
 The book also briefly mentions Test Case Manager (TCM) and "Microsoft Test". These were tools for helping developers 
 manage and record/edit/playback application tests at their workstations. It isn't clear if all SLM-using teams
@@ -88,11 +90,11 @@ Notes:
 2. In 2000, ex Microsoftee and early blogger Joel Spolsky would extol the virtues of #11 in his famous 
 "The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}} posting.
 
-## Mozilla's Tinderbox (1997)
+## NetScape's Tinderbox (1997)
 
 ![](to_tbd1.png)
 
-Mozilla had a service that compiled and tested bits and pieces of their open-source offerings together. That service was
+NetScape (now Mozilla) had a service that compiled and tested bits and pieces of their open-source offerings together. That service was
 Tinderbox and it debuted for the public to see in 1997. Their source organization was single-branch in the trunk style
 managed by CVS, and allowed individual developers to checkout and keep abreast of only the pieces they wanted/needed to. Tinderbox
 was the safety net that ensured everything was correct across all the whole trunk. It ran until it wouldn't scale anymore 
@@ -118,7 +120,7 @@ technology and technique (see below).
 ### Perforce's High-Level SCM Best Practices white paper 
 
 Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf" >}}
- (presented at an SCM conference in Brussels the same year).
+ that was presented at an SCM conference in Brussels the same year.
  
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in 
 it that help set a foundation for the next ten years of version-control advances.

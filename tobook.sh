@@ -112,4 +112,4 @@ convert_to_book epub
 cd ../book/
 netlify deploy
 cd ..
-#rm -rf tempHugo/
+rm -rf tempHugo/
