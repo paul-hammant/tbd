@@ -106,6 +106,7 @@ cat index.html \
     | sponge index.html
 
 # stitch into PDF book
+mkdir ../book
 convert_to_book pdf
 convert_to_book mobi
 convert_to_book epub
