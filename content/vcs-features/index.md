@@ -115,7 +115,19 @@ their repositories.
 
 ### fine grained permissions
 
-TODO
+All VCS usages need users accounts to be able to accept changes back, even if they don't all require accounts in order
+to be able to read. In the enterprise user accounts will be required to be able to read too.
+
+The larger the enterprise the more likely it will be that they have permissions carved up in more file grained ways.
+Fpor example "can commit to the trunk, but cannot create release branches" will be common for Trunk Based Development
+teams that make release branches.  Not all VCS technologies support that. Git for example does not, but some of the 
+portal experiences around it, add the feature. In reality though you cannot stop people from making branches in a DVCS,
+but you can prevent them from pushing them to the shared repository.
+
+Deeper still, some enterprises will want to set permissions down the directory level within a branch within a repositry.
+This could be as simple as a gate, to ensure that process is ahered to around checkins, but could also be to guard
+some secrets in a Monorepo implementation. That last is counter to some of the "common code ownership" ideals of
+software engineering though.
 
 ### Size / Scale
 
