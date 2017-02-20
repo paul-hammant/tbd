@@ -4,11 +4,9 @@ title: Publications
 weight: 131
 ---
 
-## This site as a book
+<h2 noprint id="this-site-as-a-book">This site as a book</h2>
 
-* [English PDF](https://book.trunkbaseddevelopment.com/trunk_based_development_book.pdf)   
-* [English MOBI](https://book.trunkbaseddevelopment.com/trunk_based_development_book.mobi) - for Kindle  
-* [English EPUB](https://book.trunkbaseddevelopment.com/trunk_based_development_book.epub) - for Apple Books and others
+<ul noprint ><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.pdf">English PDF</a><br></li><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.mobi">English MOBI</a> - for Kindle<br></li><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.epub">English EPUB</a> - for Apple Books and others</li></ul>
 
 ## Other Books promoting Trunk Based Development
 
