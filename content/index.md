@@ -44,8 +44,8 @@ and helps to make Continuous Delivery a reality.
 - Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
   they have **25000 developers and QA automators** in that trunk.
 
-- People who practice the [Github-flow branching model will feel this is quite similar](/alternative-branching-models/index.html#github-flow)
-  (there is one small difference).
+- People who practice the [Github-flow branching model](/alternative-branching-models/index.html#github-flow) will feel that this is quite similar,
+  but there is one small difference.
 
 - People who practice the Gitflow branching model will find this **very different**, as will many developers used to
   the popular ClearCase, Subversion, Perforce, StarTeam, VCS [branching models of the past](/alternative-branching-models/index.html#legacy-branching-models).
