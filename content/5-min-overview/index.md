@@ -121,7 +121,38 @@ Problematic 'distance' has a few tangible examples:
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
-Date    | Type  | Article
---------|-------|--------
-03 Sep 2009 | MartinFowler.com article | [FeatureBranch](https://martinfowler.com/bliki/FeatureBranch.html)
-16 Jun 2015 | Blog Entry | [Organization Pattern: Trunk Based Development](http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development/)
+<table>
+<tr>
+  <th>
+    Date
+  </th>
+  <th>
+    Type
+  </th>
+  <th>
+    Article
+  </th>
+</tr>
+<tr>
+  <td>
+    03 Sep 2009
+  </td>
+  <td>
+    MartinFowler.com article
+  </td>
+  <td>
+    <a href="https://martinfowler.com/bliki/FeatureBranch.html">FeatureBranch</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    16 Jun 2015
+  </td>
+  <td>
+    Blog Entry
+  </td>
+  <td>
+    <a href="http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development/>Organization Pattern: Trunk Based Development</a>
+  </td>
+</tr>
+</table>

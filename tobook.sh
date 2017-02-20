@@ -78,7 +78,7 @@ normalize_index_file_names_and_extract_just_the_article youre-doing-it-wrong/ tr
 
 # Table of contents gets inserted once (was on every page)
 PBDT=$(git log | head -n 3 | grep Date | tr -s ' ' | cut -d ' ' -f2-12)
-echo "<html><body>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of \
+echo "<html><body><h1>Table of Contents</h1>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of \
 <a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright &copy; 2017: Paul Hammant \
 and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe \
 us \$1,000,000 USD<br/>Generated $PBDT <br/></body></html>" \
@@ -97,4 +97,4 @@ convert_to_book epub
 cd ../book/
 netlify deploy
 cd ..
-rm -rf tempHugo/
+#rm -rf tempHugo/
