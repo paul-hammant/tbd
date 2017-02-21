@@ -224,4 +224,20 @@ to see green instead of red for this CI server enthusiasm
             <td valign="top"><a href="http://endoflineblog.com/gitflow-considered-harmful">GitFlow considered harmful</a></td>
         </tr>
     </table>
+    <br/>
+    <table>
+        <tr>
+            <td>Date:</td>
+            <td valign="top">08 Jan 2016</td>
+        </tr>
+        <tr>
+            <td>Type:</td>
+            <td valign="top">Blog Entry</td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td valign="top"><a href="http://dan.bodar.com/2016/01/08/gitflow-hmmmm/">GITFLOW HMMMM</a></td>
+        </tr>
+    </table>
 </div>
+
