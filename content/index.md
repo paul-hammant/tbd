@@ -30,12 +30,13 @@ and helps to make Continuous Delivery a reality.
 
 - Depending on the team size, and the rate of commits, **very short-lived** feature/task branches are used for
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
-  This allows and engage in [eager and continuous code review](/continuous-review/) of contributions before they land
-  in the trunk.
+  This also allows developers to engage in [eager and continuous code review](/continuous-review/) of contributions 
+  before they land in the trunk.
 
-- Depending on the intended release cadence, there may be [release branches](/branch-for-release/) (cut from trunk on
-  a just-in-time basis) that are 'hardened' before a release. Alternatively there may also be no release branches if
-  the team is [releasing from Trunk](/release-from-trunk/).
+- Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from trunk on
+  a just-in-time basis, and are 'hardened' before a release, without that being a team activity. Alternatively there 
+  may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a roll 
+  forward strategy for bug fixes.
 
 - Teams should become adept with the related [branch by abstraction](/branch-by-abstraction/) technique for longer
   to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on
