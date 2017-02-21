@@ -60,7 +60,8 @@ code portals can prevent people pulling changes from non-trunk branches.
 Developers take stories or tasks from the backlog, implement them with tests, and push them through code review and quality checks
 into the shared trunk. They don't slow down that activity as they get closer to a release date. At least the majority do not. A very
 small subset of the development team may focus on the release candidates being made from the release branch (if that 
-branch exists at all), and towards fixes in trunk that will be cherry picked into that branch. Most of the team though - 
-every day is the same, and proximity to release doesn't slow down the rate at which chanhes are being pushed into the
-trunk. Teams practicing Trunk Based Development focus on protecting the majority of developers from he distraction of
-release preparation. If that protection is missing, something needs fine tuning, and the branching model could be it.
+branch exists at all), and towards fixes in trunk that will be cherry picked into that branch. For most of the team though, 
+every day is the same, and proximity to a release does not slow down the rate at which changes are being pushed into the
+trunk. There is certainly no "code freeze" with Trunk Based Development, as team leadership focuses on protecting the 
+majority of developers from he distraction of release preparation. If that protection is missing, something needs 
+fine-tuning, and the branching model could be it.
