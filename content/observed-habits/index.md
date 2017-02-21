@@ -88,3 +88,16 @@ developers to contribute changes to sections of an application or service that t
 with. Allow does come with responsibilities and checks. The former is to standards, and the checks are by the CI server, 
 and by humans who should honor to do a speedy code review. That last, for the highest performing teams, means as soon
 as the proposed commit is ready.
+
+## Always Release Ready
+
+TODO
+
+## This vertical slices
+
+Where possible stories or tasks that has been pulled from the backlog should be achievable by a developer or pair of
+developers in a short period of time, and in a small amount of commits. They should also transcend all the apparent 
+tiers of the stack, and not have to jump between developers with specialized knowledge in order to be able to 
+completed. The Agile industry donates the INVEST{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} principle 
+as well as "Thin Vertical Slices"{{< ext url="http://www.scruminc.com/wp-content/uploads/2015/06/User-Stories-2.0.pdf" >}} for this purpose, and that 
+are great enables of high throughput commits to the trunk, and always being release ready.
