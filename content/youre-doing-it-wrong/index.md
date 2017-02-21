@@ -54,3 +54,13 @@ There is a risk too, that a developer may choose to pull changes to their workst
 branch** rather from trunk. They may thing that the code review for that short-lived feature branch is going to take 
 too long, or they need the changes before they are ready. Unfortunately there is no way that the current generation of
 code portals can prevent people pulling changes from non-trunk branches.
+
+## Every day not being the same for developers.
+
+Developers take stories or tasks from the backlog, implement them with tests, and push them through code review and quality checks
+into the shared trunk. They don't slow down that activity as they get closer to a release date. At least the majority do not. A very
+small subset of the development team may focus on the release candidates being made from the release branch (if that 
+branch exists at all), and towards fixes in trunk that will be cherry picked into that branch. Most of the team though - 
+every day is the same, and proximity to release doesn't slow down the rate at which chanhes are being pushed into the
+trunk. Teams practicing Trunk Based Development focus on protecting the majority of developers from he distraction of
+release preparation. If that protection is missing, something needs fine tuning, and the branching model could be it.
