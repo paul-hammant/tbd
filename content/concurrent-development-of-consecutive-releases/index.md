@@ -46,9 +46,9 @@ to reorder releases, and only have a small impact on the throughput of the devel
 
 ### Case study
 
-In a real-life case study for an airline, a partner said late in development that they could not in fact go live in a 
-month's time. Their side of the integration was not going to be ready. The airline was code complete, but now had to 
-reorder releases. Development team management feared some downtime while the mess was sorted out. The team in question
+In a real-life case study for an airline in 2012, late in development for the planned release a partner said that they could 
+not in fact meet that date. Their side of the integration was not going to be ready. The airline was code complete, but now had to 
+reorder releases. The development team's management feared some downtime while the mess was sorted out. The team in question
 was able to spin up a new CI pipeline, with the flags/toggles flipped to show the new permutation of features. 
 The new CI pipeline confirmed what they had already seen on the command line build, that there were failures in the 
 automated tests (and something in a page did not quite look right anyway). A couple of quick fixes later, and the development 
