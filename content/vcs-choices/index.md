@@ -14,12 +14,12 @@ of the D-Distributed aspect of the DVCS of Git (in that many divergent versions 
 long periods of time), most enterprises are still going to count a single repository as the principal one, and within 
 that a single branch as the long-term "most valuable" code line.
 
-It is perfectly possible to do Trunk Based Development in a Git repository. By convention 'master' is the long term 
+It is perfectly possible to do Trunk-Based Development in a Git repository. By convention 'master' is the long term 
 most valuable branch, and once cloned to your local workstation, the repository gains a nickname of 'origin'.
 
 ### Forks
 
-An effective Trunk Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
+An effective Trunk-Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
 (and of master within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
 consumed back into origin:master. Other branching models use the same Pull-Request process for 
 code-reviews too - it is the normal way of working with Git since GitHub rolled out the feature.
@@ -145,7 +145,7 @@ Subversion, like Perforce, has read and write permissions down to the directory 
 Interestingly there is a "Subversion vs Git" website{{< ext url="https://svnvsgit.com/" >}} which attempts to counter
 some widely held community beliefs about Subversion and how it stacks up to Git.
 
-Note also that the Subversion team themselves, do not do trunk based development, despite Subversion have default root directories 
+Note also that the Subversion team themselves, do not do Trunk-Based Development, despite Subversion have default root directories 
 of 'trunk', 'tags' and 'branches' for newly-created repositories.
 
 ### No Code Review
@@ -186,7 +186,7 @@ of the ways of working of that technology. It has grown to be a multifaceted ser
 one-stop shop for the whole enterprise's needs for application lifecycle management.  More recently with TFS, 
 Microsoft encouraged a use of Git within it, rather than then proprietary VCS they initially developed.
 
-TFS is perfectly compatible with a Trunk Based Development usage.
+TFS is perfectly compatible with a Trunk-Based Development usage.
 
 Note: Microsoft are doating back to the Git community with a Git Virtual File System, which allows some monorepo 
 usage for Git{{< ext url="https://github.com/Microsoft/GVFS" >}}.
@@ -195,7 +195,7 @@ usage for Git{{< ext url="https://github.com/Microsoft/GVFS" >}}.
 
 [Website](https://www.plasticscm.com/)
 
-PlasticSCM is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk Based Development and quite 
+PlasticSCM is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk-Based Development and quite 
 self-contained (has integrated code review, etc). Plastic is very good with bigger binaries and comes with an 
 intuitive "Branch Explorer" to see the evolution of branches, view diffs, execute merges, etc. For sizes of individual
 repos, multiple terrabytes is not unheard of. A least for some of the ganes-industry customers.

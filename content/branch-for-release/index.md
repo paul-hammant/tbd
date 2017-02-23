@@ -10,7 +10,7 @@ weight: 55
 {{< /quote >}}
 
 If a team is pushing production releases monthly, then they are also going to have to push bug-fix releases 
-between planned releases. To facilitate that, it is common for Trunk Based Development Teams to make a release
+between planned releases. To facilitate that, it is common for Trunk-Based Development Teams to make a release
 branch on a just in time basis - say a few days before the release. That becomes a stable place, given the developers
 are still streaming their commits into the trunk at full speed. 
 
@@ -38,7 +38,7 @@ That red dot is an accidental build break that was fixed (somehow) soon after.
 
 ## Fix production bugs on Trunk
 
-The best practice for Trunk Based Development teams is to reproduce the bug on the trunk, fix it there with a test, 
+The best practice for Trunk-Based Development teams is to reproduce the bug on the trunk, fix it there with a test, 
 watch that be verified by the CI server, then cherry-pick that to the release branch and wait for a CI server 
 focusing on the release branch to verify it there too. Yes, the CI pipeline that guards the trunk is going to
 be duplicated to guard active release branches too.
@@ -61,7 +61,7 @@ of here in the case of bugs after "release from tag", or even changes for point 
 
 ### Directionality of cherry-pick
 
-This one is controversial even within teams practicing everything else about Trunk Based Development: you should not 
+This one is controversial even within teams practicing everything else about Trunk-Based Development: you should not 
 fix bugs on the release in the expectation of cherry-picking them back to the trunk, in case you forget to do that.
 Forgetting means a regression in production some weeks later (and someone getting fired). It can happen if things
 are being fixed in the night by a tired develop who wants to get back to bed.

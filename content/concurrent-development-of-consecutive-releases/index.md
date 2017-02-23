@@ -28,9 +28,9 @@ what had merged already. Different branching models have different merge impacts
 of keenness for the act of merging. That in itself is disruptive to the business, as they fear and probably witness 
 additional delays because of the retooling and new found nerves.
 
-If your team has institutionalized Trunk Based Development, [Feature Flags](/feature-flags/) and (to a lesser degree) 
+If your team has institutionalized Trunk-Based Development, [Feature Flags](/feature-flags/) and (to a lesser degree) 
 [Branch by Abstraction](/branch-by-abstraction/), it is in a perfect position to reorder releases, and only have a small
-impact on development team throughput. Choosing Trunk Based Development, Feature Flags and branch by Abstraction could be said
+impact on development team throughput. Choosing Trunk-Based Development, Feature Flags and branch by Abstraction could be said
 to be a **hedging strategy** against the costs of larger scheduling changes.
 
 {{< warning title="Consecutive development of consecutive releases is by far superior!" >}}
@@ -88,7 +88,7 @@ only pick up new release work as the previous one has been pushed into productio
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk Based Development in the Enterprise - Its Relevance and Economics</a></td>
+            <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
         </tr>
     </table>
 </div>

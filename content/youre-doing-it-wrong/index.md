@@ -8,9 +8,9 @@ weight: 91
 
 Say you are using Subversion, and you accepted its default directory design, when you made a new repository. That will
 give you 'trunk', 'tags' and 'branches' as directory names. The mere fact that you have a branch called trunk does not
-mean you are doing trunk based development. "We merge branches back to trunk often" can be heard a lot in the industry,
+mean you are doing Trunk-Based Development. "We merge branches back to trunk often" can be heard a lot in the industry,
 and if you are grouping multiple developers on those branches of they not deleted after a couple of days, then it is 
-not the trunk based development branching model.
+not the Trunk-Based Development branching model.
 
 ## Direction of Cherry Pick on release branches
 
@@ -62,6 +62,6 @@ into the shared trunk. They don't slow down that activity as they get closer to 
 small subset of the development team may focus on the release candidates being made from the release branch (if that 
 branch exists at all), and towards fixes in trunk that will be cherry picked into that branch. For most of the team though, 
 every day is the same, and proximity to a release does not slow down the rate at which changes are being pushed into the
-trunk. There is certainly no "code freeze" with Trunk Based Development, as team leadership focuses on protecting the 
+trunk. There is certainly no "code freeze" with Trunk-Based Development, as team leadership focuses on protecting the 
 majority of developers from he distraction of release preparation. If that protection is missing, something needs 
 fine-tuning, and the branching model could be it.

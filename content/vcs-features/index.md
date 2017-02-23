@@ -6,7 +6,7 @@ weight: 31
 
 **Desirable VCS features, that is**
 
-To great degree Trunk Based Development possible on any Version Control System (VCS) that does atomic commits (spoiler: all do 
+To great degree Trunk-Based Development possible on any Version Control System (VCS) that does atomic commits (spoiler: all do 
 that came after CVS).  Productivity and governance is what divides them though.
 
 ## Productivity
@@ -72,7 +72,7 @@ have **not** changed between the remote master repo and local working copy. It s
 
 Developers (hopefully in pairs) are going to have to become skilled in arbitrating over merges for the commits they 
 are trying to promote to the remote trunk, as well as the changes they are updating from that it in the case that they 
-have work in progress in their working-copy. Trunk Based Development teams, you see, are merging more often. Albeit 
+have work in progress in their working-copy. Trunk-Based Development teams, you see, are merging more often. Albeit 
 those are smaller merges, and they are implicitly to working copy.
 
 Perforce's three-way merge tool (p4-merge) is good enough on its own to be attractive to teams using other VCS 
@@ -119,7 +119,7 @@ All VCS usages need users accounts to be able to accept changes back, even if th
 to be able to read. In the enterprise user accounts will be required to be able to read too.
 
 The larger the enterprise the more likely it will be that they have permissions carved up in more file grained ways.
-Fpor example "can commit to the trunk, but cannot create release branches" will be common for Trunk Based Development
+Fpor example "can commit to the trunk, but cannot create release branches" will be common for Trunk-Based Development
 teams that make release branches.  Not all VCS technologies support that. Git for example does not, but some of the 
 portal experiences around it, add the feature. In reality though you cannot stop people from making branches in a DVCS,
 but you can prevent them from pushing them to the shared repository.

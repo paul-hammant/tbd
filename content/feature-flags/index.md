@@ -183,7 +183,7 @@ WITH at least nightly integration across all feature-branches [sigh].
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk Based Development in the Enterprise - Its Relevance and Economics</a></td>
+            <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
         </tr>
     </table>
     <br/>

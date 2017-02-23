@@ -8,7 +8,7 @@ weight: 131
 
 <ul noprint ><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.pdf">English PDF</a><br></li><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.mobi">English MOBI</a> - for Amazon's Kindle<br></li><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.epub">English EPUB</a> - for iBooks, Google Books, Nook, and others</li></ul>
 
-## Books promoting Trunk Based Development
+## Books promoting Trunk-Based Development
 
 ### Continuous Integration (June 29, 2007)
 
@@ -88,7 +88,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
-## Reports promoting Trunk Based Development
+## Reports promoting Trunk-Based Development
 
 ### More Engineering, Less Dogma (Oct 18, 2013)
 
@@ -132,7 +132,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
         <span style="font-size: 120%">&ldquo;</span>It was gratifying, though unsurprising, to find that deployment pain was
         predicted by whether the key continuous delivery practices had been
         implemented: comprehensive test and deployment automation, the
-        use of continuous integration including trunk-based development, and
+        use of continuous integration including Trunk-Based Development, and
         version control of everything required to reproduce production environments<span style="font-size: 120%">&rdquo;</span>
         <br/>by Puppet Labs
         <br/>

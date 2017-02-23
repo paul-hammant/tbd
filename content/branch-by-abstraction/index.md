@@ -126,7 +126,7 @@ unknown when the first implementation was. Before the adoption of BbA, teams **h
 big lengthy disruptive change, or do it with an incredible amount of choreography: "hey everyone, take a week of 
 vacation now".
  
-With the Branch by Abstraction technique, Trunk Based Development was less likely to be temporarily or permanently 
+With the Branch by Abstraction technique, Trunk-Based Development was less likely to be temporarily or permanently 
 abandoned for a multi-branch model.
  
 # References elsewhere

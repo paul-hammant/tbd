@@ -4,7 +4,7 @@ title: Continuous Integration (CI)
 weight: 61
 ---
 
-{{< quote title="individuals practice Trunk Based Development, and teams practice CI" >}}
+{{< quote title="individuals practice Trunk-Based Development, and teams practice CI" >}}
 &mdash; *Agile* Steve Smith
 {{< /quote >}}
 
@@ -27,8 +27,8 @@ developers experiencing and enjoying the methodology - including the continuous 
 that project was Smalltalk and the single integration point was a Smalltalk image 
 (a technology more advanced than a "mere" source-control systems that rule today).
 
-Thus, the intention of CI, as defined, was pretty much exactly the same as Trunk Based Development, that emerged 
-elsewhere. Trunk Based Development did not say anything about Continuous Integration daemons directly or indirectly, 
+Thus, the intention of CI, as defined, was pretty much exactly the same as Trunk-Based Development, that emerged 
+elsewhere. Trunk-Based Development did not say anything about Continuous Integration daemons directly or indirectly, 
 but there is an overlap today - the safety net around a mere branching model (and a bunch of techniques) is greatly 
 valued.
 
@@ -179,7 +179,7 @@ information on the high commit rate CI stuff. Note too that they do not have a t
 ## Industry CI daemon confusion
 
 ThoughtWorks commissioned a survey - "No One Agrees How to Define CI or CD"{{< ext url="https://blog.snap-ci.com/blog/2016/07/26/continuous-delivery-integration-devops-research" >}}.   
-That the hypothesis of Continuous Integration being thought of as compatible with branching models other than Trunk Based Development
+That the hypothesis of Continuous Integration being thought of as compatible with branching models other than Trunk-Based Development
 was, unfortunately, shown to be true. Their chief scientist, Martin Fowler, writes about the general effect in his "Semantic Diffusion"
 article{{< ext url="https://martinfowler.com/bliki/SemanticDiffusion.html" >}}. 
 
@@ -189,10 +189,10 @@ or all of those branches: "Continuous Integration Certification"
 {{< ext url="https://martinfowler.com/bliki/ContinuousIntegrationCertification.html" >}} and within that *a great
 coin* "Daemonic Continuous Integration" for this effect.
 
-{{< note title="This site's use of CI and Trunk Based Development" >}} 
-Given other popular branching models (that are not Trunk Based Development) **also** benefit from CI servers watching 
+{{< note title="This site's use of CI and Trunk-Based Development" >}} 
+Given other popular branching models (that are not Trunk-Based Development) **also** benefit from CI servers watching 
 for and verifying commits, this site is going to refer to the commit to a **enforced single shared source-control branch* 
-practice as Trunk Based Development.
+practice as Trunk-Based Development.
 {{< /note >}}
 
 There are many CI technologies and services available for teams to use. Some are free, and some are open source. 

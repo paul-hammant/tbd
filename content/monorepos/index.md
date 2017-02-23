@@ -4,7 +4,7 @@ title: Monorepos
 weight: 111
 ---
 
-A Monorepo, is a specific trunk based development implementation where the organization in 
+A Monorepo, is a specific Trunk-Based Development implementation where the organization in 
 question puts its source for all applications/services/libraries/frameworks into one trunk, and forces developers 
 to commit together in that trunk - atomically.
 
@@ -241,7 +241,7 @@ promoted the one repo per microservice for a while now.
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="http://paulhammant.com/2013/04/09/scaling-trunk-based-development/">Scaling Trunk Based Development</a></td>
+            <td valign="top"><a href="http://paulhammant.com/2013/04/09/scaling-trunk-based-development/">Scaling Trunk-Based Development</a></td>
         </tr>
     </table>
     <br/>
@@ -256,7 +256,7 @@ promoted the one repo per microservice for a while now.
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/">Google's Scaled Trunk Based Development</a></td>
+            <td valign="top"><a href="http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/">Google's Scaled Trunk-Based Development</a></td>
         </tr>
     </table>
     <br/>
@@ -286,7 +286,7 @@ promoted the one repo per microservice for a while now.
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/">Google's vs Facebook's Trunk Based Development</a></td>
+            <td valign="top"><a href="http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/">Google's vs Facebook's Trunk-Based Development</a></td>
         </tr>
     </table>
     <br/>
@@ -316,7 +316,7 @@ promoted the one repo per microservice for a while now.
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk Based Development in the Enterprise - Its Relevance and Economics</a></td>
+            <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
         </tr>
     </table>
     <br/>

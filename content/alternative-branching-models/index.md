@@ -26,7 +26,7 @@ enable.
 
 ### Github flow
 
-This is sooooo close to PR-centric Trunk Based Development. Why? Because, it is a branching model that has individual
+This is sooooo close to PR-centric Trunk-Based Development. Why? Because, it is a branching model that has individual
 developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than
 individuals.
 
@@ -36,7 +36,7 @@ The crucial difference is where the release is performed from. Whereas for their
 
 As the Github documentation portrays, review comments are part of the process. Of course they are, they are the speech
 bubbles in timeline above followed by another commit (presumably 132 columns end of line versus 80 prevailed). How
-Trunk Based Development modifies the Github Flow model:
+Trunk-Based Development modifies the Github Flow model:
 
 ![](../5-min-overview/trunk_pr.png)
 
@@ -56,7 +56,7 @@ See the Github Flow landing page for more{{< ext url="https://guides.github.com/
 ### Mainline
 
 Mainline is a branching model that was promoted for ClearCase implementations. It is the principal branching
-model that Trunk Based Development opposes. Mainline is a branch that will last forever&#10033;. Off that, branches are formed
+model that Trunk-Based Development opposes. Mainline is a branch that will last forever&#10033;. Off that, branches are formed
 for teams to do development work on. When that work is complete, a release may happen from that branch, and there is a
 **big** merge down to the mainline. On the way to the release, the branch may be frozen.
 
@@ -87,7 +87,7 @@ branch diagram, but you should be able to guess what the worst case branching/me
 All of these compromises versus the planned "consecutive development of consecutive releases". In many cases it is worse,
 particular when the numbers of developers goes up.
 
-One key thing to note, versus Trunk Based Development, teams doing the Mainline branching model, almost never do cherry
+One key thing to note, versus Trunk-Based Development, teams doing the Mainline branching model, almost never do cherry
 pick merges for any reason. Instead they're doing a "merge everything which is not merged already" kind of merge.
 Minimalistically the VCS they are using should have "merge point tracking". At the high end, that should include
 "record only" merges, and normal merges even after that.
@@ -176,7 +176,7 @@ to see green instead of red for this CI server enthusiasm
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="http://paulhammant.com/2013/04/05/what-is-trunk-based-development/">What is Trunk Based Development?</a></td>
+            <td valign="top"><a href="http://paulhammant.com/2013/04/05/what-is-trunk-based-development/">What is Trunk-Based Development?</a></td>
         </tr>
     </table>
     <br/>

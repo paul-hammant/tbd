@@ -4,7 +4,7 @@ title: Game Changers
 weight: 121
 ---
 
-Since the early 80's a number of things have pushed best practices **towards** Trunk Based Development, or **away** from it. 
+Since the early 80's a number of things have pushed best practices **towards** Trunk-Based Development, or **away** from it. 
 
 The language in use to describe such things has changed over time. Software Configuration Management (SCM) is used less 
 today than Version Control Systems (VCS) is. A simpler still term - "Source Control" - seems to be used more recently, 
@@ -33,7 +33,7 @@ Temporary fixes, Distributed development and customer modifications, Parallel de
 Two of those, Tichy suggests, are temporary branches and would come back to the trunk at the earliest opportunity. 
 
 Superficially, RCS allowed multi-branch parallel development, but some teams were very careful and stuck
-to a 'slender', or Trunk Based Development mode of use.
+to a 'slender', or Trunk-Based Development mode of use.
 
 Note: Over time all version control systems would adopt this branch/merge language.
 
@@ -44,7 +44,7 @@ Note: Over time all version control systems would adopt this branch/merge langua
 A handful of scripts created in 1986 by Dick Grune, were fashioned into an initial release of CVS{{< ext url="https://en.wikipedia.org/wiki/Concurrent_Versions_System" >}}
 in 1990. For the open source community, CVS was it until Subversion came along year later. The adoption of CVS in the 
 young open source community spurred its adoption in the enterprise too. While many branching models were possible, 
-merging was painful and Trunk Based Development was the sensible choice.
+merging was painful and Trunk-Based Development was the sensible choice.
 
 ## Microsoft Secrets book (1995)
 
@@ -106,14 +106,14 @@ in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}
 
 Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
 open to any branching model and implementing teams chose differently. In the end, though, people's newfound willingness 
-to experiment with multiple parallel active branches won out, and we had some dark years generally for Trunk Based Development 
+to experiment with multiple parallel active branches won out, and we had some dark years generally for Trunk-Based Development 
 ahead.
 
 Microsoft installed a custom build of Perforce called "Source Depot". It took over from SLM/Slime (mentioned above).
-We're not sure, but Microsoft may have embraced the possibility of multiple active branches (rather than Trunk Based Development) 
+We're not sure, but Microsoft may have embraced the possibility of multiple active branches (rather than Trunk-Based Development) 
 within their SourceDepot (SD) install from that moment.
 
-By contrast, Google installed Perforce (see below) and embraced a Trunk Based Development model with it from the outset. 
+By contrast, Google installed Perforce (see below) and embraced a Trunk-Based Development model with it from the outset. 
 They rose to every scaling challenge with extra tooling around it, including more than a few actual inventions of 
 technology and technique (see below).
 
@@ -138,7 +138,7 @@ a reserved workstation, that a developer pair would sidle up at the appropriate 
 contribution was integrateable, and therefore good for teammates to depend on at that moment. That last notification
 was often oral at that time "build passes, gang".
 
-He calls out a requirement for "fast integration/build/test cycles". This is key. In fact, every pro Trunk Based Development 
+He calls out a requirement for "fast integration/build/test cycles". This is key. In fact, every pro Trunk-Based Development 
 game changer listed in this page was facilitated by faster builds generally (versus a predecessor technique for the team
 in question). And, no, faster did not mean delete or comment out automated test execution in the build. Faster meant reduce 
 the elapsed time to "a few minutes" (Kent again).
@@ -238,7 +238,7 @@ Generally, Git made it much easier to consider multiple branches as a viable tea
 
 ![](to_tbd3_but_secret.png)
 
-Note: Google were practicing Trunk Based Development since the beginning - Craig Silverstein (the first hire) remembers 
+Note: Google were practicing Trunk-Based Development since the beginning - Craig Silverstein (the first hire) remembers 
 setting it up that way. Much of these were secret to Google until much later, including their recommendations for a 
 70:20:10 ratio for small:medium:large tests, where 'small' were sub-1ms unit tests (no threading, no I/O), 'medium' 
 were unit tests that didn't qualify for *small* (and probably did TCP/IP headlessly to something), with 'large' being 
@@ -417,7 +417,7 @@ to describe the multi-year
  6 weeks required for manual regression testing. The engineers spent 25% of their time working on product support i.e.
  merging features between branches and only 5% of their time on new features.
 
- For the next couple of years, HP committed to a huge investment in Trunk Based Development and
+ For the next couple of years, HP committed to a huge investment in Trunk-Based Development and
  Continuous Integration. All product variants were rearchitected as a single product on a Git master, per-variant
  features extracted into XML config files, all engineers worldwide were given the same virtual machine for development,
  and a huge multi-tier continuous build process was fully automated in-house. The results were outstanding, with build
@@ -440,7 +440,7 @@ on techniques like Branch by Abstraction easier, or reduce the need for it, if m
 (according to source-control) for something in 2012 that would have been a definite clash.
 
 Other source-control tools are not doing semantic diff/merge yet (2017), but they should be. Semantic merge is
-just as useful for trunk based development and multi-branch models. It means that there are less likely to be clash 
+just as useful for Trunk-Based Development and multi-branch models. It means that there are less likely to be clash 
 situations for commits a developer wants to do. Maybe that last vision isn't quite complete yet, but there's a direction
  to go in now.
 
@@ -479,7 +479,7 @@ that the notification is within seconds of pushing the commit to the shared VCS.
 commits, we would wait a little while to allow checkins to finish (particularly for the non-atomic CVS), and humans would 
 have to pick apart who actually broke the build.
 
-Surely non-Trunk Based Development teams would turn on CI for every branch and soon after plan their migration to Trunk 
+Surely non-Trunk-Based Development teams would turn on CI for every branch and soon after plan their migration to Trunk 
 Based Development.
 
 ## Google revealing their Monorepo Trunk (2016)
@@ -558,7 +558,7 @@ the motivators.
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/">The origins of Trunk Based Development</a></td>
+            <td valign="top"><a href="http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/">The origins of Trunk-Based Development</a></td>
         </tr>
     </table>
 </div>

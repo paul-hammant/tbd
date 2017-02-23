@@ -6,7 +6,7 @@ weight: 81
 
 ## No Code Freeze
 
-Developers living in a Trunk Based Development reality, mostly do not experience variance in their days or weeks on the 
+Developers living in a Trunk-Based Development reality, mostly do not experience variance in their days or weeks on the 
 trunk. In particular, there is no "we're close to a release so let's freeze code", and generally there is no indication 
 of a slowdown in proximity to a release.  Sure, a couple of developers out a team might be assigned to bug-fixing closer
 to the release but everyone else is going to work at full speed. 
@@ -22,18 +22,18 @@ This is a reinforcement of the No Code Freeze suggestion above.
 
 ## Quick Reviews
 
-Teams doing trunk based development, know that their commits/pushes will be scrutinized by others, as soon
+Teams doing Trunk-Based Development, know that their commits/pushes will be scrutinized by others, as soon
 as they have landed on the shared trunk. They are keen on bring that forward, not delaying it, so they may prefer to 
 pair-program on code changes. Or they may ask colleagues for a code review at the time the change is submitted to be 
 merged into the trunk.
 
 ## Chasing HEAD
 
-Trunk based development teams update/pull/sync from the shared trunk often. Many times a day in fact. 
+Trunk-Based Development teams update/pull/sync from the shared trunk often. Many times a day in fact. 
 
 ## Running the build locally
 
-Developers practicing Trunk Based Development run the build before a commit/push in order to not break the build. 
+Developers practicing Trunk-Based Development run the build before a commit/push in order to not break the build. 
 This one practice, for very small teams, allows them to not setup a CI server until later. If they can't push their 
 commits to the shared trunk because someone else beat them to it, they have to do another update/sync/pull then
 another build then the push of the revised commit(s). "It worked on my machine" says the developer that does not 
@@ -63,7 +63,7 @@ they are developing. They can:
 Shared nothing requires significant discipline to achieve. It generally means that no TCP-IP leaves the developers 
 box, and being able to prove that by running those operations while disconnected from the network.  The 
 implementing of the wire mocking (service virtualization) of dependent tiers outside the team, is a given. The highest 
-accomplished Trunk Based Development teams employ mocking of tiers within the same application, in order to make 
+accomplished Trunk-Based Development teams employ mocking of tiers within the same application, in order to make 
 tests fast and stable. Technologies such as Mountebank{{< ext url="http://www.mbtest.org" >}} make 
 programming working with wire mocking easy. Tiers refers to a layer-cake view of an applications construction, of course.
 
@@ -91,7 +91,7 @@ as the proposed commit is ready.
 
 ## Always Release Ready
 
-Not only do developers practicing Trunk Based Development not break the build with any commit, they also sign up to
+Not only do developers practicing Trunk-Based Development not break the build with any commit, they also sign up to
 being able to go live at short notice. For example one hour, if the CIO visits and says it is going to happen. That
 means there is a bunch of automated tests that come with the build.
 

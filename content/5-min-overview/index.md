@@ -22,7 +22,7 @@ that might:
 * not show that work was duplicated until it is merged
 * not show problems of incompatibility/undesirability that does not break the build
 
-Trunk Based Development is a branching model that reduces the distance to the max. 
+Trunk-Based Development is a branching model that reduces the distance to the max. 
  
 ## What it is
 
@@ -33,12 +33,12 @@ for development. It may be called 'master'. That hints at the fact that the bran
 called 'trunk' at all.
 {{< /note >}}
 
-There are many deciding factors, before a development team settles on Trunk Based Development, but here is a short overview 
+There are many deciding factors, before a development team settles on Trunk-Based Development, but here is a short overview 
 of the practices if they do:
 
 ### Releasability of work in progress
 
-Trunk Based Development will always be **release ready**
+Trunk-Based Development will always be **release ready**
 
 If an executive manager visited the development team and commanded "Competitor X has launched feature Y, go 
 live now with what we have", the worst response would be "give us one hour". The development team might have been very 
@@ -48,7 +48,7 @@ the build, and always be ready for that CIO-commanded disruption to plans.
 
 #### Where releases happen
 
-A key facilitating rule here is that Trunk Based Development teams exclusively **either** release directly from the 
+A key facilitating rule here is that Trunk-Based Development teams exclusively **either** release directly from the 
 trunk - see [release from trunk](/release-from-trunk/), **or** they make a branch from the trunk for the specifically for 
 the actually releasing. See [Branch for release](/branch-for-release/).
 Teams with a higher release cadence do the former, and those with a lower release cadence to the latter. 
@@ -148,7 +148,7 @@ Problematic 'distance' has a few tangible examples:
         </tr>
         <tr>
             <td>Link:</td>
-            <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development">Organization Pattern: Trunk Based Development</a></td>
+            <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development">Organization Pattern: Trunk-Based Development</a></td>
         </tr>
     </table>
     <br/>

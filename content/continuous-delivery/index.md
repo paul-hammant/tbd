@@ -14,11 +14,11 @@ become:
 The [bestselling book of the same name](/publications/index.html#continuous-delivery-july-27-2010) by Jez Humble and Dave Farley, 
 details the 'marching orders' for many companies, where there is whole dev-team improvement agenda.
 
-{{< warning title="A Layer above Trunk Based Development" >}}
-Continuous Delivery is a broad multifaceted subject, that sits on top of Trunk Based Development as a practice. This
+{{< warning title="A Layer above Trunk-Based Development" >}}
+Continuous Delivery is a broad multifaceted subject, that sits on top of Trunk-Based Development as a practice. This
 website, and this page in particular is not going to give it justice. Head on over to 
 `ContinuousDelivery.com`{{< ext url="https://continuousdelivery.com" >}} and understand too that "lean experiments" are the part 
-of CD and not so much the concern of Trunk Based Development.
+of CD and not so much the concern of Trunk-Based Development.
 {{< /warning >}}
 
 ## Continuous Deployment

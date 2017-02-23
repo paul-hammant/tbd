@@ -4,14 +4,14 @@ title: Context
 weight: 5
 ---
 
-A development team wanting to go ahead with Trunk Based Development have pre-requisite achievements. Once the team has 
+A development team wanting to go ahead with Trunk-Based Development have pre-requisite achievements. Once the team has 
 done a few commits in the correct style, other things are now facilitated. We can show this as a layer cake:
 
 ![](layer_cake.png)
 
 DevOps is encompassing too. At the very least, the expansion of development best practices into operations heartlands.
 
-## Trunk Based Development pre-requisites
+## Trunk-Based Development pre-requisites
 
 (layers below it)
 
@@ -22,7 +22,7 @@ of the expected production environment, and it is OK for that to be non-function
 
 In the modern DevOps era, this probably means Infrastructure as Code. 
 
-## Trunk Based Development facilitates
+## Trunk-Based Development facilitates
 
 (layers above it)
 
@@ -32,8 +32,8 @@ In the modern DevOps era, this probably means Infrastructure as Code.
 mid-nineties in its modern incarnation (integrating to a shared code line frequently, and 
 testing that).
 
-Importantly, the reader should understand that there is a large overlap between Trunk Based Development and 
-Continuous Integration, as defined by its definers and documenters. Whereas Trunk Based Development focuses on a
+Importantly, the reader should understand that there is a large overlap between Trunk-Based Development and 
+Continuous Integration, as defined by its definers and documenters. Whereas Trunk-Based Development focuses on a
 pure source-control workflow and an individual contributor's obligations to that, Continuous Integration focuses 
 equally on that and the need to have machines issue early warnings breakages and incompatibilities.
 
@@ -50,7 +50,7 @@ development and delivery operation. The experiments should draw of the field of 
 impact of each experiment can be measured against predictions and decisions made approopriately following it.
 
 Lean Experiments can happen in any development team on any project but work **best** on foundations that 
-are solid. Specifically, the solid foundations of Trunk Based Development, CI and CD. 
+are solid. Specifically, the solid foundations of Trunk-Based Development, CI and CD. 
 
 This site does not touch on Lean Experiments beyond this section, but the reader should strive to understand that field
 of science when the lower layers of the stylized cake are solid.
