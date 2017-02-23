@@ -4,34 +4,58 @@ title: Concurrent development of consecutive releases
 weight: 75
 ---
 
+## Concurrent Development?
+
 Your company wants a stream of major functionality to arrive in the application you are pushing live at a regular 
 cadence. Because you are good Extreme Programmers, you know that consecutive development of consecutive releases
 is best. However, the effort and length of time needed to complete each of the major pieces of functionality is
 large enough to require different project teams cooperating towards that plan. Some of those teams will be within
-the same codebase. Some may dependent building services that the application will call. Not everything is equal effort
-it seems, yet the business wants a specific rollout, including dates and can plan that even 18 months ahead. They are
-so specific because there is an impact on the user community (staff, clients, customers or members of the public).
+the same codebase. Some may dependent building services that the application will invoke over the wire. Not everything 
+is equal effort it seems, yet the business wants a specific rollout, including dates and can plan that even eighteen 
+months ahead. They are very specific because there is an impact on the user community (staff, clients, customers or 
+members of the public). Driving departments may include training, marketing, finance.
 
-What you've got is the perfect setup for disaster born from the random bigger pieces bad news that can happen in 
-software development. 
+## Oops?
 
-One thing was underestimated by 50% and that is determined later rather than sooner. 
+What you have got is the perfect setup for disaster born from the random bad news events. Things that can and do 
+happen in software development. 
+
+Or perhaps one thing was underestimated by 50% and that is realized later rather than sooner. 
 Should all of the following releases slip too, assuming the company did not attempt to throw bodies at it in an attempt 
-to solve it?
+to solve it? We all know of Fred Brook's Mythical Man-Month{{< ext url="https://books.google.com/books/about/The_Mythical_Man_Month_Anniversary_Editi.html?id=Yq35BY5Fk3gC" >}}
+and Edward Yourdon's Death March{{< ext url="https://books.google.com/books/about/Death_March.html?id=FdAZUX9H_gAC" >}}.
+
+## Reorder Releases?
 
 One compelling answer is to change the order of releases. To the business, that could be a relief even if it requires
 re-planning and problems around marketing/education given the impacted staff, clients, customers or members of the 
 public.
+
+## Un-merge?
 
 The trouble is that the development teams might have to face a selective un-merge or commenting-out frenzy to support that, depending on
 what had merged already. Different branching models have different merge impacts and are either early or late in terms
 of keenness for the act of merging. That in itself is disruptive to the business, as they fear and probably witness 
 additional delays because of the retooling and new found nerves.
 
-If your team has institutionalized Trunk-Based Development, [Feature Flags](/feature-flags/) and (to a lesser degree) 
-[Branch by Abstraction](/branch-by-abstraction/), it is in a perfect position to reorder releases, and only have a small
-impact on development team throughput. Choosing Trunk-Based Development, Feature Flags and branch by Abstraction could be said
-to be a **hedging strategy** against the costs of larger scheduling changes.
+## Flags, abstractions and pipelines
+
+If your team has institutionalized Trunk-Based Development, [Feature Flags](/feature-flags/) pluginable components based
+on abstractions (not a world apart from [Branch by Abstraction](/branch-by-abstraction/)), it is in a perfect position 
+to reorder releases, and only have a small impact on the throughput of the development team. 
+
+### Case study
+
+In a real-life case study for an airline, a partner said late in development that they could not in fact go live in a 
+month's time. Their side of the integration was not going to be ready. The airline was code complete, but now had to 
+reorder releases. Development team management feared some downtime while the mess was sorted out. The team in question
+was able to spin up a new CI pipeline, with the flags/toggles flipped to show the new permutation of features. 
+The new CI pipeline confirmed what they had already seen on the command line build, that there were failures in the 
+automated tests (and something in a page did not quite look right anyway). A couple of quick fixes later, and the development 
+team assured the airline's management that the the releases could reasonably happen in any order.
+
+Choosing Trunk-Based Development, Feature Flags and Branch by Abstraction could be said to be a **hedging strategy** 
+against the costs of larger scheduling changes.
 
 {{< warning title="Consecutive development of consecutive releases is by far superior!" >}}
 Every high throughput Extreme Programming team will tell you that finishing and shipping a release before starting work
