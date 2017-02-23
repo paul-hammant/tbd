@@ -6,6 +6,8 @@ weight: 21
 
 ## Release cadence
 
+There are many factors that put pressure on the team to lengthen the interval between releases. Here are some.
+
 ### Iteration length
 
 Different Agile teams focus on different iteration lengths. Some teams work at three-week iterations, some two, 
@@ -19,42 +21,49 @@ get all the way to Continuous Delivery (or Continuous Deployment).
 ### Waterfall
 
 This one is easy. If you are doing waterfall, you are not close at all to the "do not break the build" mantra required
-to do Trunk Based Development. Consider a short-iteration Agile methodology.
+to do Trunk Based Development. Consider a short-iteration Agile methodology like Extreme Programming.
 
 ### Story size
 
-Trunk Based Development needs you to have small stories/tasks. You starting work on a task, should only be a matter
-of hours before completing and pushing it forward for code review. Longer than that, and there is going to be 
-pressure to group a bunch of developers on a non-trunk branch. Or worse have developers make branches/forks from your 
-branch, or worse still take intermediate merges from your branch, despite your task being incomplete.  
+Trunk Based Development needs you to have small stories/tasks. Optimal is you starting work on a change, should only be a matter
+of hours before completing and pushing it forward for code review. Longer than a couple of days, and there is going to be 
+pressure to group a bunch of developers on a non-trunk branch, and merge back later. Or worse have developers make 
+branches/forks from your in-progress branch. Or worse still take intermediate merges from your branch, despite your 
+change being incomplete.  
 
 Generally speaking, the whole development team should do whatever it can do break stories/tasks into smaller stories/tasks. 
 In Agile, there is an INVEST mnemonic{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} that aids in the splitting
 up or stories.
 
-## SCM Technology Choice
+### Build times
 
-You're SCM/VCS/source-control technology choice should facilitate update/pull/sync from the team's trunk many times 
+Keeping build times short is important in that it directly drives the amount of commits a developer can do in a day.
+If the build time is a couple of minutes, developers are likely to keep a high pace. If the build time is 30 minutes or
+worse developers change pace to match only a couple of commits a day, and drop their throughput.
+
+## VCS Technology Choice
+
+Your VCS/source-control technology choice should facilitate update/pull/sync from the team's trunk many times 
 a day. The elapsed time for the update/pull/sync should be less than three seconds for the situation where you 
-already had latest of everything.  It should be no more than fifteen seconds the case of the shared trunk being ahead 
+already had latest of everything. It should be no more than fifteen seconds the case of the shared trunk being ahead 
 of you. 
 
 Older versions of ClearCase and PVCS Dimensions would be 30 minutes for the former and 45 minutes for the latter. 
 Double that if two team-mates were simultaneously trying to do the update/pull/sync operation. In that configuration, it 
-was completely impossible for teams to choose to do trunk based development.
+was completely impossible for teams practice trunk based development.
 
 ### Binaries in the Repo?
 
 Depending on how many and how often they update, some SCM/VCS/source-control technologies are better than others. 
-Perforce can handle terabytes of binaries and textual source. Subversion aims to. Git can only do so if configured in
-Git-LFS mode.
+Perforce can handle terabytes of binaries and textual source. Subversion aims to. Git can only do large binaries  if 
+configured in Git-LFS mode{{< ext url="https://git-lfs.github.com/" >}}.
 
 ### Repo size?
 
-Git and Mercurial want to constrain repository history (ignoring Git-LFS) to 1GB. There are field reports of clones being 
+It is suggested that Git and Mercurial really should not have a history (ignoring Git-LFS) that exceeds 1GB. There are field reports of clones being 
 many times bigger than that and still working, but the development team suggests 1GB as the top limit. In order to use Git 
 and push through that ceiling yearly, you might be in a situation where you have to keep archiving a repository, and starting 
-a new one with no history to have more head room.  Archiving might look like renaming the repository in Github, and turning it 
+a new one with no history to have more head room. Archiving might look like renaming the repository in Github, and turning it 
 read-only so that all the history, issues, and code review comments are intact.
 
 ### Peak commit frequency
@@ -91,14 +100,10 @@ goes into that much more, as does the [Continuous Delivery](/continuous-delivery
 ## Shared code
 
 Trunk Based Development teams typically have common code ownership rules around contributions to different parts
-of the source tree. If they do not have a full egalitarian system, they have objecting rules for the tree that focus
-on standards and come with a promise of a prioritized and fair code review. Trunk Based Development teams might have
-fine-grained write permissions for directories within the trunk, but **never** have any impediment to reading files in th
-trunk - everyone can see everything.
-
-## Build times
-
-Keeping build times short is key.
+of the source tree. If they do not have a full egalitarian system, they have objective rules for contributions to the tree. 
+Rules that focus on standards and come with a promise of a prioritized and fair code review. Trunk Based Development 
+teams might have fine-grained write permissions for directories within the trunk, but **never** have any impediment 
+to reading files in th trunk - everyone can see everything.
 
 <!-- ## Parallelization
 

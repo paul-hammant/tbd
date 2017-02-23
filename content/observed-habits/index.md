@@ -91,7 +91,9 @@ as the proposed commit is ready.
 
 ## Always Release Ready
 
-TODO
+Not only do developers practicing Trunk Based Development not break the build with any commit, they also sign up to
+being able to go live at short notice. For example one hour, if the CIO visits and says it is going to happen. That
+means there is a bunch of automated tests that come with the build.
 
 ## This vertical slices
 

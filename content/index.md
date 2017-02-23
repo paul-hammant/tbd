@@ -11,7 +11,8 @@ weight: 0
 ## One line summary
 
 A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
-and resist any pressure to create other long-lived development branches by employing one or more documented techniques.
+resist any pressure to create other long-lived development branches by employing documented techniques, 
+avoid merge hell, and live happily ever after.
 
 ![](trunk1.png)
 
@@ -30,11 +31,11 @@ and helps to make Continuous Delivery a reality.
 
 - Depending on the team size, and the rate of commits, **very short-lived** feature/task branches are used for
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
-  This also allows developers to engage in [eager and continuous code review](/continuous-review/) of contributions 
+  Such branches allow developers to engage in [eager and continuous code review](/continuous-review/) of contributions 
   before they land in the trunk.
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from trunk on
-  a just-in-time basis, and are 'hardened' before a release, without that being a team activity. Alternatively there 
+  a just-in-time basis, and are 'hardened' before a release (without that being a team activity). Alternatively there 
   may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a roll 
   forward strategy for bug fixes.
 
@@ -43,15 +44,15 @@ and helps to make Continuous Delivery a reality.
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
 
 - Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
-  they have **25000 developers and QA automators** in that trunk.
+  have **25000 developers and QA automators** in that trunk.
 
-- People who practice the [Github-flow branching model](/alternative-branching-models/index.html#github-flow) will feel that this is quite similar,
-  but there is one small difference.
+- People who practice the [Github-flow branching model](/alternative-branching-models/index.html#github-flow) will feel 
+  that this is quite similar, but there is one small difference.
 
 - People who practice the Gitflow branching model will find this **very different**, as will many developers used to
   the popular ClearCase, Subversion, Perforce, StarTeam, VCS [branching models of the past](/alternative-branching-models/index.html#legacy-branching-models).
 
-- [Many publications](/publications/), including the best-selling Continuous Delivery book promote Trunk Based 
+- [Many publications](/publications/), including the best-selling 'Continuous Delivery' book promote Trunk Based 
   Development - this is not even controversial any more.
 
 ## History
