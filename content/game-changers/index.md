@@ -517,28 +517,28 @@ the motivators.
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">13 Nov 2013, Talk</td>
+            <td style="padding: 2px" valign="top">13 Nov 2013, Talk</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://www.youtube.com/watch?v=2QGYEwghRSM">A Practical Approach to Large Scale Agile Development</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">14 Jan 2015, Blog entry</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="http://dizzythinks.net/from-212-days-to-212-seconds-the-birth-of-devops.html">From 2½ Days to 2½ Seconds - the Birth of DevOps</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.youtube.com/watch?v=2QGYEwghRSM">A Practical Approach to Large Scale Agile Development</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">23 Apr 2015, Blog entry</td>
+            <td style="padding: 2px" valign="top">14 Jan 2015, Blog entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/">The origins of Trunk-Based Development</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://dizzythinks.net/from-212-days-to-212-seconds-the-birth-of-devops.html">From 2½ Days to 2½ Seconds - the Birth of DevOps</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">23 Apr 2015, Blog entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2015/04/23/the-origins-of-trunk-based-development/">The origins of Trunk-Based Development</a></td>
         </tr>
     </table>
 </div>

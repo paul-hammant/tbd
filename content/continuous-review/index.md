@@ -46,12 +46,12 @@ review.
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">13 Nov 2014, Blog Article</td>
+            <td style="padding: 2px" valign="top">13 Nov 2014, Blog Article</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2014/11/13/code-review-the-unit-of-work-should-be-a-single-commit/">Code Review - the unit of work should be a single commit</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2014/11/13/code-review-the-unit-of-work-should-be-a-single-commit/">Code Review - the unit of work should be a single commit</a></td>
         </tr>
     </table>
 </div>

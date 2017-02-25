@@ -220,36 +220,36 @@ with the thing being built/verified in source-control.
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">10 Sep 2000, MartinFowler.com Article</td>
+            <td style="padding: 2px" valign="top">10 Sep 2000, MartinFowler.com Article</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://www.martinfowler.com/articles/originalContinuousIntegration.html">Continuous Integration - original version</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">18 May 2006, MartinFowler.com Article</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="https://www.martinfowler.com/articles/continuousIntegration.html">Continuous Integration</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.martinfowler.com/articles/originalContinuousIntegration.html">Continuous Integration - original version</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">18 May 2015, Hangout Debate</td>
+            <td style="padding: 2px" valign="top">18 May 2006, MartinFowler.com Article</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://www.youtube.com/watch?v=30yN4hefrt0">Branching strategies and continuous delivery</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.martinfowler.com/articles/continuousIntegration.html">Continuous Integration</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">02 Sep 2015, Conference Presentation</td>
+            <td style="padding: 2px" valign="top">18 May 2015, Hangout Debate</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://www.infoq.com/presentations/death-continuous-integration">The Death of Continuous Integration</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.youtube.com/watch?v=30yN4hefrt0">Branching strategies and continuous delivery</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">02 Sep 2015, Conference Presentation</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.infoq.com/presentations/death-continuous-integration">The Death of Continuous Integration</a></td>
         </tr>
     </table>
 </div>

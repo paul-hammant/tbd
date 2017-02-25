@@ -134,44 +134,44 @@ abandoned for a multi-branch model.
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">26 Apr 2007, Blog Entry</td>
+            <td style="padding: 2px" valign="top">26 Apr 2007, Blog Entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/blog/branch_by_abstraction.html">Introducing Branch by Abstraction</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">05 May 2011, ContinuousDelivery.com article</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/">Make Large Scale Changes Incrementally with Branch By Abstraction</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/blog/branch_by_abstraction.html">Introducing Branch by Abstraction</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">21 Jun 2013, Blog Entry</td>
+            <td style="padding: 2px" valign="top">05 May 2011, ContinuousDelivery.com article</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://www.slideshare.net/cb372/branching-strategies">Branching Strategies: Feature Branches vs Branch by Abstraction</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">14 Oct 2013, Blog entry</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/application-pattern-verify-branch-by-abstraction">Application Pattern: Verify Branch By Abstraction</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/">Make Large Scale Changes Incrementally with Branch By Abstraction</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">07 Jan 2014, MartinFowler.com article</td>
+            <td style="padding: 2px" valign="top">21 Jun 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://martinfowler.com/bliki/BranchByAbstraction.html">BranchByAbstraction</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://www.slideshare.net/cb372/branching-strategies">Branching Strategies: Feature Branches vs Branch by Abstraction</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">14 Oct 2013, Blog entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://www.alwaysagileconsulting.com/articles/application-pattern-verify-branch-by-abstraction">Application Pattern: Verify Branch By Abstraction</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">07 Jan 2014, MartinFowler.com article</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://martinfowler.com/bliki/BranchByAbstraction.html">BranchByAbstraction</a></td>
         </tr>
     </table>
 </div>

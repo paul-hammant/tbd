@@ -30,28 +30,28 @@ languages are the same (say Java -> Java), or compatible (Java -> Scala).
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">29 Jun 2004, MartinFowler.com article</td>
+            <td style="padding: 2px" valign="top">29 Jun 2004, MartinFowler.com article</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://www.martinfowler.com/bliki/StranglerApplication.html">Application Strangulation</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">17 Jan 2006, Blog Entry</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="https://scottmark.wordpress.com/2006/01/17/great-architects-are-also-stranglers/">Great Architects Are Also Stranglers</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.martinfowler.com/bliki/StranglerApplication.html">Application Strangulation</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">14 Jul 2013, Blog Entry</td>
+            <td style="padding: 2px" valign="top">17 Jan 2006, Blog Entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">Legacy Application Strangulation : Case Studies</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://scottmark.wordpress.com/2006/01/17/great-architects-are-also-stranglers/">Great Architects Are Also Stranglers</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">14 Jul 2013, Blog Entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">Legacy Application Strangulation : Case Studies</a></td>
         </tr>
     </table>
 </div>

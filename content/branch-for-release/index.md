@@ -78,12 +78,12 @@ harmless tidying activity - branches can be undeleted again quite easily.
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">1998, White Paper</td>
+            <td style="padding: 2px" valign="top">1998, White Paper</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf">High-level Best Practices in Software Configuration Management</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf">High-level Best Practices in Software Configuration Management</a></td>
         </tr>
     </table>
 </div>

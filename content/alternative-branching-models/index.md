@@ -227,52 +227,52 @@ to see green instead of red for this CI server enthusiasm
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">04 Dec 2013, Blog Entry</td>
+            <td style="padding: 2px" valign="top">04 Dec 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2013/12/04/what_is_your_branching_model/">What is Your Branching Model?</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">05 Apr 2013, Blog Entry</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="http://paulhammant.com/2013/04/05/what-is-trunk-based-development/">What is Trunk-Based Development?</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2013/12/04/what_is_your_branching_model/">What is Your Branching Model?</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">19 Mar 2013, Blog Entry</td>
+            <td style="padding: 2px" valign="top">05 Apr 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2013/03/19/cost-of-unmerge/">The Cost of Unmerge</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">15 Oct 2015, InfoQ Interview</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="https://www.infoq.com/news/2015/10/branching-continuous-integration">More Feature Branching Means Less Continuous Integration</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2013/04/05/what-is-trunk-based-development/">What is Trunk-Based Development?</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">03 May 2015, Blog Entry</td>
+            <td style="padding: 2px" valign="top">19 Mar 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://endoflineblog.com/gitflow-considered-harmful">GitFlow considered harmful</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2013/03/19/cost-of-unmerge/">The Cost of Unmerge</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">08 Jan 2016, Blog Entry</td>
+            <td style="padding: 2px" valign="top">15 Oct 2015, InfoQ Interview</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://dan.bodar.com/2016/01/08/gitflow-hmmmm/">GITFLOW HMMMM</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.infoq.com/news/2015/10/branching-continuous-integration">More Feature Branching Means Less Continuous Integration</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">03 May 2015, Blog Entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://endoflineblog.com/gitflow-considered-harmful">GitFlow considered harmful</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">08 Jan 2016, Blog Entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://dan.bodar.com/2016/01/08/gitflow-hmmmm/">GITFLOW HMMMM</a></td>
         </tr>
     </table>
 </div>

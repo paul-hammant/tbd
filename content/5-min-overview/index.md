@@ -122,28 +122,28 @@ Problematic 'distance' has a few tangible examples:
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">03 Sep 2009, MartinFowler.com article</td>
+            <td style="padding: 2px" valign="top">03 Sep 2009, MartinFowler.com article</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://martinfowler.com/bliki/FeatureBranch.html">FeatureBranch</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">16 Jun 2015, Blog Entry</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development">Organization Pattern: Trunk-Based Development</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://martinfowler.com/bliki/FeatureBranch.html">FeatureBranch</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">04 Oct 2016, Blog Entry</td>
+            <td style="padding: 2px" valign="top">16 Jun 2015, Blog Entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://www.michielrook.nl/2016/10/branches-considered-harmful/">Branches considered harmful</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development">Organization Pattern: Trunk-Based Development</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">04 Oct 2016, Blog Entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.michielrook.nl/2016/10/branches-considered-harmful/">Branches considered harmful</a></td>
         </tr>
     </table>
 </div>

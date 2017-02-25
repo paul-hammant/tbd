@@ -34,20 +34,20 @@ applications/services where  clients/customers could lose money are much less li
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">2010, Jez Humble's Continuous Delivery portal</td>
+            <td style="padding: 2px" valign="top">2010, Jez Humble's Continuous Delivery portal</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://continuousdelivery.com/">ContinuousDelivery.com</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://continuousdelivery.com/">ContinuousDelivery.com</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">5 Jan 2015, TheGuardian newspaper on their CD</td>
+            <td style="padding: 2px" valign="top">5 Jan 2015, TheGuardian newspaper on their CD</td>
         </tr>
         <tr>
-            <td valign="top"><a href="https://www.theguardian.com/info/developer-blog/2015/jan/05/delivering-continuous-delivery-continuously">Delivering Continuous Delivery, continuously</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.theguardian.com/info/developer-blog/2015/jan/05/delivering-continuous-delivery-continuously">Delivering Continuous Delivery, continuously</a></td>
         </tr>
     </table>
 </div>

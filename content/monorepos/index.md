@@ -230,76 +230,76 @@ promoted the one repo per microservice for a while now.
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">09 Apr 2013, Blog entry</td>
+            <td style="padding: 2px" valign="top">09 Apr 2013, Blog entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2013/04/09/scaling-trunk-based-development/">Scaling Trunk-Based Development</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">06 May 2013, Blog entry</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/">Google's Scaled Trunk-Based Development</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2013/04/09/scaling-trunk-based-development/">Scaling Trunk-Based Development</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">06 Jan 2014, Blog entry</td>
+            <td style="padding: 2px" valign="top">06 May 2013, Blog entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2014/01/06/googlers-subset-their-trunk/">Googlers Subset their Trunk</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">08 Jan 2014, Blog entry</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/">Google's vs Facebook's Trunk-Based Development</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2013/05/06/googles-scaled-trunk-based-development/">Google's Scaled Trunk-Based Development</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">10 Apr 2014, Blog entry</td>
+            <td style="padding: 2px" valign="top">06 Jan 2014, Blog entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2014/04/10/cd-the-price-of-admission/">Continuous Delivery: The price of admission..</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">10 Oct 2014, Conference Talk</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2014/01/06/googlers-subset-their-trunk/">Googlers Subset their Trunk</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">18 May 2015, Blog entry</td>
+            <td style="padding: 2px" valign="top">08 Jan 2014, Blog entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://danluu.com/monorepo/">Advantages of monolithic version control</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td valign="top">20 May 2015, Blog entry</td>
-        </tr>
-        <tr>
-            <td valign="top"><a href="http://paulhammant.com/2015/05/20/turning-bazel-back-into-blaze-for-monorepo-nirvana/">Turning Bazel back into Blaze for monorepo nirvana</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2014/01/08/googles-vs-facebooks-trunk-based-development/">Google's vs Facebook's Trunk-Based Development</a></td>
         </tr>
     </table>
-    <table>
+    <table style="border: 0; box-shadow: none">
         <tr>
-            <td valign="top">27 Jan 2017, Blog entry</td>
+            <td style="padding: 2px" valign="top">10 Apr 2014, Blog entry</td>
         </tr>
         <tr>
-            <td valign="top"><a href="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/">Maven In A Google Style Monorepo</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2014/04/10/cd-the-price-of-admission/">Continuous Delivery: The price of admission..</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">10 Oct 2014, Conference Talk</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">18 May 2015, Blog entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://danluu.com/monorepo/">Advantages of monolithic version control</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">20 May 2015, Blog entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2015/05/20/turning-bazel-back-into-blaze-for-monorepo-nirvana/">Turning Bazel back into Blaze for monorepo nirvana</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">27 Jan 2017, Blog entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/">Maven In A Google Style Monorepo</a></td>
         </tr>
     </table>
 </div>
