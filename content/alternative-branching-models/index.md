@@ -30,13 +30,20 @@ This is sooooo close to PR-centric Trunk-Based Development. Why? Because, it is 
 developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than
 individuals.
 
-The crucial difference is where the release is performed from. Whereas for their release-from-branch step:
+The crucial difference is where the release is performed from. 
+
+The GitHub-flow thing showing a release-from-branch step, before the merge back to teh master (trunk):
 
 ![](githubflow1.png)
 
-As the Github documentation portrays, review comments are part of the process. Of course they are, they are the speech
-bubbles in timeline above followed by another commit (presumably 132 columns end of line versus 80 prevailed). How
-Trunk-Based Development modifies the Github Flow model:
+One problem with is the small risk of regression in a following release - that would be if the release goes out, but 
+the branch is never merged back. Another is that it may indeed not have items in it from trunk that were part of a 
+previous release (actually causing a regression).
+
+As the Github documentation portrays, review comments are part of the process. They are the speech
+bubbles in time line above followed by another commit, which presumably addressed the review feedback. 
+
+How Trunk-Based Development modifies the Github Flow model:
 
 ![](../5-min-overview/trunk_pr.png)
 
