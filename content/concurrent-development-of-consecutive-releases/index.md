@@ -36,7 +36,7 @@ public.
 The trouble is that the development teams might have to face a selective un-merge or commenting-out frenzy to support that, depending on
 what had merged already. Different branching models have different merge impacts and are either early or late in terms
 of keenness for the act of merging. That in itself is disruptive to the business, as they fear and probably witness 
-additional delays because of the retooling and new found nerves.
+additional delays because of the retooling and new-found nerves.
 
 ## Flags, abstractions and pipelines
 
@@ -54,8 +54,8 @@ The new CI pipeline confirmed what they had already seen on the command line bui
 automated tests (and something in a page did not quite look right anyway). A couple of quick fixes later, and the development 
 team assured the airline's management that the the releases could reasonably happen in any order.
 
-Choosing Trunk-Based Development, Feature Flags and Branch by Abstraction could be said to be a **hedging strategy** 
-against the costs of larger scheduling changes.
+Choosing Trunk-Based Development, [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch-by-abstraction/) 
+could be said to be a **hedging strategy** against the costs of larger scheduling changes.
 
 {{< warning title="Consecutive development of consecutive releases is by far superior!" >}}
 Every high throughput Extreme Programming team will tell you that finishing and shipping a release before starting work
