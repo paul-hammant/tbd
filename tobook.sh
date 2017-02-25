@@ -15,7 +15,7 @@ function extract_just_the_article {
   # arg 1 directory for index.html file (or "" for root)
   # arg 2 true if sub directory
 
-  echo "<html><head></head><body>" > "$1index.html2"
+  cat ../book_page_start.html > "$1index.html2"
   xidel --html "$1index.html" --extract "//article" | sed '/<!DOCTYPE html>/d' >> "$1index.html2"
   echo "</body></html>" >> "$1index.html2"
   mv "$1index.html2" "$1index.html"
@@ -44,6 +44,7 @@ function extract_just_the_article {
   else
     cat "$1index.html" | sed "s#href=\"/#href=\"#g" \
       | sed "s#src=\"/#src=\"#g" \
+      | sed "s#../stylesheets/#stylesheets/#" \
       | sed "s#url(/images/LogoSlim#url(images/LogoSlim#g" | sponge "$1index.html"
   fi
 }
@@ -106,7 +107,7 @@ cat index.html \
     | sponge index.html
 
 # stitch into PDF book
-mkdir ../book
+mkdir -p ../book
 convert_to_book pdf
 convert_to_book mobi
 convert_to_book epub
