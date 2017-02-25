@@ -53,6 +53,76 @@ See the Github Flow landing page for more{{< ext url="https://guides.github.com/
 
 ## Legacy branching models
 
+## More than one trunk
+
+You could have a single repository with many trunks (and many branches - release or not). That is not uncommon with VCS
+choices that don not have an upper limit on size (including history). You are at least allowing for atomic commits across many
+of those trunks, which can happen if you have a large refactoring, and atomic commits are always desirable.
+
+```
+root/    
+    module_one/
+        branches/
+          rel_1.0.0/
+          rel_1.1.0/          
+        trunk/      
+            build_file.xml
+            src/
+                (prod source directory tree)
+                (test source directory tree)
+    module_two/
+        branches/
+          rel_1.0.0/
+          rel_1.1.0/          
+        trunk/      
+            build_file.xml
+            src/
+                (prod source directory tree)
+                (test source directory tree)
+    module_three/
+        branches/
+          rel_1.0.0/
+          rel_1.1.0/          
+        trunk/      
+            build_file.xml
+            src/
+                (prod source directory tree)
+                (test source directory tree)
+```
+
+Many trunks becomes undesirable if you have the same release cadence for all the separate trunks in the repo, and you 
+are 'branching for release', You have made it harder for the larger thing to be build from root. Better would be one, 
+trunk with three modules:
+
+```
+root/    
+    branches/
+      rel_1.0.0/
+      rel_1.1.0/          
+    trunk/      
+        module_one/
+            build_file.xml
+            src/
+                (prod source directory tree)
+                (test source directory tree)
+        module_two/
+            build_file.xml
+            src/
+                (prod source directory tree)
+                (test source directory tree)    
+        module_three/
+            build_file.xml
+            src/
+                (prod source directory tree)
+                (test source directory tree)
+```
+
+This way at least, you get to make one branch repesenting the release (with cherry picks to it as bugs are eliminated).
+
+Even if you have different release cadences, you can still engineer a trunk this way, you just have to have a build 
+system that can reduce to the modules being tested and deployed, skipping those that won't be. See [Monorepos](/monorepos/)
+and [expanding and contracting monorepos](/expanding-contracting-monorepos/).
+
 ### Mainline
 
 Mainline is a branching model that was promoted for ClearCase implementations. It is the principal branching
