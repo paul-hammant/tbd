@@ -71,30 +71,31 @@ The general directory structure for directed graph build systems is like so:
 
 ```
 root/
-    prod_code/
+  prod_code/
+    build_file.xml
+    (source files)
+    a_directory/
+      build_file
+      (source files)
+      another_directory/
         build_file.xml
         (source files)
-        a_directory/
-            build_file
-            (source files)
-            another_directory/
-                build_file.xml
-                (source files)
-        yet_another_directory/
-            build_file.xml
-    test_code/
+    yet_another_directory/
+      build_file.xml
+      (source files)
+  test_code/
+    build_file.xml
+    (source files)
+    a_directory/
+      build_file
+      (source files)
+      another_directory/
         build_file.xml
         (source files)
-        a_directory/
-            build_file
-            (source files)
-            another_directory/
-                build_file.xml
-                (source files)
-        yet_another_directory/
-            build_file.xml
-            (source files)
-  ```
+    yet_another_directory/
+      build_file.xml
+      (source files)
+```
   
 Obviously, YAML, JSON, TOML or custom grammars are alternatives to XML, for build files.
   
@@ -135,26 +136,25 @@ The general directory structure for recursive build systems is like so:
 
 ```
 root/
+  build_file.xml
+  module_one/
     build_file.xml
-    module_one/
-        build_file.xml
-        src/
-            (prod source directory tree)
-            (test source directory tree)
-        module_two/
-            build_file.xml
-            src/
-                (prod source directory tree)
-                (test source directory tree)
-    module_three/
-        build_file.xml
-        src/
-            (prod source directory tree)
-            (test source directory tree)
     src/
+      (prod source directory tree)
+      (test source directory tree)
+    module_two/
+      build_file.xml
+      src/
         (prod source directory tree)
         (test source directory tree)
-
+  module_three/
+    build_file.xml
+    src/
+      (prod source directory tree)
+      (test source directory tree)
+  src/
+    (prod source directory tree)
+    (test source directory tree)
 ```
 
 Again, YAML, JSON, TOML and custom grammars are alternatives to XML for build files.

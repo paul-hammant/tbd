@@ -61,33 +61,33 @@ of those trunks, which can happen if you have a large refactoring, and atomic co
 
 ```
 root/    
-    module_one/
-        branches/
-          rel_1.0.0/
-          rel_1.1.0/          
-        trunk/      
-            build_file.xml
-            src/
-                (prod source directory tree)
-                (test source directory tree)
-    module_two/
-        branches/
-          rel_1.0.0/
-          rel_1.1.0/          
-        trunk/      
-            build_file.xml
-            src/
-                (prod source directory tree)
-                (test source directory tree)
-    module_three/
-        branches/
-          rel_1.0.0/
-          rel_1.1.0/          
-        trunk/      
-            build_file.xml
-            src/
-                (prod source directory tree)
-                (test source directory tree)
+  module_one/
+    branches/
+      rel_1.0.0/
+      rel_1.1.0/          
+    trunk/      
+      build_file.xml
+      src/
+        (prod source directory tree)
+        (test source directory tree)
+  module_two/
+    branches/
+      rel_1.0.0/
+      rel_1.1.0/          
+    trunk/      
+      build_file.xml
+      src/
+        (prod source directory tree)
+        (test source directory tree)
+  module_three/
+    branches/
+      rel_1.0.0/
+      rel_1.1.0/          
+    trunk/      
+      build_file.xml
+      src/
+        (prod source directory tree)
+        (test source directory tree)
 ```
 
 Many trunks becomes undesirable if you have the same release cadence for all the separate trunks in the repo, and you 
@@ -96,25 +96,25 @@ trunk with three modules:
 
 ```
 root/    
-    branches/
-      rel_1.0.0/
-      rel_1.1.0/          
-    trunk/      
-        module_one/
-            build_file.xml
-            src/
-                (prod source directory tree)
-                (test source directory tree)
-        module_two/
-            build_file.xml
-            src/
-                (prod source directory tree)
-                (test source directory tree)    
-        module_three/
-            build_file.xml
-            src/
-                (prod source directory tree)
-                (test source directory tree)
+  branches/
+    rel_1.0.0/
+    rel_1.1.0/          
+  trunk/      
+    module_one/
+      build_file.xml
+      src/
+        (prod source directory tree)
+        (test source directory tree)
+      module_two/
+        build_file.xml
+        src/
+          (prod source directory tree)
+          (test source directory tree)    
+      module_three/
+        build_file.xml
+        src/
+          (prod source directory tree)
+          (test source directory tree)
 ```
 
 This way at least, you get to make one branch repesenting the release (with cherry picks to it as bugs are eliminated).
