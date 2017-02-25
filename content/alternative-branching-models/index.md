@@ -24,7 +24,7 @@ I looks like you'll not be able to do [concurrent development of consecutive rel
 with this branching model, or the hedging that [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch-by-abstraction/)
 enable.
 
-### Github flow
+### GitHub flow
 
 This is sooooo close to PR-centric Trunk-Based Development. Why? Because, it is a branching model that has individual
 developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than
@@ -40,10 +40,10 @@ One problem with is the small risk of regression in a following release - that w
 the branch is never merged back. Another is that it may indeed not have items in it from trunk that were part of a 
 previous release (actually causing a regression).
 
-As the Github documentation portrays, review comments are part of the process. They are the speech
+As the GitHub documentation portrays, review comments are part of the process. They are the speech
 bubbles in time line above followed by another commit, which presumably addressed the review feedback. 
 
-How Trunk-Based Development modifies the Github Flow model:
+How Trunk-Based Development modifies the GitHub Flow model:
 
 ![](../5-min-overview/trunk_pr.png)
 
@@ -56,7 +56,7 @@ commit history, which is not as linear as we present here:
 Of course if you rebase/squash your series of commits, they could land in the trunk as a single commit.  Also note that
 the review commentary is still available after the branch is deleted, as it should be.  
 
-See the Github Flow landing page for more{{< ext url="https://guides.github.com/introduction/flow/" >}}
+See the GitHub Flow landing page for more{{< ext url="https://guides.github.com/introduction/flow/" >}}
 
 ## Legacy branching models
 

@@ -165,7 +165,7 @@ the last ten minutes, but that would be a crazy amount of computing power to do 
 commit in a place where it looks like it is immediately following a previously known green (passing) commit and is not yet on 
 the shared trunk.
 
-That place has a name - a branch (or a branch of a fork the Github way). It is a perfect place to CI verify the commit
+That place has a name - a branch (or a branch of a fork the GitHub way). It is a perfect place to CI verify the commit
 before auto-merging it to the shared trunk (if you want to auto-merge after code review approvals). 
 
 The new problem is how do you prevent that short-lived feature branch from sleepwalking into a long-lived feature 

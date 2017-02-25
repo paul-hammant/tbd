@@ -316,18 +316,18 @@ that used the Branch by Abstraction technique{{< ext url="http://paulhammant.com
 Whereas many had previously used this technique to avoid longer version-control branches in a trunk model, this was the 
 first time it had been detailed online and given a name (by Stacy Curl).
 
-## Github's entire platform (2008 onwards)
+## GitHub's entire platform (2008 onwards)
 
 ![](away_from_tbd2.png)
 
-Github was launched as a portal on February 8, 2008, and features have been added steadily ever since. The initial 
+GitHub was launched as a portal on February 8, 2008, and features have been added steadily ever since. The initial 
 version contained forks, which was a formal way of expressing the directionality of related DVCS repositories, and 
 promoting a forgiveness model for unsolicited changes to source code (as opposed to the permission model that preceded it
 for other portals).
 
 ### Pull Requests (2008)
 
-Github added "Pull-Requests" (PRs) on Feb 23rd, 2008{{< ext url="https://github.com/blog/3-oh-yeah-there-s-pull-requests-now" >}},
+GitHub added "Pull-Requests" (PRs) on Feb 23rd, 2008{{< ext url="https://github.com/blog/3-oh-yeah-there-s-pull-requests-now" >}},
 while in beta, and popularized the entire practice for the industry when they came out of beta in April of that year. 
 For source/repo platforms, and VCSs generally, this and "forking generally" was a total game changer, and commercial 
 prospects of other companies were decided based on their ability to react to this culture change.
@@ -386,13 +386,13 @@ QA automation technologies setup by the dev team & inducting/co-locating individ
 Acceptance Test Driven development (ATDD), a CI pipeline that included performance tests, a focus of team dynamics for
 high throughput. 
 
-## Travis-CI's Github integration and pass/fail badges (2011)
+## Travis-CI's GitHub integration and pass/fail badges (2011)
 
 ![](to_tbd1.png)
 
-In 2011, Travis-CI{{< ext url="https://travis-ci.com/" >}} provided easy integrations into Github's platform run CI 
+In 2011, Travis-CI{{< ext url="https://travis-ci.com/" >}} provided easy integrations into GitHub's platform run CI 
 builds for Pull Requests and the general state of HEAD on any branch. This was visually indicated with "build passes" and 
-"build fails" badges were inserted into the Github UI{{< ext url="https://docs.travis-ci.com/user/status-images/" >}}. 
+"build fails" badges were inserted into the GitHub UI{{< ext url="https://docs.travis-ci.com/user/status-images/" >}}. 
 This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk. 
 
 ## Microservices (2011 and 2012)
@@ -506,7 +506,7 @@ Single Repository":
 
 ![](to_tbd1.png)
 
-Microsoft released ~~GitVFS~~ GVFS in early 2017 on Github{{< ext url="https://github.com/Microsoft/GVFS" >}}.
+Microsoft released ~~GitVFS~~ GVFS in early 2017 on GitHub{{< ext url="https://github.com/Microsoft/GVFS" >}}.
 
 This new technology deserves time and analysis before the full impact is determined. There is a suggestion from Brian Harry's 
 blog{{< ext url="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/" >}} that branch reduction was one of 

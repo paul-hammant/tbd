@@ -63,7 +63,7 @@ configured in Git-LFS mode{{< ext url="https://git-lfs.github.com/" >}}.
 It is suggested that Git and Mercurial really should not have a history (ignoring Git-LFS) that exceeds 1GB. There are field reports of clones being 
 many times bigger than that and still working, but the development team suggests 1GB as the top limit. In order to use Git 
 and push through that ceiling yearly, you might be in a situation where you have to keep archiving a repository, and starting 
-a new one with no history to have more head room. Archiving might look like renaming the repository in Github, and turning it 
+a new one with no history to have more head room. Archiving might look like renaming the repository in GitHub, and turning it 
 read-only so that all the history, issues, and code review comments are intact.
 
 ### Peak commit frequency

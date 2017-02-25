@@ -8,7 +8,7 @@ weight: 32
 
 [Git website](https://git-scm.com/) and [Mercurial website](https://www.mercurial-scm.org/)
 
-Git and Mercurial have been popular DVCS technologies for many years. Portals like Github make Git in particular the default 
+Git and Mercurial have been popular DVCS technologies for many years. Portals like GitHub make Git in particular the default 
 choice for SCM/SVC/source-control. While the Linux Kernel is maintained with Git, and definitely takes advantage 
 of the D-Distributed aspect of the DVCS of Git (in that many divergent versions of kernel can exist over 
 long periods of time), most enterprises are still going to count a single repository as the principal one, and within 
@@ -70,8 +70,8 @@ developer workstations.
 
 ### Platform Software Choices
 
-* [Github](https://github.com/) - Git, cloud 
-* [Github Enterprise](https://enterprise.github.com/home) - Git in Github's on-premises edition
+* [GitHub](https://github.com/) - Git, cloud 
+* [GitHub Enterprise](https://enterprise.github.com/home) - Git in GitHub's on-premises edition
 * [Gitlab](https://about.gitlab.com/) - Git, cloud and on-premises install
 * Atlassian's [Bitbucket server](https://www.atlassian.com/software/bitbucket/server) - Git and Mercurial
 * [RhodeCode](https://rhodecode.com/) - Git, Mercurial

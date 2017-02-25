@@ -15,7 +15,7 @@ allowed to back up.
 
 ### Pull Requests
 
-The pull-request (PR) model introduced by Github is the dominant code review model today. It is a branch, but a personal
+The pull-request (PR) model introduced by GitHub is the dominant code review model today. It is a branch, but a personal
 one and short-lived. It may suffer many commits before the developer feels the task is complete, and initiates a PR 
 which triggers code review (and the CI daemon to wake up and build/verify the branch). The temporary branch may have
 received many commits before the developer initiated the pull request. Some developers will squash (rebase) the
@@ -38,7 +38,7 @@ Historically, open source teams never had the luxury of procrastinating about co
 ## See also
 
 See [Game Changes - Google's Mondrian](/game-changers/index.html#mondrian-2006) and 
-[Game Changes - Github's Pull Requests](/game-changers/index.html#pull-requests-2008) for the industry impact of continuous code 
+[Game Changes - GitHub's Pull Requests](/game-changers/index.html#pull-requests-2008) for the industry impact of continuous code 
 review.
 
 # References elsewhere

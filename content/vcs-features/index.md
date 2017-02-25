@@ -94,7 +94,7 @@ There were (and are) other technologies for code review such as Crucible (Atlass
 Phabricator, but itegration into a platform experience is key.  GitLab, and RhodeCode are emerging platforms.
 
 Read more in [Game Changes Review - Google's Mondrian](/game-changers/index.html#mondrian-2006) and 
-[Game Changers - Github's Pull Requests](/game-changers/index.html#pull-requests-2008).
+[Game Changers - GitHub's Pull Requests](/game-changers/index.html#pull-requests-2008).
 
 ### Continuous Integration testing
 
