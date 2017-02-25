@@ -40,11 +40,12 @@ function extract_just_the_article {
   if [ "$2" = true ] ; then
     cat "$1index.html" | sed "s#href=\"/#href=\"../#g" \
       | sed "s#src=\"/#src=\"../#g" \
+      | sed "s#ZZ/#../#" \
       | sed "s#url(/images/LogoSlim#url(../images/LogoSlim#g" | sponge "$1index.html"
   else
     cat "$1index.html" | sed "s#href=\"/#href=\"#g" \
       | sed "s#src=\"/#src=\"#g" \
-      | sed "s#../stylesheets/#stylesheets/#" \
+      | sed "s#ZZ/##" \
       | sed "s#url(/images/LogoSlim#url(images/LogoSlim#g" | sponge "$1index.html"
   fi
 }
