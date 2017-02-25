@@ -222,62 +222,34 @@ with the thing being built/verified in source-control.
 <div>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">10 Sep 2000</td>
+            <td valign="top">10 Sep 2000, MartinFowler.com Article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">MartinFowler.com Article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://www.martinfowler.com/articles/originalContinuousIntegration.html">Continuous Integration - original version</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">18 May 2006</td>
+            <td valign="top">18 May 2006, MartinFowler.com Article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">MartinFowler.com Article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://www.martinfowler.com/articles/continuousIntegration.html">Continuous Integration</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">18 May 2015</td>
+            <td valign="top">18 May 2015, Hangout Debate</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Hangout Debate</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://www.youtube.com/watch?v=30yN4hefrt0">Branching strategies and continuous delivery</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">02 Sep 2015</td>
+            <td valign="top">02 Sep 2015, Conference Presentation</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Conference Presentation</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://www.infoq.com/presentations/death-continuous-integration">The Death of Continuous Integration</a></td>
         </tr>
     </table>
-    <br/>
 </div>

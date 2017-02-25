@@ -136,75 +136,41 @@ abandoned for a multi-branch model.
 <div>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">26 Apr 2007</td>
+            <td valign="top">26 Apr 2007, Blog Entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog Entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://paulhammant.com/blog/branch_by_abstraction.html">Introducing Branch by Abstraction</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">05 May 2011</td>
+            <td valign="top">05 May 2011, ContinuousDelivery.com article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">ContinuousDelivery.com article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://continuousdelivery.com/2011/05/make-large-scale-changes-incrementally-with-branch-by-abstraction/">Make Large Scale Changes Incrementally with Branch By Abstraction</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">21 Jun 2013</td>
+            <td valign="top">21 Jun 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog Entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://www.slideshare.net/cb372/branching-strategies">Branching Strategies: Feature Branches vs Branch by Abstraction</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">14 Oct 2013</td>
+            <td valign="top">14 Oct 2013, Blog entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/application-pattern-verify-branch-by-abstraction">Application Pattern: Verify Branch By Abstraction</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">07 Jan 2014</td>
+            <td valign="top">07 Jan 2014, MartinFowler.com article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">MartinFowler.com article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://martinfowler.com/bliki/BranchByAbstraction.html">BranchByAbstraction</a></td>
         </tr>
     </table>

@@ -129,75 +129,41 @@ WITH at least nightly integration across all feature-branches [sigh].
 <div>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">29 Oct 2010</td>
+            <td valign="top">29 Oct 2010, MartinFowler.com article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">MartinFowler.com article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://martinfowler.com/bliki/FeatureToggle.html">Feature Toggle</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">30 May 2011</td>
+            <td valign="top">30 May 2011, TechCrunch article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">TechCrunch article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://techcrunch.com/2011/05/30/facebook-source-code">The Next 6 Months Worth Of Features Are In Facebook's Code Right Now, But We Can't See</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">19 Jun 2013</td>
+            <td valign="top">19 Jun 2013, Slides from a talk</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Slides from a talk</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://www.slideshare.net/cb372/branching-strategies">Branching Strategies: Feature Branches vs Branch by Abstraction</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">10 Oct 2014</td>
+            <td valign="top">10 Oct 2014, Conference Talk</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Conference Talk</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">08 Feb 2016</td>
+            <td valign="top">08 Feb 2016, MartinFowler.com article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">MartinFowler.com article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://martinfowler.com/articles/feature-toggles.html">Feature Toggles</a></td>
         </tr>
     </table>

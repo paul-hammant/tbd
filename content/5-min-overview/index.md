@@ -124,45 +124,25 @@ Problematic 'distance' has a few tangible examples:
 <div>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">03 Sep 2009</td>
+            <td valign="top">03 Sep 2009, MartinFowler.com article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">MartinFowler.com article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://martinfowler.com/bliki/FeatureBranch.html">FeatureBranch</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">16 Jun 2015</td>
+            <td valign="top">16 Jun 2015, Blog Entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog Entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://www.alwaysagileconsulting.com/articles/organisation-pattern-trunk-based-development">Organization Pattern: Trunk-Based Development</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">04 Oct 2016</td>
+            <td valign="top">04 Oct 2016, Blog Entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog Entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://www.michielrook.nl/2016/10/branches-considered-harmful/">Branches considered harmful</a></td>
         </tr>
     </table>

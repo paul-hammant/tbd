@@ -32,45 +32,25 @@ languages are the same (say Java -> Java), or compatible (Java -> Scala).
 <div>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">29 Jun 2004</td>
+            <td valign="top">29 Jun 2004, MartinFowler.com article</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">MartinFowler.com article</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://www.martinfowler.com/bliki/StranglerApplication.html">Application Strangulation</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">17 Jan 2006</td>
+            <td valign="top">17 Jan 2006, Blog Entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog Entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://scottmark.wordpress.com/2006/01/17/great-architects-are-also-stranglers/">Great Architects Are Also Stranglers</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">14 Jul 2013</td>
+            <td valign="top">14 Jul 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog Entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">Legacy Application Strangulation : Case Studies</a></td>
         </tr>
     </table>

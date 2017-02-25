@@ -73,45 +73,25 @@ only pick up new release work as the previous one has been pushed into productio
 <div>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">19 Mar 2013</td>
+            <td valign="top">19 Mar 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog Entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://paulhammant.com/2013/03/19/cost-of-unmerge/">The Cost of Unmerge</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">14 Jul 2013</td>
+            <td valign="top">14 Jul 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Blog Entry</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">Legacy Application Strangulation : Case Studies</a></td>
         </tr>
     </table>
-    <br/>
     <table>
         <tr>
-            <td>Date:</td>
-            <td valign="top">10 Oct 2014</td>
+            <td valign="top">10 Oct 2014, Conference Talk</td>
         </tr>
         <tr>
-            <td>Type:</td>
-            <td valign="top">Conference Talk</td>
-        </tr>
-        <tr>
-            <td>Link:</td>
             <td valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
         </tr>
     </table>
