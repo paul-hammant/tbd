@@ -66,8 +66,8 @@ The largest of development organizations, like Google (as mentioned) and Faceboo
 Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers/) have made
 Trunk-Based Development more (and occasionally less) necessary.
 
-## This portal
+## This site
 
-This portal attempts to collect all the related facts, rationale and techniques for Trunk-Based Development together
+This site attempts to collect all the related facts, rationale and techniques for Trunk-Based Development together
 in one place, complete with twenty four diagrams to help explain things. All without using TBD as an acronym
 even ~~once~~ twice.
