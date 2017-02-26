@@ -27,7 +27,6 @@ function extract_just_the_article {
     | sed 's/<nav/<nav style="display: none"/' \
     | sed 's/References elsewhere/References on the web/' \
     | sed 's/his site/his book/' \
-    | sed 's/his portal/his book/' \
     | sed '/showHideRefs/d' \
     | sed '/^[ \t]*$/d' \
     | sponge "$1index.html"
