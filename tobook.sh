@@ -20,7 +20,7 @@ function extract_just_the_article {
   echo "</body></html>" >> "$1index.html2"
   mv "$1index.html2" "$1index.html"
 
-  cat "$1index.html" | sed 's/<!DOCTYPE html>//' \
+  cat "$1index.html" \
     | sed 's/<aside/<aside style="display: none"/' \
     | sed 's#<h1 id="references-elsewhere">References elsewhere</h1>#<h2 id="references-elsewhere">References elsewhere</h2>#' \
     | sed 's/<footer/<footer style="display: none"/' \
@@ -108,10 +108,10 @@ cat index.html \
 
 # stitch into PDF book
 mkdir -p ../book
-convert_to_book pdf
-convert_to_book mobi
-convert_to_book epub
-cd ../book/
-netlify deploy
-cd ..
-rm -rf tempHugo/
+#convert_to_book pdf
+#convert_to_book mobi
+#convert_to_book epub
+#cd ../book/
+#netlify deploy
+#cd ..
+#rm -rf tempHugo/
