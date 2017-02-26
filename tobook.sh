@@ -5,8 +5,9 @@ function normalize_index_file_names {
 }
 
 function convert_to_book {
+  echo "222 $2 2222"
   ebook-convert toc.html "../book/trunk_based_development_book.$1" --page-breaks-before "//h:h1" --chapter "//h1" \
-  --breadth-first --publisher=trunkbaseddevelopment.com --language=es --title "Trunk Based Development" \
+  --breadth-first "$2" --publisher=trunkbaseddevelopment.com --language=en --title "Trunk Based Development" \
   --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
 }
 
@@ -108,10 +109,10 @@ cat index.html \
 
 # stitch into PDF book
 mkdir -p ../book
-#convert_to_book pdf
-#convert_to_book mobi
-#convert_to_book epub
-#cd ../book/
+#convert_to_book pdf "--base-font-size 6"
+convert_to_book mobi "--pretty-print"
+#convert_to_book epub "--pretty-print"
+cd ../book/
 #netlify deploy
-#cd ..
+cd ..
 #rm -rf tempHugo/

@@ -58,7 +58,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 
 <div>
     <a>
-      <img width="90" src="https://s3.amazonaws.com/titlepages.leanpub.com/buildqualityin/hero?1425554444" style="float:left;padding-right:10px; border:0px solid black;"/>
+      <img width="90" src="build_quality_in" style="float:left;padding-right:10px; border:0px solid black;"/>
     </a>
     <p>
         <em>Build Quality In: Continuous Delivery and DevOps Experience Reports</em><br/>
