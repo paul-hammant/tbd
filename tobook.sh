@@ -28,7 +28,7 @@ function extract_just_the_article {
     | sed 's/References elsewhere/References on the web/' \
     | sed 's/his site/his book/' \
     | sed '/showHideRefs/d' \
-    | sed '/^[ \t]*$/d' \
+    | awk 'NF' \
     | sponge "$1index.html"
 
   # change videos to links to videos, and remove sections not for print
