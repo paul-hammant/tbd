@@ -1,13 +1,12 @@
 #!/bin/sh
 
 function normalize_index_file_names {
-  grep -rl "$1" . | xargs sed -i '' "s#$1\"#$1index.html\"#g"
+    python ../fix_html.py "$1" "$2"
 }
 
 function convert_to_book {
-  echo "222 $2 2222"
   ebook-convert toc.html "../book/trunk_based_development_book.$1" --page-breaks-before "//h:h1" --chapter "//h1" \
-  --breadth-first "$2" --publisher=trunkbaseddevelopment.com --language=en --title "Trunk Based Development" \
+  --breadth-first "$2" "$3" --publisher=trunkbaseddevelopment.com --language=en --title "Trunk Based Development" \
   --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
 }
 
@@ -37,24 +36,22 @@ function extract_just_the_article {
     | sed 's/<!-- print //' \
     | sed 's/ print -->//' | sponge "$1index.html"
 
-  if [ "$2" = true ] ; then
-    cat "$1index.html" | sed "s#href=\"/#href=\"../#g" \
-      | sed "s#src=\"/#src=\"../#g" \
-      | sed "s#ZZ/#../#" \
-      | sed "s#url(/images/LogoSlim#url(../images/LogoSlim#g" | sponge "$1index.html"
-  else
-    cat "$1index.html" | sed "s#href=\"/#href=\"#g" \
-      | sed "s#src=\"/#src=\"#g" \
-      | sed "s#ZZ/##" \
-      | sed "s#url(/images/LogoSlim#url(images/LogoSlim#g" | sponge "$1index.html"
-  fi
+#  if [ "$2" = true ] ; then
+#    cat "$1index.html" \
+#      | sed "s#src=\"/#src=\"../#g" \
+#      | sed "s#ZZ/#../#" \
+#      | sed "s#url(/images/LogoSlim#url(../images/LogoSlim#g" | sponge "$1index.html"
+#  else
+#    cat "$1index.html" | sed "s#href=\"/#href=\"#g" \
+#      | sed "s#src=\"/#src=\"#g" \
+#      | sed "s#ZZ/##" \
+#      | sed "s#url(/images/LogoSlim#url(images/LogoSlim#g" | sponge "$1index.html"
+#  fi
 }
 
 function normalize_index_file_names_and_extract_just_the_article {
-  if [ "$2" = true ] ; then
-    normalize_index_file_names $1
-  fi
   extract_just_the_article $1 $2
+  normalize_index_file_names "$1index.html" $2
 }
 
 # Gen site to temp folder
@@ -100,18 +97,19 @@ us \$1,000,000 USD<br/>Generated $GIT_DATE <br/></body></html>" \
   | sed "s#href=\"/#href=\"#g" \
   | sed "s#title=\"Introduction\" href=\"\"#title=\"Introduction\" href=\"index.html\"#" \
   | sed "s#src=\"/#src=\"#g" > toc.html
+normalize_index_file_names toc.html false
 
 # slim the front page too.
-normalize_index_file_names_and_extract_just_the_article "./" false
+normalize_index_file_names_and_extract_just_the_article './' false
 cat index.html \
     | sed '/<h1>Introduction/d' \
     | sponge index.html
 
 # stitch into PDF book
 mkdir -p ../book
-#convert_to_book pdf "--base-font-size 6"
-convert_to_book mobi "--pretty-print"
-#convert_to_book epub "--pretty-print"
+convert_to_book pdf --base-font-size 6
+convert_to_book mobi --pretty-print --pretty-print
+convert_to_book epub --pretty-print --pretty-print
 cd ../book/
 #netlify deploy
 cd ..
