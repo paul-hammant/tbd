@@ -59,6 +59,22 @@ hugo --disableRSS --quiet -d tempHugo
 
 cd tempHugo
 
+# Table of contents gets inserted once (was on every page)
+GIT_DATE=$(git log | head -n 3 | grep Date | tr -s ' ' | cut -d ' ' -f2-12)
+echo "<html><body><h1>Table of Contents</h1>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of \
+<a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright &copy; 2017: Paul Hammant \
+and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe \
+us \$1,000,000 USD<br/>Generated $GIT_DATE <br/></body></html>" \
+  | sed 's/<!DOCTYPE html>//' \
+  | awk 'NF' \
+  | sed '/<strong>Trunk Based Development/d' \
+  | sed 's/Site Source/Book Source/' \
+  | sed 's/<aside/<aside style="display: none"/' \
+  | sed "s#href=\"/#href=\"#g" \
+  | sed "s#title=\"Introduction\" href=\"\"#title=\"Introduction\" href=\"index.html\"#" \
+  | sed "s#src=\"/#src=\"#g" > toc.html
+normalize_index_file_names toc.html false
+
 # slim site down to content
 normalize_index_file_names_and_extract_just_the_article 5-min-overview/ true
 normalize_index_file_names_and_extract_just_the_article alternative-branching-models/ true
@@ -82,22 +98,6 @@ normalize_index_file_names_and_extract_just_the_article strangulation/ true
 normalize_index_file_names_and_extract_just_the_article vcs-features/ true
 normalize_index_file_names_and_extract_just_the_article vcs-choices/ true
 normalize_index_file_names_and_extract_just_the_article youre-doing-it-wrong/ true
-
-# Table of contents gets inserted once (was on every page)
-GIT_DATE=$(git log | head -n 3 | grep Date | tr -s ' ' | cut -d ' ' -f2-12)
-echo "<html><body><h1>Table of Contents</h1>$(xidel --html index.html --extract "//div[@class='drawer']")<br/>Book transformation of \
-<a href='https://trunkbaseddevelopment.com'>TrunkBasedDevelopment.com</a><br/>Copyright &copy; 2017: Paul Hammant \
-and Steve Smith<br/>This book is free (gratis) to copy as long as you don't modify it, otherwise your owe \
-us \$1,000,000 USD<br/>Generated $GIT_DATE <br/></body></html>" \
-  | sed 's/<!DOCTYPE html>//' \
-  | awk 'NF' \
-  | sed '/<strong>Trunk Based Development/d' \
-  | sed 's/Site Source/Book Source/' \
-  | sed 's/<aside/<aside style="display: none"/' \
-  | sed "s#href=\"/#href=\"#g" \
-  | sed "s#title=\"Introduction\" href=\"\"#title=\"Introduction\" href=\"index.html\"#" \
-  | sed "s#src=\"/#src=\"#g" > toc.html
-normalize_index_file_names toc.html false
 
 # slim the front page too.
 normalize_index_file_names_and_extract_just_the_article './' false
