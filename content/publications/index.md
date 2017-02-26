@@ -13,9 +13,7 @@ weight: 131
 ### Continuous Integration (June 29, 2007)
 
 <div>
-    <a href="http://bit.ly/lean-enterprise-paper">
-      <img width="93" src="ci.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
-    </a>
+    <img width="93" src="ci.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
     <p>
         <em>Continuous Integration: Improving Software Quality and Reducing Risk</em><br/>
         by Paul M. Duvall, Steve Matyas, Andrew Glover
@@ -31,15 +29,13 @@ weight: 131
 <p><em>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</em><br/>
 by Jez Humble and Dave Farley<br/>
 <a href="http://amzn.to/1QBJM7k"><strong>Amazon</strong> (hardback, kindle)</a><br />
-<a  href="http://bit.ly/jez-cd-ebook"><strong>InformIT</strong> (pdf, epub, mobi)</a><br />
+<a href="http://bit.ly/jez-cd-ebook"><strong>InformIT</strong> (pdf, epub, mobi)</a><br />
 Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindelive-20">中文</a> | <a href="http://www.amazon.co.jp/dp/4048707876?tag=contindelive-20">日本語</a> | <a href="http://acornpub.co.kr/book/continuous-delivery">한국말</a> | <a href="http://www.grupoa.com.br/livros/engenharia-de-software-e-metodos-ageis/entrega-continua/9788582601037">português</a></p></div>
 
 ### Lean Enterprise (January 3, 2015)
 
 <div>
-    <a href="http://bit.ly/lean-enterprise-paper">
-      <img width="90" src="lean-enterprise.png" style="float:left;padding-right:10px; border:0px solid black;"/>
-    </a>
+    <img width="90" src="lean-enterprise.png" style="float:left;padding-right:10px; border:0px solid black;"/>
     <p>
         <em>Lean Enterprise: How High Performance Organizations Innovate at Scale</em><br/>
         by Jez Humble, Joanne Molesky and Barry O'Reilly
@@ -57,9 +53,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 ### Build Quality In (February 27, 2015)
 
 <div>
-    <a>
-      <img width="90" src="build_quality_in" style="float:left;padding-right:10px; border:0px solid black;"/>
-    </a>
+    <img width="90" src="build_quality_in.jpeg" style="float:left;padding-right:10px; border:0px solid black;"/>
     <p>
         <em>Build Quality In: Continuous Delivery and DevOps Experience Reports</em><br/>
         by Steve Smith and Matthew Skelton
@@ -73,9 +67,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 ### DevOps Handbook (October 6, 2016)
 
 <div>
-    <a>
-      <img width="90" src="devopsHandbook.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
-    </a>
+    <img width="90" src="devopsHandbook.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
     <p>
         <em>The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</em><br/>
         by Gene Kim, Jez Humble, Patrick Debois, John Willis, John Allspaw
@@ -93,9 +85,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 ### More Engineering, Less Dogma (Oct 18, 2013)
 
 <div>
-    <a>
-      <img width="95" src="less_dogma.png" style="float:left; padding-right:10px"/>
-    </a>
+    <img width="95" src="less_dogma.png" style="float:left; padding-right:10px"/>
     <p>
         <em>More Engineering, Less Dogma: The Path Toward Continuous Delivery Of Business Value</em><br/>
         by Kurt Bittner and Glenn O’Donnell
@@ -108,9 +98,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 ### The Role of Continuous Delivery in IT and Organisational Performance (Oct 27, 2015)
 
 <div>
-    <a>
-      <img width="91" src="cdit_org_perf.png" style="float:left; padding-right:10px"/>
-    </a>
+    <img width="91" src="cdit_org_perf.png" style="float:left; padding-right:10px"/>
     <p>
         <em>The Role of Continuous Delivery in IT and Organizational Performance</em><br/>
         by Nicole Forsgren and Jez Humble
@@ -123,9 +111,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 ### 2015 State of DevOps Report
 
 <div>
-    <a>
-      <img width="89" src="2015_state_of_devops.png" style="float:left; padding-right:10px"/>
-    </a>
+    <img width="89" src="2015_state_of_devops.png" style="float:left; padding-right:10px"/>
     <p>
         <em>A survey of thousands of software development professionals distilled into a report that determines
         practices for the highest achieving organizations</em><br/>
@@ -144,9 +130,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 ### 2016 State of DevOps Report
 
 <div>
-    <a>
-      <img width="135" src="2016_state_of_devops.png" style="float:left; padding-right:10px"/>
-    </a>
+    <img width="135" src="2016_state_of_devops.png" style="float:left; padding-right:10px"/>
     <p>
         <em>As their 2015 report, a survey of thousands of software development professionals distilled into a report that determines
         practices for the highest achieving organizations</em><br/>
