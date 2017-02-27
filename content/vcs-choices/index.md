@@ -1,6 +1,6 @@
 ---
 date: 2016-03-02T20:08:11+01:00
-title: Version Control System (VCS) - choices
+title: Version control system choices
 weight: 32
 ---
 

@@ -1,6 +1,6 @@
 ---
 date: 2016-09-01T20:08:11+01:00
-title: You're doing It Wrong
+title: You're doing it wrong
 weight: 91
 ---
 

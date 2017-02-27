@@ -138,7 +138,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
                                                     off master or trunk rather than on long-lived feature
                                                     branches is still one of the most controversial ideas
                                                     in the Agile canon, despite the fact it is the norm in
-                                                    high-performing organizations such as Google.3
+                                                    high-performing organizations such as Google.
                                                     Indeed, many practitioners express surprise that this
                                                     practice is in fact implied by continuous integration,
                                                     but it is: The clue is in the word 'integration.'<span style="font-size: 120%">&rdquo;</span>

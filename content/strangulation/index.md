@@ -1,6 +1,6 @@
 ---
 date: 2016-07-08T20:08:11+01:00
-title: Strangler Applications
+title: Application strangulation
 weight: 78
 ---
 

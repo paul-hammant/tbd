@@ -65,12 +65,12 @@ googleAnalytics = "UA-24415524-3"
 	weight = 21
 
 [[menu.main]]
-	name   = "VCS features"
+	name   = "Version control system features"
 	url    = "vcs-features/"
 	weight = 31
 
 [[menu.main]]
-	name   = "VCS choices"
+	name   = "Version control system choices"
 	url    = "vcs-choices/"
 	weight = 32
 
@@ -95,7 +95,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 56
 
 [[menu.main]]
-	name   = "Continuous Integration"
+	name   = "Continuous Integration (CI)"
 	url    = "continuous-integration/"
 	weight = 61
 
@@ -105,7 +105,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 65
 
 [[menu.main]]
-	name   = "Continuous Delivery"
+	name   = "Continuous Delivery (CD)"
 	url    = "continuous-delivery/"
 	weight = 71
 
@@ -115,7 +115,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 75
 
 [[menu.main]]
-	name   = "Strangulation"
+	name   = "Application strangulation"
 	url    = "strangulation/"
 	weight = 78
 
@@ -125,7 +125,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 81
 
 [[menu.main]]
-	name   = "Doing it wrong"
+	name   = "You're doing it wrong"
 	url    = "youre-doing-it-wrong/"
 	weight = 91
 

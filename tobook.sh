@@ -36,17 +36,8 @@ function extract_just_the_article {
     | sed 's/<!-- print //' \
     | sed 's/ print -->//' | sponge "$1index.html"
 
-#  if [ "$2" = true ] ; then
-#    cat "$1index.html" \
-#      | sed "s#src=\"/#src=\"../#g" \
-#      | sed "s#ZZ/#../#" \
-#      | sed "s#url(/images/LogoSlim#url(../images/LogoSlim#g" | sponge "$1index.html"
-#  else
-#    cat "$1index.html" | sed "s#href=\"/#href=\"#g" \
-#      | sed "s#src=\"/#src=\"#g" \
-#      | sed "s#ZZ/##" \
-#      | sed "s#url(/images/LogoSlim#url(images/LogoSlim#g" | sponge "$1index.html"
-#  fi
+  python ../toc_number_applier.py "$1index.html"
+
 }
 
 function normalize_index_file_names_and_extract_just_the_article {
@@ -74,6 +65,8 @@ us \$1,000,000 USD<br/>Generated $GIT_DATE <br/></body></html>" \
   | sed "s#title=\"Introduction\" href=\"\"#title=\"Introduction\" href=\"index.html\"#" \
   | sed "s#src=\"/#src=\"#g" > toc.html
 normalize_index_file_names toc.html false
+
+python ../toc_numberer.py
 
 # slim site down to content
 normalize_index_file_names_and_extract_just_the_article 5-min-overview/ true
@@ -111,6 +104,6 @@ convert_to_book pdf --base-font-size 6
 convert_to_book mobi --pretty-print --pretty-print
 convert_to_book epub --pretty-print --pretty-print
 cd ../book/
-#netlify deploy
+netlify deploy
 cd ..
-#rm -rf tempHugo/
+rm -rf tempHugo/

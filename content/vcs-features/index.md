@@ -1,6 +1,6 @@
 ---
 date: 2016-03-01T20:08:11+01:00
-title: Version Control System (VCS) - features
+title: Version control system features
 weight: 31
 ---
 
