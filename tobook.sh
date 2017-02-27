@@ -45,6 +45,8 @@ function normalize_index_file_names_and_extract_just_the_article {
   normalize_index_file_names "$1index.html" $2
 }
 
+set -e
+
 # Gen site to temp folder
 hugo --disableRSS --quiet -d tempHugo
 
@@ -91,12 +93,11 @@ normalize_index_file_names_and_extract_just_the_article strangulation/ true
 normalize_index_file_names_and_extract_just_the_article vcs-features/ true
 normalize_index_file_names_and_extract_just_the_article vcs-choices/ true
 normalize_index_file_names_and_extract_just_the_article youre-doing-it-wrong/ true
+normalize_index_file_names_and_extract_just_the_article book/ true
 
 # slim the front page too.
 normalize_index_file_names_and_extract_just_the_article './' false
-cat index.html \
-    | sed '/<h1>Introduction/d' \
-    | sponge index.html
+cat index.html | sed '/<h1>Introduction/d' | sponge index.html
 
 # stitch into PDF book
 mkdir -p ../book

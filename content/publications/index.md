@@ -4,10 +4,6 @@ title: Publications
 weight: 131
 ---
 
-<h2 noprint id="this-site-as-a-book">This site as a book</h2>
-
-<ul noprint ><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.pdf">English PDF</a><br></li><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.mobi">English MOBI</a> - for Amazon's Kindle<br></li><li><a href="https://book.trunkbaseddevelopment.com/trunk_based_development_book.epub">English EPUB</a> - for iBooks, Google Books, Nook, and others</li></ul>
-
 ## Books promoting Trunk-Based Development
 
 ### Continuous Integration (June 29, 2007)

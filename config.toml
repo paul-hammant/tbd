@@ -154,6 +154,11 @@ googleAnalytics = "UA-24415524-3"
 	url    = "publications/"
 	weight = 131
 
+[[menu.main]]
+	name   = "Book"
+	url    = "book/"
+	weight = 132
+
 [blackfriday]
 	smartypants	= true
 	fractions = true
