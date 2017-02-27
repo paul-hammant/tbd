@@ -7,7 +7,7 @@ weight: 132
 This site transformed into book, via scripts:
 
 * [English PDF](https://book.trunkbaseddevelopment.com/trunk_based_development_book.pdf) - interactive 
-* English PDF] - printable (links changed to footnotes) - TODO 
+* English PDF - printable (links changed to footnotes) - TODO 
 * [English MOBI](https://book.trunkbaseddevelopment.com/trunk_based_development_book.mobi) - for Amazon's Kindle
 * [English EPUB](https://book.trunkbaseddevelopment.com/trunk_based_development_book.epub) - for iBooks, Google Books, Nook, and others
 
