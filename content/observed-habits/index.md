@@ -95,7 +95,7 @@ Not only do developers practicing Trunk-Based Development not break the build wi
 being able to go live at short notice. For example one hour, if the CIO visits and says it is going to happen. That
 means there is a bunch of automated tests that come with the build.
 
-## This vertical slices
+## Thin vertical slices
 
 Where possible stories or tasks that has been pulled from the backlog should be achievable by a developer or pair of
 developers in a short period of time, and in a small amount of commits. They should also transcend all the apparent 
