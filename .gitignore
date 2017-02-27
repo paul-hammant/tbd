@@ -3,5 +3,5 @@ public
 npm-debug.log
 .DS_Store
 .netlify
-book/
+/book
 tempHugo/
