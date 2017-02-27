@@ -79,9 +79,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 ### Measuring Continuous Delivery (2017)
 
 <div>
-    <a>
-      <img width="90" src="https://s3.amazonaws.com/titlepages.leanpub.com/measuringcontinuousdelivery/hero?1487800234" style="float:left;padding-right:10px; border:0px solid black;"/>
-    </a>
+    <img width="90" src="mcd.png" style="float:left;padding-right:10px; border:0px solid black;"/>
     <p>
         <em>Measuring Continuous Delivery: The what, why, and how of measuring Continuous Delivery</em><br/>
         by Steve Smith
