@@ -27,7 +27,9 @@ function extract_just_the_article {
     | sed 's/<nav/<nav style="display: none"/' \
     | sed 's/References elsewhere/References on the web/' \
     | sed 's/his site/his book/' \
+    | sed 's#https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono#ZZ/gfonts.css#' \
     | sed '/showHideRefs/d' \
+    | sed '/headerlink/d' \
     | awk 'NF' \
     | sponge "$1index.html"
 
@@ -101,7 +103,21 @@ cat index.html | sed '/<h1>Introduction/d' | sponge index.html
 
 # stitch into PDF book
 mkdir -p ../book
+
+wget -O gfonts.css "https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono"
+
+perl -pi -e 's/.query:-moz-placeholder,//' stylesheets/application.css
+perl -pi -e 's/.query:-ms-input-placeholder//' stylesheets/application.css
 convert_to_book pdf --base-font-size 6
+perl -pi -e 's/background-color:/font-size: 73%; background-color:/' vcs-features/index.html
+perl -pi -e 's/background-color:/font-size: 73%; background-color:/' vcs-choices/index.html
+perl -pi -e 's/background-color:/font-size: 75%; background-color:/' continuous-integration/index.html
+perl -pi -e 's/background-color:/font-size: 80%; background-color:/' continuous-review/index.html
+perl -pi -e 's/background-color:/font-size: 80%; background-color:/' continuous-delivery/index.html
+perl -pi -e 's/background-color:/font-size: 48%; background-color:/' concurrent-development-of-consecutive-releases/index.html
+perl -pi -e 's/background-color:/font-size: 87%; background-color:/' strangulation/index.html
+perl -pi -e 's/background-color:/font-size: 75%; background-color:/' alternative-branching-models/index.html
+perl -pi -e 's/background-color:/font-size: 62%; background-color:/' expanding-contracting-monorepos/index.html
 convert_to_book mobi --pretty-print --pretty-print
 convert_to_book epub --pretty-print --pretty-print
 cd ../book/

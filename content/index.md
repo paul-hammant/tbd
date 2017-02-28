@@ -5,7 +5,7 @@ type: index
 weight: 0
 ---
 
-<!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: cover"><span style="background-color: #5677fc">Introduction</span></h1> print -->
+<!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introduction</span></h1> print -->
 
 
 ## One line summary
