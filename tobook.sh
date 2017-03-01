@@ -27,7 +27,6 @@ function extract_just_the_article {
     | sed 's/<nav/<nav style="display: none"/' \
     | sed 's/References elsewhere/References on the web/' \
     | sed 's/his site/his book/' \
-    | sed 's#https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono#ZZ/gfonts.css#' \
     | sed '/showHideRefs/d' \
     | sed '/headerlink/d' \
     | awk 'NF' \

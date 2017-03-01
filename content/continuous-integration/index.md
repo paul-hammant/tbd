@@ -32,8 +32,8 @@ elsewhere. Trunk-Based Development did not say anything about Continuous Integra
 but there is an overlap today - the safety net around a mere branching model (and a bunch of techniques) is greatly 
 valued.
 
-Martin Fowler (with Matt Foemmel) called out Continuous Integration in an article in 2000
-{{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
+Martin Fowler (with Matt Foemmel) called out Continuous Integration in an article in 
+2000{{< ext url="https://www.martinfowler.com/articles/originalContinuousIntegration.html" >}}, 
 (rewritten in 2006{{< ext url="https://www.martinfowler.com/articles/continuousIntegration.html" >}}), and 
 ThoughtWorks colleagues went on to build the then-dominant "Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} 
 in early 2001. Cruise Control co-located the CI configuration on the branch being built next to the build script, as it 
