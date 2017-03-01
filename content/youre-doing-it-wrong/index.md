@@ -12,21 +12,20 @@ mean you are doing Trunk-Based Development. "We merge branches back to trunk oft
 and if you are grouping multiple developers on those branches of they not deleted after a couple of days, then it is 
 not the Trunk-Based Development branching model.
 
-## Direction of Cherry Pick on release branches
+## Cherry-pick of bug fixes from release branches to the trunk
 
-All your developers are using a trunk and they're doing the right thing re not breaking the build. Your release 
-cadence is infrequent enough to allow you to cut a release branch on a just in time basis, and harden that in the run
+All your developers are using a trunk and they are doing the right thing with respect to not breaking the build. Your release 
+cadence is infrequent enough to allow you to cut a release branch on a just in time basis and then harden that in the run
 up to the actual release. 
 
-If you are fixing the bug on the release branch and merging it down to the trunk you are doing 
-it wrong - although there is debate about this. 
-There is a chance you might forget to merge it down, and then there is going to be a regression at the next 
-release moment (fresh branch cut from trunk).
+But, if you are fixing bugs on the release branch and merging them down to the trunk you are doing 
+it wrong. There is a chance you might forget to merge it down, and then there is going to be a regression at the next 
+release moment (fresh branch cut from trunk). Then egg on face, and recriminations.
 
 Bugs should be reproduced and fixed on the trunk, and then **cherry-picked** to the release branch. A build should 
-happen from that, a second confirmation that the issue has been remediate, and that deployment should go live (perhaps 
-a point release).  If you can't reproduce on the trunk (truly rare), then you've permission to go ahead and reproduce
-it on the release branch, fix it there, and merge back.
+happen from that, a second confirmation that the issue has been remediated, and that deployment should go live (perhaps 
+a point release).  If you can not reproduce bugs on the trunk (truly rare), then you have permission to go ahead and 
+reproduce it on the release branch, fix it there, and merge back.
 
 ## Merging rather than cherry-pick to/from a release branch
 

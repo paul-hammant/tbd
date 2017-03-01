@@ -59,14 +59,18 @@ not going to just issue another release from the trunk).
 Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage 
 of here in the case of bugs after "release from tag", or even changes for point releases.
 
-### Directionality of cherry-pick
+### Cherry-picks from Trunk to branch ONLY
 
-This one is controversial even within teams practicing everything else about Trunk-Based Development: you should not 
-fix bugs on the release in the expectation of cherry-picking them back to the trunk, in case you forget to do that.
-Forgetting means a regression in production some weeks later (and someone getting fired). It can happen if things
-are being fixed in the night by a tired develop who wants to get back to bed.
+You should not fix bugs on the release branch in the expectation of cherry-picking them back to the trunk. 
+Why? Well in case you forget to do that in the heat of the moment. Forgetting means a regression in production some 
+weeks later (and someone getting fired). It can happen if things are being fixed in the night by a tired developer who 
+wants to get back to bed.
 
-Of course, sometimes you cannot reproduce the bug on trunk so you have to do it the other way round.
+This rule for Trunk Based Development remains difficult to accept, even within teams practicing everything else about 
+Trunk-Based Development. It takes just one regression though for a policy change to be made for the team.
+
+Of course, sometimes you **cannot** reproduce the bug on trunk so you have to do it the other way round, despite 
+everything mentioned above.
 
 ## Release branch deletion
 
