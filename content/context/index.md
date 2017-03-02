@@ -16,9 +16,9 @@ DevOps is encompassing too. At the very least, the expansion of development best
 (layers below it)
 
 Installation of your VCS technology is part of a foundational development infrastructure that includes developer 
-workstations or laptops that a appropriate for build testing and running of the application of service being made.
-Developers running the application only needs to be functionally viable. That doesn't have to match the performance
-of the expected production environment, and it is OK for that to be non-functionally different in other ways too.
+workstations or laptops that are appropriate for build testing and running of the application or service being made.
+Developers running the application only need it to be functionally viable. It doesn't have to match the performance
+of the expected production environment, and it is OK for it to be non-functionally different in other ways too.
 
 In the modern DevOps era, this probably means Infrastructure as Code. 
 
@@ -35,7 +35,7 @@ testing that).
 Importantly, the reader should understand that there is a large overlap between Trunk-Based Development and 
 Continuous Integration, as defined by its definers and documenters. Whereas Trunk-Based Development focuses on a
 pure source-control workflow and an individual contributor's obligations to that, Continuous Integration focuses 
-equally on that and the need to have machines issue early warnings breakages and incompatibilities.
+equally on that and the need to have machines issue early warnings on breakages and incompatibilities.
 
 ### Continuous Delivery
 
@@ -46,8 +46,8 @@ practice. The reader should dive into the Book and associated site, without dela
 ### Lean Experiments
 
 With CD locked in, continual improvement experiments can happen with a focus on time through "the machine" that is your 
-development and delivery operation. The experiments should draw of the field of science that is "Lean", so that the 
-impact of each experiment can be measured against predictions and decisions made approopriately following it.
+development and delivery operation. The experiments should draw off the field of science that is "Lean", so that the 
+impact of each experiment can be measured against predictions and decisions made appropriately following it.
 
 Lean Experiments can happen in any development team on any project but work **best** on foundations that 
 are solid. Specifically, the solid foundations of Trunk-Based Development, CI and CD. 
