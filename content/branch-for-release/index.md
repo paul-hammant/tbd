@@ -27,12 +27,14 @@ roll-forward strategy for solving it, meaning the fix for a bug is in the trunk,
 
 ## Who's committing where?
 
-Developers are committing (green dots) at the highest throughput rate to the trunk, and don't slow up around a branch-cut.
+Developers are committing (green dots) at the highest throughput rate to the trunk, and do not slow up around a 
+branch-cut or with proximity to a release.
 
 ![](branch_for_release2.png)
 
 The branch cut itself is a commit. Subversion and Perforce would technically have a bigger commit here, but all
-VCS systems in use today would count the commit as lightweight in terms of it's impact on the history/storage.
+VCS systems in use today would count the commit as 'lightweight' in terms of it's impact on the history/storage,
+and the time taken to create.
 
 That red dot is an accidental build break that was fixed (somehow) soon after.
 
@@ -72,10 +74,23 @@ Trunk-Based Development. It takes just one regression though for a policy change
 Of course, sometimes you **cannot** reproduce the bug on trunk so you have to do it the other way round, despite 
 everything mentioned above.
 
+## Patch releases
+
+It could be that your team has pushed a release out from a release branch, and now has a bug to remediate in 
+production. If the release cadence suits it, a cherry pick of a bug fix from the trunk to the release branch 
+and a point release from the same branch is fine.
+
+### Tag instead of branch
+
+Releasing from a tag on the trunk is a decent optimization for many teams, if possible. The tag could be numbered for 
+the release (say v1.1.1), and the branch can be avoided completely. Perhaps if there is bug in production and a branch
+is retroactively created from that tag, and the patch release (see above) can happen from there.
+
 ## Release branch deletion
 
-You really should delete release branches when releases from succeeding release branches have gone to prod. This is a 
-harmless tidying activity - branches can be undeleted again quite easily.
+Release branches are deleted after releases. Not immediately, but when it is clear release is no longer in production. 
+That is usually when releases from succeeding release branches have gone live. This is a 
+harmless tidying activity - branches can be undeleted again easily enough.
 
 # References elsewhere
 
