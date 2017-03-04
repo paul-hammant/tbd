@@ -202,17 +202,17 @@ branch too.
 
 ## Server/daemon implementations
 
-* [Jenkins](https://jenkins.io/) commercial service, for [Jenkins Open Source](https://github.com/jenkinsci) - on-premises installable
-* [Travis-CI](https://travis-ci.org/) - cloud
-* ThoughtWorks' [Snap-CI](https://www.snap-ci.com/) - cloud
-* [Circle-CI](https://circleci.com/) - cloud
-* ThoughtWorks' [Go CD](https://www.gocd.io) - cloud and on-premises install
-* [Codeship](https://codeship.com/) - cloud
-* Atlassian's [Bamboo](https://www.atlassian.com/software/bamboo) - on-premises install
-* JetBrains' [TeamCity](https://www.jetbrains.com/teamcity/) - on-premises install
-* Microsoft's [TFS platform](https://www.visualstudio.com/tfs/) - on-premises install (built into larger platform)
+* Jenkins{{< ext url="https://jenkins.io/" >}} commercial service, for Jenkins Open Source{{< ext url="https://github.com/jenkinsci" >}} - on-premises installable
+* Travis-CI{{< ext url="https://travis-ci.org/" >}} - cloud
+* ThoughtWorks' Snap-CI{{< ext url="https://www.snap-ci.com/" >}} - cloud
+* Circle-CI{{< ext url="https://circleci.com/" >}} - cloud
+* ThoughtWorks' Go CD{{< ext url="https://www.gocd.io" >}} - cloud and on-premises install
+* Codeship{{< ext url="https://codeship.com/" >}} - cloud
+* Atlassian's Bamboo{{< ext url="https://www.atlassian.com/software/bamboo" >}} - on-premises install
+* JetBrains' TeamCity{{< ext url="https://www.jetbrains.com/teamcity/" >}} - on-premises install
+* Microsoft's TFS platform{{< ext url="https://www.visualstudio.com/tfs/" >}} - on-premises install (built into larger platform)
 
-Note, for Jenkins, you should use it with GroupOn's [DotCI](https://github.com/groupon/DotCi) to co-locate the config 
+Note, for Jenkins, you should use it with GroupOn's DotCI{{< ext url="https://github.com/groupon/DotCi" >}} to co-locate the config 
 with the thing being built/verified in source-control.
 
 # References elsewhere
