@@ -91,10 +91,10 @@ GitHub (not Git) was next for the non-Google dev world with a built in code-revi
 effectively pre-commit - or at least commit to the master.
 
 There were (and are) other technologies for code review such as Crucible (Atlassian), UpSource (JetBrains), Gerrit, 
-Phabricator, but itegration into a platform experience is key.  GitLab, and RhodeCode are emerging platforms.
+Phabricator, but integration into a platform experience is key.  GitLab, and RhodeCode are emerging platforms.
 
-Read more in [Game Changes Review - Google's Mondrian](/game-changers/index.html#mondrian-2006) and 
-[Game Changers - GitHub's Pull Requests](/game-changers/index.html#pull-requests-2008).
+Read more in [Game Changers - Google's Mondrian](/game-changers/index.html#google-s-internal-devops-1998-onwards) and 
+[Game Changers - GitHub's Pull Requests](/game-changers/index.html#github-s-entire-platform-2008-onwards).
 
 ### Continuous Integration testing
 
@@ -124,7 +124,7 @@ teams that make release branches.  Not all VCS technologies support that. Git fo
 portal experiences around it, add the feature. In reality though you cannot stop people from making branches in a DVCS,
 but you can prevent them from pushing them to the shared repository.
 
-Deeper still, some enterprises will want to set permissions down the directory level within a branch within a repositry.
+Deeper still, some enterprises will want to set permissions down the directory level within a branch within a repository.
 This could be as simple as a gate, to ensure that process is ahered to around checkins, but could also be to guard
 some secrets in a Monorepo implementation. That last is counter to some of the "common code ownership" ideals of
 software engineering though.
@@ -136,6 +136,6 @@ limitless server side storage for their repository.  Git and Mercurial are inchi
 capacity, but there are still a few snafus to work through - how to cleanly/safely reduce the size of the client side clone
 history (while still being able to push changes back to the server) is a challenge.
 
-Microsoft released Git Virtual File System (~~GitVFS~~ GVFS) in early 2017, to layer on some of the things they had 
+Microsoft released Git Virtual File System (~~GitVFS~~ GVFS{{< ext url="https://github.com/Microsoft/GVFS" >}}) in early 2017, to layer on some of the things they had 
 become used to in the in-house recompilation of Perforce (SourceDepot - used from 1998 to 201x), as well as native VCS 
 of their commercial offering Team Foundation Server (TFS).
