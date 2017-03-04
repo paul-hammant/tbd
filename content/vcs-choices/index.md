@@ -6,7 +6,7 @@ weight: 32
 
 ## Git and Mercurial
 
-[Git website](https://git-scm.com/) and [Mercurial website](https://www.mercurial-scm.org/)
+See Git's website{{< ext url="https://git-scm.com" >}} and Mercurial's website{{< ext url="https://www.mercurial-scm.org" >}}
 
 Git and Mercurial have been popular DVCS technologies for many years. Portals like GitHub make Git in particular the default 
 choice for SCM/SVC/source-control. While the Linux Kernel is maintained with Git, and definitely takes advantage 
@@ -70,17 +70,17 @@ developer workstations.
 
 ### Platform Software Choices
 
-* [GitHub](https://github.com/) - Git, cloud 
-* [GitHub Enterprise](https://enterprise.github.com/home) - Git in GitHub's on-premises edition
-* [Gitlab](https://about.gitlab.com/) - Git, cloud and on-premises install
-* Atlassian's [Bitbucket server](https://www.atlassian.com/software/bitbucket/server) - Git and Mercurial
-* [RhodeCode](https://rhodecode.com/) - Git, Mercurial
-* Various [Collabnet](http://www.collab.net/) products and services for Git
-* Microsoft's [Team Foundation Server](https://www.visualstudio.com/tfs/) - git, on-premises install
+* GitHub {{< ext url="https://github.com" >}} - Git, cloud 
+* GitHub Enterprise {{< ext url="https://enterprise.github.com/home" >}} - Git in GitHub's on-premises edition
+* Gitlab {{< ext url="https://about.gitlab.com" >}} - Git, cloud and on-premises install
+* Atlassian's Bitbucket server {{< ext url="https://www.atlassian.com/software/bitbucket/server)" >}}- Git and Mercurial
+* RhodeCode {{< ext url="https://rhodecode.com" >}} - Git, Mercurial
+* Various Collabnet{{< ext url="http://www.collab.net" >}} products and services for Git
+* Microsoft's Team Foundation Server{{< ext url="https://www.visualstudio.com/tfs" >}} - git, on-premises install
 
 ## Perforce
 
-[Website](https://www.perforce.com/)
+Perforce's website{{< ext url="https://www.perforce.com" >}}
 
 ### Vanilla Perforce
 
@@ -134,7 +134,7 @@ As for Git-fusion, things checked out through p4-git and p4-dvcs are not encumbe
 
 ## Subversion
 
-[Website](https://subversion.apache.org/)
+Subversion's website{{< ext url="https://subversion.apache.org" >}}
 
 Subversion (Svn) has been in development for 16 years and was a sorely needed open-source replacement for CVS. It chases some of the
 features of Perforce, but is developed quite slowly. Nobody has pushed Subversion to the Perforce usage levels, but 
@@ -166,19 +166,19 @@ reasonably sized team, can take many hours.
 
 ### Platform Software Choices
 
-* [RhodeCode](https://rhodecode.com/) - installable on-premises
-* Various [Collabnet](http://www.collab.net/) products and services.
-* [ProjectLocker](http://projectlocker.com/) - cloud
-* [Deveo](https://deveo.com/svn-hosting/) - cloud
-* [RiouxSvn](https://riouxsvn.com/) - cloud
-* [SilkSvn](https://sliksvn.com/) - cloud
-* [Assembla](https://www.assembla.com/subversion/) - cloud and installable on-premises
-* [XP-dev](https://xp-dev.com/) - cloud
-* [Codeplex](https://www.codeplex.com/) - cloud
+* RhodeCode{{< ext url="https://rhodecode.com" >}} - installable on-premises
+* Various Collabnet{{< ext url="http://www.collab.net" >}} products and services.
+* ProjectLocker{{< ext url="http://projectlocker.com" >}} - cloud
+* Deveo{{< ext url="https://deveo.com/svn-hosting" >}} - cloud
+* RiouxSvn{{< ext url="https://riouxsvn.com" >}} - cloud
+* SilkSvn{{< ext url="https://sliksvn.com" >}} - cloud
+* Assembla{{< ext url="https://www.assembla.com/subversion" >}} - cloud and installable on-premises
+* XP-dev{{< ext url="https://xp-dev.com" >}} - cloud
+* Codeplex{{< ext url="https://www.codeplex.com" >}} - cloud
 
 ## Team Foundation Server - TFS
 
-[Website](https://www.visualstudio.com/tfs/)
+TFS's website{{< ext url="https://www.visualstudio.com/tfs" >}}
 
 Microsoft launched TFS in the mid-2000's with a **custom VCS technology** "TFVC". It is said that they have an internal 
 'SourceDepot' tool that is a special version of Perforce compiled for them in the nineties, and that TFS reflects some 
@@ -193,7 +193,7 @@ usage for Git{{< ext url="https://github.com/Microsoft/GVFS" >}}.
 
 ## PlasticSCM
 
-[Website](https://www.plasticscm.com/)
+Platic's website{{< ext url="https://www.plasticscm.com" >}}
 
 PlasticSCM is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk-Based Development and quite 
 self-contained (has integrated code review, etc). Plastic is very good with bigger binaries and comes with an 
