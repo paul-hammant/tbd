@@ -21,7 +21,7 @@ weight: 131
 
 ## Continuous Delivery (July 27, 2010)
 
-<div><a href="http://amzn.to/1QBJM7k"><img border="0" width="90" src="cd-book.png" style="float:left;padding-right:10px"/></a>
+<div><img border="0" width="90" src="cd-book.png" style="float:left;padding-right:10px"/>
 <p><em>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</em><br/>
 by Jez Humble and Dave Farley<br/>
 <a href="http://amzn.to/1QBJM7k"><strong>Amazon</strong> (hardback, kindle)</a><br />

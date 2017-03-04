@@ -493,14 +493,13 @@ They use a [Monorepo](/monorepos/) variant of a trunk, with internal code shared
 low-defect delivery of multiple applications and services. Each application/service has a release cadence chosen by the dev+biz 
 team in question. Yes, everything works just fine.
 
-Rachel Potvin presented on the same topic a couple of months later in "Why Google Stores Billions of Lines of Code in a 
+A couple of months later, Rachel Potvin presented at the @Scale Conference on the same topic{{< ext url="https://youtu.be/W71BTkUbdqE" >}} - "Why Google Stores Billions of Lines of Code in a 
 Single Repository":
 
 <div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/W71BTkUbdqE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" frameborder="0"></iframe></div>
 
 <!-- print <img src="google-tbd.png"> print -->
 <!-- print <br/> print -->
-<!-- print <a href="https://youtu.be/W71BTkUbdqE">Video Available at https://youtu.be/W71BTkUbdqE</a> print -->
 
 ## Microsoft's Git Virtual File System (2017)
 
@@ -509,7 +508,7 @@ Single Repository":
 Microsoft released ~~GitVFS~~ GVFS in early 2017 on GitHub{{< ext url="https://github.com/Microsoft/GVFS" >}}.
 
 This new technology deserves time and analysis before the full impact is determined. There is a suggestion from Brian Harry's 
-blog{{< ext url="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/" >}} that branch reduction was one of 
+blog{{< ext url="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs" >}} that branch reduction was one of 
 the motivators.
 
 # References elsewhere

@@ -25,7 +25,7 @@ function extract_just_the_article {
     | sed 's#<h1 id="references-elsewhere">References elsewhere</h1>#<h2 id="references-elsewhere">References elsewhere</h2>#' \
     | sed 's/<footer/<footer style="display: none"/' \
     | sed 's/<nav/<nav style="display: none"/' \
-    | sed 's/References elsewhere/References on the web/' \
+    | sed 's/>References elsewhere/>General references on the web/' \
     | sed 's/his site/his book/' \
     | sed '/showHideRefs/d' \
     | sed '/headerlink/d' \

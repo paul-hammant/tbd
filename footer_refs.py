@@ -7,7 +7,7 @@ soup = BeautifulSoup(open(sys.argv[1]).read(), "html.parser")
 # Refs for Footer
 
 ftr = 0
-refs = "<p>"
+refs = "<h2>Web references inline in this chapter</h2><p style=\"font-size: 70%\">"
 for span in soup.find_all("span", { "class" : "rref" }):
   ftr += 1;
   try:
@@ -36,12 +36,19 @@ for a in soup.find_all("a"):
       file = file[0:file.index("#")]
       subchap = href[href.index("#")+1:]
       sub_chapters = json.loads(open(file).read())
-      xx = sub_chapters['h2s']
       try:
-        a.replace_with(BeautifulSoup("<span><i>"+a.text+"</i><sup>[ch: "+xx[subchap]+"]</sup></span>", "html.parser"))
+        a.replace_with(BeautifulSoup("<span><i>"+a.text+"</i><sup>[ch: "+sub_chapters['h2s'][subchap]+"]</sup></span>", "html.parser"))
       except KeyError:
         print str(a)
         raise
 
+
+open(sys.argv[1], 'wb').write(str(soup))
+
+soup = BeautifulSoup(open(sys.argv[1]).read(), "html.parser")
+
+for a in soup.find_all("a"):
+
+  a.replace_with(BeautifulSoup("<span>"+a.text+" ["+a['href']+"]</span>", "html.parser"))
 
 open(sys.argv[1], 'wb').write(str(soup))

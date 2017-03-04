@@ -19,10 +19,17 @@ for h1 in soup.findAll('h1'):
 
 h2_ix = 0
 for h2 in soup.findAll('h2'):
-  h2_ix += 1
-  ch_breakdown['h2s'][h2['id']] = str(ch) + "." + str(h2_ix)
-  h2.string = str(ch) + "." + str(h2_ix) + " " + h2.text
+  if 'references-elsewhere' not in h2['id']:
+    h2_ix += 1
+    ch_breakdown['h2s'][h2['id']] = str(ch) + "." + str(h2_ix)
+    h2.string = str(ch) + "." + str(h2_ix) + " " + h2.text
 
 ch_breakdown["ch"] = str(ch)
+
+for footer in soup.findAll('footer'):
+  footer.replaceWith('')
+for aside in soup.findAll('aside'):
+  aside.replaceWith('')
+
 open(sys.argv[1].replace(".html",".json"), 'wb').write(json.dumps(ch_breakdown))
 open(sys.argv[1], 'wb').write(str(soup))
