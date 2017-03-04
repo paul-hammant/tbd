@@ -55,5 +55,5 @@ open(sys.argv[1], 'wb').write(str(soup))
 
 soup = BeautifulSoup(open(sys.argv[1]).read(), "html.parser")
 for a in soup.find_all("a"):
-  a.replace_with(BeautifulSoup("<span>"+a.text+" ["+a['href']+"]</span>", "html.parser"))
+  a.replace_with(BeautifulSoup("<span><strong>"+a.text+"</strong> ["+a['href']+"]</span>", "html.parser"))
 open(sys.argv[1], 'wb').write(str(soup))
