@@ -4,9 +4,9 @@ title: Publications
 weight: 131
 ---
 
-## Books promoting Trunk-Based Development
+# Books promoting Trunk-Based Development
 
-### Continuous Integration (June 29, 2007)
+## Continuous Integration (June 29, 2007)
 
 <div>
     <img width="93" src="ci.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
@@ -19,7 +19,7 @@ weight: 131
     <br clear="all"/>
 </div>
 
-### Continuous Delivery (July 27, 2010)
+## Continuous Delivery (July 27, 2010)
 
 <div><a href="http://amzn.to/1QBJM7k"><img border="0" width="90" src="cd-book.png" style="float:left;padding-right:10px"/></a>
 <p><em>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</em><br/>
@@ -28,7 +28,7 @@ by Jez Humble and Dave Farley<br/>
 <a href="http://bit.ly/jez-cd-ebook"><strong>InformIT</strong> (pdf, epub, mobi)</a><br />
 Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindelive-20">中文</a> | <a href="http://www.amazon.co.jp/dp/4048707876?tag=contindelive-20">日本語</a> | <a href="http://acornpub.co.kr/book/continuous-delivery">한국말</a> | <a href="http://www.grupoa.com.br/livros/engenharia-de-software-e-metodos-ageis/entrega-continua/9788582601037">português</a></p></div>
 
-### Lean Enterprise (January 3, 2015)
+## Lean Enterprise (January 3, 2015)
 
 <div>
     <img width="90" src="lean-enterprise.png" style="float:left;padding-right:10px; border:0px solid black;"/>
@@ -46,7 +46,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
-### Build Quality In (February 27, 2015)
+## Build Quality In (February 27, 2015)
 
 <div>
     <img width="90" src="build_quality_in.jpeg" style="float:left;padding-right:10px; border:0px solid black;"/>
@@ -60,7 +60,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
-### DevOps Handbook (October 6, 2016)
+## DevOps Handbook (October 6, 2016)
 
 <div>
     <img width="90" src="devopsHandbook.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
@@ -76,7 +76,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
-### Measuring Continuous Delivery (2017)
+## Measuring Continuous Delivery (2017)
 
 <div>
     <img width="90" src="mcd.png" style="float:left;padding-right:10px; border:0px solid black;"/>
@@ -91,9 +91,9 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
 </div>
 
 
-## Reports promoting Trunk-Based Development
+# Reports promoting Trunk-Based Development
 
-### More Engineering, Less Dogma (Oct 18, 2013)
+## More Engineering, Less Dogma (Oct 18, 2013)
 
 <div>
     <img width="95" src="less_dogma.png" style="float:left; padding-right:10px"/>
@@ -106,7 +106,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
-### The Role of Continuous Delivery in IT and Organisational Performance (Oct 27, 2015)
+## The Role of Continuous Delivery in IT and Organisational Performance (Oct 27, 2015)
 
 <div>
     <img width="91" src="cdit_org_perf.png" style="float:left; padding-right:10px"/>
@@ -119,7 +119,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
-### 2015 State of DevOps Report
+## 2015 State of DevOps Report
 
 <div>
     <img width="89" src="2015_state_of_devops.png" style="float:left; padding-right:10px"/>
@@ -138,7 +138,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
-### 2016 State of DevOps Report
+## 2016 State of DevOps Report
 
 <div>
     <img width="135" src="2016_state_of_devops.png" style="float:left; padding-right:10px"/>

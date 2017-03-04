@@ -11,19 +11,6 @@ weight: 101
 
 ## Modern claimed high-throughput branching models
 
-### GitFlow and similar
-
-There are plenty in the modern age that swear by this model, and feel it has plenty of room to scale with few
-downsides. It is a branching model that has **groups** of developers active concurrently in more than one branch (or fork).
-
-![](gitflow.png)
-
-- Diagram copied from Vincent Driessen's 2010 article on GitFlow: "A successful Git branching model"{{< ext url="http://nvie.com/posts/a-successful-git-branching-model" >}}
-
-I looks like you'll not be able to do [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/)
-with this branching model, or the hedging that [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch-by-abstraction/)
-enable.
-
 ### GitHub flow
 
 This is sooooo close to PR-centric Trunk-Based Development. Why? Because, it is a branching model that has individual
@@ -57,6 +44,19 @@ Of course if you rebase/squash your series of commits, they could land in the tr
 the review commentary is still available after the branch is deleted, as it should be.  
 
 See the GitHub Flow landing page for more{{< ext url="https://guides.github.com/introduction/flow/" >}}
+
+### GitFlow and similar
+
+There are plenty in the modern age that swear by this model, and feel it has plenty of room to scale with few
+downsides. It is a branching model that has **groups** of developers active concurrently in more than one branch (or fork).
+
+![](gitflow.png)
+
+- Diagram copied from Vincent Driessen's 2010 article on GitFlow: "A successful Git branching model"{{< ext url="http://nvie.com/posts/a-successful-git-branching-model" >}}
+
+I looks like you'll not be able to do [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/)
+with this branching model, or the hedging that [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch-by-abstraction/)
+enable.
 
 ## Legacy branching models
 

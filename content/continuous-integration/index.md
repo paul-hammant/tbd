@@ -74,7 +74,7 @@ facets of the 'distance' that we want to reduce (refer [5 minute overview](/5-mi
 ### Pipelines - further reading
 
 Note: Continuous Integration Pipelines are better described in the bestselling 
-[Publications - Continuous Delivery](/publications/index.html#continuous-delivery-july-27-2010) book. So are dozens of nuanced, 
+[Continuous Delivery](/publications/index.html#continuous-delivery-july-27-2010) book. So are dozens of nuanced, 
 lean inspired concepts for teams pushing that far.
 
 ## Advanced CI topics
@@ -173,7 +173,7 @@ branch with half a dozen developers keeping it from being 'complete' (somehow) a
 today, but it would be cool if you could have a ticking clock / count down on those branches at creation to enforce
 its 'temporary' intention.
 
-Refer to [Game Changers - Google Home Grown CI and Tooling](/game-changers/index.html#home-grown-ci-and-tooling) for more 
+Refer to [Game Changers - Google Home Grown CI and Tooling](/game-changers/index.html#google-s-internal-devops-1998-onwards) for more 
 information on the high commit rate CI stuff. Note too that they do not have a temp branch set up to facilitate that.
 
 ## Industry CI daemon confusion
