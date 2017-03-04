@@ -5,7 +5,7 @@ function normalize_index_file_names {
 }
 
 function convert_to_book {
-  ebook-convert toc.html "../book/trunk_based_development_book.$1" --page-breaks-before "//h:h1" --chapter "//h1" \
+  ebook-convert toc.html "../book/trunk_based_development_book$1" --page-breaks-before "//h:h1" --chapter "//h1" \
   --breadth-first "$2" "$3" --publisher=trunkbaseddevelopment.com --language=en --title "Trunk Based Development" \
   --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
 }
@@ -86,7 +86,6 @@ normalize_index_file_names_and_extract_just_the_article expanding-contracting-mo
 normalize_index_file_names_and_extract_just_the_article feature-flags/ true
 normalize_index_file_names_and_extract_just_the_article game-changers/ true
 normalize_index_file_names_and_extract_just_the_article monorepos/ true
-normalize_index_file_names_and_extract_just_the_article monorepos/ true
 normalize_index_file_names_and_extract_just_the_article observed-habits/ true
 normalize_index_file_names_and_extract_just_the_article publications/ true
 normalize_index_file_names_and_extract_just_the_article release-from-trunk/ true
@@ -107,7 +106,10 @@ wget -O gfonts.css "https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubunt
 
 perl -pi -e 's/.query:-moz-placeholder,//' stylesheets/application.css
 perl -pi -e 's/.query:-ms-input-placeholder//' stylesheets/application.css
-convert_to_book pdf --base-font-size 6
+#convert_to_book .pdf --base-font-size 6
+git init
+git add .
+git commit -m "start"
 perl -pi -e 's/background-color:/font-size: 73%; background-color:/' vcs-features/index.html
 perl -pi -e 's/background-color:/font-size: 73%; background-color:/' vcs-choices/index.html
 perl -pi -e 's/background-color:/font-size: 75%; background-color:/' continuous-integration/index.html
@@ -117,9 +119,36 @@ perl -pi -e 's/background-color:/font-size: 48%; background-color:/' concurrent-
 perl -pi -e 's/background-color:/font-size: 87%; background-color:/' strangulation/index.html
 perl -pi -e 's/background-color:/font-size: 75%; background-color:/' alternative-branching-models/index.html
 perl -pi -e 's/background-color:/font-size: 62%; background-color:/' expanding-contracting-monorepos/index.html
-convert_to_book mobi --pretty-print --pretty-print
-convert_to_book epub --pretty-print --pretty-print
+#convert_to_book .mobi --pretty-print --pretty-print
+#convert_to_book .epub --pretty-print --pretty-print
+git stash
+
+python ../footer_refs.py 5-min-overview/index.html 
+python ../footer_refs.py alternative-branching-models/index.html 
+python ../footer_refs.py branch-by-abstraction/index.html 
+python ../footer_refs.py branch-for-release/index.html 
+python ../footer_refs.py concurrent-development-of-consecutive-releases/index.html 
+python ../footer_refs.py context/index.html 
+python ../footer_refs.py continuous-delivery/index.html 
+python ../footer_refs.py continuous-integration/index.html 
+python ../footer_refs.py continuous-review/index.html 
+python ../footer_refs.py deciding-factors/index.html 
+python ../footer_refs.py expanding-contracting-monorepos/index.html 
+python ../footer_refs.py feature-flags/index.html 
+python ../footer_refs.py game-changers/index.html 
+python ../footer_refs.py monorepos/index.html
+python ../footer_refs.py observed-habits/index.html 
+python ../footer_refs.py publications/index.html 
+python ../footer_refs.py release-from-trunk/index.html 
+python ../footer_refs.py strangulation/index.html 
+python ../footer_refs.py vcs-features/index.html 
+python ../footer_refs.py vcs-choices/index.html 
+python ../footer_refs.py youre-doing-it-wrong/index.html 
+python ../footer_refs.py book/index.html 
+
+convert_to_book _printable.pdf --base-font-size 6
+rm -rf .git
 cd ../book/
-netlify deploy
+#netlify deploy
 cd ..
-rm -rf tempHugo/
+#rm -rf tempHugo/

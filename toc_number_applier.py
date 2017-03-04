@@ -2,13 +2,26 @@ from BeautifulSoup import BeautifulSoup
 import json
 import sys
 
-m2 = json.loads(open("toc2.json").read())
+toc2 = json.loads(open("toc2.json").read())
 soup = BeautifulSoup(open(sys.argv[1]).read())
+ch = 0
+
+ch_breakdown = {}
+ch_breakdown['h2s'] = {}
+
 for h1 in soup.findAll('h1'):
-    for key in m2:
+    for key, ix in toc2.items():
         if h1.text in key:
             span = h1.find('span')
             if span is not None:
                 span.string = key
+                ch = ix;
 
+h2_ix = 0
+for h2 in soup.findAll('h2'):
+  h2_ix += 1
+  ch_breakdown['h2s'][h2['id']] = str(ch) + "." + str(h2_ix)
+
+ch_breakdown["ch"] = str(ch)
+open(sys.argv[1].replace(".html",".json"), 'wb').write(json.dumps(ch_breakdown))
 open(sys.argv[1], 'wb').write(str(soup))
