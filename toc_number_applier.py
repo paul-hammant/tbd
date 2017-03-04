@@ -22,8 +22,6 @@ for h2 in soup.findAll('h2'):
   if 'references-elsewhere' not in h2['id']:
     h2_ix += 1
     ch_breakdown['h2s'][h2['id']] = str(ch) + "." + str(h2_ix)
-    h2.string = str(ch) + "." + str(h2_ix) + " " + h2.text
-
 ch_breakdown["ch"] = str(ch)
 
 for footer in soup.findAll('footer'):

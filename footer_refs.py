@@ -44,9 +44,9 @@ for a in soup.find_all("a"):
       subchap = href[href.index("#")+1:]
       sub_chapters = json.loads(open(file).read())
       try:
-        a.replace_with(BeautifulSoup("<span><i>"+a.text+"</i><sup>[ch: "+sub_chapters['h2s'][subchap]+"]</sup></span>", "html.parser"))
+        a.replace_with(BeautifulSoup("<span><i>"+a.text+"</i><sup>[ch: " + sub_chapters['h2s'][subchap] + "]</sup></span>", "html.parser"))
       except KeyError:
-        print str(a)
+        print str(a) + " -->" + subchap + "<"
         raise
 
 open(sys.argv[1], 'wb').write(str(soup))
@@ -56,4 +56,18 @@ open(sys.argv[1], 'wb').write(str(soup))
 soup = BeautifulSoup(open(sys.argv[1]).read(), "html.parser")
 for a in soup.find_all("a"):
   a.replace_with(BeautifulSoup("<span><strong>"+a.text+"</strong> ["+a['href']+"]</span>", "html.parser"))
+
+open(sys.argv[1], 'wb').write(str(soup))
+
+# Reload soup again for some reason.
+
+soup = BeautifulSoup(open(sys.argv[1]).read(), "html.parser")
+sub_chapters = json.loads(open(sys.argv[1].replace(".html", ".json")).read())
+h2_ix = 0
+for h2 in soup.findAll('h2'):
+  print "h2 " + h2.text
+  if 'references-elsewhere' not in str(h2) and 'Books promoting' not in str(h2) and 'Reports promoting' not in str(h2):
+    h2_ix += 1
+    h2.string = sub_chapters['ch'] + "." + str(h2_ix) + ": " + h2.text
+
 open(sys.argv[1], 'wb').write(str(soup))

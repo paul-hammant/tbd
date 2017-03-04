@@ -4,7 +4,9 @@ title: Publications
 weight: 131
 ---
 
-# Books promoting Trunk-Based Development
+## Books promoting Trunk-Based Development
+
+<hr/>
 
 ## Continuous Integration (June 29, 2007)
 
@@ -90,8 +92,9 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
+## Reports promoting Trunk-Based Development
 
-# Reports promoting Trunk-Based Development
+<hr/>
 
 ## More Engineering, Less Dogma (Oct 18, 2013)
 
@@ -133,7 +136,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
         version control of everything required to reproduce production environments<span style="font-size: 120%">&rdquo;</span>
         <br/>by Puppet Labs
         <br/>
-        <a href="https://puppet.com/resources/white-paper/2015-state-devops-report"><strong>Puppet's download form</strong></a>
+        <a href="https://puppet.com/resources/white-paper/2015-state-devops-report"><strong>Puppet's download form for the report</strong></a>
     </p>
     <br clear="all"/>
 </div>
@@ -155,7 +158,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
                                                     but it is: The clue is in the word 'integration.'<span style="font-size: 120%">&rdquo;</span>
         <br/>by Puppet Labs
         <br/>
-        <a href="https://puppet.com/resources/white-paper/2016-state-of-devops-report"><strong>Puppet's download form</strong></a>
+        <a href="https://puppet.com/resources/white-paper/2016-state-of-devops-report"><strong>Puppet's download form for the report</strong></a>
     </p>
     <br clear="all"/>
 </div>

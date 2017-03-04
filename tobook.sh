@@ -5,7 +5,7 @@ function normalize_index_file_names {
 }
 
 function convert_to_book {
-  ebook-convert toc.html "../book/trunk_based_development_book$1" --page-breaks-before "//h:h1" --chapter "//h1" \
+  ebook-convert toc.html "../book/trunk_based_development_book$1" --page-breaks-before "//h:h1" --chapter "//h1" --max-toc-links 0 \
   --breadth-first "$2" "$3" --publisher=trunkbaseddevelopment.com --language=en --title "Trunk Based Development" \
   --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
 }
