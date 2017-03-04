@@ -106,7 +106,7 @@ wget -O gfonts.css "https://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubunt
 
 perl -pi -e 's/.query:-moz-placeholder,//' stylesheets/application.css
 perl -pi -e 's/.query:-ms-input-placeholder//' stylesheets/application.css
-#convert_to_book .pdf --base-font-size 6
+convert_to_book .pdf --base-font-size 6
 git init
 git add .
 git commit -m "start"
@@ -119,8 +119,8 @@ perl -pi -e 's/background-color:/font-size: 48%; background-color:/' concurrent-
 perl -pi -e 's/background-color:/font-size: 87%; background-color:/' strangulation/index.html
 perl -pi -e 's/background-color:/font-size: 75%; background-color:/' alternative-branching-models/index.html
 perl -pi -e 's/background-color:/font-size: 62%; background-color:/' expanding-contracting-monorepos/index.html
-#convert_to_book .mobi --pretty-print --pretty-print
-#convert_to_book .epub --pretty-print --pretty-print
+convert_to_book .mobi --pretty-print --pretty-print
+convert_to_book .epub --pretty-print --pretty-print
 git stash
 
 python ../footer_refs.py 5-min-overview/index.html 
@@ -149,6 +149,6 @@ python ../footer_refs.py book/index.html
 convert_to_book _printable.pdf --base-font-size 6
 rm -rf .git
 cd ../book/
-#netlify deploy
+netlify deploy
 cd ..
-#rm -rf tempHugo/
+rm -rf tempHugo/
