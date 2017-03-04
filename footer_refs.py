@@ -4,7 +4,7 @@ import json
 
 soup = BeautifulSoup(open(sys.argv[1]).read(), "html.parser")
 
-# Refs for Footer
+# Replace ref anchors to chapter footer references
 
 ftr = 0
 refs = "<h2>Web references inline in this chapter</h2><p style=\"font-size: 70%\">"
@@ -20,10 +20,17 @@ for span in soup.find_all("span", { "class" : "rref" }):
   span.a.replace_with(new_tag)
 refs += "</p>"
 
-h2 = soup.find("h2", { "id" : "references-elsewhere" })
-if h2 is not None:
-  ix = h2.parent.contents.index(h2)
-  h2.parent.insert(ix, BeautifulSoup(refs, "html.parser"))
+# Write a inline links section if needed
+
+if ftr > 0:
+  h2 = soup.find("h2", { "id" : "references-elsewhere" })
+  if h2 is not None:
+    ix = h2.parent.contents.index(h2)
+    h2.parent.insert(ix, BeautifulSoup(refs, "html.parser"))
+  else:
+    soup.body.article.div.insert(len(soup.body.article.div.contents), BeautifulSoup(refs, "html.parser"))
+
+# Replace anchors to other TBD pages with chapter references.
 
 for a in soup.find_all("a"):
   href = a['href'].replace('../','')
@@ -42,13 +49,11 @@ for a in soup.find_all("a"):
         print str(a)
         raise
 
-
 open(sys.argv[1], 'wb').write(str(soup))
 
+# All remaining anchors ... requires a reload of soup for some reason.
+
 soup = BeautifulSoup(open(sys.argv[1]).read(), "html.parser")
-
 for a in soup.find_all("a"):
-
   a.replace_with(BeautifulSoup("<span>"+a.text+" ["+a['href']+"]</span>", "html.parser"))
-
 open(sys.argv[1], 'wb').write(str(soup))
