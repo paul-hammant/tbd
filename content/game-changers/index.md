@@ -42,7 +42,7 @@ Note: Over time all version control systems would adopt this branch/merge langua
 ![](to_tbd1.png)
 
 A handful of scripts created in 1986 by Dick Grune, were fashioned into an initial release of CVS{{< ext url="https://en.wikipedia.org/wiki/Concurrent_Versions_System" >}}
-in 1990. For the open source community, CVS was it until Subversion came along year later. The adoption of CVS in the 
+in 1990. For the open source community, CVS was it until Subversion came along years later. The adoption of CVS in the 
 young open source community spurred its adoption in the enterprise too. While many branching models were possible, 
 merging was painful and Trunk-Based Development was the sensible choice.
 
@@ -72,13 +72,13 @@ Microsoft tool for source-control. That daily developer workflow was:
 10. check in (commit/push)
 11. makes a daily build from HEAD of the shared master branch
 
-The authors note in the book, that #10 is not always an everyday thing. And the last step, #11, isn't per developer, it is 
+The authors note in the book, that #10 is not always an everyday thing. And the last step, #11, is not per developer, it is 
 for the designated "build master" within the team, and manual. This workflow was initially pioneered in the Excel group, 
 and then Word, and then Windows NT, and the timespan for this way of working was from around 1989 through 1995 when the 
 interviews completed and the book published.
 
 The book also briefly mentions Test Case Manager (TCM) and "Microsoft Test". These were tools for helping developers 
-manage and record/edit/playback application tests at their workstations. It isn't clear if all SLM-using teams
+manage and record/edit/playback application tests at their workstations. It is not clear if all SLM-using teams
 also used these, but the Excel team did (as they maintained the former at least).
 
 These are clearly practices to support teams working in a trunk model.
@@ -140,7 +140,7 @@ was often oral at that time "build passes, gang".
 
 He calls out a requirement for "fast integration/build/test cycles". This is key. In fact, every pro Trunk-Based Development 
 game changer listed in this page was facilitated by faster builds generally (versus a predecessor technique for the team
-in question). And, no, faster did not mean delete or comment out automated test execution in the build. Faster meant reduce 
+in question). And, no, faster did not mean delete or comment out automated test execution in the build. Faster meant to reduce 
 the elapsed time to "a few minutes" (Kent again).
 
 Kent had pioneered (with many industry luminary friends) in 1996 on the famous Chrysler Comprehensive Compensation System 
@@ -169,7 +169,7 @@ Jason Yip{{< ext url="http://jchyip.blogspot.com" >}}) went on to build the then
 "Cruise Control"{{< ext url="http://cruisecontrol.sourceforge.net" >}} starting in early 2001 (for CVS, StarTeam). This was a 
 groundbreaking technology and very accessible to companies wanting a machine to fully verify checkins. ThoughtWorks 
 already had success the year before with the same server design on a client project, and CruiseControl was the
-rewrite (from scratch) in order to make it open source. CruiseControl was quite successful in the enterprise, and was
+rewrite (from scratch) in order to make it open source. CruiseControl was quite successful in the enterprise and was
 and easy decision after teams had read the Continuous Integration paper above.
 
 Early CI servers, including CruiseControl used to have a "quiet period" to make sure they had received every last 
@@ -183,7 +183,7 @@ project's source and build file - developers could tweak CI configuration in a c
 
 ![](to_tbd1.png)
 
-Apache's Gump was built on a similar timeline to CruiseControl, but focused more on the binary integration hell of 
+Apache's Gump was built on a similar timeline to CruiseControl but focused more on the binary integration hell of 
 interdependent Apache (and other) open-source projects. It gave an early warning of integration clashes that were 
 already or were about to be problematic, for teams. While impressive, it did not gain traction in the enterprise. 
 This is because enterprises were able to be more buffered from open-source library hell (and the implicit diamond 
@@ -220,10 +220,10 @@ today, like this one{{< ext url="https://issues.apache.org/jira/browse/SVN-4635"
 
 In comparison to the clunky Subversion, Git had "lightweight" branching.
 This made it easier to consider multiple branches as active (in parallel) and merged back later. Git's merge engine was very 
-good too. It was more able than prior merge technologies, to silently process complexity. 
+good too. It was more able than prior merge technologies to silently process complexity. 
 
 A critical part of Git was local branching. A developer could make multiple local branches, and even map them to the 
-same remote branch. Say one could be a feature, part complete, and another a surprise bug fix to go back first. Or the 
+same remote branch. Say one could be a feature, part complete and another a surprise bug fix to go back first. Or the 
 developer could be making alternate implementations of the same complicated thing, to decide later which to push back. 
 Git does not need a centralized server repo, but enterprise teams are going to have one anyway.
 
@@ -262,12 +262,12 @@ which made the results of the pre-commit CI verification very clear.
 ![](to_tbd3.png)
 
 Tools for code-reviewers/approvers of proposed contributions to trunk were developed internally at Google in the early 
-2000's as a command-line tool and part of "Google 3". Things would not land in the shared trunk, until everyone agreed. 
+2000's as a command-line tool and part of "Google 3". Things would not land in the shared trunk until everyone agreed. 
 Their culture was that such that reviews were speedy. Getting pending commits to the point of rejection or acceptance 
-("Looks Good To Me" : LGTM) was almost competitive. Some new Googlers (Nooglers) would pride themselves about taking
+("Looks Good To Me": LGTM) was almost competitive. Some new Googlers (Nooglers) would pride themselves about taking
 on random code-review chores and being one of a few people that weigh into the decision moment.
 
-The code review technology marshaled changes for proposed commits to the trunk, and stored them outside the VCS in 
+The code review technology marshaled changes for proposed commits to the trunk and stored them outside the VCS in 
 question (in a database probably). To do that the tech would reach into the developer machine and the appropriate
 moment and make a tar.gz of the changes and the meta-data around them, and pull that back to the central system
 for global presentation. Anyone could review anything. A review was just on a commit (not a batch of commits). Therefore 
@@ -380,11 +380,15 @@ Dan North gave a deeper account of the mission at GOTO in 2014{{< ext url="https
 (no video sadly) and was interviewed later by InfoQ{{< ext url="https://www.infoq.com/news/2014/07/birth-cd-devops" >}}.
 
 A year or so before that mission, Sam and Dave were on a different client, UK retailer 'Dixons'. They were part of a team rolling out  
-emergent DevOps practices, which they would get to reuse and refine on the following AOL mission. Standouts were: making the
-test environments have consistent behaviour with production environments (very close by not quite 'Infrastructure as Code'), 
-QA automation technologies setup by the dev team & inducting/co-locating individual QAs with the dev team, Test Driven Development (TDD) and 
-Acceptance Test Driven development (ATDD), a CI pipeline that included performance tests, a focus of team dynamics for
-high throughput. 
+emergent DevOps practices, which they would get to reuse and refine on the following AOL mission. Standouts were: 
+
+1. making the test environments have consistent behaviour with production environments (very close by not quite 'Infrastructure as Code') 
+2. QA automation technologies setup by the dev team 
+3. inducting/co-locating individual QAs with the dev team
+4. Test Driven Development (TDD) 
+5. Acceptance Test Driven development (ATDD)
+6. a CI pipeline that included performance tests
+7. a focus of team dynamics forhigh throughput
 
 ## Travis-CI's GitHub integration and pass/fail badges (2011)
 
@@ -398,13 +402,13 @@ This made it was clear whether the proposed PR would break the build or not were
 ## Microservices (2011 and 2012)
 
 The emergence of micro-services as small buildable/deployable things that are glued together with TCP/IP (and 
-XML/YAML/DNS configuration) reinforced "many small repoitories" (the kinda reinforce each other really), while this can be
+XML/YAML/DNS configuration) reinforced "many small repositories" (the kinda reinforce each other really), while this can be
 done with any branching model, the non-trunk models probably had the mindshare. Monorepos were out completely. A 
-possibility from monorepos, teams sharing code and source level a HEAD revision, positively laughed it. The history 
+possibility from monorepos teams sharing code and source level a HEAD revision, positively laughed it. The history 
 page of Wikipedia lists multiple people concurrently pushing the same emergent micro-service 
 idea{{< ext url="https://en.wikipedia.org/wiki/Microservices#History" >}}.
 
-## Case Study: A Practical Approach To Large Scale Agile Development (2012)
+## Case Study: A Practical Approach To Large-Scale Agile Development (2012)
 
 ![](to_tbd1.png)
 
@@ -441,7 +445,7 @@ on techniques like Branch by Abstraction easier, or reduce the need for it, if m
 
 Other source-control tools are not doing semantic diff/merge yet (2017), but they should be. Semantic merge is
 just as useful for Trunk-Based Development and multi-branch models. It means that there are less likely to be clash 
-situations for commits a developer wants to do. Maybe that last vision isn't quite complete yet, but there's a direction
+situations for commits a developer wants to do. Maybe that last vision is not quite complete yet, but there's a direction
  to go in now.
 
 ## Snap-CI's per-commit speculative mergeability analysis (2013)
@@ -449,8 +453,8 @@ situations for commits a developer wants to do. Maybe that last vision isn't qui
 ![](to_tbd1.png)
 
 Snap-CI was the first CI service to setup pipelines for new branches in the tracked repository without a human initiating
-that - it did so automatically on push of the first commit into a branch. Well, at least if the branch name conforms 
-to a given regex/prefix. That commit, and any to the branch afterwards, even preceding the Pull Request, are run through a
+that - it did so automatically on the first push of a commit creating a branch. Well, at least if the branch name conforms 
+to a given regex/prefix. That commit, and any to the branch afterward, even preceding the Pull Request, are run through a
 pipeline that includes:
 
 1. all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ

@@ -8,7 +8,7 @@ weight: 32
 
 See Git's website{{< ext url="https://git-scm.com" >}} and Mercurial's website{{< ext url="https://www.mercurial-scm.org" >}}
 
-Git and Mercurial have been popular DVCS technologies for many years. Portals like GitHub make Git in particular the default 
+Git and Mercurial have been popular DVCS technologies for many years. Portals like GitHub make Git, in particular, the default 
 choice for SCM/SVC/source-control. While the Linux Kernel is maintained with Git, and definitely takes advantage 
 of the D-Distributed aspect of the DVCS of Git (in that many divergent versions of kernel can exist over 
 long periods of time), most enterprises are still going to count a single repository as the principal one, and within 
@@ -21,7 +21,7 @@ most valuable branch, and once cloned to your local workstation, the repository 
 
 An effective Trunk-Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
 (and of master within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
-consumed back into origin:master. Other branching models use the same Pull-Request process for 
+consumed back into `origin:master`. Other branching models use the same Pull-Request process for 
 code-reviews too - it is the normal way of working with Git since GitHub rolled out the feature.
 
 ### Size Limits
@@ -92,23 +92,23 @@ executable binary file) is the whole server and does not need to be installed - 
 Perforce is the last VCS technology that ordinarily maintains the read-only bit on the developer workstation. You 
 definitely need a plugin for your IDE to handle the wire operations with the server, so you are not confronted with the
 fact that source files are read-only. Because the Perforce (p4) client having to involve the server for the flipping of
-read only bits in respect of editing source files, it requires a permanent connection to the server. What that 
-facilitates is speed of operation for very large sets of files on the client. The Perforce server already knows what 
+read-only bits in respect of editing source files, it requires a permanent connection to the server. What that 
+facilitates is the speed of operation for very large sets of files on the client. The Perforce server already knows what 
 files need to have updated in your working copy, ahead of you doing 'p4 sync' operation. It negates the need for a 
 directory traversal looking for locally changed files, and it means the sync operation can be limited to a second or two.
 
 Historically Perforce was not able to **locally** show the history of the files within it. It needed that server 
 connection again for history operations. A number of DVCS capabilities in newer versions of Perforce (see below) allow
-local history now though.
+local history now, though.
 
-Perforce allows branches to be set up at any sub-directory not just the root one. It also allows read and/or write
+Perforce allows branches to be set up at any sub-directory, not just the root one. It also allows read and/or write
 permissions to be specified at any directory (or branch) within large and small source trees.
 
 #### No Code Review
 
 Perforce does not have code-review features integrated into its traditional server daemon. By customizing a modified Gitlab 
 called GitSwarm 'side install', Perforce now has a code review capability. It also has it with an alternate side-install 
-called just Swarm (a slightly older product), that doesn't not offer the Git capability of GitSwarm, but does add in much
+called just Swarm (a slightly older product), that does not offer the Git capability of GitSwarm, but does add in much
 of the team-ware features like code review.
 
 ### Git Fusion
@@ -137,7 +137,7 @@ As for Git-fusion, things checked out through p4-git and p4-dvcs are not encumbe
 Subversion's website{{< ext url="https://subversion.apache.org" >}}
 
 Subversion (Svn) has been in development for 16 years and was a sorely needed open-source replacement for CVS. It chases some of the
-features of Perforce, but is developed quite slowly. Nobody has pushed Subversion to the Perforce usage levels, but 
+features of Perforce but is developed quite slowly. Nobody has pushed Subversion to the Perforce usage levels, but 
 that is claimed as a possibility.
 
 Subversion, like Perforce, has read and write permissions down to the directory and branch.
@@ -160,9 +160,9 @@ local history, local-branching possibilities of Git. The local branching possibi
 mode of operation are very handy, and it should work easily with whatever Svn hosting platform you installed.
 
 Note: That clone from subversion can be many tens of times slower, 
-than the equivalent clone from Git, because it it is recreating the zipped Git history on the client-side as in
+than the equivalent clone from Git, because it is recreating the zipped Git history on the client-side as in
 uses the classic Subversion wire protocol, which is more chatty. Indeed the initial clone of years of commits for a 
-reasonably sized team, can take many hours. 
+reasonably sized team can take many hours. 
 
 ### Platform Software Choices
 
@@ -188,7 +188,7 @@ Microsoft encouraged a use of Git within it, rather than then proprietary VCS th
 
 TFS is perfectly compatible with a Trunk-Based Development usage.
 
-Note: Microsoft are doating back to the Git community with a Git Virtual File System, which allows some monorepo 
+Note: Microsoft are donating back to the Git community with a Git Virtual File System, which allows some monorepo 
 usage for Git{{< ext url="https://github.com/Microsoft/GVFS" >}}.
 
 ## PlasticSCM
@@ -198,11 +198,11 @@ Platic's website{{< ext url="https://www.plasticscm.com" >}}
 PlasticSCM is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk-Based Development and quite 
 self-contained (has integrated code review, etc). Plastic is very good with bigger binaries and comes with an 
 intuitive "Branch Explorer" to see the evolution of branches, view diffs, execute merges, etc. For sizes of individual
-repos, multiple terrabytes is not unheard of. A least for some of the ganes-industry customers.
+repositories, multiple terabytes is not unheard of. A least for some of the games-industry customers.
  
 It is also the first modern VCS to have semantic merge - it understands 
 select programming languages and the refactorings developers perform on them. For example "move method", where that
-method is 50 lines long, isn't 50 lines added and 50 deleted in one commit, it is a much more *exact* and terse diff
+method is 50 lines long, is not 50 lines added and 50 deleted in one commit, it is a much more *exact* and terse diff
 representation. 
 
 Plastic even calmly handles a situation where one developer moves a method within a source, and another simultaneously 

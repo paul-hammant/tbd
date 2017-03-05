@@ -43,7 +43,7 @@ Trunk-Based Development will always be **release ready**
 If an executive manager visited the development team and commanded "Competitor X has launched feature Y, go 
 live now with what we have", the worst response would be "give us one hour". The development team might have been very 
 busy with tricky or even time-consuming tasks (therefore partially complete), but in an hour, they are able to go live 
-with something just stabilized from the trunk. Perhaps they can do it in less than, an hour. The rule, though, is **never break 
+with something just stabilized from the trunk. Perhaps they can do it in less than, an hour. The rule, though, is to **never break 
 the build**, and **always be release ready** because the CIO or the business may surprise you.
 
 #### Where releases happen
@@ -55,8 +55,8 @@ Teams with a higher release cadence do the former, and those with a lower releas
 
 ### Checking out / cloning
 
-All developers in a team that work on an application/service, clone and checkout from the trunk. They will 
-update/pull/sync from that branch many times a day, knowing that the build within it works perfectly. Their fast 
+All developers in a team working on an application/service, clone and checkout from the trunk. They will 
+update/pull/sync from that branch many times a day, **knowing** that the build passes. Their fast 
 source-control system means that their delays are a matter of a few seconds for this operation. They are now 
 integrating their team-mates commits on an hour by hour basis.
 
@@ -83,7 +83,7 @@ Request) that is visible to the team.
 ^ the speech bubbles are stylized code review comments
 
 Code review branches can (and should) be 
-deleted after the code review is complete, and be very short-lived. This is tricky for teams new to Trunk Based 
+deleted after the code review is complete and be very short-lived. This is tricky for teams new to Trunk Based 
 Development. 
 
 Note: You want to keep 

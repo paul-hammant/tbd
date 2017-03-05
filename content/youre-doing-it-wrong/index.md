@@ -31,16 +31,16 @@ reproduce it on the release branch, fix it there, and merge back.
 
 The developers cut a release branch because their release cadence is low, and they're hardening and certifying the release
 there. BUT in the days that lead up to the release, they are also doing general merges up to the release branch from 
-the trunk. That is not right - it is like they cut the branch on the wrong day. Maybe the business people on the team
+the trunk. That is not right - it seems like they cut the branch on the wrong day. Maybe the business people on the team
 are pushing too hard to make a date.
 
 Cherry-picking every commit since the branch-cut to the branch from the trunk is the same thing of course.
 
 ## Duration of 'short-lived' feature branches
 
-The short-lived feature branch should only last a day or two, and never diverge from the trunk enough so that a 
+The short-lived feature branch should only last a day or two and never diverge from the trunk enough so that a 
 merge back is problematic. After the seal of approval from code reviewers and CI 
-daemons it should be merged back into the trunk. It should be deleted, as proof of convergence.
+daemons, it should be merged back into the trunk. It should be deleted, as proof of convergence.
 The developer in question may then go ahead and make the next short-lived feature branch for the next story/task they're doing.
 
 ## Numbers of developers on 'short-lived' feature branches
@@ -50,8 +50,8 @@ then that branch is at risk of not being short-lived. It is at risk of being mor
 under active development, and not short at all.
 
 There is a risk too, that a developer may choose to pull changes to their workstation **from a short-lived feature 
-branch** rather from trunk. They may thing that the code review for that short-lived feature branch is going to take 
-too long, or they need the changes before they are ready. Unfortunately there is no way that the current generation of
+branch** rather from the trunk. They may think that the code review for that short-lived feature branch is going to take 
+too long, or they need the changes before they are ready. Unfortunately, there is no way that the current generation of
 code portals can prevent people pulling changes from non-trunk branches.
 
 ## Every day not being the same for developers.
@@ -59,8 +59,8 @@ code portals can prevent people pulling changes from non-trunk branches.
 Developers take stories or tasks from the backlog, implement them with tests, and push them through code review and quality checks
 into the shared trunk. They don't slow down that activity as they get closer to a release date. At least the majority do not. A very
 small subset of the development team may focus on the release candidates being made from the release branch (if that 
-branch exists at all), and towards fixes in trunk that will be cherry picked into that branch. For most of the team though, 
-every day is the same, and proximity to a release does not slow down the rate at which changes are being pushed into the
+branch exists at all), and towards fixes in the trunk that will be cherry-picked into that branch. For most of the team, though, 
+every day is the same and proximity to a release does not slow down the rate at which changes are being pushed into the
 trunk. There is certainly no "code freeze" with Trunk-Based Development, as team leadership focuses on protecting the 
-majority of developers from he distraction of release preparation. If that protection is missing, something needs 
+majority of developers from the distraction of release preparation. If that protection is missing, something needs 
 fine-tuning, and the branching model could be it.

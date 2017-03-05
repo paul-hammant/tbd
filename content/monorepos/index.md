@@ -5,12 +5,12 @@ weight: 111
 ---
 
 A Monorepo, is a specific Trunk-Based Development implementation where the organization in 
-question puts its source for all applications/services/libraries/frameworks into one trunk, and forces developers 
+question puts its source for all applications/services/libraries/frameworks into one trunk and forces developers 
 to commit together in that trunk - atomically.
 
-Google has the most famous monorepo, and they do the above AND force teams to **share code at source level instead of 
+Google has the most famous monorepo and they do the above AND force teams to **share code at source level instead of 
 linking in previously built binaries**. Specifically, they have no version numbers for their own dependencies, just an 
-implicit 'HEAD'. Third party libraries (like JUnit) will be checked into the repo with a specific version number 
+implicit 'HEAD'. Third-party libraries (like JUnit) will be checked into the repo with a specific version number 
 (like 4.11), and all teams will use that version if they use it at all.
 
 The deployment and/or release cadences for each application/service/library/frameworks will probably be different 
@@ -41,10 +41,10 @@ see that in the way that Buck and Bazel layout trees for production and test cod
 cannot overhaul the directory structure of your entire repository, you should not entertain a monorepo.
 {{< /warning >}} 
  
-## Third party dependencies
+## Third-party dependencies
 
 With the monorepo model, there is a strong desire to have third-party binaries in source-control too. 
-You might think that it would be unmanageable for reasons of size. In terms of history, Perforce and Subversion do not
+You might think that it would be unmanageable for reasons of size. In terms of commit history, Perforce and Subversion do not
 mind a terabyte of history of binary files (or more), and Git performed much better when Git-LFS was created. You 
 could still feel that the HEAD revision of thousands of fine-grained dependencies is too much for a workstation, but 
 that can be managed via an [expanding and contracting monorepo](/expanding-contracting-monorepos/).
@@ -55,7 +55,7 @@ from the source-control repository/branch.
 ## In-house dependencies
  
 It could be that your application team depends on something that is made by colleagues from a different team. An 
-example could be an Object Relational Mapping (ORM) library. For Monorepo teams there is a strong wish to depend on 
+example could be an Object Relational Mapping (ORM) library. For monorepo teams there is a strong wish to depend on 
 the source of that ORM technology and not a binary. There are multiple reasons for that, but the principal one is that 
 source control update/pull/sync is the most efficient way for you to keep up with the HEAD of a library on a minute
 by minute basis. Thus `MyTeamsApplication` and `TheORMweDepOn` should be in your source tree in your IDE at the same time.
@@ -64,7 +64,7 @@ time.
 
 ## Directed graph build systems
 
-To facilitate Monorepos, it is important to have a build system that can omit otherwise buildable things/steps that are not
+To facilitate monorepos, it is important to have a build system that can omit otherwise buildable things/steps that are not
 required for the individual developer's **current** build intention. 
 
 The general directory structure for directed graph build systems is like so:
@@ -121,14 +121,14 @@ The omitting of unnecessary compile/test actions achieved by Buck and Bazel work
 and in the CI infrastructure.
 
 There is also the ability to depend on recently compiled object code of colleagues. The recently compiled object code for 
-provable permutations of sources/dependencies, that is, and plucked from the ether (think of a LRU cache available to all
+provable permutations of sources/dependencies, that is. And that code plucked from the ether (think of a LRU cache available to all
 machines in the TCP/IP subnet). That is in place to shorten compile times for prod and test code.
  
 ## Recursive build systems
 
 Java's Apache-Maven is the most widely used example. It's predecessor, Ant, is another. Maven more than Ant, pulls
 third-party binaries from 'binary repositories', caching them locally. Maven also traverses its tree in a strict 
-depth first (then breadth) manner. Most recursive build systems can be configured to pull third party dependencies 
+depth first (then breadth) manner. Most recursive build systems can be configured to pull third-party dependencies 
 from a relative directory in the monorepo. A binary dependency cache outside of the VCS controlled working copy, 
 is more normal.
 
@@ -171,14 +171,14 @@ For in-house dependencies, where the source is in the same monorepo, then you wi
 team that first wanted the increased functionality, performed it for all teams, keeping everyone at HEAD revision 
 of it. The concept of version number disappears in this model.
 
-### Third party dependencies
+### Third-party dependencies
 
 For third-party dependencies, the same rule applies, everyone upgrades in lock-step. Problems can ensure, of course, 
 if there are real reasons for team B to not upgrade and team A was insistent. Broken backward compatibility is 
 one problem. 
 
 In 2007, Google tried to upgrade their JUnit from 3.8.x to 4.x and struggled as there was a subtle 
-backward incompatibility in a small percentage of their useages of it. The changeset became very large, and struggled 
+backward incompatibility in a small percentage of their usages of it. The changeset became very large, and struggled 
 to keep up with the rate developers were adding tests.
 
 Because you are doing lock-step upgrades, you only secondarily note the version of the third-party 
@@ -201,7 +201,7 @@ Recursive build systems like maven, have a forward declaration of modules that s
 </modules>
 ```
 
-Presently though, these build technologies do not have the ability to follow
+Presently, though, these build technologies do not have the ability to follow
 a changeable checkout that the likes of gcheckout can control.
 
 Directories `moduleone` and `moduletwo` have to exist in order for the build to work. The idea of expandable/contractible 
@@ -217,7 +217,7 @@ In order to deliver that, you would need a feature to be added Maven like so:
 Or you could "hack it" and rewrite your pom.xml files after every expansion or 
 contraction{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/" >}}.
 
-## If you decide you do not want to do a Monorepo
+## If you decide you do not want to do a monorepo
 
 Then repository separation should be **no more fine grained** than things that have separate deployment cadence.
 

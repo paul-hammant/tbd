@@ -34,7 +34,7 @@ and helps to make Continuous Delivery a reality.
   Such branches allow developers to engage in [eager and continuous code review](/continuous-review/) of contributions 
   before they land in the trunk.
 
-- Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from trunk on
+- Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from the trunk on
   a just-in-time basis and are 'hardened' before a release (without that being a team activity). Alternatively, there 
   may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a roll 
   forward strategy for bug fixes.

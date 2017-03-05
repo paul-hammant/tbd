@@ -11,7 +11,7 @@ trunk. In particular, there is no "we're close to a release so let's freeze code
 of a slowdown in proximity to a release.  Sure, a couple of developers out a team might be assigned to bug-fixing closer
 to the release but everyone else is going to work at full speed. 
 
-Generally speaking the trunk is a place to firehose commits into, and the habits of the developers are such that 
+Generally speaking, the trunk is a place to firehose commits into, and the habits of the developers are such that 
 everything is ready to go live. If a team is doing 12 releases a year, then a release branch that is cut on the just in time 
 basis and is the one that is observed to be 'frozen' because of the absence of developers. Refer [branch for release](/branch-for-release/).
 
@@ -23,7 +23,7 @@ This is a reinforcement of the No Code Freeze suggestion above.
 ## Quick Reviews
 
 Teams doing Trunk-Based Development, know that their commits/pushes will be scrutinized by others, as soon
-as they have landed on the shared trunk. They are keen on bring that forward, not delaying it, so they may prefer to 
+as they have landed on the shared trunk. They are keen on bringing that forward, not delaying it, so they may prefer to 
 pair-program on code changes. Or they may ask colleagues for a code review at the time the change is submitted to be 
 merged into the trunk.
 
@@ -34,7 +34,7 @@ Trunk-Based Development teams update/pull/sync from the shared trunk often. Many
 ## Running the build locally
 
 Developers practicing Trunk-Based Development run the build before a commit/push in order to not break the build. 
-This one practice, for very small teams, allows them to not setup a CI server until later. If they can't push their 
+This one practice, for very small teams, allows them to not set up a CI server until later. If they can't push their 
 commits to the shared trunk because someone else beat them to it, they have to do another update/sync/pull then
 another build then the push of the revised commit(s). "It worked on my machine" says the developer that does not 
 want to confess to breaking the build (assuming quick reliable idempotent builds).
@@ -65,7 +65,7 @@ box, and being able to prove that by running those operations while disconnected
 implementing of the wire mocking (service virtualization) of dependent tiers outside the team, is a given. The highest 
 accomplished Trunk-Based Development teams employ mocking of tiers within the same application, in order to make 
 tests fast and stable. Technologies such as Mountebank{{< ext url="http://www.mbtest.org" >}} make 
-programming working with wire mocking easy. Tiers refers to a layer-cake view of an applications construction, of course.
+programming working with wire mocking easy. Tiers refer to a layer-cake view of an applications construction, of course.
 
 With a Microcosm strategy which delivers shared nothing for a developer workstation, it is acknowledged that 
 non-functional consistency with production has been thrown out of the window and that only functional correctness
@@ -78,7 +78,7 @@ a temporarily reservation for different reasons. Those environments pull togethe
 and integrated applications. As much as possible those environs should not have shared services. 
 
 Companies often make a classic mistake when buying software in that they (say) buy one license for prod, and another 
-for all dev, QA and UAT, meaning the DevOps team had configured it as shared for all those environments, with a 
+for all dev, QA, and UAT, meaning the DevOps team had configured it as shared for all those environments, with a 
 wide-ranging negative impact on productivity and quality for innumerable and sometimes subtle psychological reasons.
 
 ## Common code ownership
@@ -92,14 +92,14 @@ as the proposed commit is ready.
 ## Always Release Ready
 
 Not only do developers practicing Trunk-Based Development not break the build with any commit, they also sign up to
-being able to go live at short notice. For example one hour, if the CIO visits and says it is going to happen. That
+being able to go live at short notice. For example, one hour, if the CIO visits and says it is going to happen. That
 means there is a bunch of automated tests that come with the build.
 
 ## Thin vertical slices
 
-Where possible stories or tasks that has been pulled from the backlog should be achievable by a developer or pair of
+Where possible stories or tasks that have been pulled from the backlog should be achievable by a developer or pair of
 developers in a short period of time, and in a small number of commits. They should also transcend all the apparent 
 tiers of the stack, and not have to jump between developers with specialized knowledge in order to be able to 
 completed. The Agile industry donates the INVEST{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} principle 
 as well as "Thin Vertical Slices"{{< ext url="http://www.scruminc.com/wp-content/uploads/2015/06/User-Stories-2.0.pdf" >}} for this purpose, and that 
-are great enables of high throughput commits to the trunk, and always being release ready.
+are great enablers of high throughput commits to the trunk, and always being release ready.

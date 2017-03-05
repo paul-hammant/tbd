@@ -8,7 +8,7 @@ weight: 75
 
 Your company wants a stream of major functionality to arrive in the application you are pushing live at a regular 
 cadence. Because you are good Extreme Programmers, you know that consecutive development of consecutive releases
-is best. However, the effort and length of time needed to complete each of the major pieces of functionality is
+is best. However, the effort and length of time needed to complete each major piece of functionality is
 large enough to require different project teams cooperating towards that plan. Some of those teams will be within
 the same codebase. Some may dependent building services that the application will invoke over the wire. Not everything 
 is equal effort it seems, yet the business wants a specific rollout, including dates and can plan that even eighteen 
@@ -38,21 +38,21 @@ what had merged already. Different branching models have different merge impacts
 of keenness for the act of merging. That in itself is disruptive to the business, as they fear and probably witness 
 additional delays because of the retooling and new-found nerves.
 
-## Flags, abstractions and pipelines
+## Flags, abstractions, and pipelines
 
-If your team has institutionalized Trunk-Based Development, [Feature Flags](/feature-flags/) pluginable components based
+If your team has institutionalized Trunk-Based Development, [Feature Flags](/feature-flags/) pluggable components based
 on abstractions (not a world apart from [Branch by Abstraction](/branch-by-abstraction/)), it is in a perfect position 
 to reorder releases, and only have a small impact on the throughput of the development team. 
 
 ### Case study
 
 In a real-life case study for an airline in 2012, late in development for the planned release a partner said that they could 
-not in fact meet that date. Their side of the integration was not going to be ready. The airline was code complete, but now had to 
+not, in fact, meet that date. Their side of the integration was not going to be ready. The airline was code complete but now had to 
 reorder releases. The development team's management feared some downtime while the mess was sorted out. The team in question
 was able to spin up a new CI pipeline, with the flags/toggles flipped to show the new permutation of features. 
-The new CI pipeline confirmed what they had already seen on the command line build, that there were failures in the 
+The new CI pipeline confirmed what they had already seen on the command-line build, that there were failures in the 
 automated tests (and something in a page did not quite look right anyway). A couple of quick fixes later, and the development 
-team assured the airline's management that the the releases could reasonably happen in any order.
+team assured the airline's management that the releases could reasonably happen in any order.
 
 Choosing Trunk-Based Development, [Feature Flags](/feature-flags/) and [Branch by Abstraction](/branch-by-abstraction/) 
 could be said to be a **hedging strategy** against the costs of larger scheduling changes.
@@ -84,7 +84,7 @@ only pick up new release work as the previous one has been pushed into productio
             <td style="padding: 2px" valign="top">14 Jul 2013, Blog Entry</td>
         </tr>
         <tr>
-            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">Legacy Application Strangulation : Case Studies</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">Legacy Application Strangulation: Case Studies</a></td>
         </tr>
     </table>
     <table style="border: 0; box-shadow: none">

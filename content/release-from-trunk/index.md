@@ -17,7 +17,7 @@ Here's what stylized commits look like:
 
 ![](release_from_trunk2.png)
 
-No slow down around a release, and bug fixes inline.
+No slow down around a release and bug fixes inline.
 
 Teams with one release a day (or less) **might** still make a branch, to cherry-pick the bug-fix to
 and release from:

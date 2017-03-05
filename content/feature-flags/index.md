@@ -9,10 +9,10 @@ Feature Flags are a time-honored way to control the capabilities of an applicati
 ### An Example
 
 Say you have 
-an application or service that launches from the command line that has a `main` method or function. Your feature flag 
-could be `--withOneClickPurchase` passed in as a command line argument. That could turn on code in the app to 
+an application or service that launches from the command-line that has a `main` method or function. Your feature flag 
+could be `--withOneClickPurchase` passed in as a command-line argument. That could activate lines of code in the app to 
 do with Amazon's patented one-click purchasing 
-experience.  Without that command line argument, the application would run with a shopping cart component. At least
+experience.  Without that command-line argument, the application would run with a shopping cart component. At least
 that's the way the developers coded that application. The 'One Click Purchase' and 'Shopping Cart' alternates are 
 probably also the same language that the business people associated with the project use. It gets complicated in 
 that flags need not be implicitly a/b or new/old, they could be additive. In our case here, there could also be a
@@ -25,8 +25,8 @@ Feature Flags is in wider use by the industry, though, so we're going with that.
 
 ## Granularity
 
-If could be that the flag controls something large like the us of a component. In our case above we could say that 
-`OneClickPurchasing` and `ShoppingCart` are the names of a components.  It could be that the granularity of the flag
+If could be that the flag controls something large like the UI of a component. In our case above we could say that 
+`OneClickPurchasing` and `ShoppingCart` are the names of components.  It could be that the granularity of the flag
 is much smaller - Say Americans want to see temperatures in degrees Fahrenheit and other nationalities would 
 prefer degrees Centigrade/Celsius. We could have a flag `--temp=F` and `--temp=C`. For fun, the developers also added
 `--temp=K` (Kelvins).
@@ -57,7 +57,7 @@ There are much more ways of passing flag intentions (or any config) to a runtime
 
 ## Continuous Integration pipelines
 
-It is important to have CI guard your reasonable expected permutations of flag. That means tests that happen on an
+It is important to have CI guard your reasonable expected permutations of flags. That means tests that happen on an
 application or service after launching it, should also be adaptable and test what is meaningful for those flag 
 permutations. It also means that in terms of CI pipelines there is a fan-out **after** unit tests, for each meaningful
 flag permutation. A crude equivalent is to run the whole CI pipeline in parallel for each meaningful flag permutation.
@@ -93,7 +93,7 @@ having beta versions of functionality/features available to groups.
 
 ## Tech Debt - pitfall
 
-Flags get put in to codebases over time, and often get forgotten as development teams pivot towards new business deliverables.
+Flags get put into codebases over time and often get forgotten as development teams pivot towards new business deliverables.
 Of course, you want to wait a while until it is certain that you are fixed on a toggle state, and that's where the 
 problem lies - the application works just fine with the toggle left in place, and the business only really cares
 about new priorities. The only saving grace is the fact that you had unit tests for everything, even for code that

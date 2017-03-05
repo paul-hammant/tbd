@@ -19,7 +19,7 @@ for the developer team. And do it daily if not more. The idea was for developers
 habits to ensure everything going to that shared place many times a day was of high enough quality, 
 and for the CI server to merely verify that quality, nightly.
 
-CI as we know it today, was championed by Kent Beck, as one of the practices he included in 
+CI as we know it today was championed by Kent Beck, as one of the practices he included in 
 "Extreme Programming"{{< ext url="https://en.wikipedia.org/wiki/Extreme_programming" >}}
 in the mid-nineties. Certainly in 1996, on the famous 'Chrysler Comprehensive Compensation System' (C3) 
 project{{< ext url="https://en.wikipedia.org/wiki/Chrysler_Comprehensive_Compensation_System" >}} that Kent had all 
@@ -46,7 +46,7 @@ timing. Teams have engineered build scripts that do their thing quickly. Hopeful
 tests (perhaps leveraging mocking at several levels) and packaging. There is no guarantee that a developer ran the build though before 
 committing, though. The CI daemon fills that gap and verifies commits are good once they land in the trunk. Enterprises 
 have either built a larger scaled capability around their CI technology so that it can keep up with the commits/pushes 
-of the whole team, or by the batching of commits and using less computing poer to track and verify work.
+of the whole team or by the batching of commits and using less computing power to track and verify work.
 
 ### Humans and daemons do the same build
 
@@ -69,7 +69,7 @@ This should go up on TVs if developers are co-located. It should also be a click
 
 The elapsed time between the commit and the "this commit broke the build" notification, is key. That is because the cost 
 to repair things in the case of a build breakage goes up when additional commits have been pushed to the branch. One of the 
-facets of the 'distance' that we want to reduce (refer [5 minute overview](/5-min-overview/)) is the distance to break.
+facets of the 'distance' that we want to reduce (refer [five-minute overview](/5-min-overview/)) is the distance to break.
  
 ### Pipelines - further reading
 
@@ -81,7 +81,7 @@ lean inspired concepts for teams pushing that far.
 
 ### CI per commit or batching?
 
-Commiting/pushing directly to the shared trunk may be fine for teams with only a few 
+Committing/pushing directly to the shared trunk may be fine for teams with only a few 
 commits a day. Fine too for teams that only have a few developers who trust each other to be rigorous on their 
 workstation before committing (as it was for everyone in the 90's).
 
@@ -129,7 +129,7 @@ Once you get to that trusted always green state, it is natural to run it as ofte
 ### CI Pre or Post Commit?
 
 In terms of breakages, whether incorrect (say 'badly formatted'), or genuinely broken, finding that out **after the 
-commit** is undesirable. Fixing things while the rest of the team watches or waits, is a team-throughput 
+commit** is undesirable. Fixing things while the rest of the team watches or waits is a team-throughput 
 lowering practice. 
 
 ![](ci_types.png)
@@ -155,7 +155,7 @@ before they land in the trunk to the extent where teammates can update/sync/pull
 
 The problem this solves is when the rate of commit into the trunk would be too high to have an auto-rollback on build 
 failure. In Google one commit lands in the trunk every 30 seconds. Few CI technologies (and source control systems) can 
-keep up with that in a way that isn't batching (to some degree of interpretation). You'd be stopping the line too often 
+keep up with that in a way that is not batching (to some degree of interpretation). You'd be stopping the line too often 
 for humans to make sense of a train wreck of red builds, where only one two were actual breakages rather than just bad 
 timing.
 
@@ -170,7 +170,7 @@ before auto-merging it to the shared trunk (if you want to auto-merge after code
 
 The new problem is how do you prevent that short-lived feature branch from sleepwalking into a long-lived feature 
 branch with half a dozen developers keeping it from being 'complete' (somehow) and merged back. You can't with tools
-today, but it would be cool if you could have a ticking clock / count down on those branches at creation to enforce
+today, but it would be cool if you could have a ticking clock or count down on those branches at creation to enforce
 its 'temporary' intention.
 
 Refer to [Game Changers - Google Home Grown CI and Tooling](/game-changers/index.html#google-s-internal-devops-1998-onwards) for more 

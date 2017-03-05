@@ -147,7 +147,6 @@ python ../footer_refs.py youre-doing-it-wrong/index.html
 python ../footer_refs.py book/index.html 
 
 convert_to_book _printable.pdf --base-font-size 6
-#convert_to_book .docx --base-font-size 6
 
 rm -rf .git
 cd ../book/

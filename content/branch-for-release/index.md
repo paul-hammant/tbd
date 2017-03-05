@@ -59,9 +59,9 @@ Those teams wait for a bug that needs fixing for a released, before creating a b
 not going to just issue another release from the trunk).  
 
 Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage 
-of here in the case of bugs after "release from tag", or even changes for point releases.
+of here in the case of bugs after "release from a tag", or even changes for point releases.
 
-### Cherry-picks from Trunk to branch ONLY
+### Cherry-picks from the trunk to branch ONLY
 
 You should not fix bugs on the release branch in the expectation of cherry-picking them back to the trunk. 
 Why? Well in case you forget to do that in the heat of the moment. Forgetting means a regression in production some 
@@ -77,13 +77,13 @@ everything mentioned above.
 ## Patch releases
 
 It could be that your team has pushed a release out from a release branch, and now has a bug to remediate in 
-production. If the release cadence suits it, a cherry pick of a bug fix from the trunk to the release branch 
+production. If the release cadence suits it, a cherry-pick of a bug fix from the trunk to the release branch 
 and a point release from the same branch is fine.
 
 ### Tag instead of branch
 
 Releasing from a tag on the trunk is a decent optimization for many teams, if possible. The tag could be numbered for 
-the release (say v1.1.1), and the branch can be avoided completely. Perhaps if there is bug in production and a branch
+the release (say v1.1.1), and the branch can be avoided completely. Perhaps if there is a bug in production and a branch
 is retroactively created from that tag, and the patch release (see above) can happen from there.
 
 ## Release branch deletion

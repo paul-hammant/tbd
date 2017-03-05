@@ -4,10 +4,10 @@ title: Expanding Contracting Monorepos
 weight: 112
 ---
  
-As some point with a Monorepo approach to source control (especially with binary dependencies in the source tree), your checkouts 
+As some point with a monorepo approach to source control (especially with binary dependencies in the source tree), your checkouts 
 could be bigger than your local workstation's hard drive. Or even if the checkout is not too big for your hard drive, 
-then it might be too much for your IDE, and you do not want to have to abandon it for Vim/Emacs. Or maybe it isn't IDE that 
-chokes is is something about the build that's too much locally, despite command line arguments to attempt to
+then it might be too much for your IDE, and you do not want to have to abandon it for Vim/Emacs. Or maybe it is not IDE that 
+chokes is is something about the build that's too much locally, despite command-line arguments to attempt to
 pare it down for a shorter elapsed time.
 
 There is a way to intelligently expand or contract the checkout on you developer workstation, to alleviate all of 
@@ -52,11 +52,11 @@ Segway thing (two wheels and self-balancing via high-torque and very responsive 
 
 ![](car_segway.png)  
  
-The starting position is two teams working separately, using 'Wheel' (4 for car, 2 for Segway). Without any commits 
+The starting position is two teams working separately, using 'Wheel' (4 for cars, 2 for Segways). Without any commits 
 happening the engineer changing 'Wheel' for everyone, runs gcheckout (or its equivalent) to modify the source in the 
-IDE to the union of Car and Segway (and in-house dependencies). That is marked as step 0. Lets say the
+IDE to the union of Car and Segway (and in-house dependencies). That is marked as step 0. Let us say the
 change is quick/easy this time (not requiring Branch By Abstraction) step 1 shows the single commit that changes
-wheel for everyone.  After the commit/push, running again shows the application focused team checkout - either 
+the wheel implementation for everyone.  After the commit/push, running again shows the application focused team checkout - either 
 'Car' or 'Segway'.
  
 ## Git's Sparse checkouts

@@ -34,9 +34,9 @@ down nothing.  The time taken for the version control tool to determine that not
 repository is the biggest clue as to how intrinsically fast it is. 
 
 Technologies that only keep head revision on the checkout, ordinarily have to walk the entire directory structure 
-looking for changed files, and do handshaking to the server for each one. That is definitely Subversion and its predecessor CVS. 
+looking for changed files and do handshaking to the server for each one. That is definitely Subversion and its predecessor CVS. 
 Batching of those exchanges speeds it up, but there is still a slowdown related to the breadth and depth of the source
-tree. Perforce makes the operation faster because the server side is poised for the sync operation at all time, by 
+tree. Perforce makes the operation faster because the server-side is poised for the sync operation at all time, by 
 keeping your tree and which revision you have for each file in RAM. It does this at the cost of maintaining read-only
 bits for files (be sure and use an IDE that silently handles the Perforce interactions). Perforce can effectively be much
 faster for this back-to-back pull/update/sync test of speed because it kinda already knows the answer to the question.
@@ -47,14 +47,14 @@ consider that a nice feature. At least if you've recursively laid out services a
 Git and Mercurial have a single point of checkout (Git's 'clone' operation) for the whole repository.  There are no sub-directory checkouts 
 for these two. All commits since that 
 last 'pull' will be pulled down. This happens before the directory walk to determine what has changed locally. As such, that 
-pull operation if very fast - there's no chit chat over the wire things, and the stuff on the server side was already 
+pull operation if very fast - there's no chit chat over the wire things, and the stuff on the server-side was already 
 zipped and pretty much ready for transfer. This will be the case even for situations where a particular 
 file has been changed a dozen times since you last pulled it down via a sync operation.  You might think 
 this is costly, but in practice, Git is incredibly fast.
 
 ### Commit/push speed
 
-Things are less unequal here between the tools we highlight as viable.  
+Things are more equal here between the tools we highlight as viable.  
 
 Subversion and Perforce send up deltas of changed files to the server. Some directory walking can slow this down. There 
 is inevitably a lot of chit-chat on the wire for these operations. 
@@ -73,7 +73,7 @@ have **not** changed between the remote master repo and local working copy. It s
 Developers (hopefully in pairs) are going to have to become skilled in arbitrating over merges for the commits they 
 are trying to promote to the remote trunk, as well as the changes they are updating from that it in the case that they 
 have work in progress in their working-copy. Trunk-Based Development teams, you see, are merging more often. Albeit 
-those are smaller merges, and they are implicitly to your working copy.
+those are smaller merges, and they are implicitly merges to your working copy.
 
 Perforce's three-way merge tool (p4-merge) is good enough on its own to be attractive to teams using other VCS 
 technologies. In that case, it is just a command-line integration away from being usable.  PlasticSCM (not mentioned previously).
@@ -81,7 +81,7 @@ technologies. In that case, it is just a command-line integration away from bein
 ### Code Review
 
 Integrated code review turned out to to be the killer feature of VCS tools. This should have been clear from the moment Mondrian
-was unveiled by Guide van Rossum (Mr Python) in a publicized Google 'tech talk' in 2006. It delivered pre-commit
+was unveiled by Guide van Rossum (Mr. Python) in a publicized Google 'tech talk' in 2006. It delivered pre-commit
 code reviews to developers and gamified the activity of code review to some degree. Google was
 using Perforce back then (they changed to an in-house technology in 2012), and it did not have code review build in, so 
 they had to make Mondrian (which was the final form of years of intermediate deliverables for the same). Thus
@@ -104,7 +104,7 @@ additional steps are executed against them and the results of those made availab
 Service Level Agreement to have those complete ten minutes after the commit has been placed in the 'needs code review'
 queue.
 
-The reality of VCS platforms today is that they only provided hooks (Web hooks most likely) into other CI servers. The
+The reality of VCS platforms today is that they only provided hooks (web-hooks most likely) into other CI servers. The
 best combinations of VCS platform and CI server do so for any of the branches in play, including code-review branches 
 (forks).
 
@@ -119,20 +119,20 @@ All VCS usages need users accounts to be able to accept changes back, even if th
 to be able to read. In the enterprise user accounts will be required to be able to read too.
 
 The larger the enterprise the more likely it will be that they have permissions carved up in more file grained ways.
-Fpor example "can commit to the trunk, but cannot create release branches" will be common for Trunk-Based Development
-teams that make release branches.  Not all VCS technologies support that. Git for example does not, but some of the 
-portal experiences around it, add the feature. In reality though you cannot stop people from making branches in a DVCS,
+For example "can commit to the trunk, but cannot create release branches" will be common for Trunk-Based Development
+teams that make release branches.  Not all VCS technologies support that. Git, for example, does not, but some of the 
+portal experiences around it, add the feature. In reality, though, you cannot stop people from making branches in a DVCS,
 but you can prevent them from pushing them to the shared repository.
 
 Deeper still, some enterprises will want to set permissions down the directory level within a branch within a repository.
-This could be as simple as a gate, to ensure that process is ahered to around checkins, but could also be to guard
+This could be as simple as a gate, to ensure that process is adhered to around checkins, but could also be to guard
 some secrets in a Monorepo implementation. That last is counter to some of the "common code ownership" ideals of
-software engineering though.
+modern software engineering though.
 
 ### Size / Scale
 
 Many teams, particularly those with monorepo configurations or large binary files (like Games companies), want to have 
-limitless server side storage for their repository.  Git and Mercurial are inching towards bigger and bigger 
+limitless server-side storage for their repository.  Git and Mercurial are inching towards bigger and bigger 
 capacity, but there are still a few snafus to work through - how to cleanly/safely reduce the size of the client side clone
 history (while still being able to push changes back to the server) is a challenge.
 
