@@ -91,7 +91,7 @@ verifying two or more commits in one go. It is not going to be hard to pick
 apart a batch of two or three to know which one caused the failure. You can believe that with confidence because of the 
 high probability the two commits were in different sections of the code base and are almost never entangled.
 
-If teams are bigger, though, with more commits a day, pushing something incorrect/broken to trunk could be disruptive to 
+If teams are bigger, though, with more commits a day then pushing something incorrect/broken to trunk could be disruptive to 
 the team. Having the CI daemon deal with **every commit** separately is desirable. If the CI daemon is single-threading "jobs" there is a risk
 that the thing could fall behind. 
 

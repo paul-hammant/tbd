@@ -55,7 +55,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 5
 
 [[menu.main]]
-	name   = "Five minute overview"
+	name   = "Five-minute overview"
 	url    = "5-min-overview/"
 	weight = 11
 

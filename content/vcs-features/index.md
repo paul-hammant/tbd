@@ -7,13 +7,13 @@ weight: 31
 **Desirable VCS features, that is**
 
 To great degree Trunk-Based Development possible on any Version Control System (VCS) that does atomic commits (spoiler: all do 
-that came after CVS).  Productivity and governance is what divides them though.
+that came after CVS).  Productivity and governance are what divides them, though.
 
 ## Productivity
 
 It turns out there are many 
-productivity reasons that teams quit one technology and go to another. It does not matter whether the tool is commercial
-or open source. At least to its end users it does not.
+productivity reasons that teams quit one technology and go to another. It does not matter whether the tool is a commercial
+or open source one. At least to its end users it does not.
 
 By speed we mean two things primarily:
 
@@ -30,12 +30,12 @@ And three other secondary things that support little and often:
 
 If you have at least once done a checkout of the source of the project, any subsequent pull/update/sync is going to bring down 
 differences from the previous checkout or update.  If you do two updates back to back quickly, the second one is likely to bring 
-down nothing.  The time taken for the version control package to determine that nothing is due from the remote master 
-repository, is the biggest clue as to how intrinsically fast it is. 
+down nothing.  The time taken for the version control tool to determine that nothing is due from the remote master 
+repository is the biggest clue as to how intrinsically fast it is. 
 
 Technologies that only keep head revision on the checkout, ordinarily have to walk the entire directory structure 
 looking for changed files, and do handshaking to the server for each one. That is definitely Subversion and its predecessor CVS. 
-Batching of those exchanges speeds it up, but there is still a slow down related to the breadth and depth of the source
+Batching of those exchanges speeds it up, but there is still a slowdown related to the breadth and depth of the source
 tree. Perforce makes the operation faster because the server side is poised for the sync operation at all time, by 
 keeping your tree and which revision you have for each file in RAM. It does this at the cost of maintaining read-only
 bits for files (be sure and use an IDE that silently handles the Perforce interactions). Perforce can effectively be much
@@ -44,13 +44,13 @@ faster for this back-to-back pull/update/sync test of speed because it kinda alr
 CVS, Subversion and Perforce offer you the choice of checking out a subdirectory. In a monorepo situation, you would 
 consider that a nice feature. At least if you've recursively laid out services and applications within the trunk.
 
-Git and Mercurial have a single point of checkout (Git's 'clone' operation) for whole repository.  There are no sub-directory checkouts 
+Git and Mercurial have a single point of checkout (Git's 'clone' operation) for the whole repository.  There are no sub-directory checkouts 
 for these two. All commits since that 
-last 'pull' will be pulled down. This happens before the directory walk to determin what has changed locally. As such, that 
+last 'pull' will be pulled down. This happens before the directory walk to determine what has changed locally. As such, that 
 pull operation if very fast - there's no chit chat over the wire things, and the stuff on the server side was already 
 zipped and pretty much ready for transfer. This will be the case even for situations where a particular 
 file has been changed a dozen times since you last pulled it down via a sync operation.  You might think 
-this is costly, but in practice Git is incredibly fast.
+this is costly, but in practice, Git is incredibly fast.
 
 ### Commit/push speed
 
@@ -60,20 +60,20 @@ Subversion and Perforce send up deltas of changed files to the server. Some dire
 is inevitably a lot of chit-chat on the wire for these operations. 
 
 Git and Mercurial do the same, but before you push to the remote repo it will make you commit locally which is incredibly 
-fast. Before you push to the shared remote repository, these two will make you to pull first.  
+fast. Before you push to the shared remote repository, these two will make you pull first.  
 
 Perforce and Subversion will allow you to commit/push changes to the remote, without necessarily having the latest versions (and 
 incidentally all the intervening ones) locally first.  It will only allow that if there was no clash on the lines changed.
 
 Perforce can cheat again, but taking advantage of the read-only bit, and therefore already knows which files definitely 
-have **not** changed between the remote master repo and local working copy. It still feels slower than it should be though.  
+have **not** changed between the remote master repo and local working copy. It still feels slower than it should be, though.  
 
 ### Three-way merge tools
 
 Developers (hopefully in pairs) are going to have to become skilled in arbitrating over merges for the commits they 
 are trying to promote to the remote trunk, as well as the changes they are updating from that it in the case that they 
 have work in progress in their working-copy. Trunk-Based Development teams, you see, are merging more often. Albeit 
-those are smaller merges, and they are implicitly to working copy.
+those are smaller merges, and they are implicitly to your working copy.
 
 Perforce's three-way merge tool (p4-merge) is good enough on its own to be attractive to teams using other VCS 
 technologies. In that case, it is just a command-line integration away from being usable.  PlasticSCM (not mentioned previously).
@@ -82,7 +82,7 @@ technologies. In that case, it is just a command-line integration away from bein
 
 Integrated code review turned out to to be the killer feature of VCS tools. This should have been clear from the moment Mondrian
 was unveiled by Guide van Rossum (Mr Python) in a publicized Google 'tech talk' in 2006. It delivered pre-commit
-code reviews to developers, and gamified the activity of code review to some degree. Google was
+code reviews to developers and gamified the activity of code review to some degree. Google was
 using Perforce back then (they changed to an in-house technology in 2012), and it did not have code review build in, so 
 they had to make Mondrian (which was the final form of years of intermediate deliverables for the same). Thus
 Mondrian being created tightly coupled code review to the hourly activities of developers on the trunk. 
@@ -91,7 +91,7 @@ GitHub (not Git) was next for the non-Google dev world with a built in code-revi
 effectively pre-commit - or at least commit to the master.
 
 There were (and are) other technologies for code review such as Crucible (Atlassian), UpSource (JetBrains), Gerrit, 
-Phabricator, but integration into a platform experience is key.  GitLab, and RhodeCode are emerging platforms.
+Phabricator, but integration into a platform experience is key.  GitLab and RhodeCode are emerging platforms.
 
 Read more in [Game Changers - Google's Mondrian](/game-changers/index.html#google-s-internal-devops-1998-onwards) and 
 [Game Changers - GitHub's Pull Requests](/game-changers/index.html#github-s-entire-platform-2008-onwards).

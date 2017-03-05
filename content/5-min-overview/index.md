@@ -1,6 +1,6 @@
 ---
 date: 2016-01-01T09:42:02+05:00
-title: Five minute overview
+title: Five-minute overview
 weight: 11
 ---
 
@@ -33,7 +33,7 @@ for development. It may be called 'master'. That hints at the fact that the bran
 called 'trunk' at all.
 {{< /note >}}
 
-There are many deciding factors, before a development team settles on Trunk-Based Development, but here is a short overview 
+There are many deciding factors before a development team settles on Trunk-Based Development, but here is a short overview 
 of the practices if they do:
 
 ### Releasability of work in progress
@@ -43,31 +43,31 @@ Trunk-Based Development will always be **release ready**
 If an executive manager visited the development team and commanded "Competitor X has launched feature Y, go 
 live now with what we have", the worst response would be "give us one hour". The development team might have been very 
 busy with tricky or even time-consuming tasks (therefore partially complete), but in an hour, they are able to go live 
-with something just stabilized from the trunk. Perhaps they can do it in less than, an hour. The rule though, is never break 
-the build, and always be ready for that CIO-commanded disruption to plans.
+with something just stabilized from the trunk. Perhaps they can do it in less than, an hour. The rule, though, is **never break 
+the build**, and **always be release ready** because the CIO or the business may surprise you.
 
 #### Where releases happen
 
-A key facilitating rule here is that Trunk-Based Development teams exclusively **either** release directly from the 
-trunk - see [release from trunk](/release-from-trunk/), **or** they make a branch from the trunk for the specifically for 
+Here, a key facilitating rule is that Trunk-Based Development teams exclusively **either** release directly from the 
+trunk - see [release from trunk](/release-from-trunk/), **or** they make a branch from the trunk specifically for 
 the actually releasing. See [Branch for release](/branch-for-release/).
 Teams with a higher release cadence do the former, and those with a lower release cadence to the latter. 
 
 ### Checking out / cloning
 
-All developers in a team that work on a application/service, clone and checkout from the trunk. They will 
-update/pull/sync from that branch a many times a day, knowing that the build within it works perfectly. Their fast 
+All developers in a team that work on an application/service, clone and checkout from the trunk. They will 
+update/pull/sync from that branch many times a day, knowing that the build within it works perfectly. Their fast 
 source-control system means that their delays are a matter of a few seconds for this operation. They are now 
 integrating their team-mates commits on an hour by hour basis.
 
 ### Committing
 
-Similarly, developers completing a piece of development work (changes to source code), that provably does not 
-break the build, will commit it back to the trunk. The granularity of that commit (how many a developer 
+Similarly, developers completing a piece of development work (changes to source code), that does not 
+break the build, will commit it back to the trunk. That it does not break the build should be provable. The granularity of that commit (how many a developer 
 would implicitly do a day) can vary and is learned through experience, but commits are typically small.
 
 The developer needs to run the build, to prove that they did not break anything with the commit **before** the commit
-is pushed anywhere. They might have to do a update/pull/sync before they commit/push the changes back to the team's 
+is pushed anywhere. They might have to do an update/pull/sync before they commit/push the changes back to the team's 
 version control server, and additional builds too. There's a risk a race condition there, but let us assume that is not 
 going to happen for most teams.
 
@@ -88,14 +88,14 @@ Development.
 
 Note: You want to keep 
 the commentary/approval/rejection that is part of the review for historical and auditing purposes, but you do not want to 
-keep the branch. Specifically, you do not want to developers to focus on the branch after the code review, and merge back
+keep the branch. Specifically, you do not want to developers to focus on the branch after the code review and merge back
 to the trunk.
 
 ## A safety net
 
-[Continuous Integration](/continuous-integration/) (CI) daemons are setup to watch the trunk (and the short-lived feature 
+[Continuous Integration](/continuous-integration/) (CI) daemons are set up to watch the trunk (and the short-lived feature 
 branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
- is broken.  Some teams will lock the trunk, and roll-back changes. Others will allow the CI server to do that 
+ is broken.  Some teams will lock the trunk and roll-back changes. Others will allow the CI server to do that 
  automatically.
 
 ![](5trunk1.png)

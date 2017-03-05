@@ -18,7 +18,7 @@ avoid merge hell, and live happily ever after.
 
  &ast; 'master', in Git nomenclature
 
-Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/), and by extension
+Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
 [Continuous Delivery](/continuous-delivery/). When individuals on a team are committing their changes to the trunk
 multiple times a day it becomes easy to satisfy the core requirement of Continuous Integration that all team
 members commit to trunk at least once every 24 hours. This ensures the codebase is always releasable on demand
@@ -35,7 +35,7 @@ and helps to make Continuous Delivery a reality.
   before they land in the trunk.
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from trunk on
-  a just-in-time basis, and are 'hardened' before a release (without that being a team activity). Alternatively there 
+  a just-in-time basis and are 'hardened' before a release (without that being a team activity). Alternatively, there 
   may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a roll 
   forward strategy for bug fixes.
 
@@ -53,14 +53,14 @@ and helps to make Continuous Delivery a reality.
   the popular ClearCase, Subversion, Perforce, StarTeam, VCS [branching models of the past](/alternative-branching-models/index.html#legacy-branching-models).
 
 - [Many publications](/publications/), including the best-selling 'Continuous Delivery' book promote Trunk Based 
-  Development - this is not even controversial any more.
+  Development - this is not even controversial anymore.
 
 ## History
 
 Trunk-Based Development is not a new branching model. The word 'trunk' is referent to the concept of a growing tree,
 where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
 
-It has been a lesser known branching model of choice since the mid-nineties, and considered tactically since the eighties.
+It has been a lesser known branching model of choice since the mid-nineties and considered tactically since the eighties.
 The largest of development organizations, like Google (as mentioned) and Facebook practice it at scale.
 
 Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers/) have made
@@ -69,5 +69,5 @@ Trunk-Based Development more (and occasionally less) necessary.
 ## This site
 
 This site attempts to collect all the related facts, rationale and techniques for Trunk-Based Development together
-in one place, complete with twenty four diagrams to help explain things. All without using TBD as an acronym
+in one place, complete with twenty-four diagrams to help explain things. All without using TBD as an acronym
 even ~~once~~ twice.

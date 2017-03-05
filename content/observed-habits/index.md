@@ -98,7 +98,7 @@ means there is a bunch of automated tests that come with the build.
 ## Thin vertical slices
 
 Where possible stories or tasks that has been pulled from the backlog should be achievable by a developer or pair of
-developers in a short period of time, and in a small amount of commits. They should also transcend all the apparent 
+developers in a short period of time, and in a small number of commits. They should also transcend all the apparent 
 tiers of the stack, and not have to jump between developers with specialized knowledge in order to be able to 
 completed. The Agile industry donates the INVEST{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} principle 
 as well as "Thin Vertical Slices"{{< ext url="http://www.scruminc.com/wp-content/uploads/2015/06/User-Stories-2.0.pdf" >}} for this purpose, and that 

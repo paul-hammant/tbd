@@ -65,7 +65,6 @@ soup = BeautifulSoup(open(sys.argv[1]).read(), "html.parser")
 sub_chapters = json.loads(open(sys.argv[1].replace(".html", ".json")).read())
 h2_ix = 0
 for h2 in soup.findAll('h2'):
-  print "h2 " + h2.text
   if 'references-elsewhere' not in str(h2) and 'Books promoting' not in str(h2) and 'Reports promoting' not in str(h2):
     h2_ix += 1
     h2.string = sub_chapters['ch'] + "." + str(h2_ix) + ": " + h2.text

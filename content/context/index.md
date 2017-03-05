@@ -29,7 +29,7 @@ In the modern DevOps era, this probably means Infrastructure as Code.
 ### Continuous Integration
 
 [Continuous Integration](/continuous-integration/) (CI) has been in practice since the
-mid-nineties in its modern incarnation (integrating to a shared code line frequently, and 
+mid-nineties in its modern incarnation (integrating to a shared code line frequently and 
 testing that).
 
 Importantly, the reader should understand that there is a large overlap between Trunk-Based Development and 
@@ -46,11 +46,11 @@ practice. The reader should dive into the Book and associated site, without dela
 ### Lean Experiments
 
 With CD locked in, continual improvement experiments can happen with a focus on time through "the machine" that is your 
-development and delivery operation. The experiments should draw off the field of science that is "Lean", so that the 
+development and delivery operation. The experiments should draw off the field of science that is "Lean" so that the 
 impact of each experiment can be measured against predictions and decisions made appropriately following it.
 
 Lean Experiments can happen in any development team on any project but work **best** on foundations that 
-are solid. Specifically, the solid foundations of Trunk-Based Development, CI and CD. 
+are solid. Specifically, the solid foundations of Trunk-Based Development, CI, and CD. 
 
 This site does not touch on Lean Experiments beyond this section, but the reader should strive to understand that field
 of science when the lower layers of the stylized cake are solid.

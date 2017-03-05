@@ -27,7 +27,7 @@ to do Trunk-Based Development. Consider a short-iteration Agile methodology like
 
 Trunk-Based Development needs you to have small stories/tasks. Optimal is you starting work on a change, should only be a matter
 of hours before completing and pushing it forward for code review. Longer than a couple of days, and there is going to be 
-pressure to group a bunch of developers on a non-trunk branch, and merge back later. Or worse have developers make 
+pressure to group a bunch of developers on a non-trunk branch and merge back later. Or worse have developers make 
 branches/forks from your in-progress branch. Or worse still take intermediate merges from your branch, despite your 
 change being incomplete.  
 
@@ -37,9 +37,9 @@ up or stories.
 
 ### Build times
 
-Keeping build times short is important in that it directly drives the amount of commits a developer can do in a day.
+Keeping build times short is important in that it directly drives the number of commits a developer can do in a day.
 If the build time is a couple of minutes, developers are likely to keep a high pace. If the build time is 30 minutes or
-worse developers change pace to match only a couple of commits a day, and drop their throughput.
+worse developers change pace to match only a couple of commits a day and drop their throughput.
 
 ## VCS Technology Choice
 
@@ -50,7 +50,7 @@ of you.
 
 Older versions of ClearCase and PVCS Dimensions would be 30 minutes for the former and 45 minutes for the latter. 
 Double that if two team-mates were simultaneously trying to do the update/pull/sync operation. In that configuration, it 
-was completely impossible for teams practice Trunk-Based Development.
+was completely impossible for teams to practice Trunk-Based Development.
 
 ### Binaries in the Repo?
 
@@ -68,9 +68,9 @@ read-only so that all the history, issues, and code review comments are intact.
 
 ### Peak commit frequency
 
-In Git if a colleague beat you to a commit/push on a branch (their code-review and automated CI passed), when you 
-thought you were going to push, Git will informed you that you have to pull first. You pull, your resolve merge clashes 
-(hopefully none), and your push again. You might struggle to find a window open long enough
+In Git if a colleague beat you to a commit/push on a branch (their code-review and automated CI passed) when you 
+thought you were going to push, Git will inform you that you have to pull first. You pull, and you resolve your merge clashes 
+(hopefully none), and then push again. You might struggle to find a window open long enough
 to push without encountering the same problem. Forks make that easier, and robots keeping 
 pull-request branches abreast of origin:master helps a lot. Thus for developers wanting to land their commitsGit increasing 
 commit frequency to the 
@@ -82,10 +82,10 @@ of the motivations to their Git Virtual File System (~~GitVFS~~ GVFS).
 <span style="margin-left: 30px">Refer to Brian's "More on GVFS" blog entry<a target="_blank" href="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/"><img src="/images/ext.png" alt=""></a></span>
 {{< /quote >}}
 
-We're sure that within a few years, Git will be able to hangle huge scale too. Whether with the Microsoft technologies, or 
+We're sure that within a few years, Git will be able to handle huge scale too. Whether with the Microsoft technologies, or 
 something else.
 
-## Conways Law
+## Conway's Law
 
 The org making applications and services that reflect the organization's own structure{{< ext url="https://en.wikipedia.org/wiki/Conway's_law" >}}. 
 If your organization feels like this, and a Monorepo does not feel right, then MicroServices could the direction for you.
@@ -93,7 +93,7 @@ If your organization feels like this, and a Monorepo does not feel right, then M
 ## Database migrations
 
 In order get into the Trunk-Based Development way, you'll need to find a way to handle table-shape changes, and even
-population of existing rows where new/changed columns happen. Pramod Sadlage and Scott Amber's book 
+the population of existing rows where new/changed columns have happened. Pramod Sadlage and Scott Amber's book 
 "Refactoring Databases: Evolutionary Database Design"{{< ext url="https://www.amazon.com/Refactoring-Databases-Evolutionary-paperback-Addison-Wesley/dp/0321774515" >}}
 goes into that much more, as does the [Continuous Delivery](/continuous-delivery/) book.
 
@@ -103,7 +103,7 @@ Trunk-Based Development teams typically have common code ownership rules around 
 of the source tree. If they do not have a full egalitarian system, they have objective rules for contributions to the tree. 
 Rules that focus on standards and come with a promise of a prioritized and fair code review. Trunk-Based Development 
 teams might have fine-grained write permissions for directories within the trunk, but **never** have any impediment 
-to reading files in th trunk - everyone can see everything.
+to reading files in the trunk - everyone can see everything.
 
 <!-- ## Parallelization
 

@@ -61,7 +61,7 @@ could be said to be a **hedging strategy** against the costs of larger schedulin
 Every high throughput Extreme Programming team will tell you that finishing and shipping a release before starting work
 as a team on the next releasable slice of work is much better than attempting to do concurrent development of 
 consecutive releases.  Sure, some teammates (PM, BA, tech leads) are looking a couple of weeks ahead to make sure that
-everything is ready for development and QA automation on a just in time basis, but the majority of the dev team will 
+everything is ready for development and QA automation on a just in time basis but the majority of the dev team will 
 only pick up new release work as the previous one has been pushed into production.
 {{< /warning >}} 
 

@@ -20,7 +20,7 @@ up to the actual release.
 
 But, if you are fixing bugs on the release branch and merging them down to the trunk you are doing 
 it wrong. There is a chance you might forget to merge it down, and then there is going to be a regression at the next 
-release moment (fresh branch cut from trunk). Then egg on face, and recriminations.
+release moment (fresh branch cut from the trunk). Then egg on face, and recriminations.
 
 Bugs should be reproduced and fixed on the trunk, and then **cherry-picked** to the release branch. A build should 
 happen from that, a second confirmation that the issue has been remediated, and that deployment should go live (perhaps 
