@@ -75,8 +75,10 @@ are trying to promote to the remote trunk, as well as the changes they are updat
 have work in progress in their working-copy. Trunk-Based Development teams, you see, are merging more often. Albeit 
 those are smaller merges, and they are implicitly merges to your working copy.
 
-Perforce's three-way merge tool (p4-merge) is good enough on its own to be attractive to teams using other VCS 
-technologies. In that case, it is just a command-line integration away from being usable.  PlasticSCM (not mentioned previously).
+Perforce's three-way merge tool (P4Merge) is good enough on its own to be attractive to teams using other VCS 
+technologies. For those other technologies, P4Merge  is just a config setting away from being usable.  
+
+Semantic merge is the next step up in the sciend of source-control. See [Plastic SCM](/vcs-choices/index.html#plasticscm).
 
 ### Code Review
 
