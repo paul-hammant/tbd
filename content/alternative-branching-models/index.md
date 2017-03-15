@@ -22,6 +22,7 @@ The crucial difference is where the release is performed from.
 The GitHub-flow thing showing a release-from-branch step, before the merge back to the master (trunk):
 
 ![](githubflow1.png)
+([key](/key/))
 
 One problem with is the small risk of regression in the following release - that would be if the release goes out, but 
 the branch is never merged back. Another is that it may indeed not have items in it from the trunk that were part of a 
@@ -33,12 +34,14 @@ bubbles in timeline above followed by another commit, which presumably addressed
 How Trunk-Based Development modifies the GitHub Flow model:
 
 ![](../5-min-overview/trunk_pr.png)
+([key](/key/))
 
 After the dust has settled, and the short-lived feature branch has been deleted, the commits are not smushed together
 in a bigger one (as would be the case Subversion and Perforce), the instead zip into their respective places in the
 commit history, which is not as linear as we present here:
 
 ![](githubflow3.png)
+([key](/key/))
 
 Of course, if you rebase/squash your series of commits, they could land in the trunk as a single commit.  Also note that
 the review commentary is still available after the branch is deleted, as it should be.  
@@ -51,6 +54,7 @@ There are plenty of people in the modern age that swear by this model, and feel 
 downsides. It is a branching model that has **groups** of developers active concurrently in more than one branch (or fork).
 
 ![](gitflow.png)
+([key](/key/))
 
 - Diagram copied from Vincent Driessen's 2010 article on GitFlow: "A successful Git branching model"{{< ext url="http://nvie.com/posts/a-successful-git-branching-model" >}}
 
@@ -140,15 +144,18 @@ for teams to do development work on. When that work is complete, a release may h
 So here is the intention, with Mainline:
 
 ![](mainline1.png)
+([key](/key/))
 
 When bugs inevitably happen:
 
 ![](mainline2.png)
+([key](/key/))
 
 Whenever there is a bug fix there has to be a merge down to the mainline afterward. There's no 'wrong' in this modified
 branch diagram, but you should be able to guess what the worst case branching/merging scenario is. In case you cannot:
 
 ![](mainline3.png)
+([key](/key/))
 
 **Merges for the above**
 
@@ -192,6 +199,7 @@ and green for could go live. At least for the worst performing with missing or i
 testing run in the CI pipelines:
 
 ![](mainline4.png)
+([key](/key/))
 
 ### Cascade
 
@@ -199,6 +207,7 @@ The idea is that each release has its own branch and that each release team merg
 They only do so if the CI server says the build is green for the upstream, of course.
 
 ![](cascade1.png)
+([key](/key/))
 
 Problems compound with this model, the more releases being juggled concurrently there are. An upstream butterfly is
 a downstream Tsunami of unmergability. Downstream merged begin to get skipped, or abandoned. Or the merge works, but the
@@ -206,6 +215,7 @@ code is not right so there is some in-branch fixing, which is not applicable to 
 overlaid again):
 
 ![](cascade2.png)
+([key](/key/))
 
 Remember, the merges are never cherry-picks in this model - they are sweeps of everything
 not merged yet (or up to an chosen commit number in order to make it more bite-sized).

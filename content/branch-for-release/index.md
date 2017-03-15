@@ -17,6 +17,7 @@ are still streaming their commits into the trunk at full speed.
 The incompatible policy (ref Wingerd & Seiwald above), that the release branch "should not receive continued development work".
 
 ![](branch_for_release.png)
+([key](/key/))
 
 ^ Trunk, two release branches, three releases, and a bug-fix
 
@@ -31,6 +32,7 @@ Developers are committing (green dots) at the highest throughput rate to the tru
 branch-cut or with proximity to a release. Developers as a group are **not** commiting to the release branch (see below).
 
 ![](branch_for_release2.png)
+([key](/key/))
 
 The branch cut itself is a commit. Subversion and Perforce would technically have a bigger commit here, but all
 VCS systems in use today would count the commit as 'lightweight' in terms of its impact on the history/storage,

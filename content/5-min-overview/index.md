@@ -79,6 +79,7 @@ for review before landing in the trunk. In modern portal solutions, marshaled ne
 Request) that is visible to the team.
 
 ![](trunk_pr.png)
+([key](/key/))
 
 ^ the speech bubbles are stylized code review comments
 
@@ -99,6 +100,7 @@ branches used in review), and as quickly and completely as possible loudly/visib
  automatically.
 
 ![](5trunk1.png)
+([key](/key/))
 
 The high bar is verifying the commit before it lands in the trunk. Short-lived Pull Request branches are the modern
 place for that.

@@ -159,6 +159,11 @@ googleAnalytics = "UA-24415524-3"
 	url    = "book/"
 	weight = 132
 
+[[menu.main]]
+	name   = "Key to branch diagrams"
+	url    = "key/"
+	weight = 141
+
 [blackfriday]
 	smartypants	= true
 	fractions = true

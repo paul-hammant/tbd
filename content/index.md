@@ -15,6 +15,7 @@ resist any pressure to create other long-lived development branches by employing
 avoid merge hell, do not break the build, and live happily ever after.
 
 ![](trunk1.png)
+([key](/key/))
 
  &ast; 'master', in Git nomenclature
 
