@@ -10,7 +10,8 @@ to commit together in that trunk - atomically.
 
 Google has the most famous monorepo and they do the above AND force teams to **share code at source level instead of 
 linking in previously built binaries**. Specifically, they have no version numbers for their own dependencies, just an 
-implicit 'HEAD'. Third-party libraries (like JUnit) will be checked into the repo with a specific version number 
+implicit 'HEAD'. Indeed, because of lock step upgrades for all, releases from their monorepos mean 'HEAD' **is** their 
+effective version number. Third-party libraries (like JUnit) will be checked into the repo with a specific version number 
 (like 4.11), and all teams will use that version if they use it at all.
 
 The deployment and/or release cadences for each application/service/library/frameworks will probably be different 
