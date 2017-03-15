@@ -12,7 +12,7 @@ weight: 0
 
 A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
 resist any pressure to create other long-lived development branches by employing documented techniques, 
-avoid merge hell, and live happily ever after.
+avoid merge hell, do not break the build, and live happily ever after.
 
 ![](trunk1.png)
 
@@ -26,9 +26,6 @@ and helps to make Continuous Delivery a reality.
 
 ## Caveats
 
-- If you have more than a couple of developers on the project, you are going to need a hook up a
-  [build server](/continuous-integration/) to verify their commits
-
 - Depending on the team size, and the rate of commits, **very short-lived** feature/task branches are used for
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
   Such branches allow developers to engage in [eager and continuous code review](/continuous-review/) of contributions 
@@ -37,17 +34,21 @@ and helps to make Continuous Delivery a reality.
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from the trunk on
   a just-in-time basis and are 'hardened' before a release (without that being a team activity). Alternatively, there 
   may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a roll 
-  forward strategy for bug fixes.
+  forward strategy for bug fixes. Releasing from trunk is also for high throughput teams, too.
 
 - Teams should become adept with the related [branch by abstraction](/branch-by-abstraction/) technique for longer
   to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
 
-- Development teams can casually flex up or down in size (in the trunk). Proof? [Google do Trunk-Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
+- If you have more than a couple of developers on the project, you are going to need a hook up a
+  [build server](/continuous-integration/) to verify that their commits have **not broken the build**
+
+- Development teams can casually flex up or down in size (in the trunk) without affecting throughput or quality.
+  Proof? [Google do Trunk-Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
   have **25000 developers and QA automators** in that trunk.
 
 - People who practice the [GitHub-flow branching model](/alternative-branching-models/index.html#modern-claimed-high-throughput-branching-models) will feel 
-  that this is quite similar, but there is one small difference.
+  that this is quite similar, but there is one small difference (click that link to see).
 
 - People who practice the Gitflow branching model will find this **very different**, as will many developers used to
   the popular ClearCase, Subversion, Perforce, StarTeam, VCS [branching models of the past](/alternative-branching-models/index.html#legacy-branching-models).
