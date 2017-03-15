@@ -6,12 +6,19 @@ weight: 65
 
 ## The high bar today
 
-Continuous Code Review is where the team commits to processing team-mates proposed commits to trunk speedily. 
+Continuous Code Review is where the team commits to processing proposed commits (to trunk) from team-mates trunk speedily. 
+
 The idea is that a system (the code portal probably) allows developers to package up commits for code review and get 
-that in front of peers quickly. That peer developers make a commitment to do code reviews objectively and quickly. 
+that in front of peers quickly. And that peer developers make a commitment to do code reviews objectively and quickly. 
+
 There is a cost to multi-tasking, so maybe someone in the dev team who is between work items at that moment should focus 
 on the review before they start new work. With a continuous review ethos, it is critical that code reviews are not 
 allowed to back up.
+
+Companies doing Extreme Programming, often allow that pair of eyes to count as a review. Some companies require 
+multiple reviews of code. For "the pair as reviewers too" scenario, one might have ben enough and that commit will 
+land in the trunk, without others looking at it. Five minutes and 20 seconds into Guido van Rossum's famous 2006 presenation, 
+he states "code review is a best alternative to pair programming", and that it is "basically asynchronous pair-programming".
 
 ### Pull Requests
 
