@@ -65,7 +65,7 @@ It has been a lesser known branching model of choice since the mid-nineties and 
 The largest of development organizations, like Google (as mentioned) and Facebook practice it at scale.
 
 Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers/) have made
-Trunk-Based Development more (and occasionally less) necessary.
+Trunk-Based Development more (and occasionally less) influential.
 
 ## This site
 

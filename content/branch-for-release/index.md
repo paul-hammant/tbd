@@ -25,18 +25,29 @@ High throughput, [Continuous Delivery](/continuous-delivery/) teams can ignore t
 roll-forward strategy for solving it, meaning the fix for a bug is in the trunk, and the release to production is from the trunk.
 {{< /note >}}
 
-## Who's committing where?
+## Who is committing where?
 
-Developers are committing (green dots) at the highest throughput rate to the trunk, and do not slow up around a 
-branch-cut or with proximity to a release.
+Developers are committing (green dots) at the highest throughput rate to the trunk, and do not slow up or freeze around a 
+branch-cut or with proximity to a release. Developers as a group are **not** commiting to the release branch (see below).
 
 ![](branch_for_release2.png)
 
 The branch cut itself is a commit. Subversion and Perforce would technically have a bigger commit here, but all
-VCS systems in use today would count the commit as 'lightweight' in terms of it's impact on the history/storage,
+VCS systems in use today would count the commit as 'lightweight' in terms of its impact on the history/storage,
 and the time taken to create.
 
-That red dot is an accidental build break that was fixed (somehow) soon after.
+That red dot is an accidental build break that was fixed (somehow) soon after. 
+
+## Late creation of release branches
+
+Some teams [release from a tag on the trunk](/release-from-trunk/) and do not create a branch at that time. That in 
+itself is **an alternate practice to this one, "branch for release"**.
+
+Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag (if they are
+not going to just issue another release from the trunk).  
+
+Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage 
+of here in the case of bugs after "release from a tag", or even changes for point releases.
 
 ## Fix production bugs on Trunk
 
@@ -50,17 +61,6 @@ A cherry-pick merge takes a specific commit (or commits) and merges that to the 
 one or more commits that happened before it, but after the branch was cut.
 {{< /warning >}}
 
-### Late branch creation
-
-Some teams [release from a tag on the trunk](/release-from-trunk/) and do not create a branch at that time. That in 
-itself is **an alternate practice to this one, "branch for release"**.
-
-Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag (if they are
-not going to just issue another release from the trunk).  
-
-Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage 
-of here in the case of bugs after "release from a tag", or even changes for point releases.
-
 ### Cherry-picks from the trunk to branch ONLY
 
 You should not fix bugs on the release branch in the expectation of cherry-picking them back to the trunk. 
@@ -73,6 +73,14 @@ Trunk-Based Development. It takes just one regression though for a policy change
 
 Of course, sometimes you **cannot** reproduce the bug on trunk so you have to do it the other way round, despite 
 everything mentioned above.
+
+### Merge Meister role
+
+The process of merging commits from trunk to the release branch using 'cherry pick' is a role for a single developer 
+in a team. Or dev pair, if you are doing Extreme Programming. Even then, it is a part time activity. The dev or pair
+probably needs to police a list of rules before doing the cherry pick. Rules like which business representative 
+signed off on the merge. The role should also rotate each day. Some teams update a wiki to audit what made it to the 
+release branch after branch cut, and some use ticket systems.
 
 ## Patch releases
 
