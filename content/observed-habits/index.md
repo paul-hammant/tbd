@@ -34,23 +34,34 @@ Trunk-Based Development teams update/pull/sync from the shared trunk often. Many
 ## Running the build locally
 
 Developers practicing Trunk-Based Development run the build before a commit/push in order to not break the build. 
-This one practice, for very small teams, allows them to not set up a CI server until later. If they can't push their 
+This one practice, for very small teams, allows them to not set up a CI server until later. If they cannot push their 
 commits to the shared trunk because someone else beat them to it, they have to do another update/sync/pull then
 another build then the push of the revised commit(s). "It worked on my machine" says the developer that does not 
 want to confess to breaking the build (assuming quick reliable idempotent builds).
 
 ## Powering through broken builds
 
-OK, so because of that lazy developer, or the flaky build, or pure accident of timing (Google has a commit every 30 
+So because of that lazy developer, or the flaky build, or pure accident of timing (Google has a commit every 30 
 seconds into their monorepo - there must be quantum entangled commits on a 0.0001% basis), the trunk will be observed 
-to be broken occasionally. There could be an automatic rollback that's about to happen, or a good old fashioned "lock 
-the trunk" while the build-cop sorts it out. That last is particularly true in situations where batching of commits in 
-CI builds is the reality.
+to be broken occasionally. 
+
+The best implementations are going to perform automatic rollback of a broken commit that lands in the trunk. The 
+developer gets notified and they get to fix it quietly on their workstation.
 
 A developer wanting to update/pull/sync from the shared trunk often runs the risk of encountering that 
 statistically improbable broken build. They do not want to have the commits that broke the trunk, on their workstation
 if they are developing. So what they do is update/pull/sync to the last known good commit, and only go further
-ahead when the trunk build is officially repaired. This way they know they can stay 'green' on their workstation.
+ahead when the trunk build is officially repaired. This way they know they can stay 'green' on their workstation. Some 
+companies have engineer a system where the last known good commit hash/number is stored in a network share, and a
+shell script used for update/pull/sync does so to that instead of HEAD revision.
+
+### Build Cop
+
+If the Continuous Integration server is batching commits to trunk in each build, or the elapsed time for a build is 
+long then the a "build cop" role might be required within the team to help sort out build breakages. Sadly that 
+means that locking the trunk to preven further checkins on top of the broken one, might be necessary as some form
+of bisecting is performed to work out which commit broke the build and should be rolled back. Obviously a Continuous
+Integration server setup that can run one build per commit, is best.
 
 ## Shared Nothing
 
@@ -101,5 +112,5 @@ Where possible stories or tasks that have been pulled from the backlog should be
 developers in a short period of time, and in a small number of commits. They should also transcend all the apparent 
 tiers of the stack, and not have to jump between developers with specialized knowledge in order to be able to 
 completed. The Agile industry donates the INVEST{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} principle 
-as well as "Thin Vertical Slices"{{< ext url="http://www.scruminc.com/wp-content/uploads/2015/06/User-Stories-2.0.pdf" >}} for this purpose, and that 
-are great enablers of high throughput commits to the trunk, and always being release ready.
+as well as "Thin Vertical Slices"{{< ext url="http://www.scruminc.com/wp-content/uploads/2015/06/User-Stories-2.0.pdf" >}} 
+for this purpose, and that are great enablers of high throughput commits to the trunk, and always being release ready.
