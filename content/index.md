@@ -33,7 +33,7 @@ and helps to make Continuous Delivery a reality.
   before they land in the trunk.
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from the trunk on
-  a just-in-time basis, are 'hardened' before a release (without that being a team activity), and are deleted some time after release. Alternatively, there 
+  a just-in-time basis, are 'hardened' before a release (without that being a team activity), and **those branches are deleted** some time after release. Alternatively, there 
   may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a roll
   forward strategy for bug fixes. Releasing from trunk is also for high throughput teams, too.
 
