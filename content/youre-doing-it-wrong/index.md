@@ -60,7 +60,7 @@ Developers take stories or tasks from the backlog, implement them with tests, an
 into the shared trunk. They don't slow down that activity as they get closer to a release date. At least the majority do not. A very
 small subset of the development team may focus on the release candidates being made from the release branch (if that
 branch exists at all), and towards fixes in the trunk that will be cherry-picked into that branch. For most of the team, though,
-every day is the same and proximity to a release does not slow down the rate at which changes are being pushed into the
+every day looks the same. Also proximity to a release does not slow down the rate at which changes are being pushed into the
 trunk. There is certainly no "code freeze" with Trunk-Based Development, as team leadership focuses on protecting the
 majority of developers from the distraction of release preparation. If that protection is missing, something needs
 fine-tuning, and the branching model could be it.
@@ -79,4 +79,4 @@ We only merge from trunk to release branches (if we branch at all), and then onl
 commits to trunk, and only using the cherry-pick method of merging.  Sure, two release branches could be in
 play for short periods of time, but the team should cherry-pick merge from trunk to two different branches.
 In some VCS tools (Perforce and Subversion) those can be in the same atomic commit, but that is not
-strictly necessary. 
+strictly necessary.
