@@ -58,7 +58,7 @@ for a few years before.
 
 There's a section in *Microsoft Secrets* dealing with Microsoft's per-developer workflow using Source Library Manager
 (SLM) on  a one-branch model (the book does not use the words trunk or branch). SLM (AKA "slime") - was an internal
-tool Microsoft used for source-control. That daily developer workflow with that was:
+tool Microsoft used for source-control. The *daily* developer workflow with SLM was:
 
 1. checkout (update/pull/sync or checkout afresh)
 2. implement feature
