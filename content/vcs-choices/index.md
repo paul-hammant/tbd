@@ -124,7 +124,7 @@ GitSwarm kinda replaces this.
 
 ### p4-git and p4-dvcs
 
-P4-git is very similar to the Git-Fusion technology but is not made by the Perforce people themselves. It also does not 
+P4-git is very similar to the Git Fusion technology but is not made by the Perforce people themselves. It also does not 
 require the launching of second server appliance (as Git Fusion does).
 
 In 2015, the perforce technologies were extended to include custom DVCS features. All the features of p4-git but without 
