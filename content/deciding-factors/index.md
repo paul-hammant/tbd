@@ -15,7 +15,7 @@ and some one. Some teams do not have an iteration at all - particularly teams do
 
 If you are on a four week, or more iteration length, and each of those four weeks varies with proximity to the 
 release and cannot change that you may be in a bind. You may be able to follow the tenants of Trunk-Based Development, 
-benefit from a Continuous Integration daemon (as all branching models can), but you are not doing to be able to 
+benefit from a Continuous Integration daemon (as all branching models can), but you are not going to be able to 
 get all the way to Continuous Delivery (or Continuous Deployment).
 
 ### Waterfall
@@ -27,19 +27,19 @@ to do Trunk-Based Development. Consider a short-iteration Agile methodology like
 
 Trunk-Based Development needs you to have small stories/tasks. Optimal is you starting work on a change, should only be a matter
 of hours before completing and pushing it forward for code review. Longer than a couple of days, and there is going to be 
-pressure to group a bunch of developers on a non-trunk branch and merge back later. Or worse have developers make 
-branches/forks from your in-progress branch. Or worse still take intermediate merges from your branch, despite your 
+pressure to group a bunch of developers on a non-trunk branch and merge back later. Or worse, have developers make 
+branches/forks from your in-progress branch. Or worse still, take intermediate merges from your branch, despite your 
 change being incomplete.  
 
-Generally speaking, the whole development team should do whatever it can do break stories/tasks into smaller stories/tasks. 
+Generally speaking, the whole development team should do whatever it can to break stories/tasks into smaller stories/tasks. 
 In Agile, there is an INVEST mnemonic{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} that aids in the splitting
-up or stories.
+up of stories.
 
 ### Build times
 
 Keeping build times short is important in that it directly drives the number of commits a developer can do in a day.
 If the build time is a couple of minutes, developers are likely to keep a high pace. If the build time is 30 minutes or
-worse developers change pace to match only a couple of commits a day and drop their throughput.
+worse, developers change pace to match only a couple of commits a day and drop their throughput.
 
 ## VCS Technology Choice
 
@@ -87,8 +87,8 @@ something else.
 
 ## Conway's Law
 
-The org making applications and services that reflect the organization's own structure{{< ext url="https://en.wikipedia.org/wiki/Conway's_law" >}}. 
-If your organization feels like this, and a Monorepo does not feel right, then MicroServices could the direction for you.
+The organization creates applications and services that reflect the organization's own structure{{< ext url="https://en.wikipedia.org/wiki/Conway's_law" >}}. 
+If your organization feels like this, and a Monorepo does not feel right, then MicroServices could be the direction for you.
 
 ## Database migrations
 
