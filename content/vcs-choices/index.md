@@ -84,7 +84,7 @@ Perforce's website{{< ext url="https://www.perforce.com" >}}
 
 ### Vanilla Perforce
 
-Perforce is a closed-source, industrial strength VCS. Pixar store everything needed to make a movie in it, and Addidas 
+Perforce is a closed-source, industrial strength VCS. Pixar stores everything needed to make a movie in it, and Adidas 
 store all their designs in it. Until 2012, Google had their Trunk and many tens of terabytes of history in it.
 They moved off it to an in-house solution as they outgrew it. Perforce is peculiar in that its 'p4d' (a single server-side 
 executable binary file) is the whole server and does not need to be installed - just executed.
@@ -116,21 +116,21 @@ of the team-ware features like code review.
 There's a VM appliance from the Perforce people, that can sit in your infrastructure and mediate between the vanilla Perforce
 server, and your wish to use a pure Git workflow on your development workstation.
 
-With a Git-fusion clone from a Perforce repository, and client spec was specified, you get the subsetted 
-representation of the source tree, complete with history. That's a neat feature. Things checked out through Git-Fusion
+With a Git Fusion clone from a Perforce repository, and client spec was specified, you get the subsetted 
+representation of the source tree, complete with history. That's a neat feature. Things checked out through Git Fusion
 also are not encumbered by the read-only bit feature.
 
 GitSwarm kinda replaces this.
 
 ### p4-git and p4-dvcs
 
-P4-git is very similar to the Git fusion technology but is not made by the Perforce people themselves. It also does not 
+P4-git is very similar to the Git-Fusion technology but is not made by the Perforce people themselves. It also does not 
 require the launching of second server appliance (as Git Fusion does).
 
-In 2015, the perforce technologies were extended to include custom DVCS features. All the features of P4-git but without 
+In 2015, the perforce technologies were extended to include custom DVCS features. All the features of p4-git but without 
 the Git compatibility.
 
-As for Git-fusion, things checked out through p4-git and p4-dvcs are not encumbered by the read-only bit control of p4d.
+As for Git Fusion, things checked out through p4-git and p4-dvcs are not encumbered by the read-only bit control of p4d.
 
 ## Subversion
 
@@ -188,7 +188,7 @@ Microsoft encouraged a use of Git within it, rather than then proprietary VCS th
 
 TFS is perfectly compatible with a Trunk-Based Development usage.
 
-Note: Microsoft are donating back to the Git community with a Git Virtual File System, which allows some monorepo 
+Note: Microsoft are donating back to the Git community with a Git Virtual File System, which allows some Monorepo 
 usage for Git{{< ext url="https://github.com/Microsoft/GVFS" >}}.
 
 ## PlasticSCM
