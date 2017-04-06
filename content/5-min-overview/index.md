@@ -89,7 +89,7 @@ Development.
 
 Note: You want to keep 
 the commentary/approval/rejection that is part of the review for historical and auditing purposes, but you do not want to 
-keep the branch. Specifically, you do not want to developers to focus on the branch after the code review and merge back
+keep the branch. Specifically, you do not want the developers to focus on the branch after the code review and merge back
 to the trunk.
 
 ## A safety net
