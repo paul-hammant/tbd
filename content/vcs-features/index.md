@@ -78,7 +78,7 @@ those are smaller merges, and they are implicitly merged to your working copy.
 Perforce's three-way merge tool (P4Merge) is good enough on its own to be attractive to teams using other VCS 
 technologies. For those other technologies, P4Merge  is just a config setting away from being usable.  
 
-Semantic merge is the next step up in the sciene of source-control. See [Plastic SCM](/vcs-choices/index.html#plasticscm).
+Semantic merge is the next step up in the science of source-control. See [Plastic SCM](/vcs-choices/index.html#plasticscm).
 
 ### Code Review
 
