@@ -6,14 +6,14 @@ weight: 31
 
 **Desirable VCS features, that is**
 
-To great degree Trunk-Based Development possible on any Version Control System (VCS) that does atomic commits (spoiler: all do 
+To great degree, Trunk-Based Development is possible on any Version Control System (VCS) that does atomic commits (spoiler: all do 
 that came after CVS).  Productivity and governance are what divides them, though.
 
 ## Productivity
 
 It turns out there are many 
-productivity reasons that teams quit one technology and go to another. It does not matter whether the tool is a commercial
-or open source one. At least to its end users it does not.
+productivity related reasons that teams quit one technology and go to another. It does not matter whether the tool is a commercial
+or an open source one. At least to its end users it does not.
 
 By speed we mean two things primarily:
 
@@ -36,7 +36,7 @@ repository is the biggest clue as to how intrinsically fast it is.
 Technologies that only keep head revision on the checkout, ordinarily have to walk the entire directory structure 
 looking for changed files and do handshaking to the server for each one. That is definitely Subversion and its predecessor CVS. 
 Batching of those exchanges speeds it up, but there is still a slowdown related to the breadth and depth of the source
-tree. Perforce makes the operation faster because the server-side is poised for the sync operation at all time, by 
+tree. Perforce makes the operation faster because the server-side is poised for the sync operation at all times, by 
 keeping your tree and which revision you have for each file in RAM. It does this at the cost of maintaining read-only
 bits for files (be sure and use an IDE that silently handles the Perforce interactions). Perforce can effectively be much
 faster for this back-to-back pull/update/sync test of speed because it kinda already knows the answer to the question.
@@ -73,12 +73,12 @@ have **not** changed between the remote master repo and local working copy. It s
 Developers (hopefully in pairs) are going to have to become skilled in arbitrating over merges for the commits they 
 are trying to promote to the remote trunk, as well as the changes they are updating from that it in the case that they 
 have work in progress in their working-copy. Trunk-Based Development teams, you see, are merging more often. Albeit 
-those are smaller merges, and they are implicitly merges to your working copy.
+those are smaller merges, and they are implicitly merged to your working copy.
 
 Perforce's three-way merge tool (P4Merge) is good enough on its own to be attractive to teams using other VCS 
 technologies. For those other technologies, P4Merge  is just a config setting away from being usable.  
 
-Semantic merge is the next step up in the sciend of source-control. See [Plastic SCM](/vcs-choices/index.html#plasticscm).
+Semantic merge is the next step up in the sciene of source-control. See [Plastic SCM](/vcs-choices/index.html#plasticscm).
 
 ### Code Review
 
@@ -102,7 +102,7 @@ Read more in [Game Changers - Google's Mondrian](/game-changers/index.html#googl
 
 This goes hand in hand with the Code Review capability. CI Servers kick in for commits are pushed up code review branches, 
 or at least against change sets that are entering code review and validate them. The regular build, and maybe some 
-additional steps are executed against them and the results of those made available to code reviewers, Facebook have a 
+additional steps are executed against them and the results of those made available to code reviewers, Facebook has a 
 Service Level Agreement to have those complete ten minutes after the commit has been placed in the 'needs code review'
 queue.
 
@@ -133,7 +133,7 @@ modern software engineering though.
 
 ### Size / Scale
 
-Many teams, particularly those with monorepo configurations or large binary files (like Games companies), want to have 
+Many teams, particularly those with Monorepo configurations or large binary files (like Games companies), want to have 
 limitless server-side storage for their repository.  Git and Mercurial are inching towards bigger and bigger 
 capacity, but there are still a few snafus to work through - how to cleanly/safely reduce the size of the client side clone
 history (while still being able to push changes back to the server) is a challenge.
