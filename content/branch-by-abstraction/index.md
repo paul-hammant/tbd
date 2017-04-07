@@ -6,15 +6,15 @@ weight: 53
 
 Branch by Abstraction is a set-piece technique to effect a 'longer to complete' change in the trunk. Say a developer
 (or a pair of developers), has a change that is going to take five days to complete. There could easily be pressure to
-create a branch for this - somewhere that can be unstable for a period of time before it completes (and get's merged
+create a branch for this - somewhere that can be unstable for a period of time before it completes (and gets merged
 back somewhere).
 
-There may be some aspect of repetition to the coding activities that makes it a longer to complete. No matter, the 
-change was predicted as being time-consuming, complex, destabilizing/disruptive to every else in the development team.
+There may be some aspect of repetition to the coding activities that makes it longer to complete. No matter, the 
+change was predicted as being time-consuming, complex, destabilizing/disruptive to everyone else in the development team.
 
 **Rules:**
  
-1. There's also a lot of developers already depending on 
+1. There are also a lot of developers already depending on 
 the code that is subject of the 'longer to complete' change, and we do not want them to be slowed down in any way.
 2. No commit pushed to the shared repository should jeopardize the ability to go live.
 
@@ -25,15 +25,15 @@ For simplicity's sake, let us say there is code that is 'to be replaced', code '
 1. Introduce an abstraction around the code that is to be replaced, and commit that for all to see.  If needed, this 
 can take multiple commits. None of those are allowed to break the build, and all of them could be pushed to the shared
 repository in order, and as done.
-2. Write a second implementation of the abstraction for the to be introduced code, and commit that, but maybe as 
+2. Write a second implementation of the abstraction for the to-be-introduced code, and commit that, but maybe as 
 'turned off' within the trunk so that other developers are not depending on it yet. If needed, this can take multiple 
 commits as above. The abstraction from #1 may also be occasionally tweaked, but must follow the same rule - do not 
 break the build.
 3. Flip the software 'off' switch to 'on' for the rest of the team, and commit/push that.
-4. Remove the to be replaced implementation
+4. Remove the to-be-replaced implementation
 5. Remove the abstraction
 
-Hopefully, your team IDE that can perform complex refactorings on sets on checkouts in a way that running the build 
+Hopefully, your team uses an IDE that can perform complex refactorings on sets on checkouts, in a way that running the build 
 after each is an uneventful validation of the refactorings.
 
 ## Contrived example
