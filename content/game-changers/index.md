@@ -246,7 +246,7 @@ slower more costly Selenium functional tests. Pyramid like, and in the early to 
 
 ### Home-grown CI and tooling
 
-This was 2002 onwards, but only barely documented outside Google, this the influence is much smaller.
+This was 2002 onwards, but only barely documented outside Google, thus the influence is much smaller.
 
 Google is the most famous example of using Scaled CI infrastructure to keep up with commits (one every 30 seconds on
 average) to a single shared trunk. Google's setup would also allow the same infrastructure to verify *proposed* commits.
