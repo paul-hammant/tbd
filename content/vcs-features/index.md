@@ -95,7 +95,7 @@ effectively pre-commit - or at least commit to the master.
 There were (and are) other technologies for code review such as Crucible (Atlassian), UpSource (JetBrains), Gerrit, 
 Phabricator, but integration into a platform experience is key.  GitLab and RhodeCode are emerging platforms.
 
-Read more in [Game Changers - Google's Mondrian](/game-changers/index.html#google-s-internal-devops-1998-onwards) and 
+Read more in [Game Changers - Google's Mondrian](/game-changers/index.html#google-s-internal-devops-2006-onwards) and 
 [Game Changers - GitHub's Pull Requests](/game-changers/index.html#github-s-entire-platform-2008-onwards).
 
 ### Continuous Integration testing

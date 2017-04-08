@@ -93,6 +93,7 @@ normalize_index_file_names_and_extract_just_the_article strangulation/ true
 normalize_index_file_names_and_extract_just_the_article vcs-features/ true
 normalize_index_file_names_and_extract_just_the_article vcs-choices/ true
 normalize_index_file_names_and_extract_just_the_article youre-doing-it-wrong/ true
+normalize_index_file_names_and_extract_just_the_article key/ true
 normalize_index_file_names_and_extract_just_the_article book/ true
 
 # slim the front page too.
