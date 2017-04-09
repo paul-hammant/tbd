@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://paulhammant.com/"
 languageCode = "en-us"
 title = "Trunk Based Development"
 theme = "hugo-material-docs"
