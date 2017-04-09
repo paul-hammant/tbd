@@ -169,3 +169,8 @@ googleAnalytics = "UA-24415524-3"
 	fractions = true
 	smartDashes = true
 	plainIDAnchors = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
