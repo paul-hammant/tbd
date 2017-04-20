@@ -80,3 +80,9 @@ commits to trunk, and only using the cherry-pick method of merging.  Sure, two r
 play for short periods of time, but the team should cherry-pick merge from trunk to two different branches.
 In some VCS tools (Perforce and Subversion) those can be in the same atomic commit, but that is not
 strictly necessary.
+
+## Merge everything back from a release branch at the end of the release branch
+
+Bug fixing on the release branch? If yes, then that is covered above. If you are not doing that then you have no need
+to merge anything back from the release branch - you can just delete it after you're sure there will not be any more
+releases from it.
