@@ -19,7 +19,7 @@ The incompatible policy (ref Wingerd & Seiwald above), that the release branch "
 ![](branch_for_release.png)
 ([key](/key/))
 
-^ Trunk, two and a half release branches, five releases, and two cherry-pick bug fixes
+^ Trunk, two and a half release branches, five releases (two planned, three unplanned), and two cherry-pick bug fixes
 
 {{< note title="CD teams do not do release branches" >}}
 High throughput, [Continuous Delivery](/continuous-delivery/) teams can ignore this - if they had a lemon in production, they choose a
