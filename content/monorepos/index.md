@@ -27,9 +27,10 @@ same update/pull/sync operation.
 
 And some secondary goals:
 
-* Allow changes to common dependencies to via **atomic commits**.
+* Allow changes to multiple modules via **atomic commits**.
 * Allow the extraction of new common dependencies (from existing code) to be achieved in atomic commits.
 * Force all developers to focus on the HEAD revisions of files in the trunk
+* Allow bisecting towards the root cause of a prod bug to be effected on multiple (potentially dissimilar) modules at the same time
 
 Google and Facebook are the most famous organizations that rest development on a single company-wide trunk, that
 fits the monorepo design.
