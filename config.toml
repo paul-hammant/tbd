@@ -155,7 +155,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 131
 
 [[menu.main]]
-	name   = "Book"
+	name   = "Book on this topic"
 	url    = "book/"
 	weight = 132
 
