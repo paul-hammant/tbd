@@ -33,7 +33,7 @@ And some secondary goals:
 * Allow bisecting towards the root cause of a prod bug to be effected on multiple (potentially dissimilar) modules at the same time
 
 Google and Facebook are the most famous organizations that rest development on a single company-wide trunk, that
-fits the monorepo design.
+fits the monorepo design. Netflix and Uber (iOS application) disclosed in 2017 that they do too. 
 
 {{< warning title="Risk of chaotic directory layout" >}}
 Google's co-mingled applications and services site within highly structured and uniform source trees. A Java
@@ -308,6 +308,22 @@ promoted the one repo per microservice for a while now.
         </tr>
         <tr>
             <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/">Maven In A Google Style Monorepo</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">6 Mar 2017, Blog entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://eng.uber.com/ios-monorepo/">Faster Together: Uber Engineering’s iOS Monorepo</a></td>
+        </tr>
+    </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">27 Apr 2017, Blog entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://medium.com/netflix-techblog/towards-true-continuous-integration-distributed-repositories-and-dependencies-2a2e3108c051">Towards true continuous integration: distributed repositories and dependencies</a></td>
         </tr>
     </table>
 </div>
