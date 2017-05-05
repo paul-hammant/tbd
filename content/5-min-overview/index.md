@@ -22,7 +22,7 @@ that might:
 * not show that work was duplicated until it is merged
 * not show problems of incompatibility/undesirability that does not break the build
 
-Trunk-Based Development is a branching model that reduces the distance to the max. 
+Trunk-Based Development is a branching model that reduces the distance to the minimum. 
  
 ## What it is
 
