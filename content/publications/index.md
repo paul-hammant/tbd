@@ -8,6 +8,19 @@ weight: 131
 
 <hr/>
 
+## Software Configuration Management Patterns (November 14, 2003)
+
+<div>
+    <img width="93" src="scm-patterns.jpg" style="float:left;padding-right:10px; border:0px solid black;"/>
+    <p>
+        <em>Software Configuration Management Patterns: Effective Teamwork, Practical Integration</em><br/>
+        by Stephen P. Berczuk with Brad Appleton
+        <br/>
+        <a href="https://www.amazon.com/Software-Configuration-Management-Patterns-Integration/dp/0201741172"><strong>Amazon </strong>(paperback)</a><br/>
+    </p>
+    <br clear="all"/>
+</div>
+
 ## Continuous Integration (June 29, 2007)
 
 <div>
