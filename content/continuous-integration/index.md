@@ -168,8 +168,8 @@ the shared trunk.
 That place has a name - a branch (or a branch of a fork the GitHub way). It is a perfect place to CI verify the commit
 before auto-merging it to the shared trunk (if you want to auto-merge after code review approvals). 
 
-The new problem is how do you prevent that short-lived feature branch from sleepwalking into a long-lived feature 
-branch with half a dozen developers keeping it from being 'complete' (somehow) and merged back. You can't with tools
+The new problem is how do you prevent that [short-lived feature branch](/short-lived-feature-branches/) from sleepwalking into a long-lived feature 
+branch with half a dozen developers keeping it from being 'complete' (somehow) and merged back. You cannot with tools
 today, but it would be cool if you could have a ticking clock or count down on those branches at creation to enforce
 its 'temporary' intention.
 

@@ -36,7 +36,7 @@ How Trunk-Based Development modifies the GitHub Flow model:
 ![](../5-min-overview/trunk_pr.png)
 ([key](/key/))
 
-After the dust has settled, and the short-lived feature branch has been deleted, the commits are not smushed together
+After the dust has settled, and the [short-lived feature branch](/short-lived-feature-branches/) has been deleted, the commits are not smushed together
 in a bigger one (as would be the case Subversion and Perforce), the instead zip into their respective places in the
 commit history, which is not as linear as we present here:
 

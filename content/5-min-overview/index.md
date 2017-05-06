@@ -94,10 +94,10 @@ to the trunk.
 
 ## A safety net
 
-[Continuous Integration](/continuous-integration/) (CI) daemons are set up to watch the trunk (and the short-lived feature 
-branches used in review), and as quickly and completely as possible loudly/visibly inform the team that the trunk
- is broken.  Some teams will lock the trunk and roll-back changes. Others will allow the CI server to do that 
- automatically.
+[Continuous Integration](/continuous-integration/) (CI) daemons are set up to watch the trunk (and the 
+[short-lived feature branches](/short-lived-feature-branches/) used in review), and as quickly and completely as possible 
+loudly/visibly inform the team that the trunk is broken.  Some teams will lock the trunk and roll-back changes. Others 
+will allow the CI server to do that automatically.
 
 ![](5trunk1.png)
 ([key](/key/))

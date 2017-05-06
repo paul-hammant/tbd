@@ -473,7 +473,7 @@ The speculative merge is discarded every time after #2 (if it fails to merge aut
 the actual merge result is never pushed off the build server to the remote (in Git terms). It is only the "is this
 buildable and mergeable or not" notification that was desired from the exercise.
 
-Although they intended this feature of Snap-CI for short-lived feature branches, it is clear now that teams should do
+Although they intended this feature of Snap-CI for [short-lived feature branches](/short-lived-feature-branches/), it is clear now that teams should do
 this CI setup **regardless of branching model**. Yes, even the long-lived branching models also benefit from this,
 though they'll be challenged to stay 'green' the whole time, and remain eminently and automatically mergeable back to
 the mainline/master.

@@ -16,4 +16,4 @@ now, nobody else should be". They run the full build after bringing their checko
 green.
 
 There's a modern alternative, that allows teams to grow much bigger:
-[Short Lived Feature Branch](/short-lived-feature-branches/).
+[Short-Lived Feature Branches](/short-lived-feature-branches/).

@@ -45,11 +45,11 @@ source is mostly a volunteer activity.
 
 Regardless of branching model, the wish is for the PR to reviewed fairly quickly. On GitHub (and possibly others) the PR
 can come from a fork or a branch in the main repo. There is little difference to the processing of these. In Trunk-Based 
-Development teams, the PR should be on a [Short Lived Feature Branch](/short-lived-feature-branches/) and processed very 
+Development teams, the PR should be on a [short-lived feature branch](/short-lived-feature-branches/) and processed very 
 quickly by reviews towards merging back to trunk/master. A few minutes for the review is best, and tens of minutes 
 acceptable. More than a hour or two, and you are negatively affecting cycle times.
 
-The short lived feature branch may have received many commits before the developer initiated the pull request. Some 
+The short-lived feature branch may have received many commits before the developer initiated the pull request. Some 
 developers will squash (rebase) the changes into a single commit before starting code review. Some teams have a policy 
 in favor of or against squash/rebase. 
 

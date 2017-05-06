@@ -27,10 +27,11 @@ and helps to make Continuous Delivery a reality.
 
 ## Caveats
 
-- Depending on the team size, and the rate of commits, **very short-lived** feature/task branches are used for
+- Depending on the team size, and the rate of commits, 
+  [short-lived feature branches](/short-lived-feature-branches/) are used for
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
   Such branches allow developers to engage in [eager and continuous code review](/continuous-review/) of contributions
-  before they land in the trunk.
+  before they land in the trunk. Smaller teams may [commit direct to the trunk](/committing-straight-to-the-trunk/).
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from the trunk on
   a just-in-time basis, are 'hardened' before a release (without that being a team activity), and **those branches are deleted** some time after release. Alternatively, there 
