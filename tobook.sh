@@ -80,6 +80,7 @@ normalize_index_file_names_and_extract_just_the_article concurrent-development-o
 normalize_index_file_names_and_extract_just_the_article context/ true
 normalize_index_file_names_and_extract_just_the_article continuous-delivery/ true
 normalize_index_file_names_and_extract_just_the_article continuous-integration/ true
+normalize_index_file_names_and_extract_just_the_article committing-straight-to-the-trunk/ true
 normalize_index_file_names_and_extract_just_the_article short-lived-feature-branches/ true
 normalize_index_file_names_and_extract_just_the_article continuous-review/ true
 normalize_index_file_names_and_extract_just_the_article deciding-factors/ true
@@ -133,6 +134,7 @@ python ../footer_refs.py concurrent-development-of-consecutive-releases/index.ht
 python ../footer_refs.py context/index.html 
 python ../footer_refs.py continuous-delivery/index.html 
 python ../footer_refs.py continuous-integration/index.html 
+python ../footer_refs.py committing-straight-to-the-trunk/index.html
 python ../footer_refs.py short-lived-feature-branches/index.html
 python ../footer_refs.py continuous-review/index.html
 python ../footer_refs.py deciding-factors/index.html
