@@ -17,20 +17,45 @@ allowed to back up.
 
 Companies doing Extreme Programming, often allow that pair of eyes to count as a review. Some companies require 
 multiple reviews of code. For "the pair as reviewers too" scenario, one might have ben enough and that commit will 
-land in the trunk, without others looking at it. Five minutes and 20 seconds into Guido van Rossum's famous 2006 presenation, 
-he states "code review is a best alternative to pair programming", and that it is "basically asynchronous pair-programming".
+land in the trunk, without others looking at it. Five minutes and 20 seconds into Guido van Rossum's famous 2006 Mondrian 
+presentation, he states "code review is a best alternative to pair programming", and that it is "basically 
+asynchronous pair-programming".
 
-### Pull Requests
+### Pull Requests (PRs)
 
-The pull-request (PR) model introduced by GitHub is the dominant code review model today. It is a branch, but a personal
-one and short-lived. It may suffer many commits before the developer feels the task is complete and initiates a PR 
-which triggers code review (and the CI daemon to wake up and build/verify the branch). The temporary branch may have
-received many commits before the developer initiated the pull request. Some developers will squash (rebase) the
-changes into a single commit before starting code review. Some teams have a policy in favor of or against squash/rebase. 
+The pull-request (PR) model introduced by GitHub is the dominant code review model today. The concept was available 
+from GitHub's launch in 2008, and has revolutionized open source, and enterprise software development. Google were
+secretly doing the same thing with custom tooling around their Perforce install from about 2005, and Guido's
+presentation on Mondrian in 2006 (as mentioned) leaked that to the world (see below).
+
+A PR is one
+or more commits towards a goal described in an accompanying piece of text. The act of creating the PR from the branch
+signals the end (or a pause) in work, and the wish for the reviewers to get busy (and the CI daemon to wake up and 
+build/verify the branch). There are caveats though.
+
+#### Open Source contributions via PRs
+
+These can come from anyone who has an account on GitHub (or equivalent). They will have forked your repository and the 
+PR will be about commits that would come back to your repository. They may delete their repository after you consume
+their commits. If these are unsolicited you may well
+take your time reviewing them. Indeed you may never consume them, if you don't like them. Hardly continuous, but open
+source is mostly a volunteer activity.
+
+#### PRs from colleagues
+
+Regardless of branching model, the wish is for the PR to reviewed fairly quickly. On GitHub (and possibly others) the PR
+can come from a fork or a branch in the main repo. There is little difference to the processing of these. In Trunk-Based 
+Development teams, the PR should be on a [Short Lived Feature Branch](/short-lived-feature-branches/) and processed very 
+quickly by reviews towards merging back to trunk/master. A few minutes for the review is best, and tens of minutes 
+acceptable. More than a hour or two, and you are negatively affecting cycle times.
+
+The short lived feature branch may have received many commits before the developer initiated the pull request. Some 
+developers will squash (rebase) the changes into a single commit before starting code review. Some teams have a policy 
+in favor of or against squash/rebase. 
 
 {{< note title="Common Code Owners" >}}
 Commits being reviewed are never rejected for "Only I am allowed to change source in this package" reasons. Rejections
-must be for objective reasons.
+must be for objective and published reasons.
 {{< /note >}}
 
 ## Enterprise code review - as it was
@@ -39,8 +64,8 @@ In enterprises, if code review was done at all prior to 2008, it was done in a b
 It was often abhorred as it gave a lead developer/architect a moment to set an agenda, round on a large portion of the 
 attendees and make sure that their own code flubs were not discussed at all.
 
-Historically, open source teams never had the luxury of procrastinating about code review. They either did code reviews as they went 
-(perhaps days were the review cadence, not hours or minutes), or they didn't bother at all.
+Historically, open source teams never had the luxury of procrastinating about code review. They either did code reviews 
+as they went (perhaps days were the review cadence, not hours or minutes), or they did not bother at all.
 
 ## See also
 

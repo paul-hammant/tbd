@@ -100,6 +100,11 @@ googleAnalytics = "UA-24415524-3"
 	weight = 61
 
 [[menu.main]]
+	name   = "Short Lived Feature Branches"
+	url    = "short-lived-feature-branches/"
+	weight = 63
+
+[[menu.main]]
 	name   = "Continuous Code Review"
 	url    = "continuous-review/"
 	weight = 65
