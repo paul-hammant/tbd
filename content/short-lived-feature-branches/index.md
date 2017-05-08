@@ -26,12 +26,12 @@ becoming a long-lived feature branch (the antithesis of trunk-based development)
 
 Short-lived feature branches are real branches and merge is a first class concept. In the run up to completing work
 on the short-lived feature branch, you will need to bring it up to date with master (trunk). That is an effective
-merge whichever way you do it. Look at the branch at this moment, it my appear to be much younger than it was
+merge whichever way you do it. Look at the branch at this moment, it may appear to be much younger than it was
 before that operation. The changes have to now go back to master (trunk) in another merge operation. In GitHub, for 
-'pull requests' (or equiv in other platforms), the user interface may handle that last merged back for you, and even
+'pull requests' (or equivalent in other platforms), the user interface may handle that last merged back for you, and even
 go as far as to delete the short-lived feature branch.
 
-If you merged the the part-complete short-lived feature branches to anywhere else, then you have broken the 
+If you merged the part-complete short-lived feature branches to anywhere else, then you have broken the 
 contract of trunk-based development. For short-lived feature branches, these are **not** allowed: 
 
 1. intermediate merges to master (trunk)
