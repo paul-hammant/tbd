@@ -39,6 +39,17 @@ commits to the shared trunk because someone else beat them to it, they have to d
 another build then the push of the revised commit(s). "It worked on my machine" says the developer that does not 
 want to confess to breaking the build (assuming quick reliable idempotent builds).
 
+## Facilitating commits
+
+Because everyone in a team is chasing HEAD of the trunk, there could be moment where one change is imagined that
+could inconvenience everyone else in some way. Say a big directory rename as part of an extensive rework of the 
+source with it. It could be that the developer performing those two, does the rename first and pushes it through to 
+the trunk where everyone will get it on the next pull/sync/update. It might be that if separated somehow, the rename
+on its own is easier to consume by teammates, with the second being a relatively smaller commit later.
+
+Git and Mercurial track files through their content rather than by directory and file name, so they make light of the 
+situation described above, anyway.
+
 ## Powering through broken builds
 
 So because of that lazy developer, or the flaky build, or pure accident of timing (Google has a commit every 30 

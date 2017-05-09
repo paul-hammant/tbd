@@ -22,7 +22,7 @@ becoming a long-lived feature branch (the antithesis of trunk-based development)
 
 ![](/5-min-overview/trunk_pr.png)
 
-# Merge directionality
+## Merge directionality
 
 Short-lived feature branches are real branches and merge is a first class concept. In the run up to completing work
 on the short-lived feature branch, you will need to bring it up to date with master (trunk). That is an effective
@@ -41,19 +41,19 @@ contract of trunk-based development. For short-lived feature branches, these are
 To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of master (trunk). Merges
 to master (trunk) are allowed only as past of closing out the short-lived feature branch (and just before deleting) it.
 
-# Personal preferences
+## Personal preferences
 
 At some point, the short-lived feature branch has to be bought right up to date with master (trunk) in a merge 
 operation before the result being merged back to trunk (and the branch deleted). There are a number of approaches
 for this, and while teams may have a policy, most leave it to personal preference for the developer.
 
-## Git stash
+### Git stash
 
 Some people do `git stash` before `git pull` before `git stash pop`. There's a chance that when you `pop` your
 working copy may be in a merge clash situation that has to be resolved before you progress. This way will always
 result in your change being a single commit, at the HEAD of the branch (as Subversion would always do).
 
-## Git rebase
+### Git rebase
 
 Some people do `git rebase`. Refer to a well written Atlassian document on this {{< ext url="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" >}} as well as one from ThoughtBot {{< ext url="https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history" >}} that talks about `squash` too.  Even with this model,
 you may encounter a merge clash, and have to resolve that locally before you can push the result anywhere, or do 
