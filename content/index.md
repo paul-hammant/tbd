@@ -35,28 +35,28 @@ and helps to make Continuous Delivery a reality.
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from the trunk on
   a just-in-time basis, are 'hardened' before a release (without that being a team activity), and **those branches are deleted** some time after release. Alternatively, there 
-  may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a roll
-  forward strategy for bug fixes. Releasing from trunk is also for high throughput teams, too.
+  may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a "fix
+  forward" strategy for bug fixes. Releasing from trunk is also for high-throughput teams, too.
 
 - Teams should become adept with the related [branch by abstraction](/branch-by-abstraction/) technique for longer
   to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
 
 - If you have more than a couple of developers on the project, you are going to need a hook up a
-  [build server](/continuous-integration/) to verify that their commits have **not broken the build**
+  [build server](/continuous-integration/) to verify that their commits have **not broken the build** after they land in the trunk, and also when they are ready to be merged back into the trunk from a short-lived feature branch.
 
 - Development teams can casually flex up or down in size (in the trunk) without affecting throughput or quality.
   Proof? [Google do Trunk-Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
-  have **25000 developers and QA automators** in that trunk.
+  have **25000 developers and QA automators** in that single [monorepo](/monorepo/) trunk, that in their case can
+  [expand or contract](/expanding-contracting-monorepos/) to suit the developer in question.
 
 - People who practice the [GitHub-flow branching model](/alternative-branching-models/index.html#modern-claimed-high-throughput-branching-models) will feel
-  that this is quite similar, but there is one small difference (click that link to see).
+  that this is quite similar, but there is one small difference around where to release from.
 
 - People who practice the Gitflow branching model will find this **very different**, as will many developers used to
   the popular ClearCase, Subversion, Perforce, StarTeam, VCS [branching models of the past](/alternative-branching-models/index.html#legacy-branching-models).
 
-- [Many publications](/publications/), including the best-selling 'Continuous Delivery' book promote Trunk Based
-  Development - this is not even controversial anymore.
+- [Many publications](/publications/) promote Trunk-Based Development as we describe it here. Those include the best-selling 'Continuous Delivery' and 'DevOps Handbook'. This should not even be controversial anymore!
 
 ## History
 
@@ -67,10 +67,11 @@ It has been a lesser known branching model of choice since the mid-nineties and 
 The largest of development organizations, like Google (as mentioned) and Facebook practice it at scale.
 
 Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers/) have made
-Trunk-Based Development more (and occasionally less) influential.
+Trunk-Based Development more (and occasionally less) prevalent, but is has been a branching model that many have stuck 
+with through the years.
 
 ## This site
 
 This site attempts to collect all the related facts, rationale and techniques for Trunk-Based Development together
-in one place, complete with twenty-four diagrams to help explain things. All without using TBD as an acronym
+in one place, complete with twenty-five diagrams to help explain things. All without using TBD as an acronym
 even ~~once~~ twice.
