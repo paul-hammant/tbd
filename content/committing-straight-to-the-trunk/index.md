@@ -16,11 +16,11 @@ rapid with their `reverts` (lock trunk, revert, kick off the CI daemon again, un
 have performed check-in activities that the 1997 C3 team would have recognized, because they wanted that human 
 assurance that gated check-ins are all that is needed to keep the build green. Namely, developers holding an 
 "I/we are checking in now, nobody else should be". They run the full build after bringing their checkout up to date 
-and commit/push if green. Indeed that ceremony is part of the [Continuous Integration](/continuous-integration/) ceremony 
-that is part of Agile generally, and Extreme Programmer in particular. These days teams doing this practice are likely 
+and commit/push if green. Indeed that ceremony is a key part of the [Continuous Integration](/continuous-integration/) advances 
+and is now part of Agile generally, and Extreme Programming in particular. These days teams doing this practice are likely 
 to be much smaller (say less than 16) because of the advent of a modern alternative.
 
 # Alternatives to committing straight to the trunk
 
-That modern alternative that allows teams to grow much bigger:
+That modern alternative that allows teams be bigger without having a bottleneck around check-ins:
 [Short-Lived Feature Branches](/short-lived-feature-branches/).
