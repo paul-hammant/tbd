@@ -44,6 +44,7 @@ contract of trunk-based development. For short-lived feature branches, these are
 1. intermediate merges to master (trunk)
 2. merges (intermediate or not) to other people's short-lived feature branches
 3. merges (intermediate or not) to any release branches (if you have them)
+4. variations of #2 that are direct from/to the developers clone on their workstation
 
 ## Personal preferences
 
