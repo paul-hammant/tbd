@@ -31,15 +31,19 @@ before that operation. The changes have to now go back to master (trunk) in anot
 'pull requests' (or equivalent in other platforms), the user interface may handle that last merged back for you, and even
 go as far as to delete the short-lived feature branch.
 
+To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of master (trunk). Merges
+to master (trunk) are allowed only as past of closing out the short-lived feature branch (and just before deleting) it.
+
+## Breaking the contract
+
+![](slfb_bad_sharing.png)
+
 If you merged the part-complete short-lived feature branches to anywhere else, then you have broken the 
 contract of trunk-based development. For short-lived feature branches, these are **not** allowed: 
 
 1. intermediate merges to master (trunk)
 2. merges (intermediate or not) to other people's short-lived feature branches
 3. merges (intermediate or not) to any release branches (if you have them)
-
-To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of master (trunk). Merges
-to master (trunk) are allowed only as past of closing out the short-lived feature branch (and just before deleting) it.
 
 ## Personal preferences
 
