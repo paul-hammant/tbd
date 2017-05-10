@@ -17,8 +17,10 @@ basis and is the one that is observed to be 'frozen' because of the absence of d
 
 ### Every Day is the same
 
-Ignoring meetings, developers commit/push at the same rate regardless of the day of the week or the week of the month. 
-This is a reinforcement of the No Code Freeze suggestion above.
+Ignoring meetings, developers commit/push at the same rate and to the same place regardless of the day of the week or 
+the week of the month. This is a reinforcement of the "No Code Freeze" rule above. Sure a small subset of the team
+may focus on an imminent release (bug fixes in the trunk, cherry-picked to the release branch), but the majority
+should be focusing on 'business as usual' implementation of functionality for a future release.
 
 ## Quick Reviews
 
