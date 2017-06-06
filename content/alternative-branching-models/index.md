@@ -13,13 +13,15 @@ weight: 101
 
 ### GitHub flow
 
-This is sooooo close to PR-centric Trunk-Based Development. Why? Because it is a branching model that has individual
+This model is so close to PR-centric Trunk-Based Development.
+
+GitHub flow is a branching model that has individual
 developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than
 individuals.
 
-The crucial difference is where the release is performed from. 
+The crucial difference is **where** the release is performed from.
 
-The GitHub-flow thing showing a release-from-branch step, before the merge back to the master (trunk):
+The GitHub flow thing showing a release-from-branch step, before the merge back to the master (trunk):
 
 ![](githubflow1.png)
 ([key](/key/))
@@ -50,6 +52,8 @@ See the GitHub Flow landing page for more{{< ext url="https://guides.github.com/
 
 ### GitFlow and similar
 
+Git Flow is incompatible with Trunk-Based Development.
+
 There are plenty of people in the modern age that swear by this model, and feel it has plenty of room to scale with few
 downsides. It is a branching model that has **groups** of developers active concurrently in more than one branch (or fork).
 
@@ -66,7 +70,9 @@ enable.
 
 ## More than one trunk
 
-You could have a single repository with many trunks (and many branches - release or not). That is not uncommon with VCS
+This seems OK, but has many pitfalls. Consider **not** doing this model.
+
+Some have a single repository with many trunks (and many branches - release or not). That is not uncommon with VCS
 choices that do not have an upper limit on size (including history). You are at least allowing for atomic commits across many
 of those trunks, which can happen if you have a large refactoring, and atomic commits are always desirable.
 
@@ -101,9 +107,10 @@ root/
         (test source directory tree)
 ```
 
-Many trunks becomes undesirable if you have the same release cadence for all the separate trunks in the repo, and you 
-are 'branching for release', You have made it harder for the larger thing to be build from root. Better would be one, 
-trunk with three modules:
+Many trunks becomes undesirable if you have lock-step release (same cadence) for all the separate trunks in the repo,
+and for all of those you
+are 'branching for release'. You have made it harder for the larger thing to be build from root. Better would be one
+trunk with three modules, and a recursive build system, or one of the modern directed graph build systems like Buck or Bazel:
 
 ```
 root/    
@@ -128,6 +135,8 @@ root/
           (test source directory tree)
 ```
 
+
+
 This way at least, you get to make one branch representing the release (with cherry-picks to it as bugs are eliminated).
 
 Even if you have different release cadences, you can still engineer a trunk this way, you just have to have a build 
@@ -135,6 +144,8 @@ system that can reduce to the modules being tested and deployed, skipping those 
 and [expanding and contracting monorepos](/expanding-contracting-monorepos/).
 
 ### Mainline
+
+Mainline is diametrically opposite to Trunk-Based Development - do not do this.
 
 Mainline is a branching model that was promoted for ClearCase implementations. It is the principal branching
 model that Trunk-Based Development opposes. Mainline is a branch that will last forever&#10033;. Off that, branches are formed
@@ -202,6 +213,8 @@ testing run in the CI pipelines:
 ([key](/key/))
 
 ### Cascade
+
+Cascade is incompatible with Trunk-Based Development - do not do this.
 
 The idea is that each release has its own branch and that each release team merges from the 'upstream' branch daily.
 They only do so if the CI server says the build is green for the upstream, of course.
