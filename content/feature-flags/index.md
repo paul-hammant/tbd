@@ -166,4 +166,13 @@ WITH at least nightly integration across all feature-branches [sigh].
             <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://martinfowler.com/articles/feature-toggles.html">Feature Toggles</a></td>
         </tr>
     </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">23 May 2017, DevOps.com article</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://devops.com/feature-branching-vs-feature-flags-whats-right-tool-job/">Feature Branching vs. Feature Flags: What’s the Right Tool for the Job?</a></td>
+        </tr>
+    </table>
+    
 </div>
