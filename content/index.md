@@ -17,13 +17,19 @@ avoid merge hell, do not break the build, and live happily ever after.
 ![](trunk1.png)
 ([key](/key/))
 
- &ast; 'master', in Git nomenclature
+ &ast; *master*, in Git nomenclature
 
 Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
 [Continuous Delivery](/continuous-delivery/). When individuals on a team are committing their changes to the trunk
 multiple times a day it becomes easy to satisfy the core requirement of Continuous Integration that all team
 members commit to trunk at least once every 24 hours. This ensures the codebase is always releasable on demand
 and helps to make Continuous Delivery a reality.
+
+## Claims
+
+- You should do Trunk-Based Development instead of GitFlow and other branching models that feature multiple long-running branches
+- You can either do a direct to trunk commit/push (v small teams) or a Pull-Request workflow as long as those feature branches
+  are short-lived and the product of a single person.
 
 ## Caveats
 
