@@ -74,4 +74,4 @@ with through the years.
 
 This site attempts to collect all the related facts, rationale and techniques for Trunk-Based Development together
 in one place, complete with twenty-five diagrams to help explain things. All without using TBD as an acronym
-even ~~once~~ twice.
+even ~~once~~ or twice.
