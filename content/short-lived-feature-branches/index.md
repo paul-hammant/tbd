@@ -15,10 +15,14 @@ While it was up to 100 before Git's lightweight branching, it is now up to 15 pe
 productive with short-lived feature branches, and corresponding CI daemons verifying those in advance of
 commits landing in the trunk.
 
-One key rule is the length of life of the branch before it gets merged and itself deleted. Another rule is around how
-many developers congregate on the branch. Simply put the branch should only last a couple of days, and the developer
-count should stay at one (or two if pair-programming). Any longer than two days, and there is a risk of the branch
-becoming a long-lived feature branch (the antithesis of trunk-based development).
+One key rule is the length of life of the branch before it gets merged and deleted. Simply put, the branch
+should only last a couple of days. Any longer than two 
+days, and there is a risk of the branch becoming a long-lived feature branch (the antithesis of trunk-based development).
+
+Another key rule is how many developers are allowed congregate on a short-lived feature branch. Another simple answer:
+the developer count should stay at one (or two if pair-programming). These short-lived feature branches are not shared
+within a team for general development activity. They may be shared for the purposes of code review, but that is entirely
+different to writing production code and tests.
 
 ![](/5-min-overview/trunk_pr.png)
 
