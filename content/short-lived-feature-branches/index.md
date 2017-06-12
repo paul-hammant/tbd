@@ -38,17 +38,27 @@ go as far as to delete the short-lived feature branch.
 To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of master (trunk). Merges
 to master (trunk) are allowed only as past of closing out the short-lived feature branch (and just before deleting) it.
 
-## Breaking the contract
+## Two developers concurrently doing short-lived feature branches
 
-![](slfb_bad_sharing.png)
+Say two features are being worked on concurrently: features X and Y. Both will take a day to complete, and two developers are
+working independently on them. Of four developers if pair-programming is that team's way.  The reality of the merge back to
+master/trunk, before the deletion of the short-lived feature branch, is that the a merge of changes **from** master/trunk
+is often needed, before the merge **to** master/trunk.
 
-If you merged the part-complete short-lived feature branches to anywhere else, then you have broken the
-contract of trunk-based development. For short-lived feature branches, these are **not** allowed:
+![](slfb_pull-push.png)
 
-1. intermediate merges to master (trunk)
-2. merges (intermediate or not) to other people's short-lived feature branches
-3. merges (intermediate or not) to any release branches (if you have them)
-4. variations of #2 that are direct from/to the developers clone on their workstation
+Workflows include:
+
+* Attempt to merge to master/trunk and if that's blocked do a merge/pull from master/trunk before attempting the push again.
+* Do a speculative merge/pull from master/trunk before attempting any push to master/trunk.
+
+The latter leaves no trace if there's nothing to merge in from the other branch.
+
+### Workstations included
+
+Really though Developers work on their own workstations. That is both in working copy, and in local clones/branches:
+
+![](slfb_working-copy.png)
 
 ## Personal preferences
 
@@ -67,6 +77,18 @@ result in your change being a single commit, at the HEAD of the branch (as Subve
 Some people do `git rebase`. Refer to a well written Atlassian document on this {{< ext url="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" >}} as well as one from ThoughtBot {{< ext url="https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history" >}} that talks about `squash` too.  Even with this model,
 you may encounter a merge clash, and have to resolve that locally before you can push the result anywhere, or do
 further merges (to master hopefully).
+
+## Breaking the contract
+
+![](slfb_bad_sharing.png)
+
+If you merged the part-complete short-lived feature branches to anywhere else, then you have broken the
+contract of trunk-based development. For short-lived feature branches, these are **not** allowed:
+
+1. intermediate merges to master (trunk)
+2. merges (intermediate or not) to other people's short-lived feature branches
+3. merges (intermediate or not) to any release branches (if you have them)
+4. variations of #2 that are direct from/to the developers clone on their workstation
 
 # Alternatives to short-lived feature branches
 
