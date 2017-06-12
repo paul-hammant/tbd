@@ -26,6 +26,8 @@ different to writing production code and tests.
 
 ![](/5-min-overview/trunk_pr.png)
 
+Sometimes the community calls these 'task' or 'topic' branches, instead of long-lived feature branch.
+
 ## Merge directionality
 
 Short-lived feature branches are real branches and merge is a first class concept. In the run up to completing work
@@ -62,6 +64,10 @@ Really though Developers work on their own workstations. That is both in working
 
 The white dots are just general development work, and the green dot is the same but validated by a build that passes, a commit,
 and possibly a push to somewhere.
+
+While each developer works, they maintain a local clone of the master/trunk and their own short-lived feature branch only.
+Indeed for a period of time, their short-lived feature branch may not yet exist in the shared origin repo.
+
 
 ## Personal preferences
 
