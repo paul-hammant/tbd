@@ -97,3 +97,18 @@ contract of trunk-based development. For short-lived feature branches, these are
 
 There is a more traditional alternative for smaller teams:
 [Committing straight to the trunk](/committing-straight-to-the-trunk/).
+
+# References elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+
+<div>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">26 Apr, 2007, Blog Entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://paulhammant.com/blog/branch_by_abstraction.html">Introducing Branch By Abstraction</a></td>
+        </tr>
+    </table>
+</div>
