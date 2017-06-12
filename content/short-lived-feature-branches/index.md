@@ -60,6 +60,9 @@ Really though Developers work on their own workstations. That is both in working
 
 ![](slfb_working-copy.png)
 
+The white dots are just general development work, and the green dot is the same but validated by a build that passes, a commit,
+and possibly a push to somewhere.
+
 ## Personal preferences
 
 At some point, the short-lived feature branch has to be bought right up to date with master (trunk) in a merge
