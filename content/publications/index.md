@@ -176,6 +176,23 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
     <br clear="all"/>
 </div>
 
+## 2017 State of DevOps Report
 
-
-
+<div>
+    <img width="135" src="2017_state_of_devops.png" style="float:left; padding-right:10px"/>
+    <p>
+        <em>As their 2016 report, a survey of thousands of software development professionals distilled into a report that determines
+        practices for the highest achieving organizations</em><br/>
+        <span style="font-size: 120%">&ldquo;</span>Last year, we investigated the role that trunk-based
+                                                    development plays in continuous delivery. While our
+                                                    experience shows that developers in high-performing
+                                                    teams work in small batches and develop off of trunk
+                                                    or master, rather than long-lived feature branches,
+                                                    many practitioners in the industry routinely work in
+                                                    branches or forks.<span style="font-size: 120%">&rdquo;</span>
+        <br/>by Puppet Labs
+        <br/>
+        <a href="https://puppet.com/resources/whitepaper/state-of-devops-report"><strong>Puppet's download form for the report</strong></a>
+    </p>
+    <br clear="all"/>
+</div>
