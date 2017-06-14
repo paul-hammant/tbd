@@ -38,7 +38,7 @@ before that operation. The changes have to now go back to master (trunk) in anot
 go as far as to delete the short-lived feature branch.
 
 To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of master (trunk). Merges
-to master (trunk) are allowed only as past of closing out the short-lived feature branch (and just before deleting) it.
+to master (trunk) are allowed only as part of closing out the short-lived feature branch (and just before deleting) it.
 
 ## Two developers concurrently doing short-lived feature branches
 
