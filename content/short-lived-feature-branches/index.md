@@ -4,7 +4,7 @@ title: Short-Lived Feature Branches
 weight: 63
 ---
 
-[//]: # sdfsdfsd
+<!-- sdfsdfsd -->
 
 This branching model was facilitated with the advent of very lightweight branching that came with Git and Mercurial
 in the mid-2000's.
@@ -12,7 +12,7 @@ in the mid-2000's.
 Either as branching directly off master, or in a fork of the whole repository. These branches are destined to come
 back as "pull requests" into the master/trunk.
 
-[//]: # wrweresd
+<!-- wrweresd -->
 
 With this advance, the cut-off point on team size for "direct to the trunk" lowered.
 While it was up to 100 before Git's lightweight branching, it is now up to 15 people. With 16 or more, the team is more
@@ -20,17 +20,17 @@ productive with short-lived feature branches, and corresponding CI daemons verif
 commits landing in the trunk.
 
 One key rule is the length of life of the branch before it gets merged and deleted. Simply put, the branch
-should only last a couple of days. Any longer than two 
+should only last a couple of days. Any longer than two
 days, and there is a risk of the branch becoming a long-lived feature branch (the antithesis of trunk-based development).
 
-[//]: # sdwerfhfsdfsd
+<!-- sdwerfhfsdfsd -->
 
 Another key rule is how many developers are allowed congregate on a short-lived feature branch. Another simple answer:
 the developer count should stay at one (or two if pair-programming). These short-lived feature branches are not shared
 within a team for general development activity. They may be shared for the purposes of code review, but that is entirely
 different to writing production code and tests.
 
-[//]: # hrhykj
+<!-- hrhykj -->
 
 ![](/5-min-overview/trunk_pr.png)
 
@@ -45,12 +45,12 @@ before that operation. The changes have to now go back to master (trunk) in anot
 'pull requests' (or equivalent in other platforms), the user interface may handle that last merged back for you, and even
 go as far as to delete the short-lived feature branch.
 
-[//]: # rteghfhj
+<!-- rteghfhj -->
 
 To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of master (trunk). Merges
 to master (trunk) are allowed only as part of closing out the short-lived feature branch (and just before deleting) it.
 
-[//]: # rteyyrt
+<!-- rteyyrt -->
 
 ## Two developers concurrently doing short-lived feature branches
 
@@ -66,7 +66,7 @@ Workflows include:
 * Attempt to merge to master/trunk and if that's blocked do a merge/pull from master/trunk before attempting the push again.
 * Do a speculative merge/pull from master/trunk before attempting any push to master/trunk.
 
-[//]: # dwewrerg
+<!-- dwewrerg -->
 
 The latter leaves no trace if there's nothing to merge in from the other branch.
 
@@ -76,7 +76,7 @@ Really though Developers work on their own workstations. That is both in working
 
 ![](slfb_working-copy.png)
 
-[//]: # fhtytrerwe
+<!-- fhtytrerwe -->
 
 The white dots are just general development work, and the green dot is the same but validated by a build that passes, a commit,
 and possibly a push to somewhere.
@@ -84,7 +84,7 @@ and possibly a push to somewhere.
 While each developer works, they maintain a local clone of the master/trunk and their own short-lived feature branch only.
 Indeed for a period of time, their short-lived feature branch may not yet exist in the shared origin repo.
 
-[//]: # qetgrth
+<!-- qetgrth -->
 
 ## Personal preferences
 
@@ -98,7 +98,7 @@ Some people do `git stash` before `git pull` before `git stash pop`. There's a c
 working copy may be in a merge clash situation that has to be resolved before you progress. This way will always
 result in your change being a single commit, at the HEAD of the branch (as Subversion would always do).
 
-[//]: # werregg
+<!-- werregg -->
 
 ### Git rebase
 
@@ -106,7 +106,7 @@ Some people do `git rebase`. Refer to a well written Atlassian document on this 
 you may encounter a merge clash, and have to resolve that locally before you can push the result anywhere, or do
 further merges (to master hopefully).
 
-[//]: # wqwedsfsg
+<!-- wqwedsfsg -->
 
 ## Breaking the contract
 
@@ -115,7 +115,7 @@ further merges (to master hopefully).
 If you merged the part-complete short-lived feature branches to anywhere else, then you have broken the
 contract of trunk-based development. For short-lived feature branches, these are **not** allowed:
 
-[//]: # dgytjffdd
+<!-- dgytjffdd -->
 
 1. intermediate merges to master (trunk)
 2. merges (intermediate or not) to other people's short-lived feature branches
@@ -124,7 +124,7 @@ contract of trunk-based development. For short-lived feature branches, these are
 
 # Alternatives to short-lived feature branches
 
-[//]: # qweqwgtht
+<!-- qweqwgtht -->
 
 There is a more traditional alternative for smaller teams:
 [Committing straight to the trunk](/committing-straight-to-the-trunk/).
