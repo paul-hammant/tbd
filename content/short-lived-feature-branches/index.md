@@ -6,29 +6,17 @@ weight: 63
 
 <!-- sdfsdfsd -->
 
-This branching model was facilitated with the advent of very lightweight branching that came with Git and Mercurial
-in the mid-2000's.
-
-Either as branching directly off master, or in a fork of the whole repository. These branches are destined to come
-back as "pull requests" into the master/trunk.
+Este modelo de *branching* foi facilitado com o advento de ramificações muito leves que vieram com Git e Mercurial em meados dos anos 2000, ou como ramificação diretamente do mestre, ou em um _fork_ de todo o repositório. Esses *branch* estão destinados a voltar como _pull requests_ no master / tronco.
 
 <!-- wrweresd -->
 
-With this advance, the cut-off point on team size for "direct to the trunk" lowered.
-While it was up to 100 before Git's lightweight branching, it is now up to 15 people. With 16 or more, the team is more
-productive with short-lived feature branches, and corresponding CI daemons verifying those in advance of
-commits landing in the trunk.
+Com este avanço, o ponto de corte no tamanho da equipe para "direto para o tronco" abaixou. Embora fosse até 100 antes da ramificação leve de Git, agora é até 15 pessoas. Com 16 ou mais, a equipe é mais produtiva com ramos de recursos de curta duração e os daemons de CI correspondentes, verificando aqueles que antecipam a aterragem no tronco.
 
-One key rule is the length of life of the branch before it gets merged and deleted. Simply put, the branch
-should only last a couple of days. Any longer than two
-days, and there is a risk of the branch becoming a long-lived feature branch (the antithesis of trunk-based development).
+Uma regra de chave é o período de vida do ramo antes que ele seja mesclado e excluído. Simplificando, a filial só deve durar alguns dias. Há mais de dois dias, e existe o risco de o ramo se tornar um ramo de longa vida (a antítese do desenvolvimento baseado em tronco).
 
 <!-- sdwerfhfsdfsd -->
 
-Another key rule is how many developers are allowed congregate on a short-lived feature branch. Another simple answer:
-the developer count should stay at one (or two if pair-programming). These short-lived feature branches are not shared
-within a team for general development activity. They may be shared for the purposes of code review, but that is entirely
-different to writing production code and tests.
+Outra regra de chave é a quantidade de desenvolvedores permitidos congregar em um ramo de recursos de curta duração. Outra resposta simples: a contagem do desenvolvedor deve permanecer em uma (ou duas, se for a programação de par). Esses ramos de recursos de curta duração não são compartilhados em uma equipe para atividades de desenvolvimento geral. Eles podem ser compartilhados para fins de revisão de código, mas isso é completamente diferente para escrever código de produção e testes.
 
 <!-- hrhykj -->
 
