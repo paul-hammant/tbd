@@ -7,7 +7,7 @@ weight: 63
 <!-- sdfsdfsd -->
 
 This branching model was facilitated with the advent of very lightweight branching that came with Git and Mercurial
-in the mid-2000's.
+in the mid-2000's, though there is evidence that Google were effectively doing the same in their Monorepo for some years before.
 
 Either as branching directly off master, or in a fork of the whole repository. These branches are destined to come
 back as "pull requests" into the master/trunk.
