@@ -73,16 +73,18 @@ wants to get back to bed.
 This rule for Trunk Based Development remains difficult to accept, even within teams practicing everything else about
 Trunk-Based Development. It takes just one regression though for a policy change to be made for the team.
 
-Of course, sometimes you **cannot** reproduce the bug on trunk so you have to do it the other way round, despite
-everything mentioned above.
+Of course, sometimes you **absolutely cannot** reproduce the bug on trunk. In that case you have to do it the other way round, despite
+everything mentioned above, but understand you have introduced risk of regression.
 
 ### Merge Meister role
 
 The process of merging commits from trunk to the release branch using 'cherry pick' is a role for a single developer
 in a team. Or dev pair, if you are doing Extreme Programming. Even then, it is a part time activity. The dev or pair
 probably needs to police a list of rules before doing the cherry pick. Rules like which business representative
-signed off on the merge. The role should also rotate each day. Some teams update a wiki to audit what made it to the
-release branch after branch cut, and some use ticket systems.
+signed off on the merge. Perhaps the role should also rotate each day.
+
+Some teams update a wiki to audit what made it to the release branch after branch cut, and some use ticket system as
+this by its nature interrupting and requiring of an audit trail of approvals.
 
 ## Patch releases
 
