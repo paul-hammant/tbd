@@ -213,7 +213,7 @@ intended commit, and that was no longer needed for Subversion and its atomic com
 In comparison to the clunky CVS, Subversion had "lightweight" branching. This made it easier to consider multiple
 branches active in parallel and merge the team's changes back later.
 
-Until v1.5 in June 2008, Subversion had an inadequate "merge tracking" capability, emliminating a class of problems
+Until v1.5 in June 2008, Subversion had an inadequate "merge tracking" capability, eliminating a class of problems
 inherent in branching and merging. The internal mechanism of noting the merge tracking was controversial though, and 
 Subversion still has edge-case merge bugs today. Like this one{{< ext url="https://issues.apache.org/jira/browse/SVN-4635" >}}.
 
@@ -410,7 +410,7 @@ This made it was clear whether the proposed PR would break the build or not were
 ## Microservices (2011 and 2012)
 
 The emergence of micro-services as small buildable/deployable things that are glued together with TCP/IP (and
-XML/YAML/DNS configuration) reinforced "many small repositories" (the kinda reinforce each other really), while this can be
+XML/YAML/DNS configuration) reinforced "many small repositories" (they kind of reinforce each other really), while this can be
 done with any branching model, the non-trunk models probably had the mindshare. Monorepos were out completely. A
 possibility from monorepos teams sharing code and source level a HEAD revision, positively laughed it. The history
 page of Wikipedia lists multiple people concurrently pushing the same emergent micro-service
