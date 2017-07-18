@@ -212,7 +212,7 @@ branch too.
 * JetBrains' TeamCity{{< ext url="https://www.jetbrains.com/teamcity" >}} - on-premises install
 * Microsoft's TFS platform{{< ext url="https://www.visualstudio.com/tfs" >}} - on-premises install (built into larger platform)
 
-Note, for Jenkins, you can now use Pipeline DSL scripts (or Groovy) {{< ext url="https://jenkins.io/doc/book/pipeline/" > }} (formerly Workflow), or you can use Jenkins with GroupOn's DotCI{{< ext url="https://github.com/groupon/DotCi" >}} to co-locate the config 
+Note, for Jenkins, you can now use Pipeline DSL scripts (or Groovy) {{< ext url="https://jenkins.io/doc/book/pipeline/" >}} (formerly Workflow), or you can use Jenkins with GroupOn's DotCI{{< ext url="https://github.com/groupon/DotCi" >}} to co-locate the config
 with the thing being built/verified in source-control.
 
 # References elsewhere
