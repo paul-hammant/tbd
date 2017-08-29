@@ -72,7 +72,7 @@ shell script used for update/pull/sync does so to that instead of HEAD revision.
 
 If the Continuous Integration server is batching commits to trunk in each build, or the elapsed time for a build is 
 long then the a "build cop" role might be required within the team to help sort out build breakages. Sadly that 
-means that locking the trunk to preven further checkins on top of the broken one, might be necessary as some form
+means that locking the trunk to prevent further checkins on top of the broken one, might be necessary as some form
 of bisecting is performed to work out which commit broke the build and should be rolled back. Obviously a Continuous
 Integration server setup that can run one build per commit, is best.
 
