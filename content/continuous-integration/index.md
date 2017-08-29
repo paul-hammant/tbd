@@ -204,7 +204,6 @@ branch too.
 
 * Jenkins{{< ext url="https://jenkins.io" >}} commercial service, for Jenkins Open Source{{< ext url="https://github.com/jenkinsci" >}} - on-premises installable
 * Travis-CI{{< ext url="https://travis-ci.org" >}} - cloud
-* ThoughtWorks' Snap-CI{{< ext url="https://www.snap-ci.com" >}} - cloud
 * Circle-CI{{< ext url="https://circleci.com" >}} - cloud
 * ThoughtWorks' Go CD{{< ext url="https://www.gocd.io" >}} - cloud and on-premises install
 * Codeship{{< ext url="https://codeship.com" >}} - cloud
