@@ -70,6 +70,9 @@ Why? Well in case you forget to do that in the heat of the moment. Forgetting me
 weeks later (and someone getting fired). It can happen if things are being fixed in the night by a tired developer who
 wants to get back to bed.
 
+![](branch_for_release3.png)
+([key](/key/))
+
 This rule for Trunk Based Development remains difficult to accept, even within teams practicing everything else about
 Trunk-Based Development. It takes just one regression though for a policy change to be made for the team.
 
