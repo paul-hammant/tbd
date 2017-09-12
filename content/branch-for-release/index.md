@@ -58,9 +58,10 @@ watch that be verified by the CI server, then cherry-pick that to the release br
 focusing on the release branch to verify it there too. Yes, the CI pipeline that guards the trunk is going to
 be duplicated to guard active release branches too.
 
-{{< warning title="Cherry-pick is not a regular merge" >}}
+{{< warning title="A cherry-pick is not a regular merge" >}}
 A cherry-pick merge takes a specific commit (or commits) and merges that to the destination branch. It skips
-one or more commits that happened before it, but after the branch was cut.
+one or more commits that happened before it, but after the branch was cut. All VCS tools track which commits
+ have been merged and which ones not, so you can do more cherry picks later.
 {{< /warning >}}
 
 ### Cherry-picks from the trunk to branch ONLY
