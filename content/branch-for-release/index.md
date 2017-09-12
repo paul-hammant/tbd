@@ -79,6 +79,21 @@ Trunk-Based Development. It takes just one regression though for a policy change
 Of course, sometimes you **absolutely cannot** reproduce the bug on trunk. In that case you have to do it the other way round, despite
 everything mentioned above, but understand you have introduced risk of regression.
 
+### Google's Rachel Potvin on Cherry picks
+
+Talk "Why Google Stores Billions of Lines of Code in a Single Repository" @Scale conference, Sept 2015
+
+![](atscale.png)
+
+Rachel says (14 mins in):
+
+"So at Google we do what's called Trunk-Based Development. I should note that it is the combination of Trunk-Based Development with a centralized repository that really defines the monolithic model of source code management. So
+what Trunk-Based Development means for us that typically Piper users all work from HEAD or a single copy of the most recent version of the codebase. When developers commit to Piper their changes are immediately visible and usable by other engineers. Branching for development at Google is exceedingly rare and Trunk-Based Development is beneficial partly because you avoid the painful merges that often occur when you need to reconcile long lived branches.  Branches however are used for releases. **So a release branch is typically a snapshot from trunk with an 
+optional number of cherry picks that are developed on trunk and then pulled into the branch**."
+
+We've bolded the cherry-pick bit ourselves.  Readers with beady eyes will note that Rachel alludes to 
+dev branches other than trunk for 'rare' reasons. We may cheekily suggest that Google should learn a little more about [Branch by Abstraction](/branch-by-abstraction/).
+
 ### Merge Meister role
 
 The process of merging commits from trunk to the release branch using 'cherry pick' is a role for a single developer
