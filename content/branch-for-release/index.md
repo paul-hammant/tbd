@@ -82,11 +82,12 @@ everything mentioned above, but understand you have introduced risk of regressio
 
 ### Google's Rachel Potvin on Cherry picks
 
-Talk "Why Google Stores Billions of Lines of Code in a Single Repository" @Scale conference, Sept 2015
+In a talk at the @Scale conference in Sept 2015, "Why Google Stores Billions of Lines of Code in a Single Repository",
+there was a slide that depicts cherry-picks in a branch diagram:
 
 ![](atscale.png)
 
-Rachel says (14 mins in):
+The presenter, Rachel Potvin, said (14 mins in):
 
 "So at Google we do what's called Trunk-Based Development. I should note that it is the combination of Trunk-Based Development with a centralized repository that really defines the monolithic model of source code management. So
 what Trunk-Based Development means for us that typically Piper users all work from HEAD or a single copy of the most recent version of the codebase. When developers commit to Piper their changes are immediately visible and usable by other engineers. Branching for development at Google is exceedingly rare and Trunk-Based Development is beneficial partly because you avoid the painful merges that often occur when you need to reconcile long lived branches.  Branches however are used for releases. **So a release branch is typically a snapshot from trunk with an 
