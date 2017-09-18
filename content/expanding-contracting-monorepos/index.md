@@ -48,7 +48,7 @@ break either of `MyTeamsApplication` or `TheirApplication`.
 
 If I ran `gcheckout` with MyTeamsApplication+TheirApplication as the parameter I would get working copy that looked like:
 
-```
+```txt
 root/
   java/
     BUILD
@@ -84,7 +84,7 @@ root/
 
 If I ran `gcheckout` with MyTeamsApplication as the parameter I would get working copy that looked like:
 
-```
+```txt
 root/
   java/
     BUILD
@@ -114,7 +114,7 @@ root/
 
 If I ran `gcheckout` with TheORMweBothDependOn as the parameter I would get working copy that looked like:
 
-```
+```txt
 root/
   java/
     BUILD
