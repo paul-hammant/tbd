@@ -29,19 +29,19 @@ different reasons. All of those are operations on your local representation of a
 
 We detailed two intentions for directed graph build systems above, using a contrived application. Here is one more:
 
-* I now want to change `TheORMweDepOn`, because a change to `MyTeamsApplication` requires me to do that.
+* I now want to change `TheORMweBothDependOn`, because a change to `MyTeamsApplication` requires me to do that.
 
-In Google, rather than feed into the backlog of the team that maintains `TheORMweDepOn` (which may exist as a part-time 
+In Google, rather than feed into the backlog of the team that maintains `TheORMweBothDependOn` (which may exist as a part-time 
 committee rather than a team), the developer in question would make the change themselves. Perhaps they had made 
 it in the same commit as the first usage of it for `MyTeamsApplication`.  In the code review cycle (Google practice
-common code ownership), the approvers for the `TheORMweDepOn` would see all the changes together. The larger change is
+common code ownership), the approvers for the `TheORMweBothDependOn` would see all the changes together. The larger change is
 all accepted or rejected (to be remediated) atomically.
 
-So our developer was working on `MyTeamsApplication`, which depended on `TheORMweDepOn` (which probably transitively 
-depended on other things). Now that developer is going to change `TheORMweDepOn` and that impacts `TheirApplication` 
+So our developer was working on `MyTeamsApplication`, which depended on `TheORMweBothDependOn` (which probably transitively 
+depended on other things). Now that developer is going to change `TheORMweBothDependOn` and that impacts `TheirApplication` 
 too. The Blaze related checkout-modifying technology 'gcheckout' performs an expansion to bring in `TheirApplication` to the
 developer's checkout. From that moment on, the developer doing update/pull/sync will bring down minute by minute
-changes to those three modules.  For free, the build expands to make sure that the `TheORMweDepOn` changes do not 
+changes to those three modules.  For free, the build expands to make sure that the `TheORMweBothDependOn` changes do not 
 break either of `MyTeamsApplication` or `TheirApplication`.
 
 ### Directory structure and working copy.
@@ -62,9 +62,9 @@ root/
         theirapplication/
           BUILD
           TheirApplication.java  // and hundreds of other packages and source files
-        theormwedepon/
+        theormwebothdependon/
           BUILD
-          TheORMweDepOn.java  // and hundreds of other packages and source files
+          TheORMweBothDependOn.java  // and hundreds of other packages and source files
   java_test/
     BUILD
     com/
@@ -77,9 +77,9 @@ root/
         theirapplication/
           BUILD
           TheirApplicationTest.java  // and hundreds of other packages and source files
-        theormwedepon/
+        theormwebothdependon/
           BUILD
-          TheORMweDepOnTest.java  // and hundreds of other packages and source files
+          TheORMweBothDependOnTest.java  // and hundreds of other packages and source files
 ```
 
 If I ran `gcheckout` with MyTeamsApplication as the parameter I would get working copy that looked like:
@@ -95,9 +95,9 @@ root/
         myteamsapplication/
           BUILD
           MyTeamsApplication.java  // and hundreds of other packages and source files
-        theormwedepon/
+        theormwebothdependon/
           BUILD
-          TheORMweDepOn.java  // and hundreds of other packages and source files
+          TheORMweBothDependOn.java  // and hundreds of other packages and source files
   java_test/
     BUILD
     com/
@@ -107,12 +107,12 @@ root/
         myteamsapplication/
           BUILD
           MyTeamsApplicationTest.java  // and hundreds of other packages and source files
-        theormwedepon/
+        theormwebothdependon/
           BUILD
-          TheORMweDepOnTest.java  // and hundreds of other packages and source files
+          TheORMweBothDependOnTest.java  // and hundreds of other packages and source files
 ```
 
-If I ran `gcheckout` with TheORMweDepOn as the parameter I would get working copy that looked like:
+If I ran `gcheckout` with TheORMweBothDependOn as the parameter I would get working copy that looked like:
 
 ```
 root/
@@ -122,18 +122,18 @@ root/
       BUILD
       google/
         BUILD
-        theormwedepon/
+        theormwebothdependon/
           BUILD
-          TheORMweDepOn.java  // and hundreds of other packages and source files
+          TheORMweBothDependOn.java  // and hundreds of other packages and source files
   java_test/
     BUILD
     com/
       BUILD
       google/
         BUILD
-        theormwedepon/
+        theormwebothdependon/
           BUILD
-          TheORMweDepOnTest.java  // and hundreds of other packages and source files
+          TheORMweBothDependOnTest.java  // and hundreds of other packages and source files
 ```
 
 You can keep rerunning the `gcheckout` to expand or contract your working copy to meet your current goals.
