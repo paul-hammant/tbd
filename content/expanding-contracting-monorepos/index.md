@@ -84,4 +84,6 @@ As Perforce, but via 'cloaked.conf' file.
 ## Subversion's sparse-checkouts
 
 Subversion has a 'sparse checkout' capability. You do a series of checkout operations at various directory levels in order
-to create the mapping, so is less atomic or centrally configured than the others.
+to create the mapping, so is less atomic or centrally configured than the others.  They have made also made a 'viewspec' script
+{{< ext url="http://svn.apache.org/repos/asf/subversion/trunk/tools/client-side/svn-viewspec.py" >}}
+to allow the reshaping of the working copy to happen in a more declarative way.
