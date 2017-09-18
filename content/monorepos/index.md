@@ -186,7 +186,7 @@ if there are real reasons for team B to not upgrade and team A was insistent. Br
 one problem.
 
 In 2007, Google tried to upgrade their JUnit from 3.8.x to 4.x and struggled as there was a subtle
-backward incompatibility in a small percentage of their usages of it. The changeset became very large, and struggled
+backward incompatibility in a small percentage of their usages of it. The change-set became very large, and struggled
 to keep up with the rate developers were adding tests.
 
 Because you are doing lock-step upgrades, you only secondarily note the version of the third-party
