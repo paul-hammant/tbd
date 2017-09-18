@@ -85,8 +85,8 @@ root/
     trunk/      
       build_file.xml
       src/
-        (prod source directory tree)
-        (test source directory tree)
+        # prod source directory tree
+        # test source directory tree
   module_two/
     branches/
       rel_1.0.0/
@@ -94,8 +94,8 @@ root/
     trunk/      
       build_file.xml
       src/
-        (prod source directory tree)
-        (test source directory tree)
+        # prod source directory tree
+        # test source directory tree
   module_three/
     branches/
       rel_1.0.0/
@@ -103,8 +103,8 @@ root/
     trunk/      
       build_file.xml
       src/
-        (prod source directory tree)
-        (test source directory tree)
+        # prod source directory tree
+        # test source directory tree
 ```
 
 Many trunks becomes undesirable if you have lock-step release (same cadence) for all the separate trunks in the repo,
@@ -121,18 +121,18 @@ root/
     module_one/
       build_file.xml
       src/
-        (prod source directory tree)
-        (test source directory tree)
+        # prod source directory tree
+        # test source directory tree
       module_two/
         build_file.xml
         src/
-          (prod source directory tree)
-          (test source directory tree)    
+          # prod source directory tree
+          # test source directory tree
       module_three/
         build_file.xml
         src/
-          (prod source directory tree)
-          (test source directory tree)
+          # prod source directory tree
+          # test source directory tree
 ```
 
 

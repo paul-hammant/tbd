@@ -148,21 +148,21 @@ root/
   module_one/
     build_file.xml
     src/
-      (prod source directory tree)
-      (test source directory tree)
+      # prod source directory tree
+      # test source directory tree
     module_two/
       build_file.xml
       src/
-        (prod source directory tree)
-        (test source directory tree)
+        # prod source directory tree
+        # test source directory tree
   module_three/
     build_file.xml
     src/
-      (prod source directory tree)
-      (test source directory tree)
+      # prod source directory tree
+      # test source directory tree
   src/
-    (prod source directory tree)
-    (test source directory tree)
+    # prod source directory tree
+    # test source directory tree
 ```
 
 Again, YAML, JSON, TOML and custom grammars are alternatives to XML for build files.
