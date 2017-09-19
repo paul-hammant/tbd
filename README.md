@@ -34,3 +34,7 @@ Then edit away ... Hugo hot-reloads pages.
 # How to contribute?
 
 Pull-Requests, of course, if you're not a committer.
+
+English contributions (expansions of the material) to the `master` branch
+
+Chinese translations to the `cn` branch. - should always reflect the English content, so we can use merge tracking keep the two in step.
