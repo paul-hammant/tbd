@@ -1,6 +1,6 @@
 ---
 date: 2015-01-01T21:07:33+01:00
-title: Introduction
+title: 介绍
 type: index
 weight: 0
 ---
@@ -8,16 +8,29 @@ weight: 0
 <!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introduction</span></h1> print -->
 
 
+<!--
 ## One line summary
+-->
 
+## 一行总结
+
+<!--
 A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
 resist any pressure to create other long-lived development branches by employing documented techniques,
 avoid merge hell, do not break the build, and live happily ever after.
+-->
+
+源代码控制分支模型，开发人员在单个分支中称为“中继”* 的代码进行协作，
+抵制任何压力，通过采用记录的技术创造其他长期发展的分支机构，避免合并地狱，不打破建设，并永远过着幸福的生活。
 
 ![](trunk1.png)
 ([key](/key/))
 
+<!--
  &ast; *master*, in Git nomenclature
+-->
+
+ &ast; *主人*，在Git命名
 
 Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
 [Continuous Delivery](/continuous-delivery/). When individuals on a team are committing their changes to the trunk
