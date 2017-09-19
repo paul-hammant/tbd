@@ -11,8 +11,8 @@ weight: 0
 ## One line summary
 
 A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
-resist any pressure to create other long-lived development branches by employing documented techniques,
-avoid merge hell, do not break the build, and live happily ever after.
+resist any pressure to create other long-lived development branches by employing documented techniques. They
+therefore avoid merge hell, do not break the build, and live happily ever after.
 
 ![](trunk1.png)
 ([key](/key/))
