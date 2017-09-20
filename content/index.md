@@ -16,12 +16,13 @@ weight: 0
 
 <!--
 A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
-resist any pressure to create other long-lived development branches by employing documented techniques,
-avoid merge hell, do not break the build, and live happily ever after.
+resist any pressure to create other long-lived development branches by employing documented techniques. They
+therefore avoid merge hell, do not break the build, and live happily ever after.
 -->
 
 源代码控制分支模型，开发人员在单个分支中称为“中继”* 的代码进行协作，
-抵制任何压力，通过采用记录的技术创造其他长期发展的分支机构，避免合并地狱，不打破建设，并永远过着幸福的生活。
+通过采用记录技术，抵制任何压力，创造其他长期发展的分支机构。他们
+因此避免合并地狱，不要打破建设，过着幸福的生活。
 
 ![](trunk1.png)
 ([key](/key/))
