@@ -7,31 +7,15 @@ weight: 0
 
 <!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introduction</span></h1> print -->
 
-
-<!--
-## One line summary
--->
-
-## 一行总结
-
-<!--
-A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
-resist any pressure to create other long-lived development branches by employing documented techniques. They
-therefore avoid merge hell, do not break the build, and live happily ever after.
--->
-
-源代码控制分支模型，开发人员在单个分支中称为“中继”* 的代码进行协作，
-通过采用记录技术，抵制任何压力，创造其他长期发展的分支机构。他们
-因此避免合并地狱，不要打破建设，过着幸福的生活。
+## 综述
+主干开发是一套代码分支管理策略，开发人员之间通过约定向被指定为“主干”*的分支提交代码，以此抵抗因为长期存在的多分支导致的开发压力。 此举可避免分支合并的困扰，保证随时拥有可发布的版本。
 
 ![](trunk1.png)
 ([key](/key/))
 
-<!--
- &ast; *master*, in Git nomenclature
--->
 
- &ast; *主人*，在Git命名
+ &ast; Git 中的 *master* 分支
+
 
 Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
 [Continuous Delivery](/continuous-delivery/). When individuals on a team are committing their changes to the trunk
