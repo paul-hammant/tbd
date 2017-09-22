@@ -1,13 +1,16 @@
 ---
 date: 2016-03-01T20:08:11+01:00
-title: Version control system features
+title: 版本控制系统特性
 weight: 31
 ---
 
-**Desirable VCS features, that is**
+**理想的VCS功能，就是**
 
 To great degree, Trunk-Based Development is possible on any Version Control System (VCS) that does atomic commits (spoiler: all do 
 that came after CVS).  Productivity and governance are what divides them, though.
+
+在很大程度上，基于进行原子提交的任何版本控制系统（VCS）都可以实现基于主干的开发（剧透：CVS之后都可以）。尽管如此，生产力和管理是划分的。
+
 
 ## Productivity
 
@@ -15,10 +18,16 @@ It turns out there are many
 productivity related reasons that teams quit one technology and go to another. It does not matter whether the tool is a commercial
 or an open source one. At least to its end users it does not.
 
+事实证明，有许多生产力相关的原因使得团队放弃了一项技术，而转向另一种技术。这项技术不管是商业用途还是开源，至少对其最终用户来说并不是他们关心的。
+
 By speed we mean two things primarily:
 
 1. The speed at which we can pull/update/sync changes out of a remote server repository
 2. The speed at which we can commit/push changes back to that remote server
+
+按速度来讲我们主要是说这两件事：
+1. 从远程服务器存储库中拉取/更新/同步更改的速度
+2. 向远程服务器提交/推送的速度更改的速度
 
 And three other secondary things that support little and often:
 
@@ -26,12 +35,20 @@ And three other secondary things that support little and often:
 2. Code Review
 3. Continuous Integration
 
+另外还有三个次要的东西，虽然很少但经常发生：
+1. 高级合并
+2. 代码审查
+3. 持续集成
+
+
 ### Pull/update/sync speed
 
 If you have at least once done a checkout of the source of the project, any subsequent pull/update/sync is going to bring down 
 differences from the previous checkout or update.  If you do two updates back to back quickly, the second one is likely to bring 
 down nothing.  The time taken for the version control tool to determine that nothing is due from the remote master 
 repository is the biggest clue as to how intrinsically fast it is. 
+
+如果你至少一次从源代码中检出过，任何后续的拉取/更新/同步操作会将把和上一次检出的差异拉下来。如果您快速地进行两次更新，则第二个更新可能什么也拿不到。版本控制工具有多快可以用它确认远程主仓库没有什么更新所需的时间作为最大的线索。
 
 Technologies that only keep head revision on the checkout, ordinarily have to walk the entire directory structure 
 looking for changed files and do handshaking to the server for each one. That is definitely Subversion and its predecessor CVS. 
@@ -41,8 +58,12 @@ keeping your tree and which revision you have for each file in RAM. It does this
 bits for files (be sure and use an IDE that silently handles the Perforce interactions). Perforce can effectively be much
 faster for this back-to-back pull/update/sync test of speed because it kinda already knows the answer to the question.
 
+那些在签出时只保持头版本的技术，通常需要便利整个目录去查找改动的文件并和服务器一一的进行握手。这就是Subversion及其前身CVS。将这些操作打包起来会有一定的速度提升，但源码的广度和深度都会使之变慢。Perforce（译注：一种源码管理软件）和服务器端始终保持同步操作因而操作更快，你的源代码树和每个文件的版本都记录在内存中。它以维护文件的只读位为代价（请确保并使用默认处理Perforce交互的IDE）。Perforce可以有效地快速地进行这种连续的拉取/更新/同步测试的速度，因为它已经知道问题的答案。
+
 CVS, Subversion and Perforce offer you the choice of checking out a subdirectory. In a monorepo situation, you would 
 consider that a nice feature. At least if you've recursively laid out services and applications within the trunk.
+
+CVS，Subversion和Perforce提供了检出子目录的功能。在monorepo的情况下，你会认为这是一个很好的功能。至少如果你在主干中重复地布置了服务和应用程序。
 
 Git and Mercurial have a single point of checkout (Git's 'clone' operation) for the whole repository.  There are no sub-directory checkouts 
 for these two. All commits since that 
@@ -51,6 +72,9 @@ pull operation if very fast - there's no chit chat over the wire things, and the
 zipped and pretty much ready for transfer. This will be the case even for situations where a particular 
 file has been changed a dozen times since you last pulled it down via a sync operation.  You might think 
 this is costly, but in practice, Git is incredibly fast.
+
+Git和Mercurial为整个代码仓库提供单点签出（Git的“克隆”操作）。这两个工具没有子目录检出的功能。所有在最后那次“拉取”之后的提交将被拉下来。这是在目录遍历之前发生的，以确定在本地发生了什么变化。因此，拉取操作非常快 - 它没有任何其他额外的服务器交互，并且服务器端的东西已经压缩并且准备好传输。即使特定文件自上次通过拉取操作后经过十几次更改，情况也将如此。你可能认为这代价很高的，但在实践中，Git是非常快的。
+
 
 ### Commit/push speed
 
