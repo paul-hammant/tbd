@@ -45,7 +45,7 @@ googleAnalytics = "UA-24415524-3"
 	email   = "paul@hammant.org"
 
 [[menu.main]]
-	name   = "Introduction"
+	name   = "介绍"
 	url    = "/"
 	weight = 0
 
