@@ -65,12 +65,12 @@ googleAnalytics = "UA-24415524-3"
 	weight = 21
 
 [[menu.main]]
-	name   = "Version control system features"
+	name   = "版本控制系统特性"
 	url    = "vcs-features/"
 	weight = 31
 
 [[menu.main]]
-	name   = "Version control system choices"
+	name   = "选择版本控制系统"
 	url    = "vcs-choices/"
 	weight = 32
 
