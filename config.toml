@@ -85,7 +85,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 53
 
 [[menu.main]]
-	name   = "Branch for release"
+	name   = "发布分支"
 	url    = "branch-for-release/"
 	weight = 55
 
