@@ -148,7 +148,11 @@ optional number of cherry picks that are developed on trunk and then pulled into
 We've bolded the cherry-pick bit ourselves.  Readers with beady eyes will note that Rachel alludes to 
 dev branches other than trunk for 'rare' reasons. We may cheekily suggest that Google should learn a little more about [Branch by Abstraction](/branch-by-abstraction/).
 
+### 合并
+
 ### Merge Meister role
+
+通常由团队中的一名开发（如果你采用的是极限开发也可以是两名）使用“cherry pick”的方式将主干分支的提交合并到 release 分支，即便是两个开发
 
 The process of merging commits from trunk to the release branch using 'cherry pick' is a role for a single developer
 in a team. Or dev pair, if you are doing Extreme Programming. Even then, it is a part time activity. The dev or pair
@@ -157,6 +161,8 @@ signed off on the merge. Perhaps the role should also rotate each day.
 
 Some teams update a wiki to audit what made it to the release branch after branch cut, and some use ticket system as
 this by its nature interrupting and requiring of an audit trail of approvals.
+
+## Patch releases
 
 ## Patch releases
 
