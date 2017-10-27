@@ -9,50 +9,50 @@ Branch by Abstraction is a set-piece technique to effect a 'longer to complete' 
 create a branch for this - somewhere that can be unstable for a period of time before it completes (and gets merged
 back somewhere).
 
-抽象分支是一组影响主干中“以后完成”这类变化的一系列技术。比如有一个（或一组）开发人员，有一个修改需要5天完成。简单地创建一个分支很有压力 - 这个地方在完成之前会有一段时间不太稳定（后面再合并回来）。
+抽象分支是一组影响主干中“以后完成”这类变化的一系列技术。比如有一个（或一组）开发人员，需要5天的时间完成一个修改。创建一个分支很容易有压力 - 某个地方在完成前会有一段时间不太稳定（后面再合并回来）。
 
 There may be some aspect of repetition to the coding activities that makes it longer to complete. No matter, the 
 change was predicted as being time-consuming, complex, destabilizing/disruptive to everyone else in the development team.
-可能有某些重复，使得编码需要更长时间才能完成。无论如何，对开发团队里的每个人来说，修改都被预测为耗时复杂的，且具有破坏性/颠覆性。
+可能有某些方面的重复使得编码需要更长时间才能完成。无论如何，对开发团队里的每个人来说，修改都被认为是耗时复杂的，且具有破坏性/颠覆性。
 
 **Rules:**
  
 1. There are also a lot of developers already depending on 
 the code that is subject of the 'longer to complete' change, and we do not want them to be slowed down in any way.
- 有很多开发人员已经依赖于需要较长时间才能完成修改的代码，我们不希望以任何方式延缓他们的开发
-2. No commit pushed to the shared repository should jeopardize the ability to go live.
+有很多开发人员已经依赖于需要较长时间才能完成修改的代码，我们不希望以任何方式延缓他们的开发。
+2. No commit pushed to the shared repository should jeopardize the ability to go live.  
 不把提交push到共享的代码库会危及到go live的能力 
 
 ## Ideal steps
 理想步骤  
-For simplicity's sake, let us say there is code that is 'to be replaced', code 'to be introduced'.
+For simplicity's sake, let us say there is code that is 'to be replaced', code 'to be introduced'.  
 为简单起见，假设这里有一份将要被替换的代码，一份将要被引入的代码。
 
 1. Introduce an abstraction around the code that is to be replaced, and commit that for all to see.  If needed, this 
 can take multiple commits. None of those are allowed to break the build, and all of them could be pushed to the shared
-repository in order, and as done.
-在将要被替换的代码附近引入抽象，然后提交它，这样所有人都可以看到。如果有需要，这可以是多个提交。这些提交都不能破坏build，然后依次被push到共享代码库，就完成了。
+repository in order, and as done.  
+在将要被替换的代码附近引入抽象层然后提交，对所有人可见。如果有需要可以是多个提交，这些提交都不能破坏build，然后依次push到共享代码库就完成了。
 2. Write a second implementation of the abstraction for the to-be-introduced code, and commit that, but maybe as 
 'turned off' within the trunk so that other developers are not depending on it yet. If needed, this can take multiple 
 commits as above. The abstraction from #1 may also be occasionally tweaked, but must follow the same rule - do not 
-break the build.
-为**将要被引入**的代码写第二次实现的抽象，然后提交。但在主干上可能是关闭状态所以其他开发人员暂时不依赖于它。如果需要的话，这可能像上面那样需要多次提交。第一步的抽象也可能偶然被调整，但必须遵循同样的原则：不能破坏build。
-3. Flip the software 'off' switch to 'on' for the rest of the team, and commit/push that.
-为剩下的团队翻转软件的“关闭”到“打开”，然后提交/push。
-4. Remove the to-be-replaced implementation
-删除**将要被替换**实现
-5. Remove the abstraction
-删除抽象
+break the build.  
+为将要被引入的代码写抽象层的第二次实现，然后提交。但在主干上可能是关闭状态所以其他开发人员暂时不依赖于它。如果需要的话，这可能像上面那样需要多次提交。第一步的抽象层也可能偶然被调整，但必须遵循同样的原则：不能破坏build。
+3. Flip the software 'off' switch to 'on' for the rest of the team, and commit/push that.  
+为团队其他成员切换软件的“关闭”到“打开”，然后提交/push。
+4. Remove the to-be-replaced implementation   
+删除原有的旧实现（将要被替换的代码）
+5. Remove the abstraction  
+删除抽象层
 
 Hopefully, your team uses an IDE that can perform complex refactorings on sets on checkouts, in a way that running the build 
 after each is an uneventful validation of the refactorings.
-你的团队使用IDE来做复杂的重构，在某种程度上，在每次后运行build是重构的**静态**验证。
+你的团队有望使用IDE来做复杂的重构，在某种程度上，在每次后运行build是重构的静态验证。
 ## Contrived example
 人为的例子  
 Let's talk about a car having its wheels upgraded. We should never forget that software engineering is 
 nothing like conventional construction, and we want to ram that home. At least, it is nothing like conventional 
-construction where we are not talking about a production line.
-让我们来谈谈轮子升级的一辆汽车，我们不应该忘记软件工程并不像传统的建筑，我们希望ram that home。至少，它没有像传统建筑在那我们并不会谈到生产线。
+construction where we are not talking about a production line.  
+让我们来谈谈轮子升级的一辆汽车，我们不应该忘记软件工程并不像传统的建筑，我们希望ram that home。至少它不像传统建筑，在那我们并不会谈到生产线。
 
 ### Rules
 
@@ -105,15 +105,15 @@ classes/components indirectly referring to iBatis were changed to refer to the a
 直接引用了使用iBatis的类/组件的抽象化，并且确保间接引用iBatis的所有类/组件都被改为引用抽象。
 2. Wrote a second implementation of the abstraction, introducing Hibernate to the codebase, perhaps tweaking the 
 abstraction where needed.  
-写了第二个抽象的实现，将Hibernate引入到代码库中，也许在需要的时候调整抽象。
+写了第二个抽象层的实现，将Hibernate引入到代码库中，也许在需要的时候调整抽象层。
 3. Did a tiny commit that turned on Hibernate for all teammates.   
 小步提交，为所有队友打开了Hibernate。  
 4. Removed iBatis, then the abstraction and the on/off old/new switch.  
-删除iBatis，然后是抽象和开/关、旧/新开关。
+删除iBatis，然后是抽象层和开/关、旧/新开关。
 
 As it happens you could leave the abstraction in place, if your unit tests are able to benefit because of the 
 possibility of another seam that can be mocked.   
-发生这种情况，您可以离开抽象，如果您的单元测试能够受益，因为可能会mock另一个接缝。
+发生这种情况，您可以离开抽象层，因为可能会mock另一个“接缝”，单元测试可以从此受益。
 
 ## Secondary benefits
 第二个好处
@@ -123,7 +123,7 @@ The migration from old to new can be paused and resumed later casually. This is 
 second, incomplete, implementation. It does so merely because of a compile stage that turns the abstraction and somewhere 
 between 1 to 2 implementation into object code.  If there are unit tests for the two alternates, then even more so.
 
-从旧到新的迁移可以暂停，随后重新开始。这是因为构建守卫了第二个不完整的实现。它只是因为一个编译阶段，将抽象和1到2之间的实现转换为对象代码。如果有两个候补的单元测试，那么更是如此。
+从旧到新的迁移可以暂停，随后重新开始。这是因为构建守卫了第二个不完整的实现。它只是因为一个编译阶段，将抽象层和1到2之间的实现转换为对象代码。如果有两个候补的单元测试，那么更是如此。
 
 If on a real branch, the casual restart of the paused initiative is missing. There's possibly an exponential cost of 
 restart given the elapsed time since the initiative was paused. 
@@ -138,7 +138,7 @@ Pause and resume is much more likely in an enterprise development organization t
 项目的取消依然方便
 In the case of abandonment, deleting a real long running feature branch is cheaper, but deletion of a 
 branch by abstraction *thing* is only incrementally more expensive. 
-在放弃的情况下，删除一个真正的长时间运行的功能分支是更方便的，但是通过抽象* thing *删除分支只是递增地更昂贵。
+在放弃的情况下，删除一个真正的长时间运行的功能分支是更方便的，但是通过抽象层* thing *删除分支只是递增地更昂贵。
  
 ## Not a panacea
 并非万能
