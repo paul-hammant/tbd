@@ -24,7 +24,7 @@ the code that is subject of the 'longer to complete' change, and we do not want 
 不把提交push到共享的代码库会危及到go live的能力 
 
 ## Ideal steps
-理想步骤
+理想步骤  
 For simplicity's sake, let us say there is code that is 'to be replaced', code 'to be introduced'.
 为简单起见，假设这里有一份将要被替换的代码，一份将要被引入的代码。
 
@@ -48,7 +48,7 @@ Hopefully, your team uses an IDE that can perform complex refactorings on sets o
 after each is an uneventful validation of the refactorings.
 你的团队使用IDE来做复杂的重构，在某种程度上，在每次后运行build是重构的**静态**验证。
 ## Contrived example
-人为的例子
+人为的例子  
 Let's talk about a car having its wheels upgraded. We should never forget that software engineering is 
 nothing like conventional construction, and we want to ram that home. At least, it is nothing like conventional 
 construction where we are not talking about a production line.
@@ -56,10 +56,10 @@ construction where we are not talking about a production line.
 
 ### Rules
 
-1. Mechanics must be able to simultaneously work on the upholstery, engine, etc.
-2. The car must be drivable after every change. 
-力学必须能够和内饰，引擎等同时工作。
-汽车必须在每次更改后可以行使。
+1. Mechanics must be able to simultaneously work on the upholstery, engine, etc.  
+ 力学必须能够和内饰，引擎等同时工作。  
+2. The car must be drivable after every change.   
+ 汽车必须在每次更改后可以行使。  
 
 ### Steps
 
@@ -68,29 +68,27 @@ All steps are efficiently performed raised up on car jacks/lifts/ramps, before l
 
 1. One wheel is removed, put in a container that looks pretty much like a wheel (rotates around an axis, 
 can bear weight) and replaced on the car. If driven this wheel functions exactly like the 
-other three wheels.
-一个车轮被取出，放进一个看起来很像轮子的容器中（饶轴旋转时，可承受重量）在汽车中取代。如果车轮这个轮子的功能就像其它三个车轮一样
+other three wheels.  
+一个车轮被取出，放进一个看起来很像轮子的容器中（饶轴旋转时，可承受重量）在汽车中取代。如果车轮这个轮子的功能就像其它三个车轮一样。
 2. The wheel-like container gains a second better/desired/alternate wheel, within exactly the same 
-physical space (magically). A switch is added inside the car to allow the choice of wheel to be switched conveniently 
-- perhaps only before the engine is started, though.
+physical space (magically). A switch is added inside the car to allow the choice of wheel to be switched conveniently perhaps only before the engine is started, though.  
 这个车轮状的容器 第二个更好的/所需的/备用轮，完全相同的物理空间内。添加了一个允许方便切换选择车轮的开关-虽然或许只在引擎发动之前。
 3. The same two operations (#1 and #2) are performed on the other three wheels. Or maybe #1 is done four times, 
-followed by #2 four times. The Mechanics experience will guide which is most efficient.
+followed by #2 four times. The Mechanics experience will guide which is most efficient.   
 相同的两个操作（第一步和第二步）在另外三个轮子进行。或者可能第一步做4次，第二步也做四次。力学经验将指导出哪种是最有效的。
-4. After determining that the new wheels are better, the old wheels are removed from the wheel-like containers
-and are send for recycling.
+4. After determining that the new wheels are better, the old wheels are removed from the wheel-like containers and are send for recycling.  
 确定新的车轮更好后，把旧车轮从车轮状的容器中取出并送出回收。
 5. The wheel-like containers are also removed from the new wheels, either one by one or all four simultaneously.
 车轮状的容器也从新车轮那取出，可以一个一个取，也可以四个同时取出。
 
-At any stage, when lowered from the jacks/lift/ramps, the car could have been driven (a 'ready to go-live' metaphor).
+At any stage, when lowered from the jacks/lift/ramps, the car could have been driven (a 'ready to go-live' metaphor).  
 在任何阶段，当从**下降时**，汽车可以一直发动（比喻ready to go-live）。
 
 ![](cars.png)
 
 We said 'jacks' above, because that's what mechanics use in real life. Software, however, does not follow the rules 
 of gravity, or many of the costs of actual construction. With an IDE for a glove, a single finger could reposition 
-the car in 3D space to allow easy replacement of the wheels.
+the car in 3D space to allow easy replacement of the wheels.   
 我们上文所说的千斤顶，是因为这是力学在现实生活中的应用。但软件并不遵守动力定律，或者很多实际结构的cost。随着IDE的普及，一根手指可以重新定义三维空间的汽车，以便于更换车轮。
 ## Software example
 ## 软件的例子
@@ -103,24 +101,24 @@ Going from "iBatis" to "Hibernate" for a bunch of reasons, was their plan.
 They:
 
 1. Introduced an abstraction around the classes/components using iBatis directly, and ensured that all 
-classes/components indirectly referring to iBatis were changed to refer to the abstraction instead.
+classes/components indirectly referring to iBatis were changed to refer to the abstraction instead.  
 直接引用了使用iBatis的类/组件的抽象化，并且确保间接引用iBatis的所有类/组件都被改为引用抽象。
 2. Wrote a second implementation of the abstraction, introducing Hibernate to the codebase, perhaps tweaking the 
-abstraction where needed.
+abstraction where needed.  
 写了第二个抽象的实现，将Hibernate引入到代码库中，也许在需要的时候调整抽象。
-3. Did a tiny commit that turned on Hibernate for all teammates.
-小步提交，为所有队友打开了Hibernate。
-4. Removed iBatis, then the abstraction and the on/off old/new switch.
+3. Did a tiny commit that turned on Hibernate for all teammates.   
+小步提交，为所有队友打开了Hibernate。  
+4. Removed iBatis, then the abstraction and the on/off old/new switch.  
 删除iBatis，然后是抽象和开/关、旧/新开关。
 
 As it happens you could leave the abstraction in place, if your unit tests are able to benefit because of the 
-possibility of another seam that can be mocked.
+possibility of another seam that can be mocked.   
 发生这种情况，您可以离开抽象，如果您的单元测试能够受益，因为可能会mock另一个接缝。
 
 ## Secondary benefits
 第二个好处
 ### Cheaply pause and resume 'migrations'
-方便地暂停和恢复“迁移”
+方便地暂停和恢复“迁移”  
 The migration from old to new can be paused and resumed later casually. This is because the build guards the 
 second, incomplete, implementation. It does so merely because of a compile stage that turns the abstraction and somewhere 
 between 1 to 2 implementation into object code.  If there are unit tests for the two alternates, then even more so.
@@ -145,7 +143,7 @@ branch by abstraction *thing* is only incrementally more expensive.
 ## Not a panacea
 并非万能
  
-Branch by Abstraction does not suit all 'change' situations.
+Branch by Abstraction does not suit all 'change' situations.  
 抽象分支不适用于所有的“变化”情况。 
  
 One is when you have got to support old APIs and previous releases for more than a short period of time.  I.e. when your 
@@ -155,7 +153,7 @@ dependent customers (or detached clients apps) can choose their own upgrade mome
  
 Some years ago the KDE team was mulling their release 5.0 strategy, and wanting to remain parallel to changes in 4.0, so as not to make 
 mistakes that they had done 
-previously{{< ext url="http://tech.slashdot.org/story/11/08/07/2128222/KDE-Frameworks-50-In-Development" >}}. TODO: circle back.
+previously{{< ext url="http://tech.slashdot.org/story/11/08/07/2128222/KDE-Frameworks-50-In-Development" >}}. TODO: circle back.  
 几年前，KDE团队正在研究5.0版本的战略，并希望与4.0的变化保持平行，以免造成他们以前犯过的错误
  
 ## History
@@ -168,7 +166,7 @@ vacation now".
 团队在抽签之前多年采用分支机构（Stacy Curl在2007年命名），但第一个实施是未知的。在采用BbA之前，团队**必须为长时间的破坏性变化做出分支，或者用不可思议的编排来做：“嘿，每个人都要花一周的假期”。
  
 With the Branch by Abstraction technique, Trunk-Based Development was less likely to be temporarily or permanently 
-abandoned for a multi-branch model.
+abandoned for a multi-branch model.  
 采用抽象分支技术，基于主干的开发不太可能因为多分支模型被暂时或永久地弃用。
  
 # References elsewhere
