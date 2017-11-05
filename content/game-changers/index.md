@@ -288,18 +288,16 @@ that back in review again.
 In 2006, Guido van Rossum presented one of his bigger contributions - "Mondrian" -
 to Googlers. Here is that 'tech talk' on YouTube:
 
-<div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/CKjRt48rZGk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" frameborder="0"></iframe></div>
+<div noprint style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;"><iframe src="https://www.youtube.com/embed/sMql3Di4Kgc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen="" frameborder="0"></iframe></div>
 
 <!-- print <img src="mondrian.png"> print -->
 <!-- print <br/> print -->
-<!-- print <a href="https://youtu.be/CKjRt48rZGk">Video Available at https://youtu.be/CKjRt48rZGk</a> print -->
+<!-- print <a href="https://youtu.be/sMql3Di4Kgc">Video Available at https://youtu.be/sMql3Di4Kgc</a> print -->
+
 
 Note at the start he says XP practice
 "Pair-Programming" is best, and that code review helps fill the gap for situations where you cannot do it.
 
-After Mondrian, the open source world saw Gerrit{{< ext url="https://www.gerritcodereview.com" >}} released
-in its image, and after that Facebookers made Phabricator{{< ext url="https://en.wikipedia.org/wiki/Phabricator" >}}
-and released that as open source too.
 
 ### Selenium Farm (2006)
 
@@ -324,7 +322,7 @@ that used the Branch by Abstraction technique{{< ext url="http://paulhammant.com
 Whereas many had previously used this technique to avoid longer version-control branches in a trunk model, this was the
 first time it had been detailed online and given a name (by Stacy Curl).
 
-## GitHub's entire platform (2008 onwards)
+## GitHub's entire initial platform (2008)
 
 ![](away_from_tbd2.png)
 
@@ -348,13 +346,30 @@ previously.
 
 #### No more clunky patch sets
 
-The open-source community for one could step away from patch-sets that were donated by email (or rudimentarily).
+GitHub's PR system used real branches in Git, and the forks aspect took advantage of the 'D' distributed in DVCS 
+(albeit distributed to somewhere else in GitHub's server-side directory structure).
+
+The open-source community for one could now step away from patch-sets that were donated by email (or other rudimentary mechanisms).
+This forced the entire VCS industry to take note, and plan equivalents, or commit to witheritng in terms of market 
+share. It greatly facilitated multi-branch development for teams of course, including (sadly) multiple long-lived 
+branches.
+
 Pull-Requests changed the dynamics of open source. Now, the original creator of open source was forced to keep up
-with PRs because if they did not, a fork with more activity and forward momentum, might steal the community. Perhaps
+with PRs because if they did not, one fork with more activity and forward momentum, might steal the community. Perhaps
 rightfully so.
 
-This forced the entire VCS industry to take note, and plan equivalents. It greatly facilitated multi-branch
-development for teams of course.
+#### Timing
+
+In terms of timing GitHub's PR-centric code review was available for open-source use a couple of months before 
+Google's Rietveld was released, but a 18 months or so after Mondrian was presented in a tech talk that was put out on
+(then) video.google.com.
+
+### Rietveld code Review (2008)
+
+After Mondrian and while at Google, Guido released Rietveld{{< ext url="https://github.com/rietveld-codereview/rietveld" >}} 
+in its image (May, 2008) and a fork of that the Gerrit{{< ext url="https://www.gerritcodereview.com" >}} gain a lot of 
+interest. Facebookers went on to make a similar Phabricator{{< ext url="https://en.wikipedia.org/wiki/Phabricator" >}}
+and released that as open source too. 
 
 ## Continuous Delivery Book (2010)
 
