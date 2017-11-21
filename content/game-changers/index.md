@@ -298,6 +298,8 @@ to Googlers. Here is that 'tech talk' on YouTube:
 Note at the start he says XP practice
 "Pair-Programming" is best, and that code review helps fill the gap for situations where you cannot do it.
 
+See Rietveld and Gerrit further on, for continuations of the Mondrian story.
+
 
 ### Selenium Farm (2006)
 
