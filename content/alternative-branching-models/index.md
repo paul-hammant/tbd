@@ -13,9 +13,7 @@ weight: 101
 
 ### GitHub flow
 
-This model is so close to PR-centric Trunk-Based Development.
-
-GitHub flow is a branching model that has individual
+This is sooooo close to PR-centric Trunk-Based Development. Why? Because it is a branching model that has individual
 developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than
 individuals.
 
@@ -250,6 +248,14 @@ to see green instead of red for this CI server enthusiasm
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 
 <div>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">31 Aug 2011, Blog Entry</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="http://scottchacon.com/2011/08/31/github-flow.html">GitHub Flow</a></td>
+        </tr>
+    </table>
     <table style="border: 0; box-shadow: none">
         <tr>
             <td style="padding: 2px" valign="top">04 Dec 2013, Blog Entry</td>

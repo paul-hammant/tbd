@@ -37,7 +37,7 @@ and helps to make Continuous Delivery a reality.
   [short-lived feature branches](/short-lived-feature-branches/) are used for
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
   Such branches allow developers to engage in [eager and continuous code review](/continuous-review/) of contributions
-  before their code is integrated into the trunk. Smaller teams may [commit direct to the trunk](/committing-straight-to-the-trunk/).
+  before their code is integrated into the trunk. Very small teams may [commit direct to the trunk](/committing-straight-to-the-trunk/).
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from the trunk on
   a just-in-time basis, are 'hardened' before a release (without that being a team activity), and **those branches are deleted** some time after release. Alternatively, there 
@@ -49,7 +49,9 @@ and helps to make Continuous Delivery a reality.
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
 
 - If you have more than a couple of developers on the project, you are going to need a hook up a
-  [build server](/continuous-integration/) to verify that their commits have **not broken the build** after they land in the trunk, and also when they are ready to be merged back into the trunk from a short-lived feature branch.
+  [build server](/continuous-integration/) to verify that their commits have **not broken the build** 
+  after they land in the trunk, and also when they are ready to be merged back into the trunk from a 
+  short-lived feature branch.
 
 - Development teams can casually flex up or down in size (in the trunk) without affecting throughput or quality.
   Proof? [Google do Trunk-Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
