@@ -14,7 +14,7 @@ Different Agile teams focus on different iteration lengths. Some teams work at t
 and some one. Some teams do not have an iteration at all - particularly teams doing Continuous Delivery.
 
 If you are on a four week, or more iteration length, and each of those four weeks varies with proximity to the 
-release and cannot change that you may be in a bind. You may be able to follow the tenants of Trunk-Based Development, 
+release and cannot change that you may be in a bind. You may be able to follow the tenets of Trunk-Based Development, 
 benefit from a Continuous Integration daemon (as all branching models can), but you are not going to be able to 
 get all the way to Continuous Delivery (or Continuous Deployment).
 
