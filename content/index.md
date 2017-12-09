@@ -8,10 +8,10 @@ weight: 1
 <!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introduction</span></h1> print -->
 
 
+
 ## Resumo em poucas palavras
 
 Um modelo de *branching* para sistema de controle de versão, onde desenvolvedores efetuam *commits* em uma única *branch* denominada *'trunk'* * e resitem a qualquer pressão para criar *branches* de vida longa ao aplicarem técnicas documentadas. Deste modo, evitam o *merge* infernal, não quebram o *build* e vivem continuamente felizes. 
-
 
 ![](trunk1.png)
 ([key](/key/))
@@ -26,6 +26,7 @@ Desenvolvimento Baseado em *Trunk* (Tronco) é um elemento chave da [Integraçã
 - Você pode efetuar *commit* direto para o *trunk* (para times pequenos) ou o *pull-request* de *feature branches* de vida curta contendo o trabalho de um único indivíduo.
 
 ## Cuidados
+
 
 - Dependendo do tamanho do time e da quantidade de *commits*, [*feature branches* de vida curta](/short-lived-feature-branches/) são usados para revisão de código (*code-review*) e *build checking* (Integração Contínua) como parte do processo de envio do código ao *trunk*. Tais *branches* permitem que desenvolvedores se empenhem no processo de [Revisão Contínua](/continuous-review/) antes do código ser integrado ao *trunk*. Times muito pequenos podem efetuar [ *commits* diretamente para o *trunk*](/committing-straight-to-the-trunk/).
 

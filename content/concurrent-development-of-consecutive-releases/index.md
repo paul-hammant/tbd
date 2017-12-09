@@ -92,7 +92,7 @@ only pick up new release work as the previous one has been pushed into productio
             <td style="padding: 2px" valign="top">10 Oct 2014, Conference Talk</td>
         </tr>
         <tr>
-            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.perforce.com/merge/2014-sessions/trunk-based-development-enterprise-its-relevance-economics">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.perforce.com/resources/trunk-based-development-enterprise">Trunk-Based Development in the Enterprise - Its Relevance and Economics</a></td>
         </tr>
     </table>
 </div>
