@@ -2,10 +2,10 @@
 date: 2017-12-08T18:07:33-03:00
 title: Introdução
 type: index
-weight: 0
+weight: 1
 ---
 
-<!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introdução</span></h1> print -->
+<!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introduction</span></h1> print -->
 
 
 ## Resumo em poucas palavras

@@ -1,6 +1,6 @@
 baseurl = "https://trunkbaseddevelopment.com/"
 languageCode = "en-us"
-title = "Desenvolvimento Baseado em Trunk"
+title = "Introdução"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
@@ -47,7 +47,7 @@ googleAnalytics = "UA-24415524-3"
 [[menu.main]]
 	name   = "Introdução"
 	url    = "/"
-	weight = 0
+	weight = 1
 
 [[menu.main]]
 	name   = "Contexto"
