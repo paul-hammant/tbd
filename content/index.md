@@ -1,85 +1,56 @@
 ---
-date: 2015-01-01T21:07:33+01:00
-title: Introduction
+date: 2017-12-08T18:07:33-03:00
+title: Introdução
 type: index
 weight: 0
 ---
 
-<!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introduction</span></h1> print -->
+<!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introdução</span></h1> print -->
 
 
-## One line summary
+## Resumo em poucas palavras
 
-A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
-resist any pressure to create other long-lived development branches by employing documented techniques. They
-therefore avoid merge hell, do not break the build, and live happily ever after.
+Um modelo de branching para sistema de controle de versão, onde desenvolvedores colaboram em uma única branch denominada 'trunk' *, resitem a qualquer pressão para criar branches de longa duração ao aplicar técnicas documentas. Deste modo, evitam o merge infernal, não quebram o build e vivem continuamente felizes. 
+
 
 ![](trunk1.png)
 ([key](/key/))
 
- &ast; *master*, in Git nomenclature
+ &ast; *master*, no contexto do Git
 
-Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
-[Continuous Delivery](/continuous-delivery/). When individuals on a team are committing their changes to the trunk
-multiple times a day it becomes easy to satisfy the core requirement of Continuous Integration that all team
-members commit to trunk at least once every 24 hours. This ensures the codebase is always releasable on demand
-and helps to make Continuous Delivery a reality.
+Desenvolvimento Baseado em Trunk é um elemento chave da [Integração Contínua](/continuous-integration/) e [Entrega Contínua](/continuous-delivery/). Quando indivíduos em um time enviam (commit, push) suas mudanças (novas linhas de código) para trunk várias vezes ao dia, torna-se fácil atender ao requisito fundamental da Integração Contínua onde todo o membro do time deve enviar seu código uma vez a cada 24 horas. Isso garante que a base de código presente no sistema de controle de versão está sempre apta para releases sob demanda e ajuda a tornar a Entrega Contínua uma realidade.
 
-## Claims
+## Afirmações
 
-- You should do Trunk-Based Development instead of GitFlow and other branching models that feature multiple long-running branches
-- You can either do a direct to trunk commit/push (v small teams) or a Pull-Request workflow as long as those feature branches
-  are short-lived and the product of a single person.
+- Você deve usar Desenvolvimento Baseado em Trunk ao invés de GitFlow ou qualquer outro modelo que fomente a criação de branches de longa duração
+- Você pode enviar (commit, push) o códido direto para trunk (times pequenos) ou solicitar a integração (pull-request) de feature branches de curta duranção contendo o trabalho de um único indivíduo.
 
-## Caveats
+## Cuidados
 
-- Depending on the team size, and the rate of commits, 
-  [short-lived feature branches](/short-lived-feature-branches/) are used for
-  code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
-  Such branches allow developers to engage in [eager and continuous code review](/continuous-review/) of contributions
-  before their code is integrated into the trunk. Very small teams may [commit direct to the trunk](/committing-straight-to-the-trunk/).
+- Dependendo do tamanho do time e da média de operações de commits, [feature branches de curta duração](/short-lived-feature-branches/) são usadas para revisão de código (*code-review*) e *build checking* (Integração Contínua) durante o processo de envio do código para o trunk. Tais branches permitem que desenvolvedores se empenhem no processo de [Revisão Contínua](/continuous-review/) antes do código ser integrado no trunk. Times muito pequenos podem [enviar o código diretamente para trunk](/committing-straight-to-the-trunk/).
 
-- Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from the trunk on
-  a just-in-time basis, are 'hardened' before a release (without that being a team activity), and **those branches are deleted** some time after release. Alternatively, there 
-  may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a "fix
-  forward" strategy for bug fixes. Releasing from trunk is also for high-throughput teams, too.
+- Dependendo da cadência de releases pretendida, pode haver [release branches](/branch-for-release/) geradas imediatamente a partir do trunk, sem permissão de alterações (no caso commit ou push) do time e que **serão definitivamente removidas** algum tempo depois da release. Alternativamente, release branches podem não ser criadas caso o time gere [releases a partir do trunk](/release-from-trunk/) e adotem a política de "resolver em seguida" para bug fixes. Também, times de alta performance geram [releases a partir do trunk](/release-from-trunk/).
 
-- Teams should become adept with the related [branch by abstraction](/branch-by-abstraction/) technique for longer
-  to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on
-  the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
+- Times devem ser adeptos a técnica de [abstração de branch](/branch-by-abstraction/) para tarefas longas (ex. no Scrum, tarefas que levam dias para completar) e usar [feature flags](/feature-flags/) no dia a dia de desenvolvimento para viabilizar releases consecutivas (entre outros benefícios - ver [desenvolvimento concorrente de releases consecutivas](/concurrent-development-of-consecutive-releases/)) 
 
-- If you have more than a couple of developers on the project, you are going to need a hook up a
-  [build server](/continuous-integration/) to verify that their commits have **not broken the build** 
-  after they land in the trunk, and also when they are ready to be merged back into the trunk from a 
-  short-lived feature branch.
+- Se você tem uma certa quantidade de desenvolvedores no projeto, você precisa de um [servidor de build](/continuous-integration/) para verificar se as novas linhas de código enviadas ao trunk  **não quebraram o build**. O mesmo ocorre no *merge* de feature branches de curta duração no trunk.
 
-- Development teams can casually flex up or down in size (in the trunk) without affecting throughput or quality.
-  Proof? [Google do Trunk-Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
-  have **25000 developers and QA automators** in that single [monorepo](/monorepo/) trunk, that in their case can
-  [expand or contract](/expanding-contracting-monorepos/) to suit the developer in question.
+- Times podem crescer ou diminuir sem afetar o throughput ou qualidade. Prova? [Desenvolvimento baseado no trunk na Google](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) contém **25000 desenvolvedores e time de automação de QA** em um [monorepo](/monorepo/), o qual pode [expandir ou retrair](/expanding-contracting-monorepos/) com base na necessidade do desenvolvedor.
 
-- People who practice the [GitHub-flow branching model](/alternative-branching-models/index.html#modern-claimed-high-throughput-branching-models) will feel
-  that this is quite similar, but there is one small difference around where to release from.
+- Pessoas que praticam o modelo [GitHub-flow](/alternative-branching-models/index.html#modern-claimed-high-throughput-branching-models) irão sentir a similaridade entre os modelos. No entanto, existe uma pequena diferença em torno de onde é gerada a release. 
 
-- People who practice the Gitflow branching model will find this **very different**, as will many developers used to
-  the popular ClearCase, Subversion, Perforce, StarTeam, VCS [branching models of the past](/alternative-branching-models/index.html#legacy-branching-models).
+- Pessoas que praticam o modelo Gitflow vão achar isso **muito diferente**, do mesmo modo que muitos desenvolvedores acostumados com [modelos mais antigos](/alternative-branching-models/index.html#legacy-branching-models) como ClearCase, Subversion, Perforce, StarTeam e VCS.
 
-- [Many publications](/publications/) promote Trunk-Based Development as we describe it here. Those include the best-selling 'Continuous Delivery' and 'DevOps Handbook'. This should not even be controversial anymore!
+- [Muitas publicações](/publications/) promovem o Desenvolvimento Baseado em Trunk como descrito aqui. Entre elas *best-selling* como 'Entrega Continua' e 'DevOps Handbook'. Isso não deve ser mais uma controvérsia!
 
-## History
+## História
 
-Trunk-Based Development is not a new branching model. The word 'trunk' is referent to the concept of a growing tree,
-where the fattest and longest span is the trunk, not the branches that radiate from it and are of more limited length.
+O modelo de Desenvolvimento Baseado em Trunk não é recente. A palavra 'trunk' é referente ao conceito de uma árvore em crescimento, onde a maior extensão do comprimento e largura estão na raiz e não nas ramificações (branches) irradiadas dela e têm uma maior limitação de tamanho.
 
-It has been a lesser known branching model of choice since the mid-nineties and considered tactically since the eighties.
-The largest of development organizations, like Google (as mentioned) and Facebook practice it at scale.
+Desde meados da década de 90 é pouco considerado entre os modelos. Entretato, sua incidência de uso vêm desde a década de 80. As grandes organizações de desenvolvimento como Google (como mencionado) e Facebook praticam o modelo em escala.
 
-Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers/) have made
-Trunk-Based Development more (and occasionally less) prevalent, but is has been a branching model that many have stuck 
-with through the years.
+Há 30 anos diferentes [avanços em sistemas de controle de versão e ferramentas/técnicas relacionadas](/game-changers/) têm feito Desenvolvimento Baseado em Trunk mais (e ocasionamente menos) prevalante, mas isso tem sido um modelo de branching que muitos tem se deparado através dos anos.
 
 ## This site
 
-This site attempts to collect all the related facts, rationale and techniques for Trunk-Based Development together
-in one place, complete with twenty-five diagrams to help explain things. All without using TBD as an acronym
-even ~~once~~ twice.
+Este site tenta coletar todos os fatos, racionais e técnicas para Desenvolvimento Baseado em Trunk em um único local, composto com 25 diagramas para ajudar a explicar coisa. Tudo sem usar TBD como uma sigla mesmo ~~uma~~ duas vezes.

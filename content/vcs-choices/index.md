@@ -1,6 +1,6 @@
 ---
 date: 2016-03-02T20:08:11+01:00
-title: Version control system choices
+title: Escolhas de Sistemas de controle de vesion
 weight: 32
 ---
 

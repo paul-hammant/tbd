@@ -1,6 +1,6 @@
 ---
 date: 2017-01-01T20:08:11+01:00
-title: Publications
+title: Publicações
 weight: 131
 ---
 

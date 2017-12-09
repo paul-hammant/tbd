@@ -1,6 +1,6 @@
 ---
 date: 2016-07-01T20:10:46+01:00
-title: Continuous Delivery (CD)
+title: Entrega Contínua (EC)
 weight: 71
 ---
 

@@ -1,6 +1,6 @@
 ---
 date: 2016-02-01T20:08:11+01:00
-title: Deciding factors
+title: Fatores decisivos
 weight: 21
 ---
 
