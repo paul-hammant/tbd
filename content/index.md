@@ -51,6 +51,6 @@ Desde meados da década de 90 é pouco considerado entre os modelos. Entretato, 
 
 Há 30 anos diferentes [avanços em sistemas de controle de versão e ferramentas/técnicas relacionadas](/game-changers/) têm feito Desenvolvimento Baseado em *Trunk* mais (e ocasionamente menos) prevalente, mas isso tem sido um modelo de *branching* que muitos têm se deparado através dos anos.
 
-## Este site
+## O site
 
 Este site tenta coletar todos os fatos, racionais e técnicas para Desenvolvimento Baseado em Trunk em um único local, composto por 25 diagramas para ajudar a explicar coisa. Tudo sem usar TBD como uma sigla mesmo ~~uma~~ duas vezes.

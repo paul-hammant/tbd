@@ -1,6 +1,6 @@
 ---
 date: 2016-06-03T20:10:46+01:00
-title: Feature Branches de curta duração
+title: Feature Branches de vida curta
 weight: 63
 ---
 

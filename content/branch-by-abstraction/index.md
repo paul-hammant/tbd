@@ -1,6 +1,6 @@
 ---
 date: 2016-05-03T19:56:50+01:00
-title: Abstração de Branch
+title: Branch por Abastração
 weight: 53
 ---
 

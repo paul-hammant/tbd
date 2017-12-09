@@ -1,6 +1,6 @@
 ---
 date: 2016-06-02T20:10:46+01:00
-title: Commit direto no Trunk
+title: Commit direto para Trunk
 weight: 62
 ---
 
