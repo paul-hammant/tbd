@@ -1,6 +1,6 @@
 ---
 date: 2016-10-01T20:08:11+01:00
-title: Alternative branching models
+title: Modelos alternativos
 weight: 101
 ---
 

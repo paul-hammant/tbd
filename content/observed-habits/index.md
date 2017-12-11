@@ -1,6 +1,6 @@
 ---
 date: 2016-08-01T09:42:02+05:00
-title: Observed habits
+title: Hábitos
 weight: 81
 ---
 

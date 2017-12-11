@@ -1,6 +1,6 @@
 ---
 date: 2016-05-06T19:56:50+01:00
-title: Release from trunk
+title: Release gerada a partir do trunk
 weight: 56
 ---
 

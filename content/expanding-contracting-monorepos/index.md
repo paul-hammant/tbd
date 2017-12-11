@@ -1,6 +1,6 @@
 ---
 date: 2016-11-02T20:08:11+01:00
-title: Expanding Contracting Monorepos
+title: Expandindo e Contraindo Monorepos
 weight: 112
 ---
  

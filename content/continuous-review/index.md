@@ -1,6 +1,6 @@
 ---
 date: 2016-06-05T20:10:46+01:00
-title: Continuous Code Review 
+title: Revisão Contínua 
 weight: 65
 ---
 

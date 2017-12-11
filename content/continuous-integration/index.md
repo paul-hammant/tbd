@@ -1,6 +1,6 @@
 ---
 date: 2016-06-01T20:10:46+01:00
-title: Continuous Integration (CI)
+title: Integração Contínua (IC)
 weight: 61
 ---
 

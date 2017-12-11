@@ -1,6 +1,6 @@
 ---
 date: 2016-07-05T20:10:46+01:00
-title: Concurrent development of consecutive releases
+title: Desenvolvimento concorrente de releases consecutivas
 weight: 75
 ---
 

@@ -1,6 +1,6 @@
 ---
 date: 2016-05-05T19:56:50+01:00
-title: Branch for release
+title: Release branch
 weight: 55
 ---
 
