@@ -16,7 +16,7 @@ on the review before they start new work. With a continuous review ethos, it is 
 allowed to back up.
 
 Companies doing Extreme Programming, often allow that pair of eyes to count as a review. Some companies require 
-multiple reviews of code. For "the pair as reviewers too" scenario, one might have ben enough and that commit will 
+multiple reviews of code. For "the pair as reviewers too" scenario, one might have been enough and that commit will 
 land in the trunk, without others looking at it. Five minutes and 20 seconds into Guido van Rossum's famous 2006 Mondrian 
 presentation, he states "code review is a best alternative to pair programming", and that it is "basically 
 asynchronous pair-programming".
