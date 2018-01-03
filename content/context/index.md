@@ -4,16 +4,16 @@ title: Contexto
 weight: 5
 ---
 
-A development team wanting to go ahead with Trunk-Based Development have pre-requisite achievements. Once the team has 
-done a few commits in the correct style, other things are now facilitated. We can show this as a layer cake:
+<!--A development team wanting to go ahead with Trunk-Based Development have pre-requisite achievements. Once the team has done a few commits in the correct style, other things are now facilitated. We can show this as a layer cake:-->
+Um time de desenvolvimento que espera ir em frente com o Desenvolvimento Baseado em *Trunk* precisa atender a um pré-requisito. Ao atendê-lo, o time facilita a adoção de outras metodologias. É possível apresentar tais elementos em uma imagem em camadas:
 
 ![](layer_cake.png)
 
-DevOps is encompassing too. At the very least, the expansion of development best practices into operations heartlands.
+No contexto, DevOps abrange todas as camadas da imagem viabilizando cultura, processos e ferramentas que auxiliem o time de desenvolvimeto a entregar software rápido sem perder qualidade.
 
 ## Trunk-Based Development pre-requisites
 
-(layers below it)
+(camada abaixo)
 
 Installation of your VCS technology is part of a foundational development infrastructure that includes developer 
 workstations or laptops that are appropriate for build testing and running of the application or service being made.
