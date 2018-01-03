@@ -14,10 +14,10 @@ A source-control branching model, where developers collaborate on code in a sing
 resist any pressure to create other long-lived development branches by employing documented techniques. They
 therefore avoid merge hell, do not break the build, and live happily ever after.
 
+ &ast; *master*, in Git nomenclature
+
 ![](trunk1.png)
 ([key](/key/))
-
- &ast; *master*, in Git nomenclature
 
 Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
 [Continuous Delivery](/continuous-delivery/). When individuals on a team are committing their changes to the trunk
@@ -33,14 +33,14 @@ and helps to make Continuous Delivery a reality.
 
 ## Caveats
 
-- Depending on the team size, and the rate of commits, 
+- Depending on the team size, and the rate of commits,
   [short-lived feature branches](/short-lived-feature-branches/) are used for
   code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
   Such branches allow developers to engage in [eager and continuous code review](/continuous-review/) of contributions
   before their code is integrated into the trunk. Very small teams may [commit direct to the trunk](/committing-straight-to-the-trunk/).
 
 - Depending on the intended release cadence, there may be [release branches](/branch-for-release/) that are cut from the trunk on
-  a just-in-time basis, are 'hardened' before a release (without that being a team activity), and **those branches are deleted** some time after release. Alternatively, there 
+  a just-in-time basis, are 'hardened' before a release (without that being a team activity), and **those branches are deleted** some time after release. Alternatively, there
   may also be no release branches if the team is [releasing from Trunk](/release-from-trunk/), and choosing a "fix
   forward" strategy for bug fixes. Releasing from trunk is also for high-throughput teams, too.
 
@@ -49,8 +49,8 @@ and helps to make Continuous Delivery a reality.
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
 
 - If you have more than a couple of developers on the project, you are going to need a hook up a
-  [build server](/continuous-integration/) to verify that their commits have **not broken the build** 
-  after they land in the trunk, and also when they are ready to be merged back into the trunk from a 
+  [build server](/continuous-integration/) to verify that their commits have **not broken the build**
+  after they land in the trunk, and also when they are ready to be merged back into the trunk from a
   short-lived feature branch.
 
 - Development teams can casually flex up or down in size (in the trunk) without affecting throughput or quality.
@@ -75,7 +75,7 @@ It has been a lesser known branching model of choice since the mid-nineties and 
 The largest of development organizations, like Google (as mentioned) and Facebook practice it at scale.
 
 Over 30 years different [advances to source-control technologies and related tools/techniques](/game-changers/) have made
-Trunk-Based Development more (and occasionally less) prevalent, but is has been a branching model that many have stuck 
+Trunk-Based Development more (and occasionally less) prevalent, but is has been a branching model that many have stuck
 with through the years.
 
 ## This site
