@@ -19,7 +19,7 @@ A instalação do seu Sistema de Controle de Versão é uma parte fundamental pa
 
 Em ambientes DevOps modernos, isso deve estar relacionado com Infraestrutura como Código (IaC).
 
-## Trunk-Based Development facilitates
+##  Desenvolvimento Baseado em *Trunk* facilita 
 
 (Camadas acima)
 
@@ -31,19 +31,13 @@ Em ambientes DevOps modernos, isso deve estar relacionado com Infraestrutura com
 
 ### Entrega Contínua
 
-[Entrega Contínua](/continuous-delivery/) (CD) 
-is a layer on top of that, has been practiced since the mid-2000's, and 
-documented in Jez Humble and Dave Farley's book of the same name in 2010.  This site gives a 5% summary of the 
-practice. The reader should dive into the Book and associated site, without delay.
+[Entrega Contínua](/continuous-delivery/) (EC) é uma camada acima, tem sido praticada desde meados da década de 2000 é documentada por Jez Humble e Dave Farley's no livro de mesmo nome em 2010. Este site apresenta um resumo de 5% acerca da prática. O leito deve ir fundo no Livro e o site do mesmo, sem demora.
 
 ### Lean Experiments
 
-With CD locked in, continual improvement experiments can happen with a focus on time through "the machine" that is your 
-development and delivery operation. The experiments should draw off the field of science that is "Lean" so that the 
-impact of each experiment can be measured against predictions and decisions made appropriately following it.
+With CD locked in, continual improvement experiments can happen with a focus on time through "the machine" that is your development and delivery operation. The experiments should draw off the field of science that is "Lean" so that the impact of each experiment can be measured against predictions and decisions made appropriately following it.
 
 Lean Experiments can happen in any development team on any project but work **best** on foundations that 
 are solid. Specifically, the solid foundations of Trunk-Based Development, CI, and CD. 
 
-This site does not touch on Lean Experiments beyond this section, but the reader should strive to understand that field
-of science when the lower layers of the stylized cake are solid.
+This site does not touch on Lean Experiments beyond this section, but the reader should strive to understand that field of science when the lower layers of the stylized cake are solid.
