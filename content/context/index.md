@@ -11,35 +11,28 @@ Um time de desenvolvimento que espera ir em frente com o Desenvolvimento Baseado
 
 No contexto, DevOps abrange todas as camadas da imagem viabilizando cultura, processos e ferramentas que auxiliem o time de desenvolvimeto a entregar software rápido sem perder qualidade.
 
-## Trunk-Based Development pre-requisites
+## Pré-requisitos para o Desenvolvimento Baseado em *Trunk*
 
 (camada abaixo)
 
-Installation of your VCS technology is part of a foundational development infrastructure that includes developer 
-workstations or laptops that are appropriate for build testing and running of the application or service being made.
-Developers running the application only need it to be functionally viable. It doesn't have to match the performance
-of the expected production environment, and it is OK for it to be non-functionally different in other ways too.
+A instalação do seu Sistema de Controle de Versão é uma parte fundamental para a infraestrutura de desenvolvimento que também inclue laptops e Desktops para construir testes e executar a aplicação ou serviço sendo desenvolvido. Desenvolvedores necessitam que essa camada funcione com os recursos necessários para que a aplicação seja executada de forma adequada. Entretanto, sem a necessidade prover atributos semelhantes ao de produção. Por exemplo, mesma performance do servidor de produção.
 
-In the modern DevOps era, this probably means Infrastructure as Code. 
+Em ambientes DevOps modernos, isso deve estar relacionado com Infraestrutura como Código (IaC).
 
 ## Trunk-Based Development facilitates
 
-(layers above it)
+(Camadas acima)
 
-### Continuous Integration
+### Integração Contínua
 
-[Continuous Integration](/continuous-integration/) (CI) has been in practice since the
-mid-nineties in its modern incarnation (integrating to a shared code line frequently and 
-testing that).
+[Integração Contínua](/continuous-integration/) (IC) tem sido utilizada desde meados da década de 90 em sua moderna encarnação (integração e testes frequentes na base de código compartilhada).
 
-Importantly, the reader should understand that there is a large overlap between Trunk-Based Development and 
-Continuous Integration, as defined by its definers and documenters. Whereas Trunk-Based Development focuses on a
-pure source-control workflow and an individual contributor's obligations to that, Continuous Integration focuses 
-equally on that and the need to have machines issue early warnings on breakages and incompatibilities.
+É importante que o leitor entenda que há uma certa confusão entre Desenvolvimento Baseado em *Trunk* e Integração Contínua, conforme definida por seus criadores e escritores. Enquanto o Desenvolvimento Baseado em *Trunk* foca no workflow de código fonte e na disciplina do desenvolvedor, a Integração Contínua além desses aspectos, também foca na necessidade de haver máquinas para automatizar o processo contínuo de integração de código e notificações de problemas relacionados (ex. inviabilidade na construção, report análise de código).
 
-### Continuous Delivery
+### Entrega Contínua
 
-[Continuous Delivery](/continuous-delivery/) (CD) is a layer on top of that, has been practiced since the mid-2000's, and 
+[Entrega Contínua](/continuous-delivery/) (CD) 
+is a layer on top of that, has been practiced since the mid-2000's, and 
 documented in Jez Humble and Dave Farley's book of the same name in 2010.  This site gives a 5% summary of the 
 practice. The reader should dive into the Book and associated site, without delay.
 
