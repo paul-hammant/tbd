@@ -4,53 +4,40 @@ title: Contexto
 weight: 5
 ---
 
-A development team wanting to go ahead with Trunk-Based Development have pre-requisite achievements. Once the team has 
-done a few commits in the correct style, other things are now facilitated. We can show this as a layer cake:
+<!--A development team wanting to go ahead with Trunk-Based Development have pre-requisite achievements. Once the team has done a few commits in the correct style, other things are now facilitated. We can show this as a layer cake:-->
+Um time de desenvolvimento que espera ir em frente com o Desenvolvimento Baseado em *Trunk* precisa atender a um pré-requisito (ver camada inferior na imagem). Ao atendê-lo, torna-se fácil a adoção de abordagens relacionadas a ambientes modernos de desenvolvimento. Tanto o pré-requisito quanto tais abordagens estão representadas na imagem em camadas a seguir:
 
 ![](layer_cake.png)
 
-DevOps is encompassing too. At the very least, the expansion of development best practices into operations heartlands.
+No contexto, DevOps abrange todas as camadas da imagem viabilizando cultura, processos e ferramentas que auxiliam o time de desenvolvimeto a entregar software rápido sem perder qualidade.
 
-## Trunk-Based Development pre-requisites
+## Pré-requisitos para o Desenvolvimento Baseado em *Trunk*
 
-(layers below it)
+(camada abaixo)
 
-Installation of your VCS technology is part of a foundational development infrastructure that includes developer 
-workstations or laptops that are appropriate for build testing and running of the application or service being made.
-Developers running the application only need it to be functionally viable. It doesn't have to match the performance
-of the expected production environment, and it is OK for it to be non-functionally different in other ways too.
+A instalação do seu Sistema de Controle de Versão é uma parte fundamental para a infraestrutura de desenvolvimento que também inclue os laptops e Desktops para construção de testes e execução da aplicação ou serviço em desenvolvimento. Desenvolvedores necessitam que essa camada funcione com os recursos necessários para que a aplicação seja executada de forma adequada. Entretanto, sem a necessidade de prover atributos idênticos ao de produção. Por exemplo, mesma performance do servidor de produção.
 
-In the modern DevOps era, this probably means Infrastructure as Code. 
+Em ambientes DevOps modernos, isso pode estar relacionado com o tema de Infraestrutura como Código (IaC).
 
-## Trunk-Based Development facilitates
+##  Desenvolvimento Baseado em *Trunk* facilita 
 
-(layers above it)
+(Camadas acima)
 
-### Continuous Integration
+### Integração Contínua
 
-[Continuous Integration](/continuous-integration/) (CI) has been in practice since the
-mid-nineties in its modern incarnation (integrating to a shared code line frequently and 
-testing that).
+[Integração Contínua](/continuous-integration/) (IC) tem sido utilizada desde meados da década de 90 em sua moderna encarnação (integração e testes frequentes na base de código compartilhada).
 
-Importantly, the reader should understand that there is a large overlap between Trunk-Based Development and 
-Continuous Integration, as defined by its definers and documenters. Whereas Trunk-Based Development focuses on a
-pure source-control workflow and an individual contributor's obligations to that, Continuous Integration focuses 
-equally on that and the need to have machines issue early warnings on breakages and incompatibilities.
+É importante que o leitor entenda que há uma sobreposição entre Desenvolvimento Baseado em *Trunk* e Integração Contínua, conforme definida por seus criadores e escritores. Enquanto o Desenvolvimento Baseado em *Trunk* foca no workflow de código fonte e na disciplina do desenvolvedor, a Integração Contínua além desses aspectos, também foca na necessidade de haver máquinas para automatizar o processo contínuo de integração de código e notificações de problemas relacionados (ex. inviabilidade na construção, report análise de código).
 
-### Continuous Delivery
+### Entrega Contínua
 
-[Continuous Delivery](/continuous-delivery/) (CD) is a layer on top of that, has been practiced since the mid-2000's, and 
-documented in Jez Humble and Dave Farley's book of the same name in 2010.  This site gives a 5% summary of the 
-practice. The reader should dive into the Book and associated site, without delay.
+[Entrega Contínua](/continuous-delivery/) (EC) é uma camada acima, tem sido praticada desde meados da década de 2000 é documentada por Jez Humble e Dave Farley's no livro de mesmo nome em 2010. Este site apresenta um resumo de 5% acerca da prática. O leito deve ir fundo no Livro e o site do mesmo, sem demora.
 
 ### Lean Experiments
 
-With CD locked in, continual improvement experiments can happen with a focus on time through "the machine" that is your 
-development and delivery operation. The experiments should draw off the field of science that is "Lean" so that the 
-impact of each experiment can be measured against predictions and decisions made appropriately following it.
+With CD locked in, continual improvement experiments can happen with a focus on time through "the machine" that is your development and delivery operation. The experiments should draw off the field of science that is "Lean" so that the impact of each experiment can be measured against predictions and decisions made appropriately following it.
 
 Lean Experiments can happen in any development team on any project but work **best** on foundations that 
 are solid. Specifically, the solid foundations of Trunk-Based Development, CI, and CD. 
 
-This site does not touch on Lean Experiments beyond this section, but the reader should strive to understand that field
-of science when the lower layers of the stylized cake are solid.
+This site does not touch on Lean Experiments beyond this section, but the reader should strive to understand that field of science when the lower layers of the stylized cake are solid.

@@ -1,6 +1,6 @@
-baseurl = "https://trunkbaseddevelopment.com/"
+baseurl = "https://pt.trunkbaseddevelopment.com/"
 languageCode = "en-us"
-title = "Introdução"
+title = "Desenvolvimento Baseado em Trunk"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
