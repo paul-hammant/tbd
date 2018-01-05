@@ -44,8 +44,8 @@ Note: Over time all version control systems would adopt this branch/merge langua
 A handful of scripts created in 1986 by Dick Grune, were fashioned into an initial release of CVS{{< ext url="https://en.wikipedia.org/wiki/Concurrent_Versions_System" >}}
 in 1990. For the open source community, CVS was it until Subversion came along years later. The adoption of CVS in the
 young open source community spurred its adoption in the enterprise too. While many branching models were possible,
-merging was painful and Trunk-Based Development was the sensible choice. Indeed CVS popularized the "trunk" branch name, even if it didn't mandate it.  CVS's flaws were that it did not have atomic commits, its operation over the wire as a centralized client/server VCS was very chatty, and it had cumbersome CVS/ directories all over the checked out code. 
- 
+merging was painful and Trunk-Based Development was the sensible choice. Indeed CVS popularized the "trunk" branch name, even if it didn't mandate it.  CVS's flaws were that it did not have atomic commits, its operation over the wire as a centralized client/server VCS was very chatty, and it had cumbersome CVS/ directories all over the checked out code.
+
 ## Microsoft Secrets book (1995)
 
 ![](to_tbd3.png)
@@ -107,11 +107,11 @@ in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}
 Perforce and ClearCase bit into the corporate VCS market significantly. Both, as technologies, were
 open to any branching model and implementing teams chose differently. In the end, though, people's newfound willingness
 to experiment with multiple parallel active branches won out, and we had some dark years generally for Trunk-Based
-Development ahead, even if branch names sometimes included 'trunk'. Both Perforce and ClearCase has decent merge 
+Development ahead, even if branch names sometimes included 'trunk'. Both Perforce and ClearCase has decent merge
 tracking, but Perforce was much faster on the wire.
 
 Microsoft installed a custom build of Perforce called "Source Depot". It took over from SLM/Slime (mentioned above).
-We are not sure, but Microsoft may have embraced the possibility of multiple active branches (rather than 
+We are not sure, but Microsoft may have embraced the possibility of multiple active branches (rather than
 Trunk-Based Development) back then within their Source Depot (SD) setup.
 
 By contrast, Google installed Perforce (see below) and embraced a Trunk-Based Development model with it from the outset.
@@ -205,8 +205,8 @@ well after the changes were released.
 ![](away_from_tbd1.png)
 
 Karl Fogel helped start Subversion and remembers one early goal was "CVS + atomicity". **The lack of atomicity in CVS
-meant that teams had to coordinate as to who was checking in at any one time** and whether they would avoid 
-accidentally breaking the build as a result. Early CI servers (as mentioned) used to have a "quiet period" 
+meant that teams had to coordinate as to who was checking in at any one time** and whether they would avoid
+accidentally breaking the build as a result. Early CI servers (as mentioned) used to have a "quiet period"
 to make sure they had received every last element of an
 intended commit, and that was no longer needed for Subversion and its atomic commits.
 
@@ -214,7 +214,7 @@ In comparison to the clunky CVS, Subversion had "lightweight" branching. This ma
 branches active in parallel and merge the team's changes back later.
 
 Until v1.5 in June 2008, Subversion had an inadequate "merge tracking" capability, eliminating a class of problems
-inherent in branching and merging. The internal mechanism of noting the merge tracking was controversial though, and 
+inherent in branching and merging. The internal mechanism of noting the merge tracking was controversial though, and
 Subversion still has edge-case merge bugs today. Like this one{{< ext url="https://issues.apache.org/jira/browse/SVN-4635" >}}.
 
 Subversion by default setup a branch called trunk. That said, it allows any branching model to be used.
@@ -224,8 +224,8 @@ Subversion by default setup a branch called trunk. That said, it allows any bran
 ![](away_from_tbd3.png)
 
 In comparison to the clunky Subversion, Git had "lightweight" branching.
-This made it easier to consider multiple branches as active (in parallel) and merged back later. Git's merge engine 
-was very good too, and had merge tracking from the start. It was more able than prior merge technologies to 
+This made it easier to consider multiple branches as active (in parallel) and merged back later. Git's merge engine
+was very good too, and had merge tracking from the start. It was more able than prior merge technologies to
 silently process complexity.
 
 A critical part of Git was local branching. A developer could make multiple local branches, and even map them to the
@@ -348,12 +348,12 @@ previously.
 
 #### No more clunky patch sets
 
-GitHub's PR system used real branches in Git, and the forks aspect took advantage of the 'D' distributed in DVCS 
+GitHub's PR system used real branches in Git, and the forks aspect took advantage of the 'D' distributed in DVCS
 (albeit distributed to somewhere else in GitHub's server-side directory structure).
 
 The open-source community for one could now step away from patch-sets that were donated by email (or other rudimentary mechanisms).
-This forced the entire VCS industry to take note, and plan equivalents, or commit to witheritng in terms of market 
-share. It greatly facilitated multi-branch development for teams of course, including (sadly) multiple long-lived 
+This forced the entire VCS industry to take note, and plan equivalents, or commit to witheritng in terms of market
+share. It greatly facilitated multi-branch development for teams of course, including (sadly) multiple long-lived
 branches.
 
 Pull-Requests changed the dynamics of open source. Now, the original creator of open source was forced to keep up
@@ -362,16 +362,16 @@ rightfully so.
 
 #### Timing
 
-In terms of timing GitHub's PR-centric code review was available for open-source use a couple of months before 
+In terms of timing GitHub's PR-centric code review was available for open-source use a couple of months before
 Google's Rietveld was released, but a 18 months or so after Mondrian was presented in a tech talk that was put out on
 (then) video.google.com.
 
 ### Rietveld code Review (2008)
 
-After Mondrian and while at Google, Guido released Rietveld{{< ext url="https://github.com/rietveld-codereview/rietveld" >}} 
-in its image (May, 2008) and a fork of that the Gerrit{{< ext url="https://www.gerritcodereview.com" >}} gain a lot of 
+After Mondrian and while at Google, Guido released Rietveld{{< ext url="https://github.com/rietveld-codereview/rietveld" >}}
+in its image (May, 2008) and a fork of that the Gerrit{{< ext url="https://www.gerritcodereview.com" >}} gain a lot of
 interest. Facebookers went on to make a similar Phabricator{{< ext url="https://en.wikipedia.org/wiki/Phabricator" >}}
-and released that as open source too. 
+and released that as open source too.
 
 ## Continuous Delivery Book (2010)
 
@@ -413,7 +413,7 @@ emergent DevOps practices, which they would get to reuse and refine on the follo
 4. Test Driven Development (TDD)
 5. Acceptance Test Driven development (ATDD)
 6. a CI pipeline that included performance tests
-7. a focus of team dynamics forhigh throughput
+7. a focus of team dynamics for high throughput
 
 ## Travis-CI's GitHub integration and pass/fail badges (2011)
 
