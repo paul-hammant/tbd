@@ -13,12 +13,15 @@ weight: 1
 Um modelo de *branching* para sistema de controle de versão, onde desenvolvedores efetuam *commits* em uma única *branch* denominada *'trunk'* * e resitem a qualquer pressão para criar *branches* de vida longa ao aplicarem técnicas documentadas. Deste modo, evitam o *merge* infernal, não quebram o *build* e vivem continuamente felizes. 
 
 
+ &ast; *master*, in Git nomenclature
+
 ![](trunk1.png)
 ([key](/key/))
 
  &ast; *master*, no contexto do Git
 
 Desenvolvimento Baseado em *Trunk* (Tronco) é um elemento chave da [Integração Contínua](/continuous-integration/). No caso, o modelo é projetado para viabilizar a realização de vários *commits* no *trunk* por dia. Deste modo, auxiliando os times a atenderem ao requisito fundamental onde todos o membros do time devem efetuar o *commit* de suas alterações ao menos uma vez a cada 24 horas. Isso garante uma série de benefícios. Dentre eles, a garantia de que base de código presente no sistema de controle de versão está sempre apta a *releases* sob demanda e o auxílio na adoção da [Entrega Contínua](/continuous-delivery/).
+
 
 ## Afirmações
 
@@ -30,6 +33,7 @@ Desenvolvimento Baseado em *Trunk* (Tronco) é um elemento chave da [Integraçã
 - Dependendo do tamanho do time e da quantidade de *commits*, [*feature branches* de vida curta](/short-lived-feature-branches/) são usados para revisão de código (*code-review*) e *build checking* (Integração Contínua) como parte do processo de envio do código ao *trunk*. Tais *branches* permitem que desenvolvedores se empenhem no processo de [Revisão Contínua](/continuous-review/) antes do código ser integrado ao *trunk*. Times muito pequenos podem efetuar [ *commits* diretamente para o *trunk*](/committing-straight-to-the-trunk/).
 
 - Dependendo da cadência de *releases* pretendida, pode haver [*release branches*](/branch-for-release/) geradas imediatamente a partir do *trunk*. Tais *release branches* não permitem *commits* e **serão definitivamente removidas** algum tempo depois da *release*. Alternativamente, *release branches* podem não ser criadas caso o time gere [*releases* a partir do *trunk*](/release-from-trunk/) e adotem a política de "resolver em seguida" para *bug fixes*. Também, times de alta performance geram [*releases* a partir do *trunk*](/release-from-trunk/).
+
 
 - Times devem ser adeptos a técnica de [*Branch* por abstração](/branch-by-abstraction/) para tarefas longas (ex. no Scrum, tarefas que levam dias para completar) e usar [*feature flags*](/feature-flags/) no dia a dia de desenvolvimento para viabilizar *releases* consecutivas (entre outros benefícios - ver [desenvolvimento concorrente de *releases* consecutivas](/concurrent-development-of-consecutive-releases/)) 
 
