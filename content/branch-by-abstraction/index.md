@@ -118,6 +118,10 @@ dependent customers (or detached clients apps) can choose their own upgrade mome
 Some years ago the KDE team was mulling their release 5.0 strategy, and wanting to remain parallel to changes in 4.0, so as not to make 
 mistakes that they had done 
 previously{{< ext url="http://tech.slashdot.org/story/11/08/07/2128222/KDE-Frameworks-50-In-Development" >}}. TODO: circle back.
+
+## Dedicated website for this procedure
+  
+In early 2018, a Branch by abstraction was created to further drill into this concept{{< ext url="https://www.branchbyabstraction.com" >}}.
  
 ## History
  
