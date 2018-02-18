@@ -83,9 +83,9 @@ Semantic merge is the next step up in the science of source-control. See [Plasti
 ### Code Review
 
 Integrated code review turned out to to be the killer feature of VCS tools. This should have been clear from the moment Mondrian
-was unveiled by Guide van Rossum (Mr. Python) in a publicized Google 'tech talk' in 2006. It delivered pre-commit
+was unveiled by Guido van Rossum (Mr. Python) in a publicized Google 'tech talk' in 2006. It delivered pre-commit
 code reviews to developers and gamified the activity of code review to some degree. Google was
-using Perforce back then (they changed to an in-house technology in 2012), and it did not have code review build in, so 
+using Perforce back then (they changed to an in-house technology in 2012), and it did not have code review built in, so 
 they had to make Mondrian (which was the final form of years of intermediate deliverables for the same). Thus
 Mondrian being created tightly coupled code review to the hourly activities of developers on the trunk. 
 
