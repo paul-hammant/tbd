@@ -55,7 +55,7 @@ and helps to make Continuous Delivery a reality.
 
 - Development teams can casually flex up or down in size (in the trunk) without affecting throughput or quality.
   Proof? [Google do Trunk-Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
-  have **25000 developers and QA automators** in that single [monorepo](/monorepo/) trunk, that in their case can
+  have **25000 developers and QA automators** in that single [monorepo](/monorepos/) trunk, that in their case can
   [expand or contract](/expanding-contracting-monorepos/) to suit the developer in question.
 
 - People who practice the [GitHub-flow branching model](/alternative-branching-models/index.html#modern-claimed-high-throughput-branching-models) will feel
