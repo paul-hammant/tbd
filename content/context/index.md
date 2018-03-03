@@ -31,7 +31,7 @@ Em ambientes DevOps modernos, isso pode estar relacionado com o tema de Infraest
 
 ### Entrega Contínua
 
-[Entrega Contínua](/continuous-delivery/) (EC) é uma camada acima, tem sido praticada desde meados da década de 2000 é documentada por Jez Humble e Dave Farley's no livro de mesmo nome em 2010. Este site apresenta um resumo de 5% acerca da prática. O leito deve ir fundo no Livro e o site do mesmo, sem demora.
+[Entrega Contínua](/continuous-delivery/) (EC) é uma camada acima, tem sido praticada desde meados da década de 2000 é documentada por Jez Humble e Dave Farley's no livro de mesmo nome em 2010. Este site apresenta um resumo de 5% acerca da prática. O leitor deve ir fundo no Livro e o site do mesmo, sem demora.
 
 ### Lean Experiments
 
