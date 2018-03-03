@@ -12,9 +12,6 @@ weight: 1
 
 Um modelo de *branching* para sistema de controle de versão, onde desenvolvedores efetuam *commits* em uma única *branch* denominada *'trunk'* * e resitem a qualquer pressão para criar *branches* de vida longa ao aplicarem técnicas documentadas. Deste modo, evitam o *merge* infernal, não quebram o *build* e vivem continuamente felizes. 
 
-
- &ast; *master*, in Git nomenclature
-
 ![](trunk1.png)
 ([key](/key/))
 
