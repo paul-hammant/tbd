@@ -55,7 +55,7 @@ to master (trunk) are allowed only as part of closing out the short-lived featur
 ## Two developers concurrently doing short-lived feature branches
 
 Say two features are being worked on concurrently: features X and Y. Both will take a day to complete, and two developers are
-working independently on them. Of four developers if pair-programming is that team's way.  The reality of the merge back to
+working independently on them. Or four developers if pair-programming is that team's way.  The reality of the merge back to
 master/trunk, before the deletion of the short-lived feature branch, is that the a merge of changes **from** master/trunk
 is often needed, before the merge **to** master/trunk.
 
