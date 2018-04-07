@@ -48,7 +48,7 @@ go as far as to delete the short-lived feature branch.
 <!-- rteghfhj -->
 
 To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of master (trunk). Merges
-to master (trunk) are allowed only as part of closing out the short-lived feature branch (and just before deleting) it.
+to master (trunk) are allowed only as part of closing out the short-lived feature branch (and just before deleting it).
 
 <!-- rteyyrt -->
 
