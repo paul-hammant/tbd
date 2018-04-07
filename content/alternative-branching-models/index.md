@@ -221,7 +221,7 @@ They only do so if the CI server says the build is green for the upstream, of co
 ([key](/key/))
 
 Problems compound with this model, the more releases being juggled concurrently there are. An upstream butterfly is
-a downstream Tsunami of unmergability. Downstream merged begin to get skipped, or abandoned. Or the merge works, but the
+a downstream Tsunami of unmergability. Downstream merges begin to get skipped, or abandoned. Or the merge works, but the
 code is not right so there is some in-branch fixing, which is not applicable to upstream. Here's the reality (breakages
 overlaid again):
 
