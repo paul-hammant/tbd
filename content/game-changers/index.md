@@ -180,7 +180,7 @@ automating that "build passes, gang" oral notification above. A particular non-f
 CruiseControl was that it stored its 'pipeline' configuration in source-control. In fact, that was alongside the
 project's source and build file - developers could tweak CI configuration in a commit.
 
-### Apache's Gump
+## Apache's Gump
 
 ![](to_tbd1.png)
 
