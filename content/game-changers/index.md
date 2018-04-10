@@ -37,7 +37,7 @@ to a 'slender', or Trunk-Based Development mode of use.
 
 Note: Over time all version control systems would adopt this branch/merge language.
 
-## Concurrent_Versions_System - CVS (1990)
+## Concurrent Versions System - CVS (1990)
 
 ![](to_tbd1.png)
 
