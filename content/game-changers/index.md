@@ -363,15 +363,16 @@ rightfully so.
 #### Timing
 
 In terms of timing GitHub's PR-centric code review was available for open-source use a couple of months before
-Google's Rietveld was released, but a 18 months or so after Mondrian was presented in a tech talk that was put out on
-(then) video.google.com.
+Google's Rietveld was released, but a 18 months or so after Mondrian was presented in a tech talk that was put out on 
+video.google.com.  A few years later Google turned off video.google.com and moved the Mondrian tech-talk video to Youtube 
+with its 2006 heritage being a mere note in the "Published on Aug 22, 2012" posting.
 
 ### Rietveld code Review (2008)
 
 After Mondrian and while at Google, Guido released Rietveld{{< ext url="https://github.com/rietveld-codereview/rietveld" >}}
-in its image (May, 2008) and a fork of that the Gerrit{{< ext url="https://www.gerritcodereview.com" >}} gain a lot of
+in its image (May, 2008) and a fork of that the Gerrit{{< ext url="https://www.gerritcodereview.com" >}} (Oct, 2008) gained a lot of
 interest. Facebookers went on to make a similar Phabricator{{< ext url="https://en.wikipedia.org/wiki/Phabricator" >}}
-and released that as open source too.
+and released that as open source too (Oct, 2010).
 
 ## Continuous Delivery Book (2010)
 
