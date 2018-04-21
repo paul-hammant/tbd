@@ -137,4 +137,12 @@ harmless tidying activity - branches can be undeleted again easily enough in all
             <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf">High-level Best Practices in Software Configuration Management</a></td>
         </tr>
     </table>
+    <table style="border: 0; box-shadow: none">
+        <tr>
+            <td style="padding: 2px" valign="top">2018, Edward Thompson on MSDN</td>
+        </tr>
+        <tr>
+            <td style="border-top: 0px; padding: 2px" valign="top"><a href="https://blogs.msdn.microsoft.com/devops/2018/04/19/release-flow-how-we-do-branching-on-the-vsts-team/">Release Flow: How We Do Branching on the VSTS Team</a></td>
+        </tr>
+    </table>
 </div>
