@@ -38,7 +38,7 @@ Cherry-picking every commit since the branch-cut to the branch from the trunk is
 
 ## Duration of 'short-lived' feature branches
 
-The [short-lived feature branch](short-lived-feature-branches) should only last a day or two and never diverge from the trunk enough so that a
+The [short-lived feature branch](/short-lived-feature-branches/) should only last a day or two and never diverge from the trunk enough so that a
 merge back is problematic. After the seal of approval from code reviewers and CI
 daemons, it should be merged back into the trunk. It should be deleted, as proof of convergence.
 The developer in question may then go ahead and make the next short-lived feature branch for the next story/task they're doing.

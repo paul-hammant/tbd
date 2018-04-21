@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function normalize_index_file_names {
     python ../fix_html.py "$1" "$2"
@@ -15,12 +15,12 @@ function extract_just_the_article {
   # arg 1 directory for index.html file (or "" for root)
   # arg 2 true if sub directory
 
-  cat ../book_page_start.html > "$1index.html2"
-  xidel --html "$1index.html" --extract "//article" | sed '/<!DOCTYPE html>/d' >> "$1index.html2"
-  echo "</body></html>" >> "$1index.html2"
-  mv "$1index.html2" "$1index.html"
+  cat ../book_page_start.html > "${1}index.html2"
+  xidel --html "${1}index.html" --extract "//article" | sed '/<!DOCTYPE html>/d' >> "${1}index.html2"
+  echo "</body></html>" >> "${1}index.html2"
+  mv "${1}index.html2" "${1}index.html"
 
-  cat "$1index.html" \
+  cat "${1}index.html" \
     | sed 's/<aside/<aside style="display: none"/' \
     | sed 's#<h1 id="references-elsewhere">References elsewhere</h1>#<h2 id="references-elsewhere">References elsewhere</h2>#' \
     | sed 's/<footer/<footer style="display: none"/' \
@@ -30,26 +30,26 @@ function extract_just_the_article {
     | sed '/showHideRefs/d' \
     | sed '/headerlink/d' \
     | awk 'NF' \
-    | sponge "$1index.html"
+    | sponge "${1}index.html"
 
   # change videos to links to videos, and remove sections not for print
-  cat "$1index.html" | sed '/ noprint/d' \
+  cat "${1}index.html" | sed '/ noprint/d' \
     | sed 's/<!-- print //' \
-    | sed 's/ print -->//' | sponge "$1index.html"
+    | sed 's/ print -->//' | sponge "${1}index.html"
 
-  python ../toc_number_applier.py "$1index.html"
+  python ../toc_number_applier.py "${1}index.html"
 
 }
 
 function normalize_index_file_names_and_extract_just_the_article {
   extract_just_the_article $1 $2
-  normalize_index_file_names "$1index.html" $2
+  normalize_index_file_names "${1}index.html" $2
 }
 
 set -e
 
 # Gen site to temp folder
-hugo --disableRSS --quiet -d tempHugo
+hugo --disableKinds=RSS --quiet -d tempHugo
 
 cd tempHugo
 
