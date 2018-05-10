@@ -47,7 +47,7 @@ googleAnalytics = "UA-24415524-3"
 [[menu.main]]
 	name   = "Introduction"
 	url    = "/"
-	weight = 0
+	weight = 1
 
 [[menu.main]]
 	name   = "Context"

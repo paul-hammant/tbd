@@ -7,7 +7,7 @@ function normalize_index_file_names {
 function convert_to_book {
   ebook-convert toc.html "../book/trunk_based_development_book$1" --page-breaks-before "//h:h1" --chapter "//h1" --max-toc-links 0 \
   --breadth-first "$2" "$3" --publisher=trunkbaseddevelopment.com --language=en --title "Trunk Based Development" \
-  --authors "Paul Hammant & Steve Smith" --pubdate "$PBDT" --cover ../book_cover.jpg
+  --authors "Paul Hammant with contributions from friends" --pubdate "$PBDT" --cover ../book_cover.jpg
 }
 
 function extract_just_the_article {
@@ -95,6 +95,7 @@ normalize_index_file_names_and_extract_just_the_article vcs-features/ true
 normalize_index_file_names_and_extract_just_the_article vcs-choices/ true
 normalize_index_file_names_and_extract_just_the_article youre-doing-it-wrong/ true
 normalize_index_file_names_and_extract_just_the_article key/ true
+normalize_index_file_names_and_extract_just_the_article contributions/ true
 normalize_index_file_names_and_extract_just_the_article book/ true
 
 # slim the front page too.
