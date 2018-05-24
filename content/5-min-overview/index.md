@@ -68,13 +68,13 @@ would implicitly do a day) can vary and is learned through experience, but commi
 
 The developer needs to run the build, to prove that they did not break anything with the commit **before** the commit
 is pushed anywhere. They might have to do an update/pull/sync before they commit/push the changes back to the team's 
-version control server, and additional builds too. There's a risk a race condition there, but let us assume that is not 
+version control server, and additional builds too. There's a risk of a race condition there, but let us assume that is not 
 going to happen for most teams.
 
 ### Code Reviews
 
 The developer needs to get the commit reviewed. Some teams will count the fact that the code was 'pair programmed' 
-as an automatic review. Others team will follow a conventional design where the commit is marshaled
+as an automatic review. Other teams will follow a conventional design where the commit is marshaled
 for review before landing in the trunk. In modern portal solutions, marshaled nearly always means a branch/fork (Pull
 Request) that is visible to the team.
 
