@@ -474,34 +474,29 @@ just as useful for Trunk-Based Development and multi-branch models. It means tha
 situations for commits a developer wants to do. Maybe that last vision is not quite complete yet, but there's a direction
  to go in now.
 
-## Snap-CI's per-commit speculative mergeability analysis (2013)
+## TravisCI's per-commit speculative mergeability analysis (2012)
 
 ![](to_tbd1.png)
 
-Snap-CI was the first CI service to setup pipelines for new branches in the tracked repository without a human initiating
-that - it did so automatically on the first push of a commit creating a branch. Well, at least if the branch name conforms
-to a given regex/prefix. That commit, and any to the branch afterward, even preceding the Pull Request, are run through a
-pipeline that includes:
+TravisCI was the first{{< ext url="https://blog.travis-ci.com/announcing-pull-request-support" >}} CI service to 
+automatically predict a GitHub pull-request's mergeability AND build success/failure 
+as if they had landed in master. Specifically:
 
-1. all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ
-2. a speculative merge back to the master/trunk/mainline - only into working-copy as it is for analysis only
-3. step 1 **again** on that resulting merge
+1. a speculative merge back to the master/trunk/mainline - only into working-copy as it is for analysis only
+2. all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ
 
-The speculative merge is discarded every time after #2 (if it fails to merge automatically) or after #3 (regardless) -
+The speculative merge is discarded every time after #1 (if it can't merge) or #2 (regardless) -
 the actual merge result is never pushed off the build server to the remote (in Git terms). It is only the "is this
 buildable and mergeable or not" notification that was desired from the exercise.
 
-Although they intended this feature of Snap-CI for [short-lived feature branches](/short-lived-feature-branches/), it is clear now that teams should do
-this CI setup **regardless of branching model**. Yes, even the long-lived branching models also benefit from this,
+This feature of TravisCI is for [short-lived feature branches](/short-lived-feature-branches/), 
+it is clear now that teams should do
+this CI setup **regardless of their branching model**. Yes, even the long-lived branching models also benefit from this,
 though they'll be challenged to stay 'green' the whole time, and remain eminently and automatically mergeable back to
 the mainline/master.
 
-Badrinath 'Badri' Janakiraman wrote a blog
-entry{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-tracking-and-integration/" >}} when the
-feature was rolled out. The blog entry is very much worth a read, especially as Badri was product owner for Snap-CI
-at the time and had the epiphany to implement this feature.  
-
-Circle-CI offers the same feature now, and it is a question of time before all CI technologies do.
+A few months later, Team City implemented the same feature - {{< ext url="http://tech.labs.oliverwyman.com/blog/2013/01/13/continuous-integration-for-github-pull-requests-with-teamcity/" >}}, 
+and a year later Snap-CI also did{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-tracking-and-integration/" >}} 
 
 What is a reality
 in 2017 is that the high bar is every commit, **every branch**, with that speculative merge, and elastically scaled so
@@ -509,8 +504,7 @@ that the notification is within seconds of pushing the commit to the shared VCS.
 commits, we would wait a little while to allow checkins to finish (particularly for the non-atomic CVS), and humans would
 have to pick apart who actually broke the build.
 
-Surely non-Trunk-Based Development teams would turn on CI for every branch and soon after plan their migration to Trunk
-Based Development.
+Surely teams not doing Trunk-Based Development would turn on this speculative merge and build capability for every branch and soon after plan their migration to Trunk-Based Development.
 
 ## Google revealing their Monorepo Trunk (2016)
 
