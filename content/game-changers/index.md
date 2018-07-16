@@ -455,25 +455,6 @@ to describe the multi-year
  test pages. 10-15 builds could be produced a day, engineers spent 5% of their time not 25% on product support and 40%
  of their time not 5% of their time on new features. That is an 8x increase in productivity for 400 engineers.
 
-## PlasticSCM's semantic merge (2013)
-
-![](away_from_tbd1.png)
-
-Plastic's semantic diff and merge{{< ext url="http://semanticmerge.com/" >}} capability was launched in March
-2013{{< ext url="https://www.infoq.com/news/2013/04/Semantic-Merge" >}}. It allowed a greatly reduced diff for
-refactoring commits.
-
-If merges between branches are required, and larger
-code changes (like refactorings) are desired, then multi-branch development is a little easier with this. However, Trunk Based
-Development's commits are more elegant too, because of it, and in the fullness of time, it might make
-on techniques like Branch by Abstraction easier, or reduce the need for it, if merge conflicts happen less often
-(according to source-control) for something in 2012 that would have been a definite clash.
-
-Other source-control tools are not doing semantic diff/merge yet (2017), but they should be. Semantic merge is
-just as useful for Trunk-Based Development and multi-branch models. It means that there are less likely to be clash
-situations for commits a developer wants to do. Maybe that last vision is not quite complete yet, but there's a direction
- to go in now.
-
 ## TravisCI's per-commit speculative mergeability analysis (2012)
 
 ![](to_tbd1.png)
@@ -505,6 +486,25 @@ commits, we would wait a little while to allow checkins to finish (particularly 
 have to pick apart who actually broke the build.
 
 Surely teams not doing Trunk-Based Development would turn on this speculative merge and build capability for every branch and soon after plan their migration to Trunk-Based Development.
+
+## PlasticSCM's semantic merge (2013)
+
+![](away_from_tbd1.png)
+
+Plastic's semantic diff and merge{{< ext url="http://semanticmerge.com/" >}} capability was launched in March
+2013{{< ext url="https://www.infoq.com/news/2013/04/Semantic-Merge" >}}. It allowed a greatly reduced diff for
+refactoring commits.
+
+If merges between branches are required, and larger
+code changes (like refactorings) are desired, then multi-branch development is a little easier with this. However, Trunk Based
+Development's commits are more elegant too, because of it, and in the fullness of time, it might make
+on techniques like Branch by Abstraction easier, or reduce the need for it, if merge conflicts happen less often
+(according to source-control) for something in 2012 that would have been a definite clash.
+
+Other source-control tools are not doing semantic diff/merge yet (2017), but they should be. Semantic merge is
+just as useful for Trunk-Based Development and multi-branch models. It means that there are less likely to be clash
+situations for commits a developer wants to do. Maybe that last vision is not quite complete yet, but there's a direction
+ to go in now.
 
 ## Google revealing their Monorepo Trunk (2016)
 
