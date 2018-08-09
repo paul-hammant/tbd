@@ -77,7 +77,8 @@ developer workstations.
 * RhodeCode {{< ext url="https://rhodecode.com" >}} - Git, Mercurial and Subversion
 * Assembla {{< ext url="https://www.assembla.com" >}} - Git, Mercurial, Perforce and Subversion
 * Various Collabnet{{< ext url="http://www.collab.net" >}} products and services for Git
-* Microsoft's Team Foundation Server{{< ext url="https://www.visualstudio.com/tfs" >}} - git, on-premises install
+* Microsoft's Visual Studio Team Services{{< ext url="https://visualstudio.microsoft.com/team-services" >}} - Git, cloud
+* Microsoft's Team Foundation Server{{< ext url="https://www.visualstudio.com/tfs" >}} - Git in Microsoft's on-premises edition
 
 ## Perforce
 
