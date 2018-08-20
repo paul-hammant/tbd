@@ -35,7 +35,7 @@ and helps to make Continuous Delivery a reality.
 
 - Depending on the team size, and the rate of commits,
   [short-lived feature branches](/short-lived-feature-branches/) are used for
-  code-review and build checking (CI) to happen before commits land in the trunk for other developers to depend on.
+  code-review and build checking (CI), but not artifact creation, to happen before commits land in the trunk for other developers to depend on.
   Such branches allow developers to engage in [eager and continuous code review](/continuous-review/) of contributions
   before their code is integrated into the trunk. Very small teams may [commit direct to the trunk](/committing-straight-to-the-trunk/).
 
