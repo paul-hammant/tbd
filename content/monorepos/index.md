@@ -122,7 +122,7 @@ them from your IDE.
 Google has Blaze internally. Ex-Googlers at Facebook (with newfound friends) missed that, wrote
 Buck{{< ext url="https://buckbuild.com" >}} and then
 open-sourced it. Google then open-sourced a cut-down Blaze as Bazel{{< ext url="https://bazel.build" >}}.
-These are the two (three including Blaze) are directed graph build systems that allow a large tree of sources to be speedily
+These are the two (three including Blaze) directed graph build systems that allow a large tree of sources to be speedily
 subset in a compile/test/make-a-binary way.
 
 The omitting of unnecessary compile/test actions achieved by Buck and Bazel works equally well on developer workstations
