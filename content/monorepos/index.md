@@ -181,7 +181,7 @@ of it. The concept of version number disappears in this model.
 
 ### Third-party dependencies
 
-For third-party dependencies, the same rule applies, everyone upgrades in lock-step. Problems can ensure, of course,
+For third-party dependencies, the same rule applies, everyone upgrades in lock-step. Problems can ensue, of course,
 if there are real reasons for team B to not upgrade and team A was insistent. Broken backward compatibility is
 one problem.
 
