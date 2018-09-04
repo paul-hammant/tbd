@@ -48,7 +48,7 @@ and helps to make Continuous Delivery a reality.
   to achieve changes, and use [feature flags](/feature-flags/) in day to day development to allow for hedging on
   the order of releases (and other good things - see [concurrent development of consecutive releases](/concurrent-development-of-consecutive-releases/))
 
-- If you have more than a couple of developers on the project, you are going to need a hook up a
+- If you have more than a couple of developers on the project, you are going to need to hook up a
   [build server](/continuous-integration/) to verify that their commits have **not broken the build**
   after they land in the trunk, and also when they are ready to be merged back into the trunk from a
   short-lived feature branch.
