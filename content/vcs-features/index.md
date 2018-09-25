@@ -120,7 +120,7 @@ their repositories.
 All VCS usages need users accounts to be able to accept changes back, even if they don't all require accounts in order
 to be able to read. In the enterprise user accounts will be required to be able to read too.
 
-The larger the enterprise the more likely it will be that they have permissions carved up in more file grained ways.
+The larger the enterprise the more likely it will be that they have permissions carved up in more fine grained ways.
 For example "can commit to the trunk, but cannot create release branches" will be common for Trunk-Based Development
 teams that make release branches.  Not all VCS technologies support that. Git, for example, does not, but some of the 
 portal experiences around it, add the feature. In reality, though, you cannot stop people from making branches in a DVCS,
