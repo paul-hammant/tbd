@@ -15,6 +15,8 @@ DevOps is encompassing too. At the very least, the expansion of development best
 
 (layers below it)
 
+### Solid Development Infrastructure
+
 Installation of your VCS technology is part of a foundational development infrastructure that includes developer 
 workstations or laptops that are appropriate for build testing and running of the application or service being made.
 Developers running the application only need it to be functionally viable. It doesn't have to match the performance
