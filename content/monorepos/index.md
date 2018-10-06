@@ -4,7 +4,7 @@ title: Monorepos
 weight: 111
 ---
 
-A Monorepo, is a specific Trunk-Based Development implementation where the organization in
+A Monorepo is a specific Trunk-Based Development implementation where the organization in
 question puts its source for all applications/services/libraries/frameworks into one trunk and forces developers
 to commit together in that trunk - atomically.
 
