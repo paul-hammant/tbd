@@ -24,7 +24,7 @@ asynchronous pair-programming".
 ### Pull Requests (PRs)
 
 The pull-request (PR) model introduced by GitHub is the dominant code review model today. The concept was available 
-from GitHub's launch in 2008, and has revolutionized open source, and enterprise software development. Google were
+from GitHub's launch in 2008 and has revolutionized both open source and enterprise software development. Google were
 secretly doing the same thing with custom tooling around their Perforce install from about 2005, and Guido's
 presentation on Mondrian in 2006 (as mentioned) leaked that to the world (see below).
 
