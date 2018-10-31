@@ -72,17 +72,17 @@ The latter leaves no trace if there's nothing to merge in from the other branch.
 
 ### Workstations included
 
-Really though Developers work on their own workstations. That is both in working copy, and in local clones/branches:
+Really though Developers work on their own workstations. That is both for their "working copy" as well as their local Git clones complete with branches:
 
 ![](slfb_working-copy.png)
 
 <!-- fhtytrerwe -->
 
-The white dots are just general development work, and the green dot is the same but validated by a build that passes, a commit,
-and possibly a push to somewhere.
+The white dots are just general development work (save files from the IDE), and the green dot is the same but validated by a local  build that passes and a maybe a local commit.
 
 While each developer works, they maintain a local clone of the master/trunk and their own short-lived feature branch only.
 Indeed for a period of time, their short-lived feature branch may not yet exist in the shared origin repo.
+
 
 <!-- qetgrth -->
 
@@ -90,7 +90,7 @@ Indeed for a period of time, their short-lived feature branch may not yet exist 
 
 At some point, the short-lived feature branch has to be bought right up to date with master (trunk) in a merge
 operation before the result being merged back to trunk (and the branch deleted). There are a number of approaches
-for this, and while teams may have a policy, most leave it to personal preference for the developer.
+for this, and while teams may have a policy, some teams leave it to personal preference for the developer.
 
 ### Git stash
 
