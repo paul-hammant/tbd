@@ -9,7 +9,7 @@ weight: 91
 Say you are using Subversion, and you accepted its default directory design, when you made a new repository. That will
 give you 'trunk', 'tags' and 'branches' as directory names. The mere fact that you have a branch called trunk does not
 mean you are doing Trunk-Based Development. "We merge branches back to trunk often" can be heard a lot in the industry,
-and if you are grouping multiple developers on those branches of they not deleted after a couple of days, then it is
+and if you are grouping multiple developers on those branches or they are not deleted after a couple of days, then it is
 not the Trunk-Based Development branching model.
 
 ## Cherry-pick of bug fixes from release branches to the trunk

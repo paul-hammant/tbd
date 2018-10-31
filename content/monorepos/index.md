@@ -4,7 +4,7 @@ title: Monorepos
 weight: 111
 ---
 
-A Monorepo, is a specific Trunk-Based Development implementation where the organization in
+A Monorepo is a specific Trunk-Based Development implementation where the organization in
 question puts its source for all applications/services/libraries/frameworks into one trunk and forces developers
 to commit together in that trunk - atomically.
 
@@ -122,7 +122,7 @@ them from your IDE.
 Google has Blaze internally. Ex-Googlers at Facebook (with newfound friends) missed that, wrote
 Buck{{< ext url="https://buckbuild.com" >}} and then
 open-sourced it. Google then open-sourced a cut-down Blaze as Bazel{{< ext url="https://bazel.build" >}}.
-These are the two (three including Blaze) are directed graph build systems that allow a large tree of sources to be speedily
+These are the two (three including Blaze) directed graph build systems that allow a large tree of sources to be speedily
 subset in a compile/test/make-a-binary way.
 
 The omitting of unnecessary compile/test actions achieved by Buck and Bazel works equally well on developer workstations
@@ -181,7 +181,7 @@ of it. The concept of version number disappears in this model.
 
 ### Third-party dependencies
 
-For third-party dependencies, the same rule applies, everyone upgrades in lock-step. Problems can ensure, of course,
+For third-party dependencies, the same rule applies, everyone upgrades in lock-step. Problems can ensue, of course,
 if there are real reasons for team B to not upgrade and team A was insistent. Broken backward compatibility is
 one problem.
 

@@ -120,9 +120,9 @@ is retroactively created from that tag, and the patch release (see above) can ha
 
 ## Release branch deletion
 
-Release branches are deleted some time after release activity from them ceases. Not immediately, but when it is clear release is no longer in production.
+Release branches are deleted some time after release activity from them ceases. Not immediately, but when it is clear release is no longer in production. Release branches are NOT merged back into trunk.
 That is usually when releases from succeeding release branches have gone live. This is a
-harmless tidying activity - branches can be undeleted again easily enough in all VCS choices.
+harmless tidying activity - branches can be undeleted again easily enough in all VCS choices. In git, a tag needs to be created from the released commit before deleting the release branch, since dangling commits will be garbage collected.
 
 # References elsewhere
 

@@ -53,7 +53,7 @@ merging was painful and Trunk-Based Development was the sensible choice. Indeed 
 Microsoft Secrets: How the World's Most Powerful Software Company Creates Technology, Shapes Markets and Manages
 People (Michael Cusumano & Richard Selby, 1995){{< ext url="https://www.amazon.com/Microsoft-Secrets-Powerful-Software-Technology/dp/0684855313" >}}
 
-The book was translated into 14 languages, and a bestseller, and was about practices that solidified withing Microsoft
+The book was translated into 14 languages, and a bestseller, and was about practices that solidified within Microsoft
 for a few years before.
 
 There's a section in *Microsoft Secrets* dealing with Microsoft's per-developer workflow using Source Library Manager
