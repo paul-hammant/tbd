@@ -4,14 +4,14 @@ title: Context
 weight: 5
 ---
 
-A development team wanting to go ahead with Trunk-Based Development have pre-requisite achievements. Once the team has 
+A development team wanting to go ahead with Trunk-Based Development have prerequisite achievements. Once the team has 
 done a few commits in the correct style, other things are now facilitated. We can show this as a layer cake:
 
 ![](layer_cake.png)
 
 DevOps is encompassing too. At the very least, the expansion of development best practices into operations heartlands.
 
-## Trunk-Based Development pre-requisites
+## Trunk-Based Development prerequisites
 
 (layers below it)
 
