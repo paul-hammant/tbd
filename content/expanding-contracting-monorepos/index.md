@@ -171,7 +171,7 @@ allows a checkout to be a subset of the directories/files available within the b
 excludes is the format. You would script this (as Google did until 2012) to have a directed graph driven 
 expandable/contractible checkout.
 
-## PlasticSCM's cloadked.conf
+## PlasticSCM's cloaked.conf
 
 As Perforce, but via 'cloaked.conf' file.
 
