@@ -53,7 +53,7 @@ territory the likes of Google needs.
 Git and Mercurial don't have branch or directory permissions, but some of the platforms that bundle them, add 
 branch permissions.
 
-### Linux Torvalds presenting Git to Googlers
+### Linus Torvalds presenting Git to Googlers
 
 Back in 2007, Linus Torvalds presented his Bitkeeper inspired Git to Googlers in their Mountain View office:
  
