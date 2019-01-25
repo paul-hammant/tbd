@@ -70,6 +70,7 @@ You should not fix bugs on the release branch in the expectation of cherry-picki
 Why? Well in case you forget to do that in the heat of the moment. Forgetting means a regression in production some
 weeks later (and someone getting fired). It can happen if things are being fixed in the night by a tired developer who
 wants to get back to bed.
+But in some cases you are not able to avoid the revers workflow - fix bug in the release branch only without cherry-picking it to the trunk, this can happen for example if trunk does not have the needed part of the code or this part has changed significantly.
 
 ![](branch_for_release3.png)
 ([key](/key/))
