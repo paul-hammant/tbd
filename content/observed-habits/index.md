@@ -43,9 +43,9 @@ want to confess to breaking the build (assuming quick reliable idempotent builds
 
 ## Facilitating commits
 
-Because everyone in a team is chasing HEAD of the trunk, there could be moment where one change is imagined that
+Because everyone in a team is chasing HEAD of the trunk, there could be a moment where one change is imagined that
 could inconvenience everyone else in some way. Say a big directory rename as part of an extensive rework of the 
-source with it. It could be that the developer performing those two, does the rename first and pushes it through to 
+source with it. It could be that the developer performing those two changes does the rename first and pushes it through to 
 the trunk where everyone will get it on the next pull/sync/update. It might be that if separated somehow, the rename
 on its own is easier to consume by teammates, with the second being a relatively smaller commit later.
 
