@@ -72,7 +72,7 @@ In Git if a colleague beat you to a commit/push on a branch (their code-review a
 thought you were going to push, Git will inform you that you have to pull first. You pull, and you resolve your merge clashes 
 (hopefully none), and then push again. You might struggle to find a window open long enough
 to push without encountering the same problem. Forks make that easier, and robots keeping 
-pull-request branches abreast of `origin:master` helps a lot. Thus for developers wanting to land their commitsGit increasing 
+pull-request branches abreast of `origin:master` helps a lot. Thus for developers wanting to land their commits in Git increasing 
 commit frequency to the 
 shared repo means contention and an artificial serialization. Microsoft acknowledged this as one
 of the motivations to their Git Virtual File System (~~GitVFS~~ GVFS).
