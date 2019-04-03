@@ -65,8 +65,8 @@ A developer wanting to update/pull/sync from the shared trunk often runs the ris
 statistically improbable broken build. They do not want to have the commits that broke the trunk, on their workstation
 if they are developing. So what they do is update/pull/sync to the last known good commit, and only go further
 ahead when the trunk build is officially repaired. This way they know they can stay 'green' on their workstation. Some 
-companies have engineer a system where the last known good commit hash/number is stored in a network share, and a
-shell script used for update/pull/sync does so to that instead of HEAD revision.
+companies engineer a system where the last known good commit hash/number is stored in a network share, and a shell 
+script used for update/pull/sync does so to that instead of HEAD revision.
 
 ### Build Cop
 
