@@ -88,7 +88,7 @@ Indeed for a period of time, their short-lived feature branch may not yet exist 
 
 ## Personal preferences
 
-At some point, the short-lived feature branch has to be bought right up to date with master (trunk) in a merge
+At some point, the short-lived feature branch has to be brought right up to date with master (trunk) in a merge
 operation before the result being merged back to trunk (and the branch deleted). There are a number of approaches
 for this, and while teams may have a policy, some teams leave it to personal preference for the developer.
 
