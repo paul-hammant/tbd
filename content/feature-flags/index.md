@@ -16,7 +16,7 @@ experience.  Without that command-line argument, the application would run with 
 that's the way the developers coded that application. The 'One Click Purchase' and 'Shopping Cart' alternates are 
 probably also the same language that the business people associated with the project use. It gets complicated in 
 that flags need not be implicitly a/b or new/old, they could be additive. In our case here, there could also be a
-`--allowUsersToUserShoppingCartInsteadOfOneClick` capability. Flags can be additive, you see.
+`--allowUsersToUseShoppingCartInsteadOfOneClick` capability. Flags can be additive, you see.
 
 {{< note title="Flags Are Toggles" >}}
 Industry Luminary, Martin Fowler, calls this technique 'Feature Toggles', and wrote a foundational definition (see refs below). 
