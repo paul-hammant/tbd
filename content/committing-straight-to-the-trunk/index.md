@@ -7,7 +7,7 @@ weight: 62
 Some teams will choose to commit straight to the trunk. Most likely it is because they are a small team with each
 team member knowing what the others are up to. **Their build is probably fast and relatively exhaustive**, and they 
 may well seldom experience a build breakage. If the build does break (post commit) then they most likely 'revert' the 
-commit straight away, possibly locking the trunk for a short period of time while that is sorted out. The team may be  
+commit straight away, possibly locking the trunk for a short period of time while that is sorted out. The team may be 
 really small (say three or four), in which case the team might allow someone to fix the build quickly and commit the 
 fix in order to get the build green again.
 
