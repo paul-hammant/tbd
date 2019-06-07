@@ -75,7 +75,7 @@ to push without encountering the same problem. Forks make that easier, and robot
 pull-request branches abreast of `origin:master` helps a lot. Thus for developers wanting to land their commits in Git increasing 
 commit frequency to the 
 shared repo means contention and an artificial serialization. Microsoft acknowledged this as one
-of the motivations to their Git Virtual File System (~~GitVFS~~ GVFS).
+of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://vfsforgit.org/" >}}).
 
 {{< quote title="Git has critical serialization points that will cause a queue to back up badly" >}}
 <span>&mdash; Brian Harry</span><br>
