@@ -8,7 +8,7 @@ weight: 81
 
 Developers living in a Trunk-Based Development reality, mostly do not experience variance in their days or weeks on the 
 trunk. In particular, there is no "we're close to a release so let's freeze code", and generally there is no indication 
-of a slowdown in proximity to a release.  Sure, a couple of developers out a team might be assigned to bug-fixing closer
+of a slowdown in proximity to a release.  Sure, a couple of developers out of a team might be assigned to bug-fixing closer
 to the release but everyone else is going to work at full speed. 
 
 Generally speaking, the trunk is a place to firehose commits into, and the habits of the developers are such that 
@@ -24,7 +24,7 @@ should be focusing on 'business as usual' implementation of functionality for a 
 
 ## Quick Reviews
 
-Teams doing Trunk-Based Development, know that their commits/pushes will be scrutinized by others, as soon
+Teams doing Trunk-Based Development know that their commits/pushes will be scrutinized by others, as soon
 as they have landed on the shared trunk. They are keen on bringing that forward, not delaying it, so they may prefer to 
 pair-program on code changes. Or they may ask colleagues for a code review at the time the change is submitted to be 
 merged into the trunk.
@@ -37,8 +37,8 @@ Trunk-Based Development teams update/pull/sync from the shared trunk often. Many
 
 Developers practicing Trunk-Based Development run the build before a commit/push in order to not break the build. 
 This one practice, for very small teams, allows them to not set up a CI server until later. If they cannot push their 
-commits to the shared trunk because someone else beat them to it, they have to do another update/sync/pull then
-another build then the push of the revised commit(s). "It worked on my machine" says the developer that does not 
+commits to the shared trunk because someone else beat them to it then they have to do another update/sync/pull and
+another build and push their revised commit(s). "It worked on my machine" says the developer that does not 
 want to confess to breaking the build (assuming quick reliable idempotent builds).
 
 ## Facilitating commits
@@ -71,14 +71,14 @@ script used for update/pull/sync does so to that instead of HEAD revision.
 ### Build Cop
 
 If the Continuous Integration server is batching commits to trunk in each build, or the elapsed time for a build is 
-long then the a "build cop" role might be required within the team to help sort out build breakages. Sadly that 
-means that locking the trunk to prevent further checkins on top of the broken one, might be necessary as some form
+long then a "build cop" role might be required within the team to help sort out build breakages. Sadly that 
+means that locking the trunk to prevent further checkins on top of the broken one might be necessary as some form
 of bisecting is performed to work out which commit broke the build and should be rolled back. Obviously a Continuous
-Integration server setup that can run one build per commit, is best.
+Integration server setup that can run one build per commit is best.
 
 ## Shared Nothing
 
-Developers, on their developer workstations, rely on a 'microcosm' setup for the application or service 
+Developers on their workstations rely on a 'microcosm' setup for the application or service 
 they are developing. They can:
 
 * bring up the application on their workstation and play with it. 
@@ -97,7 +97,7 @@ is being honored.  This is only really any good for the act of development on a 
 that (per commit) by a Continuous Integration daemon.  
 
 Your team will need many named QA environments, and many named 
-UAT environments. Each of those with different rules about the frequency of deployment, and even perhaps even 
+user acceptance testing (UAT) environments. Each of those with different rules about the frequency of deployment, and even perhaps even 
 a temporarily reservation for different reasons. Those environments pull together **real** dependent services 
 and integrated applications. As much as possible those environs should not have shared services. 
 
@@ -109,7 +109,7 @@ wide-ranging negative impact on productivity and quality for innumerable and som
 
 Committing to the trunk many times a day requires a broad sense of ownership to code, and a willingness to allow 
 developers to contribute changes to sections of an application or service that they have not previously be involved 
-with. Allow does come with responsibilities and checks. The former is to standards, and the checks are by the CI server, 
+with. This privilege does come with responsibilities and checks. The former is to standards, and the checks are by the CI server, 
 and by humans who should honor to do a speedy code review. That last, for the highest performing teams, means as soon
 as the proposed commit is ready.
 
