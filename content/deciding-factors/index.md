@@ -92,7 +92,7 @@ If your organization feels like this, and a Monorepo does not feel right, then M
 
 ## Database migrations
 
-In order to manage database schema in a Trunk-Based Development way you will need to find a way to handle table-shape changes under source control, and even
+In order to manage database schemas in a Trunk-Based Development way you will need to find a way to handle table-shape changes under source control, and even
 manage existing data where new/changed columns have happened. Pramod Sadlage and Scott Amber's book 
 "Refactoring Databases: Evolutionary Database Design"{{< ext url="https://www.amazon.com/Refactoring-Databases-Evolutionary-paperback-Addison-Wesley/dp/0321774515" >}}
 goes into that much more, as does the [Continuous Delivery](/continuous-delivery/) book.
