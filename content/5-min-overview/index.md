@@ -22,7 +22,7 @@ that might:
 * not show that work was duplicated until it is merged
 * not show problems of incompatibility/undesirability that does not break the build
 
-Trunk-Based Development is a branching model that reduces the distance to the minimum. 
+Trunk-Based Development is a branching model that reduces this distance to the minimum. 
  
 ## What it is
 
@@ -43,12 +43,12 @@ Trunk-Based Development will always be **release ready**
 If an executive manager visited the development team and commanded "Competitor X has launched feature Y, go 
 live now with what we have", the worst response would be "give us one hour". The development team might have been very 
 busy with tricky or even time-consuming tasks (therefore partially complete), but in an hour, they are able to go live 
-with something just stabilized from the trunk. Perhaps they can do it in less than, an hour. The rule, though, is to **never break 
+with something just stabilized from the trunk. Perhaps they can do it in less than an hour. The rule, though, is to **never break 
 the build**, and **always be release ready** because the CIO or the business may surprise you.
 
 #### Where releases happen
 
-Here, a key facilitating rule is that Trunk-Based Development teams exclusively **either** release directly from the 
+A key facilitating rule is that Trunk-Based Development teams exclusively **either** release directly from the 
 trunk - see [release from trunk](/release-from-trunk/), **or** they make a branch from the trunk specifically for 
 the actual release. See [Branch for release](/branch-for-release/).
 Teams with a higher release cadence do the former, and those with a lower release cadence to the latter. 
@@ -58,7 +58,7 @@ Teams with a higher release cadence do the former, and those with a lower releas
 All developers in a team working on an application/service, clone and checkout from the trunk. They will 
 update/pull/sync from that branch many times a day, **knowing** that the build passes. Their fast 
 source-control system means that their delays are a matter of a few seconds for this operation. They are now 
-integrating their team-mates commits on an hour by hour basis.
+integrating their teammates' commits on an hour-by-hour basis.
 
 ### Committing
 
