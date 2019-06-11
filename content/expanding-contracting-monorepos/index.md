@@ -4,13 +4,13 @@ title: Expanding Contracting Monorepos
 weight: 112
 ---
  
-As some point with a monorepo approach to source control (especially with binary dependencies in the source tree), your checkouts 
+At some point with a monorepo approach to source control (especially with binary dependencies in the source tree), your checkouts 
 could be bigger than your local workstation's hard drive. Or even if the checkout is not too big for your hard drive, 
-then it might be too much for your IDE, and you do not want to have to abandon it for Vim/Emacs. Or maybe it is not IDE that 
-chokes is is something about the build that's too much locally, despite command-line arguments to attempt to
+then it might be too much for your IDE, and you do not want to have to abandon it for Vim/Emacs. Or maybe it is not your IDE that 
+chokes but rather is something about the build that's too much locally, despite command-line arguments to attempt to
 pare it down for a shorter elapsed time.
 
-There is a way to intelligently expand or contract the checkout on you developer workstation, to alleviate all of 
+There is a way to intelligently expand or contract the checkout on your developer workstation, to alleviate all of 
 the above.
 
 ## Gcheckout.sh
@@ -22,7 +22,7 @@ revision of company-wide trunk (monorepo) and developer's own workstation. Thus 
 **smallest possible subset** of the monorepo on the developer's workstation, for them to perform their daily work. 
 Google and the industry refer to the general feature as 'sparse checkout'.
 
-You can run gcheckout at any time to modify your sparse checkout to be bigger or smaller (or wholly different) for 
+You can run `gcheckout` at any time to modify your sparse checkout to be bigger or smaller (or wholly different) for 
 different reasons. All of those are operations on your local representation of a larger trunk.
 
 ## Contrived example of use
@@ -33,7 +33,7 @@ We detailed two intentions for directed graph build systems above, using a contr
 
 In Google, rather than feed into the backlog of the team that maintains `TheORMweBothDependOn` (which may exist as a part-time 
 committee rather than a team), the developer in question would make the change themselves. Perhaps they had made 
-it in the same commit as the first usage of it for `MyTeamsApplication`.  In the code review cycle (Google practice
+it in the same commit as the first usage of it for `MyTeamsApplication`.  In the code review cycle (Google practices
 common code ownership), the approvers for the `TheORMweBothDependOn` would see all the changes together. The larger change is
 all accepted or rejected (to be remediated) atomically.
 
