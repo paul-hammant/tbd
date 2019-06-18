@@ -191,7 +191,7 @@ Microsoft encouraged a use of Git within it, rather than then proprietary VCS th
 TFS is perfectly compatible with a Trunk-Based Development usage.
 
 Note: Microsoft are donating back to the Git community with a Git Virtual File System, which allows some Monorepo 
-usage for Git{{< ext url="https://github.com/Microsoft/GVFS" >}}.
+usage for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}}.
 
 ## PlasticSCM
 
