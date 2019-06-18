@@ -138,6 +138,6 @@ limitless server-side storage for their repository.  Git and Mercurial are inchi
 capacity, but there are still a few snafus to work through - how to cleanly/safely reduce the size of the client side clone
 history (while still being able to push changes back to the server) is a challenge.
 
-Microsoft released Git Virtual File System (~~GitVFS~~ GVFS{{< ext url="https://github.com/Microsoft/GVFS" >}}) in early 2017, to layer on some of the things they had 
+Microsoft released Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://vfsforgit.org/" >}}) in early 2017, to layer on some of the things they had 
 become used to in the in-house recompilation of Perforce (SourceDepot - used from 1998 to 201x), as well as native VCS 
 of their commercial offering Team Foundation Server (TFS).
