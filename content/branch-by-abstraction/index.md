@@ -60,7 +60,7 @@ physical space (magically). A switch is added inside the car to allow the choice
 3. The same two operations (#1 and #2) are performed on the other three wheels. Or maybe #1 is done four times, 
 followed by #2 four times. The Mechanics experience will guide which is most efficient.
 4. After determining that the new wheels are better, the old wheels are removed from the wheel-like containers
-and are send for recycling.
+and are sent for recycling.
 5. The wheel-like containers are also removed from the new wheels, either one by one or all four simultaneously.
 
 At any stage, when lowered from the jacks/lift/ramps, the car could have been driven (a 'ready to go-live' metaphor).
