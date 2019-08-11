@@ -225,13 +225,27 @@ In order to deliver that, you would need a feature to be added Maven like so:
 Or you could "hack it" and rewrite your pom.xml files after every expansion or
 contraction{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/" >}}.
 
-## If you decide you do not want to do a monorepo
+## If you decide you want multiple repositories
 
-Then repository separation should be **no more fine grained** than things that have separate deployment cadence.
+Wherever you partition code into multiple repositories, you are declaring that you know how to synchronize
+files between repositories better than Git, the master of file synchronization. You are taking responsibility
+for this job that the very capable Git was willing to do for free.
 
-With micro services you traditionally get exactly that: a deployable micro service in its own repository. There is
-no reason why hundreds of microservices could not be in the same monorepo, but the microservices community has
-promoted the one repo per microservice for a while now.
+Sometimes you do know more than Git, and sometimes you do not have a choice. Multiple repositories make
+sense when you are building a system from open source repositories, or when projects have separate
+development and deployment cadences. While there is no reason that multiple microservices could not share
+a single repository, a single repository per microservice is a popular pattern in the microservices community.
+
+[Android Repo](https://source.android.com/setup/develop/repo) is useful for managing multiple Git repositories,
+but it works with Gerrit only. For trunk based development and feature branches, there is a
+[fork of Android Repo that adds a `repo push` command](https://github.com/wavecomp/git-repo).
+
+### Repository partitioning rules
+If you must use multiple repositories, partition them according to these rules:
+* Use separate repositories only when the dependency between them can be satisfactorily described
+  in terms of a [semantic version](https://semver.org).
+* All code for a given package must reside in single repository. Code in other repositories should go into their
+  own separate packages. Control the dependencies between the packages using their [semantic versions](https://semver.org).
 
 # References elsewhere
 
