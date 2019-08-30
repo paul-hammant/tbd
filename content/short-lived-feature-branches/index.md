@@ -17,7 +17,7 @@ back as "pull requests" into the master/trunk.
 With this advance, the cut-off point on team size for "direct to the trunk" lowered.
 While it was up to 100 before Git's lightweight branching, it is now up to 15 people. With 16 or more, the team is more
 productive with short-lived feature branches, and corresponding CI daemons verifying those in advance of
-commits landing in the trunk.
+commits landing in the trunk. 
 
 One key rule is the length of life of the branch before it gets merged and deleted. Simply put, the branch
 should only last a couple of days. Any longer than two
@@ -127,7 +127,9 @@ contract of trunk-based development. For short-lived feature branches, these are
 <!-- qweqwgtht -->
 
 There is a more traditional alternative for smaller teams:
-[Committing straight to the trunk](/committing-straight-to-the-trunk/).
+[Committing straight to the trunk](/committing-straight-to-the-trunk/). Many people still prefer this way of working, and if the whole team can do it without blowing up the build server, then great job team.
+
+There is also the patch review way of working that was detailed in Google's use of Mondrian (2006), and consequential open source tools Gerrit and Rietveld (2007/8). These are a non-SLFB way of doing the same thing as described in this page. 
 
 # References elsewhere
 
