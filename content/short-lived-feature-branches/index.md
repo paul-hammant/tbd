@@ -14,7 +14,7 @@ back as "pull requests" into the master/trunk.
 
 <!-- wrweresd -->
 
-With this advance, the cut-off point on team size for "direct to the trunk" lowered.
+With the Pull Request (and code review) advance, the cut-off point for team sizes that graduated from "direct to the trunk" to short lived feature branches moved lower.
 While it was up to 100 before Git's lightweight branching, it is now up to 15 people. With 16 or more, the team is more
 productive with short-lived feature branches, and corresponding CI daemons verifying those in advance of
 commits landing in the trunk. 
