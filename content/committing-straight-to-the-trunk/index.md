@@ -21,6 +21,19 @@ and is now part of Agile generally, and Extreme Programming in particular. These
 to be much smaller (say less than 16) because of the advent of a modern alternative, but there are still some large teams 
 working this way.
 
+# Challenges
+
+Committing (and pushing) straight to the trunk has a challenge. Principally, someone could commit/push code that breaks the build, and the server(s) setup to guard Continuous Integration don't catch that for some time after the commit is available for teammates to pull/sync to their dev-workstation for unrelated work.
+
+Risk mitigation is **everyone** running the full build (the same build the CI demon would do) before the commit/push, and only pushing to 
+trunk if that passes. **This is essential pre-integration**. This is the habit of the XP teams from the end of the 90's, and there's no reason any team would dispense with that in the years since. Indeed, it is valuable for ALL branching models.
+
+If this is locked in as a team requirement, your new challenge is to keep the full build fast. Fast is say one minute, and slow is ten or above. Compile and pure unit tests (no threads, sockets, file IO) is where good builds focus their development effort. Any following "integration test" build steps that use threads, listen on sockets, or do significant file IO should be minimized as far as possible without reducing meaningful coverage. The best trick for that is changing some integration tests into pure unit tests, which isn't always easy.
+
+Some teams have revert policies for commits that land in trunk/master that are proven as "broken" later in CI. That could be an activity for a build-cop who's going to communicate with the dev team about locking the trunk to achieve that. Or it could be a bot activity and happen instantly, as Google do in-house (35K committers in one trunk).
+
+Some teams have some scripting in place to ensure that developers only pull/sync commits to their dev-workstations that CI has marked as passing. That could be as simple as keeping a commit ID (number or hash depending on your VCS tool) on a website somewhere, and writing a wrapper script for git-pull (or svn up) that ignores commits that happened after that one. Pushing back, with that way of working is harder in Git and Mercurial as they requires you to have pulled HEAD revison before you can push back. Subversion and Perforce don't have that limitation.
+
 # Alternatives to committing straight to the trunk
 
 That modern alternative that allows teams be bigger without having a bottleneck around check-ins:
