@@ -227,7 +227,7 @@ contraction{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-styl
 
 ## If you decide you do multiple repos instead of a monorepo
 
-In this case, the repository separation should be no more fine grained than the applications and services which have separate deployment cadences.
+In this case, the repository separation should be **no more fine grained** than the applications and services which have separate deployment cadences.
 
 Traditionally, when using microservices the result is exactly that case: a deployable microservice in its own repository. There is no reason why hundreds of microservices could not be in the same monorepo, but one repo per microservice is conventional with the microservices community.
 
