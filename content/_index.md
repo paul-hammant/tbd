@@ -31,9 +31,9 @@ members commit to trunk at least once every 24 hours. This ensures the codebase 
 and helps to make Continuous Delivery a reality.
 
 Small team Trunk-Based Development versus Scaled Trunk-Based Development is a subject to team size and the rate/size of 
-commits. Where a team has left "small" and transitioned to scaled is subject to practitioner debate.  Regardless, team
-perform a full "pre integrate" build (compile, unit tests, integration tests),  before committing/pushing the code 
-elsewhere.
+commits. Where a team has left "small" and transitioned to scaled is subject to practitioner debate.  Regardless, teams
+perform a full "pre integrate" build (compile, unit tests, integration tests) on their dev workstations, before committing/pushing 
+the code elsewhere.
 
 ## Claims
 
