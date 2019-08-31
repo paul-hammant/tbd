@@ -225,13 +225,15 @@ In order to deliver that, you would need a feature to be added Maven like so:
 Or you could "hack it" and rewrite your pom.xml files after every expansion or
 contraction{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/" >}}.
 
-## If you decide you do not want to do a monorepo
+## If you decide you do multiple repos instead of a monorepo
 
-Then repository separation should be **no more fine grained** than things that have separate deployment cadence.
+In this case, the repository separation should be no more fine grained than the applications and services which have separate deployment cadences.
 
-With micro services you traditionally get exactly that: a deployable micro service in its own repository. There is
-no reason why hundreds of microservices could not be in the same monorepo, but the microservices community has
-promoted the one repo per microservice for a while now.
+Traditionally, when using microservices the result is exactly that case: a deployable microservice in its own repository. There is no reason why hundreds of microservices could not be in the same monorepo, but one repo per microservice is conventional with the microservices community.
+
+That said, Googlers have made Android Repo{{< ext url="https://source.android.com/setup/develop/repo" >}} to deliver the best of both worlds. This technology works with Gerrit for code review. And there's a fork of that called Git-Repo{{< ext url="https://github.com/wavecomp/git-repo" >}}, that has additional Git workflow features.
+
+Lastly, Microsoft in their movement away from legacy VCS choices and branching models, have made VFS For Git{{< ext url="https://github.com/microsoft/VFSForGit" >}} which purports to solve many of the same scale problems of Git.
 
 # References elsewhere
 
