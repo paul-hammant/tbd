@@ -17,13 +17,12 @@ therefore avoid merge hell, do not break the build, and live happily ever after.
  &ast; *master*, in Git nomenclature
 
 ![](trunk1a.png)
-([key](/key/))
 
 ![](trunk1b.png)
-([key](/key/))
 
 ![](trunk1c.png)
-([key](/key/))
+
+![](ix_key_.png)
 
 Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
 [Continuous Delivery](/continuous-delivery/). When individuals on a team are committing their changes to the trunk
