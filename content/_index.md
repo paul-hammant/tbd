@@ -16,7 +16,13 @@ therefore avoid merge hell, do not break the build, and live happily ever after.
 
  &ast; *master*, in Git nomenclature
 
-![](trunk1.png)
+![](trunk1a.png)
+([key](/key/))
+
+![](trunk1b.png)
+([key](/key/))
+
+![](trunk1c.png)
 ([key](/key/))
 
 Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
@@ -24,6 +30,11 @@ Trunk-Based Development is a key enabler of [Continuous Integration](/continuous
 multiple times a day it becomes easy to satisfy the core requirement of Continuous Integration that all team
 members commit to trunk at least once every 24 hours. This ensures the codebase is always releasable on demand
 and helps to make Continuous Delivery a reality.
+
+Small team Trunk-Based Development versus Scaled Trunk-Based Development is a subject to team size and the rate/size of 
+commits. Where a team has left "small" and transitioned to scaled is subject to practitioner debate.  Regardless, team
+perform a full "pre integrate" build (compile, unit tests, integration tests),  before committing/pushing the code 
+elsewhere.
 
 ## Claims
 
