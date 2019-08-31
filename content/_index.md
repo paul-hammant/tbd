@@ -22,7 +22,7 @@ therefore avoid merge hell, do not break the build, and live happily ever after.
 
 ![](trunk1c.png)
 
-![](ix_key_.png)
+![](ix_key.png)
 
 Trunk-Based Development is a key enabler of [Continuous Integration](/continuous-integration/) and by extension
 [Continuous Delivery](/continuous-delivery/). When individuals on a team are committing their changes to the trunk
