@@ -90,7 +90,7 @@ Indeed for a period of time, their short-lived feature branch may not yet exist 
 
 At some point, the short-lived feature branch has to be brought right up to date with master (trunk) in a merge
 operation before the result being merged back to trunk (and the branch deleted). There are a number of approaches
-for this, and while teams may have a policy, some teams leave it to personal preference for the developer.
+for this, and while teams may have a policy, some teams leave it to personal preference for the developer. 
 
 ### Git stash
 
@@ -108,6 +108,17 @@ further merges (to master hopefully).
 
 <!-- wqwedsfsg -->
 
+## Pitfalls
+
+Working towards a pull request can sometimes make you look past the power of streaming a series of small commits into trunk for 
+the benefit of all. High-throughput XP teams from the end of the 90's onward would stream tens of commits a day (per pair) 
+into the trunk. Each commit would be an incremental step forward and able to go live as is, were the team to change plans
+to do so.  A mistake in thinking for this way of working, is one pull-request for one Agile story/card (and no more). Getting 
+out of that mind trap would be to practice (say) a pull-request for refactoring and see that integrated/merged into the trunk,
+then a pull-reuest for a piece of new functionality (and integrated into trunk), then perhaps another refactoring (trunk 
+integrated again). And for those three pull-requests they shared the same Story/card association, but perhaps had different 
+short-lived branch names - each of which was deleted after merge/integration.
+
 ## Breaking the contract
 
 ![](slfb_bad_sharing.png)
@@ -117,10 +128,11 @@ contract of trunk-based development. For short-lived feature branches, these are
 
 <!-- dgytjffdd -->
 
-1. intermediate merges to master (trunk)
+1. intermediate merges to master (trunk) - at least where the commit was not able to go live on its own 
 2. merges (intermediate or not) to other people's short-lived feature branches
 3. merges (intermediate or not) to any release branches (if you have them)
 4. variations of #2 that are direct from/to the developers clone on their workstation
+5. other developers joining you on your short-lived feature branches - at least who are not your pair-programming partner.
 
 # Alternatives to short-lived feature branches
 
