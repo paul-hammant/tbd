@@ -16,15 +16,15 @@ therefore avoid merge hell, do not break the build, and live happily ever after.
 
  &ast; *master*, in Git nomenclature
 
-#### Shared branches off mainline/master/trunk are bad at any release cadence:
+### Shared branches off mainline/master/trunk are bad at any release cadence:
 
 ![](trunk1a.png)
 
-#### Trunk-Based Development For Smaller Teams:
+### Trunk-Based Development For Smaller Teams:
 
 ![](trunk1b.png)
 
-#### Scaled Trunk-Based Development:
+### Scaled Trunk-Based Development:
 
 ![](trunk1c.png)
 
