@@ -16,17 +16,19 @@ therefore avoid merge hell, do not break the build, and live happily ever after.
 
  &ast; *master*, in Git nomenclature
 
-### Shared branches off mainline/master/trunk are bad at any release cadence:
+## Shared branches off mainline/master/trunk are bad at any release cadence:
 
 ![](trunk1a.png)
 
-### Trunk-Based Development For Smaller Teams:
+## Trunk-Based Development For Smaller Teams:
 
 ![](trunk1b.png)
 
-### Scaled Trunk-Based Development:
+## Scaled Trunk-Based Development:
 
 ![](trunk1c.png)
+
+## Elaboration, Claims and Caveats
 
 ![](ix_key.png)
 
@@ -38,13 +40,13 @@ and helps to make Continuous Delivery a reality.
 
 The dividing line between small team Trunk-Based Development and scaled Trunk-Based Development is a subject to team size and commit rate consideration. The precise moment a dev team is no longer "small" and has transitioned to "scaled" is subject to practitioner debate.  Regardless, teams perform a full "pre integrate" build (compile, unit tests, integration tests) on their dev workstations before committing/pushing the for others (or bots) to see.
 
-## Claims
+### Claims
 
 - You should do Trunk-Based Development instead of GitFlow and other branching models that feature multiple long-running branches
 - You can either do a direct to trunk commit/push (v small teams) or a Pull-Request workflow as long as those feature branches
   are short-lived and the product of a single person.
 
-## Caveats
+### Caveats
 
 - Depending on the team size, and the rate of commits,
   [short-lived feature branches](/short-lived-feature-branches/) are used for
