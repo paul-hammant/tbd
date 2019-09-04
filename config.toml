@@ -95,6 +95,11 @@ googleAnalytics = "UA-24415524-3"
 	weight = 56
 
 [[menu.main]]
+	name   = "Styles and Tradeoffs"
+	url    = "styles/"
+	weight = 60
+
+[[menu.main]]
 	name   = "Continuous Integration (CI)"
 	url    = "continuous-integration/"
 	weight = 61
