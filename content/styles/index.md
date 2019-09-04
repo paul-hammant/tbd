@@ -10,7 +10,7 @@ you have trade-offs for each of the three:
 
 ![](/styles/styles-tradeoffs.png)
 
-## Straight to Trunk
+## Committing Straight to the Trunk
 
 (left hand side of the diagram above)
 
@@ -18,12 +18,22 @@ Traditionally Trunk-Based Development meant committing straight to the shared tr
 a bunch of steps that together with the commit we will call integration.  
 
 This is a really high throughput way of working, 
-but it relies on developers being very confident their commit is not about the break the build. If they do, then a manual 
+but it relies on developers being extremely sure their commit is not about the break the build. If they do, then a manual 
 or automatic revert gets the trunk back to a good state, and you hope nobody did a git-pull or svn-up to bring that bad 
-code into their workstation. Or you've engineered it so that does not happen - you publish known-passing latest commit 
-number or hash.
+commit into their workstation. Or you've engineered it so that does not happen - you publish a known-passing latest commit 
+number or hash, and make a wrapper for git-pull (svn-up, etc) to go get that instead of HEAD.
 
-## Coupled Patch Review System
+A related challenge is how long "the build" takes to execute by the CI service, versus how frequently the trunk is updated 
+with commits for all the committers that could. This is important because of the build fails (CI), there could be following
+commits that would pass if it were not for the preceding failing commit. To pick that a part could be a challenge of the 
+commit rate is high enough. Some build-cops lock the trunk at the first sign of a breakage. Best of all is a bot that 
+reverts specific commits that failed the build, but again that is hard science.  If your build is 10 seconds (start to 
+finish), and there is one commit every five minutes, then you are in a good position. If your build is five minutes and 
+your team's commits arrive every ten seconds, then you're in hell, and should try something else.
+
+See [committing straight to the trunk](/committing-straight-to-the-trunk/) for more info.
+
+## Coupled "Patch Review" System
 
 (center of the diagram above)
 
@@ -39,9 +49,10 @@ ultimately be called Mondrian and be announced to the world in 2006 at a tech ta
 Google had written to augment Perforce (the VCS they used up to 2012), to provide a place where code could be reviewed per-commit, and
 also build-automation results could collated. 
 
-Today, patch review systems include Gerrit, Rietveld and Phabrictor The latter by Facebook, and the first two with Googler 
+Today, patch review systems include Gerrit, Rietveld and Phabricator The latter by Facebook, and the first two with Googler 
 involvement.  These are not branches of course, they are held outside source-control in a relational schema. Their reason 
-for existence is to marshal pending change.
+for existence is to marshal pending change, before that arrives in trunk/master and guarantee that it is good to be 
+integrated. 
 
 ## Short-Lived Feature Branches
 
@@ -52,13 +63,13 @@ created and receive commits that are momentarily divergent from trunk or master 
 when ready. Then finally, and crucially, the branch that facilitated that short-lived divergence could be deleted quickly
 leaving only the the commits added to the effective lined of commits culminating in HEAD for trunk or master.  In that
 regard it is identically to the patch review way of working for trunk based development.  That was all just a small 
-datapoint for Git/Mercurial usage, until GitHub launches and had pull-requests as a feature from launch. Built in to that 
+data point for Git/Mercurial usage, until GitHub launches and had pull-requests as a feature from launch. Built in to that 
 was a code review tool. This is a very compelling setup for unsolicited code contributions - making SourceForce and the 
 Apache Software Foundation appear ancient, by comparison.
 
 Teams can form around the GitHub pull-request workflow, and still do Trunk-Based Development. What you get (if you've 
-attached build automation too), is a trunk or master that's never broken (or 1/1000th as likely to). The tradeoff is that 
-you have to persuade co-workers to review your commit(s) in a timeframe that suits you.  There's a risk that you'd end up 
+attached build automation too), is a trunk or master that's never broken (or 1/1000th as likely to). The trade-off is that 
+you have to persuade co-workers to review your commit(s) in a time frame that suits you.  There's a risk that you'd end up 
 putting more commits in the pull-request that the straight-to-trunk experts would do. And you don't have to - you could 
 stream four separate facilitating commits all the way into the trunk, and later the fifth that would complete/activate the 
 feature you were trying to implement that the Agile story/card specified. Not only is there a risk of more-commits 
@@ -66,6 +77,16 @@ than you'd do if you could push directly, there's a risk of taking more time too
 one day, a slow-review and slow-build reality for the pull-request way, might push you into multi-day stories/cards, and 
 from that be doing the opposite of getting to continuous delivery.
 
-## Tradeoffs
+See [short-lived feature branches](/short-lived-feature-branches/) for more info.
+
+## Choosing a style
+
+If Google had (say) 1000 committers doing "straight to the trunk" for a single repo, should you?  No, not since alternates are 
+now possible. If Google had the Mondrian of 2006 back in 2000, would they have moved to that way of working immediately. What is 
+the cut off point?  Super skilled XP era developers who are in charge of dev teams and can train developers in the applicable 
+way of working, might say the cut-off is 100 committers. People who've only ever know the pull-request way of working may 
+suggest 10 committers is the cut off point. They may even make a case for 2 committers.  You could well be in that world 
+of quorums that naturally form within teams, and that being how directions are effectively set.
+ 
 
 
