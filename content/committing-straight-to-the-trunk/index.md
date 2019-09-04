@@ -24,14 +24,15 @@ working this way.
 
 # Benefits
 
-It is easier to objectively verity the correctness of your commits yourself (optimally with a pair-programming partner), then commit/push at moments of convenience. That is, easier than pushing into a code-review system for approval from a teammater thats risks being interruptive to their workflow. Indeed there is a greater likelihood that this this style or working becomes a flow of small commits into the trunk, with each of those being an incremental step forward, and perfectly able to go-live itself while the larger story/card remains incomplete.
+It is easier to objectively verity the correctness of your commits yourself (optimally with a pair-programming partner), then commit/push at moments of convenience. That is, easier than pushing into a code-review system for approval from a teammates that risks being interruptive to their workflow. Indeed there is a greater likelihood that this this style or working becomes a flow of small commits into the trunk, with each of those being an incremental step forward, and perfectly able to go-live itself while the larger story/card remains incomplete.
 
 # Challenges
 
 Committing (and pushing) straight to the trunk has a challenge. Principally, someone could commit/push code that breaks the build, and the server(s) setup to guard Continuous Integration don't catch that for some time after the commit is available for teammates to pull/sync to their dev-workstation for unrelated work.
 
 Risk mitigation is **everyone** running the full build (the same build the CI demon would do) before the commit/push, and only pushing to 
-trunk if that passes. **This is essential pre-integration**. This is the habit of the XP teams from the end of the 90's, and there's no reason any team would dispense with that in the years since. Indeed, it is valuable for ALL branching models.
+trunk if that passes. **This is an essential integration activity**. This is the habit of the XP teams from the end of the 90's, and there's 
+no reason any team would dispense with that in the years since. Indeed, it is valuable for ALL branching models.
 
 If this is locked in as a team requirement, your new challenge is to keep the full build fast. Fast is say one minute, and slow is ten or above. Compile and pure unit tests (no threads, sockets, file IO) is where good builds focus their development effort. Any following "integration test" build steps that use threads, listen on sockets, or do significant file IO should be minimized as far as possible without reducing meaningful coverage. The best trick for that is changing some integration tests into pure unit tests, which isn't always easy.
 
