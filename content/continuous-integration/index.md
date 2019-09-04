@@ -39,21 +39,26 @@ ThoughtWorks colleagues went on to build the then-dominant "Cruise Control"{{< e
 in early 2001. Cruise Control co-located the CI configuration on the branch being built next to the build script, as it 
 should be.
 
-## CI daemons performing verifications
+## Integration: Human actions
 
-Every development team bigger than, say, three people needs a CI daemon to guard the codebase against bad commits and mistakes of 
-timing. Teams have engineered build scripts that do their thing quickly. Hopefully all the way from compile through functional 
-tests (perhaps leveraging mocking at several levels) and packaging. There is no guarantee that a developer ran the build though before 
-committing, though. The CI daemon fills that gap and verifies commits are good once they land in the trunk. Enterprises 
-have either built a larger scaled capability around their CI technology so that it can keep up with the commits/pushes 
-of the whole team or by the batching of commits and using less computing power to track and verify work.
+It is important to note that the build script which developers run prior to checking in, is the **same one** which is 
+followed by the CI service (see below). The build is broken into gated steps due to a need for succinct communication to 
+you the developer as well as teammates. The classic steps would be: compile, test-compile, unit test invocation, service test 
+invocation, functional test invocation. Those last two are part of the integration tests class.
 
-### Humans and daemons do the same build
+If the build passed on the developer’s workstation, and the code is up to date with HEAD of what the team sees for 
+trunk, then the developer checks in the work (commit and push for Git). Where that goes to depends on which way of working 
+the team is following. Some smaller teams will push straight to trunk, and may do so multiple times a day (see [Committing 
+straight to the trunk](/committing-straight-to-the-trunk/)). Larger teams may push to a patch-review system, or use [short-lived feature branches](/short-lived-feature-branches/), even though this can be an impediment to throughput.
 
-It is important to note that the build script that developers run prior to checking, is **the same one** that the CI 
-process follows. Because of 
-a need for succinct communication to development teams, the build is broken into gated steps. The classic steps would be
-compile, test-compile, unit test invocation, integration test invocation, functional test invocation. 
+## CI services: Bots verifying human actions
+
+Every development team bigger than three people needs a CI daemon to guard the codebase against bad commits and timing mistakes.
+Teams have engineered build scripts which execute quickly. This should apply from compilation through functional 
+testing (perhaps leveraging mocking at several levels) and packaging. However, there is no guarantee that a developer would run the build script before 
+committing. The CI daemon fulfils that role by verifying commits to be good once they land in the trunk. Enterprises 
+have either built a larger scaled capability around their CI technology, so that it can keep up with the commits/pushes 
+of the whole team or they use batching of commits which takes up less computing power to track and verify work.
 
 ### Radiators
 
@@ -79,7 +84,7 @@ lean inspired concepts for teams pushing that far.
 
 ## Advanced CI topics
 
-### CI per commit or batching?
+### CI service builds per commit or batching?
 
 Committing/pushing directly to the shared trunk may be fine for teams with only a few 
 commits a day. Fine too for teams that only have a few developers who trust each other to be rigorous on their 
