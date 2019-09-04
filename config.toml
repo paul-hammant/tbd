@@ -95,7 +95,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 56
 
 [[menu.main]]
-	name   = "Styles and Tradeoffs"
+	name   = "Styles and Trade-offs"
 	url    = "styles/"
 	weight = 60
 
