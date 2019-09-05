@@ -50,11 +50,11 @@ See [committing straight to the trunk](/committing-straight-to-the-trunk/) for m
 
 ## Coupled "Patch Review" System
 
-{{< figure src="/styles/styles-tradeoffs-c.png" class="floatright" title="center of the diagram above" >}}
-
 "We do Trunk-Based Development" - Googler Rachel Potvin - @Scale keynote, Sept 2015 (14 mins in):
 
 ![](/branch-for-release/atscale.png)
+
+{{< figure src="/styles/styles-tradeoffs-c.png" class="floatright" title="center of the diagram above" >}}
 
 Perhaps before others in the early 2000's, Google hit a ceiling on how many developers could commit to a trunk in a monorepo, 
 without tripping each other up. That would be build-breakages mostly, but also commits that wouldn't be up to coding standards
@@ -100,12 +100,19 @@ In all variants of Trunk-Based Development teams run the full build locally (com
 
 ## Choosing a style
 
-If Google had (say) 1000 committers doing "straight to the trunk" for a single repo, should you?  No, not since alternates are 
-now possible. If Google had the Mondrian of 2006 back in 2000, would they have moved to that way of working immediately. What is 
-the cut off point?  Super skilled XP era developers who are in charge of dev teams and can train developers in the applicable 
-way of working, might say the cut-off is 100 committers. People who've only ever know the pull-request way of working may 
-suggest 10 committers is the cut off point. They may even make a case for 2 committers.  You could well be in that world 
-of quorums that naturally form within teams, and that being how directions are effectively set.
+While it is best to keep developer teams small, sometime there are business pressures to grow a dev to in order to do 
+more in parallel. Indeed, with monorepo configurations that could be more dev teams sharing one repo, even if they
+have their own release cadences, and separate team organization to other teams.
+
+If Google had (say) 1000 committers doing "straight to the trunk" for a single monorepo back in 2002, should you?  No, not 
+since alternates are now possible. If Google had the Mondrian of 2006 back in 2002, they would have moved to that way of working sooner. 
+
+What is the cut off point today?  Super skilled XP era developers who are in charge of dev teams and can train developers in the applicable 
+way of working, might say the cut-off is now 100 committers. People who've only ever know the pull-request way of working may 
+suggest 10 committers is the cut off point. They may even make a case for 2 committers.  You could well be in a world 
+where quorums naturally form within teams, leading to new development directions are effectively set.  In Google, it was 
+employee #1 Craig Silverstein who initially held Google to the monorepo and trunk-based development. And he perhaps did 
+that despite quorums forming and group wishes to do something else.
  
 
 
