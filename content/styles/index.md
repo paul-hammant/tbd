@@ -48,6 +48,7 @@ your team's commits arrive every ten seconds, then you're in hell, and should tr
 
 See [committing straight to the trunk](/committing-straight-to-the-trunk/) for more info.
 
+
 ## Coupled "Patch Review" System
 
 "We do Trunk-Based Development" - Googler Rachel Potvin - @Scale keynote, Sept 2015 (14 mins in):
