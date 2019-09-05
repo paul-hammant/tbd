@@ -114,6 +114,17 @@ suggest 10 committers is the cut off point. They may even make a case for 2 comm
 where quorums naturally form within teams, leading to new development directions are effectively set.  In Google, it was 
 employee #1 Craig Silverstein who initially held Google to the monorepo and trunk-based development. And he perhaps did 
 that despite quorums forming and group wishes to do something else.
+
+A list of trade-offs are:
+
+* Whether your build technology needs to build 'everything' for every commit. Google's Blaze (Bazel in opensource-land) does not.
+* Whether your source-control system has a push/pull bottleneck and whether you're reach that with all the committers in one repo
+* The median build duration, versus that commit rate.
+* How often your build-automation infra falls behind the commits/pull-requests that need to be compiled/tested.
+* Whether your developers can avoid using the automated builds as a crutch
+* Whether follow up commits are a workable way of addressing things that need improvements
+* Whether the developers are good at separating refactoring commits from functional commits, and indeed "baby commits" generally.
+ 
  
 
 
