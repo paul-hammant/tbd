@@ -4,14 +4,6 @@ title: Styles and Trade-offs
 weight: 60
 ---
 
-There are broadly three styles of trunk-based development as a daily developer activity. Depending on the number of 
-developers in the team, the release cadence, and the desired rate of commits (assuming story-sizes that support that), 
-you have trade-offs for each of the three:
-
-![](/styles/styles-tradeoffs.png)
-
-## Committing Straight to the Trunk
-
 <style>
 figure.floatleft {
 	max-width: 30%;
@@ -19,7 +11,21 @@ figure.floatleft {
 	height: auto;
 	float: left;
 }
+figure.floatright {
+	max-width: 30%;
+	width: auto\9*0.3; /* ie8 */
+	height: auto;
+	float: right;
+}
 </style>
+
+There are broadly three styles of trunk-based development as a daily developer activity. Depending on the number of 
+developers in the team, the release cadence, and the desired rate of commits (assuming story-sizes that support that), 
+you have trade-offs for each of the three:
+
+![](/styles/styles-tradeoffs.png)
+
+## Committing Straight to the Trunk
 
 {{< figure src="/styles/styles-tradeoffs-l.png" class="floatleft" title="left hand side of the diagram above" >}}
 
@@ -44,7 +50,7 @@ See [committing straight to the trunk](/committing-straight-to-the-trunk/) for m
 
 ## Coupled "Patch Review" System
 
-(center of the diagram above)
+{{< figure src="/styles/styles-tradeoffs-c.png" class="floatright" title="center of the diagram above" >}}
 
 "We do Trunk-Based Development" - Googler Rachel Potvin - @Scale keynote, Sept 2015 (14 mins in):
 
@@ -65,7 +71,7 @@ integrated.
 
 ## Short-Lived Feature Branches
 
-(right hand side of the diagram above)
+{{< figure src="/styles/styles-tradeoffs-r.png" class="floatleft" title="right hand side of the diagram above" >}}
 
 Git and Mercurial delivered truly lightweight branching capability. What that meant was that branches could be very quickly 
 created and receive commits that are momentarily divergent from trunk or master (in our case) and then be merged back later
