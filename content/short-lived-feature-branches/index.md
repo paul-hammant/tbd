@@ -143,9 +143,7 @@ There is a more traditional alternative for smaller teams:
 
 There is also the patch-review way of working that was outlined in Google's use of Mondrian (2006), and consequentially delivered for non-Google teams with open source tools Gerrit and Rietveld (2007/8). 
 
-# Local build - Importance of
-
-In all variants of Trunk-Based Development teams run the full build locally (compile, unit tests, a range of integration tests) and see that pass, **before** declaring 'done' and committing/pushing the work to the eyes of teammates and bots (code review / pull-request), or directly into trunk/master. They do not **at all** rely on build automation to tell the whether their commit(s) were good or bad.
+These two alternatives, as well as short-lived feature branches are compared in [Styles and Trade-offs](/styles/). 
 
 # References elsewhere
 

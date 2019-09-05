@@ -12,7 +12,16 @@ you have trade-offs for each of the three:
 
 ## Committing Straight to the Trunk
 
-(left hand side of the diagram above)
+<style>
+figure.floatleft {
+	max-width: 30%;
+	width: auto\9*0.3; /* ie8 */
+	height: auto;
+	float: left;
+}
+</style>
+
+{{< figure src="/styles/styles-tradeoffs-l.png" class="floatleft" title="left hand side of the diagram above" >}}
 
 Traditionally Trunk-Based Development meant committing straight to the shared trunk of the VCS in question. And doing so after 
 a bunch of steps that together with the commit we will call integration.  
@@ -78,6 +87,10 @@ one day, a slow-review and slow-build reality for the pull-request way, might pu
 from that be doing the opposite of getting to continuous delivery.
 
 See [short-lived feature branches](/short-lived-feature-branches/) for more info.
+
+## The Importance of a Local build
+
+In all variants of Trunk-Based Development teams run the full build locally (compile, unit tests, a range of integration tests) and see that pass, **before** declaring 'done' and committing/pushing the work to the eyes of teammates and bots (code review / pull-request), or directly into trunk/master. They do not **at all** use build automation as a crutch in order to determine whether their commit(s) were good or bad. Instead that determine that themselves on their dev workstation or containers/VMs that are dedicated to them, and do so **before** the push something towards code review and bot scrutiny.  As mentioned above keeping this build fast is very important, and not having a fast build is one of the key drivers to other branching models and repo sharding. Indeed it is one of the key drivers to slower release cadences too.
 
 ## Choosing a style
 
