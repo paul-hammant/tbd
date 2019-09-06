@@ -124,6 +124,7 @@ A list of trade-offs are:
 * Whether your developers can avoid using the automated builds as a crutch
 * Whether follow up commits are a workable way of addressing things that need improvements
 * Whether the developers are good at separating refactoring commits from functional commits, and indeed "baby commits" generally.
+* Whether your team can handle code-review feedback **after** commit/push to trunk/master or not
  
  
 
