@@ -48,31 +48,9 @@ your team's commits arrive every ten seconds, then you're in hell, and should tr
 
 See [committing straight to the trunk](/committing-straight-to-the-trunk/) for more info.
 
-
-## Coupled "Patch Review" System
-
-"We do Trunk-Based Development" - Googler Rachel Potvin - @Scale keynote, Sept 2015 (14 mins in):
-
-![](/branch-for-release/atscale.png)
-
-{{< figure src="/styles/styles-tradeoffs-c.png" class="floatright" title="center of the diagram above" >}}
-
-Perhaps before others in the early 2000's, Google hit a ceiling on how many developers could commit to a trunk in a monorepo, 
-without tripping each other up. That would be build-breakages mostly, but also commits that wouldn't be up to coding standards
-even if the build still passed.  Say Google managed to get 1000 developers and QA automators working in with commits straight 
-into the trunk, before deciding that something needed to gate that. What resulted was a patch review system that would
-ultimately be called Mondrian and be announced to the world in 2006 at a tech talk in Mountain View.  This was a system that
-Google had written to augment Perforce (the VCS they used up to 2012), to provide a place where code could be reviewed per-commit, and
-also build-automation results could collated. 
-
-Today, patch review systems include Gerrit, Rietveld and Phabricator The latter by Facebook, and the first two with Googler 
-involvement.  These are not branches of course, they are held outside source-control in a relational schema. Their reason 
-for existence is to marshal pending change, before that arrives in trunk/master and guarantee that it is good to be 
-integrated. 
-
 ## Short-Lived Feature Branches
 
-{{< figure src="/styles/styles-tradeoffs-r.png" class="floatleft" title="right hand side of the diagram above" >}}
+{{< figure src="/styles/styles-tradeoffs-c.png" class="floatleft" title="right hand side of the diagram above" >}}
 
 Git and Mercurial delivered truly lightweight branching capability. What that meant was that branches could be very quickly 
 created and receive commits that are momentarily divergent from trunk or master (in our case) and then be merged back later
@@ -94,6 +72,27 @@ one day, a slow-review and slow-build reality for the pull-request way, might pu
 from that be doing the opposite of getting to continuous delivery.
 
 See [short-lived feature branches](/short-lived-feature-branches/) for more info.
+
+## Coupled "Patch Review" System
+
+"We do Trunk-Based Development" - Googler Rachel Potvin - @Scale keynote, Sept 2015 (14 mins in):
+
+![](/branch-for-release/atscale.png)
+
+{{< figure src="/styles/styles-tradeoffs-r.png" class="floatright" title="center of the diagram above" >}}
+
+Perhaps before others in the early 2000's, Google hit a ceiling on how many developers could commit to a trunk in a monorepo, 
+without tripping each other up. That would be build-breakages mostly, but also commits that wouldn't be up to coding standards
+even if the build still passed.  Say Google managed to get 1000 developers and QA automators working in with commits straight 
+into the trunk, before deciding that something needed to gate that. What resulted was a patch review system that would
+ultimately be called Mondrian and be announced to the world in 2006 at a tech talk in Mountain View.  This was a system that
+Google had written to augment Perforce (the VCS they used up to 2012), to provide a place where code could be reviewed per-commit, and
+also build-automation results could collated. 
+
+Today, patch review systems include Gerrit, Rietveld and Phabricator The latter by Facebook, and the first two with Googler 
+involvement.  These are not branches of course, they are held outside source-control in a relational schema. Their reason 
+for existence is to marshal pending change, before that arrives in trunk/master and guarantee that it is good to be 
+integrated. 
 
 ## The Importance of a Local build
 
