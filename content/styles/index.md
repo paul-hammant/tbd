@@ -27,6 +27,8 @@ you have trade-offs for each of the three:
 
 ## Committing Straight to the Trunk
 
+Suitable for active committer counts between 1 and 100.
+
 {{< figure src="/styles/styles-tradeoffs-l.png" class="floatleft" title="left hand side of the diagram above" >}}
 
 Traditionally Trunk-Based Development meant committing straight to the shared trunk of the VCS in question. And doing so after 
@@ -49,6 +51,8 @@ your team's commits arrive every ten seconds, then you're in hell, and should tr
 See [committing straight to the trunk](/committing-straight-to-the-trunk/) for more info.
 
 ## Short-Lived Feature Branches
+
+Suitable for active committer counts between 2 and 1000.
 
 {{< figure src="/styles/styles-tradeoffs-c.png" class="floatleft" title="right hand side of the diagram above" >}}
 
@@ -74,6 +78,8 @@ from that be doing the opposite of getting to continuous delivery.
 See [short-lived feature branches](/short-lived-feature-branches/) for more info.
 
 ## Coupled "Patch Review" System
+
+Suitable for active committer counts between 2 and 40,000.
 
 "We do Trunk-Based Development" - Googler Rachel Potvin - @Scale keynote, Sept 2015 (14 mins in):
 
