@@ -10,12 +10,14 @@ figure.floatleft {
 	width: auto\9*0.3; /* ie8 */
 	height: auto;
 	float: left;
+	margin-top: 6px;
 }
 figure.floatright {
 	max-width: 30%;
 	width: auto\9*0.3; /* ie8 */
 	height: auto;
 	float: right;
+	margin-top: 6px;	
 }
 </style>
 
