@@ -51,7 +51,7 @@ the build**, and **always be release ready** because the CIO or the business may
 A key facilitating rule is that Trunk-Based Development teams exclusively **either** release directly from the 
 trunk - see [release from trunk](/release-from-trunk/), **or** they make a branch from the trunk specifically for 
 the actual release. See [Branch for release](/branch-for-release/).
-Teams with a higher release cadence do the former, and those with a lower release cadence to the latter. 
+Teams with a higher release cadence do the former, and those with a lower release cadence do the latter. 
 
 ### Checking out / cloning
 
