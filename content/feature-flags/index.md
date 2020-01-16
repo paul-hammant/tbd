@@ -60,7 +60,7 @@ It is important to have CI guard your reasonable expected permutations of flags.
 application or service after launching it, should also be adaptable and test what is meaningful for those flag 
 permutations. It also means that in terms of CI pipelines there is a fan-out **after** unit tests, for each meaningful
 flag permutation. A crude equivalent is to run the whole CI pipeline in parallel for each meaningful flag permutation.
-That would mean that each commit in the trunk kicks off more that one build - hopefully from elastic 
+That would mean that each commit in the trunk kicks off more than one build - hopefully from elastic 
 infrastructure.
 
 ## Runtime switchable
