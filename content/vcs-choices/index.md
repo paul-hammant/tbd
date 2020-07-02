@@ -32,12 +32,19 @@ that 1GB ceiling quickly is with larger binaries. As Git keeps history in the zi
 binary that changes frequently can push the total use above 1GB.
 
 With the likes of correctly configured Git-LFS extension to Git, though, the 1GB limit can be avoided or delayed 
-many years.  
+many years.
+
+Other ways to limit larger clone sizes in git repos include recommending/specifying a partial cloning date horizon 
+with the "--shallow-since" parameter, or using git's more recent Partial-Clone{{< ext url="https://git-scm.com/docs/partial-clone" >}} features, supported in GitLab for 
+example, to get the git commit history without getting all the blobs, and instead having the blobs download transparently 
+on-demand/as-needed.
 
 Git also has Submodules{{< ext url="https://git-scm.com/docs/git-submodule" >}} and 
 Subtrees{{< ext url="https://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree" >}} to allow large 
 federations of modules, within one cloneable set.  For their 
  Android initiative, Google made Git-repo{{< ext url="http://source.android.com/source/using-repo.html" >}} too.
+
+
 
 ### Root level branches
 
