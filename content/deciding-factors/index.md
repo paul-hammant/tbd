@@ -64,17 +64,23 @@ It is suggested that Git and Mercurial really should not have a history (ignorin
 many times bigger than that and still working, but the development team suggests 1GB as the top limit. In order to use Git 
 and push through that ceiling yearly, you might be in a situation where you have to keep archiving a repository, and starting 
 a new one with no history to have more head room. Archiving might look like renaming the repository in GitHub, and turning it 
-read-only so that all the history, issues, and code review comments are intact.
+read-only so that all the history, issues, and code review comments are intact. Simpler clone-rationalization strategies might 
+include recommending a "--shallow-since" date on cloning, or leveraging more recent partial clone capabilities to clone the full repo 
+commit history without getting historical blobs until they are needed.
+
 
 ### Peak commit frequency
 
-In Git if a colleague beat you to a commit/push on a branch (their code-review and automated CI passed) when you 
+In "pure" Git, if a colleague beat you to a commit/push on a branch (their code-review and automated CI passed) when you 
 thought you were going to push, Git will inform you that you have to pull first. You pull, and you resolve your merge clashes 
-(hopefully none), and then push again. You might struggle to find a window open long enough
-to push without encountering the same problem. Forks make that easier, and robots keeping 
-pull-request branches abreast of `origin:master` helps a lot. Thus for developers wanting to land their commits in Git increasing 
-commit frequency to the 
-shared repo means contention and an artificial serialization. Microsoft acknowledged this as one
+(hopefully none), and then push again. On highly-active repos, you might struggle to find a window open long enough to push in 
+this way without encountering the same problem. This is known as the "race to push".
+
+Fork-based "pull requests" and similar branch-based "merge requests" in hosted git services solve this to a degree, with robots 
+keeping pull-request branches abreast of `origin:master` automatically as long as no conflicts arise.
+
+Even with Pull Requests, however, very high commit frequencies to the shared repo means contention and an artificial 
+serialization. Microsoft acknowledged this as one
 of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://vfsforgit.org/" >}}).
 
 {{< quote title="Git has critical serialization points that will cause a queue to back up badly" >}}
