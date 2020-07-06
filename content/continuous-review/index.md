@@ -6,7 +6,7 @@ weight: 65
 
 ## The high bar today
 
-Continuous Code Review is where the team commits to processing proposed commits (to trunk) from team-mates trunk speedily. 
+Continuous Code Review is where the team commits to processing proposed commits (to trunk) from teammates' trunk speedily. 
 
 The idea is that a system (the code portal probably) allows developers to package up commits for code review and get 
 that in front of peers quickly. And that peer developers make a commitment to do code reviews objectively and quickly. 
@@ -43,7 +43,7 @@ source is mostly a volunteer activity.
 
 #### PRs from colleagues
 
-Regardless of branching model, the wish is for the PR to reviewed fairly quickly. On GitHub (and possibly others) the PR
+Regardless of branching model, the wish is for the PR to be reviewed fairly quickly. On GitHub (and possibly others) the PR
 can come from a fork or a branch in the main repo. There is little difference to the processing of these. In Trunk-Based 
 Development teams, the PR should be on a [short-lived feature branch](/short-lived-feature-branches/) and processed very 
 quickly by reviews towards merging back to trunk/master. A few minutes for the review is best, and tens of minutes 
