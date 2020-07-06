@@ -35,8 +35,8 @@
           </li>
 
           <li>
-            <a style="overflow-wrap: break-word; max-width: 75%" href="https://github.com/paul-hammant/tbd/commit/COMMIT_REF" target="_blank">
-              SHA-1 Published: {{ getenv COMMIT_REF }}
+            <a style="overflow-wrap: break-word; max-width: 75%" href="https://github.com/paul-hammant/tbd/commit/{{ getenv "COMMIT_REF" }}" target="_blank">
+              SHA-1 Published: {{ getenv "COMMIT_REF" }}
             </a>
           </li>
         </ul>
