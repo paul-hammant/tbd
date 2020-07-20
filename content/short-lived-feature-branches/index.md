@@ -115,7 +115,7 @@ the benefit of all. High-throughput XP teams from the end of the 90's onward wou
 into the trunk. Each commit would be an incremental step forward and able to go live as is, were the team to change plans
 to do so.  A mistake in thinking for this way of working, is one pull-request for one Agile story/card (and no more). Getting 
 out of that mind trap would be to practice (say) a pull-request for refactoring and see that integrated/merged into the trunk,
-then a pull-reuest for a piece of new functionality (and integrated into trunk), then perhaps another refactoring (trunk 
+then a pull-request for a piece of new functionality (and integrated into trunk), then perhaps another refactoring (trunk 
 integrated again). And for those three pull-requests they shared the same Story/card association, but perhaps had different 
 short-lived branch names - each of which was deleted after merge/integration.
 
