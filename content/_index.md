@@ -5,17 +5,6 @@ type: index
 weight: 1
 ---
 
-<!-- print <h1 style="color: white; padding: 32px 20px 72px; background-image:url(/images/LogoSlim.png); background-repeat: no-repeat; background-size: 100% auto"><span style="background-color: #5677fc">Introduction</span></h1> print -->
-
-<p>This is quite exciting for me: With GitLab hosting, This Friday (21<sup>st</sup> August, 2020) I am going to talk about the <strong>Trunk-Based Development and Branch By Abstraction</strong> book that I have <a href="https://leanpub.com/trunk-based-development">out on Leanpub</a>. I’m expecting some hard questions on behalf of enterprises and startups. Jordi Mon is gathering those now.</p>
-
-<p><img src="https://about.gitlab.com/images/solutions/version-control-collaboration/Trunk-based-development-interview.png" alt="" /></p>
-
-<p>Register for the event on the GitLab <a href="https://about.gitlab.com/solutions/version-control/">Version Control &amp; Collaboration page</a> - scroll half way down.</p>
-
-<p>One of the registrants will get a free copy of the book. Signed too, somehow, even though it is elecronic!</p>
-
-
 ## One line summary
 
 A source-control branching model, where developers collaborate on code in a single branch called 'trunk' *,
