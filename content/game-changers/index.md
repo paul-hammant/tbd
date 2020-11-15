@@ -276,7 +276,7 @@ Their culture was that such that reviews were speedy. Getting pending commits to
 on random code-review chores and being one of a few people that weigh into the decision moment.
 
 The code review technology marshaled changes for proposed commits to the trunk and stored them outside the VCS in
-question (in a database probably). To do that the tech would reach into the developer machine and the appropriate
+question (in a database probably). To do that the tech would reach into the developer machine at the appropriate
 moment and make a tar.gz of the changes and the meta-data around them, and pull that back to the central system
 for global presentation. Anyone could review anything. A review was just on a commit (not a batch of commits). Therefore
 code review was continuous.
@@ -352,7 +352,7 @@ GitHub's PR system used real branches in Git, and the forks aspect took advantag
 (albeit distributed to somewhere else in GitHub's server-side directory structure).
 
 The open-source community for one could now step away from patch-sets that were donated by email (or other rudimentary mechanisms).
-This forced the entire VCS industry to take note, and plan equivalents, or commit to witheritng in terms of market
+This forced the entire VCS industry to take note, and plan equivalents, or commit to withering in terms of market
 share. It greatly facilitated multi-branch development for teams of course, including (sadly) multiple long-lived
 branches.
 
