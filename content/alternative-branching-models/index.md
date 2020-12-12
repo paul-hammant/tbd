@@ -24,7 +24,7 @@ The GitHub flow thing showing a release-from-branch step, before the merge back 
 ![](githubflow1.png)
 ([key](/key/))
 
-One problem with is the small risk of regression in the following release - that would be if the release goes out, but 
+One problem with this is the small risk of regression in the following release - that would be if the release goes out, but 
 the branch is never merged back. Another is that it may indeed not have items in it from the trunk that were part of a 
 previous release (actually causing a regression).
 
