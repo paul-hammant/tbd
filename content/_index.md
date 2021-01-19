@@ -11,7 +11,7 @@ A source-control branching model, where developers collaborate on code in a sing
 resist any pressure to create other long-lived development branches by employing documented techniques. They
 therefore avoid merge hell, do not break the build, and live happily ever after.
 
- &ast; *master*, in Git nomenclature
+ &ast; *main* or *master*, in Git nomenclature
 
 ## Shared branches off mainline/master/trunk are bad at any release cadence:
 
