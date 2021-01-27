@@ -51,7 +51,7 @@ Java Dependency Injection via config:
 bootContainer.addComponent(classFromName(config.get("purchasingCompleting")));
 ```
 
-There are much more ways of passing flag intentions (or any config) to a runtime.  If you at all can, you want to 
+There are many more ways of passing flag intentions (or any config) to a runtime.  If you at all can, you want to 
  avoid if/else conditions in the code where a path choice would be made. Hence our emphasis on an abstraction.
 
 ## Continuous Integration pipelines
