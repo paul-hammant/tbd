@@ -215,6 +215,7 @@ branch too.
 * Atlassian's Bamboo{{< ext url="https://www.atlassian.com/software/bamboo" >}} - on-premises install
 * JetBrains' TeamCity{{< ext url="https://www.jetbrains.com/teamcity" >}} - on-premises install
 * Microsoft's TFS platform{{< ext url="https://www.visualstudio.com/tfs" >}} - on-premises install (built into larger platform)
+* Codefresh{{< ext url="https://codefresh.io" >}} - cloud, on-premises and hybrid (bring your own runner) install
 
 Note, for Jenkins, you can now use Pipeline DSL scripts (or Groovy) {{< ext url="https://jenkins.io/doc/book/pipeline/" >}} (formerly Workflow), or you can use Jenkins with GroupOn's DotCI{{< ext url="https://github.com/groupon/DotCi" >}} to co-locate the config
 with the thing being built/verified in source-control.
