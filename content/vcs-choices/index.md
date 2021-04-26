@@ -80,7 +80,7 @@ developer workstations.
 * GitHub {{< ext url="https://github.com" >}} - Git, cloud 
 * GitHub Enterprise {{< ext url="https://enterprise.github.com/home" >}} - Git in GitHub's on-premises edition
 * Gitlab {{< ext url="https://about.gitlab.com" >}} - Git, cloud and on-premises install
-* Atlassian's Bitbucket server {{< ext url="https://www.atlassian.com/software/bitbucket/server)" >}}- Git and Mercurial
+* Atlassian's Bitbucket server {{< ext url="https://www.atlassian.com/software/bitbucket/server" >}}- Git
 * RhodeCode {{< ext url="https://rhodecode.com" >}} - Git, Mercurial and Subversion
 * Assembla {{< ext url="https://www.assembla.com" >}} - Git, Mercurial, Perforce and Subversion
 * Various Collabnet{{< ext url="http://www.collab.net" >}} products and services for Git
