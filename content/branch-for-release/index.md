@@ -29,7 +29,7 @@ roll-forward strategy for solving it, meaning the fix for a bug is in the trunk,
 ## Who is committing where?
 
 Developers are committing (green dots) at the highest throughput rate to the trunk, and do not slow up or freeze around a
-branch-cut or with proximity to a release. Developers as a group are **not** commiting to the release branch (see below).
+branch-cut or with proximity to a release. Developers as a group are **not** committing to the release branch (see below).
 
 ![](branch_for_release2.png)
 ([key](/key/))
@@ -45,7 +45,7 @@ That red dot is an accidental build break that was fixed (somehow) soon after.
 Some teams [release from a tag on the trunk](/release-from-trunk/) and do not create a branch at that time. That in
 itself is **an alternate practice to this one, "branch for release"**.
 
-Those teams wait for a bug that needs fixing for a released, before creating a branch from the release tag (if they are
+Those teams wait for a bug that needs fixing for a release, before creating a branch from the release tag (if they are
 not going to just issue another release from the trunk).  
 
 Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage
@@ -82,16 +82,11 @@ everything mentioned above, but understand you have introduced risk of regressio
 
 ### Google's Rachel Potvin on Cherry picks
 
-In a talk at the @Scale conference in Sept 2015, "Why Google Stores Billions of Lines of Code in a Single Repository",
-there was a slide that depicts cherry-picks in a branch diagram:
+In a talk at the **@Scale** conference in Sept. 2015, _"Why Google Stores Billions of Lines of Code in a Single Repository"_, Rachel Potvin detailed Google's use of cherry-picking.
 
-![](atscale.png)
+[![](atscale_youtube_frame.png)](https://youtu.be/W71BTkUbdqE?t=868)
 
-The presenter, Rachel Potvin, said (14 mins in):
-
-"So at Google we do what's called Trunk-Based Development. I should note that it is the combination of Trunk-Based Development with a centralized repository that really defines the monolithic model of source code management. So
-what Trunk-Based Development means for us that typically Piper users all work from HEAD or a single copy of the most recent version of the codebase. When developers commit to Piper their changes are immediately visible and usable by other engineers. Branching for development at Google is exceedingly rare and Trunk-Based Development is beneficial partly because you avoid the painful merges that often occur when you need to reconcile long lived branches.  Branches however are used for releases. **So a release branch is typically a snapshot from trunk with an 
-optional number of cherry picks that are developed on trunk and then pulled into the branch**."
+> _"So at Google we do what's called Trunk-Based Development. I should note that it is the combination of Trunk-Based Development with a centralized repository that really defines the monolithic model of source code management. So what Trunk-Based Development means for us that typically Piper users all work from HEAD or a single copy of the most recent version of the codebase. When developers commit to Piper their changes are immediately visible and usable by other engineers. Branching for development at Google is exceedingly rare and Trunk-Based Development is beneficial partly because you avoid the painful merges that often occur when you need to reconcile long lived branches.  Branches however are used for releases. **So a release branch is typically a snapshot from trunk with an optional number of cherry picks that are developed on trunk and then pulled into the branch**."_
 
 We've bolded the cherry-pick bit ourselves.  Readers with beady eyes will note that Rachel alludes to 
 dev branches other than trunk for 'rare' reasons. We may cheekily suggest that Google should learn a little more about [Branch by Abstraction](/branch-by-abstraction/).
@@ -120,9 +115,9 @@ is retroactively created from that tag, and the patch release (see above) can ha
 
 ## Release branch deletion
 
-Release branches are deleted some time after release activity from them ceases. Not immediately, but when it is clear release is no longer in production. Release branches are NOT merged back into trunk.
+Release branches are deleted some time after release activity from them ceases. Not immediately, but when it is clear release is no longer in production. Release branches are **not** merged back into trunk.
 That is usually when releases from succeeding release branches have gone live. This is a
-harmless tidying activity - branches can be undeleted again easily enough in all VCS choices. In git, a tag needs to be created from the released commit before deleting the release branch, since dangling commits will be garbage collected.
+harmless tidying activity - branches can be restored easily enough in all VCS choices. In git, a tag needs to be created from the released commit before deleting the release branch, since dangling commits will be garbage collected.
 
 # References elsewhere
 
