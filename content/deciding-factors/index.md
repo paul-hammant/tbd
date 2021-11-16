@@ -79,6 +79,8 @@ this way without encountering the same problem. This is known as the "race to pu
 Fork-based "pull requests" and similar branch-based "merge requests" in hosted git services solve this to a degree, with robots 
 keeping pull-request branches abreast of `origin:master` automatically as long as no conflicts arise.
 
+If you are using Github as your repository host, there is a tool that can help solve the "race to push" problem. It is called Bors-NG{{< ext url="https://github.com/bors-ng/bors-ng" >}} and it is a merge bot for GitHub pull requests. It will take care of merging the latest trunk version into your branch, running all needed tests and merging the result back into the trunk, managing this as a queue and removing these race conditions.
+
 Even with Pull Requests, however, very high commit frequencies to the shared repo means contention and an artificial 
 serialization. Microsoft acknowledged this as one
 of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://vfsforgit.org/" >}}).
