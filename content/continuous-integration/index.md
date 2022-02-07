@@ -56,7 +56,7 @@ straight to the trunk](/committing-straight-to-the-trunk/)). Larger teams may pu
 Every development team bigger than three people needs a CI daemon to guard the codebase against bad commits and timing mistakes.
 Teams have engineered build scripts which execute quickly. This should apply from compilation through functional 
 testing (perhaps leveraging mocking at several levels) and packaging. However, there is no guarantee that a developer would run the build script before 
-committing. The CI daemon fulfils that role by verifying commits to be good once they land in the trunk. Enterprises 
+committing. The CI daemon fulfills that role by verifying commits to be good once they land in the trunk. Enterprises 
 have either built a larger scaled capability around their CI technology, so that it can keep up with the commits/pushes 
 of the whole team or they use batching of commits which takes up less computing power to track and verify work.
 

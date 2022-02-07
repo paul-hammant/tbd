@@ -202,7 +202,7 @@ usage for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}}.
 
 ## PlasticSCM
 
-Platic's website{{< ext url="https://www.plasticscm.com" >}}
+Plastic's website{{< ext url="https://www.plasticscm.com" >}}
 
 PlasticSCM is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk-Based Development and quite 
 self-contained (has integrated code review, etc). Plastic is very good with bigger binaries and comes with an 
