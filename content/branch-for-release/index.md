@@ -29,7 +29,7 @@ roll-forward strategy for solving it, meaning the fix for a bug is in the trunk,
 ## Who is committing where?
 
 Developers are committing (green dots) at the highest throughput rate to the trunk, and do not slow up or freeze around a
-branch-cut or with proximity to a release. Developers as a group are **not** commiting to the release branch (see below).
+branch-cut or with proximity to a release. Developers as a group are **not** committing to the release branch (see below).
 
 ![](branch_for_release2.png)
 ([key](/key/))

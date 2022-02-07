@@ -408,7 +408,7 @@ Dan North gave a deeper account of the mission at GOTO in 2014{{< ext url="https
 A year or so before that mission, Sam and Dave were on a different client, UK retailer 'Dixons'. They were part of a team rolling out  
 emergent DevOps practices, which they would get to reuse and refine on the following AOL mission. Standouts were:
 
-1. making the test environments have consistent behaviour with production environments (very close by not quite 'Infrastructure as Code')
+1. making the test environments have consistent behavior with production environments (very close by not quite 'Infrastructure as Code')
 2. QA automation technologies setup by the dev team
 3. inducting/co-locating individual QAs with the dev team
 4. Test Driven Development (TDD)
