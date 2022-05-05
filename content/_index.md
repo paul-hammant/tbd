@@ -66,7 +66,7 @@ The dividing line between small team Trunk-Based Development and scaled Trunk-Ba
   short-lived feature branch.
 
 - Development teams can casually flex up or down in size (in the trunk) without affecting throughput or quality.
-  Proof? [Google do Trunk-Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
+  Proof? [Google does Trunk-Based Development](/game-changers/index.html#google-revealing-their-monorepo-trunk-2016) and
   have **35000 developers and QA automators** in that single [monorepo](/monorepos/) trunk, that in their case can
   [expand or contract](/expanding-contracting-monorepos/) to suit the developer in question.
 
