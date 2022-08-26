@@ -81,7 +81,7 @@ keeping pull-request branches abreast of `origin:master` automatically as long a
 
 Even with Pull Requests, however, very high commit frequencies to the shared repo means contention and an artificial 
 serialization. Microsoft acknowledged this as one
-of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}}).
+of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}} which is Windows only for now).
 
 {{< quote title="Git has critical serialization points that will cause a queue to back up badly" >}}
 <span>&mdash; Brian Harry</span><br>
