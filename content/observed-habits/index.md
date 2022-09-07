@@ -99,7 +99,7 @@ that (per commit) by a Continuous Integration daemon.
 Your team will need many named QA environments, and many named 
 user acceptance testing (UAT) environments. Each of those with different rules about the frequency of deployment, and even perhaps even 
 a temporarily reservation for different reasons. Those environments pull together **real** dependent services 
-and integrated applications. As much as possible those environs should not have shared services. 
+and integrated applications. As much as possible those environments should not have shared services. 
 
 Companies often make a classic mistake when buying software in that they (say) buy one license for prod, and another 
 for all dev, QA, and UAT, meaning the DevOps team had configured it as shared for all those environments, with a 
