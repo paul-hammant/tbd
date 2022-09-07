@@ -46,7 +46,7 @@ source is mostly a volunteer activity.
 Regardless of branching model, the wish is for the PR to be reviewed fairly quickly. On GitHub (and possibly others) the PR
 can come from a fork or a branch in the main repo. There is little difference to the processing of these. In Trunk-Based 
 Development teams, the PR should be on a [short-lived feature branch](/short-lived-feature-branches/) and processed very 
-quickly by reviews towards merging back to trunk/master. A few minutes for the review is best, and tens of minutes 
+quickly by reviews towards merging back to trunk/main. A few minutes for the review is best, and tens of minutes 
 acceptable. More than a hour or two, and you are negatively affecting cycle times.
 
 The short-lived feature branch may have received many commits before the developer initiated the pull request. Some 

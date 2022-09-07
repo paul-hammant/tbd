@@ -77,7 +77,7 @@ thought you were going to push, Git will inform you that you have to pull first.
 this way without encountering the same problem. This is known as the "race to push".
 
 Fork-based "pull requests" and similar branch-based "merge requests" in hosted git services solve this to a degree, with robots 
-keeping pull-request branches abreast of `origin:master` automatically as long as no conflicts arise.
+keeping pull-request branches abreast of `origin:main` automatically as long as no conflicts arise.
 
 Even with Pull Requests, however, very high commit frequencies to the shared repo means contention and an artificial 
 serialization. Microsoft acknowledged this as one

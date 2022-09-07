@@ -70,10 +70,10 @@ tool Microsoft used for source-control. The *daily* developer workflow with SLM 
 8. test the feature
 9. smoke tests
 10. check in (commit/push)
-11. makes a daily build from HEAD of the shared master branch
+11. makes a daily build from HEAD of the shared main branch
 
 The authors note in the book, that #10 is not always an everyday thing. And the last step, #11, is not per developer, it is
-for the designated "build master" within the team, and manual. This workflow was initially pioneered in the Excel group,
+for the designated "buildmeister" within the team, and manual. This workflow was initially pioneered in the Excel group,
 and then Word, and then Windows NT, and the timespan for this way of working was from around 1989 through 1995 when the
 interviews completed and the book published.
 
@@ -448,7 +448,7 @@ to describe the multi-year
  merging features between branches and only 5% of their time on new features.
 
  For the next couple of years, HP committed to a huge investment in Trunk-Based Development and
- Continuous Integration. All product variants were rearchitected as a single product on a Git master, per-variant
+ Continuous Integration. All product variants were re-architected as a single product on a Git super-repo, per-variant
  features extracted into XML config files, all engineers worldwide were given the same virtual machine for development,
  and a huge multi-tier continuous build process was fully automated in-house. The results were outstanding, with build
  time reduced to 1 hour and manual testing replaced with a 24 hour fully automated test suite including printing
@@ -461,9 +461,9 @@ to describe the multi-year
 
 TravisCI was the first{{< ext url="https://blog.travis-ci.com/announcing-pull-request-support" >}} CI service to 
 automatically predict a GitHub pull-request's mergeability AND build success/failure 
-as if they had landed in master. Specifically:
+as if they had landed in main/trunk. Specifically:
 
-1. a speculative merge back to the master/trunk/mainline - only into working-copy as it is for analysis only
+1. a speculative merge back to the main/trunk/mainline - only into working-copy as it is for analysis only
 2. all the classic compile/unit-test/integration-test/functional-test steps of the regular build, in situ
 
 The speculative merge is discarded every time after #1 (if it can't merge) or #2 (regardless) -
@@ -474,7 +474,7 @@ This feature of TravisCI is for [short-lived feature branches](/short-lived-feat
 it is clear now that teams should do
 this CI setup **regardless of their branching model**. Yes, even the long-lived branching models also benefit from this,
 though they'll be challenged to stay 'green' the whole time, and remain eminently and automatically mergeable back to
-the mainline/master.
+the mainline/main.
 
 A few months later, Team City implemented the same feature - {{< ext url="http://tech.labs.oliverwyman.com/blog/2013/01/13/continuous-integration-for-github-pull-requests-with-teamcity/" >}}, 
 and a year later Snap-CI also did{{< ext url="https://blog.snap-ci.com/blog/2013/11/07/automatic-branch-tracking-and-integration/" >}} 

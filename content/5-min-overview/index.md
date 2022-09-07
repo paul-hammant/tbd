@@ -29,7 +29,7 @@ Trunk-Based Development is a branching model that reduces this distance to the m
 {{< note title="Notes" >}}
 * Use of "Developers" throughout this site, means "QA-automators" for the same buildable thing, too.
 * When we say 'the trunk' on this site, it is just a branch in a single repository that developers in a team are focusing on 
-for development. It may be called 'master'. That hints at the fact that the branch in question may literally not be 
+for development. It may be called 'main'. That hints at the fact that the branch in question may literally not be 
 called 'trunk' at all.
 {{< /note >}}
 

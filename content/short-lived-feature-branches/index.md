@@ -9,8 +9,8 @@ weight: 63
 This branching model was facilitated with the advent of very lightweight branching that came with Git and Mercurial
 in the mid-2000's, though there is evidence that Google were effectively doing the same in their Monorepo for some years before.
 
-Either as branching directly off master, or in a fork of the whole repository. These branches are destined to come
-back as "pull requests" into the master/trunk.
+Either as branching directly off main, or in a fork of the whole repository. These branches are destined to come
+back as "pull requests" into the main/trunk.
 
 <!-- wrweresd -->
 
@@ -38,17 +38,17 @@ Sometimes the community calls these 'task' or 'topic' branches, instead of long-
 
 ## Merge directionality
 
-Short-lived feature branches are real branches and merge is a first class concept. In the run up to completing work
-on the short-lived feature branch, you will need to bring it up to date with master (trunk). That is an effective
+Short-lived feature branches are real branches and merge is a first class concept. In the run-up to completing work
+on the short-lived feature branch, you will need to bring it up to date with main (trunk). That is an effective
 merge whichever way you do it. Look at the branch at this moment, it may appear to be much younger than it was
-before that operation. The changes have to now go back to master (trunk) in another merge operation. In GitHub, for
+before that operation. The changes have to now go back to main (trunk) in another merge operation. In GitHub, for
 'pull requests' (or equivalent in other platforms), the user interface may handle that last merged back for you, and even
 go as far as to delete the short-lived feature branch.
 
 <!-- rteghfhj -->
 
-To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of master (trunk). Merges
-to master (trunk) are allowed only as part of closing out the short-lived feature branch (and just before deleting it).
+To recap: merges to the short-lived feature branch are allowed to bring it closer to HEAD of main (trunk). Merges
+to main (trunk) are allowed only as part of closing out the short-lived feature branch (and just before deleting it).
 
 <!-- rteyyrt -->
 
@@ -56,15 +56,15 @@ to master (trunk) are allowed only as part of closing out the short-lived featur
 
 Say two features are being worked on concurrently: features X and Y. Both will take a day to complete, and two developers are
 working independently on them. Or four developers if pair-programming is that team's way.  The reality of the merge back to
-master/trunk, before the deletion of the short-lived feature branch, is that the a merge of changes **from** master/trunk
-is often needed, before the merge **to** master/trunk.
+main/trunk, before the deletion of the short-lived feature branch, is that a merge of changes **from** main/trunk
+is often needed, before the merge **to** main/trunk.
 
 ![](slfb_pull-push.png)
 
 Workflows include:
 
-* Attempt to merge to master/trunk and if that's blocked do a merge/pull from master/trunk before attempting the push again.
-* Do a speculative merge/pull from master/trunk before attempting any push to master/trunk.
+* Attempt to merge to main/trunk and if that's blocked do a merge/pull from main/trunk before attempting the push again.
+* Do a speculative main/pull from main/trunk before attempting any push to main/trunk.
 
 <!-- dwewrerg -->
 
@@ -80,7 +80,7 @@ Really though Developers work on their own workstations. That is both for their 
 
 The white dots are just general development work (save files from the IDE), and the green dot is the same but validated by a local  build that passes and a maybe a local commit.
 
-While each developer works, they maintain a local clone of the master/trunk and their own short-lived feature branch only.
+While each developer works, they maintain a local clone of the main/trunk and their own short-lived feature branch only.
 Indeed for a period of time, their short-lived feature branch may not yet exist in the shared origin repo.
 
 
@@ -88,7 +88,7 @@ Indeed for a period of time, their short-lived feature branch may not yet exist 
 
 ## Personal preferences
 
-At some point, the short-lived feature branch has to be brought right up to date with master (trunk) in a merge
+At some point, the short-lived feature branch has to be brought right up to date with main (trunk) in a merge
 operation before the result being merged back to trunk (and the branch deleted). There are a number of approaches
 for this, and while teams may have a policy, some teams leave it to personal preference for the developer. 
 
@@ -104,7 +104,7 @@ result in your change being a single commit, at the HEAD of the branch (as Subve
 
 Some people do `git rebase`. Refer to a well written Atlassian document on this {{< ext url="https://www.atlassian.com/git/tutorials/merging-vs-rebasing" >}} as well as one from ThoughtBot {{< ext url="https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history" >}} that talks about `squash` too.  Even with this model,
 you may encounter a merge clash, and have to resolve that locally before you can push the result anywhere, or do
-further merges (to master hopefully).
+further merges (to `main` hopefully).
 
 <!-- wqwedsfsg -->
 
@@ -128,7 +128,7 @@ contract of trunk-based development. For short-lived feature branches, these are
 
 <!-- dgytjffdd -->
 
-1. intermediate merges to master (trunk) - at least where the commit was not able to go live on its own 
+1. intermediate merges to main (trunk) - at least where the commit was not able to go live on its own 
 2. merges (intermediate or not) to other people's short-lived feature branches
 3. merges (intermediate or not) to any release branches (if you have them)
 4. variations of #2 that are direct from/to the developers clone on their workstation

@@ -19,7 +19,7 @@ individuals.
 
 The crucial difference is **where** the release is performed from.
 
-The GitHub flow thing showing a release-from-branch step, before the merge back to the master (trunk):
+The GitHub flow thing showing a release-from-branch step, before the merge back to the main (trunk):
 
 ![](githubflow1.png)
 ([key](/key/))

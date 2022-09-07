@@ -100,10 +100,10 @@ If teams are bigger, though, with more commits a day then pushing something inco
 the team. Having the CI daemon deal with **every commit** separately is desirable. If the CI daemon is single-threading "jobs" there is a risk
 that the thing could fall behind. 
 
-#### Master / Slave CI infrastructure
+#### Controller / Agent CI infrastructure
 
-More advanced CI Server configurations have a master and many slaves setup so 
-that build jobs can be parallelized. That's more of an investment than the basic setup, and but is getting easier and 
+More advanced CI Server configurations have a single controller and many agents setup so 
+that build jobs can be parallelized. That's more of an investment than the basic setup, but is getting easier and 
 easier in the modern era with evolved CI technologies and services. 
 
 The likes of Docker means that teams can have build environments that are perfectly small representations of 

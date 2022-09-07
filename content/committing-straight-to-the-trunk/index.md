@@ -6,7 +6,7 @@ weight: 62
 
 Some teams will choose to commit/push straight to the trunk. Most likely it is because they are a small team with each
 team member knowing what the others are up to. **Their build is probably fast and relatively exhaustive**, and they 
-may well seldom experience a build breakage. If the build does break (post integration into trunk/master) then they most likely 'revert' the 
+may well seldom experience a build breakage. If the build does break (post integration into trunk/main) then they most likely 'revert' the 
 commit straight away, possibly locking the trunk for a short period of time while that is performed. If the team is 
 really small (say three or four), in which case the team might allow someone to fix the build quickly and commit that 
 in order to get the build green again.
@@ -36,7 +36,7 @@ no reason any team would dispense with that in the years since. Indeed, it is va
 
 If this is locked in as a team requirement, your new challenge is to keep the full build fast. Fast is say one minute, and slow is ten or above. Compile and pure unit tests (no threads, sockets, file IO) is where good builds focus their development effort. Any following "integration test" build steps that use threads, listen on sockets, or do significant file IO should be minimized as far as possible without reducing meaningful coverage. The best trick for that is changing some integration tests into pure unit tests, which isn't always easy.
 
-Some teams have revert policies for commits that land in trunk/master that are proven as "broken" later in CI. That could be an activity for a build-cop who's going to communicate with the dev team about locking the trunk to achieve that. Or it could be a bot activity and happen instantly, as Google do in-house (35K committers in one trunk).
+Some teams have revert policies for commits that land in trunk (or main) that are proven as "broken" later in CI. That could be an activity for a build-cop who's going to communicate with the dev team about locking the trunk to achieve that. Or it could be a bot activity and happen instantly, as Google do in-house (35K committers in one trunk).
 
 Some teams have some scripting in place to ensure that developers only pull/sync commits to their dev-workstations that CI has marked as passing. That could be as simple as keeping a commit ID (number or hash depending on your VCS tool) on a website somewhere, and writing a wrapper script for git-pull (or svn up) that ignores commits that happened after that one. Pushing back, with that way of working is harder in Git and Mercurial as they requires you to have pulled HEAD revision before you can push back. Subversion and Perforce don't have that limitation.
 
@@ -44,6 +44,6 @@ Some teams have some scripting in place to ensure that developers only pull/sync
 
 That modern alternative that allows development teams to scale up without having a bottleneck around check-ins or increased risk of broken builds: [Short-Lived Feature Branches](/short-lived-feature-branches/).
 
-There are also teams that send patches to review systems like Gerrit and Rietveld, instead of committing/pushing straight to trunk/master. Google pioneered this with their in-house Mondrian system in 2006, and Gerrit and Rietveld were made in the image of that. Facebook's Phabricator is another that came later. As well as code review, build-automation systems objectively verify the correctness of the proposed changes, leaving you with high confidence that the following merge/integration into trunk/master will yield a similar positive result when the same infrastructure kicks in later for CI purposes. It is important to note that the automation you attach to commits/pushes to non-trunk branches (or patch queue/review systems) is not Continuous Integration itself.
+There are also teams that send patches to review systems like Gerrit and Rietveld, instead of committing/pushing straight to trunk/main. Google pioneered this with their in-house Mondrian system in 2006, and Gerrit and Rietveld were made in the image of that. Facebook's Phabricator is another that came later. As well as code review, build-automation systems objectively verify the correctness of the proposed changes, leaving you with high confidence that the following merge/integration into trunk/main will yield a similar positive result when the same infrastructure kicks in later for CI purposes. It is important to note that the automation you attach to commits/pushes to non-trunk branches (or patch queue/review systems) is not Continuous Integration itself.
 
 These two alternatives, as well as committing straight to the trunk are compared in [Styles and Trade-offs](/styles/).  

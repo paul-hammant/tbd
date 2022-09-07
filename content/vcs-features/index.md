@@ -30,7 +30,7 @@ And three other secondary things that support little and often:
 
 If you have at least once done a checkout of the source of the project, any subsequent pull/update/sync is going to bring down 
 differences from the previous checkout or update.  If you do two updates back to back quickly, the second one is likely to bring 
-down nothing.  The time taken for the version control tool to determine that nothing is due from the remote master 
+down nothing.  The time taken for the version control tool to determine that nothing is due from the remote main 
 repository is the biggest clue as to how intrinsically fast it is. 
 
 Technologies that only keep head revision on the checkout, ordinarily have to walk the entire directory structure 
@@ -66,7 +66,7 @@ Perforce and Subversion will allow you to commit/push changes to the remote, wit
 incidentally all the intervening ones) locally first.  It will only allow that if there was no clash on the lines changed.
 
 Perforce can cheat again, but taking advantage of the read-only bit, and therefore already knows which files definitely 
-have **not** changed between the remote master repo and local working copy. It still feels slower than it should be, though.  
+have **not** changed between the remote main repo and local working copy. It still feels slower than it should be, though.  
 
 ### Three-way merge tools
 
@@ -89,8 +89,8 @@ using Perforce back then (they changed to an in-house technology in 2012), and i
 they had to make Mondrian (which was the final form of years of intermediate deliverables for the same). Thus
 Mondrian being created tightly coupled code review to the hourly activities of developers on the trunk. 
 
-GitHub (not Git) was next for the non-Google dev world with a built in code-review tool (and workflow). Again this was 
-effectively pre-commit - or at least commit to the master.
+GitHub (not Git) was next for the non-Google dev world with a built-in code-review tool (and workflow). Again this was 
+effectively pre-commit - or at least commit to the main.
 
 There were (and are) other technologies for code review such as Crucible (Atlassian), UpSource (JetBrains), Gerrit, 
 Phabricator, but integration into a platform experience is key.  GitLab and RhodeCode are emerging platforms.

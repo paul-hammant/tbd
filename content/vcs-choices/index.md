@@ -14,14 +14,14 @@ of the D-Distributed aspect of the DVCS of Git (in that many divergent versions 
 long periods of time), most enterprises are still going to count a single repository as the principal one, and within 
 that a single branch as the long-term "most valuable" code line.
 
-It is perfectly possible to do Trunk-Based Development in a Git repository. By convention 'master' is the long term 
+It is perfectly possible to do Trunk-Based Development in a Git repository. By convention 'main' is the long term 
 most valuable branch, and once cloned to your local workstation, the repository gains a nickname of 'origin'.
 
 ### Forks
 
 An effective Trunk-Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
-(and of master within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
-consumed back into `origin:master`. Other branching models use the same Pull-Request process for 
+(and of 'main' within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
+consumed back into `origin:main`. Other branching models use the same Pull-Request process for 
 code-reviews too - it is the normal way of working with Git since GitHub rolled out the feature.
 
 ### Size Limits

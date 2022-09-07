@@ -59,16 +59,16 @@ Suitable for active committer counts between 2 and 1000.
 {{< figure src="/styles/styles-tradeoffs-c.png" class="floatleft" title="right hand side of the diagram above" >}}
 
 Git and Mercurial delivered truly lightweight branching capability. What that meant was that branches could be very quickly 
-created and receive commits that are momentarily divergent from trunk or master (in our case) and then be merged back later
+created and receive commits that are momentarily divergent from trunk or main (in our case) and then be merged back later
 when ready. Then finally, and crucially, the branch that facilitated that short-lived divergence could be deleted quickly
-leaving only the the commits added to the effective lined of commits culminating in HEAD for trunk or master.  In that
+leaving only the the commits added to the effective lined of commits culminating in HEAD for trunk or main.  In that
 regard it is identically to the patch review way of working for trunk based development.  That was all just a small 
 data point for Git/Mercurial usage, until GitHub launches and had pull-requests as a feature from launch. Built in to that 
 was a code review tool. This is a very compelling setup for unsolicited code contributions - making SourceForce and the 
 Apache Software Foundation appear ancient, by comparison.
 
 Teams can form around the GitHub pull-request workflow, and still do Trunk-Based Development. What you get (if you've 
-attached build automation too), is a trunk or master that's never broken (or 1/1000th as likely to). The trade-off is that 
+attached build automation too), is a trunk or main that's never broken (or 1/1000th as likely to). The trade-off is that 
 you have to persuade co-workers to review your commit(s) in a time frame that suits you.  There's a risk that you'd end up 
 putting more commits in the pull-request than the straight-to-trunk experts would do. But you don't have to. You could 
 stream four separate facilitating commits all the way into the trunk, and later the fifth that would complete/activate the 
@@ -99,12 +99,12 @@ also build-automation results could be collated.
 
 Today, patch review systems include Gerrit, Rietveld and Phabricator. The latter by Facebook, and the first two with Googler 
 involvement.  These are not branches of course, they are held outside source-control in a relational schema. Their reason 
-for existence is to marshal pending changes, before they arrive in trunk/master and to guarantee they are good to be 
+for existence is to marshal pending changes, before they arrive in trunk/main and to guarantee they are good to be 
 integrated.
 
 ## The Importance of a Local build
 
-In all variants of Trunk-Based Development teams run the full build locally (compile, unit tests, a range of integration tests) and see that it pass, **before** declaring 'done' and committing/pushing the work to the eyes of teammates and bots (code review / pull-request), or directly into trunk/master. They do not **at all** use build automation as a crutch in order to determine whether their commit(s) were good or bad. Instead they determine that themselves on their dev workstation or containers/VMs that are dedicated to them, and do so **before** pushing something towards code review and bot scrutiny.  As mentioned above keeping this build fast is very important, and not having a fast build is one of the key drivers to other branching models and repo sharding. Indeed it is one of the key drivers to slower release cadences too.
+In all variants of Trunk-Based Development teams run the full build locally (compile, unit tests, a range of integration tests) and see that it pass, **before** declaring 'done' and committing/pushing the work to the eyes of teammates and bots (code review / pull-request), or directly into trunk/main. They do not **at all** use build automation as a crutch in order to determine whether their commit(s) were good or bad. Instead they determine that themselves on their dev workstation or containers/VMs that are dedicated to them, and do so **before** pushing something towards code review and bot scrutiny.  As mentioned above keeping this build fast is very important, and not having a fast build is one of the key drivers to other branching models and repo sharding. Indeed it is one of the key drivers to slower release cadences too.
 
 ## Choosing a style
 
@@ -129,9 +129,9 @@ A list of trade-offs are:
 * The median build duration, versus that commit rate.
 * How often your build-automation infra falls behind the commits/pull-requests that need to be compiled/tested.
 * Whether your developers can avoid using the automated builds as a crutch
-* Whether follow up commits are a workable way of addressing things that need improvements
+* Whether follow-up commits are a workable way of addressing things that need improvements
 * Whether the developers are good at separating refactoring commits from functional commits, and indeed "baby commits" generally.
-* Whether your team can handle code-review feedback **after** commit/push to trunk/master or not
+* Whether your team can handle code-review feedback **after** commit/push to trunk/main or not
  
  
 
