@@ -36,7 +36,7 @@ Google and Facebook are the most famous organizations that rest development on a
 fits the monorepo design. Netflix and Uber (iOS application) disclosed in 2017 that they do too. 
 
 {{< warning title="Risk of chaotic directory layout" >}}
-Google's co-mingled applications and services site within highly structured and uniform source trees. A Java
+Google's co-mingled applications and services sit within highly structured and uniform source trees. A Java
 developer from one project team instantly recognizes the directory structure for another team's application
 or service. That goes across languages too. The design for the directory layout needs to be enforced globally. You can
 see that in the way that Buck and Bazel layout trees for production and test code. If you
