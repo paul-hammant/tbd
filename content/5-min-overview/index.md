@@ -115,7 +115,7 @@ to allow those changes to be more easily consumed by teammates.
 
 Problematic 'distance' has a few tangible examples:
 
-* Late merges of development that happened more than a couple of days ago.
+* Late merges of development that happened more than a couple of days ago
   * Difficult merges in particular
 * A breaking build that lowers development team throughput, and diverts resources while it is being fixed
 
