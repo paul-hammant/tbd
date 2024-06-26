@@ -1,6 +1,6 @@
-baseurl = "https://trunkbaseddevelopment.com/"
-languageCode = "en-us"
-title = "Trunk Based Development"
+baseurl = "https://tw.trunkbaseddevelopment.com/"
+languageCode = "zh-TW"
+title = "主幹開發"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
@@ -45,144 +45,154 @@ googleAnalytics = "UA-24415524-3"
 	email   = "paul@hammant.org"
 
 [[menu.main]]
-	name   = "Introduction"
+	name   = "簡介"
 	url    = "/"
 	weight = 1
 
 [[menu.main]]
-	name   = "Context"
+	name   = "情境"
 	url    = "context/"
 	weight = 5
 
 [[menu.main]]
-	name   = "Five-minute overview"
+	name   = "五分鐘概覽"
 	url    = "5-min-overview/"
 	weight = 11
 
 [[menu.main]]
-	name   = "Deciding factors"
+	name   = "決定因素"
 	url    = "deciding-factors/"
 	weight = 21
 
 [[menu.main]]
-	name   = "Version control system features"
+	name   = "版本控制系統的特色"
 	url    = "vcs-features/"
 	weight = 31
 
 [[menu.main]]
-	name   = "Version control system choices"
+	name   = "版本控制系統的選擇"
 	url    = "vcs-choices/"
 	weight = 32
 
 [[menu.main]]
-	name   = "Feature flags"
+	name   = "功能標誌"
 	url    = "feature-flags/"
 	weight = 41
 
 [[menu.main]]
-	name   = "Branch by Abstraction"
+	name   = "抽象分支"
 	url    = "branch-by-abstraction/"
 	weight = 53
 
 [[menu.main]]
-	name   = "Branch for release"
+	name   = "為發布建立分支"
 	url    = "branch-for-release/"
 	weight = 55
 
 [[menu.main]]
-	name   = "Release from trunk"
+	name   = "從主幹發布"
 	url    = "release-from-trunk/"
 	weight = 56
 
 [[menu.main]]
-	name   = "Styles and Trade-offs"
+	name   = "風格和權衡"
 	url    = "styles/"
 	weight = 60
 
 [[menu.main]]
-	name   = "Continuous Integration (CI)"
+	name   = "持續整合"
 	url    = "continuous-integration/"
 	weight = 61
 
 [[menu.main]]
-	name   = "Committing straight to the trunk"
+	name   = "直接提交到主幹"
 	url    = "committing-straight-to-the-trunk/"
 	weight = 62
 
 [[menu.main]]
-	name   = "Short Lived Feature Branches"
+	name   = "短期功能分支"
 	url    = "short-lived-feature-branches/"
 	weight = 63
 
 [[menu.main]]
-	name   = "Continuous Code Review"
+	name   = "持續不斷的程式碼審查"
 	url    = "continuous-review/"
 	weight = 65
 
 [[menu.main]]
-	name   = "Continuous Delivery (CD)"
+	name   = "持續交付"
 	url    = "continuous-delivery/"
 	weight = 71
 
 [[menu.main]]
-	name   = "Concurrent development of consecutive releases"
+	name   = "連續發布的平行開發"
 	url    = "concurrent-development-of-consecutive-releases/"
 	weight = 75
 
 [[menu.main]]
-	name   = "Application strangulation"
+	name   = "應用程式的絞殺策略"
 	url    = "strangulation/"
 	weight = 78
 
 [[menu.main]]
-	name   = "Observed habits"
+	name   = "觀察到的習慣"
 	url    = "observed-habits/"
 	weight = 81
 
 [[menu.main]]
-	name   = "You're doing it wrong"
+	name   = "你這樣做是錯的"
 	url    = "youre-doing-it-wrong/"
 	weight = 91
 
 [[menu.main]]
-	name   = "Alternative branching models"
+	name   = "替代的分支模型"
 	url    = "alternative-branching-models/"
 	weight = 101
 
 [[menu.main]]
-	name   = "Monorepos"
+	name   = "單一版本庫"
 	url    = "monorepos/"
 	weight = 111
 
 [[menu.main]]
-	name   = "Expanding Contracting Monorepos"
+	name   = "擴大或是收縮單一版本庫"
 	url    = "expanding-contracting-monorepos/"
 	weight = 112
 
 [[menu.main]]
-	name   = "Game Changers"
+	name   = "變革推動者"
 	url    = "game-changers/"
 	weight = 121
 
 [[menu.main]]
-	name   = "Publications"
+	name   = "出版"
 	url    = "publications/"
 	weight = 131
 
 [[menu.main]]
-	name   = "Book on this topic"
+	name   = "書籍"
 	url    = "book/"
 	weight = 132
 
 [[menu.main]]
-	name   = "Key to branch diagrams"
+	name   = "分支圖示的說明"
 	url    = "key/"
 	weight = 141
 
 [[menu.main]]
-	name   = "Contributions"
+	name   = "致謝貢獻者"
 	url    = "contributions/"
 	weight = 151
+
+[[menu.main]]
+	name   = "翻譯詞彙表"
+	url    = "translation-glossary/"
+	weight = 201
+
+[[menu.main]]
+	name   = "繁體中文翻譯團隊"
+	url    = "translators/"
+	weight = 211
 
 [blackfriday]
 	smartypants	= true
@@ -194,3 +204,8 @@ googleAnalytics = "UA-24415524-3"
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true
