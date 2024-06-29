@@ -257,7 +257,7 @@ machines in the TCP/IP subnet). That is in place to shorten compile times for pr
 
 Google 內部有一個名為 Blaze 的系統。前 Google 員工轉職至 Facebook （與新朋友合作）後，因懷念這個系統，因此他們建立了 Buck{{< ext url="https://buckbuild.com" >}}，並隨後將其開源。之後，Google 也將一個簡化版的 Blaze 以 Bazel{{< ext url="https://bazel.build" >}} 的形式開源。這三個（包括 Blaze）有向圖建置系統能夠迅速地對一個龐大的程式碼樹進行編譯、測試或產生二進位檔案的分割。
 
-Buck 和 Bazel 省略不必要的編譯/測試操作，在開發者的個人電腦和 CI 基礎設施上同樣有效。
+Buck 和 Bazel 省略不必要的編譯與測試操作，在開發者的個人電腦和 CI 基礎設施上同樣有效。
 
 此外，還能依賴於同事最近編譯的物件程式碼。也就是說，這些物件程式碼是對原始程式碼/依賴項目的可證明的排列所編譯出來的。這些程式碼從網路中獲取（想像一下，一個對所有位於同一個 TCP/IP 子網路中的機器可用的 LRU 快取策略）。這樣做的目的是為了縮短產品程式和測試程式的編譯時間。
 
@@ -408,7 +408,7 @@ In order to deliver that, you would need a feature to be added Maven like so:
 
 ```xml
 <modules>
-  <calculate/> <!--or--> <search/>
+  <calculate/> <!-or-> <search/>
 </modules>
 ```
 
