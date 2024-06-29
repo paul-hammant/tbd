@@ -194,3 +194,9 @@ googleAnalytics = "UA-24415524-3"
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
+
+[security.funcs]
+  getenv = ['COMMIT_REF']
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
