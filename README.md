@@ -38,4 +38,4 @@ Pull-Requests, of course, if you're not a committer.
 
 English contributions (expansions of the material) to the `master` branch
 
-Chinese translations to the `cn` branch. - should always reflect the English content, so we can use merge tracking keep the two in step.
+Chinese translations to the `cn` or [`tw`](https://tw.trunkbaseddevelopment.com/) branch. - should always reflect the English content, so we can use merge tracking keep the two in step.
