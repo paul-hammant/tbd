@@ -161,13 +161,13 @@ Read more in [Game Changers - Google's Mondrian](/game-changers/#googles-interna
 
 ### 程式碼審查
 
-整合的程式碼審查被證明是版本控制系統工具的殺手級功能。從 Guido van Rossum（Python 之父）在 2006 年的一次 Google 公開的技術演講中介紹 Mondrian 開始，這一點應該就非常明顯（該技術演講的連結：[https://www.youtube.com/watch?v=sMql3Di4Kgc](https://www.youtube.com/watch?v=sMql3Di4Kgc)）。它為開發者提供了提交前的程式碼審查，並在一定程度上使程式碼審查變得有趣。當時，Google 使用的是 Perforce（他們在 2012 年轉為內部技術），而 Perforce 本身並未內建程式碼審查功能，所以他們必須開發 Mondrian（這是多年來中間交付成果的最終形式）。因此，Mondrian 將程式碼審查與開發者在主幹上的日常活動緊密結合在一起。
+整合的程式碼審查被證明是版本控制系統工具的殺手級功能。從 Guido van Rossum（Python 之父）在 2006 年的一次 Google 公開的技術演講中介紹 Mondrian 開始，這一點應該就非常明顯（該技術演講的連結：[publicized Google 'tech talk' in 2006](https://www.youtube.com/watch?v=sMql3Di4Kgc)）。它為開發者提供了提交前的程式碼審查，並在一定程度上使程式碼審查變得有趣。當時，Google 使用的是 Perforce（他們在 2012 年轉為內部技術），而 Perforce 本身並未內建程式碼審查功能，所以他們必須開發 Mondrian（這是多年來中間交付成果的最終形式）。因此，Mondrian 將程式碼審查與開發者在主幹上的日常活動緊密結合在一起。
 
 接下來，對於非 Google 開發世界來說，GitHub（而不是 Git 本身）成為具有內建程式碼審查工具（和工作流程）的平台。同樣，這也是在提交之前（或至少在提交到主分支之前）進行的審查。
 
 還有其他的程式碼審查技術，例如：Crucible（Atlassian）、UpSource（JetBrains）、Gerrit、Phabricator，但關鍵在於將其整合到平台體驗中。GitLab 和 RhodeCode 正在成為新興平台。
 
-詳細了解請參閱「Game Changers - Google's Mondrian」（[https://www.example.com/game-changers/index.html#google-s-internal-devops-2006-onwards](https://www.example.com/game-changers/index.html#google-s-internal-devops-2006-onwards)）和「Game Changers - GitHub's Pull Requests」（[https://www.example.com/game-changers/index.html#github-s-entire-platform-2008-onwards](https://www.example.com/game-changers/index.html#github-s-entire-platform-2008-onwards)）。
+詳細了解請參閱 [Game Changers - Google's Mondrian](/game-changers/index.html#google-s-internal-devops-2006-onwards) 和 [Game Changers - GitHub's Pull Requests](/game-changers/index.html#github-s-entire-platform-2008-onwards)。
 
 <!--
 ### Continuous Integration testing
