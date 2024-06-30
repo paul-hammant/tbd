@@ -9,7 +9,7 @@ weight: 32
 See Git's website{{< ext url="https://git-scm.com" >}} and Mercurial's website{{< ext url="https://www.mercurial-scm.org" >}}
 
 Git and Mercurial have been popular DVCS technologies for many years. Portals like GitHub make Git, in particular, the default 
-choice for SCM/SVC/source-control. While the Linux Kernel is maintained with Git, and definitely takes advantage 
+choice for SCM/VCS/source-control. While the Linux Kernel is maintained with Git, and definitely takes advantage 
 of the D-Distributed aspect of the DVCS of Git (in that many divergent versions of kernel can exist over 
 long periods of time), most enterprises are still going to count a single repository as the principal one, and within 
 that a single branch as the long-term "most valuable" code line.
@@ -79,7 +79,7 @@ developer workstations.
 
 * GitHub {{< ext url="https://github.com" >}} - Git, cloud 
 * GitHub Enterprise {{< ext url="https://enterprise.github.com/home" >}} - Git in GitHub's on-premises edition
-* Gitlab {{< ext url="https://about.gitlab.com" >}} - Git, cloud and on-premises install
+* GitLab {{< ext url="https://about.gitlab.com" >}} - Git, cloud and on-premises install
 * Atlassian's Bitbucket server {{< ext url="https://www.atlassian.com/software/bitbucket/server" >}}- Git
 * RhodeCode {{< ext url="https://rhodecode.com" >}} - Git, Mercurial and Subversion
 * Assembla {{< ext url="https://www.assembla.com" >}} - Git, Mercurial, Perforce and Subversion
