@@ -56,7 +56,7 @@ See [committing straight to the trunk](/committing-straight-to-the-trunk/) for m
 
 Suitable for active committer counts between 2 and 1000.
 
-{{< figure src="/styles/styles-tradeoffs-c.png" class="floatleft" title="right hand side of the diagram above" >}}
+{{< figure src="/styles/styles-tradeoffs-c.png" class="floatleft" title="center of the diagram above" >}}
 
 Git and Mercurial delivered truly lightweight branching capability. What that meant was that branches could be very quickly 
 created and receive commits that are momentarily divergent from trunk or main (in our case) and then be merged back later
@@ -87,7 +87,7 @@ Suitable for active committer counts between 2 and 40,000.
 
 ![](/branch-for-release/atscale.png)
 
-{{< figure src="/styles/styles-tradeoffs-r.png" class="floatright" title="center of the diagram above" >}}
+{{< figure src="/styles/styles-tradeoffs-r.png" class="floatright" title="right hand side of the diagram above" >}}
 
 Perhaps before others in the early 2000's, Google hit a ceiling on how many developers could commit to a trunk in a monorepo, 
 without tripping each other up. That would be build-breakages mostly, but also commits that wouldn't be up to coding standards
