@@ -495,7 +495,7 @@ Other companies since have been able to deploy their own Selenium-Grid internall
 leverage one of the online services for elastic Selenium testing.
 -->
 
-## Google 在 2006 年之後的內部 DevOps{#google-s-internal-devops-2006-onwards}
+## Google 在 2006 年之後的內部 DevOps {#googles-internal-devops-2006-onwards}
 
 Google 對 DevOps 的探索開始於西元 1998 年，但直到西元 2006 年後開正式對外分享。
 
@@ -511,7 +511,7 @@ Google 最有名的例子就是使用擴展的持續整合（CI）架構來應�
 
 在開始時，他們的版本控制系統是 Perforce，並沒有辦法有效率地去對還沒有進入主幹的提交執行 CI。因此，Google 製作了自己的工具從開發者工作機器提取待處理的提交進行驗證（以及程式碼審查 — 請參照下文的「Mondrian」）。從最初的建立之後，Google 的「Google3」的設置新增了一個使用者介面，Mondrian（請參照下文），使得 pre-commit 這個 CI 驗證結果非常清晰。
 
-### Mondrian (2006){#mondrian-2006}
+### Mondrian（2006） {#mondrian-2006}
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -533,7 +533,7 @@ Google 最有名的例子就是使用擴展的持續整合（CI）架構來應�
 
 另外可以查看 Rietveld 與 Gerrit，這些是 Mondrian 故事的延伸。
 
-### Selenium Farm (2006)
+### Selenium Farm（2006）
 
 <p><img srcset="to_tbd2.png 1x,to_tbd2@2x.png 2x"></p>
 
@@ -554,7 +554,7 @@ Whereas many had previously used this technique to avoid longer version-control 
 first time it had been detailed online and given a name (by Stacy Curl).
 -->
 
-## 抽象分支技術（2007）{#branch-by-abstraction-technique-2007}
+## 抽象分支技術（2007） {#branch-by-abstraction-technique-2007}
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -612,13 +612,13 @@ interest. Facebookers went on to make a similar Phabricator{{< ext url="https://
 and released that as open source too (Oct, 2010).
 -->
 
-## GitHub 的整個初始平台（2008）{#githubs-entire-initial-platform-2008}
+## GitHub 的整個初始平台（2008） {#githubs-entire-initial-platform-2008}
 
 <p><img srcset="away_from_tbd2.png 1x,away_from_tbd2@2x.png 2x"></p>
 
 GitHub 在西元 2008 年二月八號建立一個入口網站，並自那時以來不斷增加功能。最初的版本包含了分岔，這是一種表達與 DVCS 相關程式碼版本庫變化方向的正式方式，並且促進了一種處理非授權方式變更程式碼的寬恕模式（與其相對就是在 GitHub 出現前入口網站所使用的權限模式）。
 
-### Pull Requests（2008）{#continuous-delivery-book-2010}
+### Pull Requests（2008） {#continuous-delivery-book-2010}
 
 GitHub 在西元 2008 年 2 月 23 日在測試階段新增了「Pull-Requests」（PR）功能{{< ext url="https://github.com/blog/3-oh-yeah-there-s-pull-requests-now" >}}，並且在同年 4 月正式發布時將這一功能推廣至整個業界。對於原始碼、程式碼版本庫平台與版本控制系統來說，這個動作與「forking generally」是個殺手級應用足以改變整個市場。其他公司的商業前景也取決於它們對於這一次文化變革的應變能力。
 
@@ -686,7 +686,7 @@ emergent DevOps practices, which they would get to reuse and refine on the follo
 7. a focus of team dynamics for high throughput
 -->
 
-## 持續交付書籍（2010）{#continuous-delivery-book-2010}
+## 持續交付書籍（2010） {#continuous-delivery-book-2010}
 
 <p><img srcset="to_tbd2.png 1x,to_tbd2@2x.png 2x"></p>
 
@@ -721,7 +721,7 @@ builds for Pull Requests and the general state of HEAD on any branch. This was v
 This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk.
 -->
 
-## Travis-CI 的 GitHub 整合與成功與失敗的徽章（2011）{#travis-cis-github-integration-and-passfail-badges-2011}
+## Travis-CI 的 GitHub 整合與成功與失敗的徽章（2011） {#travis-cis-github-integration-and-passfail-badges-2011}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -765,7 +765,7 @@ to describe the multi-year
  of their time not 5% of their time on new features. That is an 8x increase in productivity for 400 engineers.
 -->
 
-## 案例研究： 大規模敏捷開發的實際方法（2012）{#case-study-a-practical-approach-to-large-scale-agile-development-2012}
+## 案例研究：大規模敏捷開發的實際方法（2012） {#case-study-a-practical-approach-to-large-scale-agile-development-2012}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -807,7 +807,7 @@ have to pick apart who actually broke the build.
 Surely teams not doing Trunk-Based Development would turn on this speculative merge and build capability for every branch and soon after plan their migration to Trunk-Based Development.
 -->
 
-## TravisCI 的每次提交推測可合併性分析（2012）{#traviscis-per-commit-speculative-mergeability-analysis-2012}
+## TravisCI 的每次提交推測可合併性分析（2012） {#traviscis-per-commit-speculative-mergeability-analysis-2012}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -877,7 +877,7 @@ Single Repository":
 <!-- print <img src="google-tbd.png"> print -->
 <!-- print <br/> print -->
 
-## Google 展示他們的單一版本庫主幹（2016）{#google-revealing-their-monorepo-trunk-2016}
+## Google 展示他們的單一版本庫主幹（2016） {#google-revealing-their-monorepo-trunk-2016}
 
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
@@ -904,7 +904,7 @@ blog{{< ext url="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs
 the motivators.
 -->
 
-## Microsoft 的 Git 虛擬檔案系統（2017）{#microsofts-git-virtual-file-system-2017}
+## Microsoft 的 Git 虛擬檔案系統（2017） {#microsofts-git-virtual-file-system-2017}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
