@@ -96,7 +96,7 @@ Teams with a higher release cadence do the former, and those with a lower releas
 
 #### 發布在哪裡進行？
 
-一個關鍵的協助發布的原則是，採用主幹開發的團隊僅能**直接從主幹發布**──見[從主幹發布](https://trunkbaseddevelopment.com/release-from-trunk/),**或者**他們專門從主幹建立一個分支用於實際的發布。見[為發布建立分支](https://trunkbaseddevelopment.com/branch-for-release/)。發布頻率較高的團隊採用前者方法，而發布頻率較低的團隊則採用後者方法。
+一個關鍵的協助發布的原則是，採用主幹開發的團隊要麼直接從主幹發布 - 參見[從主幹發布](/release-from-trunk/)，**或者**他們專門從主幹建立一個分支用於實際的發布。參見[為發布建立分支](/branch-for-release/)。發布頻率較高的團隊採用前者方法，而發布頻率較低的團隊則採用後者方法。
 
 <!--
 ### Checking out / cloning
