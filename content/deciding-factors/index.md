@@ -163,7 +163,7 @@ keeping pull-request branches abreast of `origin:main` automatically as long as 
 在托管的 Git 服務中，基於分支的「拉取請求」和類似前者的「合併請求」一定程度上解決了這個問題，只要不出現衝突，機器人就會自動保持拉取請求分支與 origin:main 同步。
 
 <!--
-If you are using Github as your repository host, there is a tool that can help solve the "race to push" problem. It is called Bors-NG{{< ext url="https://github.com/bors-ng/bors-ng" >}} and it is a merge bot for GitHub pull requests. It will take care of merging the latest trunk version into your branch, running all needed tests and merging the result back into the trunk, managing this as a queue and removing these race conditions.
+If you are using GitHub as your repository host, there is a tool that can help solve the "race to push" problem. It is called Bors-NG{{< ext url="https://github.com/bors-ng/bors-ng" >}} and it is a merge bot for GitHub pull requests. It will take care of merging the latest trunk version into your branch, running all needed tests and merging the result back into the trunk, managing this as a queue and removing these race conditions.
 -->
 
 如果你使用 GitHub 當作程式碼版本庫主機，有一個工具可以幫助解決「推送競賽」的問題。這個工具叫作 Bors-NG{{< ext url="https://github.com/bors-ng/bors-ng" >}} ，是 Github 上一個拉取請求的合併提交機器人服務。這個機器人服務將負責將最新的主幹版本合併到你的分支中，運行所有需要的測試，然後將結果合併回主幹中，以佇列方式管理這個過程，消除這些推送競賽。
