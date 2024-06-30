@@ -223,11 +223,13 @@ Problematic 'distance' has a few tangible examples:
 
 <!--
 # References elsewhere
--->
-
-# 外部參考連結
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+-->
+
+# 其他參考資料 {#references-elsewhere}
+
+<a id="showHideRefs" href="javascript:toggleRefs();">顯示參考資料</a>
 
 <div>
     <table style="border: 0; box-shadow: none">

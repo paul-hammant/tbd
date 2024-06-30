@@ -439,9 +439,9 @@ with the thing being built/verified in source-control.
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 -->
 
-# 其他參考資料
+# 其他參考資料 {#references-elsewhere}
 
-<a id="showHideRefs" href="javascript:toggleRefs();">顯示其他參考</a>
+<a id="showHideRefs" href="javascript:toggleRefs();">顯示參考資料</a>
 
 <div>
     <table style="border: 0; box-shadow: none">

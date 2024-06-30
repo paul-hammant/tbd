@@ -294,7 +294,7 @@ These two alternatives, as well as short-lived feature branches are compared in 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 -->
 
-# 其他參考資料
+# 其他參考資料 {#references-elsewhere}
 
 <a id="showHideRefs" href="javascript:toggleRefs();">顯示參考資料</a>
 
