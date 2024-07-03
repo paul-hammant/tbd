@@ -165,25 +165,21 @@ lean inspired concepts for teams pushing that far.
 Committing/pushing directly to the shared trunk may be fine for teams with only a few 
 commits a day. Fine too for teams that only have a few developers who trust each other to be rigorous on their 
 workstation before committing (as it was for everyone in the 90's).
--->
 
-直接提交或是推送到共享主幹對於每天僅有少量提交的團隊可能是可以接受的。對於只有少數開發者且彼此信任在提交之前在其個人電腦上嚴謹執行的團隊來說，這也是可以接受的（就像在 90 年代的所有人都一樣）。
-
-<!--
 Setups having the CI server single threading on builds and the notification cycle around pass/fail will
 occasion lead to the **batching** in a CI job. This is not a big problem for small teams. Batching is where one build is 
 verifying two or more commits in one go. It is not going to be hard to pick 
 apart a batch of two or three to know which one caused the failure. You can believe that with confidence because of the 
 high probability the two commits were in different sections of the code base and are almost never entangled.
--->
 
-在持續整合伺服器上設置單執行緒進行建置和通過或是失敗通知週期，有時會導致持續整合作業中的批次處理。對於小團隊來說，這不是一個大問題。批次處理是指一次建置驗證兩個或更多的提交。對於分析兩個或三個提交中導致失敗的是哪一個並不困難。你可以放心相信這一點，因為這兩個提交很有可能位於基準程式碼的不同部分，幾乎從沒有交集。
-
-<!--
 If teams are bigger, though, with more commits a day then pushing something incorrect/broken to trunk could be disruptive to 
 the team. Having the CI daemon deal with **every commit** separately is desirable. If the CI daemon is single-threading "jobs" there is a risk
 that the thing could fall behind. 
 -->
+
+直接提交或是推送到共享主幹對於每天僅有少量提交的團隊可能是可以接受的。對於只有少數開發者且彼此信任在提交之前在其個人電腦上嚴謹執行的團隊來說，這也是可以接受的（就像在 90 年代的所有人都一樣）。
+
+在持續整合伺服器上設置單執行緒進行建置和通過或是失敗通知週期，有時會導致持續整合作業中的批次處理。對於小團隊來說，這不是一個大問題。批次處理是指一次建置驗證兩個或更多的提交。對於分析兩個或三個提交中導致失敗的是哪一個並不困難。你可以放心相信這一點，因為這兩個提交很有可能位於基準程式碼的不同部分，幾乎從沒有交集。
 
 然而，如果團隊更大，每天有更多的提交，那麼將不正確或是有問題的內容推送到主幹可能會對團隊造成干擾。理想上如果能夠讓持續整合伺服器針對每個提交獨立處理是最好的方式。如果持續整合伺服器是使用單執行緒的方式處理驗證工作，則有可能處理驗證的速度會趕不上提交的速度。
 
@@ -193,64 +189,52 @@ that the thing could fall behind.
 More advanced CI Server configurations have a single controller and many agents setup so 
 that build jobs can be parallelized. That's more of an investment than the basic setup, but is getting easier and 
 easier in the modern era with evolved CI technologies and services. 
+
+The likes of Docker means that teams can have build environments that are perfectly small representations of 
+prod infra for the purposes of testing. 
 -->
 
 #### 控制器以及持續整合架構的代理處理程式
 
 更加進階的持需整合伺服器設定具有一個單一的控制器與許多的代理處理程式，能夠讓建置工作能夠平行處理。這比基礎的設置還要投入更多的資源，但隨著現代持續整合技術和服務的演化，這越來越容易實現。
 
-<!--
-The likes of Docker means that teams can have build environments that are perfectly small representations of 
-prod infra for the purposes of testing. 
--->
-
-例如 Docker 等技術使團隊能夠擁有與測試目的相符的完全小型生產環境的建置環境。
+例如 Docker 等技術使團隊能夠擁有與測試目的相符的完全小型正式環境的建置環境。
 
 <!--
 #### Tests are never green incorrectly.
 
 Well written tests, that is - *there are fables of suites of 100% passing unit tests with no assertions in the early 2000's*.
--->
 
-#### 測試永遠不會錯誤地變綠色
-
-撰寫良好的測試，有傳言說在 2000 年代初期，有些測試套件的單元測試通過率為 100%，但完全沒有做任何狀態的檢測。
-
-<!-- 
 Some teams focus 99.9% of their QA automation on functional correctness. You might note that for 
 a parallelized CI-driven *ephemeral* testing infrastructure, that response times for pages are around 500ms, where the
 target for production is actually 100ms. Your functional tests are not going to catch that and fail - they're going to pass. 
 If you had non-functional tests too (that 0.1% case) then you might catch that as a problem. Maybe it is best to move 
 such non-functional automated tests to a later pipeline phase, and be pleased that so many functional tests can run 
 through so quickly and cheaply and often, on elastic (albeit ephemeral) CI infrastructure.  
+
+Here is a claim: Tests are never green (passing) incorrectly. The inverse - a test failing when the prod code it 
+is verifying actually good - is common. QA automators are eternally fixing (somehow) smaller numbers of flakey tests.
+
+A CI build that is red/failing often, or an overnight CI job that tests everything that happened in the day - and is 
+always a percentage failing is of greatly reduced value.
+
+A regular CI build that by some definition is comprehensive, well written and **always green** unless there's a genuine
+issue is extremely valuable.
+
+Once you get to that trusted always green state, it is natural to run it as often as you can.
 -->
+
+#### 測試永遠不會錯誤地變綠色
+
+撰寫良好的測試，有傳言說在 2000 年代初期，有些測試套件的單元測試通過率為 100%，但完全沒有做任何狀態的檢測。
 
 有些團隊會專注於在達到 99% 的自動化檢測功能正確性。你可能會注意到，對於一個並行由持續整合產生出來的臨時測試架構，頁面的回應時間大約是 500 毫秒，而實際上在正式環境的目標時間是 100 毫秒。你的功能測試將不會捕捉到這個失敗——這將會通過功能測試。如如果你也有非功能性測試（那 0.1% 的狀況），那你有可能會捕捉到這個問題。也許將這樣的非功能性自動化測試移至後續的流水線階段是最好的，而在這個彈性（暫時的）持續整合架構下可以快速、簡單且並且經場運行多個功能性測試，你會感到滿意。
 
-<!--
-Here is a claim: Tests are never green (passing) incorrectly. The inverse - a test failing when the prod code it 
-is verifying actually good - is common. QA automators are eternally fixing (somehow) smaller numbers of flakey tests.
--->
-
 有一句話這樣說：測試永遠不會錯誤地變成綠色。反過來說，一個測試很常失敗但在正式環境程式碼卻是驗證正確。品質分析自動化工程師永遠在修復少量不穩定的測試。
-
-<!--
-A CI build that is red/failing often, or an overnight CI job that tests everything that happened in the day - and is 
-always a percentage failing is of greatly reduced value.
--->
 
 一個經常紅色或是失敗的持續整合建置，或是一個消耗整晚的測試當天所有一切的持續整合工作並且總是具有一定比例的失敗，將會將低持續整合驗證的價值。
 
-<!--
-A regular CI build that by some definition is comprehensive, well written and **always green** unless there's a genuine
-issue is extremely valuable.
--->
-
 一個定期的持續整合建置透過某個定義完整，妥善撰寫並且除非具有問題之外都是綠色是非常有價值的。
-
-<!--
-Once you get to that trusted always green state, it is natural to run it as often as you can.
--->
 
 一旦你達到值得信賴且總是綠色的狀態，這將會很自然去儘可能運行持續整合。
 
@@ -311,7 +295,7 @@ before they land in the trunk to the extent where teammates can update/sync/pull
 
 ### 今天的標準
 
-效率最高的團隊具有持續整合伺服器可以避免主幹被破壞。這代表在提交的變更進入主幹之前都會被驗證，整個團隊的人都可以安心的對主幹進行更新或同步以及拉取最新的提交。
+高效率的團隊具有持續整合伺服器，可以避免主幹被破壞。這代表在提交的變更進入主幹之前都會被驗證，整個團隊的人都可以安心的對主幹進行更新或同步以及拉取最新的提交。
 
 <!--
 The problem this solves is when the rate of commit into the trunk would be too high to have an auto-rollback on build 

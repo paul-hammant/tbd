@@ -211,11 +211,7 @@ further merges (to `main` hopefully).
 
 <!--
 ## Pitfalls
--->
 
-## 問題和陷阱
-
-<!--
 Working towards a pull request can sometimes make you look past the power of streaming a series of small commits into trunk for 
 the benefit of all. High-throughput XP teams from the end of the 90's onward would stream tens of commits a day (per pair) 
 into the trunk. Each commit would be an incremental step forward and able to go live as is, were the team to change plans
@@ -226,22 +222,22 @@ integrated again). And for those three pull-requests they shared the same Story/
 short-lived branch names - each of which was deleted after merge/integration.
 -->
 
-專注於拉取請求有時會讓你忽略用一系列小的提交流進入主幹的優勢，而這個優勢可以使所有人受益。從 90 年代末開始，高產量的 XP 團隊每天（每對開發者）會將數十個提交進入主幹。如果團隊改變計劃的話，每個提交都是一個遞增的前進步驟，並且能夠按原樣上線。這種工作方式的一個錯誤思維是，每個敏捷故事或卡片只對應一個拉取請求（僅此而已）。要擺脫這種思維陷阱，可以練習（例如）為重構進行一個拉取請求，並將其整合或合併到主幹中，接著再為一個新功能進行一個拉取請求（並將其整合到主幹中），然後再進行另一個重構（再次整合到主幹中）。對於這三個拉取請求，它們共享相同的故事或卡片關聯，但可能有不同的短期分支名稱——每個分支在合併或整合後都會被刪除。
+## 問題和陷阱
+
+當專注在拉取請求時，可能會忽略將多個相較小變更直接提交進主幹的好處，而這個好處是能讓所有人感受到的。從 90 年代末開始，高產量的 XP 團隊每天（每對開發者）會將數十個提交進入主幹。如果團隊改變計劃的話，每個提交都是一個遞增的前進步驟，並且能夠按原樣上線。這種工作方式的一個錯誤思維是，每個敏捷故事或卡片只對應一個拉取請求（僅此而已）。要擺脫這種思維陷阱，可以練習（例如）為重構進行一個拉取請求，並將其整合或合併到主幹中，接著再為一個新功能進行一個拉取請求（並將其整合到主幹中），然後再進行另一個重構（再次整合到主幹中）。對於這三個拉取請求，它們共享相同的故事或卡片關聯，但可能有不同的短期分支名稱——每個分支在合併或整合後都會被刪除。
 
 <!--
 ## Breaking the contract
 
 ![](slfb_bad_sharing.png)
+
+If you merged the part-complete short-lived feature branches to anywhere else, then you have broken the
+contract of trunk-based development. For short-lived feature branches, these are **not** allowed:
 -->
 
 ## 違反約束
 
 <p><img srcset="slfb_bad_sharing.png 1x,slfb_bad_sharing@2x.png 2x"></p>
-
-<!--
-If you merged the part-complete short-lived feature branches to anywhere else, then you have broken the
-contract of trunk-based development. For short-lived feature branches, these are **not** allowed:
--->
 
 如果你將部分完成的短期功能分支合併到其他地方，那麼你已經違反了主幹開發的約束。對於短期功能分支，不允許這些操作：
 
@@ -255,7 +251,7 @@ contract of trunk-based development. For short-lived feature branches, these are
 5. other developers joining you on your short-lived feature branches - at least who are not your pair-programming partner.
 -->
 
-1. 執行到一半時，合併到主幹（或主要分支），至少在提交無法獨立投入生產環境時是不允許的。
+1. 執行到一半時，合併到主幹（或主要分支），至少在提交無法獨立投入正式環境時是不允許的。
 2. （無論任何方式）合併到其他人的短暫功能分支是不允許的。
 3. （無論任何方式）合併到任何發布分支（如果有的話）是不允許的。
 4. 直接從或往開發者個人電腦上的複本進行合併是不允許的。

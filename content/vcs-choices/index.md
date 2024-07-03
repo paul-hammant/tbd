@@ -38,7 +38,7 @@ code-reviews too - it is the normal way of working with Git since GitHub rolled 
 
 ## Fork
 
-對於 Git 來說，有效的主幹開發策略取決於開發者維護 origin 的一個分叉（以及其中的 main 分支），並且拉取請求是提交的程式碼在被合併進入 `origin:main` **之前**進行審查的地方。其他分支模型也使用相同的拉取請求流程進行程式碼審查 — 這是自 GitHub 推出該功能以來，使用 Git 的正常工作方式。
+對於 Git 來說，有效的主幹開發策略取決於開發者維護 origin 的一個分叉（以及其中的 main 分支），並且拉取請求是提交的程式碼在被合併進入 `origin:main` **之前**進行審查的地方。其他分支模型也使用相同的拉取請求流程進行程式碼審查——這是自 GitHub 推出該功能以來，使用 Git 的正常工作方式。
 
 <!--
 ### Size Limits
@@ -125,7 +125,7 @@ developer workstations.
 
 早在 2007 年，Linus Torvalds 就在 Google 的山景城辦公室向 Google 員工展示了他受 Bitkeeper 啟發的 Git
 
-他兩年前就開始製作它，現在是版本控制系統的首選。在這一點上， Google 已經運行了主幹開發風格幾年了，並且沒有後悔。一些 Google 員工後來擴展了他們的 Perforce（見下文）設置，以允許開發者個人電腦上的本地分支進行 Git 操作。
+他兩年前就開始製作它，現在是版本控制系統的首選。在這一點上，Google 已經運行了主幹開發風格幾年了，並且沒有後悔。一些 Google 員工後來擴展了他們的 Perforce（見下文）設置，以允許開發者個人電腦上的本地分支進行 Git 操作。
 
 <!--
 ### Platform Software Choices

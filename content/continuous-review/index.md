@@ -64,7 +64,7 @@ take your time reviewing them. Indeed you may never consume them, if you don't l
 source is mostly a volunteer activity.
 -->
 
-#### 透過拉取請求貢獻開源項目
+#### 透過拉取請求貢獻開源專案
 
 這些貢獻可以來自任何擁有 GitHub（或類似平台）帳戶的人。他們將會 fork 你的版本庫，拉取請求將會把提交返回你的程式碼版本庫。在你使用他們的提交之後，他們可能會刪除自己的程式碼版本庫。如果這些拉取請求是主動提供的，你完全可以花時間來審查它們。如果你不喜歡這些提交，你可以選擇不合併。開源大多是出自於志願者的自主性，但是並不會一直有人做這件事。
 

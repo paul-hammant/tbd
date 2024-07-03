@@ -181,7 +181,7 @@ are 'branching for release'. You have made it harder for the larger thing to be 
 trunk with three modules, and a recursive build system, or one of the modern directed graph build systems like Buck or Bazel:
 -->
 
-如果你在倉儲中對所有單獨的主幹採取同步發布（相同節奏），擁有多個主幹變得不理想，並且你需要為這些主幹進行「分支發布」。這會讓從頭建置整個項目變得更難。更好的做法是只有一個主幹，裡面具有三個模組，並使用遞迴建置系統，或現代的有向圖建置系統，比如 Buck 或 Bazel。
+如果你在程式碼版本庫中，對所有單獨的主幹採取同步發布（相同節奏），擁有多個主幹會變得不理想，而且你會需要為這些主幹進行「分支發布」。這會讓從頭建置整個專案變得更難。更好的做法是只有一個主幹，裡面具有三個模組，並使用遞迴建置系統，或現代的有向圖建置系統，比如 Buck 或 Bazel。
 
 ```
 root/    
@@ -338,7 +338,7 @@ creates pressure for more intermediate merges, and consequentially greater merge
 
 #### 有多少分支？
 
-我們剛剛描述了兩個分支模型－主線和項目分支。可能這個應用在任何時候都有多個正在進行中的項目，這意味著會有多個項目分支，這會帶來更多的中間合併壓力，從而導致合併難度增加。
+我們剛剛描述了兩個分支模型——主線和專案分支。可能這個應用在任何時候都有多個正在進行中的專案，這意味著會有多個專案分支，這會帶來更多的中間合併壓力，從而導致合併難度增加。
 
 <!--
 #### Always release ready?

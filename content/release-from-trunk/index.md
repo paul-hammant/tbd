@@ -50,7 +50,8 @@ and release from:
 
 每天（或更少）發布一次的團隊**或許**仍然會建立一個分支，以便挑選錯誤修復並從該分支發布：
 
-<img srcset="release_from_trunk3.png 1x,release_from_trunk3@2x.png 2x">([分支圖示的說明](/key/))
+![](release_from_trunk3.png)
+([分支圖示的說明](/key/))
 
 <!--
 {{< note title="Branches can be made retroactively" >}}

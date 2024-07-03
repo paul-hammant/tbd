@@ -193,7 +193,7 @@ We're sure that within a few years, Git will be able to handle huge scale too. W
 something else.
 -->
 
-我們可以肯定，在未來幾年內，Git 也將能夠處理大規模項目。無論是使用微軟的技術還是其他技術。
+我們可以肯定，在未來幾年內，Git 也將能夠處理大規模專案。無論是使用微軟的技術還是其他技術。
 
 <!--
 ## Conway's Law
