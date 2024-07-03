@@ -47,7 +47,7 @@ to a 'slender', or Trunk-Based Development mode of use.
 Note: Over time all version control systems would adopt this branch/merge language.
 -->
 
-## 版本控制系統 - RCS（1982）
+## 版本控制系統 - RCS（1982）{#revision-control-system---rcs-1982}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -78,7 +78,7 @@ young open source community spurred its adoption in the enterprise too. While ma
 merging was painful and Trunk-Based Development was the sensible choice. Indeed CVS popularized the "trunk" branch name, even if it didn't mandate it.  CVS's flaws were that it did not have atomic commits, its operation over the wire as a centralized client/server VCS was very chatty, and it had cumbersome CVS/ directories all over the checked out code.
 -->
 
-## 併發版本控制系統 - CVS (1990)
+## 併發版本控制系統 - CVS (1990){#concurrent-versions-system---cvs-1990}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -130,7 +130,7 @@ Notes:
 "The Joel Test"{{< ext url="https://www.joelonsoftware.com/2000/08/09/the-joel-test-12-steps-to-better-code" >}} posting.
 -->
 
-## 微軟秘笈（1995）
+## 微軟秘笈（1995）{#microsoft-secrets-book-1995}
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -176,7 +176,7 @@ was the safety net that ensured everything was correct across all the whole trun
 in 2014{{< ext url="http://oduinn.com/blog/2014/06/04/farewell-to-tinderbox/" >}}.
 -->
 
-## NetScape 的 Tinderbox（1997）
+## NetScape 的 Tinderbox（1997）{#netscapes-tinderbox-1997}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -210,7 +210,7 @@ The paper alternates between 'trunk' and 'mainline' language, but has many valua
 it that help set a foundation for the next ten years of version-control advances.
 -->
 
-## Perfore 和 ClearCase（1988）
+## Perfore 和 ClearCase（1988）{#perforce-and-clearcase-1998}
 
 <p><img srcset="away_from_tbd3.png 1x,away_from_tbd3@2x.png 2x"></p>
 
@@ -253,7 +253,7 @@ database with cross-cutting tags representing HEAD, or someone else's important 
 omnipresent too - a decision made to move HEAD was instantly available without 'update' action to teammates.
 -->
 
-## 極限開發的持續整合（1999）
+## 極限開發的持續整合（1999）{#extreme-programmings-continuous-integration-1999}
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -276,7 +276,7 @@ calling out this one part of XP. Martin greatly updated it in 2006
 {{< ext url="https://www.martinfowler.com/articles/continuousIntegration.html" >}}.
 -->
 
-## 於 MartinFowler.com 的持續整合文章（2000）
+## 於 MartinFowler.com 的持續整合文章（2000）{#continuous-integration-paper-on-martinfowlercom-2000}
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -304,7 +304,7 @@ CruiseControl was that it stored its 'pipeline' configuration in source-control.
 project's source and build file - developers could tweak CI configuration in a commit.
 -->
 
-## ThoughtWorks 的 Cruise Control（2001）
+## ThoughtWorks 的 Cruise Control（2001）{#thoughtworks-cruise-control-2001}
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -334,7 +334,7 @@ well after the changes were released.
 </div>
 -->
 
-## Apache 的 Gump
+## Apache 的 Gump{#apaches-gump}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -369,7 +369,7 @@ Subversion still has edge-case merge bugs today. Like this one{{< ext url="https
 Subversion by default setup a branch called trunk. That said, it allows any branching model to be used.
 -->
 
-## Subversion 的「輕量級」分支（2000 至 2001 年）
+## Subversion 的「輕量級」分支（2000 至 2001 年）{#subversions-lightweight-branching-2000-through-2001}
 
 <p><img srcset="away_from_tbd1.png 1x,away_from_tbd1@2x.png 2x"></p>
 
@@ -404,7 +404,7 @@ before you push it back to the shared repository. There are pros and cons to tha
 Generally, Git made it much easier to consider multiple branches as a viable team setup.
 -->
 
-## Git 的 輕量分支 (2005)
+## Git 的 輕量分支 (2005){#gits-lightweight-branching-2005}
 
 <p><img srcset="away_from_tbd3.png 1x,away_from_tbd3@2x.png 2x"></p>
 
@@ -495,7 +495,7 @@ Other companies since have been able to deploy their own Selenium-Grid internall
 leverage one of the online services for elastic Selenium testing.
 -->
 
-## Google 在 2006 年之後的內部 DevOps
+## Google 在 2006 年之後的內部 DevOps {#googles-internal-devops-2006-onwards}
 
 Google 對 DevOps 的探索開始於西元 1998 年，但直到西元 2006 年後開正式對外分享。
 
@@ -511,7 +511,7 @@ Google 最有名的例子就是使用擴展的持續整合（CI）架構來應�
 
 在開始時，他們的版本控制系統是 Perforce，並沒有辦法有效率地去對還沒有進入主幹的提交執行 CI。因此，Google 製作了自己的工具從開發者工作機器提取待處理的提交進行驗證（以及程式碼審查 — 請參照下文的「Mondrian」）。從最初的建立之後，Google 的「Google3」的設置新增了一個使用者介面，Mondrian（請參照下文），使得 pre-commit 這個 CI 驗證結果非常清晰。
 
-### Mondrian (2006)
+### Mondrian（2006） {#mondrian-2006}
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -533,7 +533,7 @@ Google 最有名的例子就是使用擴展的持續整合（CI）架構來應�
 
 另外可以查看 Rietveld 與 Gerrit，這些是 Mondrian 故事的延伸。
 
-### Selenium Farm (2006)
+### Selenium Farm（2006）
 
 <p><img srcset="to_tbd2.png 1x,to_tbd2@2x.png 2x"></p>
 
@@ -554,7 +554,7 @@ Whereas many had previously used this technique to avoid longer version-control 
 first time it had been detailed online and given a name (by Stacy Curl).
 -->
 
-## 抽象分支技術（2007）
+## 抽象分支技術（2007） {#branch-by-abstraction-technique-2007}
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -612,13 +612,13 @@ interest. Facebookers went on to make a similar Phabricator{{< ext url="https://
 and released that as open source too (Oct, 2010).
 -->
 
-## GitHub 的整個初始平台（2008）
+## GitHub 的整個初始平台（2008） {#githubs-entire-initial-platform-2008}
 
 <p><img srcset="away_from_tbd2.png 1x,away_from_tbd2@2x.png 2x"></p>
 
 GitHub 在西元 2008 年二月八號建立一個入口網站，並自那時以來不斷增加功能。最初的版本包含了分岔，這是一種表達與 DVCS 相關程式碼版本庫變化方向的正式方式，並且促進了一種處理非授權方式變更程式碼的寬恕模式（與其相對就是在 GitHub 出現前入口網站所使用的權限模式）。
 
-### Pull Requests（2008）
+### Pull Requests（2008） {#continuous-delivery-book-2010}
 
 GitHub 在西元 2008 年 2 月 23 日在測試階段新增了「Pull-Requests」（PR）功能{{< ext url="https://github.com/blog/3-oh-yeah-there-s-pull-requests-now" >}}，並且在同年 4 月正式發布時將這一功能推廣至整個業界。對於原始碼、程式碼版本庫平台與版本控制系統來說，這個動作與「forking generally」是個殺手級應用足以改變整個市場。其他公司的商業前景也取決於它們對於這一次文化變革的應變能力。
 
@@ -686,7 +686,7 @@ emergent DevOps practices, which they would get to reuse and refine on the follo
 7. a focus of team dynamics for high throughput
 -->
 
-## 持續交付書籍（2010）
+## 持續交付書籍（2010） {#continuous-delivery-book-2010}
 
 <p><img srcset="to_tbd2.png 1x,to_tbd2@2x.png 2x"></p>
 
@@ -721,7 +721,7 @@ builds for Pull Requests and the general state of HEAD on any branch. This was v
 This made it was clear whether the proposed PR would break the build or not were it to be merged into trunk.
 -->
 
-## Travis-CI 的 GitHub 整合與成功與失敗的徽章（2011）
+## Travis-CI 的 GitHub 整合與成功與失敗的徽章（2011） {#travis-cis-github-integration-and-passfail-badges-2011}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -738,7 +738,7 @@ page of Wikipedia lists multiple people concurrently pushing the same emergent m
 idea{{< ext url="https://en.wikipedia.org/wiki/Microservices#History" >}}.
 -->
 
-## 微服務（2011 與 2012）
+## 微服務（2011 與 2012）{#microservices-2011-and-2012}
 
 微服務的出現，也就是那個可以獨立建置與部署的小型服務，通過 TCP/IP（以及 XML、YAML 或 DNS 的配置）進行整合，強化了「多個小型程式碼版本庫」的概念（兩者其實是互相強化）。雖然可以使用任何分支模型來實現，但是非主幹的分支模型可能更受到關注。單一版本庫完全被拋棄。從單一版本庫的團隊分享出來程式碼與原始碼 HEAD 的修訂版本來看，這種想法被完全否定。維基百科的歷史頁面列出了多個人同時推動這個新興的微服務理念{{< ext url="https://en.wikipedia.org/wiki/Microservices#History" >}}。
 
@@ -765,7 +765,7 @@ to describe the multi-year
  of their time not 5% of their time on new features. That is an 8x increase in productivity for 400 engineers.
 -->
 
-## 案例研究： 大規模敏捷開發的實際方法（2012）
+## 案例研究：大規模敏捷開發的實際方法（2012） {#case-study-a-practical-approach-to-large-scale-agile-development-2012}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -807,7 +807,7 @@ have to pick apart who actually broke the build.
 Surely teams not doing Trunk-Based Development would turn on this speculative merge and build capability for every branch and soon after plan their migration to Trunk-Based Development.
 -->
 
-## TravisCI 的每次提交推測可合併性分析（2012）
+## TravisCI 的每次提交推測可合併性分析（2012） {#traviscis-per-commit-speculative-mergeability-analysis-2012}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -847,7 +847,7 @@ situations for commits a developer wants to do. Maybe that last vision is not qu
  to go in now.
 -->
 
-## Plastic 的語意合併（2013）
+## Plastic 的語意合併（2013）{#plasticscms-semantic-merge-2013}
 
 <p><img srcset="away_from_tbd1.png 1x,away_from_tbd1@2x.png 2x"></p>
 
@@ -877,7 +877,8 @@ Single Repository":
 <!-- print <img src="google-tbd.png"> print -->
 <!-- print <br/> print -->
 
-## Google 展示他們的單一版本庫主幹（2016）
+## Google 展示他們的單一版本庫主幹（2016） {#google-revealing-their-monorepo-trunk-2016}
+
 
 <p><img srcset="to_tbd3.png 1x,to_tbd3@2x.png 2x"></p>
 
@@ -903,7 +904,7 @@ blog{{< ext url="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs
 the motivators.
 -->
 
-## Microsoft 的 Git 虛擬檔案系統（2017）
+## Microsoft 的 Git 虛擬檔案系統（2017） {#microsofts-git-virtual-file-system-2017}
 
 <p><img srcset="to_tbd1.png 1x,to_tbd1@2x.png 2x"></p>
 
@@ -917,9 +918,9 @@ Microsoft 在西元 2017 年初在 GitHub 上發布了 ~~GitVFS~~ GVFS{{< ext ur
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 -->
 
-# 其他參考資料
+# 其他參考資料 {#references-elsewhere}
 
-<a id="showHideRefs" href="javascript:toggleRefs();">顯示其他參考</a>
+<a id="showHideRefs" href="javascript:toggleRefs();">顯示參考資料</a>
 
 <div>
     <table style="border: 0; box-shadow: none">

@@ -190,7 +190,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 201
 
 [[menu.main]]
-	name   = "繁體中文翻譯團隊"
+	name   = "正體中文翻譯團隊"
 	url    = "translators/"
 	weight = 211
 

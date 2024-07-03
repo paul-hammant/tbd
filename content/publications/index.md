@@ -172,7 +172,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
         implemented: comprehensive test and deployment automation, the
         use of continuous integration including Trunk-Based Development, and
         version control of everything required to reproduce production environments<br>
-        讓人欣慰但也不意外的是，我們發現部署困難與關鍵的持續交付實踐方法的實施程度有關：包括全面的測試和部署自動化、使用持續整合（包括基於主幹的開發）以及對所有需要重現生產環境的內容進行版本控制。
+        讓人欣慰但也不意外的是，我們發現部署困難與關鍵的持續交付實踐方法的實施程度有關：包括全面的測試和部署自動化、使用持續整合（包括基於主幹的開發）以及對所有需要重現正式環境的內容進行版本控制。
         <span style="font-size: 120%">&rdquo;</span>
         <br/>by Puppet Labs
         <br/>

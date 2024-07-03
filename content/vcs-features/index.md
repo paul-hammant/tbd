@@ -13,7 +13,7 @@ that came after CVS).  Productivity and governance are what divides them, though
 
 **理想的版本控制系統**
 
-在具有原子提交功能的任何版本控制系統（VCS）上都可以實現主幹開發（在 CVS 之後的所有系統都具備此功能）。然而，生產力和管理是各個版本控制系統之間的區別所在。
+在具有原子提交功能的版本控制系統上都可以實現主幹開發（在 CVS 之後的所有版本控制系統都具備此功能）。然而，生產力和管理是各個版本控制系統之間的區別所在。
 
 <!--
 ## Productivity
@@ -36,18 +36,18 @@ And three other secondary things that support little and often:
 
 ## 生產力
 
-事實上，有許多與生產力相關的原因將導致團隊放棄一種技術轉而使用另一種技術。無論這個工具是付費或是開源，在最終使用者眼中並不重要。
+事實上，有許多與生產力相關的原因，將會導致團隊轉移技術。無論這個工具是付費或是開源，在最終使用者眼中並不重要。
 
 速度主要指以下兩個方面：
 
-1. 從遠端伺服器程式碼版本庫中拉取／更新／同步變更的速度。
-2. 提交／推送變更回遠端伺服器的速度。
+1. 從遠端伺服器程式碼版本庫中拉取、更新或同步變更的速度。
+2. 提交或推送變更回遠端伺服器的速度。
 
 還有其他三個支持「小而頻繁」的次要因素：
 
-1. 高級合併（Advanced Merging）
-2. 程式碼審查（Code Review）
-3. 持續整合（Continuous Integration）
+1. 進階合併
+2. 程式碼審查
+3. 持續整合
 
 <!--
 ### Pull/update/sync speed
@@ -77,16 +77,15 @@ file has been changed a dozen times since you last pulled it down via a sync ope
 this is costly, but in practice, Git is incredibly fast.
 -->
 
-### 拉取／更新／同步速度
+### 拉取、更新或同步速度
 
-如果你曾經 checkout 過一次項目的原始碼，任何後續的拉取／更新／同步操作都將從之前的 checkout 或更新中帶來差異。如果你快速連續進行兩次更新，第二次更新可能不會帶來任何變更。版本控制工具判斷遠端主要程式碼版無需做任何更新所需的時間，是該工具本身速度快慢的最大線索。
+如果你曾經 checkout 過一次程式碼版本庫，任何後續的拉取、更新或同步操作都將從之前的 checkout 或更新中帶來差異。如果你快速連續進行兩次更新，第二次更新可能不會帶來任何變更。版本控制工具判斷遠端主要程式碼版無需做任何更新所需的時間，是該工具本身速度快慢的最大線索。
 
-只保留 checkout 版本的技術通常需要遍歷整個目錄結構，尋找變更的文件，並且需要與伺服器確認每個文件的狀態。這就是 Subversion 及其前身 CVS 的典型做法。儘管通過批次處理這些交換操作來加快速度，但與原始碼樹的廣度和深度仍會造成速度下降。 
-Perforce 使操作更快，因為伺服器端隨時準備同步操作，通過將你的目錄結構和每個文件的修訂版本保存在記憶體中。這需要維持文件的唯讀屬性（請使用能夠自動處理 Perforce 互動的 IDE）。在連續的拉取、更新或同步速度測試中，Perforce 會顯得更快，因為它已經有了答案。
+只保留 checkout 版本的技術通常需要遍歷整個目錄結構，尋找變更的文件，並且需要與伺服器確認每個文件的狀態。這就是 Subversion 及其前身 CVS 的典型做法。儘管通過批次處理這些交換操作來加快速度，但與原始碼目錄的廣度和深度仍會造成速度下降。Perforce 使操作更快，因為伺服器端隨時準備同步操作，通過將你的目錄結構和每個文件的修訂版本保存在記憶體中。這需要維持文件的唯讀屬性（請使用能夠自動處理 Perforce 互動的 IDE）。在連續的拉取、更新或同步速度測試中，Perforce 會顯得更快，因為它已經有了答案。
 
 CVS、Subversion 和 Perforce 都提供了 checkout 子目錄的選擇。在單一版本庫的情況下，這是一個不錯的功能。至少在你以遞迴方式在主幹中布局服務和應用程式時，會覺得這個功能非常方便。
 
-Git 和 Mercurial 的檢出操作（Git 的「clone」操作）是針對整個倉庫的。這兩者都不支持子目錄檢出。所有自上次「pull」以來的提交都會被拉取下來。這在確定本地變更的目錄遍歷之前發生。因此，該拉取操作非常快速-不需要在網路上進行冗長的多次通訊，並且服務器端的資料已經被壓縮並準備好傳輸。即使某個文件自上次同步操作以來已經更改了十幾次，情況也是如此。你可能會認為這樣做成本很高，但實際上，Git 的速度非常快。
+Git 和 Mercurial 的 checkout 操作（Git 的「clone」操作）是針對整個倉庫的。這兩者都不支持子目錄 checkout。所有自上次「pull」以來的提交都會被拉取下來。這在確定本地變更的目錄遍歷之前發生。因此，該拉取操作非常快速——不需要在網路上進行冗長的多次通訊，並且服務器端的資料已經被壓縮並準備好傳輸。即使某個文件自上次同步操作以來已經更改了十幾次，情況也是如此。你可能會認為這樣做成本很高，但實際上，Git 的速度非常快。
 
 <!--
 ### Commit/push speed
@@ -106,7 +105,7 @@ Perforce can cheat again, but taking advantage of the read-only bit, and therefo
 have **not** changed between the remote main repo and local working copy. It still feels slower than it should be, though.  
 -->
 
-### 在提交／推送速度方面
+### 提交或推送的速度
 
 在這方面，各種工具之間的差異較小。
 
@@ -155,19 +154,19 @@ effectively pre-commit - or at least commit to the main.
 There were (and are) other technologies for code review such as Crucible (Atlassian), UpSource (JetBrains), Gerrit, 
 Phabricator, but integration into a platform experience is key.  GitLab and RhodeCode are emerging platforms.
 
-Read more in [Game Changers - Google's Mondrian](/game-changers/index.html#google-s-internal-devops-2006-onwards) and 
-[Game Changers - GitHub's Pull Requests](/game-changers/index.html#github-s-entire-platform-2008-onwards).
+Read more in [Game Changers - Google's Mondrian](/game-changers/#googles-internal-devops-2006-onwards) and 
+[Game Changers - GitHub's Pull Requests](/game-changers/#githubs-entire-initial-platform-2008).
 -->
 
 ### 程式碼審查
 
-整合的程式碼審查被證明是版本控制系統工具的殺手級功能。從 Guido van Rossum（Python 之父）在 2006 年的一次 Google 公開的技術演講中介紹 Mondrian 開始，這一點應該就非常明顯（該技術演講的連結：[https://www.youtube.com/watch?v=sMql3Di4Kgc](https://www.youtube.com/watch?v=sMql3Di4Kgc)）。它為開發者提供了提交前的程式碼審查，並在一定程度上使程式碼審查變得有趣。當時，Google 使用的是 Perforce（他們在 2012 年轉為內部技術），而 Perforce 本身並未內建程式碼審查功能，所以他們必須開發 Mondrian（這是多年來中間交付成果的最終形式）。因此，Mondrian 將程式碼審查與開發者在主幹上的日常活動緊密結合在一起。
+整合的程式碼審查被證明是版本控制系統工具的殺手級功能。從 Guido van Rossum（Python 之父）在 2006 年的一次 Google 公開的技術演講中介紹 Mondrian 開始，這一點應該就非常明顯（該技術演講的連結：[publicized Google 'tech talk' in 2006](https://www.youtube.com/watch?v=sMql3Di4Kgc)）。它為開發者提供了提交前的程式碼審查，並在一定程度上使程式碼審查變得有趣。當時，Google 使用的是 Perforce（他們在 2012 年轉為內部技術），而 Perforce 本身並未內建程式碼審查功能，所以他們必須開發 Mondrian（這是多年來中間交付成果的最終形式）。因此，Mondrian 將程式碼審查與開發者在主幹上的日常活動緊密結合在一起。
 
-接下來，對於非 Google 開發世界來說，GitHub（而不是 Git 本身）成為具有內建程式碼審查工具（和工作流程）的平台。同樣，這也是在提交之前（或至少在提交到主分支之前）進行的審查。
+接下來，對於非 Google 開發世界來說，GitHub 成為具有內建程式碼審查工具與工作流程的平台。同樣，這也是在提交之前（或至少在提交到主分支之前）進行的審查。
 
 還有其他的程式碼審查技術，例如：Crucible（Atlassian）、UpSource（JetBrains）、Gerrit、Phabricator，但關鍵在於將其整合到平台體驗中。GitLab 和 RhodeCode 正在成為新興平台。
 
-詳細了解請參閱「Game Changers - Google's Mondrian」（[https://www.example.com/game-changers/index.html#google-s-internal-devops-2006-onwards](https://www.example.com/game-changers/index.html#google-s-internal-devops-2006-onwards)）和「Game Changers - GitHub's Pull Requests」（[https://www.example.com/game-changers/index.html#github-s-entire-platform-2008-onwards](https://www.example.com/game-changers/index.html#github-s-entire-platform-2008-onwards)）。
+詳細了解請參閱[變革推廣者 - Google 在 2006 年之後的內部 DevOps](/game-changers/index.html#googles-internal-devops-2006-onwards) 和[變革推廣者 - GitHub 的 Pull Requests](/game-changers/index.html#githubs-entire-initial-platform-2008)。
 
 <!--
 ### Continuous Integration testing
@@ -189,7 +188,7 @@ best combinations of VCS platform and CI server do so for any of the branches in
 
 如今，版本控制系統平台的現況是，它們只提供了與其他持續整合伺服器的鉤子（hook）（可能是 Web hook）。最好的版本控制系統平台和持續整合伺服器組合可以對所有正在進行的分支進行操作，包括程式碼審查分支（fork）。
 
-[^sla]: 服務水準協議（Service Level Agreement）可參考[什麼是 SLA (服務水準協議)？](https://aws.amazon.com/tw/what-is/service-level-agreement/)一文說明說明
+[^sla]: 服務水準協議（Service Level Agreement）可參考[什麼是 SLA (服務水準協議)？](https://aws.amazon.com/tw/what-is/service-level-agreement/)一文說明
 
 <!--
 ## Governance
@@ -243,6 +242,6 @@ of their commercial offering Team Foundation Server (TFS).
 
 ### 規模或擴展性
 
-許多團隊，尤其是那些擁有單一版本庫配置或包含大型二進制檔案（例如遊戲公司）的團隊，希望擁有無限的伺服器端儲存空間來存放他們的程式碼版本庫。Git 和 Mercurial 逐漸增加了容量，但仍然存在一些問題需要解決—在不影響推送更改回伺服器的前提下，如何乾淨且安全地減少客戶端 clone 歷史的大小，是一個挑戰。
+許多團隊，尤其是那些擁有單一版本庫配置或包含大型二進制檔案（例如遊戲公司）的團隊，希望擁有無限的伺服器端儲存空間來存放他們的程式碼版本庫。Git 和 Mercurial 逐漸增加了容量，但仍然存在一些問題需要解決——在不影響推送更改回伺服器的前提下，如何乾淨且安全地減少客戶端 clone 歷史的大小，是一個挑戰。
 
 微軟在 2017 年初推出了 Git 虛擬檔案系統(~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}} - Windows only)，以新增一些他們在內部重新編譯 Perforce （SourceDepot-從 1998 年到 201x 使用）以及他們的商業產品 Team Foundation Server（TFS）的原生版本控制系統所熟悉的功能。

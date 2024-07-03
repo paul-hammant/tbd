@@ -59,7 +59,7 @@ And some secondary goals:
 
 以及一些次要目標：
 
-* 通過**原子提交**[^atomic-commit]允許對多個項目或專案程式碼進行更改，原子提交確保了所有變更是一起成功或一起失敗，從而避免了部分更新帶來的不一。
+* 通過**原子提交**[^atomic-commit]允許對多個專案程式碼進行更改，原子提交確保了所有變更是一起成功或一起失敗，從而避免了部分更新帶來的不一。
 * 允許通過原子提交實現從現有程式碼中提取新的共同依賴，在不破壞現有功能的前提下，從一個或多個模組中建立抽象並重構程式碼，通過原子提交實施這些變更。
 * 強制所有開發者專注於主幹中文件的 HEAD 修訂版本，在單一版本庫中，鼓勵開發者始終與最新的程式碼版本工作，減少了老舊程式碼或分支帶來的維護問題。
 * 允許同時對多個（可能不相同的）模組進行根因分析，以找到正式環境中的錯誤。在發現正式環境中的問題時，可以更快地通過提交紀錄歷史追溯多個模組的更改。
@@ -85,7 +85,7 @@ cannot overhaul the directory structure of your entire repository, you should no
 Google 和 Facebook 是最著名的幾家採用單一公司級主幹開發的組織，這種方式符合單一版本庫的設計理念。Netflix 和 Uber (針對其 iOS 應用)在2017年也公開表示他們採用了相同的方法。
 
 {{< warning title="目錄布局可能的混亂風險" >}}
-Google 的混合應用程式和服務位於高度結構化且統一的程式碼樹中。來自一個項目團隊的 Java 開發者立刻可以識別出其他團隊應用程式或服務的目錄結構。這種情況在不同程式語言中也是通用的。目錄布局的設計需要全局統一執行。你可以從 Buck 和 Bazel 為產品程式碼和測試程式碼布局樹的方式中看出這一點。如果你無法徹底改革整個版本庫的目錄結構，那麼你不應該採用單一版本庫。
+Google 的混合應用程式和服務位於高度結構化且統一的程式碼目錄中。來自一個專案團隊的 Java 開發者立刻可以識別出其他團隊應用程式或服務的目錄結構。這種情況在不同程式語言中也是通用的。目錄布局的設計需要全局統一執行。你可以從 Buck 和 Bazel 為產品程式碼和測試程式碼布局樹的方式中看出這一點。如果你無法徹底改革整個版本庫的目錄結構，那麼你不應該採用單一版本庫。
 {{< /warning >}}
 
 <!--
@@ -135,7 +135,7 @@ time.
 
 ## 公司的內部依賴
 
-當不同團隊於同一間公司中開發各自的專案時，他們可能會相互依賴對方開發的程式碼或套件。以物件關係映射（ORM）為例，對於使用單一版本庫的團隊會傾向於直接依賴該 ORM 技術的程式碼，而非其編譯後的二進制檔案。這種作法的主要原因是，通過版本控制系統進行更新、拉取或同步操作，可以即時跟蹤到每分鐘的更新，從而最高效地保持與版本控制庫的同步。例如，如果一個團隊正在開發一個名為`MyTeamsApplication` 的專案，並且依賴於另一個團隊開發的 `TheORMweDepOn` ORM 程式碼，那麼這兩個項目應該同時檢出於該團隊的 IDE 中。同樣，依賴 `TheORMweDepOn` 的另一個團隊也應該同時檢出 `TheirApplication` 和 `TheORMweDepOn`，以減少因版本不一致導致的問題。
+當不同團隊於同一間公司中開發各自的專案時，他們可能會相互依賴對方開發的程式碼或套件。以物件關係映射（ORM）為例，對於使用單一版本庫的團隊會傾向於直接依賴該 ORM 技術的程式碼，而非其編譯後的二進制檔案。這種作法的主要原因是，通過版本控制系統進行更新、拉取或同步操作，可以即時跟蹤到每分鐘的更新，從而最高效地保持與版本控制庫的同步。例如，如果一個團隊正在開發一個名為`MyTeamsApplication` 的專案，並且依賴於另一個團隊開發的 `TheORMweDepOn` ORM 程式碼，那麼這兩個專案應該同時檢出於該團隊的 IDE 中。同樣，依賴 `TheORMweDepOn` 的另一個團隊也應該同時檢出 `TheirApplication` 和 `TheORMweDepOn`，以減少因版本不一致導致的問題。
 
 <!--
 ## Directed graph build systems
@@ -257,9 +257,9 @@ machines in the TCP/IP subnet). That is in place to shorten compile times for pr
 
 Google 內部有一個名為 Blaze 的系統。前 Google 員工轉職至 Facebook （與新朋友合作）後，因懷念這個系統，因此他們建立了 Buck{{< ext url="https://buckbuild.com" >}}，並隨後將其開源。之後，Google 也將一個簡化版的 Blaze 以 Bazel{{< ext url="https://bazel.build" >}} 的形式開源。這三個（包括 Blaze）有向圖建置系統能夠迅速地對一個龐大的程式碼樹進行編譯、測試或產生二進位檔案的分割。
 
-Buck 和 Bazel 省略不必要的編譯/測試操作，在開發者的個人電腦和 CI 基礎設施上同樣有效。
+Buck 和 Bazel 省略不必要的編譯與測試操作，在開發者的個人電腦和 CI 基礎設施上同樣有效。
 
-此外，還能依賴於同事最近編譯的物件程式碼。也就是說，這些物件程式碼是對原始程式碼/依賴項目的可證明的排列所編譯出來的。這些程式碼從網路中獲取（想像一下，一個對所有位於同一個 TCP/IP 子網路中的機器可用的 LRU 快取策略）。這樣做的目的是為了縮短產品程式和測試程式的編譯時間。
+此外，還能依賴於同事最近編譯的物件程式碼。也就是說，這些物件程式碼是對原始程式碼或依賴專案的可證明的排列所編譯出來的。這些程式碼從網路中獲取（想像一下，一個對所有位於同一個 TCP/IP 子網路中的機器可用的 LRU 快取策略）。這樣做的目的是為了縮短產品程式和測試程式的編譯時間。
 
 <!--
 ## Recursive build systems
@@ -332,7 +332,7 @@ root/
 
 再次強調，YAML、JSON、TOML 及自定義語法是 XML 的替代選擇用於建置文件。
 
-遞迴式建置系統大多具有選擇建置類型的能力。例如使用「mvn test」僅用於執行專案中定義的測試案例，而不會進行整個專案的完整建置流程，即不會產生最終的可執行檔案或套件庫檔案。有助於開發者在開發過程中，不需要完整建置整個項目，就能頻繁執行測試來驗證程式碼更改的正確性。這樣可以節省時間，專注於測試的執行與結果分析。
+遞迴式建置系統大多具有選擇建置類型的能力。例如使用「mvn test」僅用於執行專案中定義的測試案例，而不會進行整個專案的完整建置流程，即不會產生最終的可執行檔案或套件庫檔案。有助於開發者在開發過程中，不需要完整建置整個專案，就能頻繁執行測試來驗證程式碼更改的正確性。這樣可以節省時間，專注於測試的執行與結果分析。
 
 <!--
 ## The diamond dependency problem
@@ -346,9 +346,9 @@ of it. The concept of version number disappears in this model.
 
 ## 鑽石依賴問題
 
-當兩個或多個應用程式依賴於同一個依賴項目的不同版本時，會發生什麼問題？
+當兩個或多個應用程式依賴於同一個依賴專案的不同版本時，會發生什麼問題？
 
-對於內部依賴項目，如果原始程式碼在同一個單一版本庫中，就不會出現這種情況，因為第一個需要增強功能的團隊會為所有團隊進行更新，使每個人都保持在它的最新修訂版。在這種模型中，版本號的概念消失了。
+對於內部依賴，如果原始程式碼在同一個單一版本庫中，就不會出現這種情況，因為第一個需要增強功能的團隊會為所有團隊進行更新，使每個人都保持在它的最新修訂版。在這種模型中，版本號的概念消失了。
 
 <!--
 ### Third-party dependencies
@@ -408,7 +408,7 @@ In order to deliver that, you would need a feature to be added Maven like so:
 
 ```xml
 <modules>
-  <calculate/> <!--or--> <search/>
+  <calculate/> <!-or-> <search/>
 </modules>
 ```
 
@@ -427,7 +427,7 @@ contraction{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-styl
 </modules>
 ```
 
-[^pom.xml]: 如 XML 所示，用以告訴 Maven 當前項目包含兩個子模組，分別是 `moduleone` 和 `moduletwo`。Maven 會在建置過程中查找與這些模組名稱對應的目錄，並在這些目錄中找尋各自的 pom.xml 檔案來執行相應的建置命令。
+[^pom.xml]: 如 XML 所示，用以告訴 Maven 當前專案包含兩個子模組，分別是 `moduleone` 和 `moduletwo`。Maven 會在建置過程中查找與這些模組名稱對應的目錄，並在這些目錄中找尋各自的 pom.xml 檔案來執行相應的建置命令。
 
 然而，目前這些建置技術還沒有能力跟隨像 gcheckout 這樣的可變 checkout 控制。
 
@@ -441,7 +441,7 @@ contraction{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-styl
 
 或者你可以「駭客攻擊[^hack-it]」，在每次擴展或收縮後動態地重寫 pom.xml 檔案{{< ext url="http://paulhammant.com/2017/01/27/maven-in-a-google-style-monorepo/" >}}，以反映新的模組結構。
 
-[^hack-it]: 駭客攻擊（hack it）方法是指在每次單一版本庫發生擴展或收縮時，手動重寫 pom.xml。這是一種臨時的解決方案，用於解決 Maven 當前不支持動態調整項目結構的限制。
+[^hack-it]: 駭客攻擊（hack it）方法是指在每次單一版本庫發生擴展或收縮時，手動重寫 pom.xml。這是一種臨時的解決方案，用於解決 Maven 當前不支持動態調整專案結構的限制。
 
 <!--
 ## If you decide you do multiple repos instead of a monorepo
@@ -471,9 +471,9 @@ Lastly, Microsoft in their movement away from legacy VCS choices and branching m
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 -->
 
-# 其他參考資料
+# 其他參考資料 {#references-elsewhere}
 
-<a id="showHideRefs" href="javascript:toggleRefs();">顯示其他參考</a>
+<a id="showHideRefs" href="javascript:toggleRefs();">顯示參考資料</a>
 
 <div>
     <table style="border: 0; box-shadow: none">

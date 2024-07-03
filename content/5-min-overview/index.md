@@ -96,7 +96,7 @@ Teams with a higher release cadence do the former, and those with a lower releas
 
 #### 發布在哪裡進行？
 
-一個關鍵的協助發布的原則是，採用主幹開發的團隊僅能**直接從主幹發布**──見[從主幹發布](https://trunkbaseddevelopment.com/release-from-trunk/),**或者**他們專門從主幹建立一個分支用於實際的發布。見[為發布建立分支](https://trunkbaseddevelopment.com/branch-for-release/)。發布頻率較高的團隊採用前者方法，而發布頻率較低的團隊則採用後者方法。
+一個關鍵的協助發布的原則是，採用主幹開發的團隊要麼直接從主幹發布 - 參見[從主幹發布](/release-from-trunk/)，**或者**他們專門從主幹建立一個分支用於實際的發布。參見[為發布建立分支](/branch-for-release/)。發布頻率較高的團隊採用前者方法，而發布頻率較低的團隊則採用後者方法。
 
 <!--
 ### Checking out / cloning
@@ -201,7 +201,7 @@ to allow those changes to be more easily consumed by teammates.
 
 ## 開發團隊的責任
 
-如前面所述，開發者已承諾嚴格執行，他們將不會使建置過程失敗。此外，他們必須要意識到他們的大規模提交可能會對項目產生重大影響，尤其是當進行大量的重命名或文件移動時。因此，開發者需要採用相應的技巧和方法，以確保他們的改動可以被其他團隊成員更輕鬆地接受和整合。
+如前面所述，開發者已承諾嚴格執行，他們將不會使建置過程失敗。此外，他們必須要意識到他們的大規模提交可能會對專案產生重大影響，尤其是當進行大量的重命名或文件移動時。因此，開發者需要採用相應的技巧和方法，以確保他們的改動可以被其他團隊成員更輕鬆地接受和整合。
 
 <!--
 ## Drilling into 'Distance'
@@ -223,11 +223,13 @@ Problematic 'distance' has a few tangible examples:
 
 <!--
 # References elsewhere
--->
-
-# 外部參考連結
 
 <a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
+-->
+
+# 其他參考資料 {#references-elsewhere}
+
+<a id="showHideRefs" href="javascript:toggleRefs();">顯示參考資料</a>
 
 <div>
     <table style="border: 0; box-shadow: none">

@@ -187,15 +187,13 @@ there was a slide that depicts cherry-picks in a branch diagram:
 
 <!--
 The presenter, Rachel Potvin, said (14 mins in):
--->
 
-演講者 Rachel Potvin 在演講中（14分鐘處）說道：
-
-<!--
 "So at Google we do what's called Trunk-Based Development. I should note that it is the combination of Trunk-Based Development with a centralized repository that really defines the monolithic model of source code management. So
 what Trunk-Based Development means for us that typically Piper users all work from HEAD or a single copy of the most recent version of the codebase. When developers commit to Piper their changes are immediately visible and usable by other engineers. Branching for development at Google is exceedingly rare and Trunk-Based Development is beneficial partly because you avoid the painful merges that often occur when you need to reconcile long lived branches.  Branches however are used for releases. **So a release branch is typically a snapshot from trunk with an 
 optional number of cherry picks that are developed on trunk and then pulled into the branch**."
 -->
+
+演講者 Rachel Potvin 在演講中（14分鐘處）說道：
 
 「在 Google，我們實行的是主幹開發。我應該指出，正是主幹開發與集中式程式碼版本庫的結合，真正定義了原始碼管理的整體模式。對我們來說，主幹開發意味著 Piper（Google 內部使用的程式碼版本工具）使用者直接從 HEAD 進行開發，或者從最新版本的基準程式碼中建立單一的工作副本。當開發者向 Piper 提交時，他們的更改立即讓其他工程師可見且可用。在 Google 為了開發而建立分支是極為罕見的，而主幹開發之所以有益，部分原因是可以避免經常發生合併長期分支時的痛苦。**然而，分支通常用於發布。因此，發布分支通常從主幹的一個快照建立，並可選擇性地將在主幹上開發的若干提交透過 cherry-pick 操作拉入分支中。**」
 
@@ -204,55 +202,47 @@ We've bolded the cherry-pick bit ourselves.  Readers with beady eyes will note t
 dev branches other than trunk for 'rare' reasons. We may cheekily suggest that Google should learn a little more about [Branch by Abstraction](/branch-by-abstraction/).
 -->
 
-我們加粗了 cherry-pick 的部分。細心的讀者會注意到 Rachel 提到除了主幹以外的分支是「罕見」的。我們可以俏皮地建議 Google 應該了解更多[抽象分支](/branch-by-abstraction/)。
+我們標註了 cherry-pick 的部分。細心的讀者會注意到 Rachel 提到主幹以外的分支是「罕見」的。我們可以俏皮地建議 Google 應該了解更多[抽象分支](/branch-by-abstraction/)。
 
 <!--
 ### Merge Meister role
--->
 
-### 「合併專家」角色
-
-<!--
 The process of merging commits from trunk to the release branch using 'cherry pick' is a role for a single developer
 in a team. Or dev pair, if you are doing Extreme Programming. Even then, it is a part time activity. The dev or pair
 probably needs to police a list of rules before doing the cherry pick. Rules like which business representative
 signed off on the merge. Perhaps the role should also rotate each day.
--->
 
-在團隊中，由單一開發者或兩位開發者（如果實行極限開發）負責使用「cherry-pick」將提交從主幹挑選到發布分支。即使如此，這仍是一項兼職活動。在進行 cherry-pick 前，開發者可能需要檢查一系列規則。例如，哪位業務代表批准了合併。也許這個角色應該每天輪換一次。
-
-<!--
 Some teams update a wiki to audit what made it to the release branch after branch cut, and some use ticket system as
 this by its nature interrupting and requiring of an audit trail of approvals.
 -->
+
+### 「合併專家」角色
+
+在團隊中，由單一開發者或兩位開發者（如果實行極限開發）負責使用「cherry-pick」將提交從主幹挑選到發布分支。即使如此，這仍是一項兼職活動。在進行 cherry-pick 前，開發者可能需要檢查一系列規則。例如，哪位業務代表批准了合併。也許這個角色應該每天輪換一次。
 
 有些團隊更新維基以審核哪些內容在建立分支後進入了發布分支，而有些團隊則使用需求追蹤系統，因為這種做法本質上需要中斷並要求有一個審批的審計軌跡。
 
 <!--
 ## Patch releases
--->
 
-## 修補程式版本
-
-<!--
 It could be that your team has pushed a release out from a release branch, and now has a bug to remediate in
 production. If the release cadence suits it, a cherry-pick of a bug fix from the trunk to the release branch
 and a point release from the same branch is fine.
 -->
 
+## 修補程式版本
+
 可能你的團隊已經從一個發布分支推出了一個版本，現在需要在正式環境中修復一個錯誤。如果發布節奏適合，那麼在主幹上修復的錯誤將透過 cherry-pick 到發布分支，然後從發布分支釋出修復錯誤的小版本號，是很好的作法。
 
 <!--
 ### Tag instead of branch
--->
 
-### 使用標籤而非分支
-
-<!--
 Releasing from a tag on the trunk is a decent optimization for many teams, if possible. The tag could be numbered for
 the release (say v1.1.1), and the branch can be avoided completely. Perhaps if there is a bug in production and a branch
 is retroactively created from that tag, and the patch release (see above) can happen from there.
 -->
+
+### 使用標籤而非分支
 
 如果可能的話，對許多團隊而言，從主幹上透過標籤發布是一種不錯的最佳化方式。標籤可以為發布編號（例如 v1.1.1），從而完全避免使用分支。如果正式環境中出現錯誤，可以從該標籤追溯性地建立一個分支，並且發布修補程式版本（見上文）。
 
@@ -268,15 +258,17 @@ That is usually when releases from succeeding release branches have gone live. T
 harmless tidying activity - branches can be undeleted again easily enough in all VCS choices. In git, a tag needs to be created from the released commit before deleting the release branch, since dangling commits will be garbage collected.
 -->
 
-發布分支在其發布活動結束後的一段時間內會被刪除。不會立即刪除，直到確定該版本不會在正式環境中運行時，便會進行刪除。發布分支**不會**被合併回主幹。通常是在後續的發布分支已經上線時才進行刪除。在所有的版本控制系統中，這是一項無害的整理活動，分支都可以輕鬆地再次恢復。在 git 中，在刪除發布分支之前，需要從已發布的提交建立一個標籤，因為懸空的提交將會被垃圾回收。
+發布分支在其發布活動結束後的一段時間內會被刪除。不會立即刪除，直到確定該版本不會在正式環境中運行時，便會進行刪除。發布分支**不會**被合併回主幹。通常是在後續的發布分支已經上線時才進行刪除。在所有的版本控制系統中，這是一項無害的整理活動，分支都可以輕鬆地再次恢復。在 Git 中，在刪除發布分支之前，需要從已發布的提交建立一個標籤，因為懸空的提交將會被垃圾回收。
 
 <!--
 # References elsewhere
+
+<a id="showHideRefs" href="javascript:toggleRefs();">show references</a>
 -->
 
-# 其他參考資料
+# 其他參考資料 {#references-elsewhere}
 
-<a id="showHideRefs" href="javascript:toggleRefs();">顯示其他參考資料</a>
+<a id="showHideRefs" href="javascript:toggleRefs();">顯示參考資料</a>
 
 <div>
     <table style="border: 0; box-shadow: none">
