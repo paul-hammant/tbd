@@ -35,7 +35,7 @@ a point release).  If you can not reproduce bugs on the trunk (truly rare), then
 reproduce it on the release branch, fix it there, and merge back.
 -->
 
-## 從發布分支到主幹的錯誤修復的 Cherry-pick
+## 將發布分支中的錯誤修正 Cherry-pick 到主幹
 
 你所有的開發者都在使用主幹，並且他們正在做正確的事情而不破壞建置。你的發布節奏不夠頻繁，因此允許你在基礎上即時剪出一個發布分支，然後在實際發布前強化它。
 
