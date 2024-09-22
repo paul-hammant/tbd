@@ -692,7 +692,7 @@ emergent DevOps practices, which they would get to reuse and refine on the follo
 
 請參閱[出版品 - Continuous Delivery](/publications/index.html#continuous-delivery-july-27-2010)。
 
-Jez Humble{{< ext url="https://continuousdelivery.com" >}} 與 Dave Farley{{< ext url="http://www.continuous-delivery.co.uk" >}} 在西元 2007 年完成一個位於倫敦的 ThoughtWorks 專案後，寫了這本具有影響力的書。客戶是 AOL — 時間過去地足夠久了，可以透露這個細節。當時業界正在進行特定的 DevOps 進展，但是考慮到在上限日期要完成的工作量，這個專案的一個關鍵的點是預定的上線日期非常緊迫。如此緊迫，以至於不得不壓縮專案中經典的「減緩撰寫程式碼」，並且開始全面使用者驗搜測試的階段。團隊必須要觸發許多自動化步驟，來達到更快的反饋循環。這讓他們對剛剛提交的程式碼質量有很高的信心。他們特別專注於 CI 流水線和資料庫表結構遷移的差異腳本。
+Jez Humble{{< ext url="https://continuousdelivery.com" >}} 與 Dave Farley{{< ext url="http://www.continuous-delivery.co.uk" >}} 在西元 2007 年完成一個位於倫敦的 ThoughtWorks 專案後，寫了這本具有影響力的書。客戶是 AOL — 時間過去地足夠久了，可以透露這個細節。當時業界正在進行特定的 DevOps 進展，但是考慮到在上限日期要完成的工作量，這個專案的一個關鍵的點是預定的上線日期非常緊迫。如此緊迫，以至於不得不壓縮專案中經典的「減緩撰寫程式碼」，並且開始全面使用者驗搜測試的階段。團隊必須要觸發許多自動化步驟，來達到更快的反饋循環。這讓他們對剛剛提交的程式碼品質有很高的信心。他們特別專注於 CI 流水線和資料庫表結構遷移的差異腳本。
 
 西元 2010 年的《Continuous Delivery》書是這一結果的暢銷作品。從此之後，這本書已經被翻譯成三種語言，兩位作者現在也在各自的職業生涯中進一步為客戶傳遞和描述這些益處。這本書將 DevOps 的基礎概念與持續整合的 pipelines 以及緊密的精實反饋循環結合在一起，給出了在西元 2010 年及之後如何多人協做開發軟體一個廣泛而深刻的定義。
 

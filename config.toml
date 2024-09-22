@@ -125,7 +125,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 71
 
 [[menu.main]]
-	name   = "連續發布的平行開發"
+	name   = "連續發布的並行開發"
 	url    = "concurrent-development-of-consecutive-releases/"
 	weight = 75
 
