@@ -38,6 +38,10 @@ googleAnalytics = "UA-24415524-3"
     	text = "Ubuntu"
     	code = "Ubuntu Mono"
 
+[page]
+	nextPrevInSectionSortOrder = 'desc'
+	nextPrevSortOrder = 'desc'
+
 
 [social]
 	twitter = ""
