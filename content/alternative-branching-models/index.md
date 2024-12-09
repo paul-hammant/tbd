@@ -11,9 +11,9 @@ weight: 101
 {{< /quote >}}
 -->
 
-{{< quote title="分支：僅在必要時建立，遇到不相容的政策或已經過期時，選擇建立分支而不是凍結版本。" >}}
+{{< quote title="分支：僅在必要時使用，當提交政策不相容時使用，盡可能推遲建立，以及作為凍結版本的替代方案。" >}}
 <span>&mdash; Laura Wingerd & Christopher Seiwald</span><br>
-<span style="margin-left: 30px">( 1998 年的 Perforce 高層次 SCM 最佳實踐白皮書)</span>
+<span style="margin-left: 30px">1998 年 Perforce 使用者大會《High-Level SCM Best Practices》白皮書</span>
 {{< /quote >}}
 
 <!--
