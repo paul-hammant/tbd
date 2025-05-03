@@ -41,7 +41,9 @@ The dividing line between small team Trunk-Based Development and scaled Trunk-Ba
 
 - You should do Trunk-Based Development instead of GitFlow and other branching models that feature multiple long-running branches
 - You can either do a direct to trunk commit/push (v small teams) or a Pull-Request workflow as long as those feature branches
-  are short-lived and the product of a single person.
+  are short-lived and the product of a single dev-workstation , whether done solo, pair-programmed, or mob. If the mob is bigger and the change more all-encompassing, techniques should include feature flags, branch by abstraction and "don't break the build"
+
+Of course, "Dev workstation" rquires some  interpretation in recent years.  Development may be in a VM, or a dev container of sorts. Those could be local or in a cloud somewhere. 
 
 ### Caveats
 
