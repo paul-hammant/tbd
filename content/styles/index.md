@@ -29,7 +29,7 @@ you have trade-offs for each of the three:
 
 ## Committing Straight to the Trunk
 
-Suitable for active committer counts between 1 and 100.
+Suitable for active committer counts between 1 and 100, for the same repository
 
 {{< figure src="/styles/styles-tradeoffs-l.png" class="floatleft" title="left hand side of the diagram above" >}}
 
@@ -54,7 +54,7 @@ See [committing straight to the trunk](/committing-straight-to-the-trunk/) for m
 
 ## Short-Lived Feature Branches
 
-Suitable for active committer counts between 2 and 1000.
+Suitable for active committer counts between 2 and 1000, for the same repository
 
 {{< figure src="/styles/styles-tradeoffs-c.png" class="floatleft" title="center of the diagram above" >}}
 
@@ -81,7 +81,7 @@ See [short-lived feature branches](/short-lived-feature-branches/) for more info
 
 ## Coupled "Patch Review" System
 
-Suitable for active committer counts between 2 and 40,000.
+Suitable for active committer counts between 2 and 40,000, for the same repository
 
 "We do Trunk-Based Development" - Googler Rachel Potvin - @Scale keynote, Sept 2015 (14 mins in):
 
