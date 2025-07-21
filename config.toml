@@ -114,7 +114,7 @@ googleAnalytics = "UA-24415524-3"
 	weight = 62
 
 [[menu.main]]
-	name   = "Short Lived Feature Branches"
+	name   = "Short-Lived Feature Branches"
 	url    = "short-lived-feature-branches/"
 	weight = 63
 

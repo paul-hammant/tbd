@@ -14,7 +14,7 @@ back as "pull requests" into the main/trunk.
 
 <!-- wrweresd -->
 
-With the Pull Request (and code review) advance, the cut-off point for team sizes that graduated from "direct to the trunk" to short lived feature branches moved lower.
+With the Pull Request (and code review) advance, the cut-off point for team sizes that graduated from "direct to the trunk" to short-lived feature branches moved lower.
 While it was up to 100 before Git's lightweight branching, it is now up to 15 people. With 16 or more, the team is more
 productive with short-lived feature branches, and corresponding CI daemons verifying those in advance of
 commits landing in the trunk. 
@@ -22,6 +22,8 @@ commits landing in the trunk.
 One key rule is the length of life of the branch before it gets merged and deleted. Simply put, the branch
 should only last a couple of days. Any longer than two
 days, and there is a risk of the branch becoming a long-lived feature branch (the antithesis of trunk-based development).
+
+Of course, bug fixes are not features as such, but the "short-lived feature branches" means them too. Perhaps "short-lived change branches" means both, but we're stuck with the features name by now. 
 
 <!-- sdwerfhfsdfsd -->
 
