@@ -79,7 +79,7 @@ this way without encountering the same problem. This is known as the "race to pu
 Fork-based "pull requests" and similar branch-based "merge requests" in hosted git services solve this to a degree, with robots 
 keeping pull-request branches abreast of `origin:main` automatically as long as no conflicts arise.
 
-If you are using GitHub as your repository host, [GitHub Merge Queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) can help solve the "race to push" problem. This will automate pull request merges into a busy branch to increase velocity.
+If you are using GitHub as your repository host, GitHub Merge Queue{{< ext url="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue" >}} can help solve the "race to push" problem. This will automate pull request merges into a busy branch to increase velocity. GitHub made this generally available in July 2023{{< ext url="https://github.blog/news-insights/product-news/github-merge-queue-is-generally-available/" >}}.
 
 Even with Pull Requests, however, very high commit frequencies to the shared repo means contention and an artificial 
 serialization. Microsoft acknowledged this as one
