@@ -33,8 +33,8 @@ break the build.
 4. Remove the to-be-replaced implementation
 5. Remove the abstraction
 
-Hopefully, your team uses an IDE that can perform complex refactorings on sets on checkouts, in a way that running the build 
-after each is an uneventful validation of the refactorings.
+Hopefully, your team uses an IDE that can perform complex refactoring on sets of checkouts, in a way that running the build 
+after each is an uneventful validation of the changes.
 
 ## Contrived example
 

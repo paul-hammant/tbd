@@ -13,7 +13,7 @@ weight: 101
 
 ### GitHub flow
 
-This is sooooo close to PR-centric Trunk-Based Development. Why? Because it is a branching model that has individual
+This is very close to PR-centric Trunk-Based Development. Why? Because it is a branching model that has individual
 developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than
 individuals.
 
