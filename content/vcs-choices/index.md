@@ -9,19 +9,19 @@ weight: 32
 See Git's website{{< ext url="https://git-scm.com" >}} and Mercurial's website{{< ext url="https://www.mercurial-scm.org" >}}
 
 Git and Mercurial have been popular DVCS technologies for many years. Portals like GitHub make Git, in particular, the default 
-choice for SCM/SVC/source-control. While the Linux Kernel is maintained with Git, and definitely takes advantage 
+choice for SCM/VCS/source-control. While the Linux Kernel is maintained with Git, and definitely takes advantage 
 of the D-Distributed aspect of the DVCS of Git (in that many divergent versions of kernel can exist over 
 long periods of time), most enterprises are still going to count a single repository as the principal one, and within 
 that a single branch as the long-term "most valuable" code line.
 
-It is perfectly possible to do Trunk-Based Development in a Git repository. By convention 'master' is the long term 
+It is perfectly possible to do Trunk-Based Development in a Git repository. By convention 'main' is the long term 
 most valuable branch, and once cloned to your local workstation, the repository gains a nickname of 'origin'.
 
 ### Forks
 
 An effective Trunk-Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
-(and of master within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
-consumed back into `origin:master`. Other branching models use the same Pull-Request process for 
+(and of 'main' within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
+consumed back into `origin:main`. Other branching models use the same Pull-Request process for 
 code-reviews too - it is the normal way of working with Git since GitHub rolled out the feature.
 
 ### Size Limits
@@ -79,8 +79,8 @@ developer workstations.
 
 * GitHub {{< ext url="https://github.com" >}} - Git, cloud 
 * GitHub Enterprise {{< ext url="https://enterprise.github.com/home" >}} - Git in GitHub's on-premises edition
-* Gitlab {{< ext url="https://about.gitlab.com" >}} - Git, cloud and on-premises install
-* Atlassian's Bitbucket server {{< ext url="https://www.atlassian.com/software/bitbucket/server)" >}}- Git and Mercurial
+* GitLab {{< ext url="https://about.gitlab.com" >}} - Git, cloud and on-premises install
+* Atlassian's Bitbucket server {{< ext url="https://www.atlassian.com/software/bitbucket/server" >}}- Git
 * RhodeCode {{< ext url="https://rhodecode.com" >}} - Git, Mercurial and Subversion
 * Assembla {{< ext url="https://www.assembla.com" >}} - Git, Mercurial, Perforce and Subversion
 * Various Collabnet{{< ext url="http://www.collab.net" >}} products and services for Git
@@ -202,7 +202,7 @@ usage for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}}.
 
 ## PlasticSCM
 
-Platic's website{{< ext url="https://www.plasticscm.com" >}}
+Plastic's website{{< ext url="https://www.plasticscm.com" >}}
 
 PlasticSCM is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk-Based Development and quite 
 self-contained (has integrated code review, etc). Plastic is very good with bigger binaries and comes with an 

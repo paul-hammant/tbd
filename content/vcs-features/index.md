@@ -30,7 +30,7 @@ And three other secondary things that support little and often:
 
 If you have at least once done a checkout of the source of the project, any subsequent pull/update/sync is going to bring down 
 differences from the previous checkout or update.  If you do two updates back to back quickly, the second one is likely to bring 
-down nothing.  The time taken for the version control tool to determine that nothing is due from the remote master 
+down nothing.  The time taken for the version control tool to determine that nothing is due from the remote main 
 repository is the biggest clue as to how intrinsically fast it is. 
 
 Technologies that only keep head revision on the checkout, ordinarily have to walk the entire directory structure 
@@ -66,7 +66,7 @@ Perforce and Subversion will allow you to commit/push changes to the remote, wit
 incidentally all the intervening ones) locally first.  It will only allow that if there was no clash on the lines changed.
 
 Perforce can cheat again, but taking advantage of the read-only bit, and therefore already knows which files definitely 
-have **not** changed between the remote master repo and local working copy. It still feels slower than it should be, though.  
+have **not** changed between the remote main repo and local working copy. It still feels slower than it should be, though.  
 
 ### Three-way merge tools
 
@@ -89,14 +89,14 @@ using Perforce back then (they changed to an in-house technology in 2012), and i
 they had to make Mondrian (which was the final form of years of intermediate deliverables for the same). Thus
 Mondrian being created tightly coupled code review to the hourly activities of developers on the trunk. 
 
-GitHub (not Git) was next for the non-Google dev world with a built in code-review tool (and workflow). Again this was 
-effectively pre-commit - or at least commit to the master.
+GitHub (not Git) was next for the non-Google dev world with a built-in code-review tool (and workflow). Again this was 
+effectively pre-commit - or at least commit to the main.
 
 There were (and are) other technologies for code review such as Crucible (Atlassian), UpSource (JetBrains), Gerrit, 
 Phabricator, but integration into a platform experience is key.  GitLab and RhodeCode are emerging platforms.
 
-Read more in [Game Changers - Google's Mondrian](/game-changers/index.html#google-s-internal-devops-2006-onwards) and 
-[Game Changers - GitHub's Pull Requests](/game-changers/index.html#github-s-entire-platform-2008-onwards).
+Read more in [Game Changers - Google's Mondrian](/game-changers/#googles-internal-devops-2006-onwards) and 
+[Game Changers - GitHub's Pull Requests](/game-changers/#githubs-entire-initial-platform-2008).
 
 ### Continuous Integration testing
 
@@ -138,6 +138,6 @@ limitless server-side storage for their repository.  Git and Mercurial are inchi
 capacity, but there are still a few snafus to work through - how to cleanly/safely reduce the size of the client side clone
 history (while still being able to push changes back to the server) is a challenge.
 
-Microsoft released Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://vfsforgit.org/" >}}) in early 2017, to layer on some of the things they had 
+Microsoft released Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}} - Windows only) in early 2017, to layer on some of the things they had 
 become used to in the in-house recompilation of Perforce (SourceDepot - used from 1998 to 201x), as well as native VCS 
 of their commercial offering Team Foundation Server (TFS).

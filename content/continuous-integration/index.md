@@ -56,7 +56,7 @@ straight to the trunk](/committing-straight-to-the-trunk/)). Larger teams may pu
 Every development team bigger than three people needs a CI daemon to guard the codebase against bad commits and timing mistakes.
 Teams have engineered build scripts which execute quickly. This should apply from compilation through functional 
 testing (perhaps leveraging mocking at several levels) and packaging. However, there is no guarantee that a developer would run the build script before 
-committing. The CI daemon fulfils that role by verifying commits to be good once they land in the trunk. Enterprises 
+committing. The CI daemon fulfills that role by verifying commits to be good once they land in the trunk. Enterprises 
 have either built a larger scaled capability around their CI technology, so that it can keep up with the commits/pushes 
 of the whole team or they use batching of commits which takes up less computing power to track and verify work.
 
@@ -100,10 +100,10 @@ If teams are bigger, though, with more commits a day then pushing something inco
 the team. Having the CI daemon deal with **every commit** separately is desirable. If the CI daemon is single-threading "jobs" there is a risk
 that the thing could fall behind. 
 
-#### Master / Slave CI infrastructure
+#### Controller / Agent CI infrastructure
 
-More advanced CI Server configurations have a master and many slaves setup so 
-that build jobs can be parallelized. That's more of an investment than the basic setup, and but is getting easier and 
+More advanced CI Server configurations have a single controller and many agents setup so 
+that build jobs can be parallelized. That's more of an investment than the basic setup, but is getting easier and 
 easier in the modern era with evolved CI technologies and services. 
 
 The likes of Docker means that teams can have build environments that are perfectly small representations of 
@@ -215,6 +215,7 @@ branch too.
 * Atlassian's Bamboo{{< ext url="https://www.atlassian.com/software/bamboo" >}} - on-premises install
 * JetBrains' TeamCity{{< ext url="https://www.jetbrains.com/teamcity" >}} - on-premises install
 * Microsoft's TFS platform{{< ext url="https://www.visualstudio.com/tfs" >}} - on-premises install (built into larger platform)
+* Codefresh{{< ext url="https://codefresh.io" >}} - cloud, on-premises and hybrid (bring your own runner) install
 
 Note, for Jenkins, you can now use Pipeline DSL scripts (or Groovy) {{< ext url="https://jenkins.io/doc/book/pipeline/" >}} (formerly Workflow), or you can use Jenkins with GroupOn's DotCI{{< ext url="https://github.com/groupon/DotCi" >}} to co-locate the config
 with the thing being built/verified in source-control.

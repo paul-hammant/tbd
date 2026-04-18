@@ -77,11 +77,13 @@ thought you were going to push, Git will inform you that you have to pull first.
 this way without encountering the same problem. This is known as the "race to push".
 
 Fork-based "pull requests" and similar branch-based "merge requests" in hosted git services solve this to a degree, with robots 
-keeping pull-request branches abreast of `origin:master` automatically as long as no conflicts arise.
+keeping pull-request branches abreast of `origin:main` automatically as long as no conflicts arise.
+
+If you are using GitHub as your repository host, there is a tool that can help solve the "race to push" problem. It is called Bors-NG{{< ext url="https://github.com/bors-ng/bors-ng" >}} and it is a merge bot for GitHub pull requests. It will take care of merging the latest trunk version into your branch, running all needed tests and merging the result back into the trunk, managing this as a queue and removing these race conditions.
 
 Even with Pull Requests, however, very high commit frequencies to the shared repo means contention and an artificial 
 serialization. Microsoft acknowledged this as one
-of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://vfsforgit.org/" >}}).
+of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}} which is Windows only for now).
 
 {{< quote title="Git has critical serialization points that will cause a queue to back up badly" >}}
 <span>&mdash; Brian Harry</span><br>
@@ -99,7 +101,7 @@ If your organization feels like this, and a Monorepo does not feel right, then M
 ## Database migrations
 
 In order to manage database schemas in a Trunk-Based Development way you will need to find a way to handle table-shape changes under source control, and even
-manage existing data where new/changed columns have happened. Pramod Sadlage and Scott Amber's book 
+manage existing data where new/changed columns have happened. Pramod Sadlage and Scott Ambler's book 
 "Refactoring Databases: Evolutionary Database Design"{{< ext url="https://www.amazon.com/Refactoring-Databases-Evolutionary-paperback-Addison-Wesley/dp/0321774515" >}}
 goes into that much more, as does the [Continuous Delivery](/continuous-delivery/) book.
 

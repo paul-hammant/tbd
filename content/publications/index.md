@@ -162,7 +162,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
         <em>As their 2015 report, a survey of thousands of software development professionals distilled into a report that determines
         practices for the highest achieving organizations</em><br/>
         <span style="font-size: 120%">&ldquo;</span>The idea that developers should work in small batches
-                                                    off master or trunk rather than on long-lived feature
+                                                    off master [main since 2020] or trunk rather than on long-lived feature
                                                     branches is still one of the most controversial ideas
                                                     in the Agile canon, despite the fact it is the norm in
                                                     high-performing organizations such as Google.
@@ -187,7 +187,7 @@ Translations: <a href="http://www.amazon.cn/gp/product/B005V9BB1M?tag=contindeli
                                                     development plays in continuous delivery. While our
                                                     experience shows that developers in high-performing
                                                     teams work in small batches and develop off of trunk
-                                                    or master, rather than long-lived feature branches,
+                                                    or master [main since 2020], rather than long-lived feature branches,
                                                     many practitioners in the industry routinely work in
                                                     branches or forks.<span style="font-size: 120%">&rdquo;</span>
         <br/>by Puppet Labs
