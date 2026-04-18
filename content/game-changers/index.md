@@ -514,7 +514,8 @@ In none other than the Association for Computing Machinery's magazine, Googlers 
 how Google arranges for 95% (25,000) of its software developers to share one trunk in "Why Google Stores Billions of
 Lines of Code in a Single Repository"{{< ext url="http://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext" >}}.
 They use a [Monorepo](/monorepos/) variant of a trunk, with internal code shared at **source level**, for high-throughput,
-low-defect delivery of multiple applications and services. Each application/service has a release cadence chosen by the dev+biz
+low-defect delivery of multiple applications and services. By this point Google had replaced Perforce with
+their in-house VCS, Piper (in 2012), to handle the scale. Each application/service has a release cadence chosen by the dev+biz
 team in question. Yes, everything works just fine.
 
 A couple of months later, Rachel Potvin presented at the @Scale Conference on the same topic{{< ext url="https://youtu.be/W71BTkUbdqE" >}} - "Why Google Stores Billions of Lines of Code in a
