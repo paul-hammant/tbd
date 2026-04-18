@@ -120,7 +120,7 @@ technology and technique (see below).
 
 ### Perforce's High-Level SCM Best Practices white paper
 
-Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="https://www.perforce.com/sites/default/files/pdf/perforce-best-practices.pdf" >}}
+Laura Wingerd and Christopher Seiwald penned this widely read paper{{< ext url="https://web.archive.org/web/20111015071852/http://perforce.com/sites/default/files/pdf/perforce-best-practices.pdf" >}}
  that was presented at an SCM conference in Brussels the same year.
 
 The paper alternates between 'trunk' and 'mainline' language, but has many valuable nuggets in
