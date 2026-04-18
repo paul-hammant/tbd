@@ -4,3 +4,5 @@
 
 [build.environment]
   HUGO_VERSION = "0.110.0"
+  # Whitelist COMMIT_REF for Hugo's getenv (default policy only permits ^HUGO_ and ^CI$).
+  HUGO_SECURITY_FUNCS_GETENV = "^HUGO_|^CI$|^COMMIT_REF$"
