@@ -46,4 +46,9 @@ That modern alternative that allows development teams to scale up without having
 
 There are also teams that send patches to review systems like Gerrit and Rietveld, instead of committing/pushing straight to trunk/main. Google pioneered this with their in-house Mondrian system in 2006, and Gerrit and Rietveld were made in the image of that. Facebook's Phabricator is another that came later. As well as code review, build-automation systems objectively verify the correctness of the proposed changes, leaving you with high confidence that the following merge/integration into trunk/main will yield a similar positive result when the same infrastructure kicks in later for CI purposes. It is important to note that the automation you attach to commits/pushes to non-trunk branches (or patch queue/review systems) is not Continuous Integration itself.
 
-These two alternatives, as well as committing straight to the trunk are compared in [Styles and Trade-offs](/styles/).  
+These two alternatives, as well as committing straight to the trunk are compared in [Styles and Trade-offs](/styles/).
+
+# Tooling support
+
+[`tbdflow`](https://github.com/cladam/tbdflow) is a small CLI by Claes Adamsson that codifies a "safe path" for teams committing straight to trunk. It automates `fetch -> rebase` integration with a "WIP Guard" snapshot of the working directory before integration, runs pre-flight CI status checks and a "Conflict Radar" to catch overlapping changes or red builds before they reach the trunk, and injects architectural "breadcrumbs" (intent) into commit bodies so the *why* travels with the *what*. Cross-platform; integrates with Git and GitHub. Claes writes about the reasoning at [cladam.github.io/tags/#tbdflow](https://cladam.github.io/tags/#tbdflow).
+
