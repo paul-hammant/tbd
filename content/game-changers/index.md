@@ -217,7 +217,24 @@ Until v1.5 in June 2008, Subversion had an inadequate "merge tracking" capabilit
 inherent in branching and merging. The internal mechanism of noting the merge tracking was controversial though, and
 Subversion still has edge-case merge bugs today. Like this one{{< ext url="https://issues.apache.org/jira/browse/SVN-4635" >}}.
 
-Subversion by default setup a branch called trunk. That said, it allows any branching model to be used.
+Subversion by default setup a branch called trunk. That said, it allows any branching model to be used. The classic "trunk, 
+branches and tags" directory setup could happen at any subdirectory (as it can for Perforce).
+
+## BitKeeper's `bk pull` (2000 or 2001)
+
+![](away_from_tbd1.png)
+
+BitKeeper introduced the technical ability to fetch and merge from any peer repository via `bk pull`. As an early
+distributed VCS, it allowed developers to pull changes directly from a teammate's repository without going through a
+central server, foreshadowing the peer-to-peer model that Git would later popularize. While powerful, this capability
+made multi-branch and multi-repository workflows much easier to sustain, contributing to the drift away from a single
+shared trunk.
+
+Because `bk pull` could fetch from any reachable peer repository, anyone could publish a clone and offer changes back 
+without prior server-side setup or write access. The receiving maintainer chose whether to pull or not. That is the 
+unsolicited-donation / forgiveness model — eight years before GitHub formalized it as forks + Pull Requests with a 
+web UI. CVS and Subversion, by contrast were a push-model. You needed to be enrolled as a committon on some basis in 
+order to be able to make a branch. That or be forced into a patch contribution workflow.
 
 ## Git's "lightweight" branching (2005)
 
@@ -231,7 +248,9 @@ silently process complexity.
 A critical part of Git was local branching. A developer could make multiple local branches, and even map them to the
 same remote branch. Say one could be a feature, part complete and another a surprise bug fix to go back first. Or the
 developer could be making alternate implementations of the same complicated thing, to decide later which to push back.
-Git does not need a centralized server repo, but enterprise teams are going to have one anyway.
+Git does not need a centralized server repo, but enterprise teams are going to have one anyway.  Brnaches (and tags)
+are always from the root directory, and not at all like Subversion's sub-directory representation of trunk, branches
+and tags.
 
 Lastly, Git came with a capability to rewrite history. Although this was a general feature, it is where the history
 around your local HEAD is rewritten before you push it back to the shared repository, that is of interest. Say your
