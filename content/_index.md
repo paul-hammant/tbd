@@ -25,6 +25,8 @@ therefore avoid merge hell, do not break the build, and live happily ever after.
 
 ![](trunk1c.png)
 
+Super scaled is merge/patch queues of course 
+
 ## Elaboration, Claims and Caveats
 
 ![](ix_key.png)
