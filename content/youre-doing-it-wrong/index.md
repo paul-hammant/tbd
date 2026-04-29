@@ -61,9 +61,13 @@ into the shared trunk. They don't slow down that activity as they get closer to 
 small subset of the development team may focus on the release candidates being made from the release branch (if that
 branch exists at all), and towards fixes in the trunk that will be cherry-picked into that branch. For most of the team, though,
 every day looks the same. Also proximity to a release does not slow down the rate at which changes are being pushed into the
-trunk. **There is certainly no "code freeze" with Trunk-Based Development**, as team leadership focuses on protecting the
-majority of developers from the distraction of release preparation. If that protection is missing, something needs
-fine-tuning, and the branching model could be it.
+trunk. **There is certainly no "code freeze" with Trunk-Based Development**, and **nor is there any "unmerge"** - backing
+commits out of the trunk because they are not ready, or because someone else's release is imminent, is equally a sign
+that the branching model is not working. Code that is not ready should not have been merged in the first place; if it
+is being built up incrementally on the trunk, it should be hidden behind a feature flag so that incomplete work has no
+effect on a release cut at any moment. Team leadership focuses on protecting the majority of developers from the
+distraction of release preparation; if that protection is missing, something needs fine-tuning, and the branching model
+could be it.
 
 ## Keeping a single release branch
 
