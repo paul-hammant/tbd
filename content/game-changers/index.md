@@ -545,6 +545,18 @@ Single Repository":
 <!-- print <img src="google-tbd.png"> print -->
 <!-- print <br/> print -->
 
+## Thierry de Pauw's "Feature Branching Considered Evil" (2016, 2017)
+
+![](to_tbd2.png)
+
+Thierry de Pauw delivered a series of talks pushing back hard against
+feature branching as an industry default. The popular talk was first given at the Continuous Delivery Conference NL in 2016, then
+at XP 2017, and the recorded version that circulated widely was from XP Days Ukraine 2017{{< ext url="https://www.youtube.com/watch?v=h4DM-Wa0aDQ" >}}.
+The history of where the talk has been delivered is tracked on his site{{< ext url="https://thinkinglabs.io/talks/2016/10/29/feature-branching-is-evil.html" >}}.
+
+He later turned the material into an extended blog series, "On the Evilness of Feature Branching"{{< ext url="https://thinkinglabs.io/articles/2021/04/26/on-the-evilness-of-feature-branching.html" >}},
+started in April 2021 and finished in January 2024.
+
 ## Microsoft's Git Virtual File System (2017)
 
 ![](to_tbd1.png)
