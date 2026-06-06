@@ -51,6 +51,29 @@ not going to just issue another release from the trunk).
 Brad Appleton points out that many do not realize that branches can be created **retroactively**. That is taken advantage
 of here in the case of bugs after "release from a tag", or even changes for point releases.
 
+## Branching from before HEAD
+
+The branch point does not have to be the current HEAD of trunk. Developers are streaming commits in at full speed, and
+HEAD may well carry work you do not want in this release - a change that landed after your cut-off, something still
+settling, or a feature deliberately held back. It is perfectly legitimate for whoever cuts the branch to reach back to an
+earlier commit - a known-good SHA, or simply the last commit before the unwanted work - and branch from there. The release
+branch is a snapshot of a *chosen* point on trunk, and "chosen" need not mean "latest". This is the same retroactive
+freedom described above, just applied to the *commit* rather than the *moment*: you can cut the branch today from a point
+that is several commits behind where trunk now sits.
+
+The trade-off is that the good commits sitting between your chosen point and HEAD are, for now, left behind. That is
+usually exactly what you want - they are the things you were deliberately excluding. If some of them turn out to be needed
+on the release after all, they come forward the same way bug fixes do: cherry-picked from trunk onto the release branch
+(see below), never the other way around. This pairs naturally with the [release-from-a-tag](/release-from-trunk/)
+approach - the tag you branch from can be any commit you trust, not necessarily the tip.
+
+A related habit: as a planned branch-cut approaches, some teams lean more heavily on [Feature Flags](/feature-flags/) -
+landing not-yet-ready work behind a toggle that ships dark (off in the release) rather than racing to get it fully done
+before the cut, or scrambling to keep it out of the branch point. The flag lets the commit stream into trunk as normal
+while staying inert in production, so the branch can be cut from HEAD without dragging unfinished behaviour into the
+release. It is the same goal as branching from before HEAD - keeping incomplete work out of this release - reached by
+making the codebase, rather than the branch point, do the excluding.
+
 ## Fix production bugs on Trunk
 
 The best practice for Trunk-Based Development teams is to reproduce the bug on the trunk, fix it there with a test,

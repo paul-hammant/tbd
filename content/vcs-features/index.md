@@ -75,8 +75,24 @@ are trying to promote to the remote trunk, as well as the changes they are updat
 have work in progress in their working-copy. Trunk-Based Development teams, you see, are merging more often. Albeit 
 those are smaller merges, and they are implicitly merged to your working copy.
 
-Perforce's three-way merge tool (P4Merge) is good enough on its own to be attractive to teams using other VCS 
-technologies. For those other technologies, P4Merge  is just a config setting away from being usable.  
+There's a subtlety here that works in your favor. Not every merge is a *clash*. When two pieces of in-flight work 
+touch the same file but in different, non-overlapping regions, the VCS reconciles them silently - a "disjoint region" 
+merge that never summons the three-way merge tool at all. A true clash is the narrower case where both sides changed the 
+*same* lines (or lines close enough that the tool can't reconcile them), and that's the one a human has to arbitrate. The 
+smaller and more frequent your integrations, the more your merge events shift towards the disjoint-region kind and away 
+from clashes: small diffs are less likely to land on the same lines, and continuous integration keeps everyone rebased on 
+a recent HEAD so there's little divergence to reconcile in the first place. So merging "more often" is not as alarming as 
+it sounds - you are merging more often *precisely because* each merge is more likely to be one the tooling handles for you. 
+The three-way merge tool is for the residue.
+
+These days most developers get a capable three-way merge editor for free, built right into their IDE or VCS - the merge 
+views in IntelliJ/JetBrains tools and VS Code, for instance, are perfectly good for arbitrating the residue. So for many 
+teams there is nothing to install or configure at all.  
+
+Perforce's three-way merge tool (P4Merge) is the standout standalone, good enough on its own to have long attracted teams 
+using other VCS technologies; for those, it is just a config setting away from being usable. If you want a shared, cross-tool 
+merge tool that everyone on the team drives the same way regardless of editor, that is the kind of thing it is for. Other 
+solid standalone options in the same vein are KDiff3, Meld, and Beyond Compare.  
 
 Semantic merge is the next step up in the science of source-control. See [Plastic SCM](/vcs-choices/index.html#plasticscm).
 
