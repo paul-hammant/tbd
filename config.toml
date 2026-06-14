@@ -188,11 +188,13 @@ googleAnalytics = "UA-24415524-3"
 	url    = "contributions/"
 	weight = 151
 
-[blackfriday]
-	smartypants	= true
-	fractions = true
-	smartDashes = true
-	plainIDAnchors = true
+# Hugo 0.110 uses Goldmark, not Blackfriday. Raw HTML in content (the <div>
+# quote blocks, iframes, etc.) is dropped unless unsafe rendering is enabled.
+[markup.goldmark.renderer]
+	unsafe = true
+
+[markup.goldmark.extensions]
+	typographer = true
 
 [sitemap]
   changefreq = "weekly"
