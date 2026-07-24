@@ -87,6 +87,9 @@ one or more commits that happened before it, but after the branch was cut. All V
  have been merged and which ones not, so you can do more cherry picks later.
 {{< /warning >}}
 
+Quality assurance teams that already signed off on commits in trunk may still choose to QA work a second time on the
+release branch if commits between cherry-picked changes were deliberately skipped.
+
 ### Cherry-picks from the trunk to branch ONLY
 
 You should not fix bugs on the release branch in the expectation of cherry-picking them back to the trunk.
