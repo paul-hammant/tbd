@@ -18,9 +18,23 @@ would have recognized, because they wanted that human
 assurance that gated check-ins are all that is needed to keep the build green. Namely, developers holding an 
 "I/we are checking in now, nobody else should be". They run the full build after bringing their checkout up to date 
 and commit/push if green. Indeed that ceremony is a key part of the [Continuous Integration](/continuous-integration/) advances 
-and is now part of Agile generally, and Extreme Programming in particular. These days teams doing this practice are likely 
-to be much smaller (say less than 16) because of the advent of alternatives (see below). That said, there are still some large teams 
-working this way.
+and is now part of Agile generally, and Extreme Programming in particular. These days teams doing this practice without AI coding
+agents are likely to be much smaller (say less than 16) because of the advent of alternatives (see below). That said, there are still
+some large teams working this way.
+
+**With agentic coding:** the 100-committer teams of the 2000s and the "less than 16" of today both counted people. An enterprise team
+using coding agents can, with the same headcount, be an order of magnitude more productive against its goals, and generate a commit load
+that once took one of those 100-committer teams. It is that load (concurrent writers, and the peak commit rate) that this way of working
+has to absorb. The 2000s teams absorbed it with fast reverts and
+trunk locking. Agentic teams need more: a commit queue, a fast local build with
+[Test Impact Analysis](/observed-habits/#test-impact-analysis), and agents that talk to each other before touching shared code. See
+[AI coding agents committing straight to the trunk](#ai-coding-agents-committing-straight-to-the-trunk) below.
+
+**Startups and scale-ups:** an AI-native startup or scale-up may run at ten times the throughput of the best established enterprise team,
+so it meets that load with only a handful of people. It usually has fewer of the governance reasons enterprises have for keeping pull
+requests, which makes committing straight to the trunk its natural starting point. The same safety net is needed, though, and needed
+sooner: the commit queue, the fast build and the tests have to be in place before the commit rate arrives, not after the trunk has been
+broken a few times.
 
 # Benefits
 

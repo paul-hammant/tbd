@@ -15,9 +15,24 @@ back as "pull requests" into the main/trunk.
 <!-- wrweresd -->
 
 With the Pull Request (and code review) advance, the cut-off point for team sizes that graduated from "direct to the trunk" to short-lived feature branches moved lower.
-While it was up to 100 before Git's lightweight branching, it is now up to 15 people. With 16 or more, the team is more
+For teams writing code without AI coding agents, it was up to 100 before Git's lightweight branching, and is now up to 15 people. With 16 or more, the team is more
 productive with short-lived feature branches, and corresponding CI daemons verifying those in advance of
 commits landing in the trunk. 
+
+**With agentic coding:** those numbers count people, and people were a fair proxy for the rate of commits. They are not any more.
+The same enterprise team, with each developer running several coding agents, can be an order of magnitude more productive
+against its goals, committing at a rate that once took a team several times its size. Count concurrent writers (humans and agents) and the [peak commit frequency](/deciding-factors/#peak-commit-frequency)
+instead. That means the crossover to short-lived feature branches can arrive with far fewer people. But moving to pull requests
+moves the constraint to human review, unless review is AI-led (see [AI coding agents](#ai-coding-agents) below). The alternative
+is staying with [committing straight to the trunk](/committing-straight-to-the-trunk/#ai-coding-agents-committing-straight-to-the-trunk)
+behind a commit queue. Enterprise governance may also keep the pull request in place, with a named human approver for
+segregation-of-duties reasons, even when the integration itself could be direct.
+
+**Startups and scale-ups:** an AI-native startup or scale-up may run at ten times the throughput of the best established enterprise
+team. A handful of people, each with several agents, on a young codebase that agents work well in, can hit the race to push at a team
+size where nobody would have thought about branching models before. Without enterprise governance there is often no reason for a pull
+request beyond review, so committing straight to the trunk with a commit queue and AI-led review is the natural fit, as long as the tests
+and the build keep up.
 
 One key rule is the length of life of the branch before it gets merged and deleted. Simply put, the branch
 should only last a couple of days. Any longer than two

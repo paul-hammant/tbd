@@ -115,12 +115,26 @@ have their own release cadences, and separate team organization to other teams.
 If Google had (say) 1000 committers doing "straight to the trunk" for a single monorepo back in 2002, should you?  No, not 
 since alternates are now possible. If Google had the Mondrian of 2006 back in 2002, they would have moved to that way of working sooner. 
 
-What is the cut off point today?  Super skilled XP era developers who are in charge of dev teams and can train developers in the applicable 
+What is the cut off point today?  Superskilled XP era developers who are in charge of dev teams and can train developers in the applicable 
 way of working, might say the cut-off is now 100 committers. People who've only ever know the pull-request way of working may 
 suggest 10 committers is the cut off point. They may even make a case for 2 committers.  You could well be in a world 
 where quorums naturally form within teams, leading to new development directions to be effectively set.  In Google, it was 
 employee #1 Craig Silverstein who initially held Google to the monorepo and trunk-based development. And he perhaps did 
 that despite quorums forming and group wishes to do something else.
+
+Those cut-offs are for teams writing code without AI coding agents. **With agentic coding**, committers are no longer people: an
+enterprise developer running several agents may be several committers at once, and the commit rate of a small team can exceed that
+of a large one from a few years ago. The question becomes how many concurrent writers (humans and agents) you have, what
+[peak commit frequency](/deciding-factors/#peak-commit-frequency) they generate, and whether your review and build capacity can keep
+up with that. Headcount alone no longer answers it. Enterprise governance may also require a named human approver per change,
+which keeps a pull request (or patch review) in place regardless of team size.
+
+For **Startups and scale-ups,** if AI-native, commits may run at ten times the throughput of the best established enterprise
+team, with far fewer people. It can reach the commit rates that used to be a concern only for Google-scale monorepos while still
+small enough to fit around one table. Lacking the governance reasons to keep pull requests, it can choose its style on commit rate,
+build speed and review capacity alone. That commit rate was one every 30 seconds for Google in their monorepo, but Anthropic hint at 
+[one every three seconds into their monorepo](https://www.anthropic.com/engineering/redesigning-source-control). Perhaps their 
+would-be monorepo as they are building something they've not yet open sourced. 
 
 A list of trade-offs are:
 
@@ -132,6 +146,9 @@ A list of trade-offs are:
 * Whether follow-up commits are a workable way of addressing things that need improvements
 * Whether the developers are good at separating refactoring commits from functional commits, and indeed "baby commits" generally.
 * Whether your team can handle code-review feedback **after** commit/push to trunk/main or not
+* How many coding agents each developer runs concurrently, and so how many committers you really have
+* Whether code review is human-led, or AI-led with humans second, and so whether review keeps up with the commit rate
+* Whether you have a commit queue (or merge queue) serializing pushes to trunk/main
  
  
 
