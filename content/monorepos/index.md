@@ -126,7 +126,8 @@ These are the two (three including Blaze) directed graph build systems that allo
 subset in a compile/test/make-a-binary way.
 
 The omitting of unnecessary compile/test actions achieved by Buck and Bazel works equally well on developer workstations
-and in the CI infrastructure.
+and in the CI infrastructure. For build systems that are not directed graph ones, [Test Impact Analysis](/observed-habits/#test-impact-analysis)
+can achieve the same omission of unnecessary test actions, using coverage data rather than a dependency graph.
 
 There is also the ability to depend on recently compiled object code of colleagues. The recently compiled object code for
 provable permutations of sources/dependencies, that is. And that code plucked from the ether (think of a LRU cache available to all

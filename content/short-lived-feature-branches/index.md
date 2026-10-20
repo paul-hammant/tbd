@@ -110,6 +110,65 @@ further merges (to `main` hopefully).
 
 <!-- wqwedsfsg -->
 
+## Git worktrees
+
+Git (since 2.5 in 2015) can have more than one working copy attached to the same local clone: `git worktree add ../myrepo-hotfix some-branch`.
+Each worktree is a separate directory with its own branch checked out, but they all share one `.git` object store, so making
+one is fast and cheap on disk compared to a second full clone. Mercurial has `hg share` for much the same thing. Subversion and
+Perforce users always had the equivalent by way of multiple checkouts or client workspaces - it just cost more.
+
+Worktrees have some good uses for Trunk-Based Development teams:
+
+* Checking out a colleague's pull request to review it, or run it, without stashing or committing your own work in progress.
+* Doing a cherry-pick to a [release branch](/branch-for-release/) for a bug fix, while your trunk (or short-lived feature branch) work
+  stays untouched in the other directory.
+* Letting a long local build or test suite run in one worktree while you carry on editing in another.
+* `git bisect` to find which commit broke the build, again without disturbing what you were doing.
+
+Git will also refuse to check out the same branch in two worktrees at once, which is a nice guard against confusing yourself.
+
+### The risk: one developer, many branches
+
+The rule above is that a short-lived feature branch has one developer (or one pair), and lasts no more than a couple of days.
+The flip side of that rule, that is easy to forget, is that a developer (or pair) should have only one short-lived feature
+branch in flight. Before worktrees, switching between branches in the same working copy was a mild pain, and that friction
+kept most people focused on one thing. Worktrees remove the friction, so it becomes easy to have four or five branches open in
+four or five directories, each of them a day or two old and each of them getting older while you attend to the others. Every
+one of those is drifting further away from HEAD of main (trunk), and every one is a merge you have not yet done. That is
+the beginning of long-lived feature branches, just spread sideways rather than lengthways.
+
+If you do have more than one worktree in play, then:
+
+* Each branch in each worktree is still bound by the two-day rule, independently.
+* Each one should be brought up to date with main (trunk) and merged back in its own right. Merging one in-flight worktree
+  branch into another is #2 and #4 in "Breaking the contract" below, even when both are yours.
+* Delete the worktree (`git worktree remove`) when its branch is merged and deleted. `git worktree list` tells you what you
+  have forgotten about.
+
+### Shared nothing, still
+
+Worktrees share the clone, but they also share the workstation. If two worktrees each want to bring up the application, they
+will fight over the same TCP ports, the same local database, the same Docker container names and perhaps the same build
+caches. The [shared nothing](/observed-habits/#shared-nothing) microcosm discipline needs to extend to being able to run more
+than one copy of the application side by side on a single machine, with nothing other than configuration differing between them.
+
+### AI coding agents
+
+AI coding agents have made worktrees much more popular, as giving each agent session its own worktree lets several of them
+work in parallel without trampling each other's files. That is fine, but each of those agent sessions is a short-lived feature
+branch, and everything above applies to them. The rate at which branches can be created has gone up, but the rate at which
+they can be reviewed and merged safely into main (trunk) may not have. A team that applies its human-centric review practices
+to AI-boosted development throughput is going to hit problems, whether that is within the team or with a flood of unsolicited
+pull requests to a public open source project. The review side needs boosting too: AI-assisted code review, and more
+non-AI objective checks (linting, static analysis, tests, coverage and the like) run by CI jobs against each pull request,
+so that humans spend their review time on what only humans can judge.
+
+Keep each agent's change small, review and integrate them one at a time (re-syncing the others with main/trunk as each lands), and
+throw away the worktrees that did not work out rather than letting them linger. If agents are allowed to skip the pull
+request and push directly, see [AI coding agents committing straight to the trunk](/committing-straight-to-the-trunk/#ai-coding-agents-committing-straight-to-the-trunk).
+
+<!-- wtrkspfx -->
+
 ## Pitfalls
 
 Working towards a pull request can sometimes make you look past the power of streaming a series of small commits into trunk for 

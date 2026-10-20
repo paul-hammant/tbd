@@ -42,6 +42,82 @@ Some teams have revert policies for commits that land in trunk (or main) that ar
 
 Some teams have some scripting in place to ensure that developers only pull/sync commits to their dev-workstations that CI has marked as passing. That could be as simple as keeping a commit ID (number or hash depending on your VCS tool) on a website somewhere, and writing a wrapper script for git-pull (or svn up) that ignores commits that happened after that one. Pushing back, with that way of working is harder in Git and Mercurial as they require you to have pulled HEAD revisions before you can push back. Subversion and Perforce don't have that limitation.
 
+# AI coding agents committing straight to the trunk
+
+A developer using AI coding agents may hand several working copies over to them at once. Those could be
+[worktrees](/short-lived-feature-branches/#git-worktrees) on one workstation, or one agent might drive many machines, VMs
+and containers over SSH, giving one person a lot of concurrency. Agents in those working copies, near or far, may
+also talk to each other about what they are doing. If the requirement for a pull request is removed, the branching
+model they converge on is the one this page describes, which is how Trunk-Based Development began. What changes is
+the scale, and what needs adding to cope with it.
+
+## The branch is just the unpushed commits
+
+Each working copy has a branch only in the sense Subversion users always had one: the difference between that working copy
+and HEAD. It may be a named local branch, or a few local commits on top of `main`, but it never needs to exist in the shared
+origin repo, and it lives for minutes rather than days. The loop is the XP one, run faster: sync with HEAD, make a small change,
+build and test locally, sync again, push. If the push is rejected, rebase and try again. That is
+[Chasing HEAD](/observed-habits/#chasing-head) and [Running the build locally](/observed-habits/#running-the-build-locally),
+done by something that does not get bored.
+
+## Trunk is the only place things meet
+
+Agents working from many checkouts never merge into each other's working copies. They each integrate with trunk and pick up each
+other's work from trunk. The "breaking the contract" rules for
+[short-lived feature branches](/short-lived-feature-branches/#breaking-the-contract) still apply, just at a finer grain: nothing goes
+sideways, and everything goes through HEAD. That is why a diaspora of machines is fine. Indeed, physical separation is the cleanest
+way to get [shared nothing](/observed-habits/#shared-nothing), because there are no ports, databases or container names for working
+copies on the same workstation to fight over.
+
+## Contention for HEAD is the new problem
+
+A pair of humans might push a few times an hour. Twenty agents push far more often, and Git's "pull before you push" rule
+becomes a race that the slowest local build keeps losing. At that rate you end up where Google and Facebook ended up: a commit
+queue (or merge queue). Agents hand their change to a robot that rebases it onto the latest HEAD, builds it (often speculatively and in
+batches), then lands it or bounces it back. That robot is the only committer to trunk. This is not a pull request in the human
+sense, because no human is a gate. It is a serialization point.
+
+## Agents talking to each other is the check-in ceremony, rebuilt
+
+The C3-era "I/we are checking in now, nobody else should be" ceremony described above, along with teams saying out loud what they
+were about to touch, has an equivalent in agents chatting across checkouts: "I'm about to change this interface", "hold off, I'm halfway
+through renaming that". That conversation is how clashes get avoided rather than resolved. It is also where
+[Branch by Abstraction](/branch-by-abstraction/) and [feature flags](/feature-flags/) come back into their own. Anything bigger than
+a single commit is built behind an abstraction or a flag, so that every push is able to go live. The intention can span days, while each
+commit is complete in itself.
+
+## Review moves, it doesn't disappear
+
+Take away the pull request and review has three places to go. Before the commit, it takes the Mondrian/Gerrit shape: one agent reviews
+another's patch before it is queued, and objective CI checks gate the queue. After the commit, it is
+[continuous review](/continuous-review/): humans read what landed, at their own pace, and act on it with follow-up commits or reverts
+rather than approvals.
+
+The third place is at the moment of integration, and it is not a human one. Since the earliest days of version control, two developers who
+knew they were working in the same area of code have raced to commit first. The second to commit took the merge-conflict pain, and the
+first had none, other than perhaps offering a "sorry" over the cube wall (this was before remote co-workers). Humans never liked being
+second, and felt real discomfort doing the merge. Coding agents have had that human failing trained out of them. An agent that loses the
+race treats the conflict as something to resolve casually and quickly, without anyone's eyes on a three-way merge tool. To do that well it
+has to read and understand both its own change and the one that beat it to trunk, which makes resolving the conflict a review of the
+place where the two changes meet. That only covers what the VCS flags as a textual clash, though. Changes that merge cleanly but break
+each other in meaning (see "Challenges" above) are still caught only by the build, and the build only catches them if there are tests
+(unit, component and service) exercising the code where the two changes meet. A lack of tests is the hole, and agents committing at
+volume will find it faster than any human team did. The related peril is the opposite: so many tests, and so many of them slow, that the
+local build is too slow to win the race to HEAD and the commit queue backs up. The answer is the same as for human teams, only more
+pressing: lots of tests, kept fast, with integration tests turned into pure unit tests wherever that can be done. On top of that,
+[Test Impact Analysis](/observed-habits/#test-impact-analysis) lets each agent run just the tests its change could affect before pushing,
+leaving the full suite to CI.
+
+Whichever of the three places review happens in, the safety net carries more weight: a build per commit, automatic bisecting, and fast
+reverts. A [Build Cop](/observed-habits/#build-cop) is a natural job for an agent too.
+
+## In summary
+
+With the pull request requirement removed, coding agents spread over many working copies work the way a high-discipline 1999 XP team
+did: local-only branches that live for minutes, integration only via trunk, talking before touching shared code, and flags or
+abstractions for anything longer-running. The one modern addition is the commit queue, because no team of humans ever pushed fast
+enough to need one.
+
 # Alternatives to committing straight to the trunk
 
 That modern alternative that allows development teams to scale up without having a bottleneck around check-ins or increased risk of broken builds: [Short-Lived Feature Branches](/short-lived-feature-branches/).
