@@ -157,11 +157,15 @@ than one copy of the application side by side on a single machine, with nothing 
 AI coding agents have made worktrees much more popular, as giving each agent session its own worktree lets several of them
 work in parallel without trampling each other's files. That is fine, but each of those agent sessions is a short-lived feature
 branch, and everything above applies to them. The rate at which branches can be created has gone up, but the rate at which
-they can be reviewed and merged safely into main (trunk) may not have. A team that applies its human-centric review practices
+they can be reviewed and merged safely into main (trunk) may not have. Pete Hodgson and others discuss that in a LeadDev panel,
+"What to do when there's too much code to review"{{< ext url="https://leaddev.com/technical-direction/what-to-do-when-theres-too-much-code-to-review" >}}. A team that applies its human-centric review practices
 to AI-boosted development throughput is going to hit problems, whether that is within the team or with a flood of unsolicited
 pull requests to a public open source project. The review side needs boosting too: AI-assisted code review, and more
 non-AI objective checks (linting, static analysis, tests, coverage and the like) run by CI jobs against each pull request,
-so that humans spend their review time on what only humans can judge.
+so that humans spend their review time on what only humans can judge. Perhaps even AI-led review, with humans second, or
+humans only brought in when the AI thinks arbitration is needed. Kief Morris describes that shift, from humans "in the loop"
+inspecting each artefact to humans "on the loop" improving the harness that produces them, in "Humans and Agents in Software
+Engineering Loops"{{< ext url="https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html" >}}.
 
 Keep each agent's change small, review and integrate them one at a time (re-syncing the others with main/trunk as each lands), and
 throw away the worktrees that did not work out rather than letting them linger. If agents are allowed to skip the pull
