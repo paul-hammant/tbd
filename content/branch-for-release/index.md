@@ -117,6 +117,16 @@ In a talk at the **@Scale** conference in Sept. 2015, _"Why Google Stores Billio
 We've bolded the cherry-pick bit ourselves.  Readers with beady eyes will note that Rachel alludes to 
 dev branches other than trunk for 'rare' reasons. We may cheekily suggest that Google should learn a little more about [Branch by Abstraction](/branch-by-abstraction/).
 
+### The Go project's backport process
+
+The Go programming language team documents its cherry-pick process publicly in the [Minor Releases](https://go.dev/wiki/MinorReleases)
+page of their wiki. Fixes land on master (their trunk) first, closing the original issue. Anyone wanting that fix in an
+older release opens a child "backport" issue, which is labelled as a cherry-pick candidate, discussed, and then approved
+(or not) by release managers or code owners. Only after approval is the cherry-pick made to the release branch. Backports
+only go to the two most recent release branches, and the default answer is "no" - security fixes, serious problems
+with no workaround, and documentation fixes being the exceptions. It is a good real-world example of trunk-first fixes,
+the Merge Meister rules (below), and an audit trail kept in the ticket system.
+
 ### Merge Meister role
 
 The process of merging commits from trunk to the release branch using 'cherry pick' is a role for a single developer
