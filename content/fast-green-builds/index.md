@@ -56,8 +56,94 @@ Fast is say one minute, and slow is ten or above (see [Committing straight to th
 
 A build that talks to shared databases or other teams' services is slow and fragile. Mocking of tiers within the application, and
 wire mocking (service virtualization) of dependencies outside the team, make tests fast and stable, and make the build runnable
-disconnected from the network. That is the [Shared Nothing](/observed-habits/#shared-nothing) habit, with tools like
-Mountebank{{< ext url="http://www.mbtest.dev" >}}, and others (TODO).
+disconnected from the network. That is the [Shared Nothing](/observed-habits/#shared-nothing) habit, with cli-friendly service 
+virtualization & API mocking tools. Some choices below 
+
+#### Mountebank
+
+Multi-protocol, cross-language service virtualization tool capable of capturing network traffic and running non-modal test doubles.
+
+* **Deployment:** Node.js CLI (`mb`), Docker container (`bbyars/mountebank`).
+* **Protocols:** HTTP, HTTPS, TCP, SMTP.
+* **Best For:** Cross-platform teams needing multi-protocol support and dynamic JavaScript injection for stubs.
+
+```bash
+mb --port 2525 --configfile ./imposters.json
+```
+
+#### WireMock (Standalone)
+
+Industry standard for HTTP mock services. While Java-based, its standalone runner and Docker image operate headlessly using REST APIs or static JSON files.
+
+* **Deployment:** Executable JAR, Docker container (`wiremock/wiremock`).
+* **Protocols:** HTTP, HTTPS, WebSockets, gRPC (via extensions).
+* **Best For:** Advanced request matching, stateful scenarios, and response fault injection.
+
+```bash
+docker run -d -p 8080:8080 -v $(pwd)/stubs:/home/wiremock wiremock/wiremock
+```
+
+#### Mockoon CLI
+
+Lightweight, fast mock engine powered by Node.js. Configuration files can be generated using the Mockoon desktop UI and executed headlessly in pipelines.
+
+* **Deployment:** Node CLI (`@mockoon/cli`), Docker container (`mockoon/cli`).
+* **Protocols:** HTTP, HTTPS.
+* **Best For:** Simple setup, quick export from developer desktop UI to CI runner.
+
+```bash
+mockoon-cli start --data ./environment.json --port 3000
+```
+
+#### Hoverfly
+
+High-performance API simulation tool written in Go with zero external runtime dependencies.
+
+* **Deployment:** Single binary (`hoverfly`), Docker container (`spectolabs/hoverfly`).
+* **Protocols:** HTTP, HTTPS (supports transparent proxy capture & replay).
+* **Best For:** High-throughput CI/CD pipelines, automated proxy capture and replay workflows.
+
+```bash
+hoverfly -import ./simulations.json
+```
+
+#### Stoplight Prism
+
+An OpenAPI-driven mock server that instantly generates dynamic responses based strictly on API spec contracts.
+
+* **Deployment:** Node CLI (`@stoplight/prism-cli`), Docker container (`stoplight/prism`).
+* **Protocols:** HTTP, HTTPS (REST / OpenAPI 2.0 & 3.x).
+* **Best For:** Spec-first workflows where mocks must validate against OpenAPI schemas automatically.
+
+```bash
+npx @stoplight/prism-cli mock ./api-spec.yaml
+```
+
+#### Microcks
+
+Cloud-native API mocking and testing framework built specifically for containers and Kubernetes environments.
+
+* **Deployment:** CLI (`microcks-cli`), Docker Compose, Helm / K8s Operator.
+* **Protocols:** REST, GraphQL, gRPC, WebSockets, AsyncAPI (Kafka).
+* **Best For:** Complex microservice architectures, asynchronous/event-driven messaging, and Kubernetes native runners.
+
+```bash
+microcks-cli test "API Name:1.0" --microcksURL http://localhost:8080
+```
+
+#### Mock Service Worker (MSW)
+
+This one is In-process, whereas the others above are standalone (container, process, VM).
+
+MSW provices API mocking library for Node.js and browser environments that intercepts network requests at the application network layer.
+
+- **Deployment:** In-process Node.js module (npm package) or Browser Service Worker.
+- **Protocols:** REST (HTTP/HTTPS), GraphQL.
+- **Best For:** JavaScript/TypeScript test runners (Vitest, Jest, Playwright) requiring fast, zero-container, in-process mock execution.
+
+```bash
+npx msw init public/ --save
+```
 
 ### Test Impact Analysis
 
