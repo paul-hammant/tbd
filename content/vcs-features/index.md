@@ -94,7 +94,7 @@ using other VCS technologies; for those, it is just a config setting away from b
 merge tool that everyone on the team drives the same way regardless of editor, that is the kind of thing it is for. Other 
 solid standalone options in the same vein are KDiff3, Meld, and Beyond Compare.  
 
-Semantic merge is the next step up in the science of source-control. See [Plastic SCM](/vcs-choices/index.html#plasticscm).
+Semantic merge is the next step up in the science of source-control. See [Unity Version Control (formerly PlasticSCM)](/vcs-choices/#unity-version-control-formerly-plasticscm).
 
 ### Code Review
 
@@ -156,4 +156,4 @@ history (while still being able to push changes back to the server) is a challen
 
 Microsoft released Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}} - Windows only) in early 2017, to layer on some of the things they had 
 become used to in the in-house recompilation of Perforce (SourceDepot - used from 1998 to 201x), as well as native VCS 
-of their commercial offering Team Foundation Server (TFS).
+of their commercial offering Team Foundation Server (TFS). VFS for Git has since gone into maintenance mode, with Microsoft recommending Scalar for new deployments - Scalar has shipped with Git itself since version 2.38 in 2022 (see [Game Changers](/game-changers/#gits-partial-clone-sparse-checkout-and-scalar-2018-to-2022)).

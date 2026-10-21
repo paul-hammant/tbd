@@ -45,7 +45,7 @@ The developer in question may then go ahead and make the next short-lived featur
 
 ## Numbers of developers on 'short-lived' feature branches
 
-If there is more that one developer (and the developer's pairing partner) on the same [short-lived feature branch](/short-lived-feature-branches/),
+If there is more that one developer (and the developer's pairing partner, or the developer's own coding agents) on the same [short-lived feature branch](/short-lived-feature-branches/),
 then that branch is at risk of not being short-lived. It is at risk of being more and more like a release branch
 under active development, and not short at all.
 

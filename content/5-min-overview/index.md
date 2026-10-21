@@ -27,7 +27,7 @@ Trunk-Based Development is a branching model that reduces this distance to the m
 ## What it is
 
 {{< note title="Notes" >}}
-* Use of "Developers" throughout this site, means "QA-automators" for the same buildable thing, too.
+* Use of "Developers" throughout this site, means "QA-automators" for the same buildable thing, too, and the coding agents they direct.
 * When we say 'the trunk' on this site, it is just a branch in a single repository that developers in a team are focusing on 
 for development. It may be called 'main'. That hints at the fact that the branch in question may literally not be 
 called 'trunk' at all.
@@ -76,7 +76,8 @@ going to happen for most teams.
 The developer needs to get the commit reviewed. Some teams will count the fact that the code was 'pair programmed' 
 as an automatic review. Other teams will follow a conventional design where the commit is marshaled
 for review before landing in the trunk. In modern portal solutions, marshaled nearly always means a branch/fork (Pull
-Request) that is visible to the team.
+Request) that is visible to the team. Teams doing agentic coding increasingly have AI lead the review, with humans
+second (see [AI-led review](/continuous-review/#ai-led-review)).
 
 ![](trunk_pr.png)
 ([key](/key/))
@@ -102,14 +103,28 @@ will allow the CI server to do that automatically.
 ![](5trunk1.png)
 ([key](/key/))
 
-The high bar is verifying the commit before it lands in the trunk. Short-lived Pull Request branches are the modern
-place for that.
+The high bar is verifying the commit before it lands in the trunk. Short-lived Pull Request branches are one modern
+place for that, but only if integrated after a [prioritized code review](/continuous-review/#prs-from-colleagues).
  
 ## Developer team commitments
 
 As stated, developers are pledging to be rigorous and not break the build. They're also going to need to consider 
 the impact of their potentially larger commits, especially where renames or moves were wholesale, and adopt techniques
 to allow those changes to be more easily consumed by teammates.
+
+## With coding agents
+
+Coding agents change the scale, not the principle. One developer may run several agents at once, in worktrees, VMs or
+containers, each one a working copy drifting from trunk, so the potential for distance multiplies. Trunk-Based Development
+keeps it to a minimum the same way it always has: small changes, integrated into the one trunk often, verified by a fast build.
+What's new is the rate. The race to commit gets busier, which is what commit (merge) queues are for, and review has to keep up
+with what agents write, which means AI-led review with humans as the layer above. See:
+
+* [Git worktrees](/short-lived-feature-branches/#git-worktrees) and the risk of one developer, many branches
+* [AI coding agents committing straight to the trunk](/committing-straight-to-the-trunk/#ai-coding-agents-committing-straight-to-the-trunk)
+* [AI-led review](/continuous-review/#ai-led-review)
+* [Test Impact Analysis](/fast-green-builds/#test-impact-analysis), for keeping the local build fast
+* [Coding agents](/game-changers/#coding-agents-2024-onwards) in Game Changers
 
 ## Drilling into 'Distance'
 

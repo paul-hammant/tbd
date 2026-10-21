@@ -15,7 +15,8 @@ weight: 101
 
 This is very close to PR-centric Trunk-Based Development. Why? Because it is a branching model that has individual
 developers active concurrently in more than one (short-lived) branch (or fork). Or developer pairs, rather than
-individuals.
+individuals. It is only close, though, if those branches are integrated after a [prioritized code review](/continuous-review/#prs-from-colleagues).
+Pull requests left waiting for days are long-lived feature branches by another name.
 
 The crucial difference is **where** the release is performed from.
 

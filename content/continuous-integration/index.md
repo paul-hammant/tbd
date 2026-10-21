@@ -129,7 +129,7 @@ always a percentage failing is of greatly reduced value.
 A regular CI build that by some definition is comprehensive, well written and **always green** unless there's a genuine
 issue is extremely valuable.
 
-Once you get to that trusted always green state, it is natural to run it as often as you can.
+Once you get to that trusted always green state, it is natural to run it as often as you can. See also [Fast, Green Builds](/fast-green-builds/).
 
 ### CI Pre or Post Commit?
 
@@ -171,7 +171,9 @@ commit in a place where it looks like it is immediately following a previously k
 the shared trunk.
 
 That place has a name - a branch (or a branch of a fork the GitHub way). It is a perfect place to CI verify the commit
-before auto-merging it to the shared trunk (if you want to auto-merge after code review approvals). 
+before auto-merging it to the shared trunk (if you want to auto-merge after code review approvals) - but only if integrated
+after a [prioritized code review](/continuous-review/#prs-from-colleagues). The CI verification takes minutes, and a review that
+takes days undoes that.
 
 The new problem is how do you prevent that [short-lived feature branch](/short-lived-feature-branches/) from sleepwalking into a long-lived feature 
 branch with half a dozen developers keeping it from being 'complete' (somehow) and merged back. You cannot with tools

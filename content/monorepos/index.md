@@ -126,7 +126,7 @@ These are the two (three including Blaze) directed graph build systems that allo
 subset in a compile/test/make-a-binary way.
 
 The omitting of unnecessary compile/test actions achieved by Buck and Bazel works equally well on developer workstations
-and in the CI infrastructure. For build systems that are not directed graph ones, [Test Impact Analysis](/observed-habits/#test-impact-analysis)
+and in the CI infrastructure. For build systems that are not directed graph ones, [Test Impact Analysis](/fast-green-builds/#test-impact-analysis)
 can achieve the same omission of unnecessary test actions, using coverage data rather than a dependency graph.
 
 There is also the ability to depend on recently compiled object code of colleagues. The recently compiled object code for
@@ -234,7 +234,7 @@ Traditionally, when using microservices the result is exactly that case: a deplo
 
 That said, Googlers have made Android Repo{{< ext url="https://source.android.com/setup/develop/repo" >}} to deliver the best of both worlds. This technology works with Gerrit for code review. And there's a fork of that called Git-Repo{{< ext url="https://github.com/wavecomp/git-repo" >}}, that has additional Git workflow features.
 
-Lastly, Microsoft in their movement away from legacy VCS choices and branching models, have made VFS For Git{{< ext url="https://github.com/microsoft/VFSForGit" >}} which purports to solve many of the same scale problems of Git.
+Lastly, Microsoft in their movement away from legacy VCS choices and branching models, have made VFS For Git{{< ext url="https://github.com/microsoft/VFSForGit" >}} which purports to solve many of the same scale problems of Git. VFS for Git has since gone into maintenance mode, with Microsoft recommending Scalar for new deployments - Scalar has shipped with Git itself since version 2.38 in 2022 (see [Game Changers](/game-changers/#gits-partial-clone-sparse-checkout-and-scalar-2018-to-2022)).
 
 # References elsewhere
 

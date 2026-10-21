@@ -510,7 +510,7 @@ Surely teams not doing Trunk-Based Development would turn on this speculative me
 
 ![](away_from_tbd1.png)
 
-Plastic's semantic diff and merge{{< ext url="http://semanticmerge.com/" >}} capability was launched in March
+Plastic's (now Unity Version Control) semantic diff and merge{{< ext url="http://semanticmerge.com/" >}} capability was launched in March
 2013{{< ext url="https://www.infoq.com/news/2013/04/Semantic-Merge" >}}. It allowed a greatly reduced diff for
 refactoring commits.
 
@@ -566,6 +566,67 @@ Microsoft released ~~GitVFS~~ GVFS in early 2017 on GitHub{{< ext url="https://g
 This new technology deserves time and analysis before the full impact is determined. There is a suggestion from Brian Harry's
 blog{{< ext url="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs" >}} that branch reduction was one of
 the motivators.
+
+## Git's partial clone, sparse checkout and Scalar (2018 to 2022)
+
+![](to_tbd1.png)
+
+Git gained partial clone (getting the commit history without all the blobs, which then download as needed) from 2018, and a
+`git sparse-checkout` command in 2020. Microsoft's Scalar, which grew out of their VFS for Git work, curated those and other
+large-repo settings into one tool, and was merged into Git itself in version 2.38 in October 2022{{< ext url="https://github.blog/2022-10-13-the-story-of-scalar/" >}}.
+VFS for Git was not needed after that for most teams.
+
+This is a modest boost for Trunk-Based Development. Large [monorepos](/monorepos/) in Git are more practical than they were in 2017, and
+so one trunk for many teams is more practical too. It does not change how anyone works day to day, though.
+
+## Jujutsu and Meta's Sapling (2019 and 2022 onwards)
+
+![](to_tbd1.png)
+
+Two Git-compatible front ends to version control appeared, both from engineers at large monorepo companies.
+Meta open-sourced Sapling in November 2022{{< ext url="https://engineering.fb.com/2022/11/15/developer-tools/sapling-source-control-scalable/" >}}.
+It began as Meta's extension of Mercurial to make their monorepo scale, and its client can work with Git repositories and GitHub. Jujutsu (`jj`) was
+started by Googler Martin von Zweigbergk as a hobby project in late 2019, later becoming his full-time project there{{< ext url="https://github.com/jj-vcs/jj" >}}.
+
+Both make stacks of small commits easy to create, reorder, amend and get reviewed one at a time, rather than one large branch per piece
+of work. That suits the "baby commits" habit of Trunk-Based Development. It is early days for both, though: Jujutsu describes itself as experimental
+and pre-1.0, and neither is widely used outside its home companies and enthusiasts yet.
+
+## Merge queues go mainstream (2023)
+
+![](to_tbd2.png)
+
+Graydon Hoare, the creator of Rust, wrote a bot called Bors in 2013{{< ext url="https://github.com/graydon/bors" >}} to enforce what he
+called "the not rocket science rule"{{< ext url="https://graydon.livejournal.com/186550.html" >}}: automatically maintain a repository of
+code that always passes all the tests. Each approved change was merged onto the latest trunk and built, before the trunk was advanced to that
+result. Homu and then bors-ng{{< ext url="https://github.com/bors-ng/bors-ng" >}} generalized that for any GitHub project, and OpenStack's
+Zuul{{< ext url="https://zuul-ci.org/" >}} did the same for Gerrit. GitLab added merge trains in version 12.0, and GitHub made its merge queue
+generally available in July 2023{{< ext url="https://github.blog/news-insights/product-news/github-merge-queue-is-generally-available/" >}},
+after which bors-ng's maintainers deprecated their public service in its favour.
+
+A merge queue solves the "race to push" for a busy trunk (see [peak commit frequency](/deciding-factors/#peak-commit-frequency)) by serializing
+changes and verifying each one against what trunk will actually be when it lands. With it built in to the dominant platform, teams of any size can have
+it with a setting rather than a project. It matters more still for [coding agents](#coding-agents-2024-onwards), whose commit rate makes the race to push
+unwinnable without one.
+
+## Coding agents (2024 onwards)
+
+![](to_tbd3.png)
+
+AI coding assistants had been completing lines and functions since GitHub Copilot's preview in 2021. In 2024 coding agents arrived: Cognition's
+Devin was announced in March, and agent modes appeared in IDEs like Cursor later in the year. In 2025 they went mainstream, with Anthropic's
+Claude Code, OpenAI's Codex and GitHub's Copilot coding agent among them. These take a goal, work across a codebase, run the build and tests, and
+commit. A developer can run several at once, in [worktrees](/short-lived-feature-branches/#git-worktrees), VMs or containers.
+
+At scale, coding agents cannot work any other way than Trunk-Based Development. Many agents on many long-lived branches means merges that grow
+faster than anyone, human or AI, can resolve them. Many agents integrating small changes into one trunk, with a fast build and a merge or commit queue,
+is the only arrangement whose cost stays level as the number of agents goes up. Merge conflicts themselves are less feared, as agents resolve them
+quickly and without the discomfort humans felt.
+
+The pressure away from Trunk-Based Development is real too, though. Agents speed up writing code more than reviewing it, and the temptation is to have
+more branches and more open pull requests in flight, rather than to make review keep up. See
+[AI coding agents committing straight to the trunk](/committing-straight-to-the-trunk/#ai-coding-agents-committing-straight-to-the-trunk) and
+[AI-led review](/continuous-review/#ai-led-review).
 
 # References elsewhere
 

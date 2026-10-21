@@ -18,10 +18,26 @@ release and cannot change that you may be in a bind. You may be able to follow t
 benefit from a Continuous Integration daemon (as all branching models can), but you are not going to be able to 
 get all the way to Continuous Delivery (or Continuous Deployment).
 
+Agile is a human-centric decider, but it remains a key one. Iterations are how people plan, demo, get stakeholder feedback,
+and change direction cheaply, and coding agents do not remove the need for any of that.
+
+With agentic coding boosting delivery, humans still set the iteration and the goals within it, but the work inside finishes
+far sooner. An iteration may now hold what used to take a quarter. The bottleneck moves to how often the team can review, release
+and learn from what it built, which pushes towards shorter iterations, or continuous flow, and towards Continuous Delivery.
+
+With agentic coding leading delivery, coding agents break the goals down and implement them. Then the iteration becomes the cadence
+at which humans steer: reviewing outcomes, re-prioritizing, and improving the instructions and checks the agents work within. The
+work itself flows continuously into the trunk between those moments, and releases should be decoupled from the iteration
+entirely, with [feature flags](/feature-flags/) controlling what users see.
+
 ### Waterfall
 
 This one is easy. If you are doing waterfall, you are not close at all to the "do not break the build" mantra required
 to do Trunk-Based Development. Consider a short-iteration Agile methodology like Extreme Programming.
+
+With agentic coding, beware a return to waterfall in miniature. A large specification handed to agents in one go, with
+everything generated before anything is integrated or reviewed, is a big batch however quickly it is produced. The
+specification should be split into small, separately integrated increments, just as stories are.
 
 ### Story size
 
@@ -35,11 +51,22 @@ Generally speaking, the whole development team should do whatever it can to brea
 In Agile, there is an INVEST mnemonic{{< ext url="https://en.wikipedia.org/wiki/INVEST_(mnemonic)" >}} that aids in the splitting
 up of stories.
 
+With agentic coding boosting delivery, stories still need to be human-sized, because humans still have to understand,
+review and accept them. The temptation is to make stories bigger because an agent can write the code quickly. Resist it:
+story size was never really limited by typing effort, but by how much can be reviewed, integrated and released safely in one go.
+An agent can complete a story in an hour, and that story can, and should, still land as several small commits.
+
+With agentic coding leading delivery, agents can be instructed to do the splitting, decomposing an intention into small
+commits that each integrate into the trunk and could each go live. The story becomes the unit humans review the intent of, and
+the commit becomes the unit that AI-led review and the build verify (see [AI-led review](/continuous-review/#ai-led-review)).
+INVEST still applies, to the commits as much as to the stories.
+
 ### Build times
 
 Keeping build times short is important in that it directly drives the number of commits a developer can do in a day.
 If the build time is a couple of minutes, developers are likely to keep a high pace. If the build time is 30 minutes or
-worse, developers change pace to match only a couple of commits a day and drop their throughput.
+worse, developers change pace to match only a couple of commits a day and drop their throughput. See
+[Fast, Green Builds](/fast-green-builds/) for ways to keep it short.
 
 ## VCS Technology Choice
 
@@ -83,15 +110,16 @@ If you are using GitHub as your repository host, GitHub Merge Queue{{< ext url="
 
 Even with Pull Requests, however, very high commit frequencies to the shared repo means contention and an artificial 
 serialization. Microsoft acknowledged this as one
-of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}} which is Windows only for now).
+of the motivations to their Git Virtual File System (~~GitVFS~~ ~~GVFS~~ VFS for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}} which was Windows only). VFS for Git has since gone into maintenance mode, with Microsoft recommending Scalar for new deployments - Scalar has shipped with Git itself since version 2.38 in 2022 (see [Game Changers](/game-changers/#gits-partial-clone-sparse-checkout-and-scalar-2018-to-2022)).
 
 {{< quote title="Git has critical serialization points that will cause a queue to back up badly" >}}
 <span>&mdash; Brian Harry</span><br>
 <span style="margin-left: 30px">Refer to Brian's "More on GVFS" blog entry<span class="rref"><a class="inline-ref" style="border-bottom: 0" target="_blank" href="https://blogs.msdn.microsoft.com/bharry/2017/02/07/more-on-gvfs/"><img style="padding: 0 0 0 3px; width: 16px; height: 14px" src="/images/ext.png" alt=""></a></span></span>
 {{< /quote >}}
 
-We're sure that within a few years, Git will be able to handle huge scale too. Whether with the Microsoft technologies, or 
-something else.
+We were sure that within a few years, Git would be able to handle huge scale too. Whether with the Microsoft technologies, or 
+something else. It largely has: partial clone, sparse-checkout and Scalar are all in Git itself now. Git's "pull before you push"
+serialization point remains though, which is what merge queues address (above).
 
 ## Conway's Law
 

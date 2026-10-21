@@ -21,6 +21,11 @@ land in the trunk, without others looking at it. Five minutes and 20 seconds int
 presentation, he states "code review is a best alternative to pair programming", and that it is "basically 
 asynchronous pair-programming".
 
+Pair programming is not coming back, though. That is not because it wasn't cost effective. It is because AI-augmented development
+is far more productive, and the teams and individuals who would have aced pair programming are acing AI-boosted ways of working just as
+easily. The coding agent that co-wrote a change is not the second pair of eyes that a pairing partner was, either. It is the co-author,
+and a co-author reviewing their own work is not a review. See [AI-led review](#ai-led-review) below.
+
 ### Pull Requests (PRs)
 
 The pull-request (PR) model introduced by GitHub is the dominant code review model today. The concept was available 
@@ -57,6 +62,26 @@ in favor of or against squash/rebase.
 Commits being reviewed are never rejected for "Only I am allowed to change source in this package" reasons. Rejections
 must be for objective and published reasons.
 {{< /note >}}
+
+## AI-led review
+
+If a team accepts code written by AI at the speed AI writes it, then AI has to lead the review of that code, and has to be
+doing so already. Humans cannot remain the first reviewer of every change. A team that tries will find review is the constraint,
+and will be tempted to raise work in progress (more branches, more worktrees, more open pull requests) rather than attack that constraint.
+
+AI-led review means a reviewing agent that is independent of the agent that wrote the change: a separate session, with its own
+instructions, and perhaps a different model. It reads every change, quickly, and alongside it CI runs non-AI objective checks
+(linting, static analysis, tests, coverage) against every change too. Continuous review for humans then becomes the layer above that.
+People:
+
+* review intent and decisions rather than every line,
+* sample and spot-check what the AI-led review passed,
+* arbitrate when the reviewing agent thinks a human is needed,
+* and improve the reviewing agent's instructions, and the objective checks, whenever something gets through that should not have.
+
+That last one is Kief Morris' "on the loop" posture: rather than fixing each artifact, improve the harness that produced (and reviewed)
+it{{< ext url="https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html" >}}. The high bar of continuous review still
+applies: AI-led review should take minutes or less, and the human layer above it should not be allowed to back up either.
 
 ## Enterprise code review - as it was
 

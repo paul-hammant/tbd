@@ -10,7 +10,9 @@ This branching model was facilitated with the advent of very lightweight branchi
 in the mid-2000's, though there is evidence that Google were effectively doing the same in their Monorepo for some years before.
 
 Either as branching directly off main, or in a fork of the whole repository. These branches are destined to come
-back as "pull requests" into the main/trunk.
+back as "pull requests" into the main/trunk, but only count as Trunk-Based Development if integrated after a
+[prioritized code review](/continuous-review/#prs-from-colleagues). Time spent waiting for review counts towards the
+branch's short life.
 
 <!-- wrweresd -->
 
@@ -46,6 +48,10 @@ Another key rule is how many developers are allowed congregate on a short-lived 
 the developer count should stay at one (or two if pair-programming). These short-lived feature branches are not shared
 within a team for general development activity. They may be shared for the purposes of code review, but that is entirely
 different to writing production code and tests.
+
+**With agentic coding:** the unit is one developer and their coding agents. A branch with one developer and three agents
+working on it is still one unit, as long as it is that developer's agents and that developer's intention. Two developers'
+agents congregating on the same branch is two units, and the same risk as two developers.
 
 <!-- hrhykj -->
 
@@ -144,8 +150,8 @@ Git will also refuse to check out the same branch in two worktrees at once, whic
 
 ### The risk: one developer, many branches
 
-The rule above is that a short-lived feature branch has one developer (or one pair), and lasts no more than a couple of days.
-The flip side of that rule, that is easy to forget, is that a developer (or pair) should have only one short-lived feature
+The rule above is that a short-lived feature branch has one developer (or one pair, or one developer and their agents), and lasts
+no more than a couple of days. The flip side of that rule, that is easy to forget, is that a developer (or pair) should have only one short-lived feature
 branch in flight. Before worktrees, switching between branches in the same working copy was a mild pain, and that friction
 kept most people focused on one thing. Worktrees remove the friction, so it becomes easy to have four or five branches open in
 four or five directories, each of them a day or two old and each of them getting older while you attend to the others. Every
@@ -179,7 +185,7 @@ pull requests to a public open source project. The review side needs boosting to
 non-AI objective checks (linting, static analysis, tests, coverage and the like) run by CI jobs against each pull request,
 so that humans spend their review time on what only humans can judge. Perhaps even AI-led review, with humans second, or
 humans only brought in when the AI thinks arbitration is needed. Kief Morris describes that shift, from humans "in the loop"
-inspecting each artefact to humans "on the loop" improving the harness that produces them, in "Humans and Agents in Software
+inspecting each artifact to humans "on the loop" improving the harness that produces them, in "Humans and Agents in Software
 Engineering Loops"{{< ext url="https://martinfowler.com/articles/exploring-gen-ai/humans-and-agents.html" >}}.
 
 Keep each agent's change small, review and integrate them one at a time (re-syncing the others with main/trunk as each lands), and
@@ -212,7 +218,7 @@ contract of trunk-based development. For short-lived feature branches, these are
 2. merges (intermediate or not) to other people's short-lived feature branches
 3. merges (intermediate or not) to any release branches (if you have them)
 4. variations of #2 that are direct from/to the developers clone on their workstation
-5. other developers joining you on your short-lived feature branches - at least who are not your pair-programming partner.
+5. other developers (or their coding agents) joining you on your short-lived feature branches - at least who are not your pair-programming partner.
 
 # Alternatives to short-lived feature branches
 

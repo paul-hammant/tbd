@@ -9,7 +9,8 @@ weight: 32
 See Git's website{{< ext url="https://git-scm.com" >}} and Mercurial's website{{< ext url="https://www.mercurial-scm.org" >}}
 
 Git and Mercurial have been popular DVCS technologies for many years. Portals like GitHub make Git, in particular, the default 
-choice for SCM/VCS/source-control. While the Linux Kernel is maintained with Git, and definitely takes advantage 
+choice for SCM/VCS/source-control. Mercurial's share has fallen sharply since: Bitbucket dropped Mercurial support in 2020,
+and Mozilla announced in 2023 that Firefox development would move from Mercurial to Git{{< ext url="https://devclass.com/2023/11/07/mozilla-will-move-firefox-development-from-mercurial-to-microsofts-github/" >}}. While the Linux Kernel is maintained with Git, and definitely takes advantage 
 of the D-Distributed aspect of the DVCS of Git (in that many divergent versions of kernel can exist over 
 long periods of time), most enterprises are still going to count a single repository as the principal one, and within 
 that a single branch as the long-term "most valuable" code line.
@@ -19,9 +20,9 @@ most valuable branch, and once cloned to your local workstation, the repository 
 
 ### Forks
 
-An effective Trunk-Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
+One effective Trunk-Based Development strategy, for Git, depends on the developer maintaining a fork of the origin 
 (and of 'main' within), and Pull-Requests being the place that ready to merge commits are code reviewed, **before** being 
-consumed back into `origin:main`. Other branching models use the same Pull-Request process for 
+consumed back into `origin:main` - but only if integrated after a [prioritized code review](/continuous-review/#prs-from-colleagues). Other branching models use the same Pull-Request process for 
 code-reviews too - it is the normal way of working with Git since GitHub rolled out the feature.
 
 ### Size Limits
@@ -37,7 +38,8 @@ many years.
 Other ways to limit larger clone sizes in git repos include recommending/specifying a partial cloning date horizon 
 with the "--shallow-since" parameter, or using git's more recent Partial-Clone{{< ext url="https://git-scm.com/docs/partial-clone" >}} features, supported in GitLab for 
 example, to get the git commit history without getting all the blobs, and instead having the blobs download transparently 
-on-demand/as-needed.
+on-demand/as-needed. Git's sparse-checkout limits the working copy to the parts of the tree you need, and Scalar, which ships with
+Git, configures partial clone, sparse-checkout and other large-repo settings in one go{{< ext url="https://git-scm.com/docs/scalar" >}}.
 
 Git also has Submodules{{< ext url="https://git-scm.com/docs/git-submodule" >}} and 
 Subtrees{{< ext url="https://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree" >}} to allow large 
@@ -54,8 +56,9 @@ checkout clone, and maintains a single permission for a user in respect of read 
 ### Future development
 
 
-There is a suggestion that Mercurial is receiving contributions that will allow it to push into the very repository
-territory the likes of Google needs.
+There was a suggestion that Mercurial was receiving contributions that would allow it to push into the very repository
+territory the likes of Google needs. That work ended up elsewhere: Meta's Mercurial extensions became Sapling, a separate
+Git-compatible client, and a Googler started Jujutsu. See [Game Changers](/game-changers/#jujutsu-and-metas-sapling-2019-and-2022-onwards).
 
 Git and Mercurial don't have branch or directory permissions, but some of the platforms that bundle them, add 
 branch permissions.
@@ -80,12 +83,21 @@ developer workstations.
 * GitHub {{< ext url="https://github.com" >}} - Git, cloud 
 * GitHub Enterprise {{< ext url="https://enterprise.github.com/home" >}} - Git in GitHub's on-premises edition
 * GitLab {{< ext url="https://about.gitlab.com" >}} - Git, cloud and on-premises install
-* Atlassian's Bitbucket server {{< ext url="https://www.atlassian.com/software/bitbucket/server" >}}- Git
+* Atlassian's Bitbucket - Git, Cloud and Data Center (on-premises)
+* Microsoft's Azure DevOps{{< ext url="https://learn.microsoft.com/en-us/azure/devops/server/tfs-is-now-azure-devops-server" >}} - Git, Services (cloud, formerly VSTS) and Server (on-premises, formerly TFS)
+* Gerrit{{< ext url="https://www.gerritcodereview.com" >}} - Git, on-premises, with code review at its heart. The open-source descendant of Google's Mondrian, and the usual home of the [patch-review style](/styles/#coupled-patch-review-system)
+* Gitea{{< ext url="https://about.gitea.com" >}} and Forgejo{{< ext url="https://forgejo.org" >}} - Git, lightweight self-hosted (Forgejo is a community fork of Gitea)
+* Codeberg{{< ext url="https://codeberg.org" >}} - Git, cloud, non-profit and community-run, on Forgejo
 * RhodeCode {{< ext url="https://rhodecode.com" >}} - Git, Mercurial and Subversion
-* Assembla {{< ext url="https://www.assembla.com" >}} - Git, Mercurial, Perforce and Subversion
-* Various Collabnet{{< ext url="http://www.collab.net" >}} products and services for Git
-* Microsoft's Visual Studio Team Services{{< ext url="https://visualstudio.microsoft.com/team-services" >}} - Git, cloud
-* Microsoft's Team Foundation Server{{< ext url="https://www.visualstudio.com/tfs" >}} - Git in Microsoft's on-premises edition
+* Assembla {{< ext url="https://get.assembla.com" >}} - Git, Mercurial, Perforce and Subversion
+
+#### Closed or discontinued
+
+* Bitbucket Server (Atlassian's non-Data Center on-premises edition) - end of support February 2024{{< ext url="https://www.atlassian.com/licensing/server-end-of-support" >}}
+* AWS CodeCommit - closed to new customers July 2024{{< ext url="https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-migrate-repository-existing.html" >}}
+* Google Cloud Source Repositories - closed to new customers June 2024{{< ext url="https://cloud.google.com/source-repositories/docs/release-notes" >}}
+* Phabricator - unmaintained since June 2021; the community fork Phorge continues it
+* CollabNet - now part of Digital.ai
 
 ## Perforce
 
@@ -145,9 +157,11 @@ As for Git Fusion, things checked out through p4-git and p4-dvcs are not encumbe
 
 Subversion's website{{< ext url="https://subversion.apache.org" >}}
 
-Subversion (Svn) has been in development for 16 years and was a sorely needed open-source replacement for CVS. It chases some of the
-features of Perforce but is developed quite slowly. Nobody has pushed Subversion to the Perforce usage levels, but 
-that is claimed as a possibility.
+Subversion (Svn) has been in development since 2000 (1.0 was in 2004) and was a sorely needed open-source replacement for CVS. It
+chased some of the features of Perforce but is developed quite slowly. The current release is 1.15, with 1.14 still a supported
+long-term-support line{{< ext url="https://subversion.apache.org/download.html" >}}. Its use has declined steadily in favour of Git, and GitHub
+removed its Subversion support in January 2024{{< ext url="https://github.blog/changelog/2024-01-08-subversion-has-been-sunset/" >}}. Nobody
+pushed Subversion to the Perforce usage levels.
 
 Subversion, like Perforce, has read and write permissions down to the directory and branch.
 
@@ -176,18 +190,23 @@ reasonably sized team can take many hours.
 ### Platform Software Choices
 
 * RhodeCode{{< ext url="https://rhodecode.com" >}} - installable on-premises
-* Various Collabnet{{< ext url="http://www.collab.net" >}} products and services.
-* ProjectLocker{{< ext url="http://projectlocker.com" >}} - cloud
-* Deveo{{< ext url="https://deveo.com/svn-hosting" >}} - cloud
+* VisualSVN Server{{< ext url="https://www.visualsvn.com/server/" >}} - installable on-premises, Windows
+* Assembla{{< ext url="https://get.assembla.com/subversion/" >}} - cloud and installable on-premises
 * RiouxSvn{{< ext url="https://riouxsvn.com" >}} - cloud
-* SilkSvn{{< ext url="https://sliksvn.com" >}} - cloud
-* Assembla{{< ext url="https://www.assembla.com/subversion" >}} - cloud and installable on-premises
-* XP-dev{{< ext url="https://xp-dev.com" >}} - cloud
-* Codeplex{{< ext url="https://www.codeplex.com" >}} - cloud
+* SliKSVN{{< ext url="https://sliksvn.com" >}} - cloud
+* SourceForge{{< ext url="https://sourceforge.net" >}} - cloud, for open source
+
+#### Closed or discontinued
+
+* GitHub's Subversion support - removed January 2024
+* Microsoft CodePlex - shut down 2017
+* Deveo - acquired by Perforce
+* CollabNet (CloudForge etc.) - now part of Digital.ai
+* ProjectLocker and XP-dev - no longer reachable
 
 ## Team Foundation Server - TFS
 
-TFS's website{{< ext url="https://www.visualstudio.com/tfs" >}}
+Microsoft renamed TFS to Azure DevOps Server in 2019{{< ext url="https://learn.microsoft.com/en-us/azure/devops/server/tfs-is-now-azure-devops-server" >}}, and the cloud edition is Azure DevOps Services.
 
 Microsoft launched TFS in the mid-2000's with a **custom VCS technology** "TFVC". It is said that they have an internal 
 'SourceDepot' tool that is a special version of Perforce compiled for them in the nineties, and that TFS reflects some 
@@ -198,14 +217,14 @@ Microsoft encouraged a use of Git within it, rather than then proprietary VCS th
 TFS is perfectly compatible with a Trunk-Based Development usage.
 
 Note: Microsoft are donating back to the Git community with a Git Virtual File System, which allows some Monorepo 
-usage for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}}.
+usage for Git{{< ext url="https://github.com/Microsoft/VFSForGit" >}}. VFS for Git has since gone into maintenance mode, with Microsoft recommending Scalar for new deployments - Scalar has shipped with Git itself since version 2.38 in 2022 (see [Game Changers](/game-changers/#gits-partial-clone-sparse-checkout-and-scalar-2018-to-2022)).
 
-## PlasticSCM
+## Unity Version Control (formerly PlasticSCM)
 
-Plastic's website{{< ext url="https://www.plasticscm.com" >}}
+Unity Version Control's website{{< ext url="https://docs.unity.com/unity-version-control/" >}}
 
-PlasticSCM is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk-Based Development and quite 
-self-contained (has integrated code review, etc). Plastic is very good with bigger binaries and comes with an 
+Unity Version Control, formerly PlasticSCM, is a modern DVCS like Git and Mercurial, but closed-source. It is compatible with Trunk-Based Development and quite 
+self-contained (has integrated code review, etc). It is very good with bigger binaries and comes with an 
 intuitive "Branch Explorer" to see the evolution of branches, view diffs, execute merges, etc. For sizes of individual
 repositories, multiple terabytes is not unheard of. A least for some of the games-industry customers.
  
@@ -214,7 +233,35 @@ select programming languages and the refactorings developers perform on them. Fo
 method is 50 lines long, is not 50 lines added and 50 deleted in one commit, it is a much more *exact* and terse diff
 representation. 
 
-Plastic even calmly handles a situation where one developer moves a method within a source, and another simultaneously 
-changes the contents of the method in its former location. Plastic does not consider that a clash at all, and just does 
+Unity Version Control even calmly handles a situation where one developer moves a method within a source, and another simultaneously 
+changes the contents of the method in its former location. It does not consider that a clash at all, and just does 
 the merge quietly - the method moves and is changed in its new location.
 
+## Diversion
+
+Diversion's website{{< ext url="https://www.diversion.dev" >}}
+
+Diversion is a cloud-native, closed-source VCS aimed at game development and other work with large binary files, competing with
+Perforce and Unity Version Control rather than with Git. It is young, but there are signs of adoption: it raised $12M in total funding by
+May 2025 and reported over 15,000 users{{< ext url="https://mobidictum.com/diversion-raises-12m-konvoy/" >}}. Like any VCS with atomic commits,
+it is usable with Trunk-Based Development.
+
+## Lore
+
+Lore's website{{< ext url="https://lore.org" >}}
+
+Lore is an open-source (MIT licensed) VCS from Epic Games, announced in June 2026{{< ext url="https://www.phoronix.com/news/Epic-Games-Lore-VCS" >}}
+and written in Rust{{< ext url="https://github.com/EpicGames/lore" >}}. Like Diversion and Unity Version Control, it targets projects
+that mix code with large binary assets, such as games. It is centralized by design, with a server-of-record for durability, access
+control and conflict resolution, but committing, branching and diffing work locally without a network round trip. Working trees are
+sparse and lazy, materializing only what you need. It is the built-in version control for Unreal Editor for Fortnite.
+
+It is pre-1.0, so formats and APIs may still change{{< ext url="https://epicgames.github.io/lore/faq/" >}}, but with Epic behind it and
+Unreal Engine integration, it is the one to watch for game studios currently on Perforce.
+
+### Only the VCS
+
+Lore is the version control system only, not the wider platform experience: no integrated code review, issue tracking, wiki or CI/CD.
+An open-source desktop client is on its roadmap. Teams need to supply the rest themselves, and Lore's language bindings (C/C++, C#,
+Rust, Go, Python and JavaScript) are the place to integrate them. For Trunk-Based Development, the code review and CI verification
+before a commit lands in the trunk have to come from elsewhere, as they once did for Perforce and Subversion.

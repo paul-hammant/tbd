@@ -27,7 +27,7 @@ using coding agents can, with the same headcount, be an order of magnitude more 
 that once took one of those 100-committer teams. It is that load (concurrent writers, and the peak commit rate) that this way of working
 has to absorb. The 2000s teams absorbed it with fast reverts and
 trunk locking. Agentic teams need more: a commit queue, a fast local build with
-[Test Impact Analysis](/observed-habits/#test-impact-analysis), and agents that talk to each other before touching shared code. See
+[Test Impact Analysis](/fast-green-builds/#test-impact-analysis), and agents that talk to each other before touching shared code. See
 [AI coding agents committing straight to the trunk](#ai-coding-agents-committing-straight-to-the-trunk) below.
 
 **Startups and scale-ups:** an AI-native startup or scale-up may run at ten times the throughput of the best established enterprise team,
@@ -38,7 +38,7 @@ broken a few times.
 
 # Benefits
 
-It is easier to objectively verify the correctness of your commits yourself (optimally with a pair-programming partner), then commit/push at moments of convenience. That is, easier than pushing into a code-review system for approval from a teammates that risks being interruptive to their workflow. Indeed there is a greater likelihood that this this style or working becomes a flow of small commits into the trunk, with each of those being an incremental step forward, and perfectly able to go-live itself while the larger story/card remains incomplete.
+It is easier to objectively verify the correctness of your commits yourself (optimally with a pair-programming partner, or these days with coding agents and an independent AI reviewer), then commit/push at moments of convenience. That is, easier than pushing into a code-review system for approval from a teammates that risks being interruptive to their workflow. Indeed there is a greater likelihood that this this style or working becomes a flow of small commits into the trunk, with each of those being an incremental step forward, and perfectly able to go-live itself while the larger story/card remains incomplete.
 
 # Challenges
 
@@ -48,7 +48,7 @@ Risk mitigation is **everyone** running the full build (the same build the CI de
 trunk if that passes. **This is an essential integration activity**. This is the habit of the XP teams from the end of the 90's, and there's 
 no reason any team would dispense with that in the years since. Indeed, it is valuable for ALL branching models.
 
-If this is locked in as a team requirement, your new challenge is to keep the full build fast. Fast is say one minute, and slow is ten or above. Compile and pure unit tests (no threads, sockets, file IO) is where good builds focus their development effort. Any following "integration test" build steps that use threads, listen on sockets, or do significant file IO should be minimized as far as possible without reducing meaningful coverage. The best trick for that is changing some integration tests into pure unit tests, which isn't always easy.
+If this is locked in as a team requirement, your new challenge is to keep the full build fast. Fast is say one minute, and slow is ten or above. Compile and pure unit tests (no threads, sockets, file IO) is where good builds focus their development effort. Any following "integration test" build steps that use threads, listen on sockets, or do significant file IO should be minimized as far as possible without reducing meaningful coverage. The best trick for that is changing some integration tests into pure unit tests, which isn't always easy. See [Fast, Green Builds](/fast-green-builds/) for more.
 
 Why the fast build matters even more in this style: with small commits streaming into the trunk, most of the merging happens silently. Two changes that touch the same file in different regions reconcile automatically as "disjoint region" merges and never raise a clash for a human to resolve. That is a good thing - but it is only *textually* clean. Two changes can auto-merge with zero VCS conflict and still break each other in meaning - one renames a function in one region, another adds a caller in another, and the lines never overlapped so nothing flagged it. The merge algorithm cannot catch that class of problem; only the build can. This is the real reason **everyone** running the full build before the push (and fast CI on HEAD right after) is non-negotiable here - it is the only thing standing between a clean-looking auto-merge and a semantically broken trunk, and it works best while the change is small and fresh in the author's mind.
 
@@ -102,6 +102,10 @@ commit is complete in itself.
 
 ## Review moves, it doesn't disappear
 
+If you accept code written by AI at the speed AI writes it, then AI has to lead the review of it, with humans as the layer above:
+reviewing intent and decisions, spot-checking, arbitrating, and improving the reviewing agent and the checks (see
+[AI-led review](/continuous-review/#ai-led-review)). The question is where each of those happens.
+
 Take away the pull request and review has three places to go. Before the commit, it takes the Mondrian/Gerrit shape: one agent reviews
 another's patch before it is queued, and objective CI checks gate the queue. After the commit, it is
 [continuous review](/continuous-review/): humans read what landed, at their own pace, and act on it with follow-up commits or reverts
@@ -119,7 +123,7 @@ each other in meaning (see "Challenges" above) are still caught only by the buil
 volume will find it faster than any human team did. The related peril is the opposite: so many tests, and so many of them slow, that the
 local build is too slow to win the race to HEAD and the commit queue backs up. The answer is the same as for human teams, only more
 pressing: lots of tests, kept fast, with integration tests turned into pure unit tests wherever that can be done. On top of that,
-[Test Impact Analysis](/observed-habits/#test-impact-analysis) lets each agent run just the tests its change could affect before pushing,
+[Test Impact Analysis](/fast-green-builds/#test-impact-analysis) lets each agent run just the tests its change could affect before pushing,
 leaving the full suite to CI.
 
 Whichever of the three places review happens in, the safety net carries more weight: a build per commit, automatic bisecting, and fast

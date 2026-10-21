@@ -27,7 +27,8 @@ should be focusing on 'business as usual' implementation of functionality for a 
 Teams doing Trunk-Based Development know that their commits/pushes will be scrutinized by others, as soon
 as they have landed on the shared trunk. They are keen on bringing that forward, not delaying it, so they may prefer to 
 pair-program on code changes. Or they may ask colleagues for a code review at the time the change is submitted to be 
-merged into the trunk.
+merged into the trunk. Teams doing agentic coding bring it forward with [AI-led review](/continuous-review/#ai-led-review),
+which takes minutes.
 
 ## Chasing HEAD
 
@@ -41,15 +42,8 @@ commits to the shared trunk because someone else beat them to it then they have 
 another build and push their revised commit(s). "It worked on my machine" says the developer that does not 
 want to confess to breaking the build (assuming quick reliable idempotent builds).
 
-### Test Impact Analysis
-
-As a codebase grows, so does its test suite, and the local build gets slower. Teams are tempted to skip it, or to delete
-tests, and both of those are bad. Test Impact Analysis (TIA) is a better way out: record which tests exercise which production
-source files (from code coverage data, gathered by CI), and then for a given change run only the tests that are impacted by it.
-That subset is usually a small fraction of the whole, so the build before the commit/push gets fast again, while the full suite
-still runs in CI after the commit lands in the trunk. Directed graph build systems like
-[Bazel and Buck](/monorepos/#facebooks-buck-and-googles-bazel) get much of the same benefit from their dependency graphs.
-There is more in "The Rise of Test Impact Analysis" on Martin Fowler's site{{< ext url="https://martinfowler.com/articles/rise-test-impact-analysis.html" >}}.
+Keeping that build fast and always green, locally and in CI, is a habit in its own right. See
+[Fast, Green Builds](/fast-green-builds/), including [Test Impact Analysis](/fast-green-builds/#test-impact-analysis).
 
 ## Facilitating commits
 

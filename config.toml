@@ -119,6 +119,11 @@ googleAnalytics = "UA-24415524-3"
 	weight = 63
 
 [[menu.main]]
+	name   = "Fast, Green Builds"
+	url    = "fast-green-builds/"
+	weight = 64
+
+[[menu.main]]
 	name   = "Continuous Code Review"
 	url    = "continuous-review/"
 	weight = 65
