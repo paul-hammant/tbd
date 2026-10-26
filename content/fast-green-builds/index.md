@@ -8,6 +8,12 @@ Trunk-Based Development depends on a build that is fast and always green, both o
 commit/push, and in Continuous Integration after it. This page gathers the techniques for keeping it that way. Most are
 mainstream amongst high-throughput teams. Some, like Test Impact Analysis, should be but are not yet.
 
+Much of this territory now has a name: Developer Productivity Engineering (DPE), the discipline of making builds and tests faster
+and more reliable, and their failures easier to diagnose, on workstations and in CI alike. Gradle Inc. popularized the term, and
+sells a DPE platform, Develocity (formerly Gradle Enterprise){{< ext url="https://gradle.com/press-media/gradle-enterpise-is-now-develocity" >}}.
+DPE complements Continuous Integration rather than replacing it: CI runs the builds, and DPE makes those builds (and the local ones)
+fast and trustworthy.
+
 ## Why it matters
 
 Build time drives the number of commits a developer can do in a day (see [Deciding Factors](/deciding-factors/#build-times)).
@@ -24,7 +30,7 @@ And a slow build is one of the key drivers to other branching models, to reposit
 The same build runs in two places:
 
 1. Locally, before the commit/push is the gate. Developers determine for themselves that their change is good,
-   on their workstation or on containers/VMs dedicated to them (see [Running the build locally](/observed-habits/#running-the-build-locally)
+   on their workstation or on containers/VMs dedicated to them (see [Leased pre-push capacity](#leased-pre-push-capacity), [Running the build locally](/observed-habits/#running-the-build-locally)
    and [The Importance of a Local build](/styles/#the-importance-of-a-local-build)).
 2. Remotely, in CI, after the push or before it lands in the trunk (for pull requests and merge queues) is the check
    that catches what the local build could not: bad timing, environment differences, and semantic clashes between changes that
@@ -32,6 +38,42 @@ The same build runs in two places:
 
 Neither is a crutch for the other. A team that git-pushes to find out whether its changes are good has handed its quality
 control to the CI daemon, and slowed everyone down when it fails, even if that's a massively parallel cloud infrastructure.
+
+### Leased pre-push capacity
+
+The containers/VMs dedicated to a developer need not be under their desk. Build and test capacity can be leased privately and casually to
+augment the workstation, from a true public cloud, from machines in a closet in the office, or anywhere in between. That is how a
+developer gets the breadth of a CI matrix (other operating systems, runtime versions, browsers, GPUs, or a big suite split across
+many machines) **before** the push. The key is that these runs are private to the developer (or their coding agent): not CI jobs
+attached to a pull request that the whole team sees, gets notified about, and comments on early. Best of all, the leased capacity
+is reached from the regular local build script as a switch: the same build, run with something like `--remote` or `--matrix`,
+rather than a separate CI-only workflow. Bazel teams commonly do it with a `remote` config in `.bazelrc` (if using Bazel), used as `--config=remote`, and Develocity's Test
+Distribution is switched on or off in the build's own configuration. Examples:
+* Remote execution for directed graph build systems{{< ext url="https://bazel.build/remote/rbe" >}}, self-hosted or from services
+  like BuildBuddy{{< ext url="https://www.buildbuddy.io" >}} and EngFlow{{< ext url="https://www.engflow.com" >}}
+* Develocity's Test Distribution{{< ext url="https://gradle.com/develocity/product/test-distribution/" >}}, a DPE tool splitting Gradle and
+  Maven (JVM) test suites across remote agents
+* Cloud development environments like GitHub Codespaces{{< ext url="https://github.com/features/codespaces" >}} and
+  Ona (formerly Gitpod){{< ext url="https://ona.com" >}}
+* `act`{{< ext url="https://github.com/nektos/act" >}}, which runs GitHub Actions workflows locally
+* Plain VMs and containers in any cloud or closet, driven over SSH or a remote Docker context
+* Google's 2006 Selenium farm, from which developers leased browsers in parallel (see [Game Changers](/game-changers/#selenium-farm-2006))
+
+The temptation otherwise is to push to a pull request branch just to watch the CI matrix go, push again, and repeat: pushing
+repeatedly to find out if you're done. That uses the shared CI as a personal build, is slow (every push goes to the back of the
+queue), and is noise for everyone else.
+
+Combine leased capacity with impacted-module selection ([Test Impact Analysis](#test-impact-analysis) and
+[directed graph build systems](#directed-graph-build-systems-and-remote-caches)) and you have the fastest pre-push red/green there is:
+only the affected tests, run in parallel on leased machines, across the full matrix.
+
+A check that truly cannot run before the push still has a place. It belongs in an automated pull-request or
+[merge queue](/game-changers/#merge-queues-go-mainstream-2023) job that runs at once, on every push, as the gate before the trunk.
+That is a different thing from pushing repeatedly to find out if you're done.
+
+Coding agents fall into the push-and-poll trap even more readily than humans: `git push` followed by watching the CI run, in a loop,
+is a very natural agent workflow, and an expensive one. An agent given the build script's switch for leased capacity, and a Test
+Impact Analysis map, gets to green before anyone else sees the change.
 
 ## Fast
 

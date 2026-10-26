@@ -90,3 +90,17 @@ strictly necessary.
 Bug fixing on the release branch? If yes, then that is covered above. If you are not doing that then you have no need
 to merge anything back from the release branch - you can just delete it after you're sure there will not be any more
 releases from it.
+
+## Pushing to a pull-request branch to find out if your build passes
+
+This one is tempting, and understandable. The CI matrix is right there, it covers operating systems, versions and browsers that
+your workstation doesn't, and the green ticks feel like progress. But if developers routinely need it, that is a sign of something
+missing for the team, not a personal failing: a local build that is too slow or too narrow, no
+[impacted-test selection](/fast-green-builds/#test-impact-analysis), or no private way to reach the extra capacity the matrix provides.
+
+Pushing, watching the CI matrix go red or green, fixing, and pushing again is pushing repeatedly to find out if you're done. It
+uses the team's shared CI as a personal build, every push joins the back of the queue, and teammates see (and may comment on) work
+that was never ready for their eyes. The fix is for the team to provide what is missing, so that the build can run before the push,
+on the workstation, augmented by [leased pre-push capacity](/fast-green-builds/#leased-pre-push-capacity) where the workstation alone
+cannot cover the matrix.
+
